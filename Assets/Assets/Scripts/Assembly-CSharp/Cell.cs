@@ -51,6 +51,12 @@ public class Cell : MonoBehaviour
 		_itemContainer.SetupItem(this, da);
 	}
 
+	public void CheckEndItem(Item item)
+	{
+		_itemContainer.OnSucessMegerItem(item);
+
+    }
+
 	public void InitData(Vector2Int pos, MoveType moveType, float speed, bool isLock)
 	{
 	}

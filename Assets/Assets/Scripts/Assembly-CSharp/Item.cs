@@ -55,7 +55,7 @@ public class Item : MonoBehaviour
 
 	public bool IsDeSpawn => false;
 
-	public Vector2 Pos => default(Vector2);
+	public Vector3 CurrentPos = Vector3.zero;
 
 	public float HalfHeight => 0f;
 
@@ -95,7 +95,9 @@ public class Item : MonoBehaviour
 
 	public void Setup(ItemContainer itemContainer, ItemAsset item, bool active, int index, int indexContanier)
 	{
-		gameObject.name = item.type.ToString();
+		this.itemContainer = itemContainer;
+
+        gameObject.name = item.type.ToString();
 		_itemType = item.type;
 		_sprite.sprite = item.sprite;
 		_spriteShadow.sprite = item.spriteHidden;
@@ -153,6 +155,7 @@ public class Item : MonoBehaviour
 
 	public void BeginDrag()
 	{
+		CurrentPos = transform.position;
 		SetSortingOrder(_sprite, layerWhenSelecting);
         SetSortingOrder(_spriteShadow, layerWhenSelecting - 1);
     }
@@ -163,11 +166,16 @@ public class Item : MonoBehaviour
         SetSortingOrder(_spriteShadow, layer - 1);
     }
 
+	public void OnMoveFailed()
+	{
+		///
+		transform.position = CurrentPos;
+	}
 
 	public void CheckEndItem(Cell cel)
 	{
-
-	}
+		cel.CheckEndItem(this);
+    }
 
 
 	public void ReturnItemContainer()

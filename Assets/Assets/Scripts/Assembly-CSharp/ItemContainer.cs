@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ItemContainer : MonoBehaviour
@@ -74,7 +75,7 @@ public class ItemContainer : MonoBehaviour
 				if(it.items[i] == 0)
 				{
                     listItem.items.Add(null);
-                    layerItem.listItem[index1] = null;
+                    layerItem.listItem[i] = null;
                     index1++;
                     continue;
 				}
@@ -83,7 +84,7 @@ public class ItemContainer : MonoBehaviour
 				var objItem = Instantiate(_itemPrefab.gameObject, gameObj.transform);
 				var item = objItem.GetComponent<Item>();
 				item.Setup(this, DataItem, index == 0, index1, index);
-                layerItem.listItem[index1] = item;
+                layerItem.listItem[i] = item;
                 // listPointItem.Add(objItem.transform.position, item);
 
                 index1++;
@@ -104,12 +105,41 @@ public class ItemContainer : MonoBehaviour
 			{
 				//move to object
 				var listIndex = currentLayer.GetListIndexPoint();
+				float min = 9999999;
+				Transform objEndeMove = null;
+
+				List<Transform> listObjectMove = new();
+
+				for(int i = 0; i < listIndex.Count; i++)
+				{
+					listObjectMove.Add(listPintDrag[listIndex[i]]);
+                }
+
+				for(int i = 0; i < listObjectMove.Count; i++)
+				{
+					var distance = Vector3.Distance(item.transform.position, listObjectMove[i].position);
+
+					if(distance < min)
+					{
+						objEndeMove = listObjectMove[i];
+                        min = distance;
+                    }
+				}
+
+				if(objEndeMove != null)
+				{
+                    item.transform.position = objEndeMove.position;
+                }
+
             }
 			else
 			{
-
-			}
-
+				item.OnMoveFailed();
+            }
 		}
+		else
+		{
+            item.OnMoveFailed();
+        }
 	}
 }
