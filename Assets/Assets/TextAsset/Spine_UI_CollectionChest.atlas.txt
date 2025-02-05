@@ -1,0 +1,130 @@
+Spine_UI_CollectionChest.png
+	size: 2004, 1088
+01/01_SD
+	bounds: 1368, 710, 376, 101
+	offsets: 5, 6, 387, 112
+	rotate: 90
+01/Body
+	bounds: 1265, 137, 372, 180
+	offsets: 19, 1, 399, 210
+01/Cap_Close
+	bounds: 1175, 699, 387, 191
+	rotate: 90
+01/Cap_Close_Star
+	bounds: 1639, 123, 116, 151
+	offsets: 19, 7, 154, 166
+01/Cap_Open
+	bounds: 1227, 319, 378, 224
+	rotate: 90
+01/Cap_Open_Star
+	bounds: 1757, 138, 136, 144
+	offsets: 11, 9, 156, 163
+	rotate: 90
+01/Shadow_Close
+	bounds: 1453, 338, 370, 122
+	offsets: 0, 7, 371, 129
+	rotate: 90
+02/02_SD
+	bounds: 1259, 3, 387, 105
+	offsets: 4, 3, 394, 111
+02/Body
+	bounds: 1017, 284, 396, 208
+	offsets: 1, 1, 399, 210
+	rotate: 90
+02/Body_Flag
+	bounds: 1903, 162, 112, 93
+	rotate: 90
+02/Body_LHandle
+	bounds: 1920, 1023, 69, 63
+	offsets: 1, 1, 72, 64
+02/Body_RHandle_Back
+	bounds: 1898, 652, 45, 103
+	rotate: 90
+02/Body_RHandle_Front
+	bounds: 1898, 699, 76, 104
+	rotate: 90
+02/Cap_Close
+	bounds: 476, 241, 419, 199
+	rotate: 90
+02/Cap_Close_Star
+	bounds: 1749, 440, 208, 161
+	offsets: 0, 0, 208, 166
+02/Cap_Open
+	bounds: 617, 671, 415, 212
+	rotate: 90
+02/Cap_Open_Star
+	bounds: 1749, 276, 208, 162
+	offsets: 0, 0, 209, 163
+02/Shadow_Close
+	bounds: 1041, 697, 389, 132
+	offsets: 0, 14, 393, 146
+	rotate: 90
+03/Body
+	bounds: 831, 682, 404, 208
+	offsets: 0, 2, 404, 210
+	rotate: 90
+03/Body_Flag
+	bounds: 1772, 17, 119, 105
+	rotate: 90
+03/Cap_Close
+	bounds: 2, 5, 430, 208
+03/Cap_Close_Star
+	bounds: 1670, 603, 226, 172
+	offsets: 0, 1, 226, 173
+03/Cap_Open
+	bounds: 2, 215, 433, 231
+	offsets: 3, 0, 436, 231
+	rotate: 90
+03/Cap_Open_Star
+	bounds: 1577, 379, 222, 170
+	rotate: 90
+03/Shadow_Close
+	bounds: 887, 283, 397, 128
+	offsets: 0, 1, 397, 129
+	rotate: 90
+Gold
+	bounds: 1648, 986, 270, 100
+	offsets: 1, 1, 272, 102
+GrandPrize/Body
+	bounds: 677, 264, 405, 208
+	offsets: 0, 2, 406, 210
+	rotate: 90
+GrandPrize/Body_Flag
+	bounds: 1648, 9, 122, 112
+GrandPrize/Body_LHandle
+	bounds: 1920, 959, 69, 62
+	offsets: 1, 1, 72, 64
+GrandPrize/Body_RHandle_Back
+	bounds: 1898, 605, 45, 103
+	rotate: 90
+GrandPrize/Body_RHandle_Front
+	bounds: 1639, 299, 78, 108
+	rotate: 90
+GrandPrize/Cap_Close
+	bounds: 434, 2, 429, 214
+GrandPrize/Cap_Close_Star
+	bounds: 1670, 777, 230, 207
+GrandPrize/Cap_Open
+	bounds: 235, 218, 430, 239
+	offsets: 7, 0, 437, 239
+	rotate: 90
+GrandPrize/Cap_Open_Star
+	bounds: 1471, 752, 232, 197
+	offsets: 0, 1, 232, 198
+	rotate: 90
+GrandPrize/GrandPrize_SD
+	bounds: 865, 2, 392, 106
+	offsets: 3, 2, 399, 111
+GrandPrize/Shadow_Close
+	bounds: 865, 110, 398, 152
+	offsets: 1, 2, 403, 154
+Inside_Glow
+	bounds: 440, 662, 424, 175
+	offsets: 0, 41, 424, 225
+	rotate: 90
+TEX_BaseLight2
+	bounds: 2, 650, 436, 436
+	offsets: 38, 38, 512, 512
+TEX_CircleParticle
+	bounds: 1879, 25, 111, 111
+	offsets: 9, 9, 128, 129

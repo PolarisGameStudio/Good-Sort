@@ -1,0 +1,422 @@
+Spine_UI_IconHome.png
+	size: 4052, 1424
+Cart_Present_RidbonSD
+	bounds: 3143, 176, 118, 87
+Cart_Present_SD
+	bounds: 2923, 650, 237, 213
+	offsets: 3, 4, 244, 223
+	rotate: 90
+Cart_Present_TopSD
+	bounds: 3769, 741, 48, 32
+	offsets: 2, 2, 53, 37
+Cart_SD
+	bounds: 2, 988, 433, 373
+	offsets: 4, 3, 441, 379
+	rotate: 90
+Catalog_L_SD
+	bounds: 1031, 4, 248, 266
+Catalog_R_SD
+	bounds: 1281, 18, 248, 266
+Catalog_SideSD
+	bounds: 2333, 718, 122, 46
+	offsets: 5, 3, 132, 55
+Christmas/Cart
+	bounds: 377, 1015, 406, 280
+	offsets: 1, 0, 407, 280
+	rotate: 90
+Christmas/Cart_BG
+	bounds: 3773, 1333, 196, 88
+	offsets: 0, 1, 197, 89
+Christmas/Cart_Present
+	bounds: 2923, 456, 209, 192
+	offsets: 0, 0, 209, 193
+Christmas/Cart_Present_Back
+	bounds: 2776, 770, 128, 115
+	offsets: 1, 1, 130, 116
+Christmas/Cart_Present_Back2
+	bounds: 3828, 929, 115, 104
+	offsets: 1, 1, 117, 105
+Christmas/Cart_Present_Ridbon
+	bounds: 3360, 923, 81, 56
+Christmas/Cart_Present_Top
+	bounds: 3286, 1159, 41, 23
+	offsets: 1, 0, 42, 23
+	rotate: 90
+Christmas/Cart_Wheel
+	bounds: 3677, 741, 90, 94
+	offsets: 1, 1, 91, 95
+Christmas/Cart_Wheel_Inside
+	bounds: 3944, 234, 90, 89
+	offsets: 1, 6, 91, 95
+Christmas/Catalog_Cart1
+	bounds: 794, 1042, 342, 379
+	offsets: 4, 4, 350, 387
+Christmas/Catalog_Cart2
+	bounds: 1673, 16, 289, 330
+	offsets: 4, 3, 297, 337
+	rotate: 90
+Christmas/Catalog_Cart3
+	bounds: 2360, 1099, 311, 322
+	offsets: 4, 3, 319, 328
+Christmas/Catalog_FaceUp
+	bounds: 2800, 1156, 241, 265
+Christmas/Catalog_Side
+	bounds: 896, 12, 97, 219
+	offsets: 1, 0, 99, 219
+Christmas/Clan
+	bounds: 1683, 704, 323, 351
+	offsets: 3, 4, 329, 359
+Christmas/Clan_Riddbon
+	bounds: 3287, 120, 149, 106
+	rotate: 90
+Christmas/Clan_Riddbon_Mid
+	bounds: 3743, 1052, 83, 99
+	offsets: 1, 0, 84, 99
+Christmas/Clan_Riddbon_Top
+	bounds: 3939, 704, 108, 91
+Christmas/Shop
+	bounds: 1138, 1048, 373, 312
+	offsets: 5, 12, 382, 330
+	rotate: 90
+Christmas/Shop_Banner
+	bounds: 1531, 18, 266, 125
+	offsets: 1, 2, 268, 128
+	rotate: 90
+Christmas/Shop_Stair1
+	bounds: 2321, 1093, 328, 37
+	offsets: 8, 19, 344, 76
+	rotate: 90
+Christmas/Tarpaulins
+	bounds: 2, 12, 386, 133
+	offsets: 0, 3, 386, 139
+Christmas/Trophy_Riddbon
+	bounds: 3741, 422, 107, 97
+	rotate: 90
+Christmas/Trophy_Riddbon2
+	bounds: 3371, 443, 93, 95
+Christmas/Trophy_Riddbon3
+	bounds: 778, 3, 175, 88
+	rotate: 90
+Clan_Riddbon_Mid_SD
+	bounds: 3697, 162, 98, 125
+	offsets: 6, 4, 112, 135
+Clan_Riddbon_SD
+	bounds: 3233, 271, 169, 123
+	offsets: 7, 10, 180, 136
+	rotate: 90
+Clan_Riddbon_Top_SD
+	bounds: 3520, 550, 138, 132
+	offsets: 0, 0, 138, 134
+	rotate: 90
+Clan_Wing2_SD
+	bounds: 3952, 1031, 120, 93
+	offsets: 4, 10, 132, 112
+	rotate: 90
+Clan_Wing3_SD
+	bounds: 3971, 1309, 112, 78
+	offsets: 7, 3, 123, 90
+	rotate: 90
+Clan_Wing_SD
+	bounds: 3503, 254, 131, 134
+	offsets: 4, 15, 139, 153
+Halloween/Cart
+	bounds: 2, 147, 406, 280
+	offsets: 1, 0, 407, 280
+	rotate: 90
+Halloween/Cart_BG
+	bounds: 3773, 1243, 196, 88
+	offsets: 0, 1, 197, 89
+Halloween/Cart_Present
+	bounds: 3385, 1212, 209, 192
+	offsets: 0, 0, 209, 193
+	rotate: 90
+Halloween/Cart_Present_Back
+	bounds: 3580, 124, 128, 115
+	offsets: 1, 1, 130, 116
+	rotate: 90
+Halloween/Cart_Present_Back2
+	bounds: 3945, 914, 115, 104
+	offsets: 1, 1, 117, 105
+	rotate: 90
+Halloween/Cart_Present_Ridbon
+	bounds: 3443, 923, 81, 56
+Halloween/Cart_Present_Top
+	bounds: 3311, 1159, 41, 23
+	offsets: 1, 0, 42, 23
+	rotate: 90
+Halloween/Cart_Wheel
+	bounds: 3797, 217, 90, 94
+	offsets: 1, 1, 91, 95
+Halloween/Cart_Wheel_Inside
+	bounds: 3889, 143, 90, 89
+	offsets: 1, 6, 91, 95
+Halloween/Catalog_Cart1
+	bounds: 701, 272, 342, 379
+	offsets: 4, 4, 350, 387
+Halloween/Catalog_Cart2
+	bounds: 2005, 19, 289, 330
+	offsets: 4, 3, 297, 337
+Halloween/Catalog_Cart3
+	bounds: 2587, 63, 311, 322
+	offsets: 4, 3, 319, 328
+Halloween/Catalog_FaceUp
+	bounds: 2903, 889, 241, 265
+Halloween/Catalog_L
+	bounds: 3138, 656, 212, 231
+Halloween/Catalog_R
+	bounds: 3138, 442, 212, 231
+	rotate: 90
+Halloween/Catalog_Side
+	bounds: 3286, 1202, 97, 219
+	offsets: 1, 0, 99, 219
+Halloween/Clan
+	bounds: 1957, 1070, 323, 351
+	offsets: 3, 4, 329, 359
+Halloween/Clan_Riddbon
+	bounds: 3287, 12, 149, 106
+Halloween/Clan_Riddbon_Mid
+	bounds: 3743, 951, 83, 99
+	offsets: 1, 0, 84, 99
+Halloween/Clan_Riddbon_Top
+	bounds: 3828, 624, 108, 91
+Halloween/Clan_Wing
+	bounds: 3566, 691, 104, 109
+	rotate: 90
+Halloween/Clan_Wing2
+	bounds: 3753, 645, 94, 72
+	offsets: 0, 1, 94, 73
+	rotate: 90
+Halloween/Clan_Wing3
+	bounds: 3769, 863, 86, 57
+	offsets: 0, 0, 86, 58
+	rotate: 90
+Halloween/Shop
+	bounds: 1045, 286, 373, 312
+	offsets: 5, 12, 382, 330
+	rotate: 90
+Halloween/Shop_Banner
+	bounds: 2649, 831, 266, 125
+	offsets: 1, 2, 268, 128
+	rotate: 90
+Halloween/Shop_Stair1
+	bounds: 566, 180, 328, 37
+	offsets: 8, 19, 344, 76
+Halloween/Shop_Stair2
+	bounds: 1452, 1053, 368, 89
+	offsets: 4, 26, 375, 121
+	rotate: 90
+Normal/Shop_Stair2
+	bounds: 1452, 1053, 368, 89
+	offsets: 4, 26, 375, 121
+	rotate: 90
+Halloween/Tarpaulins
+	bounds: 390, 12, 386, 133
+	offsets: 0, 3, 386, 139
+Halloween/Trophy
+	bounds: 1634, 1057, 321, 364
+	offsets: 1, 0, 323, 364
+Halloween/Trophy_Handle
+	bounds: 3371, 540, 148, 147
+	rotate: 90
+Halloween/Trophy_Riddbon
+	bounds: 3938, 512, 107, 97
+Halloween/Trophy_Riddbon2
+	bounds: 3937, 417, 93, 95
+	rotate: 90
+Halloween/Trophy_Riddbon3
+	bounds: 3653, 1035, 175, 88
+	rotate: 90
+Halloween/Trophy_Star
+	bounds: 3710, 38, 122, 116
+	rotate: 90
+LunarNewYear/Cart
+	bounds: 284, 147, 406, 280
+	offsets: 1, 0, 407, 280
+	rotate: 90
+LunarNewYear/Cart_Present
+	bounds: 3459, 1001, 209, 192
+	offsets: 0, 0, 209, 193
+	rotate: 90
+LunarNewYear/Cart_Present_Back
+	bounds: 3580, 7, 128, 115
+	offsets: 1, 1, 130, 116
+LunarNewYear/Cart_Present_Back2
+	bounds: 3828, 823, 115, 104
+	offsets: 1, 1, 117, 105
+LunarNewYear/Cart_Present_Ridbon
+	bounds: 3110, 2, 81, 56
+	rotate: 90
+LunarNewYear/Cart_Present_Top
+	bounds: 868, 137, 41, 23
+	offsets: 1, 0, 42, 23
+	rotate: 90
+LunarNewYear/Cart_Wheel
+	bounds: 3852, 321, 90, 94
+	offsets: 1, 1, 91, 95
+LunarNewYear/Cart_Wheel_Inside
+	bounds: 3828, 51, 90, 89
+	offsets: 1, 6, 91, 95
+	rotate: 90
+LunarNewYear/Catalog_Cart1
+	bounds: 1025, 661, 342, 379
+	offsets: 4, 4, 350, 387
+LunarNewYear/Catalog_Cart2
+	bounds: 2296, 19, 289, 330
+	offsets: 4, 3, 297, 337
+LunarNewYear/Catalog_Cart3
+	bounds: 2610, 442, 311, 322
+	offsets: 4, 3, 319, 328
+LunarNewYear/Catalog_FaceUp
+	bounds: 3043, 1156, 241, 265
+LunarNewYear/Clan
+	bounds: 1996, 351, 323, 351
+	offsets: 3, 4, 329, 359
+LunarNewYear/Clan_Riddbon
+	bounds: 3358, 291, 149, 106
+	rotate: 90
+LunarNewYear/Clan_Riddbon_Mid
+	bounds: 3852, 430, 83, 99
+	offsets: 1, 0, 84, 99
+LunarNewYear/Clan_Riddbon_Top
+	bounds: 3938, 611, 108, 91
+LunarNewYear/Shop
+	bounds: 1359, 286, 373, 312
+	offsets: 5, 12, 382, 330
+	rotate: 90
+LunarNewYear/Shop_Banner
+	bounds: 2673, 1155, 266, 125
+	offsets: 1, 2, 268, 128
+	rotate: 90
+LunarNewYear/Shop_Stair1
+	bounds: 2282, 1091, 330, 37
+	offsets: 7, 19, 344, 76
+	rotate: 90
+LunarNewYear/Shop_Stair2
+	bounds: 1543, 1053, 368, 89
+	offsets: 4, 26, 375, 121
+	rotate: 90
+LunarNewYear/Tarpaulins
+	bounds: 659, 1035, 386, 133
+	offsets: 0, 3, 386, 139
+	rotate: 90
+LunarNewYear/Trophy_Riddbon
+	bounds: 3753, 313, 107, 97
+	rotate: 90
+LunarNewYear/Trophy_Riddbon2
+	bounds: 3566, 837, 93, 95
+LunarNewYear/Trophy_Riddbon3
+	bounds: 3110, 85, 175, 88
+Normal/Cart
+	bounds: 398, 607, 406, 280
+	offsets: 1, 0, 407, 280
+	rotate: 90
+Normal/Cart_BG
+	bounds: 3773, 1153, 196, 88
+	offsets: 0, 1, 197, 89
+Normal/Cart_Present
+	bounds: 3579, 1212, 209, 192
+	offsets: 0, 0, 209, 193
+	rotate: 90
+Normal/Cart_Present_Back
+	bounds: 3636, 289, 128, 115
+	offsets: 1, 1, 130, 116
+	rotate: 90
+Normal/Cart_Present_Back2
+	bounds: 3945, 797, 115, 104
+	offsets: 1, 1, 117, 105
+	rotate: 90
+Normal/Cart_Present_Ridbon
+	bounds: 3168, 2, 81, 56
+	rotate: 90
+Normal/Cart_Present_Top
+	bounds: 868, 94, 41, 23
+	offsets: 1, 0, 42, 23
+	rotate: 90
+Normal/Cart_Wheel
+	bounds: 3944, 325, 90, 94
+	offsets: 1, 1, 91, 95
+	rotate: 90
+Normal/Cart_Wheel_Inside
+	bounds: 3919, 52, 90, 89
+	offsets: 1, 6, 91, 95
+Normal/Catalog_Cart1
+	bounds: 680, 653, 343, 380
+	offsets: 4, 3, 350, 387
+Normal/Catalog_Cart2
+	bounds: 2321, 387, 287, 328
+	offsets: 5, 5, 297, 337
+Normal/Catalog_Cart3
+	bounds: 2333, 766, 314, 325
+	offsets: 2, 1, 319, 328
+Normal/Catalog_FaceUp
+	bounds: 2900, 175, 241, 265
+Normal/Catalog_L
+	bounds: 3146, 923, 212, 231
+Normal/Catalog_R
+	bounds: 3352, 690, 212, 231
+Normal/Catalog_Side
+	bounds: 3360, 981, 97, 219
+	offsets: 1, 0, 99, 219
+Normal/Clan
+	bounds: 2008, 717, 323, 351
+	offsets: 3, 4, 329, 359
+Normal/Clan_Riddbon
+	bounds: 3395, 140, 149, 106
+	rotate: 90
+Normal/Clan_Riddbon_Mid
+	bounds: 3653, 934, 83, 99
+	offsets: 1, 0, 84, 99
+Normal/Clan_Riddbon_Top
+	bounds: 3828, 531, 108, 91
+Normal/Clan_Wing
+	bounds: 3828, 717, 104, 109
+	rotate: 90
+Normal/Clan_Wing2
+	bounds: 3753, 549, 94, 72
+	offsets: 0, 1, 94, 73
+	rotate: 90
+Normal/Clan_Wing3
+	bounds: 3769, 775, 86, 57
+	offsets: 0, 0, 86, 58
+	rotate: 90
+Normal/Shop
+	bounds: 1369, 673, 373, 312
+	offsets: 5, 12, 382, 330
+	rotate: 90
+Normal/Shop_Banner
+	bounds: 2776, 887, 266, 125
+	offsets: 1, 2, 268, 128
+	rotate: 90
+Normal/Shop_Stair1
+	bounds: 701, 233, 328, 37
+	offsets: 8, 19, 344, 76
+Normal/Tarpaulins
+	bounds: 566, 219, 386, 133
+	offsets: 0, 3, 386, 139
+	rotate: 90
+Normal/Trophy
+	bounds: 1673, 307, 321, 364
+	offsets: 0, 0, 323, 364
+Normal/Trophy_Handle
+	bounds: 3466, 390, 148, 147
+	rotate: 90
+Normal/Trophy_Riddbon
+	bounds: 3654, 582, 107, 97
+	rotate: 90
+Normal/Trophy_Riddbon2
+	bounds: 3661, 837, 93, 95
+Normal/Trophy_Riddbon3
+	bounds: 3143, 265, 175, 88
+	rotate: 90
+Normal/Trophy_Star
+	bounds: 3828, 1035, 122, 116
+Trophy_Riddbon2_SD
+	bounds: 3615, 419, 124, 129
+Trophy_Riddbon3_SD
+	bounds: 2900, 51, 208, 122
+Trophy_Riddbon_SD
+	bounds: 3438, 8, 140, 130
+Trophy_SD
+	bounds: 2, 555, 431, 394
+	offsets: 3, 3, 437, 400
+	rotate: 90

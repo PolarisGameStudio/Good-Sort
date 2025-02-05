@@ -1,0 +1,31 @@
+Spine_UI_LunarNewYear_Item5_Back.png
+	size: 1984, 304
+OP1/Pot1
+	bounds: 347, 12, 287, 324
+	offsets: 12, 44, 301, 369
+	rotate: 90
+OP1/Pot3
+	bounds: 999, 3, 264, 296
+	offsets: 19, 37, 297, 334
+OP2/Pot1
+	bounds: 2, 2, 297, 343
+	offsets: 1, 43, 301, 387
+	rotate: 90
+OP2/Pot3
+	bounds: 1265, 3, 243, 296
+	offsets: 18, 32, 297, 334
+OP3/Pot1
+	bounds: 673, 19, 280, 324
+	offsets: 10, 43, 300, 368
+	rotate: 90
+OP3/Pot3
+	bounds: 1510, 3, 256, 296
+	offsets: 28, 37, 297, 334
+Pot1_SD
+	bounds: 1879, 43, 256, 103
+	offsets: 19, 12, 297, 122
+	rotate: 90
+Pot3_SD
+	bounds: 1768, 38, 261, 109
+	offsets: 14, 5, 295, 129
+	rotate: 90

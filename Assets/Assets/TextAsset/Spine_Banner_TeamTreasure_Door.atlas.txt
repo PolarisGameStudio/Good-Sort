@@ -1,0 +1,7 @@
+Spine_Banner_TeamTreasure_Door.png
+	size: 1068, 688
+	filter: Linear, Linear
+Door_L
+	bounds: 535, 3, 529, 681
+Door_R
+	bounds: 3, 3, 529, 681

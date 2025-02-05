@@ -1,0 +1,289 @@
+Spine_Banner_TeamBattle.png
+	size: 4068, 1340
+BigBag
+	bounds: 693, 812, 447, 526
+	offsets: 0, 0, 464, 526
+Bike_Back
+	bounds: 1142, 872, 365, 466
+	offsets: 1, 0, 389, 482
+Bike_Front
+	bounds: 2, 358, 689, 980
+Bike_Front_Wheel
+	bounds: 1185, 53, 114, 136
+	rotate: 90
+Bike_Light
+	bounds: 2136, 956, 360, 382
+	offsets: 43, 44, 454, 470
+Char_Apron
+	bounds: 930, 169, 407, 144
+Char_Body
+	bounds: 1339, 5, 321, 235
+	offsets: 1, 0, 323, 235
+	rotate: 90
+Char_Face
+	bounds: 3322, 190, 169, 143
+	offsets: 1, 0, 170, 144
+Char_Hair
+	bounds: 1509, 814, 60, 82
+Char_Hair2
+	bounds: 1298, 2, 35, 49
+Char_Hair3
+	bounds: 3975, 268, 86, 140
+Char_Helmet
+	bounds: 3241, 335, 301, 290
+	rotate: 90
+Char_L_Arm
+	bounds: 1960, 4, 104, 124
+	offsets: 0, 0, 104, 125
+	rotate: 90
+Char_L_Collar
+	bounds: 503, 317, 39, 72
+	rotate: 90
+Char_L_Eye
+	bounds: 2618, 181, 42, 48
+	offsets: 1, 0, 43, 49
+	rotate: 90
+Char_L_EyeBrown
+	bounds: 2196, 86, 22, 21
+	rotate: 90
+Char_L_EyeLash
+	bounds: 1571, 812, 32, 33
+	offsets: 1, 1, 33, 34
+Char_L_EyeLid
+	bounds: 1571, 847, 43, 49
+Char_L_EyePupil
+	bounds: 2742, 584, 27, 37
+	offsets: 1, 0, 28, 37
+Char_L_Hand
+	bounds: 3987, 1004, 92, 66
+	offsets: 0, 2, 92, 68
+	rotate: 90
+Char_L_Leg
+	bounds: 3179, 5, 141, 266
+Char_L_Thigh
+	bounds: 2219, 12, 279, 167
+	offsets: 0, 0, 279, 168
+Char_L_UpperArm
+	bounds: 3865, 1098, 240, 171
+	offsets: 7, 43, 262, 249
+	rotate: 90
+Char_Mouth
+	bounds: 4038, 1278, 60, 27
+	rotate: 90
+Char_R_Arm
+	bounds: 2746, 11, 212, 131
+	offsets: 9, 8, 221, 140
+	rotate: 90
+Char_R_Coller
+	bounds: 577, 316, 40, 68
+	rotate: 90
+Char_R_Eye
+	bounds: 1307, 818, 52, 49
+	offsets: 1, 0, 54, 49
+	rotate: 90
+Char_R_EyeBrown
+	bounds: 2196, 62, 22, 21
+	rotate: 90
+Char_R_EyeLash
+	bounds: 2164, 500, 56, 40
+	rotate: 90
+Char_R_EyeLid
+	bounds: 1256, 816, 54, 49
+	rotate: 90
+Char_R_EyePupil
+	bounds: 2668, 181, 30, 42
+	offsets: 0, 1, 30, 43
+Char_R_Hand
+	bounds: 3768, 576, 92, 73
+	offsets: 0, 1, 92, 74
+	rotate: 90
+Char_R_Leg
+	bounds: 1942, 946, 192, 392
+Char_R_Thigh
+	bounds: 1960, 110, 386, 257
+	rotate: 90
+Char_R_UpperArm
+	bounds: 3847, 410, 277, 208
+	offsets: 4, 17, 295, 303
+	rotate: 90
+Clock
+	bounds: 3755, 195, 213, 218
+	offsets: 0, 0, 214, 218
+	rotate: 90
+Clock_Point
+	bounds: 3768, 527, 47, 73
+	rotate: 90
+Dog_Bag
+	bounds: 2897, 24, 280, 247
+	offsets: 0, 17, 282, 265
+Dog_Bag_Rope
+	bounds: 3322, 2, 206, 184
+Dog_Body
+	bounds: 3847, 689, 303, 211
+	rotate: 90
+Dog_Chin
+	bounds: 930, 33, 253, 134
+Dog_Hat
+	bounds: 3530, 6, 180, 132
+	offsets: 0, 3, 193, 141
+	rotate: 90
+Dog_Head
+	bounds: 3533, 521, 233, 147
+Dog_Head_BG
+	bounds: 1185, 5, 111, 46
+	offsets: 0, 0, 111, 47
+Dog_L_Ear
+	bounds: 3664, 11, 156, 175
+	offsets: 2, 0, 158, 175
+Dog_L_Eye
+	bounds: 2560, 182, 41, 56
+	offsets: 1, 0, 42, 56
+	rotate: 90
+Dog_L_EyeBrown
+	bounds: 2498, 956, 19, 16
+	offsets: 0, 0, 20, 16
+	rotate: 90
+Dog_L_EyeLid
+	bounds: 2123, 498, 39, 58
+Dog_L_Pupil
+	bounds: 3044, 623, 13, 29
+	offsets: 1, 0, 14, 29
+	rotate: 90
+Dog_Neck_Icon
+	bounds: 2058, 498, 63, 58
+Dog_Nose
+	bounds: 3975, 219, 91, 47
+	offsets: 1, 0, 92, 47
+Dog_R_Ear
+	bounds: 2500, 20, 244, 159
+	offsets: 9, 0, 253, 159
+Dog_R_EarFur
+	bounds: 2691, 584, 49, 37
+Dog_R_EarFur2
+	bounds: 4043, 121, 34, 22
+	offsets: 1, 1, 36, 23
+	rotate: 90
+Dog_R_Eye
+	bounds: 1991, 511, 45, 65
+	offsets: 1, 0, 47, 65
+	rotate: 90
+Dog_R_EyeBrown
+	bounds: 2879, 205, 18, 16
+	offsets: 1, 1, 20, 17
+	rotate: 90
+Dog_R_EyeLid
+	bounds: 3241, 289, 44, 66
+	rotate: 90
+Dog_R_Pupil
+	bounds: 3241, 273, 14, 28
+	rotate: 90
+Dog_Weapon
+	bounds: 3533, 188, 216, 170
+	offsets: 2, 2, 218, 174
+FXSmoke_0
+	bounds: 2834, 987, 351, 338
+	offsets: 1070, 518, 1941, 2500
+	rotate: 90
+FXSmoke_1
+	bounds: 3044, 638, 347, 344
+	offsets: 1070, 517, 1941, 2500
+	rotate: 90
+FXSmoke_10
+	bounds: 2498, 977, 361, 334
+	offsets: 1069, 516, 1941, 2500
+	rotate: 90
+FXSmoke_2
+	bounds: 2897, 273, 348, 342
+	offsets: 1070, 520, 1941, 2500
+	rotate: 90
+FXSmoke_3
+	bounds: 3174, 991, 347, 341
+	offsets: 1069, 522, 1941, 2500
+	rotate: 90
+FXSmoke_4
+	bounds: 3517, 994, 346, 344
+	offsets: 1069, 520, 1941, 2500
+FXSmoke_5
+	bounds: 2691, 623, 351, 352
+	offsets: 1068, 515, 1941, 2500
+FXSmoke_6
+	bounds: 2338, 584, 370, 351
+	offsets: 1065, 507, 1941, 2500
+	rotate: 90
+FXSmoke_7
+	bounds: 1991, 558, 386, 345
+	offsets: 1064, 508, 1941, 2500
+	rotate: 90
+FXSmoke_8
+	bounds: 1616, 106, 390, 342
+	offsets: 1064, 505, 1941, 2500
+	rotate: 90
+FXSmoke_9
+	bounds: 2219, 181, 375, 339
+	offsets: 1066, 509, 1941, 2500
+	rotate: 90
+SD
+	bounds: 1509, 898, 431, 440
+SmallBag
+	bounds: 503, 2, 311, 425
+	rotate: 90
+Sparky_Apron
+	bounds: 693, 315, 444, 495
+Sparky_Body
+	bounds: 1139, 328, 475, 482
+	offsets: 0, 0, 475, 510
+Sparky_Foot
+	bounds: 3533, 360, 220, 159
+Sparky_Hat
+	bounds: 3822, 32, 161, 158
+	offsets: 3, 1, 166, 164
+	rotate: 90
+Sparky_Hat_BG
+	bounds: 3865, 997, 120, 99
+	offsets: 0, 0, 121, 99
+Sparky_Head
+	bounds: 2560, 225, 357, 335
+	rotate: 90
+Sparky_L_Arm
+	bounds: 2, 23, 333, 499
+	rotate: 90
+Sparky_L_Eye
+	bounds: 3982, 96, 59, 59
+	offsets: 1, 0, 61, 60
+Sparky_L_EyeBrown
+	bounds: 4043, 104, 23, 15
+	offsets: 1, 0, 25, 15
+Sparky_L_EyeLid
+	bounds: 1142, 814, 55, 56
+Sparky_L_Pupil
+	bounds: 4038, 1254, 22, 28
+	rotate: 90
+Sparky_Mouth
+	bounds: 2086, 2, 108, 106
+Sparky_R_Arm
+	bounds: 1616, 498, 373, 398
+	offsets: 19, 0, 392, 398
+Sparky_R_Eye
+	bounds: 3982, 157, 62, 60
+	offsets: 1, 1, 63, 62
+Sparky_R_EyeBrown
+	bounds: 2196, 41, 19, 21
+	offsets: 1, 0, 20, 21
+	rotate: 90
+Sparky_R_EyeLid
+	bounds: 1199, 814, 55, 56
+Sparky_R_Finger
+	bounds: 3390, 817, 118, 172
+	offsets: 2, 2, 121, 181
+Sparky_R_Hand
+	bounds: 3390, 678, 122, 137
+	offsets: 16, 4, 144, 159
+Sparky_R_Pupil
+	bounds: 3390, 638, 24, 30
+	offsets: 0, 1, 24, 32
+Sparky_R_Thumb
+	bounds: 3755, 445, 90, 74
+Sparky_R_Weapon
+	bounds: 3517, 670, 322, 328
+	offsets: 26, 0, 348, 328
+	rotate: 90

@@ -1,0 +1,66 @@
+Spine_UI_Banner_PiggyBank.png
+	size: 1080, 1040
+	scale: 0.5
+FX_Awake
+	bounds: 974, 285, 121, 99
+	offsets: 3, 2, 126, 102
+	rotate: 90
+FX_Circle
+	bounds: 756, 159, 215, 216
+	offsets: 15, 15, 246, 246
+	rotate: 90
+Gold_back_left_1
+	bounds: 791, 711, 287, 327
+	offsets: 0, 31, 301, 375
+Gold_back_left_2
+	bounds: 140, 173, 384, 390
+	offsets: 31, 30, 436, 454
+Gold_back_right
+	bounds: 439, 685, 353, 350
+	offsets: 28, 28, 400, 409
+	rotate: 90
+Gold_front_left
+	bounds: 526, 376, 350, 307
+	offsets: 6, 22, 379, 369
+Gold_front_right
+	bounds: 526, 77, 297, 228
+	offsets: 12, 20, 327, 267
+	rotate: 90
+Nose
+	bounds: 140, 2, 175, 169
+Pig
+	bounds: 2, 565, 473, 435
+	rotate: 90
+Pig_BackLegL
+	bounds: 878, 408, 129, 111
+	offsets: 0, 0, 130, 111
+	rotate: 90
+Pig_BackLegR
+	bounds: 947, 24, 109, 133
+	offsets: 0, 1, 110, 134
+Pig_EarBack
+	bounds: 317, 9, 174, 162
+Pig_EarFront
+	bounds: 756, 4, 153, 189
+	rotate: 90
+Pig_EyeL
+	bounds: 878, 376, 52, 30
+Pig_EyeR
+	bounds: 991, 492, 86, 45
+Pig_FrontLegL
+	bounds: 2, 12, 142, 109
+	rotate: 90
+Pig_RingBack
+	bounds: 493, 2, 15, 28
+	offsets: 1, 1, 19, 29
+Pig_RingFront
+	bounds: 493, 32, 34, 43
+	offsets: 4, 1, 38, 45
+Pig_Tag
+	bounds: 878, 539, 170, 199
+	offsets: 0, 0, 173, 199
+	rotate: 90
+Piggy_shadow
+	bounds: 2, 156, 407, 136
+	offsets: 3, 3, 425, 149
+	rotate: 90

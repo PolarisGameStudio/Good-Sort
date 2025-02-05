@@ -1,0 +1,514 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1d3349a4c157a3a411f29c75ca5866, type: 3}
+  m_Name: SO_SpriteCollection
+  m_EditorClassIdentifier:
+  topics:
+  - name: Household Goods
+    cardsRef:
+    - m_AssetGUID: 142e59c90cd3fb34395c4e12438a45fd
+      m_SubObjectName: Card_HouseholdGoods_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 4f5ea3a1285f8394983186d949f52a29
+      m_SubObjectName: Card_HouseholdGoods_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: f58b135f886229841bcf84d08ac3f336
+      m_SubObjectName: Card_HouseholdGoods_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: afded66a32f458a4e81e842ba13a3afd
+      m_SubObjectName: Card_HouseholdGoods_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 102fe07e76913ec4795ecacd4300722a
+      m_SubObjectName: Card_HouseholdGoods_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 35cb451dc2d050c40a1f33b27224e596
+      m_SubObjectName: Card_HouseholdGoods_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 39b5c8d360e1f824f9b54cdf44af9a40
+      m_SubObjectName: Card_HouseholdGoods_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 0bbc75c3d094f0c499ff3303e7d78263
+      m_SubObjectName: Card_HouseholdGoods_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: cd9f9e5cb6f76f844be8cdb8d0047417
+      m_SubObjectName: Card_HouseholdGoods_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Toiletries
+    cardsRef:
+    - m_AssetGUID: 738165103a36b504ab1916bf6c4f3695
+      m_SubObjectName: Card_Toiletries_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 7004a16005ccfeb4e88758fe14d6b236
+      m_SubObjectName: Card_Toiletries_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: bd088e44363b45746a7f81d5973968f0
+      m_SubObjectName: Card_Toiletries_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 5493a4ab2eff0cf4a85c7fab168c8fd8
+      m_SubObjectName: Card_Toiletries_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 82928a29168622d489c0bcec95b6bcc7
+      m_SubObjectName: Card_Toiletries_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 266a04127e343b84da1bab48369ca448
+      m_SubObjectName: Card_Toiletries_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 6afc0f7f0f940c244a7023748d3a1fd7
+      m_SubObjectName: Card_Toiletries_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: f572c99e7b207074fa3cabd4afedcda2
+      m_SubObjectName: Card_Toiletries_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 6563071b944c94e48b5cf0a070c35601
+      m_SubObjectName: Card_Toiletries_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Electronics
+    cardsRef:
+    - m_AssetGUID: 0536cf438ef57c3418625bb0df0eff5f
+      m_SubObjectName: Card_Electronics_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: ee2bd35bda451cf42b839ede08e557e2
+      m_SubObjectName: Card_Electronics_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 8f960d6a6774b874395e077902de7674
+      m_SubObjectName: Card_Electronics_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 7e3fc1418cb825d44b2c4ebf81a61e2e
+      m_SubObjectName: Card_Electronics_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 5db4c8207354ef64c9eaf22c40c9ef82
+      m_SubObjectName: Card_Electronics_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: d15f2a84cac898d429acdf2345a77888
+      m_SubObjectName: Card_Electronics_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 18898241751149a4ca947ebf10c89a19
+      m_SubObjectName: Card_Electronics_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 8d35fa608577bde4b8a9bec9e2f9aa16
+      m_SubObjectName: Card_Electronics_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 6ddbb8a80bc91ce4bae69f15f7ae0eca
+      m_SubObjectName: Card_Electronics_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Makeup
+    cardsRef:
+    - m_AssetGUID: cec1268241678934b8c7f36e807a773b
+      m_SubObjectName: Card_Makeup_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 77cb0dfa558c74343b7f896bae298a39
+      m_SubObjectName: Card_Makeup_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 343d51781fbaa71488a7d8a1f2f523ac
+      m_SubObjectName: Card_Makeup_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 3b85498d55da67a42aeff547fa299b24
+      m_SubObjectName: Card_Makeup_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: b5f6536516929a44faa8986ed49e2dd2
+      m_SubObjectName: Card_Makeup_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 4d316961239412f45a914d0900008edf
+      m_SubObjectName: Card_Makeup_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: c3f5088ce41109c4ca87c793e298c728
+      m_SubObjectName: Card_Makeup_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: af8d1e8cc3d3a5c478f10a240d5026dc
+      m_SubObjectName: Card_Makeup_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 7c316502168a4d2419d6aff51d712cd7
+      m_SubObjectName: Card_Makeup_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Sanitary
+    cardsRef:
+    - m_AssetGUID: be3447d6267778a42b1a824fbe77d033
+      m_SubObjectName: Card_Sanitary_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 9c2df30fd23ac994187446d7eda0f3f6
+      m_SubObjectName: Card_Sanitary_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 1b332e9681384db498961561bcf0a8ad
+      m_SubObjectName: Card_Sanitary_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 085080efea81608438659ede8a9ea5cb
+      m_SubObjectName: Card_Sanitary_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: b09d0cb5264f3104881b3e300129fc68
+      m_SubObjectName: Card_Sanitary_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 904934afc505b6244a4eb62fd0eea25d
+      m_SubObjectName: Card_Sanitary_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 7584ab3fd43e0354b8c46a3755947314
+      m_SubObjectName: Card_Sanitary_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 3aa6fa6c79a906240b628bc77b033657
+      m_SubObjectName: Card_Sanitary_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 4ec10378bb327c74eae705918cad4a01
+      m_SubObjectName: Card_Sanitary_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Health
+    cardsRef:
+    - m_AssetGUID: 94ce6f095f8d3e14e8a80285c4c78fd0
+      m_SubObjectName: Card_Health_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: e06b33c7baa6d0b40b01d7400b8e253e
+      m_SubObjectName: Card_Health_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: bd845a44c539fe8478fab9ba86ef69fb
+      m_SubObjectName: Card_Health_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: ee43681ffed3d2c4f88d0cef3a2ac43c
+      m_SubObjectName: Card_Health_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 9b64db8177bcd88409ab6e19ee3cf1e5
+      m_SubObjectName: Card_Health_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 8c4a60f9de2e5714593e403a6a4c9f7b
+      m_SubObjectName: Card_Health_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 4c9126586f7e6944db33ad77efd9476d
+      m_SubObjectName: Card_Health_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 9b37440e122424647a7554c547f61a75
+      m_SubObjectName: Card_Health_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 9365b478464e86b40b73806f182d80eb
+      m_SubObjectName: Card_Health_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Kitchen
+    cardsRef:
+    - m_AssetGUID: ac4e1f4bcef611d4ab885bb6b2672637
+      m_SubObjectName: Card_Kitchen_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 9285f678ab5b5314187308a3047dfc8a
+      m_SubObjectName: Card_Kitchen_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 7dd3a037b4c3b40439dbd84c05490f98
+      m_SubObjectName: Card_Kitchen_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: b344e91ef3ff1144b835e8f7f472e482
+      m_SubObjectName: Card_Kitchen_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: eb7a1be316c34f241aeae7b9c2582382
+      m_SubObjectName: Card_Kitchen_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 45843b3abcc8d4e4a8cc99afc7fbe613
+      m_SubObjectName: Card_Kitchen_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 60a893a31f5f2294d9b2476c17783f3f
+      m_SubObjectName: Card_Kitchen_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 8c82e11db92a7de4380bf6f3612991f6
+      m_SubObjectName: Card_Kitchen_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 26234a95e1ab9404e9306bc8ee24815e
+      m_SubObjectName: Card_Kitchen_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Fast Food
+    cardsRef:
+    - m_AssetGUID: 718b02c91ec56144da73f0958ef3989a
+      m_SubObjectName: Card_FastFood_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 6d4304b016a048341aa6ba68553592a5
+      m_SubObjectName: Card_FastFood_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: d2bea249a79ced8489919c3133c9af05
+      m_SubObjectName: Card_FastFood_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: aca53438d97821b4da0f0ff3e1f703e6
+      m_SubObjectName: Card_FastFood_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 0b10b9f139734fd4a9b3a3d2a6d0e139
+      m_SubObjectName: Card_FastFood_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 72aa04cf70e1d6e42a5fb1400d28d9ec
+      m_SubObjectName: Card_FastFood_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 2cebab3634902654593391ad64d6c84e
+      m_SubObjectName: Card_FastFood_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: b4e0c58faf62e43408fb85b64ec29297
+      m_SubObjectName: Card_FastFood_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: bdd26afa9b2f6264291fd97d68943662
+      m_SubObjectName: Card_FastFood_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Vegettables
+    cardsRef:
+    - m_AssetGUID: ddd676a1db7abaf4e834cad36dfd7384
+      m_SubObjectName: Card_Vegetables_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 75259a43c466e1d428f338f236081c76
+      m_SubObjectName: Card_Vegetables_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 2924af2422759d34fbcd264b7bcc478a
+      m_SubObjectName: Card_Vegetables_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: e6eae6645aa977d44a08d0836910158f
+      m_SubObjectName: Card_Vegetables_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: c53f09eb7d856b041801d55206436413
+      m_SubObjectName: Card_Vegetables_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 864df8e75d3bcfb4ebdffc2bae942615
+      m_SubObjectName: Card_Vegetables_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 8d596aa2835318140a79b78a34052af2
+      m_SubObjectName: Card_Vegetables_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 857a76d7c5614a6459cfca91f9597394
+      m_SubObjectName: Card_Vegetables_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 29b99c9d870ad3d4eb2f12e75ea403ce
+      m_SubObjectName: Card_Vegetables_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Drink
+    cardsRef:
+    - m_AssetGUID: 5134c357e6dc9fc4fbaba0ee092563fb
+      m_SubObjectName: Card_Drink_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 97f45afdc3cc8264eb5db03be22f7a24
+      m_SubObjectName: Card_Drink_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: c9fac459ca39ff14b9407f0a21ac47a0
+      m_SubObjectName: Card_Drink_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: a8b13137aed529b4f8ae004ae6a2d189
+      m_SubObjectName: Card_Drink_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 298ee2f2dc0173e49933eca4cc0d8647
+      m_SubObjectName: Card_Drink_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: cbb19e9523745924c89a1d6602dfb366
+      m_SubObjectName: Card_Drink_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 67c114b47f9fd5145a9ad8d26653013f
+      m_SubObjectName: Card_Drink_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 7e5cf3677c234aa47a575647509f5268
+      m_SubObjectName: Card_Drink_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: a262d22b999ccef43b320e091e1e7b08
+      m_SubObjectName: Card_Drink_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Sport
+    cardsRef:
+    - m_AssetGUID: ef71965df7a2da84eb6efe3fa33d94f9
+      m_SubObjectName: Card_Sport_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 85231820d23f49a42a2b1ebb0c635090
+      m_SubObjectName: Card_Sport_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: dc8dfab1423cda14b83775287e705192
+      m_SubObjectName: Card_Sport_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 4c671129c502e594fb798b0f2ed40b49
+      m_SubObjectName: Card_Sport_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 0b689c286ba64f14c9fe32cb7ebbe165
+      m_SubObjectName: Card_Sport_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: bc315cdee89b45b499169d5326f7e852
+      m_SubObjectName: Card_Sport_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: c99e0246596126941983fe4adc20707d
+      m_SubObjectName: Card_Sport_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 794de221b55d35b4a8ffefcdb069d377
+      m_SubObjectName: Card_Sport_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 96807d31b17794143b501178c68ec38b
+      m_SubObjectName: Card_Sport_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Art
+    cardsRef:
+    - m_AssetGUID: d2d997a7c41f0ca4083b08a725d4ffa1
+      m_SubObjectName: Card_Art_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: e7db3e1f07e16ea40b3395d144e7a337
+      m_SubObjectName: Card_Art_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 9e74559062baab84484dbc6aa51cbde6
+      m_SubObjectName: Card_Art_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: fb4cf57111c0a014c8fc126733893b91
+      m_SubObjectName: Card_Art_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: a88c989a5ae17a6438adbd1ccc2062a4
+      m_SubObjectName: Card_Art_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: f3f690b40df36ba45b4ec2e943948f65
+      m_SubObjectName: Card_Art_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: ff9a759d81b8bca4e86523c00e97beba
+      m_SubObjectName: Card_Art_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 7b7b589e59b0d364380eb2fcb10bbec6
+      m_SubObjectName: Card_Art_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 73f748f994e58084eab203631db45319
+      m_SubObjectName: Card_Art_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Summer
+    cardsRef:
+    - m_AssetGUID: 9fa3e7cd35b6c5b4c81f6fcd77b7585d
+      m_SubObjectName: Card_Summer_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: c67982145e37243488587ca3362128b5
+      m_SubObjectName: Card_Summer_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: f380eb0a448344f4dbb845262107af46
+      m_SubObjectName: Card_Summer_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 7d8289358c889b442962d588fcb1a40f
+      m_SubObjectName: Card_Summer_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 5f65e9a27fbcd9d458f70a31b6d5dda8
+      m_SubObjectName: Card_Summer_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 868acc169b3b2744a82f75c9d07a72cb
+      m_SubObjectName: Card_Summer_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: d51ce8904d91843418760a2b9bc780a1
+      m_SubObjectName: Card_Summer_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 25ce9befe9bf4364e9d94f10e862a5b4
+      m_SubObjectName: Card_Summer_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 5e75ccb6c6fb893419013c7097dd786a
+      m_SubObjectName: Card_Summer_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Camping
+    cardsRef:
+    - m_AssetGUID: 092c261a7ff3b5a4fb050797e7cdab45
+      m_SubObjectName: Card_Camping_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 7802116ae2e31ea41a4100ae026bd929
+      m_SubObjectName: Card_Camping_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: adb0749ac254c1446ad15450f14728a2
+      m_SubObjectName: Card_Camping_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: a296559e4fcef304a8162702df66b86d
+      m_SubObjectName: Card_Camping_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 0c953d127f73eec49acd3cb5cc659af6
+      m_SubObjectName: Card_Camping_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 2157f8570665be14daf9d288c98cc77c
+      m_SubObjectName: Card_Camping_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: bba1a0fd1a063f14cbc3ddd6714201a0
+      m_SubObjectName: Card_Camping_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 3d147dc6ad10ab3458a637e6a55314e4
+      m_SubObjectName: Card_Camping_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: c0dbd57145ae8cf499d330921c4a94b5
+      m_SubObjectName: Card_Camping_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - name: Toy
+    cardsRef:
+    - m_AssetGUID: 8bad75d3977b150488159b7008195ca2
+      m_SubObjectName: Card_Toy_01
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 999ec8a14e24d544a83a0bd8aa97efba
+      m_SubObjectName: Card_Toy_02
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 67e53ffce9c62334281cf9d6186a6e9e
+      m_SubObjectName: Card_Toy_03
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 3679c1ac78411e64c909ddace84db52f
+      m_SubObjectName: Card_Toy_04
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 626a55e3dffce774bbb1fba5fcbadfe7
+      m_SubObjectName: Card_Toy_05
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: b1b27f8a5139ad44aa26df529176279a
+      m_SubObjectName: Card_Toy_06
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: d051a3949bea1f64299e69c5fd15a13d
+      m_SubObjectName: Card_Toy_07
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 1c422bed5dd06cc429c0e0c1b981ed87
+      m_SubObjectName: Card_Toy_08
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    - m_AssetGUID: 945a7662d60071d45baf4a1703d4aef6
+      m_SubObjectName: Card_Toy_09
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  sprFeatureSets:
+  - {fileID: 21300000, guid: 31703f0bfc106474d839253ef29dcbc8, type: 2}
+  - {fileID: 21300000, guid: ca156a20bfff6a64ca159c65b07af49b, type: 2}
+  - {fileID: 21300000, guid: d34a1ad0a2169ac49b32294ddd244434, type: 2}
+  - {fileID: 21300000, guid: 3f56b489be1209f4d80cbc3bec14ff59, type: 2}
+  - {fileID: 21300000, guid: a7a1475a15b87fc4dad0a4de6d2ffde5, type: 2}
+  - {fileID: 21300000, guid: d0275371086d7a9489969a01165da7bb, type: 2}
+  - {fileID: 21300000, guid: 37049f376267a024e90e320273ea3e41, type: 2}
+  - {fileID: 21300000, guid: 8c322739cd7948f448e693b257d802b0, type: 2}
+  - {fileID: 21300000, guid: 7436997eec76ed045b97dc8f61f14cea, type: 2}
+  - {fileID: 21300000, guid: 5dda083ddafeb884b9a49866373b4bef, type: 2}
+  - {fileID: 21300000, guid: c17774f297ffd2c40b24e52f54dfaeca, type: 2}
+  - {fileID: 21300000, guid: fa3aceec03e0f5842aa72b2e6691bc5c, type: 2}
+  - {fileID: 21300000, guid: 420b8f16d86ce094db37ca6799923572, type: 2}
+  - {fileID: 21300000, guid: 7529fcdc557920540ad28bba971fbd92, type: 2}
+  - {fileID: 21300000, guid: 9fc102350f798f0409cf7aa1d9885c06, type: 2}
+  sprTagNumbers:
+  - {fileID: 21300000, guid: c8eea3a3daf89d64d8ac5ff09596bf39, type: 2}
+  - {fileID: 21300000, guid: 9e2aa84a4e2e3ee43a208fe66cdfe25d, type: 2}
+  - {fileID: 21300000, guid: 630d237c13c47cb40b9de3b6716642e7, type: 2}
+  - {fileID: 21300000, guid: b5d3742f6d35d0247afc9a5d7287e7dc, type: 2}
+  - {fileID: 21300000, guid: 73f6bfa4c4f31364d854a3c4f206b41e, type: 2}
+  - {fileID: 21300000, guid: 9e2aa84a4e2e3ee43a208fe66cdfe25d, type: 2}
+  - {fileID: 21300000, guid: 73f6bfa4c4f31364d854a3c4f206b41e, type: 2}
+  - {fileID: 21300000, guid: 1dd0a9a97e055524a82a617887eae994, type: 2}
+  - {fileID: 21300000, guid: c8eea3a3daf89d64d8ac5ff09596bf39, type: 2}
+  - {fileID: 21300000, guid: c8eea3a3daf89d64d8ac5ff09596bf39, type: 2}
+  - {fileID: 21300000, guid: 9e2aa84a4e2e3ee43a208fe66cdfe25d, type: 2}
+  - {fileID: 21300000, guid: 73f6bfa4c4f31364d854a3c4f206b41e, type: 2}
+  - {fileID: 21300000, guid: 630d237c13c47cb40b9de3b6716642e7, type: 2}
+  - {fileID: 21300000, guid: c8eea3a3daf89d64d8ac5ff09596bf39, type: 2}
+  - {fileID: 21300000, guid: 1dd0a9a97e055524a82a617887eae994, type: 2}
+  sprHeadlines:
+  - {fileID: 21300000, guid: 65c8e7835fa06b94c833cdd08692674a, type: 2}
+  - {fileID: 21300000, guid: 1225c9125c1f8bb4ba705d7a0f8c7cd5, type: 2}
+  - {fileID: 21300000, guid: 42964617971eb814c92b00a52b77e05c, type: 2}
+  - {fileID: 21300000, guid: c67886762f3151440a05054390e1539d, type: 2}
+  - {fileID: 21300000, guid: 8b5a64bd6d8e3ec408af33c2128a9119, type: 2}
+  - {fileID: 21300000, guid: 1225c9125c1f8bb4ba705d7a0f8c7cd5, type: 2}
+  - {fileID: 21300000, guid: 8b5a64bd6d8e3ec408af33c2128a9119, type: 2}
+  - {fileID: 21300000, guid: 9325596eb9bc18d4c82d82406ed1a834, type: 2}
+  - {fileID: 21300000, guid: 65c8e7835fa06b94c833cdd08692674a, type: 2}
+  - {fileID: 21300000, guid: 65c8e7835fa06b94c833cdd08692674a, type: 2}
+  - {fileID: 21300000, guid: 1225c9125c1f8bb4ba705d7a0f8c7cd5, type: 2}
+  - {fileID: 21300000, guid: 8b5a64bd6d8e3ec408af33c2128a9119, type: 2}
+  - {fileID: 21300000, guid: 42964617971eb814c92b00a52b77e05c, type: 2}
+  - {fileID: 21300000, guid: 65c8e7835fa06b94c833cdd08692674a, type: 2}
+  - {fileID: 21300000, guid: 9325596eb9bc18d4c82d82406ed1a834, type: 2}
+  matFontTextHeadlines:
+  - {fileID: 2100000, guid: 7535fda7c73c9ac4a864c2f3cd99ba36, type: 2}
+  - {fileID: 2100000, guid: f21711802ae597d44a330dd315a56602, type: 2}
+  - {fileID: 2100000, guid: aca339a1c79313745883f66c6aefbddf, type: 2}
+  - {fileID: 2100000, guid: 6cb5852fdf4bc0843bfcd38bfc3e1294, type: 2}
+  - {fileID: 2100000, guid: c9b6bd5721f37f84db9ca4aa04e1f5ac, type: 2}
+  - {fileID: 2100000, guid: f21711802ae597d44a330dd315a56602, type: 2}
+  - {fileID: 2100000, guid: c9b6bd5721f37f84db9ca4aa04e1f5ac, type: 2}
+  - {fileID: 2100000, guid: 72751ca22953e8e4588f3530aa1c0230, type: 2}
+  - {fileID: 2100000, guid: 7535fda7c73c9ac4a864c2f3cd99ba36, type: 2}
+  - {fileID: 2100000, guid: 7535fda7c73c9ac4a864c2f3cd99ba36, type: 2}
+  - {fileID: 2100000, guid: f21711802ae597d44a330dd315a56602, type: 2}
+  - {fileID: 2100000, guid: c9b6bd5721f37f84db9ca4aa04e1f5ac, type: 2}
+  - {fileID: 2100000, guid: aca339a1c79313745883f66c6aefbddf, type: 2}
+  - {fileID: 2100000, guid: 7535fda7c73c9ac4a864c2f3cd99ba36, type: 2}
+  - {fileID: 2100000, guid: 72751ca22953e8e4588f3530aa1c0230, type: 2}

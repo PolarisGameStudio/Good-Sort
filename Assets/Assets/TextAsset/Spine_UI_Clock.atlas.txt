@@ -1,0 +1,22 @@
+Spine_UI_Clock.png
+	size: 512, 300
+Bell_Left
+	bounds: 300, 51, 117, 116
+	offsets: 1, 1, 119, 118
+	rotate: 90
+Bell_Right
+	bounds: 382, 181, 117, 116
+	offsets: 1, 1, 119, 118
+	rotate: 90
+Body
+	bounds: 2, 2, 296, 296
+	offsets: 1, 1, 298, 298
+Center
+	bounds: 418, 22, 48, 51
+	offsets: 1, 2, 51, 54
+ClockHands
+	bounds: 300, 170, 80, 128
+	offsets: 1, 1, 82, 131
+ClockHands_SD
+	bounds: 418, 75, 90, 104
+	offsets: 1, 10, 103, 116

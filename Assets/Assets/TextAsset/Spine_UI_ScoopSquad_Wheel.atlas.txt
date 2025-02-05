@@ -1,0 +1,16 @@
+Spine_UI_ScoopSquad_Wheel.png
+	size: 652, 652
+	filter: Linear, Linear
+High
+	bounds: 2, 397, 258, 253
+Higher
+	bounds: 2, 142, 258, 253
+Highest
+	bounds: 262, 397, 258, 253
+Normal
+	bounds: 262, 142, 258, 253
+Particle
+	bounds: 522, 522, 128, 128
+Side
+	bounds: 2, 97, 43, 253
+	rotate: 90

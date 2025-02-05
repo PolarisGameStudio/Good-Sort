@@ -1,0 +1,32 @@
+Spine_UI_RewardTag.png
+	size: 764, 212
+BG
+	bounds: 2, 2, 207, 243
+	rotate: 90
+CircleParticle
+	bounds: 675, 140, 17, 17
+	offsets: 1, 2, 19, 20
+Circle_Light
+	bounds: 559, 25, 111, 111
+	offsets: 6, 7, 124, 124
+FrontPaper
+	bounds: 247, 19, 190, 230
+	rotate: 90
+FrontPaper_Detail
+	bounds: 672, 88, 88, 48
+	offsets: 0, 0, 97, 48
+FrontPaper_Detail2
+	bounds: 479, 29, 180, 78
+	rotate: 90
+IconClock
+	bounds: 675, 159, 43, 50
+	offsets: 1, 1, 45, 52
+Rope
+	bounds: 559, 138, 71, 114
+	rotate: 90
+StarParticle
+	bounds: 694, 142, 14, 15
+	offsets: 0, 1, 15, 18
+Text
+	bounds: 672, 28, 88, 58
+	offsets: 2, 2, 91, 61

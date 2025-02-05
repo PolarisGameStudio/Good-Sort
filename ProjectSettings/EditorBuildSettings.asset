@@ -1,0 +1,323 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Games/Scenes/LoadingData.unity
+    guid: 1ad636cf126bfd54b991e8af910ca922
+  - enabled: 1
+    path: Assets/_Games/Scenes/Menu.unity
+    guid: d058826c04bcb2f4dbd02d929830d70c
+  - enabled: 1
+    path: Assets/_Games/Scenes/BaseLevel.unity
+    guid: 87eb8e5eb411d594bbfb0c42d0e951e2
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_Cell_Lock_Tut.unity
+    guid: 14db29d6fe75fa04083c75ac73374209
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_EndGame_OutOfSpace.unity
+    guid: 32c1072490fba7244a70d322b21b70ac
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_EndGame_TimeUp.unity
+    guid: f853c686230644b46be668e9984bfe8a
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_GameOver.unity
+    guid: f79de4970fa0c5b42a0cca06d17ebd9f
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_Leaderboard.unity
+    guid: c75abf4e130276146a086138dd31bcd2
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_Pause.unity
+    guid: 37f7b546d7b3d3a49a3a908b123768d7
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_Pause_ExitLevel.unity
+    guid: ab0ca1bb728ccac49b23fde5b5e697cc
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_PowerUp_GetMore.unity
+    guid: f161301dd8d79bb478e48854c3a3cb31
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_ExclusiveReward.unity
+    guid: 2deca6817a474fe449be7f5f126e62cc
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Digging.unity
+    guid: eba18b5c540fd424bba6c721ca96fc88
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Digging_ChooseOnePack.unity
+    guid: c7f21ec7bc391d34aae4413b5a63e6ab
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Digging_Notify.unity
+    guid: d84f04b82810b314182a4bb0fe1e3a70
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_RateUs.unity
+    guid: 34a793c00cbbf1248bed7cafe98cac28
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_LuckyWheel.unity
+    guid: 8b3753915aa98224dbc8e292f402fce6
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_SpecialGold.unity
+    guid: 352ac260a6182f641917faf125850c93
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIEndlessPack.unity
+    guid: af0ee7d63495ef24eb86916533cf26ac
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_MasterPass_Ended.unity
+    guid: ffbf267de11e0ef40b7d6d00c15c0aca
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIMasterPass.unity
+    guid: 55546c59914f83a4ea44eb30ade2885f
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Booster.unity
+    guid: 8e940564ee76edc4b9308e3163e04718
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_CartRace.unity
+    guid: dc0fcd4678984a8498c6c509cf116fc5
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_CartRace_Register.unity
+    guid: 915a5a70e9a29214a986c463eed2eefb
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_DailyQuest.unity
+    guid: a2d7b7534ca45e84fb8c9b348f61b20b
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_GoldenGift.unity
+    guid: e6b0d5d3fc4cd034a9cc89d176b4c75c
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_HiddenTreasure.unity
+    guid: d035e839ea299e94499ac4b1de7eb649
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_HiddenTreasure_Register.unity
+    guid: 3e18c006065c0e448b6c927d295d7e7e
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_ListRewards.unity
+    guid: ffd145be31050f24db79e669c86a023e
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_LuxuryChest.unity
+    guid: 67b1a7b35d4dbf841813db52dc9f039f
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_NoAds.unity
+    guid: 46eb0654a491fc547bf80bc57630ae63
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_PiggyBank.unity
+    guid: be6df1a5df49f844bb6fe44a141828f9
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Profile.unity
+    guid: f4d30b6b8b9d5394c885af7dc7177d3a
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/UIPopup_Noti.unity
+    guid: aeba7c5525c77de42a2499c35e55c9c3
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_RankSettlement.unity
+    guid: b50a963c29d41364c8fe750816ee6a5d
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Setting.unity
+    guid: f5a3ea866441f9d45956fa1dcfd7785d
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Setting_SaveProgress.unity
+    guid: 8c01e97d01e916246baac75399ebf483
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_StarRush.unity
+    guid: 3949f6797c8f472489ef807facc469f2
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_StarRush_Register.unity
+    guid: 4cc01616abe0da148bc0270144020e1c
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_StockingChallenge.unity
+    guid: 035c7453d327f1b498a9ccb2d8ae8a2f
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_StockingChallenge_Finish.unity
+    guid: 738688c54fef6e94789a51ebd8bca4fc
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_StockingChallenge_Register.unity
+    guid: 9a7ae0da264935c4ea7380dd66743054
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_TeamBattle.unity
+    guid: 104cca28d943a7c4f826e52217fb36d8
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_TeamBattle_Register.unity
+    guid: 390970b822df71c44aeb73b3aca64b06
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_TeamTreasure.unity
+    guid: aaa4654a7b2979a408b0e56078994a9d
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_TeamTreasure_Register.unity
+    guid: 16b9fde4ba370b946bfa84281ce0114d
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_UnlockRewards.unity
+    guid: 29f3779e97d5d67449fd244a3ff7b615
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_UnlockRewards_V2.unity
+    guid: d9f9396a5bcea574fa2bd1dc7b8df9a0
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/UIPopup_ForceUpdate.unity
+    guid: 52f41280e7a3c124aaa2895b8ac0374c
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/UIPopup_NotifyText.unity
+    guid: 78275945912e34844b77847e46903372
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_ShopLives.unity
+    guid: dee714525b0cebf4a8715973fac6a982
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/UIShop.unity
+    guid: d20ad2198481c56449629376e6af973c
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Resource_FreeLives.unity
+    guid: 7b699b1f1311603458b949671c91a94f
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_ViewProfile.unity
+    guid: a0a6cc44f4964b34ea03061c0be1c23f
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_ConfirmAction.unity
+    guid: 2e95cf6512cd440418030bb1453de2f4
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Collection_SendCardToFriend.unity
+    guid: 1601337904a40fc4d9404057bf6d4d47
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Clan_TeamInfo.unity
+    guid: 22eb38f0de756134785b96e3ed57cbd0
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_UnlockCollection_CardSet.unity
+    guid: c328ece6d0d44304f982cace1ba2855b
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_ChangeName.unity
+    guid: d013477298c9b514bb4525e350955384
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Collection_NotifyNewSession.unity
+    guid: 5c927c461c232f24eb09a518633d38f6
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Collection_NotifyNewSession_ReceiveFreePack.unity
+    guid: 65d9e06a6a228b2418e5ed0d17db5ee6
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIEndlessPack_V2.unity
+    guid: 24e60d82e36265c4e98a904fee5a08a3
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_FoodDuel.unity
+    guid: 119e10c3f2184f84a8b8266afb838670
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_FoodDuel_Register.unity
+    guid: 7662b5cc18782864b916a5a13c269a9f
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_FoodDuel_Bundle.unity
+    guid: 970205039a5df184c9beec336f62b39b
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_ScoopSquad_Register.unity
+    guid: 7600692976c10fe4db0a1b6e747b0ffd
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_ScoopSquad.unity
+    guid: 4a32cafdc8b727649bbadd875a760bf9
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_ScoopSquad_Milk_Received.unity
+    guid: 633708a1635d73c47a016ae0c43177cb
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/UIPopup_IAP_Cancelled.unity
+    guid: 3265ae4b6c721c2479ffff9530bb7963
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/UIPopup_IAP_Start.unity
+    guid: 0c2d44ba2c948564f8ddc59e66ba9c62
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/UIPopup_IAP_Success.unity
+    guid: adaf8def41097524db33977fcef96fe2
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Setting_SaveProgress_Status.unity
+    guid: 8b3a743f47923cc429b7bdf6f013843e
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIMasterPass_Thanksgiving.unity
+    guid: fc0977418fce3c142a84e85c4dafe1b7
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_MasterPass_Thanksgiving_Ended.unity
+    guid: 87af2bef5753a1540837a9f09cf9972e
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIMasterPass_Christmas.unity
+    guid: 36c9d22cb74c28c468defb3b06a5f41c
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_MasterPass_Christmas_Ended.unity
+    guid: 1913ad584e73ac64ca0c84d0264964ba
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIMasterPass_LunarNewYear.unity
+    guid: 0f5054b99ff713541816459f13d13846
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_MasterPass_LunarNewYear_Ended.unity
+    guid: f97ebbe237c6fb74babcd1dbdd68d761
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_SingleDaySale.unity
+    guid: 4b39f584d45c0344bae4817aa1a603e3
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_BlackFriday.unity
+    guid: 01a472a5bfe5ae6479ffeb2ac1fb1ffc
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIMasterPass_Spring.unity
+    guid: 314d8c3964e14b14d909b60294eb6a67
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_MasterPass_Spring_Ended.unity
+    guid: 3f38ef4df20ec1e4b970f00c8d06b0fb
+  - enabled: 1
+    path: Assets/_Games/Scenes/EventPVP.unity
+    guid: f597856efd449374fb4fef2e36c8c6df
+  - enabled: 1
+    path: Assets/_Games/Scenes/EventPVPPreview.unity
+    guid: 0e5bc530696de774cb9c8590328f3452
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_InGame_EventPVP_ConfirmQuit.unity
+    guid: 04c573173feb38f49adb681809d8b331
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_InGame_EventPVP_EndGame.unity
+    guid: 3e303273d6829a447aeac791ee5e2a1a
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_InGame_EventPVP_Reconnecting.unity
+    guid: 7c07bd80bded5694bafe34853dd902a3
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_InGame_EventPVP_Versus.unity
+    guid: 02732a796db057547a402db79116688c
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_BlackFriday_Short.unity
+    guid: 6ae09d68e0b2bee4baa767a2960de065
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/InGame/UIPopup_UnlockCell.unity
+    guid: aa2bae8f01fc2c14bb98fcd24b169ddc
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Sale_12_12.unity
+    guid: c99224eb47cd07b49ba4fd4baa19305a
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_DeleteAccount.unity
+    guid: b3b8a9558b24fb84a97b6b26976c732c
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_MagicCauldron.unity
+    guid: 34aaa828ea94dc144b1bd4a00c84f6ae
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_GoldenGift_Christmas.unity
+    guid: d80bc69ae93a50d4f9fa8d63185aedb1
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_GoldenGift_LunarNewYear.unity
+    guid: 8084dc33dde1b5e4c80e64fb1db090c7
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_MagicCauldron_ChooseOnePack.unity
+    guid: 09cc886800bbdb2489e834cf3dc4a7d1
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_MagicCauldron_Register.unity
+    guid: ebf002817d5fe6a47a547a63f41de543
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIEndlessPack_V3_NewYear.unity
+    guid: 321bbafa67aa84b4b820fef6c65382f5
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/UITutorial_Booster.unity
+    guid: 04e515980a1ea3a49aed3688ef63b53d
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/UIPopup_Client_Confirm.unity
+    guid: e37785dc4ce1b9b419ef8529e4e45b39
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/UIPopup_Setting_TermAndPrivacy.unity
+    guid: 403c6adf61a7c124cbcdf7bc23c0c940
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_StallBuilding.unity
+    guid: 86b37b34605158242862b52938ac08ea
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_StallBuilding_ChooseOnePack.unity
+    guid: 071b8bdfb93008146852cc9e895fe2e9
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_StallBuilding_ChooseOnePack_Short.unity
+    guid: 7a759c1659c44ee40bdf18fa8cd2a547
+  - enabled: 1
+    path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_StallBuilding_Register.unity
+    guid: 4d65253005d42b44bb7a958d64aa2baf
+  m_configObjects: {}

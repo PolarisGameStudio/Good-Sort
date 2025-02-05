@@ -1,0 +1,184 @@
+Spine_UI_LunarNewYear_Item11.png
+	size: 2032, 2076
+11_Base_SD
+	bounds: 2, 1834, 655, 240
+	offsets: 12, 0, 667, 258
+11_Beard_SD
+	bounds: 1452, 1040, 374, 287
+	offsets: 0, 0, 389, 288
+11_Cloak_Front_SD
+	bounds: 1007, 1130, 233, 443
+	offsets: 5, 0, 238, 443
+	rotate: 90
+Fx_Blink
+	bounds: 1144, 241, 111, 112
+	offsets: 8, 8, 128, 128
+OP1/11_Antena_Back
+	bounds: 836, 694, 434, 431
+	rotate: 90
+OP1/11_Antena_Front
+	bounds: 659, 1665, 409, 507
+	rotate: 90
+OP1/11_Base
+	bounds: 511, 1262, 401, 494
+	offsets: 1, 1, 403, 496
+	rotate: 90
+OP1/11_Beard
+	bounds: 511, 1671, 161, 138
+	offsets: 0, 17, 161, 155
+	rotate: 90
+OP1/11_Cloak_Back
+	bounds: 2, 55, 429, 460
+OP1/11_Cloak_Front
+	bounds: 2, 1416, 416, 507
+	rotate: 90
+OP1/11_Eye
+	bounds: 1293, 5, 155, 147
+	offsets: 1, 2, 158, 150
+OP1/11_Head
+	bounds: 1114, 355, 337, 277
+	offsets: 1, 1, 339, 279
+	rotate: 90
+OP1/11_L_Lid
+	bounds: 1895, 420, 95, 173
+OP1/11_LipBack
+	bounds: 833, 1136, 169, 124
+	offsets: 1, 1, 171, 127
+OP1/11_LipFront
+	bounds: 1007, 1365, 451, 291
+	offsets: 1, 1, 482, 293
+OP1/11_Nose
+	bounds: 1717, 476, 176, 117
+	offsets: 1, 1, 178, 120
+OP1/11_Pupil
+	bounds: 1842, 8, 87, 99
+	offsets: 2, 2, 91, 102
+OP1/11_PupilMid
+	bounds: 1450, 14, 135, 138
+	offsets: 1, 1, 137, 141
+OP1/11_R_Lid
+	bounds: 1828, 814, 249, 195
+	rotate: 90
+OP1/11_R_LidDown
+	bounds: 1764, 595, 189, 107
+OP1/11_Teeth
+	bounds: 1970, 1805, 133, 55
+	offsets: 1, 2, 135, 58
+	rotate: 90
+OP1/11_Tongue
+	bounds: 597, 1064, 233, 97
+OP2/11_Ball
+	bounds: 1724, 102, 135, 116
+	offsets: 2, 1, 138, 118
+	rotate: 90
+OP2/11_BallBack
+	bounds: 433, 2, 85, 74
+	offsets: 1, 1, 88, 76
+	rotate: 90
+OP2/11_Base
+	bounds: 2, 1013, 401, 494
+	offsets: 1, 1, 403, 496
+	rotate: 90
+OP2/11_Beard
+	bounds: 1684, 239, 161, 138
+	offsets: 0, 17, 161, 155
+OP2/11_Cloak_Back
+	bounds: 405, 551, 429, 460
+OP2/11_Cloak_Front
+	bounds: 1168, 1658, 416, 507
+	rotate: 90
+OP2/11_Eye
+	bounds: 1144, 81, 156, 147
+	offsets: 1, 2, 158, 150
+	rotate: 90
+OP2/11_Head
+	bounds: 864, 13, 338, 278
+	offsets: 1, 1, 339, 279
+	rotate: 90
+OP2/11_L_Ear
+	bounds: 1530, 545, 185, 145
+OP2/11_L_Lid
+	bounds: 1708, 379, 95, 173
+	rotate: 90
+OP2/11_LipBack
+	bounds: 1883, 249, 169, 124
+	offsets: 1, 1, 171, 127
+	rotate: 90
+OP2/11_LipFront
+	bounds: 1460, 1329, 451, 291
+	offsets: 1, 1, 482, 295
+OP2/11_Nose
+	bounds: 1530, 425, 176, 118
+	offsets: 1, 1, 178, 120
+OP2/11_Pupil
+	bounds: 1269, 1040, 88, 100
+	offsets: 2, 2, 91, 103
+	rotate: 90
+OP2/11_PupilMid
+	bounds: 1451, 159, 136, 138
+	offsets: 1, 1, 138, 141
+OP2/11_R_Ear
+	bounds: 1828, 1065, 262, 175
+	rotate: 90
+OP2/11_R_Lid
+	bounds: 1533, 842, 249, 196
+OP2/11_R_LidDown
+	bounds: 1913, 1425, 195, 107
+	rotate: 90
+OP2/11_Teeth
+	bounds: 1589, 163, 134, 55
+	offsets: 1, 2, 136, 58
+	rotate: 90
+OP2/11_Tongue
+	bounds: 498, 1026, 234, 97
+	rotate: 90
+OP3/11_Base
+	bounds: 2, 517, 401, 494
+	offsets: 1, 1, 403, 496
+OP3/11_Beard
+	bounds: 1847, 109, 161, 138
+	offsets: 0, 17, 161, 155
+OP3/11_Cloak_Back
+	bounds: 433, 89, 429, 460
+OP3/11_Eye
+	bounds: 1293, 154, 156, 147
+	offsets: 1, 2, 158, 150
+OP3/11_Head
+	bounds: 864, 353, 339, 248
+	offsets: 2, 2, 342, 251
+	rotate: 90
+OP3/11_Horn
+	bounds: 1533, 692, 148, 229
+	offsets: 2, 1, 151, 231
+	rotate: 90
+OP3/11_L_Lid
+	bounds: 1393, 481, 135, 224
+OP3/11_LipBack
+	bounds: 1513, 299, 169, 124
+	offsets: 1, 1, 171, 127
+OP3/11_LipFront
+	bounds: 1677, 1622, 452, 291
+	offsets: 1, 1, 483, 295
+	rotate: 90
+OP3/11_Nose
+	bounds: 1393, 303, 176, 118
+	offsets: 1, 1, 178, 120
+	rotate: 90
+OP3/11_Pupil
+	bounds: 1931, 19, 88, 99
+	offsets: 2, 2, 91, 102
+	rotate: 90
+OP3/11_PupilMid
+	bounds: 1587, 19, 135, 138
+	offsets: 1, 1, 137, 141
+OP3/11_R_Lid
+	bounds: 1269, 707, 331, 262
+	rotate: 90
+OP3/11_R_LidDown
+	bounds: 1764, 704, 195, 108
+OP3/11_Teeth
+	bounds: 1970, 1940, 134, 55
+	offsets: 1, 2, 136, 58
+	rotate: 90
+OP3/11_Tongue
+	bounds: 597, 1163, 234, 97

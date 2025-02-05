@@ -1,0 +1,35 @@
+Spine_Banner_LuxuryChest.png
+	size: 448, 1032
+Base
+	bounds: 2, 522, 507, 197
+	offsets: 1, 1, 509, 199
+	rotate: 90
+BigHammer
+	bounds: 201, 338, 207, 192
+	offsets: 1, 2, 210, 195
+BigHammer_Glow
+	bounds: 201, 532, 240, 243
+	offsets: 9, 9, 259, 261
+	rotate: 90
+Clock
+	bounds: 156, 2, 144, 146
+	offsets: 2, 2, 147, 150
+Gun_Glow
+	bounds: 201, 150, 186, 187
+	offsets: 14, 11, 215, 213
+	rotate: 90
+Hammer
+	bounds: 2, 165, 170, 168
+	offsets: 3, 3, 176, 174
+Hammer_Glow
+	bounds: 2, 335, 185, 197
+	offsets: 49, 37, 289, 286
+	rotate: 90
+MagicWand
+	bounds: 2, 42, 121, 152
+	offsets: 0, 0, 135, 153
+	rotate: 90
+MagicWand_Glow
+	bounds: 201, 774, 255, 244
+	offsets: 37, 38, 336, 344
+	rotate: 90

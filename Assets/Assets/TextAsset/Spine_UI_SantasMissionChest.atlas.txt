@@ -1,0 +1,82 @@
+Spine_UI_SantasMissionChest.png
+	size: 2048, 552
+	filter: Linear, Linear
+Body
+	bounds: 1044, 96, 447, 222
+	rotate: 90
+Cap_Close
+	bounds: 792, 104, 439, 246
+	rotate: 90
+Cap_Close_Icon
+	bounds: 1877, 158, 165, 189
+	offsets: 2, 0, 167, 189
+Cap_Open
+	bounds: 524, 93, 450, 262
+	rotate: 90
+Cap_Open_DecorL
+	bounds: 1559, 52, 113, 107
+Cap_Open_DecorL_Bulb
+	bounds: 1656, 423, 25, 24
+Cap_Open_DecorL_BulbLight
+	bounds: 1963, 387, 50, 51
+Cap_Open_DecorL_Rope
+	bounds: 1503, 292, 55, 94
+	offsets: 0, 0, 56, 94
+Cap_Open_DecorR
+	bounds: 1503, 270, 273, 184
+	rotate: 90
+Cap_Open_DecorR_Bulb1
+	bounds: 746, 456, 28, 28
+Cap_Open_DecorR_Bulb1Light
+	bounds: 1619, 484, 58, 59
+Cap_Open_DecorR_Bulb2
+	bounds: 1638, 453, 25, 25
+Cap_Open_DecorR_Bulb2Light
+	bounds: 730, 490, 52, 53
+Cap_Open_DecorR_Bulb3
+	bounds: 1801, 406, 23, 21
+Cap_Open_DecorR_Bulb3Light
+	bounds: 1832, 233, 44, 45
+Cap_Open_DecorR_Rope1
+	bounds: 1801, 278, 45, 122
+Cap_Open_DecorR_Rope2
+	bounds: 1999, 144, 43, 103
+	offsets: 0, 2, 43, 105
+Cap_Open_DecorR_Rope3
+	bounds: 1493, 99, 47, 54
+	offsets: 1, 1, 48, 55
+Cap_Open_Decor_Back
+	bounds: 1873, 46, 169, 72
+Cap_Open_Icon
+	bounds: 1801, 350, 176, 193
+Cap_Open_Icon_BowL
+	bounds: 1795, 104, 132, 101
+	offsets: 0, 12, 132, 113
+Cap_Open_Icon_BowL_Rope
+	bounds: 1503, 158, 137, 116
+	offsets: 0, 9, 138, 125
+Cap_Open_Icon_BowR
+	bounds: 1264, 20, 107, 93
+	offsets: 0, 1, 107, 94
+Cap_Open_Icon_BowR_Rope
+	bounds: 1750, 35, 112, 96
+	offsets: 1, 8, 113, 104
+Gold
+	bounds: 1693, 271, 272, 102
+	rotate: 90
+Handle_Back
+	bounds: 1976, 443, 55, 100
+	offsets: 0, 13, 55, 113
+Handle_Base
+	bounds: 1377, 40, 96, 73
+Handle_Front
+	bounds: 715, 6, 99, 117
+	offsets: 2, 14, 101, 154
+	rotate: 90
+Inside_Glow
+	bounds: 1272, 119, 424, 225
+	rotate: 90
+TEX_BaseLight2
+	bounds: 6, 31, 512, 512
+TEX_CircleParticle
+	bounds: 1661, 136, 128, 129

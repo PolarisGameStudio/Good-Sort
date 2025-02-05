@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 106799970, guid: ebe353a9e51fc6708625f16edcb81e06, type: 3}
+  m_Name: Spine_UI_LunarNewYear_Item8_SkeletonData
+  m_EditorClassIdentifier:
+  atlasAssets:
+  - {fileID: 11400000, guid: c8f6f2ccce51668469de3959c923159e, type: 2}
+  scale: 0.01
+  skeletonJSON: {fileID: 4900000, guid: 67c63009f38b7aa4aacb76cdf12f5626, type: 3}
+  isUpgradingBlendModeMaterials: 0
+  blendModeMaterials:
+    requiresBlendModeMaterials: 1
+    applyAdditiveMaterial: 1
+    additiveMaterials:
+    - pageName: Spine_UI_LunarNewYear_Item8.png
+      material: {fileID: 2100000, guid: 4add55406d31a0445afa8a1f35484374, type: 2}
+    multiplyMaterials:
+    - pageName: Spine_UI_LunarNewYear_Item8.png
+      material: {fileID: 2100000, guid: 30336d5e51bfff547ae8c5e0246adcf4, type: 2}
+    screenMaterials: []
+  skeletonDataModifiers: []
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: 0
+  controller: {fileID: 0}

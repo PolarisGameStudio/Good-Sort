@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df909364971c9fc216bdd07e2cd774b9, type: 3}
+  m_Name: SO_SpriteResources_Headline
+  m_EditorClassIdentifier:
+  icons:
+  - type: 10
+    spr: {fileID: 21300000, guid: b9ab22e0973466b439066b9b2bb4bdc2, type: 2}
+  - type: 8
+    spr: {fileID: 21300000, guid: 380eae176820b38489e8590cbf726e18, type: 2}
+  - type: 9
+    spr: {fileID: 21300000, guid: 55a77d9a1cf5f1a4c91a6ce5bef52589, type: 2}
+  - type: 7
+    spr: {fileID: 21300000, guid: 1496fd28cffac86458a63f5707cb629b, type: 2}
+  - type: 3
+    spr: {fileID: 21300000, guid: af137949b49722546ab5c5f75b0981cf, type: 2}
+  - type: 4
+    spr: {fileID: 21300000, guid: 6d4937024323dd640925d6c254d66b75, type: 2}
+  - type: 5
+    spr: {fileID: 21300000, guid: 38b2868cf6b45d84995a3c1b28de9f69, type: 2}
+  - type: 6
+    spr: {fileID: 21300000, guid: 24f0a4c130ce6b645af8632a1935a8cd, type: 2}
+  - type: 1
+    spr: {fileID: 21300000, guid: 035a6e57dce23804983c3851b006d0b0, type: 2}
+  - type: 11
+    spr: {fileID: 21300000, guid: 1496fd28cffac86458a63f5707cb629b, type: 2}
+  - type: 12
+    spr: {fileID: 21300000, guid: 380eae176820b38489e8590cbf726e18, type: 2}
+  - type: 13
+    spr: {fileID: 21300000, guid: 55a77d9a1cf5f1a4c91a6ce5bef52589, type: 2}
+  - type: 14
+    spr: {fileID: 21300000, guid: d0dd70dbc09c6954496bec63aee075a7, type: 2}
+  - type: 16
+    spr: {fileID: 21300000, guid: e505bac879fe2dd4ba1a62c89b67da3c, type: 2}
+  - type: 17
+    spr: {fileID: 21300000, guid: ce0d745ea1e2c9843b49b92107a4957e, type: 2}
+  - type: 18
+    spr: {fileID: 21300000, guid: fbd60266e8bac804c9fd1996c6297724, type: 2}
+  - type: 19
+    spr: {fileID: 21300000, guid: e930f2f66e9411946943abc06016a6c0, type: 2}
+  - type: 20
+    spr: {fileID: 21300000, guid: 2eab561866e83554eb67a97f7e50ec5c, type: 2}

@@ -1,0 +1,91 @@
+Spine_UI_SantasMission.png
+	size: 996, 532
+Bag
+	bounds: 354, 203, 327, 98
+	rotate: 90
+Bag_Front
+	bounds: 746, 88, 140, 128
+	offsets: 4, 10, 147, 140
+	rotate: 90
+Bag_Tip
+	bounds: 2, 8, 372, 113
+	offsets: 9, 1, 383, 121
+Bag_Tip_Back
+	bounds: 274, 165, 365, 78
+	offsets: 1, 1, 367, 80
+	rotate: 90
+Gift_Green
+	bounds: 595, 78, 169, 149
+	offsets: 4, 4, 185, 155
+	rotate: 90
+Gift_Green_Bow_BackL
+	bounds: 914, 429, 75, 53
+Gift_Green_Bow_BackL_SD
+	bounds: 872, 5, 81, 50
+	offsets: 6, 3, 90, 60
+	rotate: 90
+Gift_Green_Bow_BackR
+	bounds: 595, 2, 74, 53
+	rotate: 90
+Gift_Green_Bow_FrontL
+	bounds: 812, 4, 82, 58
+	offsets: 3, 0, 86, 58
+	rotate: 90
+Gift_Green_Bow_FrontR
+	bounds: 898, 177, 90, 56
+	offsets: 1, 0, 92, 56
+Gift_Green_Bow_Mid
+	bounds: 876, 145, 43, 30
+	offsets: 3, 3, 49, 34
+Gift_Green_Cap
+	bounds: 376, 51, 150, 76
+	offsets: 1, 7, 153, 84
+	rotate: 90
+Gift_Red
+	bounds: 746, 230, 149, 150
+	offsets: 1, 2, 151, 153
+	rotate: 90
+Gift_Red_Bow_BackL
+	bounds: 924, 6, 60, 50
+	rotate: 90
+Gift_Red_Bow_BackR
+	bounds: 914, 383, 67, 44
+Gift_Red_Bow_FrontL
+	bounds: 650, 5, 71, 51
+	offsets: 0, 0, 73, 51
+	rotate: 90
+Gift_Red_Bow_FrontR
+	bounds: 914, 484, 79, 46
+	offsets: 0, 2, 79, 48
+Gift_Red_Bow_Mid
+	bounds: 274, 126, 37, 26
+	offsets: 3, 3, 42, 30
+	rotate: 90
+Gift_Red_Cap
+	bounds: 898, 235, 144, 85
+	offsets: 1, 7, 147, 93
+	rotate: 90
+Gift_Yellow
+	bounds: 746, 381, 166, 149
+	offsets: 21, 1, 188, 151
+Gift_Yellow_Bow_BackR
+	bounds: 924, 123, 70, 52
+Gift_Yellow_Bow_FrontL
+	bounds: 746, 3, 83, 64
+	offsets: 1, 0, 84, 64
+	rotate: 90
+Gift_Yellow_Bow_FrontR
+	bounds: 924, 68, 53, 67
+	rotate: 90
+Gift_Yellow_Bow_Mid
+	bounds: 302, 126, 37, 28
+	offsets: 1, 1, 39, 30
+	rotate: 90
+Sleigh_Back
+	bounds: 2, 123, 407, 270
+	rotate: 90
+Sleigh_Front
+	bounds: 454, 249, 271, 281
+Sleigh_Mid
+	bounds: 454, 10, 237, 139
+	rotate: 90

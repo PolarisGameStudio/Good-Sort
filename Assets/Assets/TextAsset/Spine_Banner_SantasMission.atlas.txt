@@ -1,0 +1,220 @@
+Spine_Banner_SantasMission.png
+	size: 2048, 1420
+	filter: Linear, Linear
+	scale: 0.5
+BagGift_Freeze
+	bounds: 754, 304, 82, 80
+BagGift_Gift0
+	bounds: 1879, 1284, 126, 129
+BagGift_Gift1
+	bounds: 1953, 671, 83, 102
+BagGift_Gift2
+	bounds: 1365, 298, 87, 96
+BagGift_Gift3
+	bounds: 1954, 779, 87, 98
+BagGift_Gift4
+	bounds: 959, 688, 108, 113
+BagGift_Gift5
+	bounds: 6, 379, 93, 107
+BagGift_Gift6
+	bounds: 844, 686, 109, 115
+BagGift_Hammer
+	bounds: 1890, 399, 105, 96
+BagGift_Swap
+	bounds: 6, 791, 81, 90
+DecorGift_Front
+	bounds: 1073, 669, 102, 102
+DecorGift_Front_Bow1
+	bounds: 1019, 1310, 40, 33
+DecorGift_Front_Bow2
+	bounds: 522, 1184, 31, 37
+DecorGift_Front_Bow3
+	bounds: 397, 1394, 29, 19
+Dog_Back_Ear
+	bounds: 520, 272, 47, 77
+	offsets: 0, 0, 49, 77
+Dog_Back_LegL
+	bounds: 230, 1384, 47, 29
+Dog_Back_LegR
+	bounds: 615, 1288, 45, 54
+Dog_Body
+	bounds: 559, 1155, 125, 116
+Dog_Front_Ear
+	bounds: 1458, 260, 45, 92
+Dog_Front_LegL
+	bounds: 1248, 1119, 45, 50
+Dog_Front_LegR
+	bounds: 1675, 1367, 54, 46
+Dog_Hat
+	bounds: 1169, 292, 59, 79
+Dog_Head
+	bounds: 1703, 331, 111, 101
+	offsets: 0, 3, 111, 104
+Dog_L_Eye
+	bounds: 931, 1060, 18, 25
+Dog_L_EyeBrown
+	bounds: 471, 1405, 10, 8
+Dog_L_EyeLid
+	bounds: 1571, 1388, 19, 25
+Dog_L_EyePupil
+	bounds: 457, 1403, 8, 10
+Dog_Mouth
+	bounds: 1392, 1387, 41, 26
+Dog_MouthTongue
+	bounds: 431, 1398, 21, 15
+Dog_Necklege
+	bounds: 1735, 1391, 23, 22
+Dog_Necklege_Icon
+	bounds: 2011, 1291, 28, 25
+Dog_Nose
+	bounds: 1584, 1313, 35, 23
+Dog_R_Eye
+	bounds: 838, 1051, 18, 29
+Dog_R_EyeBrown
+	bounds: 179, 1405, 13, 8
+Dog_R_EyeLid
+	bounds: 1299, 1140, 19, 29
+Dog_R_EyePupil
+	bounds: 808, 1403, 7, 10
+Light
+	bounds: 6, 807, 1112, 606
+	offsets: 0, 0, 1113, 606
+Sparky_Bag
+	bounds: 6, 495, 386, 306
+	offsets: 12, 0, 398, 306
+Sparky_Bag_Bow_Core
+	bounds: 2011, 1322, 25, 33
+Sparky_Bag_Bow_Rope
+	bounds: 652, 1362, 43, 51
+Sparky_Bag_Bow_Rope2
+	bounds: 1840, 1007, 42, 53
+Sparky_Bag_Bow_Side
+	bounds: 1856, 1180, 41, 41
+Sparky_Bag_Bow_Side2
+	bounds: 6, 1107, 40, 38
+Sparky_Bag_Bow_Side2_SD
+	bounds: 672, 1131, 49, 42
+	offsets: 1, 1, 50, 45
+Sparky_Bag_Bow_Side_SD
+	bounds: 1422, 1198, 50, 50
+Sparky_Bag_Rope
+	bounds: 515, 262, 126, 169
+Sparky_Bag_Top
+	bounds: 1352, 1253, 227, 160
+	offsets: 0, 0, 228, 160
+Sparky_Bag_TopRope
+	bounds: 1065, 1097, 177, 72
+Sparky_Beard
+	bounds: 1242, 378, 118, 98
+Sparky_Body
+	bounds: 1848, 1040, 194, 166
+Sparky_Cart
+	bounds: 666, 1085, 394, 328
+Sparky_Cart_Front
+	bounds: 300, 253, 215, 279
+Sparky_Cart_SD
+	bounds: 396, 604, 442, 197
+Sparky_Collar
+	bounds: 1833, 883, 209, 108
+Sparky_Collar_SD
+	bounds: 862, 1003, 192, 101
+	offsets: 11, 0, 203, 101
+Sparky_GiftBox
+	bounds: 105, 324, 99, 88
+Sparky_GiftBox_Bow
+	bounds: 1888, 1005, 45, 29
+Sparky_GiftBox_Bow1
+	bounds: 348, 1386, 43, 27
+Sparky_GiftBox_Bow2
+	bounds: 1996, 1005, 46, 29
+Sparky_GiftBox_Bow3
+	bounds: 1892, 1211, 40, 24
+Sparky_Hat
+	bounds: 961, 1348, 80, 65
+Sparky_Hat_SD
+	bounds: 2011, 1361, 29, 52
+Sparky_Hat_Tip
+	bounds: 701, 1371, 42, 42
+Sparky_Hat_Tip_SD
+	bounds: 293, 1371, 49, 42
+Sparky_Hat_Top
+	bounds: 1058, 1054, 36, 37
+Sparky_Head
+	bounds: 1945, 501, 97, 119
+Sparky_Head_SD
+	bounds: 6, 992, 47, 96
+Sparky_L_ArmFull
+	bounds: 867, 325, 118, 105
+Sparky_L_Eye
+	bounds: 6, 1159, 21, 37
+Sparky_L_EyeBrown
+	bounds: 199, 1399, 18, 14
+Sparky_L_EyeLid
+	bounds: 724, 1127, 19, 33
+Sparky_L_EyePupil
+	bounds: 938, 1395, 17, 18
+Sparky_L_Foot
+	bounds: 6, 295, 48, 78
+Sparky_L_Hand
+	bounds: 774, 1028, 58, 52
+Sparky_L_Leg
+	bounds: 1352, 1161, 67, 94
+Sparky_L_Thigh
+	bounds: 1584, 1342, 85, 71
+Sparky_L_Thumb
+	bounds: 1939, 1004, 33, 30
+Sparky_L_Wand
+	bounds: 778, 390, 92, 110
+Sparky_L_WandLight
+	bounds: 1065, 1175, 281, 238
+Sparky_Mouth
+	bounds: 749, 1379, 54, 34
+Sparky_Mustache
+	bounds: 1860, 1226, 103, 52
+Sparky_R_Arm
+	bounds: 1904, 299, 95, 94
+	offsets: 5, 0, 100, 94
+Sparky_R_Eye
+	bounds: 6, 1202, 22, 37
+Sparky_R_EyeBrown
+	bounds: 1439, 1394, 21, 19
+Sparky_R_EyeLid
+	bounds: 2021, 1179, 19, 35
+Sparky_R_EyePupil
+	bounds: 1248, 1094, 19, 19
+Sparky_R_Foot
+	bounds: 6, 904, 46, 82
+Sparky_R_Hand
+	bounds: 1968, 1220, 58, 58
+Sparky_R_Leg
+	bounds: 987, 284, 84, 104
+Sparky_R_Thigh
+	bounds: 1804, 281, 95, 112
+Sparky_R_UpperArm
+	bounds: 1259, 278, 84, 97
+Sparky_Snow_Trail_Back
+	bounds: 6, 36, 586, 529
+Sparky_Snow_Trail_Front
+	bounds: 784, 6, 593, 592
+	offsets: 0, 1, 593, 593
+Sparky_Snow_Wind
+	bounds: 1326, 250, 369, 357
+	offsets: 0, 0, 369, 365
+Tree
+	bounds: 988, 860, 553, 885
+	rotate: 90
+Tree2
+	bounds: 1123, 419, 436, 825
+	offsets: 0, 1, 436, 826
+	rotate: 90
+Tree3
+	bounds: 357, 1242, 171, 289
+	rotate: 90
+Tree4
+	bounds: 844, 375, 287, 476
+	offsets: 0, 0, 291, 476
+	rotate: 90
+Tree5
+	bounds: 352, 330, 268, 435
+	offsets: 0, 17, 268, 452
+	rotate: 90

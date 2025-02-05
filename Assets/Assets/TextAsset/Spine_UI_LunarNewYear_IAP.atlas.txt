@@ -1,0 +1,118 @@
+Spine_UI_LunarNewYear_IAP.png
+	size: 1800, 288
+Bag_Back
+	bounds: 1391, 116, 166, 170
+Bag_Front
+	bounds: 1231, 115, 158, 171
+Bag_Front_SD
+	bounds: 1559, 144, 142, 147
+	rotate: 90
+Blink0
+	bounds: 1542, 42, 59, 63
+	offsets: 1, 1, 66, 88
+Blink1
+	bounds: 1057, 17, 94, 92
+	offsets: 3, 4, 104, 105
+	rotate: 90
+Blink2
+	bounds: 1215, 19, 86, 84
+	offsets: 2, 4, 94, 95
+	rotate: 90
+Blink3
+	bounds: 1709, 2, 43, 50
+	offsets: 2, 2, 47, 55
+Gold_Back_L
+	bounds: 629, 2, 80, 56
+	offsets: 1, 1, 82, 58
+Gold_Back_R
+	bounds: 1301, 21, 84, 78
+	offsets: 1, 1, 86, 80
+	rotate: 90
+Gold_Front0
+	bounds: 1381, 21, 84, 83
+	offsets: 2, 1, 87, 85
+	rotate: 90
+Gold_Front0_SD
+	bounds: 961, 11, 94, 95
+	offsets: 7, 16, 103, 113
+Gold_Front1
+	bounds: 100, 12, 83, 45
+	offsets: 2, 1, 87, 47
+Gold_Front2
+	bounds: 1708, 107, 87, 47
+	offsets: 1, 2, 90, 50
+Gold_Front3
+	bounds: 2, 5, 96, 52
+	offsets: 2, 1, 107, 58
+Gold_Front_Pack
+	bounds: 326, 19, 267, 137
+	offsets: 1, 1, 269, 146
+	rotate: 90
+L_Eye
+	bounds: 1603, 32, 54, 52
+	offsets: 1, 1, 57, 55
+	rotate: 90
+L_Eye_Brown
+	bounds: 1708, 227, 90, 59
+	offsets: 2, 1, 93, 61
+L_Eye_Lid
+	bounds: 250, 2, 57, 55
+L_Eye_Pupil
+	bounds: 863, 51, 33, 34
+	offsets: 1, 1, 36, 36
+L_Eye_Pupil2
+	bounds: 1754, 10, 43, 42
+	offsets: 1, 1, 45, 44
+Lion_Ear_L
+	bounds: 711, 2, 56, 47
+	rotate: 90
+Lion_Ear_R
+	bounds: 1657, 32, 50, 54
+	offsets: 1, 0, 51, 54
+Lion_Head
+	bounds: 898, 108, 178, 157
+	rotate: 90
+Lion_Lip
+	bounds: 775, 87, 199, 121
+	rotate: 90
+Lion_Mouth
+	bounds: 898, 6, 100, 61
+	rotate: 90
+Lion_SD
+	bounds: 1057, 113, 172, 173
+R_Eye
+	bounds: 1709, 54, 51, 52
+	offsets: 2, 1, 55, 54
+	rotate: 90
+R_Eye_Brown
+	bounds: 775, 13, 86, 72
+	offsets: 2, 1, 89, 74
+R_Eye_Lid
+	bounds: 1603, 88, 55, 54
+R_Eye_Pupil
+	bounds: 1542, 4, 36, 36
+	offsets: 2, 1, 39, 39
+R_Eye_Pupil2
+	bounds: 1660, 102, 41, 40
+	offsets: 1, 2, 43, 43
+Tag
+	bounds: 629, 60, 226, 144
+	rotate: 90
+Tag_Light
+	bounds: 2, 59, 322, 227
+Tag_SD
+	bounds: 465, 42, 244, 162
+	offsets: 0, 0, 247, 171
+	rotate: 90
+Tag_Text0
+	bounds: 1466, 31, 74, 74
+	offsets: 1, 4, 79, 82
+Tag_Text1
+	bounds: 1151, 18, 62, 87
+	offsets: 5, 4, 68, 92
+Tag_Text2
+	bounds: 1708, 156, 69, 90
+	offsets: 3, 3, 73, 105
+	rotate: 90
+Tag_Tip
+	bounds: 185, 7, 63, 50

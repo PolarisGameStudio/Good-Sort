@@ -1,0 +1,32 @@
+Spine_UI_SmallBanner_StockingChallenge.png
+	size: 1852, 536
+Box_shadow
+	bounds: 746, 55, 194, 194
+FaceDown
+	bounds: 942, 184, 180, 180
+FaceUp
+	bounds: 942, 2, 180, 180
+Side1
+	bounds: 1124, 69, 180, 180
+Side2
+	bounds: 1306, 69, 180, 180
+Side3
+	bounds: 1488, 69, 180, 180
+Side4
+	bounds: 1670, 69, 180, 180
+TEX_CircleParticle
+	bounds: 1793, 476, 56, 56
+	offsets: 4, 5, 64, 65
+x10png
+	bounds: 2, 21, 595, 511
+	offsets: 109, 63, 808, 587
+x2png
+	bounds: 599, 67, 297, 145
+	offsets: 106, 63, 520, 211
+	rotate: 90
+x4png
+	bounds: 599, 366, 595, 166
+	offsets: 107, 61, 808, 233
+x6png
+	bounds: 1196, 251, 595, 281
+	offsets: 106, 61, 808, 345

@@ -1,0 +1,287 @@
+Spine_Banner_FoodFight.png
+	size: 4096, 1200
+	filter: Linear, Linear
+	scale: 0.5
+Blue_Body
+	bounds: 3291, 834, 326, 360
+Blue_Body_SD
+	bounds: 2901, 785, 409, 397
+	offsets: 5, 6, 453, 403
+	rotate: 90
+Blue_Hat
+	bounds: 3398, 449, 109, 109
+Blue_Hat_SD
+	bounds: 715, 7, 140, 145
+	offsets: 33, 15, 214, 178
+Blue_Head
+	bounds: 3457, 271, 193, 281
+	rotate: 90
+Blue_Head_SD
+	bounds: 119, 250, 239, 294
+	offsets: 2, 0, 256, 303
+	rotate: 90
+Blue_L_Arm
+	bounds: 467, 256, 147, 283
+Blue_L_Arm_SD
+	bounds: 842, 402, 252, 316
+	offsets: 0, 9, 274, 333
+Blue_L_Cake
+	bounds: 2452, 198, 190, 115
+	offsets: 0, 0, 190, 116
+Blue_L_Cake_SD
+	bounds: 2574, 468, 304, 211
+	offsets: 8, 8, 315, 226
+Blue_L_Eye
+	bounds: 4052, 945, 37, 62
+	offsets: 1, 1, 39, 64
+Blue_L_EyeBrown
+	bounds: 3590, 1170, 26, 24
+	offsets: 1, 1, 29, 26
+Blue_L_Leg
+	bounds: 1226, 958, 105, 148
+Blue_L_Leg_SD
+	bounds: 3, 49, 173, 165
+	offsets: 9, 3, 213, 172
+Blue_L_Lid
+	bounds: 2901, 1046, 28, 56
+Blue_L_Pupil
+	bounds: 1855, 1167, 13, 27
+Blue_L_Thigh
+	bounds: 3386, 26, 149, 100
+Blue_Mouth
+	bounds: 1302, 1131, 90, 63
+	offsets: 0, 1, 90, 64
+Blue_Mouth_Inside
+	bounds: 1395, 1151, 75, 43
+Blue_Mustache
+	bounds: 1345, 1117, 65, 13
+Blue_R_Arm
+	bounds: 2901, 1096, 97, 98
+Blue_R_Arm_SD
+	bounds: 3057, 217, 167, 137
+	offsets: 6, 3, 183, 141
+Blue_R_Cake
+	bounds: 726, 277, 216, 152
+	offsets: 1, 1, 217, 153
+Blue_R_Cake_SD
+	bounds: 3152, 357, 243, 230
+	offsets: 13, 15, 261, 253
+Blue_R_Eye
+	bounds: 3555, 1137, 32, 57
+	offsets: 1, 1, 34, 59
+Blue_R_EyeBrown
+	bounds: 1694, 1171, 19, 23
+	offsets: 1, 1, 21, 24
+Blue_R_Leg
+	bounds: 3, 187, 195, 185
+	rotate: 90
+Blue_R_Leg_SD
+	bounds: 1251, 196, 212, 204
+	offsets: 7, 0, 219, 226
+Blue_R_Lid
+	bounds: 3263, 1016, 28, 55
+Blue_R_Pupil
+	bounds: 2356, 1136, 13, 25
+	offsets: 1, 0, 14, 25
+Blue_R_UpperArm
+	bounds: 1930, 17, 154, 133
+	rotate: 90
+Detail0
+	bounds: 3907, 1010, 183, 184
+	offsets: 9, 7, 201, 192
+Detail1
+	bounds: 2958, 943, 54, 56
+	offsets: 1, 1, 56, 58
+Detail2
+	bounds: 3907, 942, 64, 65
+	offsets: 1, 1, 66, 67
+Detail3
+	bounds: 1226, 1146, 67, 48
+	offsets: 1, 1, 69, 50
+Detail4
+	bounds: 2414, 80, 115, 172
+	offsets: 4, 10, 126, 183
+	rotate: 90
+Detail5
+	bounds: 2901, 474, 248, 309
+	offsets: 7, 7, 262, 317
+Red_Body
+	bounds: 3593, 864, 330, 311
+	rotate: 90
+Red_Body_SD
+	bounds: 3695, 352, 244, 329
+	offsets: 0, 4, 244, 333
+	rotate: 90
+Red_Hat_Back
+	bounds: 1081, 416, 101, 142
+Red_Hat_Front
+	bounds: 3262, 1074, 26, 93
+	offsets: 1, 1, 27, 94
+Red_Head
+	bounds: 3752, 209, 240, 156
+Red_Head_SD
+	bounds: 2147, 264, 346, 275
+	offsets: 0, 0, 371, 279
+Red_L_Arm
+	bounds: 1694, 249, 279, 283
+Red_L_Eye
+	bounds: 1873, 1072, 45, 37
+	offsets: 0, 0, 46, 38
+Red_L_EyeBrown
+	bounds: 3264, 1174, 14, 20
+	offsets: 0, 1, 15, 21
+Red_L_Leg
+	bounds: 2530, 685, 169, 172
+	rotate: 90
+Red_L_Leg_SD
+	bounds: 3182, 589, 390, 266
+	offsets: 0, 0, 394, 274
+Red_L_Lid
+	bounds: 2328, 1164, 45, 30
+Red_L_Pipe
+	bounds: 2636, 4, 158, 123
+	offsets: 0, 1, 158, 124
+Red_L_Pupil
+	bounds: 3047, 1179, 22, 15
+	offsets: 0, 1, 22, 16
+Red_L_Shoulder_SD
+	bounds: 459, 422, 382, 350
+	offsets: 8, 4, 396, 354
+Red_L_Thigh
+	bounds: 1694, 1012, 182, 176
+	rotate: 90
+Red_Mouth
+	bounds: 3978, 932, 71, 75
+Red_Mouth_Inside
+	bounds: 2992, 1134, 52, 60
+Red_R_Arm
+	bounds: 1586, 6, 140, 132
+Red_R_Eye
+	bounds: 3291, 1162, 51, 32
+	offsets: 0, 1, 52, 34
+Red_R_EyeBrown
+	bounds: 3345, 1180, 31, 14
+	offsets: 1, 1, 33, 15
+Red_R_Finger
+	bounds: 1226, 1115, 26, 28
+	offsets: 1, 0, 27, 29
+Red_R_Finger2
+	bounds: 2031, 1166, 24, 28
+	offsets: 1, 0, 26, 29
+Red_R_Finger3
+	bounds: 1472, 1164, 32, 30
+	offsets: 1, 0, 33, 30
+Red_R_Finger4
+	bounds: 1975, 1155, 53, 39
+	offsets: 2, 0, 56, 39
+Red_R_Hand
+	bounds: 1873, 1112, 99, 82
+	offsets: 0, 0, 100, 82
+Red_R_Leg_SD
+	bounds: 3495, 450, 305, 373
+	offsets: 0, 6, 327, 379
+Red_R_Lid
+	bounds: 3850, 1162, 49, 32
+Red_R_Pie
+	bounds: 1023, 256, 225, 144
+	offsets: 6, 5, 231, 154
+Red_R_Pupil
+	bounds: 1507, 1179, 22, 15
+	offsets: 0, 1, 22, 16
+Red_R_Shoulder_SD
+	bounds: 3797, 599, 296, 335
+	offsets: 1, 0, 300, 335
+Red_R_Thigh
+	bounds: 2527, 309, 340, 156
+Red_R_UpperArm
+	bounds: 2869, 250, 190, 221
+Smoke1
+	bounds: 2120, 463, 451, 731
+Smoke2
+	bounds: 2376, 681, 522, 513
+Smoke3
+	bounds: 1185, 403, 791, 506
+	rotate: 90
+Smoke4
+	bounds: 1694, 368, 826, 423
+	rotate: 90
+Smoke_Glow
+	bounds: 3, 456, 1221, 738
+	offsets: 0, 0, 1221, 758
+Text_L
+	bounds: 178, 3, 122, 127
+	rotate: 90
+Text_L_Light
+	bounds: 1466, 230, 163, 170
+	offsets: 4, 4, 171, 177
+Text_L_Stroke
+	bounds: 3227, 202, 147, 152
+Text_R
+	bounds: 2283, 11, 104, 128
+	rotate: 90
+Text_R_Light
+	bounds: 1976, 220, 145, 170
+	offsets: 4, 4, 153, 178
+	rotate: 90
+Text_R_Stroke
+	bounds: 310, 7, 129, 153
+	rotate: 90
+VS_Stroke_0
+	bounds: 3003, 25, 174, 257
+	rotate: 90
+VS_Stroke_1
+	bounds: 2876, 40, 174, 257
+	rotate: 90
+VS_Stroke_10
+	bounds: 1729, 43, 174, 257
+	rotate: 90
+VS_Stroke_11
+	bounds: 1206, 55, 174, 257
+	rotate: 90
+VS_Stroke_12
+	bounds: 3575, 61, 174, 257
+	rotate: 90
+VS_Stroke_13
+	bounds: 1438, 62, 174, 257
+	rotate: 90
+VS_Stroke_14
+	bounds: 3836, 68, 174, 257
+	rotate: 90
+VS_Stroke_15
+	bounds: 1001, 76, 174, 257
+	rotate: 90
+VS_Stroke_16
+	bounds: 855, 79, 174, 257
+	rotate: 90
+VS_Stroke_17
+	bounds: 2797, 84, 174, 257
+	rotate: 90
+VS_Stroke_18
+	bounds: 2169, 88, 174, 257
+	rotate: 90
+VS_Stroke_19
+	bounds: 577, 100, 174, 257
+	rotate: 90
+VS_Stroke_2
+	bounds: 3305, 106, 174, 257
+	rotate: 90
+VS_Stroke_3
+	bounds: 3507, 112, 174, 257
+	rotate: 90
+VS_Stroke_4
+	bounds: 763, 116, 174, 257
+	rotate: 90
+VS_Stroke_5
+	bounds: 2065, 118, 174, 257
+	rotate: 90
+VS_Stroke_6
+	bounds: 466, 125, 174, 257
+	rotate: 90
+VS_Stroke_7
+	bounds: 228, 128, 174, 257
+	rotate: 90
+VS_Stroke_8
+	bounds: 2619, 129, 174, 257
+	rotate: 90
+VS_Stroke_9
+	bounds: 1632, 143, 174, 257

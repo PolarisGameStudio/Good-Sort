@@ -1,0 +1,689 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99b1bccb7be485d7733c2b02a50f54d, type: 3}
+  m_Name: Lv449_2
+  m_EditorClassIdentifier:
+  level:
+    timeToPlay: 360
+    numberCellLock: 3
+    itemHiden: 6
+    cells:
+    - posX: -2
+      posY: 0
+      cellType: 1
+      numberLayer: 0
+      moveType: 4
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 78
+      - items:
+        - 214
+      - items:
+        - 143
+    - posX: -2
+      posY: 4
+      cellType: 1
+      numberLayer: 0
+      moveType: 4
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 153
+      - items:
+        - 111
+      - items:
+        - 143
+    - posX: -2
+      posY: 8
+      cellType: 1
+      numberLayer: 0
+      moveType: 4
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 55
+      - items:
+        - 196
+      - items:
+        - 127
+      - items:
+        - 247
+    - posX: -2
+      posY: 12
+      cellType: 1
+      numberLayer: 0
+      moveType: 4
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 87
+      - items:
+        - 235
+      - items:
+        - 84
+    - posX: -2
+      posY: 16
+      cellType: 1
+      numberLayer: 0
+      moveType: 4
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 286
+      - items:
+        - 100
+      - items:
+        - 6
+    - posX: -2
+      posY: -4
+      cellType: 1
+      numberLayer: 0
+      moveType: 4
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 234
+      - items:
+        - 234
+      - items:
+        - 234
+    - posX: -2
+      posY: -8
+      cellType: 1
+      numberLayer: 0
+      moveType: 4
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 273
+      - items:
+        - 219
+      - items:
+        - 239
+      - items:
+        - 329
+    - posX: -2
+      posY: -12
+      cellType: 1
+      numberLayer: 0
+      moveType: 4
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 358
+      - items:
+        - 154
+      - items:
+        - 98
+    - posX: -2
+      posY: -16
+      cellType: 1
+      numberLayer: 0
+      moveType: 4
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 195
+      - items:
+        - 195
+      - items:
+        - 66
+    - posX: -2
+      posY: -20
+      cellType: 1
+      numberLayer: 0
+      moveType: 4
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 195
+      - items:
+        - 154
+      - items:
+        - 75
+    - posX: 0
+      posY: 0
+      cellType: 1
+      numberLayer: 0
+      moveType: 5
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 137
+      - items:
+        - 130
+      - items:
+        - 143
+      - items:
+        - 177
+    - posX: 0
+      posY: -4
+      cellType: 1
+      numberLayer: 0
+      moveType: 5
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 137
+      - items:
+        - 252
+      - items:
+        - 84
+    - posX: 0
+      posY: 4
+      cellType: 1
+      numberLayer: 0
+      moveType: 5
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 78
+      - items:
+        - 252
+      - items:
+        - 79
+    - posX: 0
+      posY: 8
+      cellType: 1
+      numberLayer: 0
+      moveType: 5
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 147
+      - items:
+        - 139
+      - items:
+        - 127
+    - posX: 0
+      posY: 12
+      cellType: 1
+      numberLayer: 0
+      moveType: 5
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 288
+      - items:
+        - 235
+      - items:
+        - 177
+    - posX: 0
+      posY: 16
+      cellType: 1
+      numberLayer: 0
+      moveType: 5
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 154
+      - items:
+        - 35
+      - items:
+        - 177
+    - posX: 0
+      posY: -8
+      cellType: 1
+      numberLayer: 0
+      moveType: 5
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 84
+      - items:
+        - 43
+      - items:
+        - 239
+    - posX: 0
+      posY: -12
+      cellType: 1
+      numberLayer: 0
+      moveType: 5
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 196
+      - items:
+        - 196
+      - items:
+        - 75
+    - posX: 0
+      posY: -16
+      cellType: 1
+      numberLayer: 0
+      moveType: 5
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 217
+      - items:
+        - 219
+      - items:
+        - 66
+    - posX: 0
+      posY: -20
+      cellType: 1
+      numberLayer: 0
+      moveType: 5
+      speed: 1
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 286
+      - items:
+        - 219
+      - items:
+        - 98
+    - posX: -8
+      posY: 0
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 1
+      itemsLayer:
+      - items:
+        - 288
+        - 288
+        - 0
+      - items:
+        - 0
+        - 27
+        - 27
+      - items:
+        - 35
+        - 35
+        - 130
+      - items:
+        - 53
+        - 0
+        - 53
+      - items:
+        - 0
+        - 239
+        - 44
+      - items:
+        - 0
+        - 289
+        - 0
+      - items:
+        - 0
+        - 278
+        - 278
+      - items:
+        - 0
+        - 293
+        - 64
+    - posX: -8
+      posY: -4
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 358
+        - 0
+        - 358
+      - items:
+        - 0
+        - 121
+        - 121
+      - items:
+        - 0
+        - 130
+        - 0
+      - items:
+        - 0
+        - 49
+        - 49
+      - items:
+        - 108
+        - 108
+        - 0
+      - items:
+        - 289
+        - 0
+        - 47
+      - items:
+        - 247
+        - 247
+        - 0
+      - items:
+        - 293
+        - 0
+        - 293
+      - items:
+        - 0
+        - 158
+        - 158
+    - posX: 2
+      posY: -12
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 236
+        - 147
+        - 147
+      - items:
+        - 217
+        - 217
+        - 232
+      - items:
+        - 117
+        - 43
+        - 117
+      - items:
+        - 258
+        - 0
+        - 49
+      - items:
+        - 47
+        - 0
+        - 0
+      - items:
+        - 79
+        - 296
+        - 79
+      - items:
+        - 58
+        - 0
+        - 58
+      - items:
+        - 0
+        - 218
+        - 218
+    - posX: -8
+      posY: -12
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 169
+        - 169
+        - 0
+      - items:
+        - 139
+        - 0
+        - 139
+      - items:
+        - 2
+        - 163
+        - 0
+      - items:
+        - 227
+        - 227
+        - 0
+      - items:
+        - 0
+        - 47
+        - 296
+      - items:
+        - 274
+        - 0
+        - 274
+    - posX: -6
+      posY: 4
+      cellType: 2
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 6
+      - items:
+        - 27
+      - items:
+        - 127
+      - items:
+        - 279
+      - items:
+        - 136
+    - posX: 4
+      posY: 4
+      cellType: 2
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 121
+      - items:
+        - 108
+      - items:
+        - 6
+      - items:
+        - 227
+      - items:
+        - 289
+    - posX: -6
+      posY: -8
+      cellType: 2
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 169
+      - items:
+        - 235
+      - items:
+        - 163
+      - items:
+        - 141
+      - items:
+        - 231
+    - posX: 4
+      posY: -8
+      cellType: 2
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 151
+      - items:
+        - 117
+      - items:
+        - 163
+      - items:
+        - 53
+      - items:
+        - 231
+    - posX: -8
+      posY: 8
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 1
+      itemsLayer:
+      - items:
+        - 153
+        - 137
+        - 153
+      - items:
+        - 21
+        - 21
+        - 252
+      - items:
+        - 0
+        - 2
+        - 2
+      - items:
+        - 0
+        - 75
+        - 44
+      - items:
+        - 86
+        - 0
+        - 86
+      - items:
+        - 141
+        - 141
+        - 86
+      - items:
+        - 158
+        - 218
+        - 0
+      - items:
+        - 0
+        - 28
+        - 28
+    - posX: 2
+      posY: 8
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 1
+      itemsLayer:
+      - items:
+        - 0
+        - 286
+        - 78
+      - items:
+        - 55
+        - 0
+        - 55
+      - items:
+        - 100
+        - 100
+        - 0
+      - items:
+        - 0
+        - 258
+        - 258
+      - items:
+        - 66
+        - 44
+        - 98
+      - items:
+        - 329
+        - 329
+        - 0
+      - items:
+        - 58
+        - 0
+        - 274
+      - items:
+        - 0
+        - 64
+        - 278
+      - items:
+        - 0
+        - 205
+        - 205
+    - posX: 2
+      posY: 0
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 273
+        - 0
+        - 273
+      - items:
+        - 0
+        - 109
+        - 21
+      - items:
+        - 214
+        - 214
+        - 43
+      - items:
+        - 232
+        - 0
+        - 232
+      - items:
+        - 0
+        - 279
+        - 279
+      - items:
+        - 296
+        - 0
+        - 231
+      - items:
+        - 136
+        - 136
+        - 0
+      - items:
+        - 0
+        - 205
+        - 28
+      - items:
+        - 0
+        - 0
+        - 64
+    - posX: 2
+      posY: -4
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 151
+        - 0
+        - 151
+      - items:
+        - 109
+        - 109
+        - 0
+      - items:
+        - 0
+        - 87
+        - 87
+      - items:
+        - 0
+        - 236
+        - 236
+      - items:
+        - 111
+        - 111
+        - 0

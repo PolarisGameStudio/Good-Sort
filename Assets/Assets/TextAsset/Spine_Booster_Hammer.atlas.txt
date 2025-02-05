@@ -1,0 +1,176 @@
+Spine_Booster_Hammer.png
+	size: 2004, 1796
+Body
+	bounds: 887, 853, 114, 190
+	rotate: 90
+ForceField_0
+	bounds: 1088, 445, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_14
+	bounds: 1088, 445, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_1
+	bounds: 1135, 185, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_10
+	bounds: 1124, 1249, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_11
+	bounds: 1124, 989, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_12
+	bounds: 1318, 729, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_13
+	bounds: 1348, 469, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_2
+	bounds: 1163, 1533, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_3
+	bounds: 1608, 1533, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_4
+	bounds: 1608, 1273, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_5
+	bounds: 1384, 1013, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_6
+	bounds: 1578, 753, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_7
+	bounds: 1644, 1013, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_8
+	bounds: 1608, 493, 258, 258
+	offsets: 1, 1, 260, 260
+ForceField_9
+	bounds: 1608, 233, 258, 258
+	offsets: 1, 1, 260, 260
+Front_Face
+	bounds: 461, 408, 411, 388
+	rotate: 90
+Hammer_Smash
+	bounds: 887, 969, 235, 360
+	offsets: 6, 0, 247, 379
+Hammer_Smash2
+	bounds: 851, 435, 235, 384
+Head
+	bounds: 461, 14, 392, 298
+	rotate: 90
+Head_Back
+	bounds: 1088, 705, 262, 228
+	rotate: 90
+Head_Front
+	bounds: 916, 1509, 282, 245
+	rotate: 90
+Head_Mid
+	bounds: 1395, 277, 193, 190
+Impact_0
+	bounds: 761, 19, 372, 387
+	offsets: 12, 15, 400, 414
+Impact_1
+	bounds: 2, 821, 414, 483
+	offsets: 13, 13, 441, 509
+Impact_2
+	bounds: 468, 1331, 446, 460
+	offsets: 15, 14, 475, 490
+Impact_3
+	bounds: 2, 336, 483, 457
+	offsets: 14, 15, 513, 489
+	rotate: 90
+Impact_4
+	bounds: 2, 1306, 485, 464
+	offsets: 16, 16, 520, 497
+	rotate: 90
+Impact_5
+	bounds: 418, 821, 483, 467
+	offsets: 19, 21, 523, 503
+	rotate: 90
+Impact_6
+	bounds: 2, 5, 381, 329
+	offsets: 14, 12, 409, 353
+Particle_0
+	bounds: 1838, 819, 28, 28
+	offsets: 112, 116, 256, 256
+Particle_1
+	bounds: 1904, 1244, 96, 92
+	offsets: 78, 87, 256, 256
+Particle_10
+	bounds: 1384, 1330, 150, 150
+	offsets: 48, 59, 256, 256
+Particle_11
+	bounds: 1440, 121, 154, 157
+	offsets: 44, 56, 256, 256
+	rotate: 90
+Particle_12
+	bounds: 1135, 23, 159, 160
+	offsets: 42, 55, 256, 256
+Particle_13
+	bounds: 1838, 849, 162, 163
+	offsets: 40, 54, 256, 256
+	rotate: 90
+Particle_14
+	bounds: 916, 1344, 163, 160
+	offsets: 39, 57, 256, 256
+	rotate: 90
+Particle_15
+	bounds: 1423, 1634, 163, 157
+	offsets: 39, 59, 256, 256
+Particle_16
+	bounds: 1423, 1482, 162, 150
+	offsets: 39, 60, 256, 256
+Particle_17
+	bounds: 1296, 24, 159, 142
+	offsets: 41, 62, 256, 256
+	rotate: 90
+Particle_18
+	bounds: 1868, 1637, 154, 132
+	offsets: 47, 61, 256, 256
+	rotate: 90
+Particle_19
+	bounds: 1868, 1483, 152, 133
+	offsets: 49, 61, 256, 256
+	rotate: 90
+Particle_2
+	bounds: 1742, 14, 106, 103
+	offsets: 72, 81, 256, 256
+	rotate: 90
+Particle_20
+	bounds: 1868, 570, 137, 126
+	offsets: 58, 64, 256, 256
+	rotate: 90
+Particle_21
+	bounds: 1440, 4, 128, 115
+	offsets: 64, 70, 256, 256
+Particle_22
+	bounds: 1570, 2, 95, 80
+	offsets: 87, 92, 256, 256
+Particle_23
+	bounds: 1384, 1280, 62, 48
+	offsets: 105, 108, 256, 256
+Particle_3
+	bounds: 1868, 122, 116, 111
+	offsets: 69, 75, 256, 256
+Particle_4
+	bounds: 1868, 235, 123, 113
+	offsets: 67, 72, 256, 256
+Particle_5
+	bounds: 1868, 350, 129, 109
+	offsets: 65, 74, 256, 256
+Particle_6
+	bounds: 1868, 461, 133, 107
+	offsets: 62, 71, 256, 256
+Particle_7
+	bounds: 1868, 709, 138, 123
+	offsets: 59, 67, 256, 256
+	rotate: 90
+Particle_8
+	bounds: 1868, 1338, 143, 133
+	offsets: 55, 66, 256, 256
+	rotate: 90
+Particle_9
+	bounds: 1599, 84, 147, 141
+	offsets: 52, 64, 256, 256
+	rotate: 90

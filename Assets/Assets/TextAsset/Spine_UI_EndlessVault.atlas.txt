@@ -1,0 +1,50 @@
+Spine_UI_EndlessVault.png
+	size: 808, 808
+	filter: Linear, Linear
+	pma: true
+BG
+	bounds: 2, 406, 454, 400
+BG_LightBulb
+	bounds: 655, 111, 88, 88
+	offsets: 5, 6, 99, 99
+Clock
+	bounds: 474, 307, 245, 247
+Clock_Bell_L
+	bounds: 310, 15, 87, 104
+	offsets: 2, 3, 93, 109
+	rotate: 90
+Clock_Bell_R
+	bounds: 655, 201, 104, 83
+	offsets: 3, 3, 109, 88
+	rotate: 90
+Clock_Point
+	bounds: 645, 18, 60, 91
+	offsets: 1, 2, 62, 94
+Clock_Point_Circle
+	bounds: 750, 769, 36, 37
+	offsets: 1, 1, 38, 39
+FG
+	bounds: 2, 237, 470, 167
+	offsets: 1, 1, 472, 169
+Gold_1
+	bounds: 574, 13, 136, 69
+	offsets: 2, 1, 139, 72
+	rotate: 90
+Gold_2
+	bounds: 439, 2, 133, 147
+	offsets: 4, 1, 138, 168
+Gold_3
+	bounds: 2, 13, 158, 89
+	offsets: 1, 1, 164, 94
+Gold_4
+	bounds: 162, 19, 146, 83
+	offsets: 3, 6, 151, 93
+Gold_All
+	bounds: 2, 104, 435, 131
+	offsets: 1, 1, 440, 134
+Particle
+	bounds: 474, 151, 179, 154
+	offsets: 13, 2, 205, 206
+Particle2
+	bounds: 458, 556, 290, 250
+	offsets: 20, 2, 330, 331

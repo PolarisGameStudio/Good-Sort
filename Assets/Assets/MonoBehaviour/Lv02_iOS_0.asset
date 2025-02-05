@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99b1bccb7be485d7733c2b02a50f54d, type: 3}
+  m_Name: Lv02_iOS_0
+  m_EditorClassIdentifier:
+  level:
+    timeToPlay: 310
+    numberCellLock: 0
+    itemHiden: 0
+    cells:
+    - posX: -9
+      posY: 2
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 12
+        - 12
+        - 53
+      - items:
+        - 50
+        - 10
+        - 10
+      - items:
+        - 36
+        - 7
+        - 0
+    - posX: -3
+      posY: 2
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 53
+        - 86
+        - 75
+      - items:
+        - 0
+        - 49
+        - 49
+      - items:
+        - 251
+        - 51
+        - 237
+    - posX: 3
+      posY: 2
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 0
+        - 86
+        - 53
+      - items:
+        - 40
+        - 58
+        - 40
+    - posX: -3
+      posY: -2
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 58
+        - 0
+        - 58
+      - items:
+        - 55
+        - 12
+        - 55
+      - items:
+        - 36
+        - 51
+        - 36
+    - posX: 3
+      posY: -2
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 252
+        - 252
+        - 49
+      - items:
+        - 86
+        - 29
+        - 7
+    - posX: -9
+      posY: -2
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 50
+        - 252
+        - 0
+      - items:
+        - 40
+        - 10
+        - 0
+      - items:
+        - 0
+        - 0
+        - 7
+    - posX: -9
+      posY: -6
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 75
+        - 75
+        - 0
+      - items:
+        - 22
+        - 22
+        - 0
+      - items:
+        - 251
+        - 182
+        - 251
+    - posX: -3
+      posY: -6
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 29
+        - 182
+        - 22
+      - items:
+        - 237
+        - 237
+        - 0
+      - items:
+        - 39
+        - 50
+        - 0
+    - posX: 3
+      posY: -6
+      cellType: 0
+      numberLayer: 0
+      moveType: 0
+      speed: 0
+      isLock: 0
+      itemsLayer:
+      - items:
+        - 39
+        - 182
+        - 39
+      - items:
+        - 29
+        - 51
+        - 55

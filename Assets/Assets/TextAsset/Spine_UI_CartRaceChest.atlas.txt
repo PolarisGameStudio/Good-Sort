@@ -1,0 +1,87 @@
+Spine_UI_CartRaceChest.png
+	size: 1360, 1068
+Bronze_Body
+	bounds: 869, 249, 406, 208
+	offsets: 1, 1, 409, 210
+	rotate: 90
+Bronze_Cap_Close
+	bounds: 617, 646, 419, 199
+	rotate: 90
+Bronze_Cap_Open
+	bounds: 655, 229, 415, 212
+	rotate: 90
+Bronze_Flag
+	bounds: 1238, 978, 106, 87
+Bronze_HandleL
+	bounds: 1226, 141, 92, 85
+Bronze_HandleR_Back
+	bounds: 1320, 48, 38, 86
+Bronze_HandleR_Front
+	bounds: 1298, 782, 60, 105
+Bronze_Icon_Close
+	bounds: 1079, 323, 160, 164
+	offsets: 1, 1, 163, 167
+Bronze_Icon_Open
+	bounds: 241, 27, 161, 166
+	offsets: 1, 1, 163, 168
+Gold_Body
+	bounds: 818, 657, 408, 208
+	offsets: 1, 1, 410, 210
+	rotate: 90
+Gold_Cap_Close
+	bounds: 2, 195, 432, 212
+	rotate: 90
+Gold_Cap_Open
+	bounds: 216, 195, 432, 232
+	rotate: 90
+Gold_Flag
+	bounds: 1226, 228, 122, 93
+Gold_HandleL
+	bounds: 1238, 676, 104, 97
+	rotate: 90
+Gold_HandleR_Back
+	bounds: 1238, 790, 53, 97
+Gold_HandleR_Front
+	bounds: 1079, 257, 64, 109
+	rotate: 90
+Gold_Icon_Close
+	bounds: 871, 15, 232, 185
+	offsets: 1, 1, 234, 188
+	rotate: 90
+Gold_Icon_Open
+	bounds: 2, 3, 237, 190
+	offsets: 9, 1, 247, 193
+Inside_Glow
+	bounds: 440, 641, 424, 175
+	offsets: 0, 41, 424, 225
+	rotate: 90
+Silver_Body
+	bounds: 1028, 669, 396, 208
+	offsets: 1, 1, 399, 210
+	rotate: 90
+Silver_Cap_Close
+	bounds: 450, 216, 423, 203
+	rotate: 90
+Silver_Cap_Open
+	bounds: 450, 2, 419, 212
+Silver_Flag
+	bounds: 1238, 889, 106, 87
+Silver_HandleL
+	bounds: 1226, 55, 92, 84
+Silver_HandleR_Back
+	bounds: 1320, 136, 38, 90
+Silver_HandleR_Front
+	bounds: 1298, 571, 60, 103
+Silver_Icon_Close
+	bounds: 1079, 489, 217, 178
+	offsets: 2, 2, 220, 181
+Silver_Icon_Open
+	bounds: 1058, 23, 224, 166
+	offsets: 1, 1, 228, 168
+	rotate: 90
+TEX_BaseLight2
+	bounds: 2, 629, 436, 436
+	offsets: 38, 38, 512, 512
+TEX_CircleParticle
+	bounds: 1241, 376, 111, 111
+	offsets: 9, 9, 128, 129

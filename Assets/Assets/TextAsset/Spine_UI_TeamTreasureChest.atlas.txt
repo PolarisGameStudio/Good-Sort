@@ -1,0 +1,119 @@
+Spine_UI_TeamTreasureChest.png
+	size: 2044, 1128
+	filter: Linear, Linear
+01/Body
+	bounds: 461, 217, 435, 219
+01/Cap_Close
+	bounds: 6, 384, 449, 220
+01/Cap_Open
+	bounds: 1065, 683, 439, 256
+	rotate: 90
+01/Icon_Close
+	bounds: 264, 65, 169, 196
+01/Icon_Close_Full
+	bounds: 808, 64, 156, 236
+	offsets: 5, 11, 169, 254
+	rotate: 90
+01/Icon_Close_Tip
+	bounds: 1914, 31, 88, 50
+	offsets: 14, 16, 118, 79
+01/Icon_Close_Tip_SD
+	bounds: 1020, 28, 95, 66
+	offsets: 15, 13, 128, 94
+01/Icon_Close_Top
+	bounds: 1982, 789, 68, 51
+	rotate: 90
+01/Icon_Open
+	bounds: 1879, 87, 157, 219
+01/SD
+	bounds: 1486, 194, 387, 112
+02/Body
+	bounds: 1573, 429, 430, 239
+02/Body_LHandle
+	bounds: 1298, 91, 128, 135
+02/Body_RHandle_Back
+	bounds: 754, 455, 40, 87
+	offsets: 13, 15, 67, 115
+02/Body_RHandle_Front
+	bounds: 1790, 6, 87, 118
+	offsets: 10, 12, 102, 137
+	rotate: 90
+02/Cap_Close
+	bounds: 800, 442, 449, 229
+02/Cap_Open
+	bounds: 800, 677, 445, 259
+	rotate: 90
+02/Icon_Close
+	bounds: 1818, 685, 164, 172
+	offsets: 8, 7, 179, 189
+02/Icon_Close_Lcok
+	bounds: 1566, 64, 129, 124
+	offsets: 6, 7, 138, 136
+02/Icon_Close_Paper
+	bounds: 520, 476, 158, 254
+	offsets: 4, 6, 165, 260
+	rotate: 90
+02/Icon_Open
+	bounds: 1818, 863, 180, 259
+02/SD
+	bounds: 6, 267, 394, 111
+03/Body
+	bounds: 1572, 674, 448, 240
+	rotate: 90
+03/Body_LHandle
+	bounds: 1120, 301, 128, 135
+03/Body_RHandle_Back
+	bounds: 1980, 672, 53, 111
+	offsets: 10, 10, 72, 132
+03/Body_RHandle_Front
+	bounds: 769, 9, 78, 121
+	offsets: 9, 9, 100, 136
+	rotate: 90
+03/Cap_Close
+	bounds: 1327, 662, 460, 240
+	rotate: 90
+03/Cap_Open
+	bounds: 524, 640, 482, 270
+	rotate: 90
+03/Icon_Close
+	bounds: 1042, 54, 196, 250
+	offsets: 2, 0, 201, 250
+	rotate: 90
+03/Icon_Close_FG
+	bounds: 1698, 64, 108, 124
+	offsets: 10, 7, 128, 142
+03/Icon_Close_Point
+	bounds: 461, 506, 44, 98
+	offsets: 14, 13, 72, 125
+03/Icon_Close_SD
+	bounds: 902, 233, 212, 203
+03/Icon_Close_WingL
+	bounds: 717, 124, 84, 87
+03/Icon_Close_WingL2
+	bounds: 1275, 10, 70, 75
+03/Icon_Close_WingL2_SD
+	bounds: 1486, 570, 80, 86
+03/Icon_Close_WingL_SD
+	bounds: 1486, 482, 80, 82
+03/Icon_Close_WingR
+	bounds: 659, 24, 104, 79
+03/Icon_Close_WingR2
+	bounds: 439, 14, 100, 89
+03/Icon_Close_WingR2_SD
+	bounds: 1891, 322, 100, 101
+03/Icon_Close_WingR_SD
+	bounds: 545, 23, 108, 80
+03/Icon_Open
+	bounds: 6, 53, 253, 208
+	offsets: 0, 0, 255, 210
+03/SD
+	bounds: 1486, 312, 399, 111
+Gold
+	bounds: 439, 109, 272, 102
+Inside_Glow
+	bounds: 1255, 232, 424, 225
+	rotate: 90
+TEX_BaseLight2
+	bounds: 6, 610, 512, 512
+TEX_CircleParticle
+	bounds: 1432, 59, 128, 129

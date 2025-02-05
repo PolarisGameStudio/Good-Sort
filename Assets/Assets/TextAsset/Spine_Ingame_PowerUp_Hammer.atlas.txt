@@ -1,0 +1,46 @@
+Spine_Ingame_PowerUp_Hammer.png
+	size: 1480, 1480
+Body
+	bounds: 1363, 438, 114, 190
+Front_Face
+	bounds: 974, 630, 411, 388
+Hammer_Smash
+	bounds: 388, 7, 247, 379
+	rotate: 90
+Hammer_Smash2
+	bounds: 2, 19, 235, 384
+	rotate: 90
+Head
+	bounds: 2, 268, 352, 295
+Head_Back
+	bounds: 1016, 14, 240, 231
+	rotate: 90
+Head_Front
+	bounds: 769, 9, 245, 245
+Head_Mid
+	bounds: 1249, 65, 189, 190
+	rotate: 90
+Impact_0
+	bounds: 974, 256, 372, 387
+	offsets: 12, 15, 400, 414
+	rotate: 90
+Impact_1
+	bounds: 489, 1063, 414, 483
+	offsets: 13, 13, 441, 509
+	rotate: 90
+Impact_2
+	bounds: 2, 565, 446, 460
+	offsets: 15, 14, 475, 490
+	rotate: 90
+Impact_3
+	bounds: 974, 1020, 483, 457
+	offsets: 14, 15, 513, 489
+Impact_4
+	bounds: 2, 1013, 485, 464
+	offsets: 16, 16, 520, 497
+Impact_5
+	bounds: 489, 594, 483, 467
+	offsets: 19, 21, 523, 503
+Impact_6
+	bounds: 464, 263, 381, 329
+	offsets: 14, 12, 409, 353

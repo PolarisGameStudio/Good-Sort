@@ -1,0 +1,8 @@
+Spine_UI_Card.png
+	size: 828, 500
+Front
+	bounds: 2, 2, 494, 682
+	rotate: 90
+Title
+	bounds: 686, 56, 440, 139
+	rotate: 90

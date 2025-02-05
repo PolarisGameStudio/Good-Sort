@@ -1,0 +1,108 @@
+Spine_Booster_TimeBonus.png
+	size: 636, 1032
+Bell_Left
+	bounds: 187, 377, 117, 116
+	offsets: 3, 4, 124, 124
+	rotate: 90
+Bell_Right
+	bounds: 486, 696, 117, 116
+	offsets: 3, 3, 123, 122
+	rotate: 90
+Body
+	bounds: 2, 734, 296, 296
+	offsets: 9, 10, 315, 315
+Center
+	bounds: 566, 3, 48, 51
+	offsets: 1, 2, 51, 54
+ClockHands
+	bounds: 486, 815, 81, 129
+	offsets: 3, 6, 87, 141
+	rotate: 90
+ClockHands_SD
+	bounds: 466, 119, 95, 112
+	offsets: 0, 3, 103, 116
+	rotate: 90
+FX_0
+	bounds: 181, 23, 174, 166
+	offsets: 41, 45, 256, 256
+	rotate: 90
+FX_1
+	bounds: 2, 377, 183, 176
+	offsets: 36, 40, 256, 256
+FX_10
+	bounds: 349, 343, 151, 154
+	offsets: 45, 40, 256, 256
+	rotate: 90
+FX_11
+	bounds: 486, 898, 132, 133
+	offsets: 56, 54, 256, 256
+	rotate: 90
+FX_12
+	bounds: 461, 11, 106, 103
+	offsets: 75, 72, 256, 256
+	rotate: 90
+FX_13
+	bounds: 559, 623, 73, 71
+	offsets: 94, 83, 256, 256
+FX_2
+	bounds: 300, 854, 184, 176
+	offsets: 36, 40, 256, 256
+FX_3
+	bounds: 300, 675, 184, 177
+	offsets: 36, 39, 256, 256
+FX_4
+	bounds: 2, 555, 184, 177
+	offsets: 36, 39, 256, 256
+FX_5
+	bounds: 2, 193, 182, 177
+	offsets: 37, 39, 256, 256
+	rotate: 90
+FX_6
+	bounds: 374, 496, 183, 177
+	offsets: 37, 39, 256, 256
+FX_7
+	bounds: 188, 496, 184, 177
+	offsets: 36, 39, 256, 256
+FX_8
+	bounds: 2, 13, 178, 177
+	offsets: 42, 39, 256, 256
+	rotate: 90
+FX_9
+	bounds: 181, 199, 176, 161
+	offsets: 41, 39, 256, 256
+	rotate: 90
+FX_Ring0
+	bounds: 505, 351, 143, 129
+	offsets: 4, 7, 153, 139
+	rotate: 90
+FX_Ring1
+	bounds: 505, 216, 133, 122
+	offsets: 3, 6, 142, 131
+	rotate: 90
+FX_Ring10
+	bounds: 2, 2, 10, 9
+	offsets: 10, 13, 32, 32
+FX_Ring3
+	bounds: 344, 207, 134, 120
+	offsets: 3, 7, 143, 130
+	rotate: 90
+FX_Ring4
+	bounds: 349, 105, 110, 100
+	offsets: 3, 7, 120, 110
+FX_Ring5
+	bounds: 349, 13, 90, 77
+	offsets: 4, 7, 102, 88
+	rotate: 90
+FX_Ring6
+	bounds: 566, 56, 64, 61
+	offsets: 5, 7, 75, 74
+FX_Ring7
+	bounds: 580, 169, 45, 46
+	offsets: 6, 5, 58, 57
+	rotate: 90
+FX_Ring8
+	bounds: 466, 309, 32, 32
+	offsets: 8, 8, 47, 47
+FX_Ring9
+	bounds: 604, 791, 22, 22
+	offsets: 8, 8, 38, 38

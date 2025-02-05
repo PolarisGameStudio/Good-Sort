@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df909364971c9fc216bdd07e2cd774b9, type: 3}
+  m_Name: SO_SpriteResources
+  m_EditorClassIdentifier:
+  icons:
+  - type: 0
+    spr: {fileID: 21300000, guid: b4ef19c491e1ec94681b64b047ae7b88, type: 2}
+  - type: 1
+    spr: {fileID: 21300000, guid: 852202e73726023438a7bfb719a8e180, type: 2}
+  - type: 2
+    spr: {fileID: 21300000, guid: 7f6c41b5d3726c741bbf2b6d1a1a8401, type: 2}
+  - type: 3
+    spr: {fileID: 21300000, guid: 8494e47a12b244d4399401f5d603abce, type: 2}
+  - type: 4
+    spr: {fileID: 21300000, guid: 5efb16cdcbdcc814d82bd38f34a75ca3, type: 2}
+  - type: 5
+    spr: {fileID: 21300000, guid: 4f22716bbe9a48642a4e720602be352c, type: 2}
+  - type: 6
+    spr: {fileID: 21300000, guid: e8c1446f8bdffe94f9fd7b5a1a7e5e09, type: 2}
+  - type: 7
+    spr: {fileID: 21300000, guid: f047f53e5c6a67145b0bcfc5ef1e88ce, type: 2}
+  - type: 8
+    spr: {fileID: 21300000, guid: 6c583d4bb12fc2c43bcfd2f65d08d74c, type: 2}
+  - type: 9
+    spr: {fileID: 21300000, guid: c23a851781f7baa4ba20395ffc7675c4, type: 2}
+  - type: 10
+    spr: {fileID: 21300000, guid: 1038486034b443b408853e321dea8146, type: 2}
+  - type: 11
+    spr: {fileID: 21300000, guid: f047f53e5c6a67145b0bcfc5ef1e88ce, type: 2}
+  - type: 12
+    spr: {fileID: 21300000, guid: 6c583d4bb12fc2c43bcfd2f65d08d74c, type: 2}
+  - type: 13
+    spr: {fileID: 21300000, guid: c23a851781f7baa4ba20395ffc7675c4, type: 2}
+  - type: 14
+    spr: {fileID: 21300000, guid: e1fe0e84d3a5e534796f4520300c1dfa, type: 2}
+  - type: 21
+    spr: {fileID: 21300000, guid: 9be233b22338cd7409107712e1bb50b6, type: 2}
+  - type: 22
+    spr: {fileID: 21300000, guid: e576acf5d46b67843ada539d21a76458, type: 2}
+  - type: 23
+    spr: {fileID: 21300000, guid: cce4ce35d0e99924a9aefd12fb48818e, type: 2}
+  - type: 25
+    spr: {fileID: 21300000, guid: 99f5db37f081cbd4daeab51fad87823e, type: 2}

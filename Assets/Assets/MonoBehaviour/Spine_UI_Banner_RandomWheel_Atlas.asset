@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1497261852, guid: ebe353a9e51fc6708625f16edcb81e06, type: 3}
+  m_Name: Spine_UI_Banner_RandomWheel_Atlas
+  m_EditorClassIdentifier:
+  atlasFile: {fileID: 4900000, guid: 3494418ea5c3bf94fa3ee9b922addf21, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 4794e464992129042b78bf9202730a88, type: 2}

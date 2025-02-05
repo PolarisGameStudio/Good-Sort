@@ -1,0 +1,48 @@
+Spine_UI_RandomWheel.png
+	size: 652, 652
+	filter: Linear, Linear
+Coin_1
+	bounds: 357, 35, 103, 97
+	offsets: 1, 1, 105, 99
+	rotate: 90
+Coin_2
+	bounds: 254, 395, 107, 73
+	offsets: 1, 1, 110, 76
+	rotate: 90
+Coin_2_SD
+	bounds: 212, 124, 85, 21
+	offsets: 1, 1, 87, 24
+	rotate: 90
+Coin_Front
+	bounds: 2, 504, 328, 144
+	offsets: 1, 1, 330, 146
+Glass
+	bounds: 2, 13, 196, 208
+	offsets: 1, 1, 199, 210
+	rotate: 90
+Particle1
+	bounds: 235, 35, 120, 103
+	offsets: 9, 2, 138, 139
+Particle2
+	bounds: 2, 211, 291, 250
+	offsets: 19, 3, 330, 333
+	rotate: 90
+Star
+	bounds: 479, 101, 118, 123
+	offsets: 1, 1, 120, 125
+Star_SD
+	bounds: 479, 226, 133, 137
+	offsets: 2, 2, 137, 141
+Wheel
+	bounds: 254, 140, 223, 223
+	offsets: 1, 1, 225, 225
+Wheel_Border
+	bounds: 332, 365, 283, 276
+	offsets: 1, 1, 285, 278
+	rotate: 90
+Wheel_Point
+	bounds: 556, 4, 90, 95
+Wheel_Point_SD
+	bounds: 456, 2, 97, 98
+	offsets: 2, 2, 101, 102
+	rotate: 90

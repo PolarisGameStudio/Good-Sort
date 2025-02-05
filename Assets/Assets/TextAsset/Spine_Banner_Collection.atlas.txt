@@ -1,0 +1,307 @@
+Spine_Banner_Collection.png
+	size: 1652, 780
+Badge
+	bounds: 2, 8, 316, 264
+	offsets: 28, 19, 357, 300
+Badge_Glow
+	bounds: 175, 457, 310, 321
+	offsets: 99, 14, 512, 342
+Badge_New
+	bounds: 320, 10, 313, 262
+	offsets: 1, 1, 327, 263
+Badge_Particle
+	bounds: 972, 3, 97, 65
+	offsets: 0, 1, 98, 70
+Badge_Particle2
+	bounds: 1050, 613, 165, 122
+	offsets: 13, 3, 194, 137
+	rotate: 90
+Badge_SD
+	bounds: 2, 274, 334, 31
+	offsets: 9, 9, 349, 41
+Book
+	bounds: 2, 307, 471, 171
+	offsets: 23, 23, 494, 194
+	rotate: 90
+Book_Down
+	bounds: 884, 333, 215, 115
+	offsets: 1, 15, 217, 137
+	rotate: 90
+Book_PaperBack
+	bounds: 821, 550, 228, 106
+	rotate: 90
+Book_PaperBack_Empty
+	bounds: 635, 113, 228, 106
+Book_PaperFront
+	bounds: 865, 70, 220, 149
+Card_Distortion_0
+	bounds: 1408, 558, 98, 116
+	offsets: 12, 13, 121, 143
+	rotate: 90
+Card_Distortion_1
+	bounds: 1199, 108, 99, 117
+	offsets: 11, 12, 121, 143
+	rotate: 90
+Card_Distortion_10
+	bounds: 1303, 399, 116, 92
+	offsets: 5, 47, 121, 143
+	rotate: 90
+Card_Distortion_11
+	bounds: 884, 250, 114, 81
+	offsets: 7, 59, 121, 143
+Card_Distortion_12
+	bounds: 1318, 538, 111, 70
+	offsets: 10, 71, 121, 143
+	rotate: 90
+Card_Distortion_13
+	bounds: 864, 6, 106, 62
+	offsets: 15, 80, 121, 143
+Card_Distortion_14
+	bounds: 1393, 290, 95, 51
+	offsets: 21, 91, 121, 143
+Card_Distortion_15
+	bounds: 929, 552, 67, 24
+	offsets: 42, 104, 121, 143
+Card_Distortion_2
+	bounds: 1210, 7, 99, 117
+	offsets: 11, 12, 121, 143
+	rotate: 90
+Card_Distortion_3
+	bounds: 1087, 3, 103, 121
+	offsets: 9, 9, 121, 143
+	rotate: 90
+Card_Distortion_4
+	bounds: 1207, 517, 109, 127
+	offsets: 6, 6, 121, 143
+Card_Distortion_5
+	bounds: 1174, 646, 114, 132
+	offsets: 4, 4, 121, 143
+Card_Distortion_6
+	bounds: 1182, 330, 119, 129
+	offsets: 2, 9, 121, 143
+Card_Distortion_7
+	bounds: 1408, 658, 120, 126
+	offsets: 1, 14, 121, 143
+	rotate: 90
+Card_Distortion_8
+	bounds: 1199, 209, 119, 115
+	offsets: 2, 25, 121, 143
+	rotate: 90
+Card_Distortion_9
+	bounds: 1536, 661, 117, 105
+	offsets: 4, 34, 121, 143
+	rotate: 90
+Character_Body
+	bounds: 487, 497, 281, 256
+	rotate: 90
+Character_Cap
+	bounds: 1290, 651, 127, 116
+	rotate: 90
+Character_Head
+	bounds: 338, 278, 177, 268
+	rotate: 90
+Character_LArm
+	bounds: 1510, 440, 100, 109
+	rotate: 90
+Character_LArm_SD
+	bounds: 1397, 343, 100, 109
+	rotate: 90
+Character_LCard
+	bounds: 1536, 542, 99, 117
+Character_LCard_Glow
+	bounds: 635, 221, 247, 274
+	offsets: 36, 32, 291, 376
+Character_LCard_Particle
+	bounds: 532, 458, 37, 35
+	offsets: 5, 8, 44, 52
+	rotate: 90
+Character_LCard_Particle10
+	bounds: 320, 2, 6, 6
+	offsets: 0, 3, 9, 11
+Character_LCard_Particle11
+	bounds: 320, 2, 6, 6
+	offsets: 0, 3, 9, 11
+Character_LCard_Particle2
+	bounds: 1293, 507, 8, 8
+	offsets: 2, 1, 10, 10
+Character_LCard_Particle4
+	bounds: 1510, 542, 14, 15
+	offsets: 2, 3, 20, 20
+	rotate: 90
+Character_LCard_Particle5
+	bounds: 569, 460, 36, 35
+	offsets: 7, 3, 49, 46
+Character_LCard_Particle6
+	bounds: 1473, 122, 3, 3
+Character_LCard_Particle7
+	bounds: 1473, 122, 3, 3
+Character_LCard_Particle8
+	bounds: 1473, 122, 3, 3
+Character_LCard_Particle9
+	bounds: 1473, 122, 3, 3
+Character_LEye
+	bounds: 1122, 379, 45, 80
+	offsets: 0, 0, 45, 81
+Character_LEyeBrown
+	bounds: 1372, 7, 33, 22
+	offsets: 0, 1, 33, 23
+Character_LHand
+	bounds: 1329, 31, 76, 88
+Character_LHand_SD
+	bounds: 1395, 122, 76, 88
+Character_LLid
+	bounds: 175, 307, 47, 81
+	rotate: 90
+Character_LPupil
+	bounds: 1455, 11, 20, 26
+	offsets: 0, 1, 21, 28
+	rotate: 90
+Character_LThumb
+	bounds: 1611, 412, 39, 26
+	offsets: 1, 0, 40, 27
+Character_LUpperArm
+	bounds: 1001, 377, 119, 199
+Character_Mouth
+	bounds: 821, 499, 49, 59
+	rotate: 90
+Character_RArm
+	bounds: 175, 356, 99, 157
+	offsets: 0, 3, 101, 160
+	rotate: 90
+Character_RCard
+	bounds: 1316, 212, 76, 96
+	offsets: 0, 1, 78, 97
+	rotate: 90
+Character_RCard2
+	bounds: 1508, 355, 83, 101
+	offsets: 0, 0, 84, 101
+	rotate: 90
+Character_RCard3
+	bounds: 1508, 256, 98, 97
+Character_REye
+	bounds: 1473, 141, 49, 83
+	offsets: 0, 0, 49, 84
+Character_REyeBrown
+	bounds: 1174, 619, 31, 25
+Character_RHand
+	bounds: 1524, 188, 66, 83
+	offsets: 0, 1, 69, 84
+	rotate: 90
+Character_RLid
+	bounds: 1207, 466, 49, 84
+	rotate: 90
+Character_RPupil
+	bounds: 1621, 519, 21, 26
+	offsets: 0, 0, 21, 27
+	rotate: 90
+Character_RThumb
+	bounds: 1611, 355, 33, 27
+	offsets: 1, 1, 35, 28
+Character_RUpperArm
+	bounds: 929, 578, 119, 200
+	offsets: 0, 2, 119, 202
+Dog_Body
+	bounds: 1001, 241, 179, 134
+Dog_Card
+	bounds: 1318, 290, 107, 73
+	offsets: 0, 0, 108, 73
+	rotate: 90
+Dog_Charm
+	bounds: 487, 460, 43, 35
+Dog_Chin
+	bounds: 1122, 461, 150, 83
+	rotate: 90
+Dog_EyeL
+	bounds: 1608, 260, 27, 42
+	offsets: 0, 1, 27, 44
+	rotate: 90
+Dog_EyeL_Brown
+	bounds: 1507, 226, 12, 8
+	offsets: 0, 0, 13, 8
+Dog_EyeL_Lid
+	bounds: 942, 221, 27, 44
+	rotate: 90
+Dog_EyeL_Pupil
+	bounds: 313, 307, 13, 17
+	rotate: 90
+Dog_EyeR
+	bounds: 1407, 2, 29, 46
+	offsets: 0, 1, 29, 47
+	rotate: 90
+Dog_EyeR_Brown
+	bounds: 1473, 127, 12, 12
+	offsets: 0, 0, 12, 13
+Dog_EyeR_Lid
+	bounds: 1541, 6, 31, 47
+Dog_EyeR_Pupil
+	bounds: 1507, 236, 15, 18
+Dog_Hat
+	bounds: 1414, 226, 91, 62
+Dog_Head
+	bounds: 635, 2, 154, 109
+Dog_LBack_Foot
+	bounds: 1329, 2, 41, 27
+	offsets: 0, 0, 42, 27
+Dog_LBack_Leg
+	bounds: 1483, 5, 56, 48
+Dog_LBack_Thigh
+	bounds: 1603, 127, 59, 45
+	offsets: 0, 1, 60, 46
+	rotate: 90
+Dog_LFront_Foot
+	bounds: 313, 322, 32, 21
+	offsets: 0, 0, 32, 22
+	rotate: 90
+Dog_LFront_Leg
+	bounds: 1483, 55, 70, 58
+	rotate: 90
+Dog_LFront_Thigh
+	bounds: 1543, 67, 64, 58
+	offsets: 1, 0, 65, 58
+Dog_Mouth
+	bounds: 1609, 289, 64, 41
+	rotate: 90
+Dog_Neck
+	bounds: 1087, 108, 131, 110
+	offsets: 1, 0, 132, 110
+	rotate: 90
+Dog_RFront_Foot
+	bounds: 1611, 384, 36, 26
+Dog_RFront_Leg
+	bounds: 1609, 226, 32, 36
+	rotate: 90
+Dog_RFront_Thigh
+	bounds: 1318, 121, 75, 89
+Dog_Tail
+	bounds: 258, 310, 44, 53
+	rotate: 90
+Dog_TailBack
+	bounds: 1407, 33, 74, 87
+Dog_TailFront
+	bounds: 791, 3, 71, 108
+Dog_TailFront_Detail
+	bounds: 1609, 191, 32, 33
+SD_Body
+	bounds: 745, 514, 264, 74
+	offsets: 7, 8, 274, 84
+	rotate: 90
+SD_LLegBack
+	bounds: 608, 318, 75, 25
+	offsets: 0, 1, 81, 31
+	rotate: 90
+SD_LLegFront
+	bounds: 608, 395, 100, 22
+	offsets: 2, 4, 128, 33
+	rotate: 90
+SD_RLegBack
+	bounds: 884, 223, 56, 25
+	offsets: 9, 2, 66, 28
+SD_RLegFront
+	bounds: 1050, 581, 69, 30
+	offsets: 15, 6, 85, 45
+SD_Tail
+	bounds: 1524, 127, 77, 59
+	offsets: 7, 5, 92, 68
+TEX_CircleParticle
+	bounds: 1397, 445, 111, 111
+	offsets: 9, 9, 128, 129

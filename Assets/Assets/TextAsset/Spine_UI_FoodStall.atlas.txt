@@ -1,0 +1,228 @@
+Spine_UI_FoodStall.png
+	size: 2048, 820
+BackLight
+	bounds: 739, 621, 364, 195
+	offsets: 34, 22, 432, 255
+Board
+	bounds: 2, 453, 323, 105
+	offsets: 3, 3, 329, 110
+Board_Light_1
+	bounds: 704, 310, 23, 68
+	offsets: 6, 10, 329, 110
+Board_Light_10
+	bounds: 2, 177, 201, 103
+	offsets: 4, 5, 329, 110
+Board_Light_11
+	bounds: 440, 179, 220, 102
+	offsets: 5, 6, 329, 110
+Board_Light_12
+	bounds: 902, 228, 238, 100
+	offsets: 6, 8, 329, 110
+Board_Light_13
+	bounds: 1600, 342, 257, 98
+	offsets: 7, 10, 329, 110
+Board_Light_14
+	bounds: 176, 282, 262, 95
+	offsets: 22, 13, 329, 110
+Board_Light_15
+	bounds: 440, 283, 262, 94
+	offsets: 41, 14, 329, 110
+Board_Light_16
+	bounds: 1337, 342, 261, 98
+	offsets: 60, 10, 329, 110
+Board_Light_17
+	bounds: 1337, 240, 244, 100
+	offsets: 79, 8, 329, 110
+Board_Light_18
+	bounds: 1742, 189, 227, 102
+	offsets: 97, 6, 329, 110
+Board_Light_19
+	bounds: 662, 178, 209, 103
+	offsets: 116, 5, 329, 110
+Board_Light_2
+	bounds: 1742, 296, 44, 80
+	offsets: 4, 8, 329, 110
+	rotate: 90
+Board_Light_20
+	bounds: 205, 177, 191, 103
+	offsets: 135, 5, 329, 110
+Board_Light_21
+	bounds: 1471, 83, 173, 103
+	offsets: 153, 5, 329, 110
+Board_Light_22
+	bounds: 944, 517, 154, 102
+	offsets: 172, 5, 329, 110
+Board_Light_23
+	bounds: 2, 74, 135, 101
+	offsets: 191, 5, 329, 110
+Board_Light_24
+	bounds: 265, 76, 116, 99
+	offsets: 210, 5, 329, 110
+Board_Light_25
+	bounds: 836, 25, 98, 96
+	offsets: 228, 5, 329, 110
+Board_Light_26
+	bounds: 1401, 2, 79, 92
+	offsets: 247, 6, 329, 110
+	rotate: 90
+Board_Light_27
+	bounds: 465, 15, 59, 86
+	offsets: 266, 7, 329, 110
+	rotate: 90
+Board_Light_28
+	bounds: 902, 370, 39, 78
+	offsets: 285, 8, 329, 110
+Board_Light_29
+	bounds: 1057, 161, 20, 65
+	offsets: 303, 11, 329, 110
+Board_Light_3
+	bounds: 1971, 203, 64, 88
+	offsets: 4, 6, 329, 110
+Board_Light_30
+	bounds: 1105, 815, 1, 1
+Coin_Shine_30
+	bounds: 1105, 815, 1, 1
+Board_Light_4
+	bounds: 936, 28, 85, 93
+	offsets: 3, 6, 329, 110
+Board_Light_5
+	bounds: 1187, 57, 104, 97
+	offsets: 3, 5, 329, 110
+Board_Light_6
+	bounds: 139, 75, 124, 100
+	offsets: 3, 5, 329, 110
+Board_Light_7
+	bounds: 691, 75, 143, 101
+	offsets: 3, 5, 329, 110
+Board_Light_8
+	bounds: 1883, 85, 163, 102
+	offsets: 3, 5, 329, 110
+Board_Light_9
+	bounds: 873, 123, 182, 103
+	offsets: 3, 5, 329, 110
+Coin
+	bounds: 1883, 23, 123, 60
+	offsets: 9, 1, 135, 64
+Coin1
+	bounds: 366, 21, 97, 53
+	offsets: 2, 1, 100, 55
+Coin2
+	bounds: 265, 18, 99, 56
+	offsets: 1, 1, 102, 58
+Coin3
+	bounds: 1495, 26, 102, 55
+	offsets: 1, 1, 104, 57
+Coin_Pack
+	bounds: 2, 560, 398, 256
+	offsets: 29, 1, 454, 279
+Coin_Shine_1
+	bounds: 1999, 619, 13, 59
+	offsets: 7, 90, 397, 187
+Coin_Shine_10
+	bounds: 1143, 299, 192, 165
+	offsets: 7, 4, 397, 187
+Coin_Shine_11
+	bounds: 532, 380, 203, 165
+	offsets: 16, 4, 397, 187
+Coin_Shine_12
+	bounds: 327, 379, 203, 166
+	offsets: 36, 4, 397, 187
+Coin_Shine_13
+	bounds: 1481, 442, 203, 169
+	offsets: 55, 1, 397, 187
+Coin_Shine_14
+	bounds: 1827, 613, 203, 170
+	offsets: 75, 0, 397, 187
+	rotate: 90
+Coin_Shine_15
+	bounds: 1655, 613, 203, 170
+	offsets: 95, 0, 397, 187
+	rotate: 90
+Coin_Shine_16
+	bounds: 1483, 613, 203, 170
+	offsets: 115, 0, 397, 187
+	rotate: 90
+Coin_Shine_17
+	bounds: 739, 450, 203, 169
+	offsets: 135, 0, 397, 187
+Coin_Shine_18
+	bounds: 1310, 466, 203, 169
+	offsets: 155, 0, 397, 187
+	rotate: 90
+Coin_Shine_19
+	bounds: 1105, 500, 203, 169
+	offsets: 175, 0, 397, 187
+Coin_Shine_2
+	bounds: 398, 207, 33, 73
+	offsets: 7, 81, 397, 187
+Coin_Shine_20
+	bounds: 944, 330, 197, 168
+	offsets: 195, 0, 397, 187
+Coin_Shine_21
+	bounds: 1868, 293, 178, 164
+	offsets: 215, 0, 397, 187
+Coin_Shine_22
+	bounds: 737, 289, 159, 163
+	offsets: 234, 0, 397, 187
+	rotate: 90
+Coin_Shine_23
+	bounds: 1142, 156, 141, 163
+	offsets: 254, 0, 397, 187
+	rotate: 90
+Coin_Shine_24
+	bounds: 1307, 117, 121, 162
+	offsets: 274, 1, 397, 187
+	rotate: 90
+Coin_Shine_25
+	bounds: 398, 76, 101, 159
+	offsets: 294, 4, 397, 187
+	rotate: 90
+Coin_Shine_26
+	bounds: 1963, 464, 81, 147
+	offsets: 314, 16, 397, 187
+Coin_Shine_27
+	bounds: 176, 390, 61, 145
+	offsets: 334, 17, 397, 187
+	rotate: 90
+Coin_Shine_28
+	bounds: 2000, 680, 39, 136
+	offsets: 354, 23, 397, 187
+Coin_Shine_29
+	bounds: 1023, 26, 19, 95
+	offsets: 374, 61, 397, 187
+Coin_Shine_3
+	bounds: 139, 20, 53, 93
+	offsets: 7, 64, 397, 187
+	rotate: 90
+Coin_Shine_4
+	bounds: 1293, 42, 73, 106
+	offsets: 7, 52, 397, 187
+	rotate: 90
+Coin_Shine_5
+	bounds: 1646, 70, 92, 116
+	offsets: 7, 44, 397, 187
+Coin_Shine_6
+	bounds: 559, 64, 112, 130
+	offsets: 7, 30, 397, 187
+	rotate: 90
+Coin_Shine_7
+	bounds: 1742, 55, 132, 139
+	offsets: 7, 21, 397, 187
+	rotate: 90
+Coin_Shine_8
+	bounds: 1583, 188, 152, 157
+	offsets: 7, 9, 397, 187
+	rotate: 90
+Coin_Shine_9
+	bounds: 2, 287, 172, 164
+	offsets: 7, 5, 397, 187
+Coin_SmallPack
+	bounds: 1057, 68, 128, 86
+	offsets: 5, 1, 135, 87
+Pie
+	bounds: 1686, 445, 275, 166
+Roof
+	bounds: 1105, 671, 377, 145
+Shop
+	bounds: 402, 547, 335, 269
+	offsets: 1, 1, 337, 271

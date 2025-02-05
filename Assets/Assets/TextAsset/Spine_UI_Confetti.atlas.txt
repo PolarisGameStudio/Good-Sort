@@ -1,0 +1,60 @@
+Spine_UI_Confetti.png
+	size: 1488, 1488
+	pma: true
+3
+	bounds: 1303, 883, 167, 226
+	offsets: 1, 1, 169, 228
+Board
+	bounds: 2, 109, 1000, 481
+	offsets: 2, 1, 1003, 483
+	rotate: 90
+Instrument
+	bounds: 485, 153, 501, 248
+	rotate: 90
+Instrument_Flag
+	bounds: 485, 3, 148, 198
+	rotate: 90
+MATCH_A
+	bounds: 963, 370, 162, 188
+	offsets: 1, 1, 164, 190
+	rotate: 90
+MATCH_C
+	bounds: 1309, 50, 124, 187
+	offsets: 1, 1, 126, 189
+MATCH_H
+	bounds: 1155, 49, 152, 188
+	offsets: 1, 1, 154, 190
+MATCH_M
+	bounds: 1155, 239, 194, 206
+	offsets: 1, 1, 196, 208
+	rotate: 90
+MATCH_Stroke_A
+	bounds: 962, 51, 191, 220
+	offsets: 1, 1, 193, 222
+MATCH_Stroke_C
+	bounds: 1155, 435, 144, 219
+	offsets: 1, 1, 146, 221
+MATCH_Stroke_H
+	bounds: 1303, 660, 182, 221
+	offsets: 1, 1, 184, 223
+MATCH_Stroke_M
+	bounds: 735, 34, 225, 237
+	offsets: 1, 1, 227, 239
+MATCH_Stroke_T
+	bounds: 1303, 437, 153, 221
+	offsets: 2, 1, 156, 223
+MATCH_T
+	bounds: 963, 534, 120, 189
+	offsets: 1, 1, 122, 191
+	rotate: 90
+MainText
+	bounds: 485, 656, 816, 453
+	offsets: 8, 8, 832, 462
+Side_Ribbon
+	bounds: 735, 273, 226, 381
+TEX_SpotLight2
+	bounds: 1363, 360, 75, 112
+	offsets: 45, 8, 128, 128
+	rotate: 90
+Top_Ribbon
+	bounds: 2, 1111, 1383, 374

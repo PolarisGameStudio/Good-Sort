@@ -1,0 +1,103 @@
+Spine_UI_LeaderboardChest_FoodFight.png
+	size: 2020, 896
+01/Body
+	bounds: 1497, 522, 372, 180
+	offsets: 19, 1, 399, 210
+	rotate: 90
+01/Cap_Close
+	bounds: 1242, 507, 387, 253
+	rotate: 90
+01/Cap_Open
+	bounds: 1289, 127, 378, 224
+	rotate: 90
+02/Body
+	bounds: 1032, 488, 406, 208
+	offsets: 1, 1, 409, 210
+	rotate: 90
+02/Cap_Close
+	bounds: 617, 475, 419, 199
+	rotate: 90
+02/Cap_Open
+	bounds: 818, 479, 415, 212
+	rotate: 90
+02/Flag
+	bounds: 1908, 517, 106, 87
+02/HandleL
+	bounds: 1079, 3, 92, 85
+02/HandleR_Back
+	bounds: 1932, 198, 38, 86
+	rotate: 90
+02/HandleR_Front
+	bounds: 1908, 455, 60, 105
+	rotate: 90
+02/Icon_Close
+	bounds: 1729, 6, 201, 215
+	offsets: 0, 0, 201, 217
+02/Icon_Open
+	bounds: 1738, 238, 207, 208
+03/Body
+	bounds: 1079, 90, 396, 208
+	offsets: 1, 1, 399, 210
+	rotate: 90
+03/Cap_Close
+	bounds: 450, 45, 423, 203
+	rotate: 90
+03/Cap_Open
+	bounds: 655, 54, 419, 212
+	rotate: 90
+03/Flag
+	bounds: 1918, 788, 106, 87
+	rotate: 90
+03/HandleL
+	bounds: 1173, 4, 92, 84
+03/HandleR_Back
+	bounds: 450, 5, 38, 90
+	rotate: 90
+03/HandleR_Front
+	bounds: 869, 7, 60, 103
+	rotate: 90
+03/Icon_Close
+	bounds: 1515, 2, 212, 219
+	offsets: 7, 17, 220, 244
+03/Icon_Open
+	bounds: 1515, 223, 221, 223
+	offsets: 7, 0, 229, 235
+04/Body
+	bounds: 869, 69, 408, 208
+	offsets: 1, 1, 410, 210
+	rotate: 90
+04/Cap_Close
+	bounds: 2, 24, 432, 212
+	rotate: 90
+04/Cap_Open
+	bounds: 216, 24, 432, 232
+	rotate: 90
+04/Flag
+	bounds: 1289, 3, 122, 93
+	rotate: 90
+04/HandleL
+	bounds: 1918, 682, 104, 97
+	rotate: 90
+04/HandleR_Back
+	bounds: 974, 14, 53, 97
+	rotate: 90
+04/HandleR_Front
+	bounds: 1908, 606, 64, 109
+	rotate: 90
+04/Icon_Close
+	bounds: 1679, 672, 222, 237
+	offsets: 3, 3, 225, 242
+	rotate: 90
+04/Icon_Open
+	bounds: 1679, 448, 222, 227
+	rotate: 90
+Inside_Glow
+	bounds: 440, 470, 424, 175
+	offsets: 0, 41, 424, 225
+	rotate: 90
+TEX_BaseLight2
+	bounds: 2, 458, 436, 436
+	offsets: 38, 38, 512, 512
+TEX_CircleParticle
+	bounds: 1384, 14, 111, 111
+	offsets: 9, 9, 128, 129

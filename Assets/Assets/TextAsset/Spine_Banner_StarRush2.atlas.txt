@@ -1,0 +1,131 @@
+Spine_Banner_StarRush2.png
+	size: 2632, 432
+Body
+	bounds: 1224, 103, 327, 273
+	rotate: 90
+Body_BG
+	bounds: 2210, 288, 122, 142
+	offsets: 0, 8, 122, 150
+Cart
+	bounds: 552, 10, 461, 420
+Cart_Bear
+	bounds: 1932, 241, 166, 189
+	offsets: 1, 0, 167, 194
+Cart_Bottle
+	bounds: 2495, 309, 133, 121
+Cart_Gift
+	bounds: 2041, 58, 181, 108
+	rotate: 90
+Cart_Gift_Ribbon
+	bounds: 2334, 293, 137, 86
+	rotate: 90
+Cart_Gift_RibbonTop
+	bounds: 197, 2, 33, 19
+	rotate: 90
+Cart_Handle
+	bounds: 2, 37, 267, 132
+	offsets: 0, 1, 267, 133
+Char_Body_Back
+	bounds: 1015, 3, 196, 71
+Char_Hat
+	bounds: 2392, 32, 114, 104
+	rotate: 90
+Char_HatBack
+	bounds: 2272, 9, 118, 105
+Char_Head
+	bounds: 1499, 16, 165, 212
+	offsets: 0, 0, 166, 212
+	rotate: 90
+Char_L_Arm
+	bounds: 1731, 29, 199, 143
+	rotate: 90
+Char_L_Eye
+	bounds: 2429, 154, 39, 41
+	offsets: 1, 0, 40, 41
+Char_L_EyeBrown
+	bounds: 2289, 117, 29, 13
+	rotate: 90
+Char_L_EyeLash
+	bounds: 1482, 66, 35, 14
+	offsets: 0, 0, 36, 14
+	rotate: 90
+Char_L_EyeLid_Down
+	bounds: 155, 3, 40, 32
+	offsets: 0, 0, 40, 36
+Char_L_EyeLid_Up
+	bounds: 1713, 2, 38, 25
+Char_L_Hand
+	bounds: 2041, 7, 79, 49
+Char_L_Leg
+	bounds: 271, 5, 215, 164
+Char_L_Pupil
+	bounds: 1713, 162, 15, 19
+	offsets: 0, 0, 16, 20
+Char_L_UpperArm
+	bounds: 2151, 116, 136, 147
+Char_Mouth
+	bounds: 2429, 197, 95, 63
+	rotate: 90
+Char_R_Arm
+	bounds: 2422, 294, 71, 136
+	offsets: 0, 1, 72, 138
+Char_R_Eye
+	bounds: 2, 4, 31, 51
+	rotate: 90
+Char_R_EyeBrown
+	bounds: 1482, 39, 25, 15
+	offsets: 1, 0, 26, 15
+	rotate: 90
+Char_R_EyeLid
+	bounds: 55, 4, 31, 51
+	rotate: 90
+Char_R_Finger
+	bounds: 1876, 2, 34, 46
+	rotate: 90
+Char_R_Hand
+	bounds: 2498, 21, 67, 74
+	offsets: 0, 1, 68, 76
+Char_R_Leg
+	bounds: 1876, 38, 190, 163
+	rotate: 90
+Char_R_MidFinger
+	bounds: 108, 3, 32, 45
+	rotate: 90
+Char_R_Pupil
+	bounds: 1482, 17, 15, 20
+	offsets: 0, 1, 15, 21
+Char_R_Thigh
+	bounds: 2100, 265, 165, 108
+	offsets: 1, 0, 166, 108
+	rotate: 90
+Char_R_UpperArm
+	bounds: 2151, 22, 92, 119
+	offsets: 0, 0, 92, 120
+	rotate: 90
+Star
+	bounds: 488, 116, 53, 53
+	offsets: 1, 0, 55, 54
+Star2
+	bounds: 2498, 97, 82, 79
+Star2_Trail
+	bounds: 1499, 183, 230, 247
+Star3
+	bounds: 1384, 3, 98, 96
+	rotate: 90
+Star3_Glow
+	bounds: 2289, 148, 138, 138
+	offsets: 3, 3, 144, 143
+Star3_Trail
+	bounds: 1015, 76, 354, 207
+	offsets: 124, 54, 492, 266
+	rotate: 90
+Star4
+	bounds: 2495, 178, 130, 129
+Star4_Glow
+	bounds: 1731, 230, 200, 199
+	offsets: 5, 5, 210, 209
+	rotate: 90
+Star4_Trail
+	bounds: 2, 171, 548, 259
+Star_Trail
+	bounds: 1224, 7, 158, 94

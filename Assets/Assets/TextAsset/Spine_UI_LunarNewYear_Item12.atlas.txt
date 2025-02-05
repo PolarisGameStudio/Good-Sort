@@ -1,0 +1,41 @@
+Spine_UI_LunarNewYear_Item12.png
+	size: 1200, 576
+Fx_Blink
+	bounds: 294, 157, 111, 112
+	offsets: 8, 8, 128, 128
+OP1/12
+	bounds: 2, 271, 576, 301
+	offsets: 0, 0, 596, 301
+OP1/12_DecorL
+	bounds: 2, 56, 147, 213
+	offsets: 1, 1, 154, 215
+OP1/12_DecorR
+	bounds: 151, 56, 141, 213
+	offsets: 6, 1, 148, 215
+OP2/12
+	bounds: 580, 2, 570, 306
+	offsets: 1, 2, 572, 309
+	rotate: 90
+OP2/12_DecorL
+	bounds: 472, 197, 72, 98
+	offsets: 0, 1, 75, 99
+	rotate: 90
+OP2/12_DecorR
+	bounds: 294, 45, 62, 110
+	offsets: 0, 0, 65, 112
+OP3/12
+	bounds: 888, 2, 570, 309
+	offsets: 1, 7, 572, 317
+	rotate: 90
+OP3/12_DecorL
+	bounds: 2, 8, 46, 83
+	offsets: 0, 5, 46, 88
+	rotate: 90
+OP3/12_DecorR
+	bounds: 358, 4, 46, 84
+	offsets: 0, 4, 46, 88
+	rotate: 90
+OP3/[skin_OP3]12_DecorL_SD
+	bounds: 358, 52, 64, 103
+OP3/[skin_OP3]12_DecorR_SD
+	bounds: 407, 169, 63, 100

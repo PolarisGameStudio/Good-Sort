@@ -1,0 +1,15 @@
+Spine_UI_StarRush.png
+	size: 240, 500
+Flag
+	bounds: 120, 88, 105, 85
+Medal
+	bounds: 2, 337, 235, 161
+Medal_Back
+	bounds: 2, 175, 235, 160
+Star
+	bounds: 120, 2, 84, 91
+	rotate: 90
+Star_Glow
+	bounds: 2, 64, 109, 116
+	offsets: 3, 2, 115, 121
+	rotate: 90

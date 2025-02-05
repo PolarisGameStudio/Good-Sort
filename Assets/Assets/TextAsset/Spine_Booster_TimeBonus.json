@@ -1,0 +1,1175 @@
+{
+"skeleton": { "hash": "Tv5FNb5ruP4", "spine": "4.1.24", "x": -176.5, "y": -158.5, "width": 352.5, "height": 344.5 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "All", "parent": "bone" },
+	{ "name": "Body", "parent": "All", "x": -0.47, "y": -149.81 },
+	{ "name": "ClockHands", "parent": "Body", "x": 0.76, "y": 127.27 },
+	{ "name": "ClockHands_SD", "parent": "Body", "x": 0.76, "y": 127.27 },
+	{ "name": "Bell_Left", "parent": "Body", "length": 80, "rotation": 135.32, "x": -99.59, "y": 260.82 },
+	{ "name": "Bell_Right", "parent": "Body", "length": 80.92, "rotation": 45.96, "x": 102.4, "y": 258.9 },
+	{ "name": "FX", "parent": "Bell_Left", "rotation": -136.91, "x": 114.14, "y": -3.15 },
+	{ "name": "FX2", "parent": "Bell_Right", "rotation": -133.74, "x": 114.25, "y": 3.27 },
+	{ "name": "FX3", "parent": "Bell_Left", "rotation": -136.91, "x": 114.14, "y": -3.15 },
+	{ "name": "FX4", "parent": "Bell_Right", "rotation": -133.74, "x": 114.25, "y": 3.27 },
+	{ "name": "FX5", "parent": "Bell_Left", "rotation": -136.91, "x": 114.14, "y": -3.15 },
+	{ "name": "FX6", "parent": "Bell_Right", "rotation": -133.74, "x": 114.25, "y": 3.27 },
+	{ "name": "Spin", "parent": "bone", "x": -0.25, "y": 18.25, "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "Body", "bone": "Body", "attachment": "Body" },
+	{ "name": "ClockHands_SD", "bone": "ClockHands_SD", "attachment": "ClockHands_SD" },
+	{ "name": "ClockHands", "bone": "ClockHands", "attachment": "ClockHands" },
+	{ "name": "Center", "bone": "Body", "attachment": "Center" },
+	{ "name": "Bell_Right", "bone": "Bell_Right", "attachment": "Bell_Right" },
+	{ "name": "Bell_Left", "bone": "Bell_Left", "attachment": "Bell_Left" },
+	{ "name": "FX_Ring0", "bone": "FX", "color": "ffffff79", "blend": "additive" },
+	{ "name": "FX_Ring2", "bone": "FX3", "color": "ffffff79", "blend": "additive" },
+	{ "name": "FX_Ring4", "bone": "FX5", "color": "ffffff79", "blend": "additive" },
+	{ "name": "FX_Ring1", "bone": "FX2", "color": "ffffff79", "blend": "additive" },
+	{ "name": "FX_Ring3", "bone": "FX4", "color": "ffffff79", "blend": "additive" },
+	{ "name": "FX_Ring5", "bone": "FX6", "color": "ffffff79", "blend": "additive" },
+	{ "name": "FX_0", "bone": "Spin" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Bell_Left": {
+				"Bell_Left": { "x": 19.41, "y": 0.92, "rotation": -135.32, "width": 124, "height": 124 }
+			},
+			"Bell_Right": {
+				"Bell_Right": { "x": 19.46, "y": 1.33, "rotation": -45.96, "width": 123, "height": 122 }
+			},
+			"Body": {
+				"Body": { "x": 0.47, "y": 148.81, "width": 315, "height": 315 }
+			},
+			"Center": {
+				"Center": { "x": 2.97, "y": 122.81, "width": 51, "height": 54 }
+			},
+			"ClockHands": {
+				"ClockHands": { "x": -0.29, "y": 24.04, "width": 87, "height": 141 }
+			},
+			"ClockHands_SD": {
+				"ClockHands_SD": { "x": 9.21, "y": -19.46, "width": 103, "height": 116 }
+			},
+			"FX_0": {
+				"FX_0": { "width": 256, "height": 256 },
+				"FX_1": { "width": 256, "height": 256 },
+				"FX_2": { "width": 256, "height": 256 },
+				"FX_3": { "width": 256, "height": 256 },
+				"FX_4": { "width": 256, "height": 256 },
+				"FX_5": { "width": 256, "height": 256 },
+				"FX_6": { "width": 256, "height": 256 },
+				"FX_7": { "width": 256, "height": 256 },
+				"FX_8": { "width": 256, "height": 256 },
+				"FX_9": { "width": 256, "height": 256 },
+				"FX_10": { "width": 256, "height": 256 },
+				"FX_11": { "width": 256, "height": 256 },
+				"FX_12": { "width": 256, "height": 256 },
+				"FX_13": { "width": 256, "height": 256 }
+			},
+			"FX_Ring0": {
+				"FX_Ring0": { "x": 58.5, "y": -55, "width": 153, "height": 139 },
+				"FX_Ring1": { "x": 51, "y": -48, "width": 142, "height": 131 },
+				"FX_Ring3": { "x": 37.5, "y": -27.5, "width": 143, "height": 130 },
+				"FX_Ring4": { "x": 26, "y": -17.5, "width": 120, "height": 110 },
+				"FX_Ring5": { "x": 18, "y": -6.5, "width": 102, "height": 88 },
+				"FX_Ring6": { "x": 6.5, "y": -4.5, "width": 75, "height": 74 },
+				"FX_Ring7": { "x": 3, "y": -1, "width": 58, "height": 57 },
+				"FX_Ring8": { "x": 1.5, "y": -1, "width": 47, "height": 47 },
+				"FX_Ring9": { "x": 2, "y": -0.5, "width": 38, "height": 38 },
+				"FX_Ring10": { "x": 1, "y": -1.5, "width": 32, "height": 32 }
+			},
+			"FX_Ring1": {
+				"FX_Ring0": { "x": 58.5, "y": -55, "width": 153, "height": 139 },
+				"FX_Ring1": { "x": 51, "y": -48, "width": 142, "height": 131 },
+				"FX_Ring3": { "x": 37.5, "y": -27.5, "width": 143, "height": 130 },
+				"FX_Ring4": { "x": 26, "y": -17.5, "width": 120, "height": 110 },
+				"FX_Ring5": { "x": 18, "y": -6.5, "width": 102, "height": 88 },
+				"FX_Ring6": { "x": 6.5, "y": -4.5, "width": 75, "height": 74 },
+				"FX_Ring7": { "x": 3, "y": -1, "width": 58, "height": 57 },
+				"FX_Ring8": { "x": 1.5, "y": -1, "width": 47, "height": 47 },
+				"FX_Ring9": { "x": 2, "y": -0.5, "width": 38, "height": 38 },
+				"FX_Ring10": { "x": 1, "y": -1.5, "width": 32, "height": 32 }
+			},
+			"FX_Ring2": {
+				"FX_Ring0": { "x": 58.5, "y": -55, "width": 153, "height": 139 },
+				"FX_Ring1": { "x": 51, "y": -48, "width": 142, "height": 131 },
+				"FX_Ring3": { "x": 37.5, "y": -27.5, "width": 143, "height": 130 },
+				"FX_Ring4": { "x": 26, "y": -17.5, "width": 120, "height": 110 },
+				"FX_Ring5": { "x": 18, "y": -6.5, "width": 102, "height": 88 },
+				"FX_Ring6": { "x": 6.5, "y": -4.5, "width": 75, "height": 74 },
+				"FX_Ring7": { "x": 3, "y": -1, "width": 58, "height": 57 },
+				"FX_Ring8": { "x": 1.5, "y": -1, "width": 47, "height": 47 },
+				"FX_Ring9": { "x": 2, "y": -0.5, "width": 38, "height": 38 },
+				"FX_Ring10": { "x": 1, "y": -1.5, "width": 32, "height": 32 }
+			},
+			"FX_Ring3": {
+				"FX_Ring0": { "x": 58.5, "y": -55, "width": 153, "height": 139 },
+				"FX_Ring1": { "x": 51, "y": -48, "width": 142, "height": 131 },
+				"FX_Ring3": { "x": 37.5, "y": -27.5, "width": 143, "height": 130 },
+				"FX_Ring4": { "x": 26, "y": -17.5, "width": 120, "height": 110 },
+				"FX_Ring5": { "x": 18, "y": -6.5, "width": 102, "height": 88 },
+				"FX_Ring6": { "x": 6.5, "y": -4.5, "width": 75, "height": 74 },
+				"FX_Ring7": { "x": 3, "y": -1, "width": 58, "height": 57 },
+				"FX_Ring8": { "x": 1.5, "y": -1, "width": 47, "height": 47 },
+				"FX_Ring9": { "x": 2, "y": -0.5, "width": 38, "height": 38 },
+				"FX_Ring10": { "x": 1, "y": -1.5, "width": 32, "height": 32 }
+			},
+			"FX_Ring4": {
+				"FX_Ring0": { "x": 58.5, "y": -55, "width": 153, "height": 139 },
+				"FX_Ring1": { "x": 51, "y": -48, "width": 142, "height": 131 },
+				"FX_Ring3": { "x": 37.5, "y": -27.5, "width": 143, "height": 130 },
+				"FX_Ring4": { "x": 26, "y": -17.5, "width": 120, "height": 110 },
+				"FX_Ring5": { "x": 18, "y": -6.5, "width": 102, "height": 88 },
+				"FX_Ring6": { "x": 6.5, "y": -4.5, "width": 75, "height": 74 },
+				"FX_Ring7": { "x": 3, "y": -1, "width": 58, "height": 57 },
+				"FX_Ring8": { "x": 1.5, "y": -1, "width": 47, "height": 47 },
+				"FX_Ring9": { "x": 2, "y": -0.5, "width": 38, "height": 38 },
+				"FX_Ring10": { "x": 1, "y": -1.5, "width": 32, "height": 32 }
+			},
+			"FX_Ring5": {
+				"FX_Ring0": { "x": 58.5, "y": -55, "width": 153, "height": 139 },
+				"FX_Ring1": { "x": 51, "y": -48, "width": 142, "height": 131 },
+				"FX_Ring3": { "x": 37.5, "y": -27.5, "width": 143, "height": 130 },
+				"FX_Ring4": { "x": 26, "y": -17.5, "width": 120, "height": 110 },
+				"FX_Ring5": { "x": 18, "y": -6.5, "width": 102, "height": 88 },
+				"FX_Ring6": { "x": 6.5, "y": -4.5, "width": 75, "height": 74 },
+				"FX_Ring7": { "x": 3, "y": -1, "width": 58, "height": 57 },
+				"FX_Ring8": { "x": 1.5, "y": -1, "width": 47, "height": 47 },
+				"FX_Ring9": { "x": 2, "y": -0.5, "width": 38, "height": 38 },
+				"FX_Ring10": { "x": 1, "y": -1.5, "width": 32, "height": 32 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"Bell_Left": {
+				"rgba": [
+					{
+						"color": "ffffff00",
+						"curve": [ 0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1, 0.089, 0, 0.178, 1 ]
+					},
+					{ "time": 0.2667, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 1.1333,
+						"color": "ffffffff",
+						"curve": [ 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 0 ]
+					},
+					{
+						"time": 1.4667,
+						"color": "ffffff00",
+						"curve": [ 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 0, 1.6, 1 ]
+					},
+					{ "time": 1.6667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 1.1333 },
+					{ "time": 1.2, "name": "Bell_Left" }
+				]
+			},
+			"Bell_Right": {
+				"rgba": [
+					{
+						"color": "ffffff00",
+						"curve": [ 0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1, 0.089, 0, 0.178, 1 ]
+					},
+					{ "time": 0.2667, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 1.1333,
+						"color": "ffffffff",
+						"curve": [ 1.244, 1, 1.356, 1, 1.244, 1, 1.356, 1, 1.244, 1, 1.356, 1, 1.244, 1, 1.356, 0 ]
+					},
+					{
+						"time": 1.4667,
+						"color": "ffffff00",
+						"curve": [ 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 0, 1.6, 1 ]
+					},
+					{ "time": 1.6667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 1.1333 },
+					{ "time": 1.2, "name": "Bell_Right" }
+				]
+			},
+			"Body": {
+				"rgba": [
+					{
+						"color": "ffffff00",
+						"curve": [ 0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1, 0.089, 0, 0.178, 1 ]
+					},
+					{ "time": 0.2667, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 1.1333,
+						"color": "ffffffff",
+						"curve": [ 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 0 ]
+					},
+					{
+						"time": 1.4667,
+						"color": "ffffff00",
+						"curve": [ 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 0, 1.6, 1 ]
+					},
+					{ "time": 1.6667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 1.1333 },
+					{ "time": 1.2, "name": "Body" }
+				]
+			},
+			"Center": {
+				"rgba": [
+					{
+						"color": "ffffff00",
+						"curve": [ 0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1, 0.089, 0, 0.178, 1 ]
+					},
+					{ "time": 0.2667, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 1.1333,
+						"color": "ffffffff",
+						"curve": [ 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 0 ]
+					},
+					{
+						"time": 1.4667,
+						"color": "ffffff00",
+						"curve": [ 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 0, 1.6, 1 ]
+					},
+					{ "time": 1.6667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 1.1333 },
+					{ "time": 1.2, "name": "Center" }
+				]
+			},
+			"ClockHands": {
+				"rgba": [
+					{
+						"color": "ffffff00",
+						"curve": [ 0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1, 0.089, 0, 0.178, 1 ]
+					},
+					{ "time": 0.2667, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 1.1333,
+						"color": "ffffffff",
+						"curve": [ 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 0 ]
+					},
+					{
+						"time": 1.4667,
+						"color": "ffffff00",
+						"curve": [ 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 0, 1.6, 1 ]
+					},
+					{ "time": 1.6667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 1.1333 },
+					{ "time": 1.2, "name": "ClockHands" }
+				]
+			},
+			"ClockHands_SD": {
+				"rgba": [
+					{
+						"color": "ffffff00",
+						"curve": [ 0.089, 1, 0.215, 1, 0.089, 1, 0.215, 1, 0.089, 1, 0.215, 1, 0.089, 0, 0.215, 1 ]
+					},
+					{
+						"time": 0.2667,
+						"color": "ffffffff",
+						"curve": [ 0.356, 1, 0.444, 1, 0.356, 1, 0.444, 1, 0.356, 1, 0.444, 1, 0.356, 1, 0.444, 0 ]
+					},
+					{ "time": 0.5333, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.6,
+						"color": "ffffff00",
+						"curve": [ 0.689, 1, 0.778, 1, 0.689, 1, 0.778, 1, 0.689, 1, 0.778, 1, 0.689, 0, 0.778, 1 ]
+					},
+					{ "time": 0.8667, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 1.1333,
+						"color": "ffffffff",
+						"curve": [ 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 1, 1.289, 1, 1.311, 0 ]
+					},
+					{
+						"time": 1.4667,
+						"color": "ffffff00",
+						"curve": [ 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 1, 1.6, 1, 1.533, 0, 1.6, 1 ]
+					},
+					{ "time": 1.6667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 1.1333 },
+					{ "time": 1.2, "name": "ClockHands_SD" }
+				]
+			},
+			"FX_0": {
+				"attachment": [
+					{ "time": 1.1333, "name": "FX_0" },
+					{ "time": 1.2, "name": "FX_1" },
+					{ "time": 1.2667, "name": "FX_2" },
+					{ "time": 1.3333, "name": "FX_3" },
+					{ "time": 1.4, "name": "FX_4" },
+					{ "time": 1.4667, "name": "FX_5" },
+					{ "time": 1.5333, "name": "FX_6" },
+					{ "time": 1.6, "name": "FX_7" },
+					{ "time": 1.6667, "name": "FX_8" },
+					{ "time": 1.7, "name": "FX_9" },
+					{ "time": 1.7333, "name": "FX_10" },
+					{ "time": 1.7667, "name": "FX_11" },
+					{ "time": 1.8, "name": "FX_12" },
+					{ "time": 1.8333, "name": "FX_13" },
+					{ "time": 1.8667 }
+				]
+			},
+			"FX_Ring0": {
+				"attachment": [
+					{ "time": 0.3, "name": "FX_Ring0" },
+					{ "time": 0.3667, "name": "FX_Ring1" },
+					{ "time": 0.4333, "name": "FX_Ring3" },
+					{ "time": 0.5, "name": "FX_Ring4" },
+					{ "time": 0.5667, "name": "FX_Ring5" },
+					{ "time": 0.6, "name": "FX_Ring6" },
+					{ "time": 0.6333, "name": "FX_Ring7" },
+					{ "time": 0.6667, "name": "FX_Ring8" },
+					{ "time": 0.7, "name": "FX_Ring9" },
+					{ "time": 0.7333, "name": "FX_Ring10" },
+					{ "time": 0.7667 }
+				]
+			},
+			"FX_Ring1": {
+				"attachment": [
+					{ "time": 0.3, "name": "FX_Ring0" },
+					{ "time": 0.3667, "name": "FX_Ring1" },
+					{ "time": 0.4333, "name": "FX_Ring3" },
+					{ "time": 0.5, "name": "FX_Ring4" },
+					{ "time": 0.5667, "name": "FX_Ring5" },
+					{ "time": 0.6, "name": "FX_Ring6" },
+					{ "time": 0.6333, "name": "FX_Ring7" },
+					{ "time": 0.6667, "name": "FX_Ring8" },
+					{ "time": 0.7, "name": "FX_Ring9" },
+					{ "time": 0.7333, "name": "FX_Ring10" },
+					{ "time": 0.7667 }
+				]
+			},
+			"FX_Ring2": {
+				"attachment": [
+					{ "time": 0.4333, "name": "FX_Ring0" },
+					{ "time": 0.5, "name": "FX_Ring1" },
+					{ "time": 0.5667, "name": "FX_Ring3" },
+					{ "time": 0.6333, "name": "FX_Ring4" },
+					{ "time": 0.7, "name": "FX_Ring5" },
+					{ "time": 0.7333, "name": "FX_Ring6" },
+					{ "time": 0.7667, "name": "FX_Ring7" },
+					{ "time": 0.8, "name": "FX_Ring8" },
+					{ "time": 0.8333, "name": "FX_Ring9" },
+					{ "time": 0.8667, "name": "FX_Ring10" },
+					{ "time": 0.9 }
+				]
+			},
+			"FX_Ring3": {
+				"attachment": [
+					{ "time": 0.4333, "name": "FX_Ring0" },
+					{ "time": 0.5, "name": "FX_Ring1" },
+					{ "time": 0.5667, "name": "FX_Ring3" },
+					{ "time": 0.6333, "name": "FX_Ring4" },
+					{ "time": 0.7, "name": "FX_Ring5" },
+					{ "time": 0.7333, "name": "FX_Ring6" },
+					{ "time": 0.7667, "name": "FX_Ring7" },
+					{ "time": 0.8, "name": "FX_Ring8" },
+					{ "time": 0.8333, "name": "FX_Ring9" },
+					{ "time": 0.8667, "name": "FX_Ring10" },
+					{ "time": 0.9 }
+				]
+			},
+			"FX_Ring4": {
+				"attachment": [
+					{ "time": 0.5667, "name": "FX_Ring0" },
+					{ "time": 0.6333, "name": "FX_Ring1" },
+					{ "time": 0.7, "name": "FX_Ring3" },
+					{ "time": 0.7667, "name": "FX_Ring4" },
+					{ "time": 0.8333, "name": "FX_Ring5" },
+					{ "time": 0.8667, "name": "FX_Ring6" },
+					{ "time": 0.9, "name": "FX_Ring7" },
+					{ "time": 0.9333, "name": "FX_Ring8" },
+					{ "time": 0.9667, "name": "FX_Ring9" },
+					{ "time": 1, "name": "FX_Ring10" },
+					{ "time": 1.0333 }
+				]
+			},
+			"FX_Ring5": {
+				"attachment": [
+					{ "time": 0.5667, "name": "FX_Ring0" },
+					{ "time": 0.6333, "name": "FX_Ring1" },
+					{ "time": 0.7, "name": "FX_Ring3" },
+					{ "time": 0.7667, "name": "FX_Ring4" },
+					{ "time": 0.8333, "name": "FX_Ring5" },
+					{ "time": 0.8667, "name": "FX_Ring6" },
+					{ "time": 0.9, "name": "FX_Ring7" },
+					{ "time": 0.9333, "name": "FX_Ring8" },
+					{ "time": 0.9667, "name": "FX_Ring9" },
+					{ "time": 1, "name": "FX_Ring10" },
+					{ "time": 1.0333 }
+				]
+			}
+		},
+		"bones": {
+			"All": {
+				"rotate": [
+					{
+						"time": 1.4667,
+						"value": 111.49,
+						"curve": [ 1.6, 111.49, 1.733, -15.69 ]
+					},
+					{
+						"time": 1.8667,
+						"value": -15.69,
+						"curve": [ 1.956, -15.69, 2.044, 0 ]
+					},
+					{ "time": 2.1333 }
+				],
+				"scale": [
+					{
+						"time": 1.1333,
+						"curve": [ 1.438, 1, 1.444, 0.236, 1.438, 1, 1.444, 0.236 ]
+					},
+					{
+						"time": 1.6,
+						"x": 0.236,
+						"y": 0.236,
+						"curve": [ 1.689, 0.236, 1.778, 0.5, 1.689, 0.236, 1.778, 0.5 ]
+					},
+					{ "time": 1.8667, "x": 0.5, "y": 0.5 }
+				]
+			},
+			"Body": {
+				"rotate": [
+					{
+						"time": 0.2,
+						"curve": [ 0.256, 0, 0.311, 4.77 ]
+					},
+					{
+						"time": 0.3667,
+						"value": 4.77,
+						"curve": [ 0.4, 4.77, 0.433, -6.39 ]
+					},
+					{
+						"time": 0.4667,
+						"value": -6.39,
+						"curve": [ 0.5, -6.39, 0.533, 4.77 ]
+					},
+					{
+						"time": 0.5667,
+						"value": 4.77,
+						"curve": [ 0.589, 4.77, 0.611, -6.39 ]
+					},
+					{
+						"time": 0.6333,
+						"value": -6.39,
+						"curve": [ 0.656, -6.39, 0.678, 4.77 ]
+					},
+					{
+						"time": 0.7,
+						"value": 4.77,
+						"curve": [ 0.722, 4.77, 0.744, -6.39 ]
+					},
+					{
+						"time": 0.7667,
+						"value": -6.39,
+						"curve": [ 0.789, -6.39, 0.811, 4.77 ]
+					},
+					{
+						"time": 0.8333,
+						"value": 4.77,
+						"curve": [ 0.856, 4.77, 0.878, -6.39 ]
+					},
+					{
+						"time": 0.9,
+						"value": -6.39,
+						"curve": [ 0.922, -6.39, 0.944, 4.77 ]
+					},
+					{
+						"time": 0.9667,
+						"value": 4.77,
+						"curve": [ 0.989, 4.77, 1.011, -6.39 ]
+					},
+					{
+						"time": 1.0333,
+						"value": -6.39,
+						"curve": [ 1.111, -6.39, 1.189, 0 ]
+					},
+					{ "time": 1.2667 }
+				],
+				"scale": [
+					{
+						"time": 0.2,
+						"curve": [ 0.222, 1, 0.215, 1.056, 0.222, 1, 0.215, 0.91 ]
+					},
+					{
+						"time": 0.2667,
+						"x": 1.056,
+						"y": 0.91,
+						"curve": [ 0.388, 1.056, 0.4, 0.942, 0.388, 0.91, 0.4, 1.044 ]
+					},
+					{
+						"time": 0.4667,
+						"x": 0.942,
+						"y": 1.044,
+						"curve": [ 0.522, 0.942, 0.578, 1, 0.522, 1.044, 0.578, 1 ]
+					},
+					{ "time": 0.6333 }
+				]
+			},
+			"ClockHands": {
+				"rotate": [
+					{
+						"time": 0.0667,
+						"curve": [ 0.613, 0, 0.368, 402 ]
+					},
+					{
+						"time": 0.8667,
+						"value": 402,
+						"curve": [ 1.045, 402, 1.089, 360 ]
+					},
+					{ "time": 1.2, "value": 360 }
+				]
+			},
+			"ClockHands_SD": {
+				"rotate": [
+					{
+						"time": 0.0667,
+						"curve": [ 0.726, 0, 0.431, 359.37 ]
+					},
+					{ "time": 1.0333, "value": 360 }
+				]
+			},
+			"Bell_Left": {
+				"rotate": [
+					{
+						"time": 0.2667,
+						"curve": [ 0.311, 0, 0.356, 7.28 ]
+					},
+					{
+						"time": 0.4,
+						"value": 7.28,
+						"curve": [ 0.433, 7.28, 0.467, -11.23 ]
+					},
+					{
+						"time": 0.5,
+						"value": -11.23,
+						"curve": [ 0.533, -11.23, 0.567, 7.28 ]
+					},
+					{
+						"time": 0.6,
+						"value": 7.28,
+						"curve": [ 0.622, 7.28, 0.644, -11.23 ]
+					},
+					{
+						"time": 0.6667,
+						"value": -11.23,
+						"curve": [ 0.689, -11.23, 0.711, 7.28 ]
+					},
+					{
+						"time": 0.7333,
+						"value": 7.28,
+						"curve": [ 0.756, 7.28, 0.778, -11.23 ]
+					},
+					{
+						"time": 0.8,
+						"value": -11.23,
+						"curve": [ 0.822, -11.23, 0.844, 7.28 ]
+					},
+					{
+						"time": 0.8667,
+						"value": 7.28,
+						"curve": [ 0.889, 7.28, 0.911, -11.23 ]
+					},
+					{
+						"time": 0.9333,
+						"value": -11.23,
+						"curve": [ 0.956, -11.23, 0.978, 7.28 ]
+					},
+					{
+						"time": 1,
+						"value": 7.28,
+						"curve": [ 1.022, 7.28, 1.044, -11.23 ]
+					},
+					{
+						"time": 1.0667,
+						"value": -11.23,
+						"curve": [ 1.133, -11.23, 1.2, 0 ]
+					},
+					{ "time": 1.2667 }
+				]
+			},
+			"Bell_Right": {
+				"rotate": [
+					{
+						"time": 0.2667,
+						"curve": [ 0.311, 0, 0.356, 9.1 ]
+					},
+					{
+						"time": 0.4,
+						"value": 9.1,
+						"curve": [ 0.433, 9.1, 0.467, -10.52 ]
+					},
+					{
+						"time": 0.5,
+						"value": -10.52,
+						"curve": [ 0.533, -10.52, 0.567, 9.1 ]
+					},
+					{
+						"time": 0.6,
+						"value": 9.1,
+						"curve": [ 0.622, 9.1, 0.644, -10.52 ]
+					},
+					{
+						"time": 0.6667,
+						"value": -10.52,
+						"curve": [ 0.689, -10.52, 0.711, 9.1 ]
+					},
+					{
+						"time": 0.7333,
+						"value": 9.1,
+						"curve": [ 0.756, 9.1, 0.778, -10.52 ]
+					},
+					{
+						"time": 0.8,
+						"value": -10.52,
+						"curve": [ 0.822, -10.52, 0.844, 9.1 ]
+					},
+					{
+						"time": 0.8667,
+						"value": 9.1,
+						"curve": [ 0.889, 9.1, 0.911, -10.52 ]
+					},
+					{
+						"time": 0.9333,
+						"value": -10.52,
+						"curve": [ 0.956, -10.52, 0.978, 9.1 ]
+					},
+					{
+						"time": 1,
+						"value": 9.1,
+						"curve": [ 1.022, 9.1, 1.044, -10.52 ]
+					},
+					{
+						"time": 1.0667,
+						"value": -10.52,
+						"curve": [ 1.133, -10.52, 1.2, 0 ]
+					},
+					{ "time": 1.2667 }
+				]
+			},
+			"FX": {
+				"translate": [
+					{ "time": 0.3 },
+					{ "time": 0.7667, "x": 95.51, "y": 0.57 }
+				]
+			},
+			"FX2": {
+				"translate": [
+					{
+						"time": 0.3,
+						"curve": [ 0.456, 0, 0.611, 88.12, 0.456, 0, 0.611, -5.95 ]
+					},
+					{ "time": 0.7667, "x": 88.12, "y": -5.95 }
+				]
+			},
+			"FX3": {
+				"translate": [
+					{ "time": 0.4333 },
+					{ "time": 0.9, "x": 95.51, "y": 0.57 }
+				]
+			},
+			"FX4": {
+				"translate": [
+					{
+						"time": 0.4333,
+						"curve": [ 0.589, 0, 0.744, 88.12, 0.589, 0, 0.744, -5.95 ]
+					},
+					{ "time": 0.9, "x": 88.12, "y": -5.95 }
+				]
+			},
+			"FX5": {
+				"translate": [
+					{ "time": 0.5667 },
+					{ "time": 1.0333, "x": 95.51, "y": 0.57 }
+				]
+			},
+			"FX6": {
+				"translate": [
+					{
+						"time": 0.5667,
+						"curve": [ 0.722, 0, 0.878, 88.12, 0.722, 0, 0.878, -5.95 ]
+					},
+					{ "time": 1.0333, "x": 88.12, "y": -5.95 }
+				]
+			},
+			"Spin": {
+				"translate": [
+					{
+						"time": 1.1333,
+						"curve": [ 1.267, 0, 1.4, 0, 1.267, 0, 1.4, -5.95 ]
+					},
+					{ "time": 1.5333, "y": -5.95 }
+				],
+				"scale": [
+					{
+						"time": 1.1333,
+						"curve": [ 1.438, 1, 1.444, 0.5, 1.438, 1, 1.444, 0.5 ]
+					},
+					{ "time": 1.6, "x": 0.5, "y": 0.5 }
+				]
+			},
+			"bone": {
+				"translate": [
+					{
+						"time": 1,
+						"curve": [ 1.122, 0, 1.244, 0, 1.122, 0, 1.244, -108.58 ]
+					},
+					{
+						"time": 1.3667,
+						"y": -108.58,
+						"curve": [ 1.467, 0, 1.567, 0, 1.467, -108.58, 1.567, 40.19 ]
+					},
+					{
+						"time": 1.6667,
+						"y": 40.19,
+						"curve": [ 1.733, 0, 1.8, 0, 1.733, 40.19, 1.8, 0 ]
+					},
+					{ "time": 1.8667 }
+				]
+			}
+		}
+	},
+	"Idle": {
+		"slots": {
+			"ClockHands_SD": {
+				"rgba": [
+					{
+						"time": 1.5333,
+						"color": "ffffffff",
+						"curve": [ 1.622, 1, 1.711, 1, 1.622, 1, 1.711, 1, 1.622, 1, 1.711, 1, 1.622, 1, 1.711, 0 ]
+					},
+					{ "time": 1.8, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 1.8667,
+						"color": "ffffff00",
+						"curve": [ 1.956, 1, 2.044, 1, 1.956, 1, 2.044, 1, 1.956, 1, 2.044, 1, 1.956, 0, 2.044, 1 ]
+					},
+					{ "time": 2.1333, "color": "ffffffff" }
+				]
+			},
+			"FX_Ring0": {
+				"attachment": [
+					{ "time": 1.5667, "name": "FX_Ring0" },
+					{ "time": 1.6333, "name": "FX_Ring1" },
+					{ "time": 1.7, "name": "FX_Ring3" },
+					{ "time": 1.7667, "name": "FX_Ring4" },
+					{ "time": 1.8333, "name": "FX_Ring5" },
+					{ "time": 1.8667, "name": "FX_Ring6" },
+					{ "time": 1.9, "name": "FX_Ring7" },
+					{ "time": 1.9333, "name": "FX_Ring8" },
+					{ "time": 1.9667, "name": "FX_Ring9" },
+					{ "time": 2, "name": "FX_Ring10" },
+					{ "time": 2.0333 }
+				]
+			},
+			"FX_Ring1": {
+				"attachment": [
+					{ "time": 1.5667, "name": "FX_Ring0" },
+					{ "time": 1.6333, "name": "FX_Ring1" },
+					{ "time": 1.7, "name": "FX_Ring3" },
+					{ "time": 1.7667, "name": "FX_Ring4" },
+					{ "time": 1.8333, "name": "FX_Ring5" },
+					{ "time": 1.8667, "name": "FX_Ring6" },
+					{ "time": 1.9, "name": "FX_Ring7" },
+					{ "time": 1.9333, "name": "FX_Ring8" },
+					{ "time": 1.9667, "name": "FX_Ring9" },
+					{ "time": 2, "name": "FX_Ring10" },
+					{ "time": 2.0333 }
+				]
+			},
+			"FX_Ring2": {
+				"attachment": [
+					{ "time": 1.7, "name": "FX_Ring0" },
+					{ "time": 1.7667, "name": "FX_Ring1" },
+					{ "time": 1.8333, "name": "FX_Ring3" },
+					{ "time": 1.9, "name": "FX_Ring4" },
+					{ "time": 1.9667, "name": "FX_Ring5" },
+					{ "time": 2, "name": "FX_Ring6" },
+					{ "time": 2.0333, "name": "FX_Ring7" },
+					{ "time": 2.0667, "name": "FX_Ring8" },
+					{ "time": 2.1, "name": "FX_Ring9" },
+					{ "time": 2.1333, "name": "FX_Ring10" },
+					{ "time": 2.1667 }
+				]
+			},
+			"FX_Ring3": {
+				"attachment": [
+					{ "time": 1.7, "name": "FX_Ring0" },
+					{ "time": 1.7667, "name": "FX_Ring1" },
+					{ "time": 1.8333, "name": "FX_Ring3" },
+					{ "time": 1.9, "name": "FX_Ring4" },
+					{ "time": 1.9667, "name": "FX_Ring5" },
+					{ "time": 2, "name": "FX_Ring6" },
+					{ "time": 2.0333, "name": "FX_Ring7" },
+					{ "time": 2.0667, "name": "FX_Ring8" },
+					{ "time": 2.1, "name": "FX_Ring9" },
+					{ "time": 2.1333, "name": "FX_Ring10" },
+					{ "time": 2.1667 }
+				]
+			},
+			"FX_Ring4": {
+				"attachment": [
+					{ "time": 1.8333, "name": "FX_Ring0" },
+					{ "time": 1.9, "name": "FX_Ring1" },
+					{ "time": 1.9667, "name": "FX_Ring3" },
+					{ "time": 2.0333, "name": "FX_Ring4" },
+					{ "time": 2.1, "name": "FX_Ring5" },
+					{ "time": 2.1333, "name": "FX_Ring6" },
+					{ "time": 2.1667, "name": "FX_Ring7" },
+					{ "time": 2.2, "name": "FX_Ring8" },
+					{ "time": 2.2333, "name": "FX_Ring9" },
+					{ "time": 2.2667, "name": "FX_Ring10" },
+					{ "time": 2.3 }
+				]
+			},
+			"FX_Ring5": {
+				"attachment": [
+					{ "time": 1.8333, "name": "FX_Ring0" },
+					{ "time": 1.9, "name": "FX_Ring1" },
+					{ "time": 1.9667, "name": "FX_Ring3" },
+					{ "time": 2.0333, "name": "FX_Ring4" },
+					{ "time": 2.1, "name": "FX_Ring5" },
+					{ "time": 2.1333, "name": "FX_Ring6" },
+					{ "time": 2.1667, "name": "FX_Ring7" },
+					{ "time": 2.2, "name": "FX_Ring8" },
+					{ "time": 2.2333, "name": "FX_Ring9" },
+					{ "time": 2.2667, "name": "FX_Ring10" },
+					{ "time": 2.3 }
+				]
+			}
+		},
+		"bones": {
+			"Body": {
+				"rotate": [
+					{
+						"time": 1.4667,
+						"curve": [ 1.522, 0, 1.578, 4.77 ]
+					},
+					{
+						"time": 1.6333,
+						"value": 4.77,
+						"curve": [ 1.667, 4.77, 1.7, -6.39 ]
+					},
+					{
+						"time": 1.7333,
+						"value": -6.39,
+						"curve": [ 1.767, -6.39, 1.8, 4.77 ]
+					},
+					{
+						"time": 1.8333,
+						"value": 4.77,
+						"curve": [ 1.856, 4.77, 1.878, -6.39 ]
+					},
+					{
+						"time": 1.9,
+						"value": -6.39,
+						"curve": [ 1.922, -6.39, 1.944, 4.77 ]
+					},
+					{
+						"time": 1.9667,
+						"value": 4.77,
+						"curve": [ 1.989, 4.77, 2.011, -6.39 ]
+					},
+					{
+						"time": 2.0333,
+						"value": -6.39,
+						"curve": [ 2.056, -6.39, 2.078, 4.77 ]
+					},
+					{
+						"time": 2.1,
+						"value": 4.77,
+						"curve": [ 2.122, 4.77, 2.144, -6.39 ]
+					},
+					{
+						"time": 2.1667,
+						"value": -6.39,
+						"curve": [ 2.189, -6.39, 2.211, 4.77 ]
+					},
+					{
+						"time": 2.2333,
+						"value": 4.77,
+						"curve": [ 2.256, 4.77, 2.278, -6.39 ]
+					},
+					{
+						"time": 2.3,
+						"value": -6.39,
+						"curve": [ 2.378, -6.39, 2.456, 0 ]
+					},
+					{ "time": 2.5333 }
+				],
+				"scale": [
+					{
+						"x": 1.004,
+						"y": 0.996,
+						"curve": [ 0.033, 1.002, 0.067, 1, 0.033, 0.998, 0.067, 1 ]
+					},
+					{
+						"time": 0.1,
+						"curve": [ 0.301, 1, 0.503, 1.06, 0.301, 1, 0.503, 0.94 ]
+					},
+					{
+						"time": 0.7,
+						"x": 1.06,
+						"y": 0.94,
+						"curve": [ 0.911, 1.06, 1.122, 1, 0.911, 0.94, 1.122, 1 ]
+					},
+					{
+						"time": 1.3333,
+						"curve": [ 1.4, 1, 1.378, 1.056, 1.4, 1, 1.378, 0.91 ]
+					},
+					{
+						"time": 1.5333,
+						"x": 1.056,
+						"y": 0.91,
+						"curve": [ 1.655, 1.056, 1.667, 0.942, 1.655, 0.91, 1.667, 1.044 ]
+					},
+					{
+						"time": 1.7333,
+						"x": 0.942,
+						"y": 1.044,
+						"curve": [ 1.789, 0.942, 1.844, 1, 1.789, 1.044, 1.844, 1 ]
+					},
+					{ "time": 1.9, "curve": "stepped" },
+					{
+						"time": 2.4,
+						"curve": [ 2.677, 1, 2.796, 1.06, 2.677, 1, 2.796, 0.94 ]
+					},
+					{
+						"time": 3.0667,
+						"x": 1.06,
+						"y": 0.94,
+						"curve": [ 3.247, 1.06, 3.424, 1.018, 3.247, 0.94, 3.424, 0.982 ]
+					},
+					{ "time": 3.6, "x": 1.004, "y": 0.996 }
+				]
+			},
+			"All": {
+				"translate": [
+					{
+						"curve": [ 0.2, 0, 0.4, 0, 0.2, 0, 0.4, -13.9 ]
+					},
+					{
+						"time": 0.6,
+						"y": -13.9,
+						"curve": [ 0.8, 0, 1, 0, 0.8, -13.9, 1, 0 ]
+					},
+					{
+						"time": 1.2,
+						"curve": [ 1.4, 0, 1.6, 0, 1.4, 0, 1.6, -13.9 ]
+					},
+					{
+						"time": 1.8,
+						"y": -13.9,
+						"curve": [ 2, 0, 2.2, 0, 2, -13.9, 2.2, 0 ]
+					},
+					{
+						"time": 2.4,
+						"curve": [ 2.6, 0, 2.8, 0, 2.6, 0, 2.8, -13.9 ]
+					},
+					{
+						"time": 3,
+						"y": -13.9,
+						"curve": [ 3.2, 0, 3.4, 0, 3.2, -13.9, 3.4, 0 ]
+					},
+					{ "time": 3.6 }
+				]
+			},
+			"ClockHands": {
+				"rotate": [
+					{
+						"time": 1.3333,
+						"curve": [ 1.993, 0, 1.698, 359.37 ]
+					},
+					{ "time": 2.3, "value": 360 }
+				]
+			},
+			"ClockHands_SD": {
+				"rotate": [
+					{
+						"time": 1.3333,
+						"curve": [ 1.993, 0, 1.698, 359.37 ]
+					},
+					{ "time": 2.3, "value": 360 }
+				]
+			},
+			"Bell_Left": {
+				"rotate": [
+					{
+						"time": 1.5333,
+						"curve": [ 1.578, 0, 1.622, 7.28 ]
+					},
+					{
+						"time": 1.6667,
+						"value": 7.28,
+						"curve": [ 1.7, 7.28, 1.733, -11.23 ]
+					},
+					{
+						"time": 1.7667,
+						"value": -11.23,
+						"curve": [ 1.8, -11.23, 1.833, 7.28 ]
+					},
+					{
+						"time": 1.8667,
+						"value": 7.28,
+						"curve": [ 1.889, 7.28, 1.911, -11.23 ]
+					},
+					{
+						"time": 1.9333,
+						"value": -11.23,
+						"curve": [ 1.956, -11.23, 1.978, 7.28 ]
+					},
+					{
+						"time": 2,
+						"value": 7.28,
+						"curve": [ 2.022, 7.28, 2.044, -11.23 ]
+					},
+					{
+						"time": 2.0667,
+						"value": -11.23,
+						"curve": [ 2.089, -11.23, 2.111, 7.28 ]
+					},
+					{
+						"time": 2.1333,
+						"value": 7.28,
+						"curve": [ 2.156, 7.28, 2.178, -11.23 ]
+					},
+					{
+						"time": 2.2,
+						"value": -11.23,
+						"curve": [ 2.222, -11.23, 2.244, 7.28 ]
+					},
+					{
+						"time": 2.2667,
+						"value": 7.28,
+						"curve": [ 2.289, 7.28, 2.311, -11.23 ]
+					},
+					{
+						"time": 2.3333,
+						"value": -11.23,
+						"curve": [ 2.4, -11.23, 2.467, 0 ]
+					},
+					{ "time": 2.5333 }
+				]
+			},
+			"Bell_Right": {
+				"rotate": [
+					{
+						"time": 1.5333,
+						"curve": [ 1.578, 0, 1.622, 9.1 ]
+					},
+					{
+						"time": 1.6667,
+						"value": 9.1,
+						"curve": [ 1.7, 9.1, 1.733, -10.52 ]
+					},
+					{
+						"time": 1.7667,
+						"value": -10.52,
+						"curve": [ 1.8, -10.52, 1.833, 9.1 ]
+					},
+					{
+						"time": 1.8667,
+						"value": 9.1,
+						"curve": [ 1.889, 9.1, 1.911, -10.52 ]
+					},
+					{
+						"time": 1.9333,
+						"value": -10.52,
+						"curve": [ 1.956, -10.52, 1.978, 9.1 ]
+					},
+					{
+						"time": 2,
+						"value": 9.1,
+						"curve": [ 2.022, 9.1, 2.044, -10.52 ]
+					},
+					{
+						"time": 2.0667,
+						"value": -10.52,
+						"curve": [ 2.089, -10.52, 2.111, 9.1 ]
+					},
+					{
+						"time": 2.1333,
+						"value": 9.1,
+						"curve": [ 2.156, 9.1, 2.178, -10.52 ]
+					},
+					{
+						"time": 2.2,
+						"value": -10.52,
+						"curve": [ 2.222, -10.52, 2.244, 9.1 ]
+					},
+					{
+						"time": 2.2667,
+						"value": 9.1,
+						"curve": [ 2.289, 9.1, 2.311, -10.52 ]
+					},
+					{
+						"time": 2.3333,
+						"value": -10.52,
+						"curve": [ 2.4, -10.52, 2.467, 0 ]
+					},
+					{ "time": 2.5333 }
+				]
+			},
+			"FX": {
+				"translate": [
+					{ "time": 1.5667 },
+					{ "time": 2.0333, "x": 95.51, "y": 0.57 }
+				]
+			},
+			"FX2": {
+				"translate": [
+					{
+						"time": 1.5667,
+						"curve": [ 1.722, 0, 1.878, 88.12, 1.722, 0, 1.878, -5.95 ]
+					},
+					{ "time": 2.0333, "x": 88.12, "y": -5.95 }
+				]
+			},
+			"FX3": {
+				"translate": [
+					{ "time": 1.7 },
+					{ "time": 2.1667, "x": 95.51, "y": 0.57 }
+				]
+			},
+			"FX4": {
+				"translate": [
+					{
+						"time": 1.7,
+						"curve": [ 1.856, 0, 2.011, 88.12, 1.856, 0, 2.011, -5.95 ]
+					},
+					{ "time": 2.1667, "x": 88.12, "y": -5.95 }
+				]
+			},
+			"FX5": {
+				"translate": [
+					{ "time": 1.8333 },
+					{ "time": 2.3, "x": 95.51, "y": 0.57 }
+				]
+			},
+			"FX6": {
+				"translate": [
+					{
+						"time": 1.8333,
+						"curve": [ 1.989, 0, 2.144, 88.12, 1.989, 0, 2.144, -5.95 ]
+					},
+					{ "time": 2.3, "x": 88.12, "y": -5.95 }
+				]
+			}
+		}
+	}
+}
+}

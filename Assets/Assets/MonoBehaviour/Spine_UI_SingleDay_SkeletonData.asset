@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 106799970, guid: ebe353a9e51fc6708625f16edcb81e06, type: 3}
+  m_Name: Spine_UI_SingleDay_SkeletonData
+  m_EditorClassIdentifier:
+  atlasAssets:
+  - {fileID: 11400000, guid: e3f6698f7f3e01d4bb781d99c0de58d9, type: 2}
+  scale: 0.01
+  skeletonJSON: {fileID: 4900000, guid: 2861d280b32f8024e8ab3079809fb390, type: 3}
+  isUpgradingBlendModeMaterials: 0
+  blendModeMaterials:
+    requiresBlendModeMaterials: 1
+    applyAdditiveMaterial: 1
+    additiveMaterials:
+    - pageName: Spine_UI_SingleDay.png
+      material: {fileID: 2100000, guid: a4f2cbc956dcc6d4ba5553448dfd2e0d, type: 2}
+    multiplyMaterials:
+    - pageName: Spine_UI_SingleDay.png
+      material: {fileID: 2100000, guid: ea39d0c782066ac4fa5370f8012faf7c, type: 2}
+    screenMaterials: []
+  skeletonDataModifiers: []
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: 0.2
+  controller: {fileID: 0}

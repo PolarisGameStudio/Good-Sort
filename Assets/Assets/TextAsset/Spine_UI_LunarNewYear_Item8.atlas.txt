@@ -1,0 +1,608 @@
+Spine_UI_LunarNewYear_Item8.png
+	size: 1588, 1036
+08_Chair
+	bounds: 318, 507, 258, 253
+	offsets: 1, 1, 260, 259
+	rotate: 90
+08_Chair_SD
+	bounds: 95, 663, 371, 198
+	offsets: 26, 11, 415, 239
+	rotate: 90
+Fx_Blink
+	bounds: 1177, 523, 111, 112
+	offsets: 8, 8, 128, 128
+OP1/08_BigFlower_Center
+	bounds: 1296, 366, 66, 56
+	offsets: 1, 1, 68, 58
+	rotate: 90
+OP1/08_BigFlower_SD
+	bounds: 473, 798, 236, 198
+	offsets: 0, 0, 236, 199
+	rotate: 90
+OP1/08_BigFlower_Wing0
+	bounds: 1101, 396, 116, 77
+	rotate: 90
+OP1/08_BigFlower_Wing1
+	bounds: 1206, 349, 70, 88
+	rotate: 90
+OP1/08_BigFlower_Wing2
+	bounds: 1144, 236, 99, 62
+	rotate: 90
+OP1/08_BigFlower_Wing3
+	bounds: 1514, 369, 62, 61
+OP1/08_BigFlower_Wing4
+	bounds: 1180, 421, 74, 100
+	offsets: 0, 0, 74, 104
+OP1/08_BigFlower_Wing5
+	bounds: 1196, 693, 97, 88
+	rotate: 90
+OP1/08_BigLeaf0
+	bounds: 2, 638, 91, 396
+OP1/08_BigLeaf1
+	bounds: 2, 184, 75, 363
+	rotate: 90
+OP1/08_BigLeaf2
+	bounds: 207, 378, 109, 283
+OP1/08_Branche
+	bounds: 473, 769, 27, 233
+	offsets: 0, 0, 28, 233
+	rotate: 90
+OP1/08_Branche0_Base
+	bounds: 165, 306, 42, 301
+	offsets: 0, 0, 47, 301
+	rotate: 90
+OP1/08_Branche1
+	bounds: 490, 53, 56, 202
+	rotate: 90
+OP1/08_Branche2
+	bounds: 803, 820, 202, 214
+OP1/08_Branche2_SmallFlower0
+	bounds: 1368, 792, 72, 78
+	offsets: 1, 1, 74, 80
+	rotate: 90
+OP1/08_Branche2_SmallFlower0_Base
+	bounds: 1395, 5, 37, 37
+	offsets: 1, 1, 39, 39
+OP1/08_Branche2_SmallFlower0_SD
+	bounds: 1218, 206, 64, 67
+	offsets: 16, 3, 84, 80
+OP1/08_Branche2_SmallFlower1
+	bounds: 1256, 434, 87, 85
+	offsets: 1, 1, 89, 87
+	rotate: 90
+OP1/08_Branche2_SmallFlower2
+	bounds: 1448, 606, 72, 64
+	offsets: 2, 1, 75, 66
+OP1/08_Branche3
+	bounds: 1131, 3, 44, 128
+	rotate: 90
+OP1/08_Branche4
+	bounds: 672, 546, 179, 221
+OP1/08_Branche4_SmallFlower0
+	bounds: 1442, 874, 67, 78
+	offsets: 2, 1, 70, 80
+OP1/08_Branche4_SmallFlower0_Base
+	bounds: 1180, 396, 23, 22
+	offsets: 1, 1, 26, 25
+	rotate: 90
+OP1/08_Branche4_SmallFlower0_SD
+	bounds: 1411, 311, 60, 62
+	offsets: 3, 2, 65, 65
+	rotate: 90
+OP1/08_Branche4_SmallFlower1
+	bounds: 1196, 792, 90, 98
+	offsets: 2, 2, 93, 101
+OP1/08_Branche4_SmallFlower2
+	bounds: 1515, 475, 66, 69
+	offsets: 1, 2, 68, 72
+	rotate: 90
+OP1/08_Branche_SmallFlower0
+	bounds: 1368, 589, 68, 72
+	offsets: 2, 1, 71, 74
+	rotate: 90
+OP1/08_Branche_SmallFlower0_Base
+	bounds: 1353, 39, 33, 42
+	offsets: 2, 1, 36, 44
+OP1/08_Branche_SmallFlower1
+	bounds: 1511, 896, 56, 77
+	offsets: 3, 1, 60, 79
+OP1/08_Branche_SmallFlower2
+	bounds: 1144, 180, 54, 72
+	offsets: 1, 1, 56, 74
+	rotate: 90
+OP1/08_Envelope
+	bounds: 1060, 4, 69, 157
+	offsets: 9, 1, 81, 159
+OP1/08_Leaf0
+	bounds: 1250, 941, 93, 84
+	rotate: 90
+OP1/08_Leaf1
+	bounds: 1007, 856, 178, 102
+	rotate: 90
+OP1/08_Leaf1_SD
+	bounds: 1097, 514, 121, 78
+	offsets: 2, 5, 124, 93
+	rotate: 90
+OP1/08_Leaf2
+	bounds: 1371, 659, 75, 58
+OP1/08_Leaf3
+	bounds: 732, 5, 148, 180
+	rotate: 90
+OP1/08_Leaf4
+	bounds: 295, 767, 267, 176
+	rotate: 90
+OP1/08_Leaf5
+	bounds: 468, 321, 248, 184
+OP1/08_Leaf5_SD
+	bounds: 673, 810, 224, 128
+	offsets: 9, 13, 233, 141
+	rotate: 90
+OP1/08_Rope
+	bounds: 165, 264, 40, 157
+	rotate: 90
+OP1/08_Rope2
+	bounds: 1039, 637, 43, 157
+	rotate: 90
+OP1/08_Vase
+	bounds: 903, 278, 173, 125
+	offsets: 2, 1, 176, 127
+	rotate: 90
+OP1/08_Vase_SD
+	bounds: 1111, 865, 169, 66
+	offsets: 4, 6, 177, 78
+	rotate: 90
+OP2/08_Envelope0
+	bounds: 914, 3, 71, 158
+	offsets: 1, 2, 74, 161
+OP2/08_Envelope1
+	bounds: 987, 3, 71, 158
+	offsets: 1, 2, 74, 161
+OP2/08_Fan0
+	bounds: 853, 633, 184, 185
+	offsets: 1, 1, 186, 187
+OP2/08_Fan1
+	bounds: 772, 358, 106, 186
+	offsets: 2, 1, 109, 188
+OP2/08_Fan2
+	bounds: 981, 459, 172, 114
+	offsets: 1, 1, 174, 116
+	rotate: 90
+OP2/08_Fan3
+	bounds: 1030, 319, 138, 69
+	offsets: 1, 1, 141, 71
+	rotate: 90
+OP2/08_Fan4
+	bounds: 903, 163, 113, 168
+	offsets: 1, 1, 115, 170
+	rotate: 90
+OP2/08_Flower0_Core
+	bounds: 1529, 88, 28, 29
+	offsets: 1, 1, 31, 32
+OP2/08_Flower0_Leaf0
+	bounds: 1535, 132, 17, 27
+	offsets: 2, 1, 20, 30
+OP2/08_Flower0_Leaf1
+	bounds: 125, 639, 25, 22
+	offsets: 1, 1, 28, 24
+OP2/08_Flower0_Leaf10
+	bounds: 631, 507, 53, 36
+	offsets: 2, 1, 56, 38
+OP2/08_Flower0_Leaf11
+	bounds: 1449, 753, 56, 41
+	offsets: 2, 1, 59, 43
+OP2/08_Flower0_Leaf12
+	bounds: 1354, 3, 39, 34
+	offsets: 1, 1, 41, 36
+OP2/08_Flower0_Leaf13
+	bounds: 242, 350, 26, 30
+	offsets: 1, 1, 28, 32
+	rotate: 90
+OP2/08_Flower0_Leaf14
+	bounds: 1329, 186, 45, 54
+	offsets: 2, 1, 48, 56
+	rotate: 90
+OP2/08_Flower0_Leaf15
+	bounds: 1492, 119, 40, 41
+	offsets: 1, 1, 42, 43
+	rotate: 90
+OP2/08_Flower0_Leaf16
+	bounds: 1394, 267, 42, 57
+	offsets: 1, 1, 44, 59
+	rotate: 90
+OP2/08_Flower0_Leaf17
+	bounds: 429, 452, 53, 36
+	offsets: 1, 1, 55, 38
+	rotate: 90
+OP2/08_Flower0_Leaf18
+	bounds: 1447, 201, 53, 50
+	offsets: 2, 1, 56, 52
+OP2/08_Flower0_Leaf19
+	bounds: 1261, 20, 50, 45
+	offsets: 1, 2, 52, 48
+	rotate: 90
+OP2/08_Flower0_Leaf2
+	bounds: 274, 350, 26, 27
+	offsets: 2, 1, 29, 29
+	rotate: 90
+OP2/08_Flower0_Leaf20
+	bounds: 1385, 166, 53, 45
+	offsets: 1, 1, 55, 47
+OP2/08_Flower0_Leaf21
+	bounds: 1330, 291, 62, 41
+	offsets: 1, 1, 64, 44
+OP2/08_Flower0_Leaf22
+	bounds: 1276, 113, 52, 38
+	offsets: 2, 1, 55, 40
+	rotate: 90
+OP2/08_Flower0_Leaf23
+	bounds: 1502, 161, 43, 50
+	offsets: 1, 1, 45, 52
+	rotate: 90
+OP2/08_Flower0_Leaf24
+	bounds: 1554, 123, 27, 38
+	offsets: 1, 1, 30, 40
+OP2/08_Flower0_Leaf25
+	bounds: 1220, 120, 39, 51
+	offsets: 1, 2, 41, 54
+	rotate: 90
+OP2/08_Flower0_Leaf26
+	bounds: 775, 770, 57, 38
+	offsets: 1, 1, 59, 40
+OP2/08_Flower0_Leaf3
+	bounds: 1256, 421, 11, 25
+	offsets: 1, 1, 14, 28
+	rotate: 90
+OP2/08_Flower0_Leaf4
+	bounds: 1413, 499, 21, 23
+	offsets: 1, 1, 24, 26
+OP2/08_Flower0_Leaf5
+	bounds: 1568, 233, 25, 18
+	offsets: 2, 1, 29, 21
+	rotate: 90
+OP2/08_Flower0_Leaf6
+	bounds: 1462, 46, 35, 33
+	offsets: 1, 1, 37, 36
+OP2/08_Flower0_Leaf7
+	bounds: 1030, 288, 29, 41
+	offsets: 2, 2, 32, 44
+	rotate: 90
+OP2/08_Flower0_Leaf8
+	bounds: 207, 350, 33, 26
+	offsets: 1, 1, 35, 28
+OP2/08_Flower0_Leaf9
+	bounds: 95, 638, 23, 28
+	offsets: 2, 2, 26, 31
+	rotate: 90
+OP2/08_Flower1_Core
+	bounds: 1417, 85, 32, 37
+	offsets: 2, 1, 35, 39
+	rotate: 90
+OP2/08_Flower1_Leaf0
+	bounds: 708, 769, 39, 65
+	offsets: 1, 1, 41, 68
+	rotate: 90
+OP2/08_Flower1_Leaf1
+	bounds: 1522, 597, 51, 71
+	offsets: 2, 2, 55, 74
+OP2/08_Flower1_Leaf10
+	bounds: 1492, 82, 35, 35
+	offsets: 2, 2, 38, 38
+OP2/08_Flower1_Leaf11
+	bounds: 686, 507, 37, 28
+	offsets: 1, 2, 39, 31
+	rotate: 90
+OP2/08_Flower1_Leaf12
+	bounds: 1434, 8, 30, 36
+	offsets: 1, 2, 32, 39
+OP2/08_Flower1_Leaf13
+	bounds: 1424, 46, 37, 36
+	offsets: 2, 1, 41, 38
+	rotate: 90
+OP2/08_Flower1_Leaf14
+	bounds: 1273, 72, 49, 39
+	offsets: 2, 1, 52, 42
+OP2/08_Flower1_Leaf15
+	bounds: 1308, 26, 43, 44
+	offsets: 1, 2, 45, 48
+OP2/08_Flower1_Leaf16
+	bounds: 1284, 167, 54, 40
+	offsets: 2, 2, 57, 43
+	rotate: 90
+OP2/08_Flower1_Leaf17
+	bounds: 1431, 120, 33, 37
+	offsets: 1, 2, 35, 41
+	rotate: 90
+OP2/08_Flower1_Leaf18
+	bounds: 1436, 490, 68, 50
+	offsets: 1, 1, 70, 52
+OP2/08_Flower1_Leaf19
+	bounds: 1515, 543, 70, 52
+	offsets: 2, 1, 73, 55
+OP2/08_Flower1_Leaf2
+	bounds: 1381, 122, 42, 48
+	offsets: 1, 1, 44, 50
+	rotate: 90
+OP2/08_Flower1_Leaf20
+	bounds: 1413, 435, 65, 53
+	offsets: 1, 1, 67, 55
+OP2/08_Flower1_Leaf21
+	bounds: 1512, 260, 55, 46
+	offsets: 1, 1, 57, 48
+OP2/08_Flower1_Leaf22
+	bounds: 1278, 280, 67, 50
+	offsets: 2, 2, 70, 54
+	rotate: 90
+OP2/08_Flower1_Leaf23
+	bounds: 1448, 796, 76, 57
+	offsets: 2, 1, 80, 59
+	rotate: 90
+OP2/08_Flower1_Leaf24
+	bounds: 1208, 275, 72, 68
+	offsets: 1, 1, 74, 70
+	rotate: 90
+OP2/08_Flower1_Leaf25
+	bounds: 1286, 640, 80, 62
+	offsets: 1, 1, 82, 64
+OP2/08_Flower1_Leaf26
+	bounds: 1475, 311, 56, 61
+	offsets: 2, 1, 59, 63
+	rotate: 90
+OP2/08_Flower1_Leaf27
+	bounds: 1330, 233, 56, 57
+	offsets: 1, 1, 59, 59
+	rotate: 90
+OP2/08_Flower1_Leaf28
+	bounds: 1354, 399, 64, 57
+	offsets: 1, 2, 66, 60
+	rotate: 90
+OP2/08_Flower1_Leaf3
+	bounds: 1220, 161, 43, 54
+	offsets: 2, 1, 46, 56
+	rotate: 90
+OP2/08_Flower1_Leaf4
+	bounds: 429, 406, 37, 44
+	offsets: 1, 1, 40, 47
+OP2/08_Flower1_Leaf5
+	bounds: 853, 555, 24, 35
+	offsets: 1, 1, 27, 37
+OP2/08_Flower1_Leaf6
+	bounds: 324, 261, 28, 43
+	offsets: 2, 1, 31, 45
+OP2/08_Flower1_Leaf7
+	bounds: 853, 592, 39, 24
+	offsets: 1, 1, 42, 27
+	rotate: 90
+OP2/08_Flower1_Leaf8
+	bounds: 1554, 163, 41, 29
+	offsets: 1, 1, 44, 31
+	rotate: 90
+OP2/08_Flower1_Leaf9
+	bounds: 1462, 81, 28, 37
+	offsets: 1, 1, 30, 39
+OP2/08_GoldLeaf
+	bounds: 318, 354, 109, 151
+OP2/08_TreeL
+	bounds: 732, 155, 192, 169
+	rotate: 90
+OP2/08_TreeM
+	bounds: 2, 6, 176, 283
+	rotate: 90
+OP2/08_TreeR
+	bounds: 2, 261, 161, 375
+OP2/08_Vase
+	bounds: 1039, 682, 155, 172
+	offsets: 2, 2, 158, 175
+OP2/08_Vase_SD
+	bounds: 490, 111, 208, 68
+	offsets: 8, 3, 218, 77
+	rotate: 90
+OP3/08_Branche0
+	bounds: 718, 349, 195, 52
+	rotate: 90
+OP3/08_Branche1
+	bounds: 1495, 975, 79, 59
+OP3/08_Branche2
+	bounds: 573, 545, 97, 222
+OP3/08_Branche3
+	bounds: 165, 350, 40, 311
+	offsets: 32, 0, 72, 312
+OP3/08_Branche4
+	bounds: 560, 117, 96, 202
+OP3/08_Branche5
+	bounds: 1131, 49, 129, 87
+	rotate: 90
+OP3/08_Decor
+	bounds: 1569, 901, 18, 17
+	offsets: 1, 1, 20, 19
+	rotate: 90
+OP3/08_Decor_Tail
+	bounds: 490, 11, 40, 124
+	rotate: 90
+OP3/08_Envelope0
+	bounds: 1179, 892, 69, 142
+	offsets: 1, 1, 71, 145
+OP3/08_Envelope0_Top
+	bounds: 1470, 131, 22, 19
+	offsets: 2, 1, 25, 21
+	rotate: 90
+OP3/08_Envelope1
+	bounds: 1073, 180, 69, 137
+	offsets: 1, 1, 71, 139
+OP3/08_Envelope_Bot
+	bounds: 694, 54, 34, 66
+OP3/08_Flower
+	bounds: 1418, 954, 80, 75
+	offsets: 1, 1, 82, 78
+	rotate: 90
+OP3/08_Flower0
+	bounds: 1507, 744, 76, 71
+	offsets: 1, 1, 78, 76
+OP3/08_Flower1
+	bounds: 1479, 369, 52, 26
+	offsets: 1, 1, 54, 28
+	rotate: 90
+OP3/08_Flower10
+	bounds: 1220, 72, 51, 46
+	offsets: 2, 2, 54, 51
+OP3/08_Flower11
+	bounds: 1511, 817, 77, 57
+	offsets: 2, 1, 80, 59
+	rotate: 90
+OP3/08_Flower12
+	bounds: 1343, 465, 57, 68
+	offsets: 1, 1, 59, 70
+	rotate: 90
+OP3/08_Flower13
+	bounds: 1288, 810, 78, 83
+	offsets: 1, 1, 81, 86
+OP3/08_Flower14
+	bounds: 1290, 562, 76, 73
+	offsets: 1, 2, 78, 78
+	rotate: 90
+OP3/08_Flower15
+	bounds: 1286, 704, 86, 83
+	offsets: 1, 1, 88, 85
+	rotate: 90
+OP3/08_Flower16
+	bounds: 1198, 645, 77, 46
+	offsets: 1, 1, 80, 48
+OP3/08_Flower17
+	bounds: 429, 361, 37, 43
+	offsets: 1, 1, 39, 45
+OP3/08_Flower18
+	bounds: 1466, 9, 35, 32
+	offsets: 1, 1, 37, 34
+	rotate: 90
+OP3/08_Flower19
+	bounds: 1389, 213, 52, 56
+	offsets: 2, 1, 55, 59
+	rotate: 90
+OP3/08_Flower2
+	bounds: 1324, 83, 48, 48
+	offsets: 1, 1, 50, 50
+OP3/08_Flower20
+	bounds: 1365, 524, 63, 69
+	offsets: 2, 1, 66, 71
+	rotate: 90
+OP3/08_Flower21
+	bounds: 1538, 308, 59, 45
+	offsets: 1, 1, 62, 54
+	rotate: 90
+OP3/08_Flower3
+	bounds: 1371, 719, 76, 71
+	offsets: 1, 1, 79, 73
+OP3/08_Flower4
+	bounds: 1453, 253, 57, 56
+	offsets: 1, 1, 59, 58
+OP3/08_Flower5
+	bounds: 1499, 48, 35, 32
+	offsets: 1, 3, 37, 36
+OP3/08_Flower6
+	bounds: 1480, 423, 65, 32
+	offsets: 1, 1, 67, 34
+	rotate: 90
+OP3/08_Flower7
+	bounds: 1326, 133, 51, 53
+	offsets: 1, 1, 53, 55
+	rotate: 90
+OP3/08_Flower8
+	bounds: 1336, 950, 80, 84
+	offsets: 1, 1, 82, 86
+OP3/08_Flower9
+	bounds: 1449, 672, 76, 70
+	offsets: 1, 1, 78, 72
+OP3/08_Fruit0
+	bounds: 1368, 866, 82, 72
+	offsets: 1, 1, 85, 74
+	rotate: 90
+OP3/08_Fruit0_SD
+	bounds: 616, 8, 111, 43
+	offsets: 7, 3, 135, 53
+OP3/08_Fruit1
+	bounds: 1442, 542, 71, 62
+	offsets: 2, 2, 74, 65
+OP3/08_Fruit1_SD
+	bounds: 1250, 895, 85, 44
+	offsets: 3, 4, 95, 59
+OP3/08_Fruit_Branche
+	bounds: 880, 453, 178, 99
+	offsets: 3, 3, 183, 103
+	rotate: 90
+OP3/08_Fruit_Leaf0
+	bounds: 1514, 432, 41, 65
+	rotate: 90
+OP3/08_Fruit_Leaf1
+	bounds: 295, 705, 60, 20
+	rotate: 90
+OP3/08_Leaf0
+	bounds: 1413, 373, 60, 64
+	rotate: 90
+OP3/08_Leaf1
+	bounds: 1284, 223, 55, 43
+	rotate: 90
+OP3/08_Leaf10
+	bounds: 1388, 44, 34, 38
+	offsets: 1, 1, 36, 40
+OP3/08_Leaf11
+	bounds: 834, 782, 36, 17
+	offsets: 1, 1, 38, 19
+	rotate: 90
+OP3/08_Leaf12
+	bounds: 1290, 529, 63, 31
+	offsets: 1, 1, 65, 33
+OP3/08_Leaf13
+	bounds: 287, 5, 73, 31
+	offsets: 1, 1, 75, 33
+OP3/08_Leaf14
+	bounds: 573, 512, 56, 31
+	offsets: 1, 1, 58, 33
+OP3/08_Leaf15
+	bounds: 1440, 155, 44, 50
+	offsets: 1, 1, 46, 52
+	rotate: 90
+OP3/08_Leaf16
+	bounds: 1374, 84, 41, 33
+	offsets: 1, 1, 43, 36
+OP3/08_Leaf17
+	bounds: 1337, 903, 29, 45
+	offsets: 1, 1, 31, 47
+OP3/08_Leaf18
+	bounds: 1569, 921, 52, 17
+	offsets: 1, 1, 54, 19
+	rotate: 90
+OP3/08_Leaf19
+	bounds: 1101, 337, 57, 103
+	rotate: 90
+OP3/08_Leaf2
+	bounds: 1512, 206, 54, 52
+	offsets: 1, 1, 56, 55
+OP3/08_Leaf20
+	bounds: 287, 38, 58, 144
+OP3/08_Leaf3
+	bounds: 1330, 334, 30, 22
+	offsets: 1, 1, 32, 24
+	rotate: 90
+OP3/08_Leaf4
+	bounds: 880, 365, 41, 21
+	offsets: 1, 1, 43, 24
+	rotate: 90
+OP3/08_Leaf5
+	bounds: 880, 408, 21, 43
+	offsets: 1, 2, 23, 46
+OP3/08_Leaf6
+	bounds: 1354, 334, 55, 63
+OP3/08_Leaf7
+	bounds: 1527, 670, 41, 72
+OP3/08_Leaf8
+	bounds: 1308, 2, 44, 22
+	offsets: 1, 1, 46, 24
+OP3/08_Leaf9
+	bounds: 1007, 821, 30, 33
+	offsets: 1, 1, 32, 35
+OP3/08_Vase
+	bounds: 367, 8, 121, 296
+	offsets: 2, 1, 125, 298
+OP3/08_Vase_SD
+	bounds: 658, 122, 197, 72
+	offsets: 12, 9, 211, 88
+	rotate: 90

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 106799970, guid: ebe353a9e51fc6708625f16edcb81e06, type: 3}
+  m_Name: Spine_UI_ScoopSquadChest_SkeletonData
+  m_EditorClassIdentifier:
+  atlasAssets:
+  - {fileID: 11400000, guid: b0d6e10efb9dfde46aa8d8ac18912c9f, type: 2}
+  scale: 0.01
+  skeletonJSON: {fileID: 4900000, guid: a940efaf969039a49b5779efcf762d29, type: 3}
+  isUpgradingBlendModeMaterials: 0
+  blendModeMaterials:
+    requiresBlendModeMaterials: 1
+    applyAdditiveMaterial: 1
+    additiveMaterials:
+    - pageName: Spine_UI_ScoopSquadChest.png
+      material: {fileID: 2100000, guid: 3e247054ec36c3f4f821c97d4d95a5a5, type: 2}
+    multiplyMaterials:
+    - pageName: Spine_UI_ScoopSquadChest.png
+      material: {fileID: 2100000, guid: 640b8367b8753ef4a9f4952baf205e68, type: 2}
+    screenMaterials: []
+  skeletonDataModifiers: []
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: 0.2
+  controller: {fileID: 0}

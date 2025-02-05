@@ -1,0 +1,27 @@
+public enum ItemColor
+{
+	Red = 0,
+	Orange = 1,
+	Yellow = 2,
+	Green = 3,
+	Blue = 4,
+	Indigo = 5,
+	Violet = 6,
+	Black = 7,
+	White = 8,
+	Brown = 9,
+	Pink = 10,
+	Cyan = 11,
+	Magenta = 12,
+	Torquoise = 13,
+	Silver = 14,
+	Gold = 15,
+	Amber = 16,
+	Emerald = 17,
+	Tan = 18,
+	Grey = 19,
+	Casablanca = 20,
+	DarkBlue = 21,
+	GreenBanana = 22,
+	PaleBrown = 23
+}

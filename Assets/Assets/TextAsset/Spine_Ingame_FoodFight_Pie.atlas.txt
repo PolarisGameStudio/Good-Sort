@@ -1,0 +1,294 @@
+Spine_Ingame_FoodFight_Pie.png
+	size: 1636, 1636
+	filter: Linear, Linear
+Cream_BottomSlide
+	bounds: 1526, 1514, 120, 105
+	rotate: 90
+Cream_Burst_0
+	bounds: 1553, 759, 91, 77
+	offsets: 1, 1, 93, 79
+	rotate: 90
+Cream_Burst_1
+	bounds: 1365, 7, 145, 133
+	offsets: 1, 1, 147, 135
+	rotate: 90
+Cream_Burst_10
+	bounds: 510, 1282, 243, 225
+	offsets: 1, 1, 245, 227
+Cream_Burst_11
+	bounds: 256, 1155, 243, 225
+	offsets: 1, 1, 245, 227
+Cream_Burst_12
+	bounds: 755, 1282, 243, 225
+	offsets: 1, 1, 245, 227
+Cream_Burst_13
+	bounds: 1000, 1281, 243, 226
+	offsets: 1, 1, 245, 228
+Cream_Burst_14
+	bounds: 1245, 1281, 243, 226
+	offsets: 1, 1, 245, 228
+Cream_Burst_15
+	bounds: 501, 1055, 242, 225
+	offsets: 1, 1, 244, 227
+Cream_Burst_16
+	bounds: 1213, 1061, 218, 224
+	offsets: 1, 1, 220, 226
+	rotate: 90
+Cream_Burst_17
+	bounds: 694, 484, 215, 191
+	offsets: 1, 1, 218, 193
+Cream_Burst_18
+	bounds: 256, 387, 159, 190
+	offsets: 1, 1, 161, 192
+	rotate: 90
+Cream_Burst_2
+	bounds: 1292, 154, 158, 156
+	offsets: 1, 1, 160, 158
+	rotate: 90
+Cream_Burst_3
+	bounds: 911, 421, 172, 177
+	offsets: 1, 1, 174, 179
+	rotate: 90
+Cream_Burst_4
+	bounds: 1132, 491, 187, 189
+	offsets: 1, 1, 189, 191
+	rotate: 90
+Cream_Burst_5
+	bounds: 475, 472, 210, 200
+	offsets: 1, 1, 212, 202
+Cream_Burst_6
+	bounds: 984, 849, 221, 211
+	offsets: 1, 1, 223, 213
+Cream_Burst_7
+	bounds: 984, 1062, 227, 217
+	offsets: 1, 1, 229, 219
+Cream_Burst_8
+	bounds: 745, 1058, 237, 222
+	offsets: 1, 1, 239, 224
+Cream_Burst_9
+	bounds: 256, 929, 242, 224
+	offsets: 1, 1, 244, 226
+Cream_Drop_0
+	bounds: 2, 8, 175, 102
+Cream_Drop_1
+	bounds: 179, 8, 175, 102
+Cream_Drop_10
+	bounds: 687, 380, 175, 102
+Cream_Drop_11
+	bounds: 448, 368, 175, 102
+Cream_Drop_12
+	bounds: 256, 283, 175, 102
+Cream_Drop_13
+	bounds: 256, 179, 175, 102
+Cream_Drop_14
+	bounds: 356, 2, 175, 102
+	rotate: 90
+Cream_Drop_15
+	bounds: 433, 191, 175, 102
+	rotate: 90
+Cream_Drop_16
+	bounds: 460, 14, 175, 102
+	rotate: 90
+Cream_Drop_17
+	bounds: 537, 191, 175, 102
+	rotate: 90
+Cream_Drop_18
+	bounds: 564, 14, 175, 102
+	rotate: 90
+Cream_Drop_19
+	bounds: 641, 203, 175, 102
+	rotate: 90
+Cream_Drop_2
+	bounds: 668, 26, 175, 102
+	rotate: 90
+Cream_Drop_20
+	bounds: 745, 203, 175, 102
+	rotate: 90
+Cream_Drop_21
+	bounds: 772, 26, 175, 102
+	rotate: 90
+Cream_Drop_22
+	bounds: 849, 203, 175, 102
+	rotate: 90
+Cream_Drop_23
+	bounds: 876, 26, 175, 102
+	rotate: 90
+Cream_Drop_24
+	bounds: 953, 244, 175, 102
+	rotate: 90
+Cream_Drop_3
+	bounds: 980, 67, 175, 102
+	rotate: 90
+Cream_Drop_4
+	bounds: 1057, 244, 175, 102
+	rotate: 90
+Cream_Drop_5
+	bounds: 1084, 67, 175, 102
+	rotate: 90
+Cream_Drop_6
+	bounds: 1161, 314, 175, 102
+	rotate: 90
+Cream_Drop_7
+	bounds: 1188, 137, 175, 102
+	rotate: 90
+Cream_Drop_8
+	bounds: 1265, 314, 175, 102
+	rotate: 90
+Cream_Drop_9
+	bounds: 1188, 33, 175, 102
+Cream_Particle0
+	bounds: 1426, 1044, 11, 15
+Cream_Particle1
+	bounds: 641, 193, 8, 8
+	offsets: 1, 1, 10, 10
+Cream_Particle2
+	bounds: 1617, 1493, 19, 16
+	rotate: 90
+Cream_Particle3
+	bounds: 682, 4, 19, 20
+Cream_Particle4
+	bounds: 980, 2, 29, 21
+	rotate: 90
+Cream_Particle5
+	bounds: 1339, 137, 16, 15
+Cream_Particle6
+	bounds: 1450, 154, 22, 18
+FX/Cream_Throw_Back_0
+	bounds: 1490, 1290, 217, 125
+	offsets: 0, 0, 252, 125
+	rotate: 90
+FX/Cream_Throw_Back_1
+	bounds: 1490, 1071, 217, 125
+	offsets: 0, 0, 252, 125
+	rotate: 90
+FX/Cream_Throw_Back_10
+	bounds: 745, 931, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_11
+	bounds: 500, 928, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_12
+	bounds: 256, 802, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_13
+	bounds: 719, 804, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_14
+	bounds: 475, 801, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_15
+	bounds: 256, 675, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_16
+	bounds: 1439, 852, 217, 125
+	offsets: 0, 0, 252, 125
+	rotate: 90
+FX/Cream_Throw_Back_17
+	bounds: 1207, 934, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_2
+	bounds: 1207, 807, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_3
+	bounds: 938, 722, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_4
+	bounds: 694, 677, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_5
+	bounds: 475, 674, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_6
+	bounds: 256, 548, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_7
+	bounds: 1426, 633, 217, 125
+	offsets: 0, 0, 252, 125
+	rotate: 90
+FX/Cream_Throw_Back_8
+	bounds: 1157, 680, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Back_9
+	bounds: 913, 595, 217, 125
+	offsets: 0, 0, 252, 125
+FX/Cream_Throw_Front_0
+	bounds: 2, 1509, 252, 125
+FX/Cream_Throw_Front_1
+	bounds: 256, 1509, 252, 125
+FX/Cream_Throw_Front_10
+	bounds: 510, 1509, 252, 125
+FX/Cream_Throw_Front_11
+	bounds: 764, 1509, 252, 125
+FX/Cream_Throw_Front_12
+	bounds: 1018, 1509, 252, 125
+FX/Cream_Throw_Front_13
+	bounds: 1272, 1509, 252, 125
+FX/Cream_Throw_Front_14
+	bounds: 2, 1255, 252, 125
+	rotate: 90
+FX/Cream_Throw_Front_15
+	bounds: 2, 1001, 252, 125
+	rotate: 90
+FX/Cream_Throw_Front_16
+	bounds: 2, 747, 252, 125
+	rotate: 90
+FX/Cream_Throw_Front_17
+	bounds: 2, 493, 252, 125
+	rotate: 90
+FX/Cream_Throw_Front_2
+	bounds: 2, 239, 252, 125
+	rotate: 90
+FX/Cream_Throw_Front_3
+	bounds: 2, 112, 252, 125
+FX/Cream_Throw_Front_4
+	bounds: 129, 1255, 252, 125
+	rotate: 90
+FX/Cream_Throw_Front_5
+	bounds: 129, 1001, 252, 125
+	rotate: 90
+FX/Cream_Throw_Front_6
+	bounds: 129, 747, 252, 125
+	rotate: 90
+FX/Cream_Throw_Front_7
+	bounds: 129, 493, 252, 125
+	rotate: 90
+FX/Cream_Throw_Front_8
+	bounds: 129, 239, 252, 125
+	rotate: 90
+FX/Cream_Throw_Front_9
+	bounds: 256, 1382, 252, 125
+Frame_Phase1
+	bounds: 1369, 521, 124, 110
+	offsets: 0, 8, 125, 118
+Frame_Phase123_Bottom
+	bounds: 433, 181, 20, 8
+	offsets: 1, 1, 22, 10
+Frame_Phase123_Bottom2
+	bounds: 1292, 137, 45, 15
+	offsets: 1, 1, 47, 17
+Frame_Phase2
+	bounds: 1500, 402, 130, 111
+	offsets: 1, 1, 145, 113
+Frame_Phase3
+	bounds: 1500, 289, 130, 111
+	offsets: 1, 1, 145, 113
+Frame_Phase4
+	bounds: 1500, 515, 131, 116
+	offsets: 1, 1, 145, 118
+Frame_Phase4_Bottom
+	bounds: 719, 994, 59, 24
+	offsets: 1, 1, 61, 26
+	rotate: 90
+Frame_Phase4_Bottom2
+	bounds: 668, 2, 22, 12
+	offsets: 1, 1, 24, 14
+	rotate: 90
+Frame_Phase4_Bottom3
+	bounds: 625, 434, 36, 13
+	offsets: 1, 1, 38, 15
+	rotate: 90
+Pie
+	bounds: 1450, 174, 112, 113
+Pie_Side
+	bounds: 1369, 412, 107, 120
+	rotate: 90

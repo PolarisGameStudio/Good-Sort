@@ -1,0 +1,220 @@
+Spine_UI_FoodFight_EndgameChar.png
+	size: 968, 1032
+Blue/Lose_Apron
+	bounds: 2, 839, 298, 191
+Blue/Lose_Apron_Front
+	bounds: 151, 2, 139, 99
+Blue/Lose_Apron_Top
+	bounds: 433, 6, 136, 57
+Blue/Lose_Hat_Back
+	bounds: 801, 131, 96, 82
+	offsets: 4, 25, 120, 111
+	rotate: 90
+Blue/Lose_Hat_Front
+	bounds: 717, 127, 100, 82
+	offsets: 2, 6, 107, 90
+	rotate: 90
+Blue/Lose_L_Leg
+	bounds: 602, 921, 259, 109
+	offsets: 9, 7, 268, 116
+Blue/Lose_R_Leg
+	bounds: 186, 402, 166, 129
+	offsets: 0, 3, 166, 132
+Blue/Lose_R_Thigh
+	bounds: 709, 10, 119, 96
+Blue/Win_Apron
+	bounds: 484, 526, 219, 137
+	offsets: 2, 0, 221, 137
+Blue/Win_Body
+	bounds: 2, 625, 239, 212
+	offsets: 5, 0, 244, 212
+Blue/Win_Hat_Back
+	bounds: 2, 9, 124, 61
+	offsets: 4, 5, 132, 69
+Blue/Win_Hat_Front
+	bounds: 830, 371, 118, 55
+	offsets: 2, 24, 125, 83
+Blue/Win_Hip
+	bounds: 207, 533, 195, 90
+	offsets: 1, 2, 210, 93
+Blue/Win_L_Leg
+	bounds: 2, 72, 159, 147
+	rotate: 90
+Blue/Win_R_Leg
+	bounds: 484, 665, 227, 143
+	offsets: 0, 4, 230, 148
+Cry_Lose_Tear
+	bounds: 717, 108, 7, 17
+	offsets: 1, 1, 9, 20
+Cry_Mouth
+	bounds: 654, 69, 49, 37
+Cry_Mouth_Lip
+	bounds: 826, 229, 54, 40
+Lose_Body
+	bounds: 433, 212, 154, 125
+	rotate: 90
+Lose_Cream_Particle
+	bounds: 726, 108, 13, 17
+	offsets: 2, 1, 17, 20
+Lose_Cream_Particle2
+	bounds: 560, 213, 19, 29
+	offsets: 2, 2, 22, 33
+	rotate: 90
+Lose_Cream_Particle3
+	bounds: 741, 108, 17, 17
+	offsets: 2, 2, 21, 21
+Lose_Cry_L_Eye
+	bounds: 926, 602, 29, 36
+	offsets: 1, 1, 31, 38
+	rotate: 90
+Lose_Cry_L_EyeBrown
+	bounds: 133, 330, 16, 10
+	offsets: 1, 1, 19, 12
+Lose_Cry_L_EyeLid
+	bounds: 128, 41, 29, 21
+	rotate: 90
+Lose_Cry_L_EyeTear
+	bounds: 693, 234, 25, 15
+Lose_Cry_L_Pupil
+	bounds: 712, 388, 9, 10
+	offsets: 1, 1, 11, 12
+Lose_Cry_R_Eye
+	bounds: 926, 633, 30, 37
+	offsets: 1, 1, 33, 39
+	rotate: 90
+Lose_Cry_R_EyeBrown
+	bounds: 951, 585, 15, 15
+	offsets: 1, 1, 17, 17
+Lose_Cry_R_EyeLid
+	bounds: 484, 811, 26, 23
+	rotate: 90
+Lose_Cry_R_EyeTear
+	bounds: 665, 234, 26, 15
+Lose_Cry_R_Pupil
+	bounds: 863, 810, 10, 11
+	offsets: 1, 1, 12, 13
+Lose_Head
+	bounds: 186, 264, 136, 161
+	offsets: 1, 1, 150, 201
+	rotate: 90
+Lose_L_Arm
+	bounds: 477, 374, 106, 150
+	offsets: 1, 1, 108, 152
+Lose_Pie0
+	bounds: 354, 368, 121, 163
+	offsets: 0, 20, 127, 184
+Lose_Pie1
+	bounds: 300, 104, 131, 158
+	offsets: 5, 9, 154, 171
+Lose_Pie2
+	bounds: 712, 428, 110, 96
+	offsets: 2, 2, 113, 101
+Lose_Pie3
+	bounds: 723, 316, 89, 110
+	offsets: 1, 1, 92, 113
+Lose_Pie4
+	bounds: 349, 265, 71, 101
+	offsets: 1, 1, 73, 103
+Lose_R_Arm
+	bounds: 863, 823, 98, 207
+	offsets: 1, 3, 101, 212
+Red/Lose_Apron
+	bounds: 302, 839, 298, 191
+Red/Lose_Apron_Front
+	bounds: 292, 2, 139, 99
+Red/Lose_Apron_Top
+	bounds: 571, 8, 136, 57
+Red/Lose_Hat_Back
+	bounds: 830, 271, 109, 98
+	offsets: 4, 9, 120, 111
+Red/Lose_Hat_Front
+	bounds: 723, 229, 101, 85
+	offsets: 1, 3, 107, 90
+Red/Lose_L_Leg
+	bounds: 602, 810, 259, 109
+	offsets: 9, 7, 268, 116
+Red/Lose_R_Leg
+	bounds: 2, 233, 166, 129
+	offsets: 0, 3, 166, 132
+	rotate: 90
+Red/Lose_R_Thigh
+	bounds: 830, 428, 119, 96
+Red/Win_Apron
+	bounds: 705, 526, 219, 137
+	offsets: 2, 0, 221, 137
+Red/Win_Body
+	bounds: 243, 625, 239, 212
+	offsets: 5, 0, 244, 212
+Red/Win_Hat_Back
+	bounds: 654, 108, 124, 61
+	offsets: 4, 5, 132, 69
+	rotate: 90
+Red/Win_Hat_Front
+	bounds: 665, 251, 118, 56
+	offsets: 2, 23, 125, 83
+	rotate: 90
+Red/Win_Hip
+	bounds: 2, 533, 203, 90
+	offsets: 1, 2, 210, 93
+Red/Win_L_Leg
+	bounds: 151, 103, 159, 147
+	rotate: 90
+Red/Win_R_Leg
+	bounds: 713, 665, 227, 143
+	offsets: 0, 4, 230, 148
+Win_Head
+	bounds: 2, 401, 130, 182
+	offsets: 1, 1, 132, 184
+	rotate: 90
+Win_L_Arm
+	bounds: 433, 65, 114, 145
+	offsets: 0, 2, 114, 147
+Win_L_Eye
+	bounds: 942, 666, 22, 36
+	offsets: 1, 2, 25, 39
+Win_L_EyeBrown
+	bounds: 712, 400, 11, 9
+	offsets: 1, 1, 13, 11
+	rotate: 90
+Win_L_Lid
+	bounds: 942, 704, 22, 37
+Win_L_Pie
+	bounds: 560, 234, 138, 103
+	offsets: 2, 2, 142, 109
+	rotate: 90
+Win_L_Pupil
+	bounds: 956, 561, 8, 10
+	offsets: 1, 1, 10, 12
+	rotate: 90
+Win_L_UpperArm
+	bounds: 549, 67, 103, 143
+	offsets: 1, 4, 105, 149
+Win_Lip
+	bounds: 885, 156, 63, 56
+Win_Mouth
+	bounds: 133, 342, 57, 49
+	rotate: 90
+Win_R_Arm
+	bounds: 585, 387, 137, 125
+	rotate: 90
+Win_R_Eye
+	bounds: 942, 783, 23, 38
+	offsets: 1, 1, 26, 40
+Win_R_EyeBrown
+	bounds: 951, 571, 12, 15
+	offsets: 1, 1, 14, 17
+	rotate: 90
+Win_R_Finger
+	bounds: 885, 97, 57, 59
+	rotate: 90
+Win_R_Hand
+	bounds: 404, 533, 90, 65
+	offsets: 1, 1, 92, 67
+	rotate: 90
+Win_R_Lid
+	bounds: 942, 743, 24, 38
+Win_R_Pupil
+	bounds: 712, 413, 8, 13
+	offsets: 2, 1, 11, 15
+Win_R_Thumb
+	bounds: 885, 214, 69, 55

@@ -1,0 +1,85 @@
+Spine_UI_TeamTreasure.png
+	size: 368, 272
+	filter: Linear, Linear
+Base
+	bounds: 3, 55, 134, 62
+	offsets: 2, 2, 138, 66
+Base_Front
+	bounds: 211, 177, 92, 29
+	offsets: 2, 2, 96, 33
+	rotate: 90
+Gold
+	bounds: 311, 220, 49, 38
+	rotate: 90
+Gold_SD
+	bounds: 68, 9, 59, 43
+L_Flower_Core
+	bounds: 314, 107, 20, 21
+L_Flower_Leaf0
+	bounds: 314, 85, 21, 19
+	offsets: 0, 0, 21, 20
+L_Flower_Leaf1
+	bounds: 338, 85, 19, 17
+	offsets: 2, 1, 23, 20
+	rotate: 90
+L_Flower_Leaf2
+	bounds: 293, 9, 30, 17
+	offsets: 1, 1, 31, 19
+L_Flower_Leaf3
+	bounds: 338, 162, 22, 23
+	offsets: 2, 1, 25, 26
+L_Flower_Leaf4
+	bounds: 314, 159, 26, 21
+	rotate: 90
+L_Flower_Leaf5
+	bounds: 340, 195, 18, 22
+	offsets: 1, 2, 20, 26
+L_Flower_SD
+	bounds: 207, 5, 52, 44
+	offsets: 3, 4, 58, 52
+	rotate: 90
+Leaf0
+	bounds: 3, 3, 62, 49
+	offsets: 0, 1, 62, 50
+Leaf1
+	bounds: 308, 31, 44, 50
+	offsets: 0, 1, 45, 52
+Leaf2
+	bounds: 254, 29, 52, 51
+	offsets: 0, 2, 52, 53
+	rotate: 90
+Leaf3
+	bounds: 244, 84, 90, 67
+	rotate: 90
+Leaf4
+	bounds: 243, 177, 92, 65
+	rotate: 90
+Leaf5
+	bounds: 140, 60, 101, 102
+Leaf6
+	bounds: 104, 165, 104, 104
+R_Flower_Core
+	bounds: 337, 107, 21, 21
+	offsets: 0, 1, 21, 24
+R_Flower_Leaf0
+	bounds: 342, 138, 21, 21
+	offsets: 2, 1, 25, 23
+R_Flower_Leaf1
+	bounds: 314, 131, 25, 25
+R_Flower_Leaf2
+	bounds: 326, 9, 27, 19
+	offsets: 2, 1, 30, 22
+R_Flower_Leaf3
+	bounds: 254, 3, 36, 23
+R_Flower_Leaf4
+	bounds: 104, 131, 31, 32
+	offsets: 0, 1, 31, 33
+	rotate: 90
+R_Flower_Leaf5
+	bounds: 311, 188, 26, 29
+	offsets: 1, 2, 29, 32
+R_Flower_SD
+	bounds: 140, 4, 64, 53
+	offsets: 3, 6, 72, 63
+Shovel
+	bounds: 3, 120, 98, 149

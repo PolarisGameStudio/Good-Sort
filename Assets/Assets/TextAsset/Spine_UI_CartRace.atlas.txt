@@ -1,0 +1,47 @@
+Spine_UI_CartRace.png
+	size: 648, 260
+BackL_Wheel
+	bounds: 455, 2, 46, 49
+	offsets: 1, 1, 48, 51
+	rotate: 90
+BackR_Wheel
+	bounds: 400, 46, 53, 56
+	offsets: 1, 1, 55, 59
+BackR_WheelRoll
+	bounds: 400, 2, 42, 44
+	offsets: 2, 1, 45, 46
+	rotate: 90
+BackR_WheelTire
+	bounds: 276, 54, 47, 57
+	offsets: 1, 1, 49, 59
+	rotate: 90
+Cart
+	bounds: 2, 18, 272, 240
+	offsets: 1, 2, 274, 243
+FlagL
+	bounds: 396, 104, 118, 154
+FlagL_Stick
+	bounds: 516, 155, 103, 130
+	offsets: 1, 1, 105, 132
+	rotate: 90
+FlagR
+	bounds: 276, 103, 118, 155
+FlagR_Stick
+	bounds: 516, 50, 103, 130
+	offsets: 1, 1, 105, 132
+	rotate: 90
+FrontL_Wheel
+	bounds: 455, 54, 48, 53
+	offsets: 1, 1, 50, 55
+	rotate: 90
+FrontR_Wheel
+	bounds: 342, 38, 56, 63
+	offsets: 1, 1, 58, 65
+FrontR_WheelRoll
+	bounds: 506, 8, 40, 39
+	offsets: 1, 1, 42, 42
+	rotate: 90
+FrontR_WheelTire
+	bounds: 276, 3, 45, 64
+	offsets: 1, 1, 47, 66
+	rotate: 90

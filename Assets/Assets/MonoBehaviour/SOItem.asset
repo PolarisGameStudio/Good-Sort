@@ -1,0 +1,3183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de708c899f831a514944ae14152adf4a, type: 3}
+  m_Name: SOItem
+  m_EditorClassIdentifier:
+  items:
+  - type: 1
+    sprite: {fileID: 21300000, guid: 30e916f8736c02a48a1e8542289f4637, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 84bf857e724eb72419f2282ca17caaf9, type: 2}
+    kind: 2
+    colors:
+    - 0
+    - 9
+  - type: 2
+    sprite: {fileID: 21300000, guid: 1531fce00cacb7540823a7d7ee809ec9, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7174d6cff6d60b643b7dbc89affa3330, type: 2}
+    kind: 3
+    colors:
+    - 6
+  - type: 3
+    sprite: {fileID: 21300000, guid: 3d39cf7af01c5fc478ceb710f8307090, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7174d6cff6d60b643b7dbc89affa3330, type: 2}
+    kind: 3
+    colors:
+    - 1
+  - type: 4
+    sprite: {fileID: 21300000, guid: cae95059c6688ac42b06d6533a680b79, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7174d6cff6d60b643b7dbc89affa3330, type: 2}
+    kind: 3
+    colors:
+    - 3
+  - type: 5
+    sprite: {fileID: 21300000, guid: f97e26ec22e20054e9904e3ce9f4a362, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d5bb25ae64d493048b3824279a5c857b, type: 2}
+    kind: 4
+    colors:
+    - 0
+    - 2
+  - type: 6
+    sprite: {fileID: 21300000, guid: 4f4bd54271c050149b5762cb235489ba, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a27eb63244a21cf4abde3195f53a93dd, type: 2}
+    kind: 5
+    colors:
+    - 3
+  - type: 7
+    sprite: {fileID: 21300000, guid: 15dadbfbdd9b94e4c849d2a239a0de1b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 17d6b1c11bf17ba4293bfe75867c8772, type: 2}
+    kind: 5
+    colors:
+    - 3
+  - type: 8
+    sprite: {fileID: 21300000, guid: 2f340fd9fe36dbb4495ba1f2e82a3a72, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b89620d3c61446f439c6edfad895151f, type: 2}
+    kind: 5
+    colors:
+    - 1
+    - 6
+  - type: 9
+    sprite: {fileID: 21300000, guid: a28b3c9e57d20604bbef14c3393e6f50, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0bf004c29e18e654b989be112bf99d30, type: 2}
+    kind: 5
+    colors:
+    - 20
+  - type: 10
+    sprite: {fileID: 21300000, guid: 3c7cb9b337aa4ed4696bd3a7cfe940b9, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 12866e9032c49d74cae637ce0956e265, type: 2}
+    kind: 5
+    colors:
+    - 9
+    - 0
+  - type: 11
+    sprite: {fileID: 21300000, guid: cd312dbaab09af84390108959ff87795, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 650c8519ba76e7c4e8595b0ab53790f9, type: 2}
+    kind: 7
+    colors:
+    - 8
+  - type: 12
+    sprite: {fileID: 21300000, guid: 1f4412f7b2132664ead4101c8d83acd6, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 650c8519ba76e7c4e8595b0ab53790f9, type: 2}
+    kind: 7
+    colors:
+    - 3
+    - 9
+  - type: 13
+    sprite: {fileID: 21300000, guid: dc69cb5d69ae7c0419f75f002b85a5a5, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3009fe766c7d6984a849e4e119696c1d, type: 2}
+    kind: 6
+    colors:
+    - 1
+    - 4
+  - type: 14
+    sprite: {fileID: 21300000, guid: 15c71670e9ad5cf45b2a7a48877b8c47, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3009fe766c7d6984a849e4e119696c1d, type: 2}
+    kind: 6
+    colors:
+    - 2
+  - type: 15
+    sprite: {fileID: 21300000, guid: e27c26e4b3ed7df4ebfcf0deafbc4192, type: 2}
+    spriteHidden: {fileID: 21300000, guid: da4c08432660441409b6a177a1dc653d, type: 2}
+    kind: 5
+    colors:
+    - 11
+  - type: 16
+    sprite: {fileID: 21300000, guid: a68e46073619a304d9ad44a8bb949056, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1965e5d8e88207d449cc0156bcc71448, type: 2}
+    kind: 8
+    colors:
+    - 11
+  - type: 17
+    sprite: {fileID: 21300000, guid: 3892269af29a6be47a65981eeb93c5bd, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 63e8ee573e0a5e34cb1e269b0f492ba6, type: 2}
+    kind: 5
+    colors:
+    - 1
+  - type: 18
+    sprite: {fileID: 21300000, guid: 91a51ac6f0170f043bfc4688b1b30768, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 63e8ee573e0a5e34cb1e269b0f492ba6, type: 2}
+    kind: 5
+    colors:
+    - 3
+  - type: 19
+    sprite: {fileID: 21300000, guid: bc10446b9096ea84f9769714f694643b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f4767bdb9ebf26541be2d8b68b396238, type: 2}
+    kind: 13
+    colors:
+    - 22
+    - 4
+  - type: 20
+    sprite: {fileID: 21300000, guid: af44c05f62ce66d449e6b5b92c62de56, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f4767bdb9ebf26541be2d8b68b396238, type: 2}
+    kind: 13
+    colors:
+    - 8
+  - type: 21
+    sprite: {fileID: 21300000, guid: eeb3c2cb3c8e7e74fb618636d787c210, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0c0b87178a0335e4faab9d1f36c31e67, type: 2}
+    kind: 13
+    colors:
+    - 8
+    - 3
+  - type: 22
+    sprite: {fileID: 21300000, guid: f220ef7643075fa43ba1e289b86dcff0, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f42901ee355a7b84e87fe3dde9816d77, type: 2}
+    kind: 12
+    colors:
+    - 0
+    - 2
+  - type: 23
+    sprite: {fileID: 21300000, guid: 425717e265edec043b4cb245ec12188e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f42901ee355a7b84e87fe3dde9816d77, type: 2}
+    kind: 12
+    colors:
+    - 3
+  - type: 24
+    sprite: {fileID: 21300000, guid: 420ba4e2792294e4ab79c8ca9e8bf416, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e68c2639d0cf33e419497776fd92f9ab, type: 2}
+    kind: 1
+    colors:
+    - 23
+  - type: 25
+    sprite: {fileID: 21300000, guid: 9bb9995fcf6778f4cae8da874971f54f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e68c2639d0cf33e419497776fd92f9ab, type: 2}
+    kind: 1
+    colors:
+    - 3
+  - type: 26
+    sprite: {fileID: 21300000, guid: 48ef60ad70bc43449b5fa377ef88010d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ba3d06a305db03b449e0444c604298e3, type: 2}
+    kind: 13
+    colors:
+    - 10
+    - 6
+  - type: 27
+    sprite: {fileID: 21300000, guid: 41b1de98047cc7f4c944c8a8441a48e9, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ba3d06a305db03b449e0444c604298e3, type: 2}
+    kind: 13
+    colors:
+    - 4
+    - 21
+  - type: 28
+    sprite: {fileID: 21300000, guid: 9de5ac2af5f7b3749a80e60abd60d43a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1fc835ba5c328cf4b85f3b75b9195680, type: 2}
+    kind: 14
+    colors:
+    - 1
+  - type: 29
+    sprite: {fileID: 21300000, guid: 03b47d6a4a1eb0a4b9354274e5bfc654, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 84230439a933863418dcf68e4ba269f9, type: 2}
+    kind: 6
+    colors:
+    - 0
+  - type: 30
+    sprite: {fileID: 21300000, guid: 5014182fc53ecfa45bdf5737d15d455a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: caaa21421c481a142ae3876ababa9bc7, type: 2}
+    kind: 6
+    colors:
+    - 2
+  - type: 31
+    sprite: {fileID: 21300000, guid: 3a1d2deffb93b6449b97703be74d65ea, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1a9435f4542c6474dbcb01b18235c222, type: 2}
+    kind: 14
+    colors:
+    - 0
+  - type: 32
+    sprite: {fileID: 21300000, guid: 5e23500e7c6264f4ab40991d3015dff3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 905275ba15b47c84f81461818e93019c, type: 2}
+    kind: 14
+    colors:
+    - 3
+  - type: 33
+    sprite: {fileID: 21300000, guid: d762f9945b7e0f94488885ac28c9c7fb, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 905275ba15b47c84f81461818e93019c, type: 2}
+    kind: 14
+    colors:
+    - 10
+  - type: 34
+    sprite: {fileID: 21300000, guid: a7951843e1b6fdc40ab7667cd93948be, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 905275ba15b47c84f81461818e93019c, type: 2}
+    kind: 14
+    colors:
+    - 2
+  - type: 35
+    sprite: {fileID: 21300000, guid: 4691220157eaefd43bc31e328ea6ac7d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ab8e5e05dcbcaa142a4b7e40677096e0, type: 2}
+    kind: 6
+    colors:
+    - 6
+  - type: 36
+    sprite: {fileID: 21300000, guid: 33387d7fc05124b4e880a2617e905add, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ab8e5e05dcbcaa142a4b7e40677096e0, type: 2}
+    kind: 6
+    colors:
+    - 3
+  - type: 37
+    sprite: {fileID: 21300000, guid: b8a7ba862349c8d4990e4bc1fd3127c3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ab8e5e05dcbcaa142a4b7e40677096e0, type: 2}
+    kind: 6
+    colors:
+    - 0
+  - type: 38
+    sprite: {fileID: 21300000, guid: 606a71cbc71ecba4bb9416079cbd2fd2, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e91f79040da718849987bed69ba34b07, type: 2}
+    kind: 5
+    colors:
+    - 1
+  - type: 39
+    sprite: {fileID: 21300000, guid: 6dc751006a221f4439a7dda1ced93004, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 29d70909b9b3f624e9b8e30293e376ba, type: 2}
+    kind: 5
+    colors:
+    - 9
+    - 0
+  - type: 40
+    sprite: {fileID: 21300000, guid: 664f081300283194c84994e2a158f228, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 29d70909b9b3f624e9b8e30293e376ba, type: 2}
+    kind: 5
+    colors:
+    - 1
+  - type: 41
+    sprite: {fileID: 21300000, guid: a4eb018f005c10746a065b9a64c1c5a2, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 5537a91e1b4dd8a4b924aa76ef8ba4c8, type: 2}
+    kind: 10
+    colors:
+    - 3
+  - type: 42
+    sprite: {fileID: 21300000, guid: d48bc84939035494b8e2c5e13fb7ce07, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 5537a91e1b4dd8a4b924aa76ef8ba4c8, type: 2}
+    kind: 10
+    colors:
+    - 9
+  - type: 43
+    sprite: {fileID: 21300000, guid: 0034cfe4578eb0c45a516242b9c57c23, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 5537a91e1b4dd8a4b924aa76ef8ba4c8, type: 2}
+    kind: 10
+    colors:
+    - 6
+  - type: 44
+    sprite: {fileID: 21300000, guid: c69d749b886168e498626a9cbc56e5c1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 5537a91e1b4dd8a4b924aa76ef8ba4c8, type: 2}
+    kind: 10
+    colors:
+    - 6
+  - type: 45
+    sprite: {fileID: 21300000, guid: 9d872d42bc08cd745aee5f4ecd272965, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a600e579880852f4c92b2cb6141ea27a, type: 2}
+    kind: 8
+    colors:
+    - 0
+  - type: 46
+    sprite: {fileID: 21300000, guid: ce88e2af934d22d4187b31cf3ea2b85a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a600e579880852f4c92b2cb6141ea27a, type: 2}
+    kind: 8
+    colors:
+    - 18
+  - type: 47
+    sprite: {fileID: 21300000, guid: 8d31876acdbfaa142827a23f9fb398cd, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a600e579880852f4c92b2cb6141ea27a, type: 2}
+    kind: 8
+    colors:
+    - 11
+  - type: 48
+    sprite: {fileID: 21300000, guid: 73ab87d4f3268a6458a8839af3f1a3c8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7bc29a6f5bc41ae45b98fdae68309452, type: 2}
+    kind: 4
+    colors:
+    - 23
+    - 2
+  - type: 49
+    sprite: {fileID: 21300000, guid: 028bcc1e3a24e864a82f70d09158e182, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e38bfea05b2f9044ab13227838ee120d, type: 2}
+    kind: 7
+    colors:
+    - 3
+    - 8
+  - type: 50
+    sprite: {fileID: 21300000, guid: 6812660ec997fa841aeedf367a41e96f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e38bfea05b2f9044ab13227838ee120d, type: 2}
+    kind: 7
+    colors:
+    - 0
+    - 8
+  - type: 51
+    sprite: {fileID: 21300000, guid: e53562e8d9278c740a9b4e8284572cb9, type: 2}
+    spriteHidden: {fileID: 21300000, guid: de2ded6387c24bc4e96b416cacb08980, type: 2}
+    kind: 4
+    colors:
+    - 23
+    - 2
+  - type: 52
+    sprite: {fileID: 21300000, guid: c6cd6200bd03f514591ade9b6fa7001f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 734e8d7f33792194eb803e49d07b06ab, type: 2}
+    kind: 4
+    colors:
+    - 0
+    - 23
+  - type: 53
+    sprite: {fileID: 21300000, guid: f6a598013524b3148a120f69511339f4, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 33aee0ace34977a4e84169b0e7fb6c23, type: 2}
+    kind: 5
+    colors:
+    - 3
+  - type: 54
+    sprite: {fileID: 21300000, guid: dd1e6b6434596e84a945f38cf5fb80af, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 33aee0ace34977a4e84169b0e7fb6c23, type: 2}
+    kind: 5
+    colors:
+    - 0
+  - type: 55
+    sprite: {fileID: 21300000, guid: 6033332dda8e0c1448d1059bff84f0e5, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 33aee0ace34977a4e84169b0e7fb6c23, type: 2}
+    kind: 5
+    colors:
+    - 4
+  - type: 56
+    sprite: {fileID: 21300000, guid: 26de414754a816f4b8c80592c675b095, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bb2ca8999641d7c47ab8a7c352a46764, type: 2}
+    kind: 5
+    colors:
+    - 0
+  - type: 57
+    sprite: {fileID: 21300000, guid: 355c5063b052f8841b392f62fcc8b9de, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bb2ca8999641d7c47ab8a7c352a46764, type: 2}
+    kind: 5
+    colors:
+    - 1
+  - type: 58
+    sprite: {fileID: 21300000, guid: cb49e04ba55066043924f08ac36514d5, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bb2ca8999641d7c47ab8a7c352a46764, type: 2}
+    kind: 5
+    colors:
+    - 4
+    - 0
+  - type: 59
+    sprite: {fileID: 21300000, guid: 472d82c609a569f46b9886d5fcf948fa, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1c54a521278fb6e40aa23e5c04ef493f, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 60
+    sprite: {fileID: 21300000, guid: 444e26cefc08dc141a63ac742c1dec9f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1c54a521278fb6e40aa23e5c04ef493f, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 61
+    sprite: {fileID: 21300000, guid: cf8330da62f6bb74f98b7c798a19b3e6, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7703d42beb59a194e8ef24e9872a5ddc, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 9
+  - type: 62
+    sprite: {fileID: 21300000, guid: 30f32e7cbdd4e5549a45dd4e6d89d95c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: fa76a609981a17a4cbd3613476156008, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 63
+    sprite: {fileID: 21300000, guid: 1fe145e4e1a5a864588f5ede12ad34b1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c2fb39edd0511fb408ea6b97088cb517, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 64
+    sprite: {fileID: 21300000, guid: 68b40362a7dbdfc4d9046ece652084f1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c2fb39edd0511fb408ea6b97088cb517, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 65
+    sprite: {fileID: 21300000, guid: 8ae91cadc532b584fbee4ea3fa7ca10b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a0c9967ee21d8eb4f9f72e7ec6734a04, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 22
+  - type: 66
+    sprite: {fileID: 21300000, guid: 79d1d9027b7942e4b8beab627c6eda96, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a0c9967ee21d8eb4f9f72e7ec6734a04, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 3
+  - type: 67
+    sprite: {fileID: 21300000, guid: c163f6acdef687847aa4ed6a94297085, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d317c9601dff70d4190a75ba4d3cc1b6, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 3
+  - type: 68
+    sprite: {fileID: 21300000, guid: 562a55552550e5a44946b204515ab2c1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 376abe6ac07829c41860281dae8d7c1b, type: 2}
+    kind: 11
+    colors:
+    - 3
+  - type: 69
+    sprite: {fileID: 21300000, guid: fdfdaa0fc76f1c5499758642abd3360e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 551bf8a85ba0fea4f8febf85da4cf32e, type: 2}
+    kind: 11
+    colors:
+    - 1
+  - type: 70
+    sprite: {fileID: 21300000, guid: a09c48ff37f570143a3278ed38a79ab3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ff7b268137d68ef41921b0ea84bb036c, type: 2}
+    kind: 11
+    colors:
+    - 8
+    - 3
+  - type: 71
+    sprite: {fileID: 21300000, guid: bf28435409ed7c94ba677f278591aa9f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: fe33093fe43a5174aaf7d8d5ee3e0de0, type: 2}
+    kind: 6
+    colors:
+    - 0
+    - 8
+  - type: 72
+    sprite: {fileID: 21300000, guid: 0c796f9808622f64fbc69bf5150703bf, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 55afcef6ccb9a294a971621e138d9c15, type: 2}
+    kind: 7
+    colors:
+    - 3
+    - 9
+  - type: 73
+    sprite: {fileID: 21300000, guid: 65ff9b3969dc1c140bc44095b0235be3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 42d71f2db6a10fd4f90469cc0427dbe8, type: 2}
+    kind: 2
+    colors:
+    - 0
+  - type: 74
+    sprite: {fileID: 21300000, guid: eaaad9b60c2cc1e40bed515baffaa209, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 4affbb9868403764ba8ce2a4c13d8c72, type: 2}
+    kind: 4
+    colors:
+    - 23
+  - type: 75
+    sprite: {fileID: 21300000, guid: 104325ca9a541e64ab79caf7c6fcedd1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 20f82909465ce364da62a9a3aa886873, type: 2}
+    kind: 15
+    colors:
+    - 11
+    - 8
+  - type: 76
+    sprite: {fileID: 21300000, guid: 6f3447e6469d45f4686cc5c46d1e7975, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 20f82909465ce364da62a9a3aa886873, type: 2}
+    kind: 15
+    colors:
+    - 1
+  - type: 77
+    sprite: {fileID: 21300000, guid: 1365ffa36b7ce724bbe0fa85029f3972, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c5c5115791c88614386efa3d69347d97, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 78
+    sprite: {fileID: 21300000, guid: a8a1827a231119342b26c9e91192ee55, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c9d2e0dec62220343addffcb121cb08f, type: 2}
+    kind: 0
+    colors:
+    - 1
+  - type: 79
+    sprite: {fileID: 21300000, guid: e4db5e1eb8d24824eb1a35e823bc3320, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c11bc290770a25048928807927129e76, type: 2}
+    kind: 11
+    colors:
+    - 6
+  - type: 80
+    sprite: {fileID: 21300000, guid: 4722b693014e5474c8a83b71f7806982, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 774f4d4a774c3ae4e9ea30a57c2f8e35, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 9
+  - type: 81
+    sprite: {fileID: 21300000, guid: 966bb89f0e453d04a8817201409d0bae, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3c7e650e29df3d148babfc642be556cc, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 82
+    sprite: {fileID: 21300000, guid: 6e94dc097df138f4d808f3dabb93dd63, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0296c00a047901444b0b17c790c2620c, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 83
+    sprite: {fileID: 21300000, guid: 90671d704a4bffc42801aa0f3b6d6c0d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: aecfc165572d42c458dd9b880435152f, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 84
+    sprite: {fileID: 21300000, guid: e3dd0a315e4f21946913d8c4daae40fc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 4e3ef9ae872a352419f257de7825a8a4, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 85
+    sprite: {fileID: 21300000, guid: 3fda8cbbdd798b94889894c9c6431a9d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1ac6c49c8cdb36749bf0e05cca3b40a8, type: 2}
+    kind: 16
+    colors:
+    - 8
+  - type: 86
+    sprite: {fileID: 21300000, guid: 4df4cc905b26b74489e52570cc5171c7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e38bfea05b2f9044ab13227838ee120d, type: 2}
+    kind: 7
+    colors:
+    - 2
+  - type: 87
+    sprite: {fileID: 21300000, guid: 4a19cfb015c4b3443a3d51333bd8734d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 41654659c3d5eb6408815515f3e8bd03, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 88
+    sprite: {fileID: 21300000, guid: 7d1bfc5ead5d3d94f96d17e0f6d6d968, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7e8f0517435d70742b234031b898c127, type: 2}
+    kind: 0
+    colors:
+    - 11
+    - 2
+  - type: 89
+    sprite: {fileID: 21300000, guid: 1265b57576a9aca4c9a66e610bcdcd04, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f5447f97c4c1a0d46bbcf5267da2f659, type: 2}
+    kind: 0
+    colors:
+    - 13
+    - 2
+  - type: 90
+    sprite: {fileID: 21300000, guid: 3f65136d5e3a93242b433151a637464b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7e8f0517435d70742b234031b898c127, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 91
+    sprite: {fileID: 21300000, guid: 604b3886ac430f147b396d07496b33f2, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 8b7081f7355a8f046af6d24b24968f07, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 92
+    sprite: {fileID: 21300000, guid: 3b2a48294341505409fcab4fbca69e0e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 8b7081f7355a8f046af6d24b24968f07, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 93
+    sprite: {fileID: 21300000, guid: 077a91095a2949647a1027af24e2bc5a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ea6adc65e42d3ff41bc027d41d6f0f8b, type: 2}
+    kind: 0
+    colors:
+    - 8
+  - type: 94
+    sprite: {fileID: 21300000, guid: 24d8a8395f260eb40b41406e9a5a84e7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ea6adc65e42d3ff41bc027d41d6f0f8b, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 95
+    sprite: {fileID: 21300000, guid: 2221010a0b03f194dba995467e1a3fbc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ea6adc65e42d3ff41bc027d41d6f0f8b, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 8
+  - type: 96
+    sprite: {fileID: 21300000, guid: cb7fe2e2b9cea1649ad516e89a7d7b8f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6753f9b4a35138d47bccfa877e7ce250, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 9
+  - type: 97
+    sprite: {fileID: 21300000, guid: f38770cb011a66944b8fb37815476727, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6753f9b4a35138d47bccfa877e7ce250, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 98
+    sprite: {fileID: 21300000, guid: 3e0d00e71f97c8a4e9115dd954b0d980, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6753f9b4a35138d47bccfa877e7ce250, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 9
+  - type: 99
+    sprite: {fileID: 21300000, guid: 83ef3ff884173cc4082d564a6c31a496, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d5a41a51dd26a1e4ebc5cc1d4406b6cc, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 100
+    sprite: {fileID: 21300000, guid: f49e514974e660d4fbfab28221ac1732, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a65f5b97de0851341a8760f31c0f23c2, type: 2}
+    kind: 0
+    colors:
+    - 4
+    - 8
+  - type: 101
+    sprite: {fileID: 21300000, guid: a92ed79cd69a88543b34d64a799fa5e8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a65f5b97de0851341a8760f31c0f23c2, type: 2}
+    kind: 0
+    colors:
+    - 11
+    - 8
+  - type: 102
+    sprite: {fileID: 21300000, guid: 755485b51127b46418c2df21459c4de3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a65f5b97de0851341a8760f31c0f23c2, type: 2}
+    kind: 0
+    colors:
+    - 6
+    - 8
+  - type: 103
+    sprite: {fileID: 21300000, guid: acb632a1c48c96544909a7508fc17252, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c274cdead5f78644c82500ed8f4c6b7e, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 104
+    sprite: {fileID: 21300000, guid: 07b37c4bd46b32e4ab4e5116cd5718ea, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c274cdead5f78644c82500ed8f4c6b7e, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 105
+    sprite: {fileID: 21300000, guid: 7dbfd54a09595e74eb0d6272a6443fb1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c274cdead5f78644c82500ed8f4c6b7e, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 106
+    sprite: {fileID: 21300000, guid: 3cc07c350aa828544a14912f172bc63f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 5a88e00a3085a3443b8fec1b4b3f5be7, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 107
+    sprite: {fileID: 21300000, guid: d794c86196883b747a823c4dfda52afe, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 5a88e00a3085a3443b8fec1b4b3f5be7, type: 2}
+    kind: 0
+    colors:
+    - 18
+  - type: 108
+    sprite: {fileID: 21300000, guid: 23e072b8e2cbe154fbe512db1390ce74, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 5a88e00a3085a3443b8fec1b4b3f5be7, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 109
+    sprite: {fileID: 21300000, guid: 416f44012af0b3c41b0a65d7bfc05c87, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e198362110a4da7499d4743b81c1cb1a, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 110
+    sprite: {fileID: 21300000, guid: 68c4e80c9785e264c99af141b6296696, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e198362110a4da7499d4743b81c1cb1a, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 111
+    sprite: {fileID: 21300000, guid: b75f95cab9a2a9f4d911be511e939435, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e198362110a4da7499d4743b81c1cb1a, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 8
+  - type: 112
+    sprite: {fileID: 21300000, guid: 63031c069a876c245854c60846413897, type: 2}
+    spriteHidden: {fileID: 21300000, guid: dd5d07a6d9bda61448a31faebe892f8d, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 113
+    sprite: {fileID: 21300000, guid: 82c53363c8f001340a0be06781ebbb5b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a29388651c762fa41ae02f856b8bfa6c, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 114
+    sprite: {fileID: 21300000, guid: 5a8bb733f4ebb324fb0cfed5d8ebd8ed, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a29388651c762fa41ae02f856b8bfa6c, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 115
+    sprite: {fileID: 21300000, guid: 3544d5fc1a4d68c419fc7f4223331e80, type: 2}
+    spriteHidden: {fileID: 21300000, guid: fc7dcf6c9659f7b46882576257701744, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 116
+    sprite: {fileID: 21300000, guid: 7a41bba0418f19541ad8f61b113ddeb6, type: 2}
+    spriteHidden: {fileID: 21300000, guid: fc7dcf6c9659f7b46882576257701744, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 117
+    sprite: {fileID: 21300000, guid: f047d29a9cae3f641929b76ae9270bec, type: 2}
+    spriteHidden: {fileID: 21300000, guid: fc7dcf6c9659f7b46882576257701744, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 118
+    sprite: {fileID: 21300000, guid: 89a638a0471f22c478dea08f2190bbb1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 82bdac8055955ff48a3cecb1ccb4f6b4, type: 2}
+    kind: 0
+    colors:
+    - 7
+    - 8
+  - type: 119
+    sprite: {fileID: 21300000, guid: c61947a5e65dbac4b8bee1b38121013c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 82bdac8055955ff48a3cecb1ccb4f6b4, type: 2}
+    kind: 0
+    colors:
+    - 7
+    - 8
+  - type: 120
+    sprite: {fileID: 21300000, guid: 829dad83b4cd9cf47af1b12a2cfa07d9, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 82bdac8055955ff48a3cecb1ccb4f6b4, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 8
+  - type: 121
+    sprite: {fileID: 21300000, guid: 13a663e1856226c4e98b1923a3f49563, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1965bf41fd19d1c4dac4bac863ecb770, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 122
+    sprite: {fileID: 21300000, guid: b9a2dadbd88b81a44b9ed04497dbf307, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1965bf41fd19d1c4dac4bac863ecb770, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 123
+    sprite: {fileID: 21300000, guid: 06f86eedb3e9bd343b09782b7ea5b53d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: aa137708b5838b04ebd193b97c4f1fae, type: 2}
+    kind: 0
+    colors:
+    - 23
+  - type: 124
+    sprite: {fileID: 21300000, guid: 386655751fd93454d8ee95ba733e7150, type: 2}
+    spriteHidden: {fileID: 21300000, guid: aa137708b5838b04ebd193b97c4f1fae, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 125
+    sprite: {fileID: 21300000, guid: 1b870bea68efea045a49f2db53777048, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 03153d2eb09014d44aa088fcca21db4e, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 126
+    sprite: {fileID: 21300000, guid: 9a9c6b8c2cef9514192cb2aed4e821b4, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 03153d2eb09014d44aa088fcca21db4e, type: 2}
+    kind: 0
+    colors:
+    - 23
+  - type: 127
+    sprite: {fileID: 21300000, guid: f03951be34bc9874289a14882da1011c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: eaa9d032d9e9c1946bc22d4a38061b43, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 8
+  - type: 128
+    sprite: {fileID: 21300000, guid: 284cbced61ce53340b4d9f6362720d01, type: 2}
+    spriteHidden: {fileID: 21300000, guid: eaa9d032d9e9c1946bc22d4a38061b43, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 8
+  - type: 129
+    sprite: {fileID: 21300000, guid: fc498f7cc48721e4f94e9b9c495318bd, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f1c5a8dea2796c045a11c6ac901b1081, type: 2}
+    kind: 0
+    colors:
+    - 23
+  - type: 130
+    sprite: {fileID: 21300000, guid: b3365fa13bdc7144db9db69c729f52d6, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f1c5a8dea2796c045a11c6ac901b1081, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 131
+    sprite: {fileID: 21300000, guid: 5f77c4f0d83f99f48b6b584ec3d740f1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f1c5a8dea2796c045a11c6ac901b1081, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 132
+    sprite: {fileID: 21300000, guid: 03a83f05a1d6b9d438164df61844dac7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c39b9a71b50e0d84697e8a477acfe1e3, type: 2}
+    kind: 0
+    colors:
+    - 23
+  - type: 133
+    sprite: {fileID: 21300000, guid: 133257d62e2a5b64382ca9f38a6560dc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c39b9a71b50e0d84697e8a477acfe1e3, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 134
+    sprite: {fileID: 21300000, guid: 016ee4055f508364da0c65eb4caaa1a8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 33aee0ace34977a4e84169b0e7fb6c23, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 135
+    sprite: {fileID: 21300000, guid: 961888772e57e694fbe7494bdc916daa, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 33aee0ace34977a4e84169b0e7fb6c23, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 136
+    sprite: {fileID: 21300000, guid: 99aaa2c383ee6b245b399149b743f57f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 33aee0ace34977a4e84169b0e7fb6c23, type: 2}
+    kind: 0
+    colors:
+    - 1
+  - type: 137
+    sprite: {fileID: 21300000, guid: 7cc067ee3c48d50458406740a77ba36e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 33aee0ace34977a4e84169b0e7fb6c23, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 138
+    sprite: {fileID: 21300000, guid: 73c4dd8729e85794f81f40ef66b41d03, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e38bfea05b2f9044ab13227838ee120d, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 139
+    sprite: {fileID: 21300000, guid: 7a006b0dba99c0845b53fd27f954e4e7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e38bfea05b2f9044ab13227838ee120d, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 140
+    sprite: {fileID: 21300000, guid: 0d1074ea99b31104898b7eb3967c87e3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e38bfea05b2f9044ab13227838ee120d, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 141
+    sprite: {fileID: 21300000, guid: 8ebd8a2bf10c65944aa2e87edd3a5f25, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e38bfea05b2f9044ab13227838ee120d, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 142
+    sprite: {fileID: 21300000, guid: 563aa63ba38c15946bb36554a83d87f3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a600e579880852f4c92b2cb6141ea27a, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 143
+    sprite: {fileID: 21300000, guid: e11f9be14d945d2489f9249b6b76181c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a600e579880852f4c92b2cb6141ea27a, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 144
+    sprite: {fileID: 21300000, guid: 34bd2a9bc6f89de4eb27521386c94564, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a600e579880852f4c92b2cb6141ea27a, type: 2}
+    kind: 0
+    colors:
+    - 8
+  - type: 145
+    sprite: {fileID: 21300000, guid: b13406f6ec55c5e499c19b5b462390e1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a600e579880852f4c92b2cb6141ea27a, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 146
+    sprite: {fileID: 21300000, guid: 4531821503e41cc429d17e2a635c6940, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e68c2639d0cf33e419497776fd92f9ab, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 147
+    sprite: {fileID: 21300000, guid: 765bd1651ba91c74f8b9043e8dbbd3ef, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e68c2639d0cf33e419497776fd92f9ab, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 6
+  - type: 148
+    sprite: {fileID: 21300000, guid: f8c6c8213f6b13941ad1a7cbbecfa4a4, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e68c2639d0cf33e419497776fd92f9ab, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 149
+    sprite: {fileID: 21300000, guid: 464cea48c6d4a8841ac587c38d8b56cf, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f42901ee355a7b84e87fe3dde9816d77, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 150
+    sprite: {fileID: 21300000, guid: 970494dffbea37a4bb98c2119ab8fee5, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f42901ee355a7b84e87fe3dde9816d77, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 151
+    sprite: {fileID: 21300000, guid: f1a5f54496b7ecb4587e48c5e5a86358, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f42901ee355a7b84e87fe3dde9816d77, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 152
+    sprite: {fileID: 21300000, guid: b325eaceed398174a83b8248b8ae67a8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f42901ee355a7b84e87fe3dde9816d77, type: 2}
+    kind: 0
+    colors:
+    - 23
+  - type: 153
+    sprite: {fileID: 21300000, guid: a8b5fd39a22f9b942ae1d8777e5462ee, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f42901ee355a7b84e87fe3dde9816d77, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 154
+    sprite: {fileID: 21300000, guid: 6d1687334ea0c8d4fb775e4a1564346a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 33aee0ace34977a4e84169b0e7fb6c23, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 155
+    sprite: {fileID: 21300000, guid: 41e6575fdd4403b45b9a346a4f8fcc9c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ae3f141fcc793a43a7db5dbee9d84dd, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 156
+    sprite: {fileID: 21300000, guid: 5f81a06738560004fba1ab7745664b7c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ae3f141fcc793a43a7db5dbee9d84dd, type: 2}
+    kind: 0
+    colors:
+    - 8
+  - type: 157
+    sprite: {fileID: 21300000, guid: 748d81d8b551813458755d6a67fdd233, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ae3f141fcc793a43a7db5dbee9d84dd, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 158
+    sprite: {fileID: 21300000, guid: 712b42855171d884d9be631adcc81537, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ae3f141fcc793a43a7db5dbee9d84dd, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 159
+    sprite: {fileID: 21300000, guid: 13a85d41ba1dc0445a58f8bc8be251ac, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ae3f141fcc793a43a7db5dbee9d84dd, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 160
+    sprite: {fileID: 21300000, guid: ea53a1e388673a5429b07183f6b07e7f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 72332a9c2a0677547a548b30c612e1a7, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 161
+    sprite: {fileID: 21300000, guid: 1f8e36322f6dba541b755074107e5fc9, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 72332a9c2a0677547a548b30c612e1a7, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 162
+    sprite: {fileID: 21300000, guid: a2a00322e5553e644afb82fb8d28edb4, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 72332a9c2a0677547a548b30c612e1a7, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 163
+    sprite: {fileID: 21300000, guid: 05371bcaf2805824e90a72b7f74b1115, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 72332a9c2a0677547a548b30c612e1a7, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 164
+    sprite: {fileID: 21300000, guid: c3687b5cf7d4e304fb2dda0e1a63d6e9, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 72332a9c2a0677547a548b30c612e1a7, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 165
+    sprite: {fileID: 21300000, guid: 0ba660ca6c5c34a4e91df32621bb6a3b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 93f12c9ee69da7141815101e3307c67f, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 166
+    sprite: {fileID: 21300000, guid: d51978c0004c09f4ba6274e1bc215598, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 93f12c9ee69da7141815101e3307c67f, type: 2}
+    kind: 0
+    colors:
+    - 1
+  - type: 167
+    sprite: {fileID: 21300000, guid: 1e3f9d77b125d444dbf3e93dc8ba5140, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 93f12c9ee69da7141815101e3307c67f, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 168
+    sprite: {fileID: 21300000, guid: a9796fd0312cefd49a3c6bed07443163, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 93f12c9ee69da7141815101e3307c67f, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 169
+    sprite: {fileID: 21300000, guid: 8d9e57ff9bdb66641a185e90214ad399, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 93f12c9ee69da7141815101e3307c67f, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 170
+    sprite: {fileID: 21300000, guid: 9d6dfa1c7436f634ea6a4331bce4bf94, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 93f12c9ee69da7141815101e3307c67f, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 171
+    sprite: {fileID: 21300000, guid: e9fe358f571e7cc4c9c95fa33a60844f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d31e0a80182c34248880542d4b120e0b, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 172
+    sprite: {fileID: 21300000, guid: 00d67b7a24e670d4f91f58f57472fefd, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d31e0a80182c34248880542d4b120e0b, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 173
+    sprite: {fileID: 21300000, guid: 9ec7c902c7b22534c84672aa052c74eb, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d31e0a80182c34248880542d4b120e0b, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 174
+    sprite: {fileID: 21300000, guid: e84c00548f5dfdc46923b1f48deca051, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d31e0a80182c34248880542d4b120e0b, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 175
+    sprite: {fileID: 21300000, guid: 165d612e27003994d8108f2e6186f6ee, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 162ae50822b124b49a84214d258b3756, type: 2}
+    kind: 0
+    colors:
+    - 8
+    - 10
+  - type: 176
+    sprite: {fileID: 21300000, guid: 077d5849a8110b948be51d3e6be4dd98, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 162ae50822b124b49a84214d258b3756, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 177
+    sprite: {fileID: 21300000, guid: a52db1d018b57244ab0b8d175c4a31a7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 162ae50822b124b49a84214d258b3756, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 8
+  - type: 178
+    sprite: {fileID: 21300000, guid: 5ed780da5b651f743be480557a15b681, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bbd168c1f55d01d42b022c09d28bcbb9, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 8
+  - type: 179
+    sprite: {fileID: 21300000, guid: 0ae6db4ee94f26f4cae51865ad587313, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bbd168c1f55d01d42b022c09d28bcbb9, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 8
+  - type: 180
+    sprite: {fileID: 21300000, guid: b287957eea8a44647906e59a4b799716, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bbd168c1f55d01d42b022c09d28bcbb9, type: 2}
+    kind: 0
+    colors:
+    - 6
+    - 8
+  - type: 181
+    sprite: {fileID: 21300000, guid: a5935efa6a3c21b49b00d1357ecaf937, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ceb0d266bf1f564fbfb43f31cce3310, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 182
+    sprite: {fileID: 21300000, guid: 15c3dc72f07282b418c9cfb0f75f6699, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ceb0d266bf1f564fbfb43f31cce3310, type: 2}
+    kind: 0
+    colors:
+    - 8
+  - type: 183
+    sprite: {fileID: 21300000, guid: e0c5752884b01e44fad5d4969ccd920b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ceb0d266bf1f564fbfb43f31cce3310, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 184
+    sprite: {fileID: 21300000, guid: 7f19d34f888e33d41994d25fc93fbedd, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ceb0d266bf1f564fbfb43f31cce3310, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 185
+    sprite: {fileID: 21300000, guid: c8089c0ec2bcbf44eb0a91173ed4bb7a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 101f5afe850f5c8459b0895da4c35870, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 186
+    sprite: {fileID: 21300000, guid: 18cb5c56e9d1b1a409fbaab9de04df0e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 101f5afe850f5c8459b0895da4c35870, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 187
+    sprite: {fileID: 21300000, guid: 34fc08fc832104144a4ea1b798ca8574, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 101f5afe850f5c8459b0895da4c35870, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 188
+    sprite: {fileID: 21300000, guid: add2e7faee492a04c83eb3f617deb1cb, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 101f5afe850f5c8459b0895da4c35870, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 189
+    sprite: {fileID: 21300000, guid: 4fa4dba3b3bf8bd4f853a44f3bef4996, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2848a426dc3ed1f48ae1d6bcfcfee33d, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 190
+    sprite: {fileID: 21300000, guid: 4f384f15d25c5494fb3d640e7495d922, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2848a426dc3ed1f48ae1d6bcfcfee33d, type: 2}
+    kind: 0
+    colors:
+    - 19
+  - type: 191
+    sprite: {fileID: 21300000, guid: ba24041b501fc6b4088a10c5c9e86b04, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2848a426dc3ed1f48ae1d6bcfcfee33d, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 192
+    sprite: {fileID: 21300000, guid: e0e3d302139062943a58f73d404e33a9, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2848a426dc3ed1f48ae1d6bcfcfee33d, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 193
+    sprite: {fileID: 21300000, guid: 4de0eef9bf2670843a6d47e9d039099c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6be9c817f5201584abcb6cab34e7804e, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 194
+    sprite: {fileID: 21300000, guid: 1c53174e3eb2a5f48a988a87a670beb5, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6be9c817f5201584abcb6cab34e7804e, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 195
+    sprite: {fileID: 21300000, guid: ffe9ef54e1509e44aa7f241b446ca23b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6be9c817f5201584abcb6cab34e7804e, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 196
+    sprite: {fileID: 21300000, guid: e6465979f755cc04090a8694e0e06211, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6be9c817f5201584abcb6cab34e7804e, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 197
+    sprite: {fileID: 21300000, guid: 304ee329d46412b4280637e5042398a6, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c5cb81314d2641345b59bd5bb0cfdc79, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 198
+    sprite: {fileID: 21300000, guid: 67c7b46cf46d92c4b890dbd93e285a91, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c5cb81314d2641345b59bd5bb0cfdc79, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 199
+    sprite: {fileID: 21300000, guid: e972786c5db3f3d4d9a060eb57948208, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c5cb81314d2641345b59bd5bb0cfdc79, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 200
+    sprite: {fileID: 21300000, guid: a69d9256a05b3e743ab0c3dce4ac4f1b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c5cb81314d2641345b59bd5bb0cfdc79, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 201
+    sprite: {fileID: 21300000, guid: 6c375f1c3c3cefb4583a80f2a8e742f2, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3361aa01772f1147ac9e529d337b26b, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 202
+    sprite: {fileID: 21300000, guid: fdcbdee01fdf7434580426d6b6aa340e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3361aa01772f1147ac9e529d337b26b, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 203
+    sprite: {fileID: 21300000, guid: 25a3d6d7f6a3d6b4fac9e832acd529a7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3361aa01772f1147ac9e529d337b26b, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 204
+    sprite: {fileID: 21300000, guid: acb5e1a664563134481d8e0d402687e2, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3361aa01772f1147ac9e529d337b26b, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 205
+    sprite: {fileID: 21300000, guid: a6bb304ee64035d44b616ee3b7d07eed, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3361aa01772f1147ac9e529d337b26b, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 206
+    sprite: {fileID: 21300000, guid: 7a79b72fae239ce43816305f6fb92794, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3361aa01772f1147ac9e529d337b26b, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 207
+    sprite: {fileID: 21300000, guid: 6d43e5df704f7d04698e5db16b7b28e2, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3361aa01772f1147ac9e529d337b26b, type: 2}
+    kind: 0
+    colors:
+    - 21
+  - type: 208
+    sprite: {fileID: 21300000, guid: e88fcd9881aea1943a985ddab5e55213, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0da3db84863708a49a6233e5949eae0e, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 209
+    sprite: {fileID: 21300000, guid: ecf421aa5001a3544a425f2430196dd4, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0da3db84863708a49a6233e5949eae0e, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 210
+    sprite: {fileID: 21300000, guid: 13cf7f567155f2f4fa4ed89bbf17da1b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0da3db84863708a49a6233e5949eae0e, type: 2}
+    kind: 0
+    colors:
+    - 1
+    - 9
+  - type: 211
+    sprite: {fileID: 21300000, guid: 81365c5ef0f7bba4fb4003ced66a9c76, type: 2}
+    spriteHidden: {fileID: 21300000, guid: abecf8fe8d9023d4b83da56db64a54a6, type: 2}
+    kind: 0
+    colors: []
+  - type: 212
+    sprite: {fileID: 21300000, guid: 2115003824a647944a84387487827a64, type: 2}
+    spriteHidden: {fileID: 21300000, guid: abecf8fe8d9023d4b83da56db64a54a6, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 213
+    sprite: {fileID: 21300000, guid: 5f2aed583ae342a499dea2c2c2986404, type: 2}
+    spriteHidden: {fileID: 21300000, guid: abecf8fe8d9023d4b83da56db64a54a6, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 214
+    sprite: {fileID: 21300000, guid: e39c83ee7b142b64db49f091949cd12d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: abecf8fe8d9023d4b83da56db64a54a6, type: 2}
+    kind: 0
+    colors:
+    - 1
+  - type: 215
+    sprite: {fileID: 21300000, guid: fdd705fd0d7374749af9b332b8657f70, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a5bde93991cca6845ba5ec43f0c55862, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 216
+    sprite: {fileID: 21300000, guid: 1b484f5005b61864a9da8d997a58e77d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a5bde93991cca6845ba5ec43f0c55862, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 217
+    sprite: {fileID: 21300000, guid: 121facb4de2bfa644886784ed321cc62, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a5bde93991cca6845ba5ec43f0c55862, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 218
+    sprite: {fileID: 21300000, guid: 852ece3f728b4434a8305e1211ff4df0, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7c0126587f70cc74098e3e90a5dfb15c, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 219
+    sprite: {fileID: 21300000, guid: 7d91743e81da22346930d08d787c82ec, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 8f732bf06f374f24683d395b2c7379c7, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 220
+    sprite: {fileID: 21300000, guid: 6f737cdf0c52d1249981380ce0026897, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 57450e0afe8dba046983d2b9c9ff28d6, type: 2}
+    kind: 0
+    colors:
+    - 8
+  - type: 221
+    sprite: {fileID: 21300000, guid: df0dbd662cb94ef449a1c194301e37d1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 84963bfbb46150742b424519e83556bf, type: 2}
+    kind: 0
+    colors:
+    - 21
+  - type: 222
+    sprite: {fileID: 21300000, guid: 5416d3b7aac672b4aa2dcf2fe26272a3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2c202f671bb233f49adabc699fe75132, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 223
+    sprite: {fileID: 21300000, guid: 7508b8b4b9272c749900c88c6c0050e5, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2c202f671bb233f49adabc699fe75132, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 224
+    sprite: {fileID: 21300000, guid: b1c53513efdd8294495318b80ed17c5c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2c202f671bb233f49adabc699fe75132, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 225
+    sprite: {fileID: 21300000, guid: 9e2464957b152a844adbcc061c9944d9, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2262912c1d2de1a43aaa35ed166e3b01, type: 2}
+    kind: 0
+    colors:
+    - 21
+    - 2
+  - type: 226
+    sprite: {fileID: 21300000, guid: 7343ee963098fbd43ae436df6ce04ac1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: dc094b6a5473ca641b6e9a453959cedd, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 227
+    sprite: {fileID: 21300000, guid: 76376588edaa1624b95a9d5b2290b1b3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0b177a52f259d684ba5e9ba4c15a76d3, type: 2}
+    kind: 0
+    colors:
+    - 4
+    - 2
+  - type: 228
+    sprite: {fileID: 21300000, guid: 9d4f81bcd11cca740b947c9a7e7a6dbc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ec9722bbe971df41b8c5c2fb2ecbaa5, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 229
+    sprite: {fileID: 21300000, guid: 88c19e89b92af464d856b79904216191, type: 2}
+    spriteHidden: {fileID: 21300000, guid: acbd3cdf81a117d4c9784d6f93ec26c4, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 230
+    sprite: {fileID: 21300000, guid: 664e96434f78c7a4cb977f5a17214292, type: 2}
+    spriteHidden: {fileID: 21300000, guid: acbd3cdf81a117d4c9784d6f93ec26c4, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 231
+    sprite: {fileID: 21300000, guid: 2946a9dbdaf07a44dba9c6d62b2f91ad, type: 2}
+    spriteHidden: {fileID: 21300000, guid: acbd3cdf81a117d4c9784d6f93ec26c4, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 232
+    sprite: {fileID: 21300000, guid: 1598676b3639bcc4ea8b3dca7afe96ff, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a5dafc79bf853074782e5a7db78424f3, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 233
+    sprite: {fileID: 21300000, guid: 09395004c5911934d8424964a7434845, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a5dafc79bf853074782e5a7db78424f3, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 234
+    sprite: {fileID: 21300000, guid: c54504906a2b2dd4ab5e276bdb93c499, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bbd168c1f55d01d42b022c09d28bcbb9, type: 2}
+    kind: 0
+    colors:
+    - 7
+    - 8
+  - type: 235
+    sprite: {fileID: 21300000, guid: 92b139ae219ed5047a2995a0c6156c7d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bb2ca8999641d7c47ab8a7c352a46764, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 236
+    sprite: {fileID: 21300000, guid: 5171d5cbbc401e44d98f2cb1fdeec43a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bb2ca8999641d7c47ab8a7c352a46764, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 237
+    sprite: {fileID: 21300000, guid: 5887ee73123657343a511011434ca131, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bb2ca8999641d7c47ab8a7c352a46764, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 238
+    sprite: {fileID: 21300000, guid: 8f2cef34f1e9a59459a2e75fa34facc1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bb2ca8999641d7c47ab8a7c352a46764, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 239
+    sprite: {fileID: 21300000, guid: 9811d6d1eeed7c440ab6412f760fc991, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6080416f310043a43b31be8e1ff0cf99, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 240
+    sprite: {fileID: 21300000, guid: 97b235033c385644ca2a9baae34acc5e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6080416f310043a43b31be8e1ff0cf99, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 241
+    sprite: {fileID: 21300000, guid: 309c376f7229b9540b25533f65b703c6, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6080416f310043a43b31be8e1ff0cf99, type: 2}
+    kind: 0
+    colors:
+    - 19
+  - type: 242
+    sprite: {fileID: 21300000, guid: 7585c73463dfd7048b796030cb341c78, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6080416f310043a43b31be8e1ff0cf99, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 8
+  - type: 243
+    sprite: {fileID: 21300000, guid: b2202ce0739798f42b9c59d54a9ba247, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 84230439a933863418dcf68e4ba269f9, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 244
+    sprite: {fileID: 21300000, guid: 98044cca48fd0aa40b8cdc72e41fbc41, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 84230439a933863418dcf68e4ba269f9, type: 2}
+    kind: 0
+    colors:
+    - 19
+  - type: 245
+    sprite: {fileID: 21300000, guid: 4e2411b0bb02dab4492ed4243168b452, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 84230439a933863418dcf68e4ba269f9, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 246
+    sprite: {fileID: 21300000, guid: ec65400709acf5c4c8ccce92759e9913, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3009fe766c7d6984a849e4e119696c1d, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 247
+    sprite: {fileID: 21300000, guid: 68c0b4b5d66f64c478dbebdb658285f8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3009fe766c7d6984a849e4e119696c1d, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 248
+    sprite: {fileID: 21300000, guid: 72c92b5d1f6dd504c94ecdee748ac015, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3009fe766c7d6984a849e4e119696c1d, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 249
+    sprite: {fileID: 21300000, guid: 21ea4888d0db2344abf0786c4464b648, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3009fe766c7d6984a849e4e119696c1d, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 250
+    sprite: {fileID: 21300000, guid: 0ef7ef12d377fc747a8a11a80ca68013, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 967151a3743efb44aae8c1fd6e6ecd6e, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 251
+    sprite: {fileID: 21300000, guid: ad3327a1a231f404b8a2f19cc3ce2c6d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 967151a3743efb44aae8c1fd6e6ecd6e, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 252
+    sprite: {fileID: 21300000, guid: 01fda74b15635f74ca77de987df0b92a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 967151a3743efb44aae8c1fd6e6ecd6e, type: 2}
+    kind: 0
+    colors:
+    - 21
+  - type: 253
+    sprite: {fileID: 21300000, guid: 65ebe45e0d659284d88f9023b821b55b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 967151a3743efb44aae8c1fd6e6ecd6e, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 254
+    sprite: {fileID: 21300000, guid: 56887948d5643804290f18a6c88c591b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3009fe766c7d6984a849e4e119696c1d, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 2
+  - type: 255
+    sprite: {fileID: 21300000, guid: 1bd7923530482814e8492e70f9b87e59, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 46be99d1f63f72541b24078909e22654, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 0
+  - type: 256
+    sprite: {fileID: 21300000, guid: 6f80d6c3cc53f034480946134e8271e5, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 46be99d1f63f72541b24078909e22654, type: 2}
+    kind: 0
+    colors:
+    - 19
+  - type: 257
+    sprite: {fileID: 21300000, guid: 06c6049fa13c8d842826bde6b3e86a3c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 46be99d1f63f72541b24078909e22654, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 258
+    sprite: {fileID: 21300000, guid: 8d388f9119b7a234a8217703e5e0b437, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f9daec92471ff9a419b6341bc493bb6f, type: 2}
+    kind: 0
+    colors:
+    - 8
+  - type: 259
+    sprite: {fileID: 21300000, guid: f6de61d21770e1c4ea7f40a773359703, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 762897b21c0e2c64083842a371a762ca, type: 2}
+    kind: 0
+    colors:
+    - 8
+    - 3
+  - type: 260
+    sprite: {fileID: 21300000, guid: 12eb7f0db75fc5245b533be5f5a3ccd2, type: 2}
+    spriteHidden: {fileID: 21300000, guid: efa62854e710e6d458ac1b1f64709945, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 8
+  - type: 261
+    sprite: {fileID: 21300000, guid: 290acc288eb411d47962599d8d1386d5, type: 2}
+    spriteHidden: {fileID: 21300000, guid: efa62854e710e6d458ac1b1f64709945, type: 2}
+    kind: 0
+    colors:
+    - 4
+    - 8
+  - type: 262
+    sprite: {fileID: 21300000, guid: 1550dacc979e3eb46b37fde3988de117, type: 2}
+    spriteHidden: {fileID: 21300000, guid: efa62854e710e6d458ac1b1f64709945, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 8
+  - type: 263
+    sprite: {fileID: 21300000, guid: cdeb80056b058ca4a9ec0eb8eade3b0f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: efa62854e710e6d458ac1b1f64709945, type: 2}
+    kind: 0
+    colors:
+    - 6
+    - 8
+  - type: 264
+    sprite: {fileID: 21300000, guid: 379c0517facfe104bb9b732d2f8f12d5, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 09eef7fc611d3884abb2627ea40d55b0, type: 2}
+    kind: 0
+    colors:
+    - 21
+  - type: 265
+    sprite: {fileID: 21300000, guid: 1c7ae50364b7f794984e50c3f1baaadc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 09eef7fc611d3884abb2627ea40d55b0, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 266
+    sprite: {fileID: 21300000, guid: 1bb05639b729a5e4e9ff792d67699b19, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 09eef7fc611d3884abb2627ea40d55b0, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 267
+    sprite: {fileID: 21300000, guid: 156de198c53e91d44910a9eda5ef380d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 09eef7fc611d3884abb2627ea40d55b0, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 268
+    sprite: {fileID: 21300000, guid: 501409058fe8d8d4ab8cecd4cf04c110, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bacc6ea7a2379ab4f857d2c6a5ac49a5, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 1
+  - type: 269
+    sprite: {fileID: 21300000, guid: a65c4f4ab1b311a498370113be632e89, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bacc6ea7a2379ab4f857d2c6a5ac49a5, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 10
+  - type: 270
+    sprite: {fileID: 21300000, guid: e724a70e31931df4489942e9e84ecefe, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6b0bb44e4962a304f8a0eb0b431f91cf, type: 2}
+    kind: 0
+    colors:
+    - 4
+    - 2
+  - type: 271
+    sprite: {fileID: 21300000, guid: 7d66bb840a703a74eb5090bf75cdc201, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ef955242b70de54e9c1d9bceb422792, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 272
+    sprite: {fileID: 21300000, guid: e9def81de31844b4595e16e2e01f8d68, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ef955242b70de54e9c1d9bceb422792, type: 2}
+    kind: 0
+    colors:
+    - 21
+  - type: 273
+    sprite: {fileID: 21300000, guid: 065e12bfb09e2bc45b9a4b50e7811ddb, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6ef955242b70de54e9c1d9bceb422792, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 274
+    sprite: {fileID: 21300000, guid: 7db3f3a2c2d33824b852f4289d836c79, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ab2099abe81168d4489d85026c526ff2, type: 2}
+    kind: 0
+    colors:
+    - 1
+  - type: 275
+    sprite: {fileID: 21300000, guid: 06b0a0a13d4700b409a7d4cdc5dc7b3a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ab2099abe81168d4489d85026c526ff2, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 276
+    sprite: {fileID: 21300000, guid: 5c62b70ce4d5bc34d99b9d49c472cd76, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ab2099abe81168d4489d85026c526ff2, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 277
+    sprite: {fileID: 21300000, guid: 75b26a5da59c34a4dbbe9fb116626a82, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2fe32c164f72f8e4aa4fa8a8bb8915c0, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 278
+    sprite: {fileID: 21300000, guid: 33ec4dac2e3677f40a3b31693027ce2c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2fe32c164f72f8e4aa4fa8a8bb8915c0, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 279
+    sprite: {fileID: 21300000, guid: c65ad5bd1825af7468d8adde1b1b4b56, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2fe32c164f72f8e4aa4fa8a8bb8915c0, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 280
+    sprite: {fileID: 21300000, guid: 0da34c0382d95c14ba46d9e5dbfc2c4e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2fe32c164f72f8e4aa4fa8a8bb8915c0, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 281
+    sprite: {fileID: 21300000, guid: 2e466fdfb5f0ce64c9dd323a1bf3a878, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 2fe32c164f72f8e4aa4fa8a8bb8915c0, type: 2}
+    kind: 0
+    colors:
+    - 1
+  - type: 282
+    sprite: {fileID: 21300000, guid: 1a69de9d211824646a117486f7f59fda, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 073db97efa187ef41b61a69c9ab2477b, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 283
+    sprite: {fileID: 21300000, guid: c9d71fc0ee65e9c44a19a6346d7bdd1a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 073db97efa187ef41b61a69c9ab2477b, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 284
+    sprite: {fileID: 21300000, guid: ed5ce5d6da84f0c4b90aade6b01f4371, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 073db97efa187ef41b61a69c9ab2477b, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 285
+    sprite: {fileID: 21300000, guid: e412884673bb6434e9a9558ae8c884f6, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 073db97efa187ef41b61a69c9ab2477b, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 286
+    sprite: {fileID: 21300000, guid: 4758713cdb3954e4c98b8c74f16597f9, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3e50e38c4d850446ad6f853c44c6a19, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 287
+    sprite: {fileID: 21300000, guid: 2e079dba7a1b53d47a676c657e7d7a79, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3e50e38c4d850446ad6f853c44c6a19, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 288
+    sprite: {fileID: 21300000, guid: 112f776037ab64149b94b5ffcaf5666d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3e50e38c4d850446ad6f853c44c6a19, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 289
+    sprite: {fileID: 21300000, guid: 1d6ad825995b6d242b4c883ef9c99a92, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3e50e38c4d850446ad6f853c44c6a19, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 290
+    sprite: {fileID: 21300000, guid: 4403b2d4402d45b4c97360a307d9ee4c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b3e50e38c4d850446ad6f853c44c6a19, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 291
+    sprite: {fileID: 21300000, guid: bf83014c3a6b1d647ae0474e9fd21b35, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b1f528cedbf297849867c2c3b65e7cc8, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 3
+  - type: 292
+    sprite: {fileID: 21300000, guid: f9e44d2fc2e34a342817b235d2ea423f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b1f528cedbf297849867c2c3b65e7cc8, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 2
+  - type: 293
+    sprite: {fileID: 21300000, guid: eb4410bbaa5a78d4d83a8ec40b2e171c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b1f528cedbf297849867c2c3b65e7cc8, type: 2}
+    kind: 0
+    colors:
+    - 6
+    - 19
+  - type: 294
+    sprite: {fileID: 21300000, guid: 43e5a7cc1844c394fa82d04b1222242b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b6faec546837fe842bea100c0c3a1015, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 295
+    sprite: {fileID: 21300000, guid: bc6ce10f26646364580ad3a41fd9b83f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b6faec546837fe842bea100c0c3a1015, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 296
+    sprite: {fileID: 21300000, guid: 788e11df418bba0488e95bad4c3495c3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b6faec546837fe842bea100c0c3a1015, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 297
+    sprite: {fileID: 21300000, guid: d67f07327d363cd499e6b87c232acc67, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b6faec546837fe842bea100c0c3a1015, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 298
+    sprite: {fileID: 21300000, guid: 29e0fd25bebb1a54784715f725f06d44, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b38b2a7ec29723f4283548c2cfd0d0b7, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 299
+    sprite: {fileID: 21300000, guid: 2b6341e2c73107a4188b14d69be1986c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b38b2a7ec29723f4283548c2cfd0d0b7, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 300
+    sprite: {fileID: 21300000, guid: 83018d66198ce944f94d3a19a26d7545, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b38b2a7ec29723f4283548c2cfd0d0b7, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 301
+    sprite: {fileID: 21300000, guid: 63203e183fe09554dac2bf7569df2590, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b38b2a7ec29723f4283548c2cfd0d0b7, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 302
+    sprite: {fileID: 21300000, guid: e1155aceb59c275478f635e406f1a619, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a614fbab37cc89741b4f88a10d750bda, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 303
+    sprite: {fileID: 21300000, guid: 05626d70516897b419065f343528435b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d7141598e92db694c8fca348c3be00d5, type: 2}
+    kind: 0
+    colors:
+    - 21
+    - 2
+  - type: 304
+    sprite: {fileID: 21300000, guid: d15258e48dd6459469470175573ec1d7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d7141598e92db694c8fca348c3be00d5, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 2
+  - type: 305
+    sprite: {fileID: 21300000, guid: 29124dadfd69aee4ab284a20f593cb71, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b9d9b649d57688947989f371a1f90c13, type: 2}
+    kind: 0
+    colors:
+    - 16
+  - type: 306
+    sprite: {fileID: 21300000, guid: 64c16677ee5f2404fb4390d924887eff, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 37479f32e3dc8ce4aaf30da961b1a075, type: 2}
+    kind: 0
+    colors:
+    - 4
+    - 8
+  - type: 307
+    sprite: {fileID: 21300000, guid: bf3c57ad31e42a54cbe9ae09a215a879, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 37479f32e3dc8ce4aaf30da961b1a075, type: 2}
+    kind: 0
+    colors:
+    - 6
+    - 8
+  - type: 308
+    sprite: {fileID: 21300000, guid: 3ce1ff6aed6bcb2449204c341f57227a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 37479f32e3dc8ce4aaf30da961b1a075, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 8
+  - type: 309
+    sprite: {fileID: 21300000, guid: a70f87d9419d39a4c8a29c36fb888354, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 37479f32e3dc8ce4aaf30da961b1a075, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 8
+  - type: 310
+    sprite: {fileID: 21300000, guid: f62e7326e4def4d4bb768c505a8c7482, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 37479f32e3dc8ce4aaf30da961b1a075, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 8
+  - type: 311
+    sprite: {fileID: 21300000, guid: dbc81d6d3b969d042a0dc25a1e35279b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 37479f32e3dc8ce4aaf30da961b1a075, type: 2}
+    kind: 0
+    colors:
+    - 1
+    - 8
+  - type: 312
+    sprite: {fileID: 21300000, guid: 75d0323689d06e54b9b7c7ffe1a66cd1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 61bb635dc393ff54280dbd39ee8f0b50, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 313
+    sprite: {fileID: 21300000, guid: fd3d9567f0a7927498bae6f00822215f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 9c88ab0b98b6e31429b7fd04e76a33d3, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 19
+  - type: 314
+    sprite: {fileID: 21300000, guid: 47bd0994ad4011a4ba4a833d7969b380, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 9c88ab0b98b6e31429b7fd04e76a33d3, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 19
+  - type: 315
+    sprite: {fileID: 21300000, guid: f7a2d46147abd96458a97c17bdf5ab83, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 9c88ab0b98b6e31429b7fd04e76a33d3, type: 2}
+    kind: 0
+    colors:
+    - 23
+    - 19
+  - type: 316
+    sprite: {fileID: 21300000, guid: f2aef2bcfda06c940a086b00d6b5f33d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 9c88ab0b98b6e31429b7fd04e76a33d3, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 19
+  - type: 317
+    sprite: {fileID: 21300000, guid: 4a0c2969d21077c41968c91b5ee347be, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 9c88ab0b98b6e31429b7fd04e76a33d3, type: 2}
+    kind: 0
+    colors:
+    - 4
+    - 19
+  - type: 318
+    sprite: {fileID: 21300000, guid: 813371f9d46caab4c9593fb836fca82b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 9c88ab0b98b6e31429b7fd04e76a33d3, type: 2}
+    kind: 0
+    colors:
+    - 6
+    - 19
+  - type: 319
+    sprite: {fileID: 21300000, guid: 788645c7823681e4db7f7bc2cb4073b8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f562b2072f416a843b348488ad2e8530, type: 2}
+    kind: 0
+    colors:
+    - 8
+    - 19
+  - type: 320
+    sprite: {fileID: 21300000, guid: 5e1f1260eafddbd40b958bab3e6cf765, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f562b2072f416a843b348488ad2e8530, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 19
+  - type: 321
+    sprite: {fileID: 21300000, guid: 4aab8d1134207c74e9aafc8ffb4654b5, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f562b2072f416a843b348488ad2e8530, type: 2}
+    kind: 0
+    colors:
+    - 9
+    - 3
+  - type: 322
+    sprite: {fileID: 21300000, guid: b05ee4c2b9416cb48b17444eed8c465b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f562b2072f416a843b348488ad2e8530, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 19
+  - type: 323
+    sprite: {fileID: 21300000, guid: a4661b58e09a38e4680c5119ad5bf3b7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7774e748a37de7e4e85889f81f26ac28, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 324
+    sprite: {fileID: 21300000, guid: dbfb3d3930afca3429c33ff3c98a2e27, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7774e748a37de7e4e85889f81f26ac28, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 325
+    sprite: {fileID: 21300000, guid: 6fe06a26f2dbbc248bf523f808de22c0, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7774e748a37de7e4e85889f81f26ac28, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 326
+    sprite: {fileID: 21300000, guid: 09802eff26f8e8a45ade1d02b57cd298, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7774e748a37de7e4e85889f81f26ac28, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 327
+    sprite: {fileID: 21300000, guid: 06626ccf27496d345b75c58d65aa177f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7774e748a37de7e4e85889f81f26ac28, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 328
+    sprite: {fileID: 21300000, guid: a2c41284f4b0d91488ec569bbe67dcd3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6c0373a1295a02d4d9dbae0ce3f9c08e, type: 2}
+    kind: 0
+    colors:
+    - 21
+  - type: 329
+    sprite: {fileID: 21300000, guid: afcf8379aa9a76347ab8dfb0ee5782a6, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6c0373a1295a02d4d9dbae0ce3f9c08e, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 330
+    sprite: {fileID: 21300000, guid: 745f07bc5e09b7f49b74df978b103b30, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6c0373a1295a02d4d9dbae0ce3f9c08e, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 331
+    sprite: {fileID: 21300000, guid: 49bebcc0ddcd327449e6b5db6f48337b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6c0373a1295a02d4d9dbae0ce3f9c08e, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 332
+    sprite: {fileID: 21300000, guid: 0ac9645e7adbf8e42b932c1495718170, type: 2}
+    spriteHidden: {fileID: 21300000, guid: dcb0a063868796d41b2f822cbd477c9b, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 333
+    sprite: {fileID: 21300000, guid: 7f077211208c70c4ebe9e785361f9966, type: 2}
+    spriteHidden: {fileID: 21300000, guid: dcb0a063868796d41b2f822cbd477c9b, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 334
+    sprite: {fileID: 21300000, guid: dd30132b8be5a7245991c5bc09b6d0a1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: dcb0a063868796d41b2f822cbd477c9b, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 335
+    sprite: {fileID: 21300000, guid: f9847ec7e5ae96045b57bd3ac2b8641f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: dcb0a063868796d41b2f822cbd477c9b, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 336
+    sprite: {fileID: 21300000, guid: f963ee87918234f4fa64a5f399424b04, type: 2}
+    spriteHidden: {fileID: 21300000, guid: dcb0a063868796d41b2f822cbd477c9b, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 337
+    sprite: {fileID: 21300000, guid: b66cdf1e5f296e54cbdaef284cf23351, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 77c59631d6c78714bafbc577437c08e6, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 338
+    sprite: {fileID: 21300000, guid: 4e1428255058ac84b853553e406dc61a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 77c59631d6c78714bafbc577437c08e6, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 339
+    sprite: {fileID: 21300000, guid: a421de9a370b7bb4abdeb22d0e4c3d4f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 77c59631d6c78714bafbc577437c08e6, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 340
+    sprite: {fileID: 21300000, guid: 705d1831f152e1743b7cf76def5ee641, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 77c59631d6c78714bafbc577437c08e6, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 341
+    sprite: {fileID: 21300000, guid: 42b4e5e672a96e74cabb299572837b46, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 991f45cddfc06a540991823e513406c2, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 342
+    sprite: {fileID: 21300000, guid: b9136df4730c4fd4485a57065e2e2e91, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 991f45cddfc06a540991823e513406c2, type: 2}
+    kind: 0
+    colors:
+    - 19
+  - type: 343
+    sprite: {fileID: 21300000, guid: 529dd65184c84d946b89c780524d48bd, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 991f45cddfc06a540991823e513406c2, type: 2}
+    kind: 0
+    colors:
+    - 1
+  - type: 344
+    sprite: {fileID: 21300000, guid: 021bdbeccc838ca4180b8a10a1fb8b0d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 991f45cddfc06a540991823e513406c2, type: 2}
+    kind: 0
+    colors:
+    - 21
+  - type: 345
+    sprite: {fileID: 21300000, guid: 23224304bfcdfde4d94d320b84d99660, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 383e5b2b2ca6077428b00df4ba131011, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 346
+    sprite: {fileID: 21300000, guid: e9c96d21446a71b48a67522b53541612, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 55f480056f77b2340acb24b4d0d43da0, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 347
+    sprite: {fileID: 21300000, guid: e7ade5bb0e4220d4bb5babfedde23460, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 55f480056f77b2340acb24b4d0d43da0, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 8
+  - type: 348
+    sprite: {fileID: 21300000, guid: 9cd8d5981d20b4c44aae138e99d1276e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 55f480056f77b2340acb24b4d0d43da0, type: 2}
+    kind: 0
+    colors:
+    - 13
+    - 8
+  - type: 349
+    sprite: {fileID: 21300000, guid: 72c26984e6993994eb4c5abba5fd835c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e25e496d41cc5ce47b7b6f7cd59a8e00, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 350
+    sprite: {fileID: 21300000, guid: 2253f63d2fece634781884bb5c172b5e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e25e496d41cc5ce47b7b6f7cd59a8e00, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 351
+    sprite: {fileID: 21300000, guid: 4e772dd274adbc146b14b3ed80cc70e4, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e6f9011df444e1c4493196a53fa4ee97, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 352
+    sprite: {fileID: 21300000, guid: c65f6b2b98810ca4a9903f18a68e7eb7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e6f9011df444e1c4493196a53fa4ee97, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 353
+    sprite: {fileID: 21300000, guid: bd3efec48294675478a2e57ad92fc7ac, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0ddd93ccf8ef3b548885d37b8fde791d, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 21
+  - type: 354
+    sprite: {fileID: 21300000, guid: d39f1da5126f45342aef479ccb32350e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0ddd93ccf8ef3b548885d37b8fde791d, type: 2}
+    kind: 0
+    colors:
+    - 6
+    - 10
+  - type: 355
+    sprite: {fileID: 21300000, guid: 7f0a5af6f9353ab409587f0f5fdde32b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0ddd93ccf8ef3b548885d37b8fde791d, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 356
+    sprite: {fileID: 21300000, guid: ec11e6df22a0e204d9b6af7318d97847, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0ddd93ccf8ef3b548885d37b8fde791d, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 2
+  - type: 357
+    sprite: {fileID: 21300000, guid: 13fb1298146138642b224e1837ca8101, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 9bcf3e2f483548641bc076ad8d9255d4, type: 2}
+    kind: 0
+    colors:
+    - 9
+    - 19
+  - type: 358
+    sprite: {fileID: 21300000, guid: 5dbadbffe885c7a41b65c4db0c9f7503, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 9bcf3e2f483548641bc076ad8d9255d4, type: 2}
+    kind: 0
+    colors:
+    - 6
+    - 10
+  - type: 359
+    sprite: {fileID: 21300000, guid: db1cbc8c7bdf0494baea69328906e920, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bca0e56c9cdc0dc4990a438a5e5ce214, type: 2}
+    kind: 0
+    colors:
+    - 8
+    - 10
+  - type: 360
+    sprite: {fileID: 21300000, guid: 62675706f1af122498284d793510d384, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bca0e56c9cdc0dc4990a438a5e5ce214, type: 2}
+    kind: 0
+    colors:
+    - 18
+  - type: 361
+    sprite: {fileID: 21300000, guid: 8a768d6dba7709e4e923affd0379b226, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 77320bbd76bfa5f43b4bed42d26a82a2, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 8
+  - type: 362
+    sprite: {fileID: 21300000, guid: 92ef9deeefdcd844b9db10747849397e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 77320bbd76bfa5f43b4bed42d26a82a2, type: 2}
+    kind: 0
+    colors:
+    - 8
+    - 13
+  - type: 363
+    sprite: {fileID: 21300000, guid: df3b4f52ff17a9247b2633f01ab3f027, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1e6fce47bb7a319489f3e109777c74ae, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 364
+    sprite: {fileID: 21300000, guid: ce1b808a8e166fd4c9969648f818c46c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1e6fce47bb7a319489f3e109777c74ae, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 365
+    sprite: {fileID: 21300000, guid: fee9a1d02436d9345b9615834c79d572, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1e6fce47bb7a319489f3e109777c74ae, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 366
+    sprite: {fileID: 21300000, guid: 516c843d61e161a4a87607c0aa56ddd8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1e6fce47bb7a319489f3e109777c74ae, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 367
+    sprite: {fileID: 21300000, guid: d42cdd2742ca3fe4fb54ce2f69c08c37, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ff9d193f25876a344b2240772dc44184, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 368
+    sprite: {fileID: 21300000, guid: 9c9b9ef4e6c0cf449a2b619c80e1ce5a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ff9d193f25876a344b2240772dc44184, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 369
+    sprite: {fileID: 21300000, guid: ba0ae5afd4bb139458ded4c181c52024, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0ba6e030e59cfd44ba642fccb97f47e9, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 370
+    sprite: {fileID: 21300000, guid: e117b266b0e72de4983e18b5cac8a6bc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0ba6e030e59cfd44ba642fccb97f47e9, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 371
+    sprite: {fileID: 21300000, guid: 7cd924ad1e9f3ad4abf227550f5cd4d1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0ba6e030e59cfd44ba642fccb97f47e9, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 372
+    sprite: {fileID: 21300000, guid: b9a91a6445cb1a8439a6fb8ed6fa13dd, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f3723b8cb840fc2479aad3059a4570d0, type: 2}
+    kind: 0
+    colors:
+    - 23
+  - type: 373
+    sprite: {fileID: 21300000, guid: e41659eedb3879b4daa07dad8f09aacc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a2e128961b8d7c44ab346a65efb80279, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 374
+    sprite: {fileID: 21300000, guid: be5c8a4de1865f54db9ca9a0f331cff0, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a2e128961b8d7c44ab346a65efb80279, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 375
+    sprite: {fileID: 21300000, guid: dd6cb72cf11f210448fd3f286699c12e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7259065ebf75c6842a96b0847890b744, type: 2}
+    kind: 0
+    colors:
+    - 12
+  - type: 376
+    sprite: {fileID: 21300000, guid: 8f78bbc9bd7f2e743938db8d833febbc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7259065ebf75c6842a96b0847890b744, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 377
+    sprite: {fileID: 21300000, guid: ef3764a3f53a4944f94adb6f5ddf745a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7259065ebf75c6842a96b0847890b744, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 378
+    sprite: {fileID: 21300000, guid: 84aa20cbabc3b11498e6dddc0eb26e8b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7259065ebf75c6842a96b0847890b744, type: 2}
+    kind: 0
+    colors:
+    - 16
+  - type: 379
+    sprite: {fileID: 21300000, guid: 137b412690943694e8299a3d3d8ca6b6, type: 2}
+    spriteHidden: {fileID: 21300000, guid: fcbf4a41f72d6ce489a1c3076f37f34b, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 380
+    sprite: {fileID: 21300000, guid: 124982ec80f903747a68742ba670b15a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: fcbf4a41f72d6ce489a1c3076f37f34b, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 381
+    sprite: {fileID: 21300000, guid: 0fbd2484c1a8f934ea78ce365404da8c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 17a97f36d7fc64b42b3d788f08dea39b, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 7
+  - type: 382
+    sprite: {fileID: 21300000, guid: cf20b882f9e1a5b488465cbd974c67aa, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 17a97f36d7fc64b42b3d788f08dea39b, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 7
+  - type: 383
+    sprite: {fileID: 21300000, guid: 20670dc083b6353479c2272c8d503aaf, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 17a97f36d7fc64b42b3d788f08dea39b, type: 2}
+    kind: 0
+    colors:
+    - 4
+    - 7
+  - type: 384
+    sprite: {fileID: 21300000, guid: a7a299a656c7e124bab6a7306c035979, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 17a97f36d7fc64b42b3d788f08dea39b, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 7
+  - type: 385
+    sprite: {fileID: 21300000, guid: f11682fe67e1f74498b2c41803338b0f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 05ee5268686e15d4dbb7b6d81a153548, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 386
+    sprite: {fileID: 21300000, guid: 8ac91986aebbfde40b532c530ea648ce, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 5e19101f20c80e44d93e579df98d5076, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 387
+    sprite: {fileID: 21300000, guid: 7570be7348f114f4987e57bf5ef389d8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ef73331665185b246b1d8298af939578, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 388
+    sprite: {fileID: 21300000, guid: bd9180efc4ba8324bab03859a4f5833f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7aad9a28c7c444f4397d08e34b07997c, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 389
+    sprite: {fileID: 21300000, guid: 54d29a3284d1eb5479c8fd194efcd260, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 13b3c97a3418f924f8a573199d3dd7fb, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 2
+  - type: 390
+    sprite: {fileID: 21300000, guid: a7ba747c9c8485647a484c7200bb668c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 91a8c04cff4627f4f9e74c199558d5b5, type: 2}
+    kind: 0
+    colors:
+    - 4
+    - 19
+  - type: 391
+    sprite: {fileID: 21300000, guid: 2c51351270102f143a687cf57ff0a70f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 91a8c04cff4627f4f9e74c199558d5b5, type: 2}
+    kind: 0
+    colors:
+    - 11
+    - 19
+  - type: 392
+    sprite: {fileID: 21300000, guid: c0a524d0e0ed5a240a3a88a40b70c05a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 91a8c04cff4627f4f9e74c199558d5b5, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 19
+  - type: 393
+    sprite: {fileID: 21300000, guid: 960edc9fe16b0b74a827219e29ba6896, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 91a8c04cff4627f4f9e74c199558d5b5, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 19
+  - type: 394
+    sprite: {fileID: 21300000, guid: 6808baf0f89fb7b4a9bd68b01592051c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0e6d0f0c74246ed46af19869b3680434, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 395
+    sprite: {fileID: 21300000, guid: 7a46fb6fccf18624b96c93be182cf233, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0e6d0f0c74246ed46af19869b3680434, type: 2}
+    kind: 0
+    colors:
+    - 7
+  - type: 396
+    sprite: {fileID: 21300000, guid: 3f4320822a8b8664f8976b77227c540e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0e6d0f0c74246ed46af19869b3680434, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 397
+    sprite: {fileID: 21300000, guid: 0ba283e2a56d0694092ef52d712d25cc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 0e6d0f0c74246ed46af19869b3680434, type: 2}
+    kind: 0
+    colors:
+    - 1
+  - type: 398
+    sprite: {fileID: 21300000, guid: 01aa704b435a40949b3d6bf5e60fb70c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: aad550973e7656348bb198bd001d6b27, type: 2}
+    kind: 0
+    colors:
+    - 9
+    - 7
+  - type: 399
+    sprite: {fileID: 21300000, guid: 2a8fcf0ca94bb15468d66a6ae462eada, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bf09b437cfcf4da409d8f49efb32f961, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 400
+    sprite: {fileID: 21300000, guid: 98f4cd06b6a616949a51f626607caaed, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bf09b437cfcf4da409d8f49efb32f961, type: 2}
+    kind: 0
+    colors:
+    - 7
+  - type: 401
+    sprite: {fileID: 21300000, guid: 4fc95b89b4e5ad64c941e44bb3478949, type: 2}
+    spriteHidden: {fileID: 21300000, guid: bf09b437cfcf4da409d8f49efb32f961, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 402
+    sprite: {fileID: 21300000, guid: 65fa0c237cdcab142ae35efa04e30075, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3705e2b8ce2390b479e65fa269aae255, type: 2}
+    kind: 0
+    colors:
+    - 4
+    - 7
+  - type: 403
+    sprite: {fileID: 21300000, guid: bda4479f813d6e941b05a3a375beb93a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3705e2b8ce2390b479e65fa269aae255, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 7
+  - type: 404
+    sprite: {fileID: 21300000, guid: e496945d227ff8549a5d15a1a109105e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: aa5b0071591d9284f9c6a874df66b24f, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 405
+    sprite: {fileID: 21300000, guid: 0292aa696dfde444babc6da27810beac, type: 2}
+    spriteHidden: {fileID: 21300000, guid: aa5b0071591d9284f9c6a874df66b24f, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 406
+    sprite: {fileID: 21300000, guid: c463106992fdb92499531f1569224aec, type: 2}
+    spriteHidden: {fileID: 21300000, guid: aa5b0071591d9284f9c6a874df66b24f, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 407
+    sprite: {fileID: 21300000, guid: 426d2a50ed2f1f644b9c58bad2023dda, type: 2}
+    spriteHidden: {fileID: 21300000, guid: aa5b0071591d9284f9c6a874df66b24f, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 408
+    sprite: {fileID: 21300000, guid: 295e3348f7a20844b951c83922d92798, type: 2}
+    spriteHidden: {fileID: 21300000, guid: a71562b4174b23f4cadbe42cc5116083, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 19
+  - type: 409
+    sprite: {fileID: 21300000, guid: 48b2954cca6c08f42ae367622450ee91, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1c5b5901d8d29e949b0d2630b24d37c0, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 410
+    sprite: {fileID: 21300000, guid: 03610305ec91afe4f9b622256930fd91, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1c5b5901d8d29e949b0d2630b24d37c0, type: 2}
+    kind: 0
+    colors:
+    - 7
+    - 8
+  - type: 411
+    sprite: {fileID: 21300000, guid: 40ed0be658b64cf46babd3b61fdee22a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 1c5b5901d8d29e949b0d2630b24d37c0, type: 2}
+    kind: 0
+    colors:
+    - 13
+    - 7
+  - type: 412
+    sprite: {fileID: 21300000, guid: e88bb892f25023f4cad2e87371e5ff43, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d79adb511e2c94f4eab062bd0c849dcb, type: 2}
+    kind: 0
+    colors: []
+  - type: 413
+    sprite: {fileID: 21300000, guid: e9e7bdae294cf9e47b5b2c183d60e073, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e2b1c39ad2cea214aa48654e82b59746, type: 2}
+    kind: 0
+    colors: []
+  - type: 414
+    sprite: {fileID: 21300000, guid: f1da7bfe00fe39445adb51cb40d13511, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e2b1c39ad2cea214aa48654e82b59746, type: 2}
+    kind: 0
+    colors: []
+  - type: 415
+    sprite: {fileID: 21300000, guid: bd42a28f0d7ac684780a689928cd7243, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e2b1c39ad2cea214aa48654e82b59746, type: 2}
+    kind: 0
+    colors: []
+  - type: 416
+    sprite: {fileID: 21300000, guid: fcf0b408d064e2640a03a8ec1e15428e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: fc96e881430fa70439882fddb048c96f, type: 2}
+    kind: 0
+    colors: []
+  - type: 417
+    sprite: {fileID: 21300000, guid: 22b46ef9c6ae90449a8579fa5a1803cd, type: 2}
+    spriteHidden: {fileID: 21300000, guid: fc96e881430fa70439882fddb048c96f, type: 2}
+    kind: 0
+    colors: []
+  - type: 418
+    sprite: {fileID: 21300000, guid: 6e192a8071879d245ad5aab656595289, type: 2}
+    spriteHidden: {fileID: 21300000, guid: fc96e881430fa70439882fddb048c96f, type: 2}
+    kind: 0
+    colors: []
+  - type: 419
+    sprite: {fileID: 21300000, guid: 44ef257d07a6d9c4894b94491192b0f3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3eabf42353830f045b38174fd664fb0f, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 420
+    sprite: {fileID: 21300000, guid: dc5b59e9ceaf82247a8216eb4289e536, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3eabf42353830f045b38174fd664fb0f, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 421
+    sprite: {fileID: 21300000, guid: 7c398f1a8e97352489c111614a0f86dd, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3eabf42353830f045b38174fd664fb0f, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 422
+    sprite: {fileID: 21300000, guid: 2d95ccb56690a594facbf4132afcd32d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3eabf42353830f045b38174fd664fb0f, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 423
+    sprite: {fileID: 21300000, guid: f84e9b380200c1447830845c0f073f17, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 3eabf42353830f045b38174fd664fb0f, type: 2}
+    kind: 0
+    colors:
+    - 20
+  - type: 424
+    sprite: {fileID: 21300000, guid: f5f2e21a976680c4daca7e52a954a691, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c61e73b922429a64ab7d9a08c8fbfbab, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 425
+    sprite: {fileID: 21300000, guid: bda9460ab38d92f479f1226d66d332e8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c61e73b922429a64ab7d9a08c8fbfbab, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 426
+    sprite: {fileID: 21300000, guid: 1071c996fe6137644af704207185629d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c61e73b922429a64ab7d9a08c8fbfbab, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 427
+    sprite: {fileID: 21300000, guid: 270928ace5c6c8647803981a421199fc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c61e73b922429a64ab7d9a08c8fbfbab, type: 2}
+    kind: 0
+    colors:
+    - 16
+  - type: 428
+    sprite: {fileID: 21300000, guid: 15b06a1c22e17db43819431f213288f8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c61e73b922429a64ab7d9a08c8fbfbab, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 429
+    sprite: {fileID: 21300000, guid: 27fcb2f89307ed44da504a5f7c6446aa, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c81418d12f23baf40a51ce2251846e2e, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 430
+    sprite: {fileID: 21300000, guid: 9c0349f397e7dd84f9060836522930c7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c81418d12f23baf40a51ce2251846e2e, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 431
+    sprite: {fileID: 21300000, guid: 2f261414f57b9ad4b96bb2fa3b5190c6, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c81418d12f23baf40a51ce2251846e2e, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 432
+    sprite: {fileID: 21300000, guid: ee4c4ca80846c8345a8abb8c95306e0f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c81418d12f23baf40a51ce2251846e2e, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 0
+  - type: 433
+    sprite: {fileID: 21300000, guid: f5647d9eccca6354fa033ef378b0fc56, type: 2}
+    spriteHidden: {fileID: 21300000, guid: c81418d12f23baf40a51ce2251846e2e, type: 2}
+    kind: 0
+    colors:
+    - 21
+  - type: 434
+    sprite: {fileID: 21300000, guid: ca001d51150a9864eaac341b0cb012c1, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d65e94f54cfb98b45a15184e5005beb1, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 435
+    sprite: {fileID: 21300000, guid: 86dbbe2d699af20488ff751d18f0e7d6, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d65e94f54cfb98b45a15184e5005beb1, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 436
+    sprite: {fileID: 21300000, guid: 22bb726e6cc06c54daff931a443f4821, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d65e94f54cfb98b45a15184e5005beb1, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 437
+    sprite: {fileID: 21300000, guid: 170ecc0371379e84f93524ef8ad2718a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d65e94f54cfb98b45a15184e5005beb1, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 23
+  - type: 438
+    sprite: {fileID: 21300000, guid: 18f6936620169e14ca60ce286aac12ef, type: 2}
+    spriteHidden: {fileID: 21300000, guid: d65e94f54cfb98b45a15184e5005beb1, type: 2}
+    kind: 0
+    colors:
+    - 13
+  - type: 439
+    sprite: {fileID: 21300000, guid: 464d67f135cce654e85e1ad3fa2f0e03, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 80cf8e75153dfa04382b5c595a44709a, type: 2}
+    kind: 0
+    colors:
+    - 22
+    - 8
+  - type: 440
+    sprite: {fileID: 21300000, guid: d5633d181ab803f43b5527c688d05d41, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 80cf8e75153dfa04382b5c595a44709a, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 8
+  - type: 441
+    sprite: {fileID: 21300000, guid: 8eb15f4d0cb2e8b44b2c47ccc262f4d7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 80cf8e75153dfa04382b5c595a44709a, type: 2}
+    kind: 0
+    colors:
+    - 13
+    - 8
+  - type: 442
+    sprite: {fileID: 21300000, guid: 217952e9df655ab45bd6bfdd34429639, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 80cf8e75153dfa04382b5c595a44709a, type: 2}
+    kind: 0
+    colors:
+    - 6
+    - 8
+  - type: 443
+    sprite: {fileID: 21300000, guid: 3b7d4327882164a46aeef3f837ee51db, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 80cf8e75153dfa04382b5c595a44709a, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 2
+  - type: 444
+    sprite: {fileID: 21300000, guid: c1a1e1e414c844f448d87f4452fc0fd7, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 925f676b0abd8424c8bdc5d22c4750ce, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 2
+  - type: 445
+    sprite: {fileID: 21300000, guid: e66d0afa0810b274cbc8f4845fd17c2b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 925f676b0abd8424c8bdc5d22c4750ce, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 2
+  - type: 446
+    sprite: {fileID: 21300000, guid: 8f3f16cdc28078345bcbde8cf292166b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 925f676b0abd8424c8bdc5d22c4750ce, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 8
+  - type: 447
+    sprite: {fileID: 21300000, guid: b734005e2942ef44e9b4f7dd25db6106, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 925f676b0abd8424c8bdc5d22c4750ce, type: 2}
+    kind: 0
+    colors:
+    - 4
+    - 8
+  - type: 448
+    sprite: {fileID: 21300000, guid: bf6554b7761bec843a388b6747bdc464, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 925f676b0abd8424c8bdc5d22c4750ce, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 8
+  - type: 449
+    sprite: {fileID: 21300000, guid: 1332995889645454d8ad1f9fe524a060, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f92d85c0ae3df3f4baaa7fdd0911851b, type: 2}
+    kind: 0
+    colors:
+    - 0
+    - 3
+  - type: 450
+    sprite: {fileID: 21300000, guid: e05c0f0429753a64c8204678e88b0dec, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f92d85c0ae3df3f4baaa7fdd0911851b, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 451
+    sprite: {fileID: 21300000, guid: 7c791ce927107ea4aa3fd078f2424eb4, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f92d85c0ae3df3f4baaa7fdd0911851b, type: 2}
+    kind: 0
+    colors:
+    - 22
+    - 8
+  - type: 452
+    sprite: {fileID: 21300000, guid: f66ec787085ac9b4a9ba6b98c8ed00cd, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f92d85c0ae3df3f4baaa7fdd0911851b, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 8
+  - type: 453
+    sprite: {fileID: 21300000, guid: 925f6337d74b26f4582ea32e7f76cbea, type: 2}
+    spriteHidden: {fileID: 21300000, guid: f92d85c0ae3df3f4baaa7fdd0911851b, type: 2}
+    kind: 0
+    colors:
+    - 6
+    - 8
+  - type: 454
+    sprite: {fileID: 21300000, guid: aff2dac846f66f94dbf3eb709a98895b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 33fed948119819742b231a37c14e3fdf, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 455
+    sprite: {fileID: 21300000, guid: 844a8ff7a4a17d346978480322fbfc0a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 33fed948119819742b231a37c14e3fdf, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 456
+    sprite: {fileID: 21300000, guid: e9dd449e98f6bd54095936445db561ea, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 885b59bec18ee0a4f90eef3c1e4a3195, type: 2}
+    kind: 0
+    colors:
+    - 8
+    - 3
+  - type: 457
+    sprite: {fileID: 21300000, guid: fd491927a5439e344ba61d63db3bcc5f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 885b59bec18ee0a4f90eef3c1e4a3195, type: 2}
+    kind: 0
+    colors:
+    - 8
+    - 10
+  - type: 458
+    sprite: {fileID: 21300000, guid: 0ed9d6083c5c84c4cabf54318b290334, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 885b59bec18ee0a4f90eef3c1e4a3195, type: 2}
+    kind: 0
+    colors:
+    - 9
+    - 8
+  - type: 459
+    sprite: {fileID: 21300000, guid: b77d471219bc1c747882a466b95b9868, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b9d0f598eb9d6514da8b3273aa70f594, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 9
+  - type: 460
+    sprite: {fileID: 21300000, guid: 9eaf33b7599638044b13f5087dab6d6c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b9d0f598eb9d6514da8b3273aa70f594, type: 2}
+    kind: 0
+    colors:
+    - 22
+    - 9
+  - type: 461
+    sprite: {fileID: 21300000, guid: 3c0be231051670045b85f66669926e1f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b9d0f598eb9d6514da8b3273aa70f594, type: 2}
+    kind: 0
+    colors:
+    - 16
+  - type: 462
+    sprite: {fileID: 21300000, guid: 87e6beeccca9cb049b2d3ba124841f79, type: 2}
+    spriteHidden: {fileID: 21300000, guid: b9d0f598eb9d6514da8b3273aa70f594, type: 2}
+    kind: 0
+    colors:
+    - 9
+    - 8
+  - type: 463
+    sprite: {fileID: 21300000, guid: e487b503ba502eb46befdeaca726b7cc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 30d80f370a425bb468e86f895acaf3af, type: 2}
+    kind: 0
+    colors:
+    - 13
+    - 8
+  - type: 464
+    sprite: {fileID: 21300000, guid: cda2f8dc7d4a2234bb0dcccec7c1b34a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 30d80f370a425bb468e86f895acaf3af, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 9
+  - type: 465
+    sprite: {fileID: 21300000, guid: de7ae4f9a23cdde44841a681a001441a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7b6afed21933e134fa1c69147f7f81dd, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 466
+    sprite: {fileID: 21300000, guid: 21464465d5406c54f8d4408adaf6889b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7b6afed21933e134fa1c69147f7f81dd, type: 2}
+    kind: 0
+    colors:
+    - 16
+    - 9
+  - type: 467
+    sprite: {fileID: 21300000, guid: 7cb0affd531b1c546a3a31659037e8f3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7b6afed21933e134fa1c69147f7f81dd, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 9
+  - type: 468
+    sprite: {fileID: 21300000, guid: 8039f4ceb8f041a4a8a9c88d0bbf80d0, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 7b6afed21933e134fa1c69147f7f81dd, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 9
+  - type: 469
+    sprite: {fileID: 21300000, guid: d254e3fa507b142419a097ba88db09dc, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6fc4f1843a72993498d8824c323e965b, type: 2}
+    kind: 0
+    colors:
+    - 10
+    - 9
+  - type: 470
+    sprite: {fileID: 21300000, guid: 06a2657e6b7e8744abc73abf3135aee0, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6fc4f1843a72993498d8824c323e965b, type: 2}
+    kind: 0
+    colors:
+    - 13
+    - 9
+  - type: 471
+    sprite: {fileID: 21300000, guid: 526415f36d02cf54a851e25bd3ff6783, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6fc4f1843a72993498d8824c323e965b, type: 2}
+    kind: 0
+    colors:
+    - 3
+    - 9
+  - type: 472
+    sprite: {fileID: 21300000, guid: 2b0573575beee904b823fbc8488f4a8b, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6fc4f1843a72993498d8824c323e965b, type: 2}
+    kind: 0
+    colors:
+    - 2
+    - 9
+  - type: 473
+    sprite: {fileID: 21300000, guid: d88fd14b733d3eb4989554f0fa1085e3, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6fc4f1843a72993498d8824c323e965b, type: 2}
+    kind: 0
+    colors:
+    - 8
+    - 9
+  - type: 474
+    sprite: {fileID: 21300000, guid: bccf7bc2f78daa94881a25e336e58a6c, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6dbbab84392e8514eb7b311caaa0cdf6, type: 2}
+    kind: 0
+    colors:
+    - 13
+    - 0
+  - type: 475
+    sprite: {fileID: 21300000, guid: 527de56a0d92450478082d16efa89262, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6dbbab84392e8514eb7b311caaa0cdf6, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 476
+    sprite: {fileID: 21300000, guid: b4fde3ab19d7cba44854caff5ebe9e03, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6dbbab84392e8514eb7b311caaa0cdf6, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 477
+    sprite: {fileID: 21300000, guid: 9f11d2e26f6315a409e051ef3908f13d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6dbbab84392e8514eb7b311caaa0cdf6, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 478
+    sprite: {fileID: 21300000, guid: 11c026af5e3dcbf4984f197729e9e75e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6dbbab84392e8514eb7b311caaa0cdf6, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 479
+    sprite: {fileID: 21300000, guid: 78600e226bbd01645b7f3ba632a50b0f, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 6dbbab84392e8514eb7b311caaa0cdf6, type: 2}
+    kind: 0
+    colors:
+    - 9
+  - type: 480
+    sprite: {fileID: 21300000, guid: b57ea073e1cc70d449a48bc3f3a9db38, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 381a561e12aa2e3439ec6cba23bc5bac, type: 2}
+    kind: 0
+    colors:
+    - 8
+  - type: 481
+    sprite: {fileID: 21300000, guid: c6cea5f60e731364db3fa57d303622cf, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 381a561e12aa2e3439ec6cba23bc5bac, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 482
+    sprite: {fileID: 21300000, guid: b027ce61d44ddf148a224bc98a2e7c38, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 381a561e12aa2e3439ec6cba23bc5bac, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 483
+    sprite: {fileID: 21300000, guid: 431ce6de1d592f2448aa615b11769afb, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 381a561e12aa2e3439ec6cba23bc5bac, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 484
+    sprite: {fileID: 21300000, guid: a749656a2c46dd746a8aafe7ec1bff5a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 381a561e12aa2e3439ec6cba23bc5bac, type: 2}
+    kind: 0
+    colors:
+    - 2
+  - type: 485
+    sprite: {fileID: 21300000, guid: e8196a04c4b478949917d35fd96f6299, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 4a7b9477cd01886429ff2397ddaa1fac, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 486
+    sprite: {fileID: 21300000, guid: 88e6d557b7831f5438e4f7e258fde3a0, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 494ce8ab5d6a2874f9d2957817f564a8, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 487
+    sprite: {fileID: 21300000, guid: f421d2205a223ce43a2ddf311ea7fe62, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 4a7b9477cd01886429ff2397ddaa1fac, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 488
+    sprite: {fileID: 21300000, guid: 60ea0e1420ffc1b4eb8010da651036aa, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 494ce8ab5d6a2874f9d2957817f564a8, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 489
+    sprite: {fileID: 21300000, guid: e4376b73fdc755e44bddcab1279eeb78, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 494ce8ab5d6a2874f9d2957817f564a8, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 490
+    sprite: {fileID: 21300000, guid: a4cad4240d3879b45b7a5cfac390bff8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 90d97990b794f0240bcea419325a2b92, type: 2}
+    kind: 0
+    colors:
+    - 1
+  - type: 491
+    sprite: {fileID: 21300000, guid: 074804e0c9e926c468d795ffe8385d59, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 90d97990b794f0240bcea419325a2b92, type: 2}
+    kind: 0
+    colors:
+    - 11
+  - type: 492
+    sprite: {fileID: 21300000, guid: 146d410ea89cfb2419c275abafb88f55, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 90d97990b794f0240bcea419325a2b92, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 493
+    sprite: {fileID: 21300000, guid: 7c87bc3f9a12f1c49b63fc9e703bfe0e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 35dad308b126aff4b98c306395eeeac0, type: 2}
+    kind: 0
+    colors:
+    - 10
+  - type: 494
+    sprite: {fileID: 21300000, guid: cf9abb85f166d3d409df41bc1b34770d, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 35dad308b126aff4b98c306395eeeac0, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 495
+    sprite: {fileID: 21300000, guid: ede78b9000ae5604cb34a39a1f245c80, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 35dad308b126aff4b98c306395eeeac0, type: 2}
+    kind: 0
+    colors:
+    - 22
+  - type: 496
+    sprite: {fileID: 21300000, guid: a104897e37975214b9fc8fc96d1724a5, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 494a2a9a66f0ba94db5be92e0a68c3ab, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 497
+    sprite: {fileID: 21300000, guid: 93a812f63994fb24da8cd77537bbe2a2, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ccbdc7512b36ddd4cb523b95657dc59f, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 498
+    sprite: {fileID: 21300000, guid: 052b0d506ca35454db9fb737fa826c6a, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e23f704a1c636a44aa82d8fa475aa5e1, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 499
+    sprite: {fileID: 21300000, guid: 4d267eeb92ffdae4191c106f79ea1c41, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ab96db86d15895a488ec024516d38a8b, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 500
+    sprite: {fileID: 21300000, guid: 07ce89fea79fb9f4b9d37f92fdefb010, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ab96db86d15895a488ec024516d38a8b, type: 2}
+    kind: 0
+    colors:
+    - 0
+  - type: 501
+    sprite: {fileID: 21300000, guid: 8fa4e8d550e935145b601f8696b1b297, type: 2}
+    spriteHidden: {fileID: 21300000, guid: ab96db86d15895a488ec024516d38a8b, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 502
+    sprite: {fileID: 21300000, guid: 3f920fe3f64d54b4cb89f6d4f9d7ac89, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 494a2a9a66f0ba94db5be92e0a68c3ab, type: 2}
+    kind: 0
+    colors:
+    - 3
+  - type: 503
+    sprite: {fileID: 21300000, guid: 2fc2ee89771e16340879691e51aab34e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 494a2a9a66f0ba94db5be92e0a68c3ab, type: 2}
+    kind: 0
+    colors:
+    - 1
+  - type: 504
+    sprite: {fileID: 21300000, guid: 439382fa172ac9e419ea64abf340c54e, type: 2}
+    spriteHidden: {fileID: 21300000, guid: 494a2a9a66f0ba94db5be92e0a68c3ab, type: 2}
+    kind: 0
+    colors:
+    - 6
+  - type: 505
+    sprite: {fileID: 21300000, guid: a7b1c38b79541274e99d4d55ad91c5f8, type: 2}
+    spriteHidden: {fileID: 21300000, guid: e23f704a1c636a44aa82d8fa475aa5e1, type: 2}
+    kind: 0
+    colors:
+    - 4
+  - type: 506
+    sprite: {fileID: 21300000, guid: 3ddd8287115698649a153efe4fa08bde, type: 2}
+    spriteHidden: {fileID: 0}
+    kind: 0
+    colors: []

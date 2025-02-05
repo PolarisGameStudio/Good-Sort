@@ -1,0 +1,179 @@
+Spine_UI_LunarNewYear_Decor.png
+	size: 4084, 980
+Paper_Down
+	bounds: 3745, 780, 272, 198
+	offsets: 0, 3, 272, 201
+Paper_Up
+	bounds: 3745, 564, 275, 125
+	offsets: 2, 2, 279, 129
+PenL
+	bounds: 1519, 3, 34, 144
+	offsets: 2, 3, 39, 149
+PenR
+	bounds: 3205, 2, 60, 155
+	offsets: 2, 2, 64, 159
+	rotate: 90
+Pen_Base
+	bounds: 2240, 20, 205, 240
+	offsets: 1, 6, 207, 248
+	rotate: 90
+SmallTable
+	bounds: 1919, 88, 890, 319
+	offsets: 6, 5, 901, 329
+	rotate: 90
+Tree0
+	bounds: 2, 322, 656, 1915
+	offsets: 42, 0, 698, 1915
+	rotate: 90
+Tree0_Leaf0
+	bounds: 2798, 242, 89, 191
+	offsets: 1, 0, 90, 191
+	rotate: 90
+Tree0_Leaf1
+	bounds: 1906, 13, 108, 73
+Tree0_Leaf2
+	bounds: 1161, 88, 65, 84
+	rotate: 90
+Tree0_Leaf3
+	bounds: 2575, 13, 212, 113
+	rotate: 90
+Tree0_Leaf4
+	bounds: 3911, 46, 106, 166
+	rotate: 90
+Tree0_Leaf5
+	bounds: 3604, 13, 139, 305
+	rotate: 90
+Tree0_Leaf6
+	bounds: 2852, 9, 186, 53
+Tree0_Leaf7
+	bounds: 3005, 170, 161, 33
+	rotate: 90
+Tree0_Leaf8
+	bounds: 3362, 3, 147, 59
+Tree0_Leaf9
+	bounds: 1276, 22, 187, 63
+Tree1
+	bounds: 3604, 154, 414, 406
+Tree1_Leaf0
+	bounds: 590, 86, 234, 138
+	rotate: 90
+Tree1_Leaf1
+	bounds: 730, 91, 229, 68
+	offsets: 0, 0, 239, 68
+	rotate: 90
+Tree1_Leaf2
+	bounds: 977, 88, 182, 34
+Tree2
+	bounds: 3239, 64, 496, 363
+	rotate: 90
+Tree2_Leaf0
+	bounds: 3745, 712, 261, 66
+Tree2_Leaf1
+	bounds: 750, 2, 287, 84
+	offsets: 10, 0, 297, 84
+Tree2_Leaf2
+	bounds: 2482, 10, 215, 91
+	rotate: 90
+Tree2_Leaf3
+	bounds: 1690, 194, 132, 126
+Tree3
+	bounds: 2240, 315, 663, 440
+	rotate: 90
+Tree3_Branch0
+	bounds: 340, 71, 249, 248
+	rotate: 90
+Tree3_Branch1
+	bounds: 2, 13, 373, 49
+Tree3_Branch2
+	bounds: 1276, 87, 233, 92
+	rotate: 90
+Tree3_Branch3
+	bounds: 800, 116, 175, 204
+Tree3_Leaf0
+	bounds: 3040, 146, 135, 183
+	rotate: 90
+Tree3_Leaf1
+	bounds: 1370, 149, 171, 161
+	offsets: 1, 0, 172, 163
+	rotate: 90
+Tree3_Leaf2
+	bounds: 1555, 8, 133, 78
+Tree3_Leaf3
+	bounds: 4020, 169, 131, 44
+	offsets: 0, 0, 131, 45
+	rotate: 90
+Tree3_Leaf4
+	bounds: 1370, 90, 123, 22
+	offsets: 0, 7, 126, 29
+Tree3_Leaf5
+	bounds: 1533, 177, 115, 143
+Tree3_Leaf6
+	bounds: 1690, 61, 131, 116
+	rotate: 90
+Tree4
+	bounds: 2, 64, 299, 256
+Tree5
+	bounds: 3239, 562, 416, 504
+	rotate: 90
+Tree5_Branch
+	bounds: 2852, 64, 151, 176
+Tree5_Leaf0
+	bounds: 4020, 691, 61, 287
+Tree5_Leaf1
+	bounds: 1824, 201, 75, 119
+Tree5_Leaf2
+	bounds: 1370, 114, 147, 33
+Tree5_Leaf3
+	bounds: 1555, 144, 127, 31
+Tree5_Leaf4
+	bounds: 1555, 90, 93, 52
+Tree6
+	bounds: 2682, 333, 645, 555
+	rotate: 90
+Tree6_Branch
+	bounds: 303, 68, 252, 35
+	rotate: 90
+Tree6_Leaf0
+	bounds: 977, 124, 196, 173
+	rotate: 90
+Tree6_Leaf1
+	bounds: 3040, 283, 186, 48
+Tree6_Leaf2
+	bounds: 1690, 2, 57, 114
+	offsets: 0, 0, 59, 114
+	rotate: 90
+Tree6_Leaf3
+	bounds: 2016, 6, 68, 80
+	offsets: 0, 0, 69, 80
+Tree6_Leaf4
+	bounds: 1465, 21, 67, 44
+	rotate: 90
+Tree6_Leaf5
+	bounds: 3911, 6, 150, 38
+Tree7
+	bounds: 2240, 227, 86, 556
+	rotate: 90
+Tree7_Branch
+	bounds: 1039, 20, 66, 235
+	rotate: 90
+Tree7_Branch2
+	bounds: 1808, 70, 96, 122
+Tree7_Leaf0
+	bounds: 1161, 155, 165, 106
+	rotate: 90
+Tree7_Leaf1
+	bounds: 4020, 302, 34, 139
+	offsets: 0, 4, 34, 143
+Tree7_Leaf2
+	bounds: 2690, 14, 211, 92
+	rotate: 90
+Tree7_Leaf3
+	bounds: 3040, 15, 163, 129
+Tree7_Leaf4
+	bounds: 2784, 16, 66, 209
+Tree8
+	bounds: 377, 17, 45, 371
+	offsets: 10, 0, 58, 378
+	rotate: 90
+Tree8_Leaf
+	bounds: 4022, 443, 54, 246

@@ -1,0 +1,148 @@
+Spine_UI_LunarNewYear_Item10.png
+	size: 3196, 1168
+Fx_Blink
+	bounds: 3058, 230, 111, 112
+	offsets: 8, 8, 128, 128
+OP1/10_Bulb_0
+	bounds: 1298, 12, 33, 33
+	offsets: 2, 2, 37, 37
+OP1/10_Bulb_1
+	bounds: 1298, 12, 33, 33
+	offsets: 2, 2, 37, 37
+OP1/10_Bulb_2
+	bounds: 1298, 12, 33, 33
+	offsets: 2, 2, 37, 37
+OP1/10_Bulb_3
+	bounds: 1298, 12, 33, 33
+	offsets: 2, 2, 37, 37
+OP1/10_Bulb_4
+	bounds: 1298, 12, 33, 33
+	offsets: 2, 2, 37, 37
+OP1/10_Bulb_5
+	bounds: 1298, 12, 33, 33
+	offsets: 2, 2, 37, 37
+OP1/10_Bulb_6
+	bounds: 1298, 12, 33, 33
+	offsets: 2, 2, 37, 37
+OP1/10_Bulb_7
+	bounds: 1298, 12, 33, 33
+	offsets: 2, 2, 37, 37
+OP1/10_Bulb_0_Light
+	bounds: 2582, 558, 63, 63
+	offsets: 3, 3, 69, 69
+OP1/10_Bulb_1_Light
+	bounds: 2582, 558, 63, 63
+	offsets: 3, 3, 69, 69
+OP1/10_Bulb_2_Light
+	bounds: 2582, 558, 63, 63
+	offsets: 3, 3, 69, 69
+OP1/10_Bulb_3_Light
+	bounds: 2582, 558, 63, 63
+	offsets: 3, 3, 69, 69
+OP1/10_Bulb_4_Light
+	bounds: 2582, 558, 63, 63
+	offsets: 3, 3, 69, 69
+OP1/10_Bulb_5_Light
+	bounds: 2582, 558, 63, 63
+	offsets: 3, 3, 69, 69
+OP1/10_Bulb_6_Light
+	bounds: 2582, 558, 63, 63
+	offsets: 3, 3, 69, 69
+OP1/10_Bulb_7_Light
+	bounds: 2582, 558, 63, 63
+	offsets: 3, 3, 69, 69
+OP1/10_Lamp_0
+	bounds: 1840, 101, 269, 271
+	offsets: 18, 19, 305, 308
+OP1/10_Lamp_1
+	bounds: 1298, 100, 269, 272
+	offsets: 18, 19, 305, 310
+OP1/10_Lamp_10
+	bounds: 2111, 101, 269, 271
+	offsets: 18, 19, 305, 309
+OP1/10_Lamp_2
+	bounds: 2311, 473, 269, 271
+	offsets: 18, 19, 305, 309
+OP1/10_Lamp_3
+	bounds: 2382, 201, 264, 270
+	offsets: 19, 18, 301, 306
+OP1/10_Lamp_4
+	bounds: 2678, 897, 262, 269
+	offsets: 18, 18, 298, 305
+OP1/10_Lamp_5
+	bounds: 2648, 352, 261, 269
+	offsets: 17, 19, 296, 306
+OP1/10_Lamp_6
+	bounds: 2848, 626, 262, 269
+	offsets: 18, 18, 298, 305
+OP1/10_Lamp_7
+	bounds: 2582, 623, 264, 270
+	offsets: 18, 18, 301, 306
+OP1/10_Lamp_8
+	bounds: 2407, 895, 269, 271
+	offsets: 18, 19, 305, 309
+OP1/10_Lamp_9
+	bounds: 1569, 100, 269, 272
+	offsets: 18, 19, 305, 309
+OP1/10_Rope
+	bounds: 2, 374, 2307, 370
+OP2/10_Decor
+	bounds: 2713, 2, 49, 51
+	offsets: 1, 1, 51, 54
+OP2/10_Decor_Bot
+	bounds: 2382, 47, 49, 152
+OP2/10_Decor_Top
+	bounds: 2562, 887, 6, 18
+	offsets: 1, 1, 8, 20
+	rotate: 90
+OP2/10_Flag0
+	bounds: 2407, 763, 153, 130
+	offsets: 1, 1, 156, 133
+OP2/10_Flag1
+	bounds: 2433, 48, 151, 140
+	offsets: 1, 1, 153, 143
+	rotate: 90
+OP2/10_Flag10
+	bounds: 2648, 203, 133, 147
+	offsets: 1, 1, 135, 149
+OP2/10_Flag11
+	bounds: 2713, 55, 146, 142
+	offsets: 1, 1, 148, 145
+	rotate: 90
+OP2/10_Flag12
+	bounds: 2857, 63, 142, 137
+	offsets: 2, 1, 145, 140
+	rotate: 90
+OP2/10_Flag2
+	bounds: 2575, 48, 136, 151
+	offsets: 1, 1, 138, 153
+OP2/10_Flag3
+	bounds: 2783, 207, 132, 143
+	offsets: 1, 1, 134, 145
+OP2/10_Flag4
+	bounds: 2917, 339, 136, 141
+	offsets: 1, 1, 139, 143
+OP2/10_Flag5
+	bounds: 3045, 485, 139, 135
+	offsets: 1, 1, 142, 138
+	rotate: 90
+OP2/10_Flag6
+	bounds: 2917, 207, 139, 130
+	offsets: 1, 1, 141, 132
+OP2/10_Flag7
+	bounds: 3055, 344, 139, 136
+	offsets: 1, 1, 142, 138
+	rotate: 90
+OP2/10_Flag8
+	bounds: 2996, 66, 136, 139
+	offsets: 4, 1, 141, 142
+OP2/10_Flag9
+	bounds: 2911, 482, 132, 142
+	offsets: 1, 1, 135, 144
+OP2/10_Rope
+	bounds: 2, 746, 2403, 420
+OP3/10_Cloth
+	bounds: 2, 13, 1294, 359
+OP3/10_Core
+	bounds: 2942, 922, 221, 244
+	offsets: 1, 1, 223, 246

@@ -1,0 +1,7 @@
+Spine_UI_IconDash.png
+	size: 276, 148
+Dash
+	bounds: 148, 22, 124, 124
+Dash_Light
+	bounds: 2, 2, 144, 144
+	offsets: 1, 1, 146, 146
