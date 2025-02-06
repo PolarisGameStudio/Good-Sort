@@ -41,6 +41,8 @@ public class Item : MonoBehaviour
 
 	public ItemContainer itemContainer;
 
+	public ItemContainer itemContainerNew;
+
 	private List<KillTween> _tweens;
 
 	private bool _isDeSpawn;
@@ -50,6 +52,7 @@ public class Item : MonoBehaviour
 	private const float colorShadow = 0.313f;
 
 	public static Dictionary<ItemType, float> dicItemHeight;
+
 
 	public ItemType ItemType => _itemType;
 
@@ -113,12 +116,12 @@ public class Item : MonoBehaviour
 
         if (index == 0)
 		{
-			transform.localPosition = new Vector3(0, 0, 0);
+            transform.localPosition = new Vector3(-1, 0, 0);
 		}
 
         if (index == 1)
         {
-            transform.localPosition = new Vector3(-1, 0, 0);
+            transform.localPosition = new Vector3(0, 0, 0);
         }
 
         if (index == 2)
@@ -128,15 +131,11 @@ public class Item : MonoBehaviour
 
 		if(indexContanier == 0)
 		{
-			SetSortingOrder(_sprite, layer);
-            SetSortingOrder(_spriteShadow, layerBehind);
-
+			EnableItemNormal();
         }
 		else
 		{
-            SetSortingOrder(_sprite, layer-1);
-            SetSortingOrder(_spriteShadow, layerBehind-1);
-            _collider.enabled = false;
+			EnableItemShadow();
         }
 
         if (!active && indexContanier != 1)
@@ -147,11 +146,30 @@ public class Item : MonoBehaviour
         if (indexContanier == 1)
         {
             gameObject.SetActive(true);
-            _spriteShadow.gameObject.SetActive(false);
-            Color color = new Color(colorShadow, colorShadow, colorShadow, 1.0f);
-            _sprite.color = color;
         }
     }
+
+	public void EnableItemNormal()
+	{
+        gameObject.SetActive(true);
+        SetSortingOrder(_sprite, layer);
+        SetSortingOrder(_spriteShadow, layerBehind);
+        Color color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        _sprite.color = color;
+        _collider.enabled = true;
+    }
+
+    public void EnableItemShadow()
+	{
+        gameObject.SetActive(true);
+        SetSortingOrder(_sprite, layer - 1);
+        SetSortingOrder(_spriteShadow, layerBehind - 1);
+        _collider.enabled = false;
+        _spriteShadow.gameObject.SetActive(false);
+        Color color = new Color(colorShadow, colorShadow, colorShadow, 1.0f);
+        _sprite.color = color;
+    }
+
 
 	public void BeginDrag()
 	{
@@ -172,57 +190,23 @@ public class Item : MonoBehaviour
 		transform.position = CurrentPos;
 	}
 
-	public void CheckEndItem(Cell cel)
+	public void CheckEndItem(Cell celNew)
 	{
-		cel.CheckEndItem(this);
+        itemContainerNew = celNew.ItemContainer;
+        celNew.CheckEndItem(this);
     }
 
-
-	public void ReturnItemContainer()
+	public void OnUpdateItemContainer()
 	{
+		itemContainer = itemContainerNew;
 	}
 
-	public void SetActive(bool active)
+	public void OnNextLayerItemCurrentContainer()
 	{
-	}
+		if(!itemContainer.Equals(itemContainerNew))
+		{
+			itemContainer.OnNextItemWhenMove();
 
-	public void ActiveFromBehindLayer()
-	{
-	}
-
-	public void ActiveBox(bool active)
-	{
-	}
-
-	public void PutItem(ItemContainer itemContainer, int index, Action onTweenDone)
-	{
-	}
-
-	public void Selecting()
-	{
-	}
-
-	public void DeSpawnWithAnimScale()
-	{
-	}
-
-	public void StartDeSpawn()
-	{
-	}
-
-	public void DeSpawn()
-	{
-	}
-
-	public void DeSpawn(float delayTime)
-	{
-	}
-
-	private void SetOrderLayer(int layer)
-	{
-	}
-
-	public void DeSelect()
-	{
+        }
 	}
 }

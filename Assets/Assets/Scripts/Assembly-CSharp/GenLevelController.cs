@@ -93,7 +93,7 @@ public class GenLevelController : Singleton<GenLevelController>
 
     protected override void Awake()
 	{
-		var level = _levelData.listLevels[1].sOLevels[0].level;
+		var level = _levelData.listLevels[10].sOLevels[0].level;
 
 		var time = level.timeToPlay;
 		var numLock = level.numberCellLock;
@@ -106,11 +106,11 @@ public class GenLevelController : Singleton<GenLevelController>
 
 
         Debug.Log("cmmm: " + sizeCamera);
-		int col = 3;
+		int col = (int)Math.Sqrt((int)cell.Count);
 
-		int row = cell.Count / 3;
+		int row = cell.Count / col;
 		
-		if(cell.Count % 3 != 0)
+		if(cell.Count % col != 0)
 		{
 			row++;
 		}
@@ -120,9 +120,6 @@ public class GenLevelController : Singleton<GenLevelController>
 
         float xAdd1 = 0;
 		float yAdd1 = 0;
-
-		col = 4;
-		row = 4;
 
 		//if(row %2 == 0)
 		{
@@ -139,10 +136,12 @@ public class GenLevelController : Singleton<GenLevelController>
 		var totalY = row * yAdd;
 		float scale = 1;
 
-		if(totalX > sizeCamera.x || totalY > sizeCamera.y)
+		var distanceY = Vector2.Distance(PTop.position, PBot.position) - 0.75f;
+
+		if(totalX > sizeCamera.x || totalY > distanceY)
 		{
             var sx = sizeCamera.x / totalX;
-			var sy = sizeCamera.y / totalY;
+			var sy = distanceY / totalY;
 			scale = Math.Min(sx, sy);
         }
 
@@ -168,7 +167,7 @@ public class GenLevelController : Singleton<GenLevelController>
 		}
 
 		index = 0;
-
+		Shuffle(cell);
         foreach (var it in cell)
 		{
 			var obj = objBox[index];
@@ -189,4 +188,17 @@ public class GenLevelController : Singleton<GenLevelController>
         }
 
     }
+
+    void Shuffle<T>(List<T> list)
+    {
+        for (int i = list.Count - 1; i > 0; i--)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, i + 1);
+            T temp = list[i];
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
+        }
+    }
+
 }
+

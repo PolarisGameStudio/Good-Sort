@@ -57,6 +57,12 @@ public class ItemContainer : MonoBehaviour
 
 	public void SetupItem(Cell cell, List<ItemsInLayerCell> itemInfos)
 	{
+
+		if(cell.gameObject.name == "0,3")
+		{
+			int kk = 0;
+		}	
+
 		int index = 0;
         foreach (var it in itemInfos)
         {
@@ -75,7 +81,7 @@ public class ItemContainer : MonoBehaviour
 				if(it.items[i] == 0)
 				{
                     listItem.items.Add(null);
-                    layerItem.listItem[i] = null;
+                    layerItem.listItem[index1] = null;
                     index1++;
                     continue;
 				}
@@ -84,7 +90,7 @@ public class ItemContainer : MonoBehaviour
 				var objItem = Instantiate(_itemPrefab.gameObject, gameObj.transform);
 				var item = objItem.GetComponent<Item>();
 				item.Setup(this, DataItem, index == 0, index1, index);
-                layerItem.listItem[i] = item;
+                layerItem.listItem[index1] = item;
                 // listPointItem.Add(objItem.transform.position, item);
 
                 index1++;
@@ -95,7 +101,18 @@ public class ItemContainer : MonoBehaviour
         }
     }
 
-	public void OnSucessMegerItem(Item item)
+	public void RemoveIndexItemInLayerItem(Item item)
+	{
+		listLayerItem[currentIndex].RemoveItemInLayerItem(item);
+    }
+
+    public void AddItemInLayerItem(Item item, int index)
+	{
+        listLayerItem[currentIndex].AddItemInLayerItem(item, index);
+    }
+
+
+    public void OnSucessMegerItem(Item item)
 	{
 		if(currentIndex < listLayerItem.Count)
 		{
@@ -103,17 +120,23 @@ public class ItemContainer : MonoBehaviour
 
 			if(currentLayer.IsCheckDropItem())
 			{
-				//move to object
-				var listIndex = currentLayer.GetListIndexPoint();
+				item.itemContainer.RemoveIndexItemInLayerItem(item);
+
+                //move to object
+                var listIndex = currentLayer.GetListIndexPoint();
 				float min = 9999999;
 				Transform objEndeMove = null;
 
 				List<Transform> listObjectMove = new();
+				List<int> listIndexPointDrag = new();
 
 				for(int i = 0; i < listIndex.Count; i++)
 				{
 					listObjectMove.Add(listPintDrag[listIndex[i]]);
+					listIndexPointDrag.Add(listIndex[i]);
                 }
+
+				int indexOfPointEndDrag = 0;
 
 				for(int i = 0; i < listObjectMove.Count; i++)
 				{
@@ -122,6 +145,7 @@ public class ItemContainer : MonoBehaviour
 					if(distance < min)
 					{
 						objEndeMove = listObjectMove[i];
+						indexOfPointEndDrag = listIndexPointDrag[i];
                         min = distance;
                     }
 				}
@@ -129,6 +153,10 @@ public class ItemContainer : MonoBehaviour
 				if(objEndeMove != null)
 				{
                     item.transform.position = objEndeMove.position;
+					item.itemContainerNew.AddItemInLayerItem(item, indexOfPointEndDrag);
+					item.OnNextLayerItemCurrentContainer();
+                    item.OnUpdateItemContainer();
+					CheckOnMegerSucess();
                 }
 
             }
@@ -141,5 +169,70 @@ public class ItemContainer : MonoBehaviour
 		{
             item.OnMoveFailed();
         }
+	}
+
+	public void OnNextItemWhenMove()
+	{
+		if (listLayerItem[currentIndex].IsLayerAllPosBlank())
+		{
+            OnNextLayerItem(false);
+        }
+	}
+
+	public void OnNextLayerItem(bool isMeger)
+	{
+        var currentLayer = listLayerItem[currentIndex];
+
+        if (currentLayer.IsMegerSucess() && isMeger)
+        {
+            if (currentIndex == listLayerItem.Count - 1)
+            {
+                currentLayer.RemoveAllItem();
+            }
+            else
+            {
+                Destroy(currentLayer.gameObject);
+                currentIndex++;
+            }
+
+        }
+
+		if(!isMeger)
+		{
+			currentIndex++;
+        }
+
+        if (currentIndex >= listLayerItem.Count)
+        {
+			currentIndex--;
+            return;
+        }
+
+        listLayerItem[currentIndex].OnNextItemNormal();
+
+        if (currentIndex + 1 >= listLayerItem.Count)
+        {
+            return;
+        }
+
+        listLayerItem[currentIndex + 1].OnNextItemShadow();
+    }
+
+	public void CheckOnMegerSucess()
+	{
+		OnNextLayerItem(true);
+    }
+
+	public bool IsItemLayersBlank()
+	{
+		foreach(var it in listLayerItem)
+		{
+			if(!it.IsLayerAllPosBlank())
+			{
+				return false;
+			}
+		}
+
+		return true;
 	}
 }

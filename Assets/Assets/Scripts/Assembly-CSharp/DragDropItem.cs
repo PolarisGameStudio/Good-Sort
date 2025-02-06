@@ -50,18 +50,24 @@ public class DragDropItem : MonoBehaviour
 
                 if (hits.Length > 0)
                 {
+                    bool isDragSucess = false;
                     foreach (var hit in hits)
                     {
                         var cell = hit.collider.GetComponent<Cell>();
                         if (cell != null)
                         {
+                            isDragSucess = true;
                             Debug.Log(cell.name);
                             trObjDrag.CheckEndItem(cell);
                             break;
                         }
                     }
-                }
 
+                    if(!isDragSucess)
+                    {
+                        trObjDrag.OnMoveFailed();
+                    }
+                }
             }
 
             isDragging = false;
