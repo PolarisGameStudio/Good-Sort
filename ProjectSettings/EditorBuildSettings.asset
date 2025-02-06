@@ -2,8 +2,8 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1045 &1
 EditorBuildSettings:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
+  serializedVersion: 2
   m_Scenes:
   - enabled: 1
     path: Assets/_Games/Scenes/LoadingData.unity
@@ -320,4 +320,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_StallBuilding_Register.unity
     guid: 4d65253005d42b44bb7a958d64aa2baf
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: eb69ea8be04b2b54f93e58a0c25e0994, type: 2}

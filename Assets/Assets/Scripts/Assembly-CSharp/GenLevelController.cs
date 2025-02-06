@@ -93,7 +93,7 @@ public class GenLevelController : Singleton<GenLevelController>
 
     protected override void Awake()
 	{
-		var level = _levelData.listLevels[10].sOLevels[0].level;
+		var level = _levelData.listLevels[2].sOLevels[0].level;
 
 		var time = level.timeToPlay;
 		var numLock = level.numberCellLock;
@@ -104,8 +104,6 @@ public class GenLevelController : Singleton<GenLevelController>
 
 		sizeCamera.x -= 0.75f;
 
-
-        Debug.Log("cmmm: " + sizeCamera);
 		int col = (int)Math.Sqrt((int)cell.Count);
 
 		int row = cell.Count / col;
