@@ -32,7 +32,8 @@ public class ItemContainer : MonoBehaviour
 
 	public Cell Cell => _cell;
 
-	public CellType CellType => default(CellType);
+	private CellType _cellType;
+	public CellType CellType => _cellType;
 
 	public bool IsLock => false;
 
@@ -57,13 +58,12 @@ public class ItemContainer : MonoBehaviour
 
 	public void SetupItem(Cell cell, List<ItemsInLayerCell> itemInfos)
 	{
+        _cellType = cell.CellType;
+        _cell = cell;
+        int index = 0;
 
-		if(cell.gameObject.name == "0,3")
-		{
-			int kk = 0;
-		}	
+		int indexCellTyeOneSlot = 0;
 
-		int index = 0;
         foreach (var it in itemInfos)
         {
 			var listItem = new ListItem();
@@ -74,6 +74,7 @@ public class ItemContainer : MonoBehaviour
             gameObj.transform.localPosition = Vector3.zero;
 			gameObj.name = "layer_" + index.ToString();
 			var layerItem = gameObj.AddComponent<LayerItem>();
+
             listLayerItem.Add(layerItem);
 
             for (int i = 0; i < it.items.Count; i++)
@@ -85,23 +86,50 @@ public class ItemContainer : MonoBehaviour
                     index1++;
                     continue;
 				}
-
                 var DataItem = SOItemContainer.Instance.GetItemAsset(it.items[i]);
 				var objItem = Instantiate(_itemPrefab.gameObject, gameObj.transform);
 				var item = objItem.GetComponent<Item>();
-				item.Setup(this, DataItem, index == 0, index1, index);
-                layerItem.listItem[index1] = item;
+				item.Setup(this, DataItem, index == 0, index1, index, _cell.CellType);
+
+				if(_cell.CellType == CellType.CellLayerCount)
+				{
+                    indexCellTyeOneSlot++;
+                    layerItem.listItem[2] = item;
+                }
+				else
+				{
+                    layerItem.listItem[index1] = item;
+                }
+
                 // listPointItem.Add(objItem.transform.position, item);
 
                 index1++;
                 listItem.items.Add(item);
             }
-			_items.Add(listItem);
+
+			layerItem.SetCellType(_cell.CellType);
+
+            _items.Add(listItem);
             index++;
+        }
+
+        if (_cell.CellType == CellType.CellLayerCount)
+		{
+			_cell.InitDotTypeCellOneSlot(indexCellTyeOneSlot);
         }
     }
 
-	public void RemoveIndexItemInLayerItem(Item item)
+	public void OnLockCell()
+	{
+        listLayerItem[currentIndex].OnLockItem();
+    }
+
+    public void UnLockCell()
+	{
+        listLayerItem[currentIndex].OnUnlockItem();
+    }
+
+    public void RemoveIndexItemInLayerItem(Item item)
 	{
 		listLayerItem[currentIndex].RemoveItemInLayerItem(item);
     }
@@ -109,6 +137,14 @@ public class ItemContainer : MonoBehaviour
     public void AddItemInLayerItem(Item item, int index)
 	{
         listLayerItem[currentIndex].AddItemInLayerItem(item, index);
+    }
+
+	public void RemoveDotTypeCellOneSlot()
+	{
+		if(_cell.CellType == CellType.CellLayerCount)
+		{
+            _cell.RemoveDotTypeCellOneSlot();
+        }
     }
 
 
@@ -132,8 +168,16 @@ public class ItemContainer : MonoBehaviour
 
 				for(int i = 0; i < listIndex.Count; i++)
 				{
-					listObjectMove.Add(listPintDrag[listIndex[i]]);
-					listIndexPointDrag.Add(listIndex[i]);
+					if (_cell.CellType == CellType.CellLayerCount)
+					{
+                        listObjectMove.Add(listPintDrag[0]);
+                        listIndexPointDrag.Add(listIndex[i]);
+                    }
+					else
+					{
+                        listObjectMove.Add(listPintDrag[listIndex[i]]);
+                        listIndexPointDrag.Add(listIndex[i]);
+                    }
                 }
 
 				int indexOfPointEndDrag = 0;
@@ -154,9 +198,10 @@ public class ItemContainer : MonoBehaviour
 				{
                     item.transform.position = objEndeMove.position;
 					item.itemContainerNew.AddItemInLayerItem(item, indexOfPointEndDrag);
-					item.OnNextLayerItemCurrentContainer();
+                    item.OnRemoveDotCellTypeOneSlot();
+                    item.OnNextLayerItemCurrentContainer();
                     item.OnUpdateItemContainer();
-					CheckOnMegerSucess();
+                    CheckOnMegerSucess();
                 }
 
             }
@@ -185,6 +230,10 @@ public class ItemContainer : MonoBehaviour
 
         if (currentLayer.IsMegerSucess() && isMeger)
         {
+			LogicGame.Instance.CheckObjectLock();
+
+            currentIndex++;
+
             if (currentIndex == listLayerItem.Count - 1)
             {
                 currentLayer.RemoveAllItem();
@@ -192,14 +241,26 @@ public class ItemContainer : MonoBehaviour
             else
             {
                 Destroy(currentLayer.gameObject);
-                currentIndex++;
             }
-
         }
+
+		
 
 		if(!isMeger)
 		{
-			currentIndex++;
+            if (_cell.CellType == CellType.CellLayerCount)
+            {
+                if (currentIndex == listLayerItem.Count - 1)
+                {
+                    currentLayer.RemoveAllItem();
+                }
+                else
+                {
+                    Destroy(currentLayer.gameObject);
+                }
+            }
+
+            currentIndex++;
         }
 
         if (currentIndex >= listLayerItem.Count)

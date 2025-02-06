@@ -1,4 +1,6 @@
 using Spine.Unity;
+using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -18,9 +20,33 @@ public class CellLock : MonoBehaviour
 
 	private void Awake()
 	{
-	}
+		c_num = 4;
+		textMesh.text = "4";
+    }
 
 	public void UpdateNumLock(int num)
 	{
-	}
+		c_num--;
+		textMesh.text = c_num.ToString();
+
+		ske.AnimationState.SetAnimation(0, "Step" + num.ToString() + "_Off", false);
+        ske.AnimationState.AddAnimation(0, "Step" + (num + 1).ToString() + "_Idle", true, 0);
+        if (c_num == 0)
+		{
+			this.StartCoroutine(UnLock());
+		}
+    }
+
+	IEnumerator UnLock()
+	{
+		yield return new WaitForSeconds(GetAnimationDuration());
+		Destroy(gameObject);
+
+    }
+
+    float GetAnimationDuration()
+    {
+        var animation = ske.Skeleton.Data.FindAnimation("Step4_Off");
+        return animation != null ? animation.Duration : 0f;
+    }
 }

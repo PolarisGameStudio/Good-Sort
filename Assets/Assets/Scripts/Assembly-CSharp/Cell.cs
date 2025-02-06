@@ -10,6 +10,7 @@ public class Cell : MonoBehaviour
 
 	[SerializeField]
 	private ItemContainer _itemContainer;
+	[SerializeField] private UICellHealthBar _healthBar;
 
 	private MoveType _moveType;
 
@@ -19,9 +20,9 @@ public class Cell : MonoBehaviour
 
 	private Vector2Int _curPos;
 
-	public bool IsLock => false;
+	public bool IsLock => _isLock;
 
-	public CellType CellType => default(CellType);
+	public CellType CellType => _cellType;
 
 	public ItemContainer ItemContainer => _itemContainer;
 
@@ -42,13 +43,46 @@ public class Cell : MonoBehaviour
 		}
 	}
 
+	[HideInInspector]
+	public CellLock cellLock = null;
+
 	private void OnValidate()
 	{
 	}
 
-	public void SetData(List<ItemsInLayerCell> da)
+	public void InitDotTypeCellOneSlot(int max)
 	{
-		_itemContainer.SetupItem(this, da);
+		_healthBar.Init(max);
+    }
+
+	public void RemoveDotTypeCellOneSlot()
+	{
+		_healthBar.RemoveDot();
+    }
+
+	public void OnLockCell(GameObject objLock)
+	{
+		_isLock = true;
+        var obj = Instantiate(objLock, transform);
+		cellLock = obj.GetComponent<CellLock>();
+        _itemContainer.OnLockCell();
+    }
+
+	public void OnUpdateNumLock(int num)
+	{
+		cellLock.UpdateNumLock(num);
+    }
+
+    public void UnLockCellAllItem()
+	{
+        _isLock = false;
+        _itemContainer.UnLockCell();
+	}
+
+	public void SetData(List<ItemsInLayerCell> da, int typeCell)
+	{
+		_cellType = (CellType)typeCell;
+        _itemContainer.SetupItem(this, da);
 	}
 
 	public void CheckEndItem(Item item)

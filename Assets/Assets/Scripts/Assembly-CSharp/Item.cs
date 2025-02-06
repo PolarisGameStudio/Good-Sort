@@ -96,7 +96,7 @@ public class Item : MonoBehaviour
         sp.sortingOrder = order;
     }
 
-	public void Setup(ItemContainer itemContainer, ItemAsset item, bool active, int index, int indexContanier)
+	public void Setup(ItemContainer itemContainer, ItemAsset item, bool active, int index, int indexContanier, CellType cellType)
 	{
 		this.itemContainer = itemContainer;
 
@@ -114,20 +114,28 @@ public class Item : MonoBehaviour
             transform.localScale = Vector3.one * sx;
         }
 
-        if (index == 0)
+		if(cellType == CellType.CellLayerCount)
 		{
-            transform.localPosition = new Vector3(-1, 0, 0);
-		}
-
-        if (index == 1)
-        {
-            transform.localPosition = new Vector3(0, 0, 0);
+            transform.localPosition = new Vector3(0, 0.155f, 0);
         }
+		else
+		{
+            if (index == 0)
+            {
+                transform.localPosition = new Vector3(-1, 0, 0);
+            }
 
-        if (index == 2)
-        {
-            transform.localPosition = new Vector3(1, 0, 0);
+            if (index == 1)
+            {
+                transform.localPosition = new Vector3(0, 0, 0);
+            }
+
+            if (index == 2)
+            {
+                transform.localPosition = new Vector3(1, 0, 0);
+            }
         }
+        
 
 		if(indexContanier == 0)
 		{
@@ -143,7 +151,7 @@ public class Item : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        if (indexContanier == 1)
+        if (indexContanier == 1 && itemContainer.CellType != CellType.CellLayerCount)
         {
             gameObject.SetActive(true);
         }
@@ -161,7 +169,13 @@ public class Item : MonoBehaviour
 
     public void EnableItemShadow()
 	{
-        gameObject.SetActive(true);
+		if(itemContainer.CellType == CellType.CellLayerCount)
+		{
+            gameObject.SetActive(false);
+        }else
+		{
+            gameObject.SetActive(true);
+        }
         SetSortingOrder(_sprite, layer - 1);
         SetSortingOrder(_spriteShadow, layerBehind - 1);
         _collider.enabled = false;
@@ -206,7 +220,24 @@ public class Item : MonoBehaviour
 		if(!itemContainer.Equals(itemContainerNew))
 		{
 			itemContainer.OnNextItemWhenMove();
-
         }
 	}
+
+	public void OnRemoveDotCellTypeOneSlot()
+	{
+        if (!itemContainer.Equals(itemContainerNew))
+		{
+            itemContainer.RemoveDotTypeCellOneSlot();
+        }
+    }
+
+	public void OnLockItem()
+	{
+		_collider.enabled = false;
+	}
+
+	public void OnUnlockItem()
+	{
+        _collider.enabled = true;
+    }
 }

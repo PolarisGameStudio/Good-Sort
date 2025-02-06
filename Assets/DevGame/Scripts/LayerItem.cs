@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class LayerItem : MonoBehaviour
 {
+    public CellType cellType;
+
     public List<Item> listItem = new() { null, null, null};
-    public List<Vector3> listPoint = new() { new Vector3(-1, 0, 0), new Vector3(0, 0, 0), new Vector3(1, 0, 0)};
 
     public bool IsCheckDropItem()
     {
@@ -76,6 +77,11 @@ public class LayerItem : MonoBehaviour
 
     public bool IsMegerSucess()
     {
+        if(cellType == CellType.CellLayerCount)
+        {
+            return false;
+        }
+
         for (int i = 0; i < listItem.Count; i++)
         {
             if (listItem[i] == null)
@@ -132,6 +138,38 @@ public class LayerItem : MonoBehaviour
                 continue;
             }
             listItem[i].EnableItemShadow();
+        }
+    }
+
+    public void OnLockItem()
+    {
+        for (int i = 0; i < listItem.Count; i++)
+        {
+            if (listItem[i] != null)
+            {
+                listItem[i].OnLockItem();
+            }
+        }
+    }
+
+    public void OnUnlockItem()
+    {
+        for (int i = 0; i < listItem.Count; i++)
+        {
+            if (listItem[i] != null)
+            {
+                listItem[i].OnUnlockItem();
+            }
+        }
+    }
+
+    public void SetCellType(CellType ce)
+    {
+        cellType = ce;
+        if(cellType == CellType.CellLayerCount)
+        {
+            listItem.RemoveAt(0);
+            listItem.RemoveAt(0);
         }
     }
 }

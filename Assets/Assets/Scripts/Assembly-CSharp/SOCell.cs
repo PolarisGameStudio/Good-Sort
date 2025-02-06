@@ -8,6 +8,13 @@ public class SOCell : ScriptableObject
 
 	public CellAsset GetCellAsset(CellType cellType)
 	{
+		foreach(var it in cellAssets)
+		{
+			if(it.cellType == cellType)
+			{
+				return it;
+			}
+		}
 		return null;
 	}
 }
