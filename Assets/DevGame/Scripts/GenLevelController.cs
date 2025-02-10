@@ -74,6 +74,8 @@ public class GenLevelController : Singleton<GenLevelController>
 
 	public Dictionary<Vector2Int, CellType?> cellTypeByPos;
 
+	public int LevelId = 0;
+
 
 	public LevelInfo LevelInfoInit => null;
 
@@ -81,20 +83,22 @@ public class GenLevelController : Singleton<GenLevelController>
 
 	public LevelInfo GetDataLevel()
 	{
-		return _levelData.listLevels[6].sOLevels[0].level;
+		//19
+		return _levelData.listLevels[LevelId].sOLevels[0].level;
 	}
 
 
     private void Start()
     {
 		int index = 0;
+		List<int> listint = new();
 		foreach (var it1 in _levelData.listLevels)
 		{
 			string Leve1l = "Level_" + index.ToString() + "_";
 			index++;
 
             var infoLevel = it1.sOLevels[0].level;
-
+			listint.Add(infoLevel.cells.Count);
             foreach (var it in infoLevel.cells)
             {
 				if(it.cellType > 0)
@@ -113,9 +117,13 @@ public class GenLevelController : Singleton<GenLevelController>
                     Debug.Log(cc1);
                 }
             }
-
 			Debug.Log(Leve1l);
         }
+
+		listint.Sort((a, b)=> a - b);
+
+		Debug.Log(listint[0] + "cmn_//////_" + listint[listint.Count - 1]);
+
     }
 
 	public CellAsset GetPrefabCell(int type)

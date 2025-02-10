@@ -2,6 +2,7 @@ using GoodSortEditor;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LogicGame : Singleton<LogicGame>
@@ -80,26 +81,83 @@ public class LogicGame : Singleton<LogicGame>
         int index = 0;
         List<GameObject> objBox = new();
 
-        for (int i = 0; i < row; i++)
+
+        var grid = Create2DArray(cell);
+        int kk = 0;
+
+        int rows = grid.GetLength(0);
+        int cols = grid.GetLength(1);
+
+
+        int indexX = -1;
+
+        for (int i = 0; i < rows; i++)
         {
-            for (int j = 0; j < col; j++)
+            bool isAdd = false;
+            int indexj = 0;
+            for (int j = 0; j < cols; j++)
             {
-                if (index >= cell.Count)
+                if(grid[i, j] == null)
                 {
-                    break;
+                    continue;
                 }
 
-                var prefab = GenLevelController.Instance.GetPrefabCell(cell[index].cellType);
+                if(!isAdd)
+                {
+                    isAdd = true;
+                    indexX++;
+                }
+
+                var prefab = GenLevelController.Instance.GetPrefabCell(grid[i, j].cellType);
 
                 if(prefab == null)
                 {
                     continue;
                 }
 
+                indexj++;
+
                 var obj = Instantiate(prefab.prefab.gameObject);
-                obj.transform.localScale = Vector3.one * scale;
-                obj.transform.position = vecbegin + new Vector2(xAdd * j * scale, yAdd * i * scale);
-                obj.name = i.ToString() + "," + j.ToString();
+              //  obj.transform.localScale = Vector3.one * scale;
+                obj.transform.position = new Vector2((grid[i, j].posX + 3.0f), grid[i,j].posY - 1.5f * 0);
+
+
+                float xNew = obj.transform.position.x;
+
+
+                float k = 2f;
+
+                if (xNew < 0)
+                {
+                    if(grid[i, j].posX % 2 == 0)
+                    {
+                        xNew += k;
+                    }
+                    else
+                    {
+                        xNew += 2.5f;
+                    }
+                }
+
+                if (xNew > 0)
+                {
+                    if (grid[i, j].posX % 2 == 0)
+                    {
+                        xNew -= k;
+                    }
+                    else
+                    {
+                        xNew -= 2.5f;
+                    }
+                }
+
+                float YNew = obj.transform.position.y;
+
+              //  obj.transform.position = new Vector3(xNew, YNew);
+
+
+
+                obj.name = grid[i, j].posX.ToString() + "," + grid[i, j].posY.ToString();
                 index++;
                 objBox.Add(obj);
             }
@@ -150,6 +208,28 @@ public class LogicGame : Singleton<LogicGame>
             }
         }
 
+
+    }
+
+    CellInfo[,] Create2DArray(List<CellInfo> objects)
+    {
+        List<int> uniqueX = objects.Select(o => o.posX).Distinct().OrderBy(x => x).ToList();
+        List<int> uniqueY = objects.Select(o => o.posY).Distinct().OrderBy(y => y).ToList();
+
+        int rows = uniqueY.Count;
+        int cols = uniqueX.Count;
+
+        CellInfo[,] grid = new CellInfo[rows, cols];
+
+        
+        foreach (var obj in objects)
+        {
+            int xIndex = uniqueX.IndexOf(obj.posX);
+            int yIndex = uniqueY.IndexOf(obj.posY);
+            grid[yIndex, xIndex] = obj;
+        }
+
+        return grid;
     }
 
     public void CheckObjectLock()
