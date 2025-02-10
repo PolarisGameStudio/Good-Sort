@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Cell : MonoBehaviour
@@ -52,7 +53,7 @@ public class Cell : MonoBehaviour
 
 	public void InitDotTypeCellOneSlot(int max)
 	{
-		_healthBar.Init(max);
+		//_healthBar.Init(max);
     }
 
 	public void RemoveDotTypeCellOneSlot()

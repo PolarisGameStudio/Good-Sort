@@ -124,6 +124,27 @@ public class GenLevelController : Singleton<GenLevelController>
 
 		Debug.Log(listint[0] + "cmn_//////_" + listint[listint.Count - 1]);
 
+		/*for(int i = 0; i < 15; i++)
+		{
+			var it1 = _levelData.listLevels[i];
+            var infoLevel = it1.sOLevels[0].level;
+
+			var gameObject = new GameObject();
+			gameObject.transform.position = Vector3.zero;
+			gameObject.name = i.ToString();
+
+            foreach (var it in infoLevel.cells)
+            {
+                var prefab = GenLevelController.Instance.GetPrefabCell(0);
+                var obj = Instantiate(prefab.prefab.gameObject, gameObject.transform);
+				obj.transform.position = new Vector2(it.posX, it.posY);
+                obj.name = it.posX.ToString() + "_" + it.posY.ToString();
+                var cellcpn = obj.GetComponent<Cell>();
+				cellcpn.txtSc.text = obj.name;
+            }
+
+        }*/
+
     }
 
 	public CellAsset GetPrefabCell(int type)

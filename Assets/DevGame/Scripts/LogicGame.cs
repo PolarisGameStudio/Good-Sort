@@ -20,6 +20,13 @@ public class LogicGame : Singleton<LogicGame>
     int _numCellLock = 0;
     int _numCellHiden = 0;
 
+    Dictionary<Vector2Int, Vector2> postNe = new();
+
+    public Transform p1 = null;
+    public Transform p2 = null;
+    public Transform p3 = null;
+
+
     void Start()
     {
         OnLoadLevel();
@@ -55,7 +62,7 @@ public class LogicGame : Singleton<LogicGame>
             row++;
         }
 
-        float xAdd = 3.5f;
+        float xAdd = 3.6f;
         float yAdd = 2.5f;
 
         float xAdd1 = 0;
@@ -77,9 +84,50 @@ public class LogicGame : Singleton<LogicGame>
             scale = Math.Min(sx, sy);
         }
 
+        scale = 1;
+
         var vecbegin = new Vector2(-xAdd * col / 2.0f * scale + xAdd1 * scale, PTop.position.y / 2 + PBot.position.y / 2 - yAdd * row / 2.0f * scale + yAdd1 * scale);
+
+        vecbegin = new Vector2(-15, -16);
+        var vecbegin1 = new Vector2(-15, -15);
+
+
         int index = 0;
         List<GameObject> objBox = new();
+
+        for(int i = 0; i < 15; i++)
+        {
+            for(int j = 0; j < 15; j++)
+            {
+                postNe.Add(new Vector2Int((int)vecbegin.x + 6 * j, (int)vecbegin.y + 4 * i), vecbegin + new Vector2(xAdd * j * scale, yAdd * i * scale));
+            }
+        }
+
+
+        var vecbegin2 = new Vector2(-18, -16);
+
+        for (int i = 0; i < 15; i++)
+        {
+            for (int j = 0; j < 15; j++)
+            {
+                var vecCopy = new Vector2(vecbegin2.x + xAdd / 2 + (i % 2 == 0 ? 0 : xAdd / 2), vecbegin2.y);
+                var vvvv = new Vector2Int((int)vecbegin2.x + 6 * j, (int)vecbegin2.y + 4 * i);
+                var poscc = vecCopy + new Vector2(xAdd * j * scale, yAdd * i * scale);
+                postNe.Add(vvvv, poscc);
+               
+            }
+        }
+
+
+        for (int i = 0; i < 15; i++)
+        {
+            for (int j = 0; j < 15; j++)
+            {
+                var vecCopy = new Vector2(vecbegin1.x, vecbegin1.y - yAdd / 2 * i);
+                var vecc = new Vector2Int((int)vecbegin1.x + 6 * j, (int)vecbegin1.y + 2 * (i + 1));
+                postNe.Add(vecc, vecCopy + new Vector2(xAdd * j * scale, yAdd * i * scale));
+            }
+        }
 
 
         var grid = Create2DArray(cell);
@@ -109,53 +157,23 @@ public class LogicGame : Singleton<LogicGame>
                 }
 
                 var prefab = GenLevelController.Instance.GetPrefabCell(grid[i, j].cellType);
-
-                if(prefab == null)
+                if (prefab == null)
                 {
                     continue;
                 }
 
                 indexj++;
 
-                var obj = Instantiate(prefab.prefab.gameObject);
-              //  obj.transform.localScale = Vector3.one * scale;
-                obj.transform.position = new Vector2((grid[i, j].posX + 3.0f), grid[i,j].posY - 1.5f * 0);
+                var obj = Instantiate(prefab.prefab.gameObject, p2);
+                obj.transform.position = new Vector2((grid[i, j].posX), grid[i,j].posY - 1.5f * 0);
 
-
-                float xNew = obj.transform.position.x;
-
-
-                float k = 2f;
-
-                if (xNew < 0)
+                foreach(var it in postNe)
                 {
-                    if(grid[i, j].posX % 2 == 0)
+                    if(it.Key.x == grid[i, j].posX && it.Key.y == grid[i, j].posY)
                     {
-                        xNew += k;
-                    }
-                    else
-                    {
-                        xNew += 2.5f;
+                        obj.transform.position = it.Value;
                     }
                 }
-
-                if (xNew > 0)
-                {
-                    if (grid[i, j].posX % 2 == 0)
-                    {
-                        xNew -= k;
-                    }
-                    else
-                    {
-                        xNew -= 2.5f;
-                    }
-                }
-
-                float YNew = obj.transform.position.y;
-
-              //  obj.transform.position = new Vector3(xNew, YNew);
-
-
 
                 obj.name = grid[i, j].posX.ToString() + "," + grid[i, j].posY.ToString();
                 index++;
