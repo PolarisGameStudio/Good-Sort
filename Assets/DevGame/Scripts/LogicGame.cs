@@ -103,7 +103,6 @@ public class LogicGame : Singleton<LogicGame>
             }
         }
 
-
         var vecbegin2 = new Vector2(-18, -16);
 
         for (int i = 0; i < 15; i++)
@@ -139,6 +138,9 @@ public class LogicGame : Singleton<LogicGame>
 
         int indexX = -1;
 
+        float XMin = 99999, yMin = 99999;
+        float XMax = -99999, yMax = -99999;
+
         for (int i = 0; i < rows; i++)
         {
             bool isAdd = false;
@@ -171,7 +173,13 @@ public class LogicGame : Singleton<LogicGame>
                 {
                     if(it.Key.x == grid[i, j].posX && it.Key.y == grid[i, j].posY)
                     {
-                        obj.transform.position = it.Value;
+                       // obj.transform.localPosition = it.Value;
+
+                        XMin = Math.Min(XMin, it.Value.x);
+                        XMax = Math.Max(XMax, it.Value.x);
+
+                        yMin = Math.Min(yMin, it.Value.y);
+                        yMax = Math.Max(yMax, it.Value.y);
                     }
                 }
 
@@ -181,6 +189,13 @@ public class LogicGame : Singleton<LogicGame>
             }
         }
 
+        float xtt = Math.Abs(XMin) / 2 + Math.Abs(XMax) / 2;
+        float ytt = Math.Abs(yMin) / 2 + Math.Abs(yMax) / 2;
+
+        var disX = xtt * 2;
+        var disY = ytt * 2;
+
+    
         index = 0;
 
         bool IsLock = false;
@@ -227,6 +242,20 @@ public class LogicGame : Singleton<LogicGame>
         }
 
 
+        if (disX > sizeCamera.x || disY > distanceY)
+        {
+            var sx = sizeCamera.x / disX;
+            var sy = distanceY / disY;
+            scale = Math.Min(sx, sy);
+        }
+
+
+        foreach (var it in objBox)
+        {
+          //  it.transform.localPosition = it.transform.localPosition + new Vector3(Math.Abs(xtt), Math.Abs(ytt), 0);
+        }
+
+        p2.localScale = Vector3.one * scale;
     }
 
     CellInfo[,] Create2DArray(List<CellInfo> objects)
