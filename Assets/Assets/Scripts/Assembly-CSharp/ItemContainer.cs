@@ -119,24 +119,47 @@ public class ItemContainer : MonoBehaviour
         }
     }
 
-	public void OnLockCell()
+    LayerItem getCurrentLayer()
 	{
-        listLayerItem[currentIndex].OnLockItem();
+		if(listLayerItem[currentIndex] != null)
+		{
+			return listLayerItem[currentIndex];
+		}
+		int index = 0;
+		foreach(var it in listLayerItem)
+		{
+            if (it != null)
+			{
+                currentIndex = index;
+                return it;
+            }
+            index++;
+        }
+		return null;
+    }
+
+    public void OnLockCell()
+	{
+		var cc = getCurrentLayer();
+        cc.OnLockItem();
     }
 
     public void UnLockCell()
 	{
-        listLayerItem[currentIndex].OnUnlockItem();
+        var cc = getCurrentLayer();
+        cc.OnUnlockItem();
     }
 
     public void RemoveIndexItemInLayerItem(Item item)
 	{
-		listLayerItem[currentIndex].RemoveItemInLayerItem(item);
+        var cc = getCurrentLayer();
+        cc.RemoveItemInLayerItem(item);
     }
 
     public void AddItemInLayerItem(Item item, int index)
 	{
-        listLayerItem[currentIndex].AddItemInLayerItem(item, index);
+        var cc = getCurrentLayer();
+        cc.AddItemInLayerItem(item, index);
     }
 
 	public void RemoveDotTypeCellOneSlot()
@@ -244,7 +267,10 @@ public class ItemContainer : MonoBehaviour
             }
         }
 
-		
+		if(transform.parent.name == "3,5")
+		{
+			int kk = 0;
+		}
 
 		if(!isMeger)
 		{

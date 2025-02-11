@@ -50,7 +50,12 @@ public class LayerItem : MonoBehaviour
 
     public void AddItemInLayerItem(Item item, int index)
     {
-        if(index >= listItem.Count)
+        if(this == null)
+        {
+            int kk = 0;
+        }
+
+        if(index >= listItem.Count || this == null)
         {
             return;
         }

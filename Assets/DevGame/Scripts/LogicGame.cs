@@ -76,40 +76,8 @@ public class LogicGame : Singleton<LogicGame>
         _numCellHiden = level.itemHiden;
         var cell = level.cells;
 
-
-        sizeCamera.x -= 0.75f;
-
-        int col = (int)Math.Sqrt((int)cell.Count);
-
-        int row = cell.Count / col;
-
-        if (cell.Count % col != 0)
-        {
-            row++;
-        }
-
-        float xAdd = 3.6f;
-        float yAdd = 2.5f;
-
-        float xAdd1 = 0;
-        float yAdd1 = 0;
-
-        yAdd1 = yAdd / 2;
-        xAdd1 = xAdd / 2.0f;
-
-        var totalX = col * xAdd;
-        var totalY = row * yAdd;
-        float scale = 1;
-
+     
         var distanceY = Vector2.Distance(PTop.position, PBot.position) - 0.75f;
-
-        scale = 1;
-
-        var vecbegin = new Vector2(-xAdd * col / 2.0f * scale + xAdd1 * scale, PTop.position.y / 2 + PBot.position.y / 2 - yAdd * row / 2.0f * scale + yAdd1 * scale);
-
-        vecbegin = new Vector2(-15, -16);
-        var vecbegin1 = new Vector2(-15, -15);
-
 
         int index = 0;
 
@@ -253,7 +221,6 @@ public class LogicGame : Singleton<LogicGame>
 
             obj.name = it.posX.ToString() + "," + it.posY.ToString();
 
-
             Debug.Log("cmmmm_cmmm_" + disX1 + "_" + disY2);
         }
 
@@ -268,23 +235,9 @@ public class LogicGame : Singleton<LogicGame>
                 listCellLock.Add(cellLock);
             }
         }
-
-
-        if (disX > sizeCamera.x || disY > distanceY)
-        {
-            var sx = sizeCamera.x / disX;
-            var sy = distanceY / disY;
-            scale = Math.Min(sx, sy);
-        }
-
+   
         ResetPoint(objCellPoint);
-
-        //foreach (var it in objBox)
-        {
-          //  it.transform.localPosition = it.transform.localPosition + new Vector3(Math.Abs(xtt), Math.Abs(ytt), 0);
-        }
-
-       // p2.localScale = Vector3.one * scale;
+        
     }
 
     void ResetPoint(List<Cell> listCell)
