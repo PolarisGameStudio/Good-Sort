@@ -83,8 +83,9 @@ public class GenLevelController : Singleton<GenLevelController>
 
 	public LevelInfo GetDataLevel()
 	{
-		//19
-		return _levelData.listLevels[LevelId].sOLevels[0].level;
+		LevelId++;
+        //19
+        return _levelData.listLevels[LevelId].sOLevels[0].level;
 	}
 
 

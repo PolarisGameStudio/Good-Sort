@@ -1,3 +1,7 @@
+using UnityEngine;
+
+[SerializeField]
+
 public enum MoveType
 {
 	Idle = 0,

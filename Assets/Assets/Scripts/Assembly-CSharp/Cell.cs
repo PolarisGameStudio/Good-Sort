@@ -13,7 +13,7 @@ public class Cell : MonoBehaviour
 	private ItemContainer _itemContainer;
 	[SerializeField] private UICellHealthBar _healthBar;
 
-	private MoveType _moveType;
+    [SerializeField] private MoveType _moveType;
 
 	private float _speed;
 
@@ -27,7 +27,7 @@ public class Cell : MonoBehaviour
 
 	public ItemContainer ItemContainer => _itemContainer;
 
-	public MoveType MoveType => default(MoveType);
+	public MoveType MoveType => _moveType;
 
 	public float Speed => 0f;
 
@@ -80,9 +80,10 @@ public class Cell : MonoBehaviour
         _itemContainer.UnLockCell();
 	}
 
-	public void SetData(List<ItemsInLayerCell> da, int typeCell)
+	public void SetData(List<ItemsInLayerCell> da, int typeCell, int moveType)
 	{
-		_cellType = (CellType)typeCell;
+		_moveType = (MoveType)moveType;
+        _cellType = (CellType)typeCell;
         _itemContainer.SetupItem(this, da);
 	}
 
