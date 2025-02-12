@@ -130,7 +130,7 @@ public class LayerItem : MonoBehaviour
             {
                 continue;
             }
-            listItem[i].EnableItemNormal();
+            listItem[i].EnableItemNormal(true);
         }
     }
 
@@ -142,7 +142,7 @@ public class LayerItem : MonoBehaviour
             {
                 continue;
             }
-            listItem[i].EnableItemShadow();
+            listItem[i].EnableItemShadow(true);
         }
     }
 

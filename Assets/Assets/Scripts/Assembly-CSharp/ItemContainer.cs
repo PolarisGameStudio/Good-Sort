@@ -251,21 +251,30 @@ public class ItemContainer : MonoBehaviour
 	{
         var currentLayer = listLayerItem[currentIndex];
 
-        if (currentLayer.IsMegerSucess() && isMeger)
+        if (isMeger)
         {
-			LogicGame.Instance.CheckObjectLock();
+			if (currentLayer.IsMegerSucess())
+			{
+                LogicGame.Instance.CheckObjectLock();
 
-            currentIndex++;
+                currentIndex++;
 
-            if (currentIndex == listLayerItem.Count - 1)
-            {
-                currentLayer.RemoveAllItem();
+                if (currentIndex == listLayerItem.Count - 1)
+                {
+                    currentLayer.RemoveAllItem();
+                }
+                else
+                {
+                    Destroy(currentLayer.gameObject);
+                }
             }
-            else
-            {
-                Destroy(currentLayer.gameObject);
-            }
+
+			if(!currentLayer.IsLayerAllPosBlank())
+			{
+				return;
+			}
         }
+
 
 		if(transform.parent.name == "3,5")
 		{
@@ -296,7 +305,6 @@ public class ItemContainer : MonoBehaviour
         }
 
         listLayerItem[currentIndex].OnNextItemNormal();
-
         if (currentIndex + 1 >= listLayerItem.Count)
         {
             return;

@@ -43,60 +43,27 @@ public class Item : MonoBehaviour
 
 	public ItemContainer itemContainerNew;
 
-	private List<KillTween> _tweens;
-
-	private bool _isDeSpawn;
-
-	private GameObject _fxGoldenGift;
-
 	private const float colorShadow = 0.313f;
-
-	public static Dictionary<ItemType, float> dicItemHeight;
-
 
 	public ItemType ItemType => _itemType;
 
-	public bool IsDeSpawn => false;
-
 	public Vector3 CurrentPos = Vector3.zero;
 
-	public float HalfHeight => 0f;
+	private Vector3 PointNomal = Vector3.zero;
+    private Vector3 PointShadow = Vector3.zero;
+    private Vector3 CurrentScale = Vector3.zero;
 
-	private void Awake()
-	{
-	}
-
-	public void CompleteTween()
-	{
-	}
-
-	private void OnEnable()
-	{
-	}
-
-	public void AddTween(Tween tween, bool completeWhenKill)
-	{
-	}
-
-	public void ActiveVisual(bool active)
-	{
-	}
-
-	public bool IsGoldenGift()
-	{
-		return false;
-	}
-
-	public void SetupVisual(ItemContainer itemContainer, ItemAsset item, bool active, int index)
-	{
-	}
 
 	private void SetSortingOrder(SpriteRenderer sp, int order)
 	{
         sp.sortingOrder = order;
     }
 
-	public void Setup(ItemContainer itemContainer, ItemAsset item, bool active, int index, int indexContanier, CellType cellType)
+    float yScale = 0.025f;
+	float yAdd = 0.15f;
+
+
+    public void Setup(ItemContainer itemContainer, ItemAsset item, bool active, int index, int indexContanier, CellType cellType)
 	{
 		this.itemContainer = itemContainer;
 
@@ -139,15 +106,19 @@ public class Item : MonoBehaviour
                 transform.localPosition = new Vector3(1, 0, 0);
             }
         }
-        
 
-		if(indexContanier == 0)
+        PointNomal = transform.localPosition;
+        PointShadow = transform.localPosition + new Vector3(0, yAdd, 0);
+        CurrentScale = transform.localScale;
+
+
+        if (indexContanier == 0)
 		{
-			EnableItemNormal();
+			EnableItemNormal(false);
         }
 		else
 		{
-			EnableItemShadow();
+			EnableItemShadow(false);
         }
 
         if (!active && indexContanier != 1)
@@ -161,7 +132,9 @@ public class Item : MonoBehaviour
         }
     }
 
-	public void EnableItemNormal()
+
+
+	public void EnableItemNormal(bool isSet)
 	{
         gameObject.SetActive(true);
         SetSortingOrder(_sprite, layer);
@@ -169,9 +142,15 @@ public class Item : MonoBehaviour
         Color color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         _sprite.color = color;
         _collider.enabled = true;
+		if(isSet)
+		{
+            transform.localPosition = PointNomal;
+            transform.localScale = CurrentScale - Vector3.one* yScale;
+        }
+		
     }
 
-    public void EnableItemShadow()
+    public void EnableItemShadow(bool isSet)
 	{
 		if(itemContainer.CellType == CellType.CellLayerCount)
 		{
@@ -186,6 +165,8 @@ public class Item : MonoBehaviour
         _spriteShadow.gameObject.SetActive(false);
         Color color = new Color(colorShadow, colorShadow, colorShadow, 1.0f);
         _sprite.color = color;
+		transform.localPosition = PointShadow;
+		transform.localScale = CurrentScale + Vector3.one * yScale;
     }
 
 
@@ -217,6 +198,16 @@ public class Item : MonoBehaviour
 	public void OnUpdateItemContainer()
 	{
 		itemContainer = itemContainerNew;
+	}
+
+	public bool IsEquasItemContainer()
+	{
+		if(itemContainerNew == null)
+		{
+			return false;
+		}
+
+		return itemContainer.Equals(itemContainerNew);
 	}
 
 	public void OnNextLayerItemCurrentContainer()
