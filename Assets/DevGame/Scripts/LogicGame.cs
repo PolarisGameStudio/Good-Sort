@@ -317,11 +317,13 @@ public class LogicGame : Singleton<LogicGame>
                 //  it.transform.localPosition = it.transform.localPosition + new Vector3(Math.Abs(xtt), Math.Abs(ytt), 0);
                 it.transform.position = it.transform.position + new Vector3(poinXMid, ytt, 0);
             }
-            p2.transform.position = new Vector2(0, pyMid);
+
+            float distanceY = 4.5f;
+
+            p2.transform.position = new Vector2(0, pyMid - 0.5f);
 
 
             float distanceX = 3.6f;
-            float distanceY = 2.4f;
 
             float scale = 1;
 
@@ -335,6 +337,7 @@ public class LogicGame : Singleton<LogicGame>
         }
         else
         {
+
             var pmin = newCell[0].transform.position;
             var vecAdd = Vector3.zero - pmin;
             var yAddd = vecAdd.y > PBot.transform.position.y ? PBot.transform.position.y + 1.4f : -PBot.transform.position.y - 1.4f;
@@ -343,6 +346,27 @@ public class LogicGame : Singleton<LogicGame>
             foreach (var cell in listCell)
             {
                 cell.transform.position += new Vector3(poinXMid, vecAdd.y + yAddd);
+            }
+
+            yMin = 99999; yMax = -99999;
+
+            var pyMid = PTop.transform.position.y / 2 + PBot.transform.position.y / 2;
+
+            XMax = -99999; XMin = 99999;
+            var newCell1 = listCell.Where(x => x.CellType == CellType.CellNormal || x.CellType == CellType.CellLayerCount && x.MoveType == MoveType.Idle).Distinct().OrderBy(x => x.transform.position.y).ToList();
+            foreach (var it in listCell)
+            {
+                XMin = Mathf.Min(XMin, it.transform.position.x);
+                XMax = Mathf.Max(XMax, it.transform.position.x);
+            }
+
+            float distanceX = 3.6f;
+            float dis = XMax - XMin;
+
+            if (dis > sizeCamera.x - distanceX)
+            {
+                var sx = (sizeCamera.x - distanceX) / dis;
+                p2.transform.localScale = Vector2.one * sx;
             }
         }
     }
