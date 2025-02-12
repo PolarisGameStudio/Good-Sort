@@ -54,7 +54,7 @@ public class DragDropItem : MonoBehaviour
                     foreach (var hit in hits)
                     {
                         var cell = hit.collider.GetComponent<Cell>();
-                        if (cell != null)
+                        if (cell != null && !cell.IsLock)
                         {
                             isDragSucess = true;
                             Debug.Log(cell.name);

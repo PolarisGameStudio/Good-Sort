@@ -169,8 +169,45 @@ public class Item : MonoBehaviour
 		transform.localScale = CurrentScale + Vector3.one * yScale;
     }
 
+    public void OnMoveWhenEndDrag(Vector2 pointMove, bool isRunAnimScale, Action callback)
+    {
+		var currentPos = transform.localPosition;
+		var dis = Vector2.Distance(currentPos, pointMove);
+		var time = dis / 400;
 
-	public void BeginDrag()
+
+        _collider.enabled = false;
+
+        transform.DOLocalMove(pointMove, time).OnComplete(() =>
+		{
+			//transform.localPosition = pointMove;
+			if(isRunAnimScale)
+			{
+				RunAnimScale(callback);
+			}
+			else
+			{
+                _collider.enabled = true;
+                callback?.Invoke();
+            }
+
+        }).SetEase(Ease.OutBack);
+    }
+	
+	public void RunAnimScale(Action callback)
+	{
+        var ScaleAdd = new Vector3(0.2f, -0.15f);
+        transform.DOScale(CurrentScale + ScaleAdd, 0.1f).OnComplete(() =>
+        {
+            transform.DOScale(transform.localScale - ScaleAdd, 0.1f).OnComplete(() =>
+            {
+                callback?.Invoke();
+                _collider.enabled = true;
+            });
+        });
+    }	
+
+    public void BeginDrag()
 	{
 		CurrentPos = transform.localPosition;
 		SetSortingOrder(_sprite, layerWhenSelecting);
@@ -186,7 +223,7 @@ public class Item : MonoBehaviour
 	public void OnMoveFailed()
 	{
 		///
-		transform.localPosition = CurrentPos;
+		OnMoveWhenEndDrag(CurrentPos, false, null);
 	}
 
 	public void CheckEndItem(Cell celNew)

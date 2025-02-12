@@ -217,14 +217,20 @@ public class ItemContainer : MonoBehaviour
                     }
 				}
 
-				if(objEndeMove != null)
+				if (objEndeMove != null)
 				{
-                    item.transform.position = objEndeMove.position;
-					item.itemContainerNew.AddItemInLayerItem(item, indexOfPointEndDrag);
-                    item.OnRemoveDotCellTypeOneSlot();
-                    item.OnNextLayerItemCurrentContainer();
-                    item.OnUpdateItemContainer();
-                    CheckOnMegerSucess();
+					var curentParent = objEndeMove.transform.parent;
+                    objEndeMove.transform.parent = item.transform.parent;
+					var point = objEndeMove.transform.localPosition;
+					objEndeMove.transform.parent = curentParent;
+  
+                    item.OnMoveWhenEndDrag(point, true, () => {
+                        item.itemContainerNew.AddItemInLayerItem(item, indexOfPointEndDrag);
+                        item.OnRemoveDotCellTypeOneSlot();
+                        item.OnNextLayerItemCurrentContainer();
+                        item.OnUpdateItemContainer();
+                        CheckOnMegerSucess();
+                    });
                 }
 
             }
@@ -247,7 +253,23 @@ public class ItemContainer : MonoBehaviour
         }
 	}
 
-	public void OnNextLayerItem(bool isMeger)
+	IEnumerator OnRunAnimMegerSucess(Transform trObj, bool isDesktroy)
+	{
+		for (int i = 0; i < trObj.childCount; i++)
+		{
+			var child = trObj.GetChild(i).GetComponent<Item>();
+			child.RunAnimScale(null);
+
+        }
+        yield return new WaitForSeconds(0.2f);
+
+		if(isDesktroy)
+		{
+            Destroy(trObj.gameObject);
+        }
+    }
+
+    public void OnNextLayerItem(bool isMeger)
 	{
         var currentLayer = listLayerItem[currentIndex];
 
@@ -259,14 +281,8 @@ public class ItemContainer : MonoBehaviour
 
                 currentIndex++;
 
-                if (currentIndex == listLayerItem.Count - 1)
-                {
-                    currentLayer.RemoveAllItem();
-                }
-                else
-                {
-                    Destroy(currentLayer.gameObject);
-                }
+				StartCoroutine(OnRunAnimMegerSucess(currentLayer.transform, currentIndex != listLayerItem.Count - 1));
+              
             }
 
 			if(!currentLayer.IsLayerAllPosBlank())
