@@ -1,3 +1,4 @@
+using DG.Tweening;
 using GoodSortEditor;
 using Newtonsoft.Json;
 using System;
@@ -119,7 +120,7 @@ public class LogicGame : Singleton<LogicGame>
             var prefab = GenLevelController.Instance.GetPrefabCell(it.cellType);
             var obj = Instantiate(prefab.prefab.gameObject, p2);
             var ScCell = obj.GetComponent<Cell>();
-            ScCell.SetData(it.itemsLayer, it.cellType, it.moveType);
+            ScCell.SetData(it.itemsLayer, it.cellType, it.moveType, new Vector2Int(it.posX, it.posY), it.speed);
             objCellPoint.Add(ScCell);
 
             if (it.cellType == 0 || it.cellType == 3)
@@ -235,9 +236,159 @@ public class LogicGame : Singleton<LogicGame>
                 listCellLock.Add(cellLock);
             }
         }
-   
         ResetPoint(objCellPoint);
-        
+
+        PlayMoveType(objCellPoint);
+    }
+
+    void PlayMoveType(List<Cell> listCell)
+    {
+        var listMoveDrop = listCell.Where(x=>x.MoveType == MoveType.Drop).Distinct().ToList();
+        var listMoveRight = listCell.Where(x => x.MoveType == MoveType.Right).Distinct().ToList();
+        var listMoveLeft = listCell.Where(x => x.MoveType == MoveType.Left).Distinct().ToList();
+        var listMoveTop = listCell.Where(x => x.MoveType == MoveType.Top).Distinct().ToList();
+        var listMoveBot = listCell.Where(x => x.MoveType == MoveType.Bot).Distinct().ToList();
+
+        if(listMoveRight.Count > 0)
+        {
+            var listMoveRightNew = listMoveRight.OrderBy(x=>x.transform.position.x).ToList();
+            List<int> uniqueX = listMoveRightNew.Select(o => o.PosInit.y).Distinct().ToList();
+            foreach(var un in uniqueX )
+            {
+                List<Cell> cells = new();
+                foreach (var item in listMoveRightNew)
+                {
+                    if (item.PosInit.y == un)
+                    {
+                        cells.Add(item);
+                    }
+                }
+
+                if(cells.Count > 0)
+                {
+                    float pLimit = cells[cells.Count - 1].transform.position.x;
+
+                    var dis = cells[0].transform.position.x - cells[1].transform.position.x;
+
+                    dis = Math.Abs(dis);
+
+                    pLimit += dis/2;
+
+                    var pointReset = cells[0].transform.position + new Vector3(-dis / 2, 0, 0);
+                    foreach (var item in cells)
+                    {
+                        item.OnMove(pLimit, pointReset);
+                    }
+                }
+            }
+        }
+
+        if (listMoveLeft.Count > 0)
+        {
+            var listMoveLeftNew = listMoveLeft.OrderByDescending(x => x.transform.position.x).ToList();
+            List<int> uniqueX = listMoveLeftNew.Select(o => o.PosInit.y).Distinct().ToList();
+            foreach (var un in uniqueX)
+            {
+                List<Cell> cells = new();
+                foreach (var item in listMoveLeftNew)
+                {
+                    if (item.PosInit.y == un)
+                    {
+                        cells.Add(item);
+                    }
+                }
+
+                if (cells.Count > 0)
+                {
+                    float pLimit = cells[cells.Count - 1].transform.position.x;
+
+                    var dis = cells[0].transform.position.x - cells[1].transform.position.x;
+
+                    dis = Math.Abs(dis);
+
+                    pLimit -= dis / 2;
+
+                    var pointReset = cells[0].transform.position + new Vector3(dis / 2, 0, 0);
+                    foreach (var item in cells)
+                    {
+                        item.OnMove(pLimit, pointReset);
+                    }
+                }
+            }
+        }
+
+        if (listMoveTop.Count > 0)
+        {
+            var listMoveToptNew = listMoveTop.OrderBy(x => x.transform.position.y).ToList();
+            List<int> uniqueX = listMoveToptNew.Select(o => o.PosInit.x).Distinct().ToList();
+            foreach (var un in uniqueX)
+            {
+                List<Cell> cells = new();
+                foreach (var item in listMoveToptNew)
+                {
+                    if (item.PosInit.x == un)
+                    {
+                        cells.Add(item);
+                    }
+                }
+
+                if (cells.Count > 0)
+                {
+                    float pLimit = cells[cells.Count - 1].transform.position.y;
+
+                    var dis = cells[0].transform.position.y - cells[1].transform.position.y;
+
+                    dis = Math.Abs(dis);
+
+                    pLimit += dis / 2;
+
+                    var pointReset = cells[0].transform.position + new Vector3(0, -dis / 2, 0);
+                    foreach (var item in cells)
+                    {
+                        item.OnMove(pLimit, pointReset);
+                    }
+                }
+            }
+        }
+
+        if (listMoveBot.Count > 0)
+        {
+            var listMoveBottNew = listMoveBot.OrderByDescending(x => x.transform.position.y).ToList();
+            List<int> uniqueX = listMoveBottNew.Select(o => o.PosInit.x).Distinct().ToList();
+            foreach (var un in uniqueX)
+            {
+                List<Cell> cells = new();
+                foreach (var item in listMoveBottNew)
+                {
+                    if (item.PosInit.x == un)
+                    {
+                        cells.Add(item);
+                    }
+                }
+
+                if (cells.Count > 0)
+                {
+                    float pLimit = cells[cells.Count - 1].transform.position.y;
+
+                    var dis = cells[0].transform.position.y - cells[1].transform.position.y;
+
+                    dis = Math.Abs(dis);
+
+                    pLimit -= dis / 2;
+
+                    var pointReset = cells[0].transform.position + new Vector3(0, dis / 2, 0);
+                    foreach (var item in cells)
+                    {
+                        item.OnMove(pLimit, pointReset);
+                    }
+                }
+            }
+        }
+    }
+
+    private void Update()
+    {
+         
     }
 
     void ResetPoint(List<Cell> listCell)

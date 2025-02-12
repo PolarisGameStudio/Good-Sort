@@ -28,10 +28,13 @@ public class Cell : MonoBehaviour
 	public ItemContainer ItemContainer => _itemContainer;
 
 	public MoveType MoveType => _moveType;
+	bool IsMove = false;
+	Vector2 PointReset = Vector2.zero;
+	float PLimit = 0f;
 
-	public float Speed => 0f;
+	public float Speed => _speed;
 
-	public Vector2Int PosInit => default(Vector2Int);
+	public Vector2Int PosInit => _posInit;
 
 	public Vector2Int CurPos
 	{
@@ -80,20 +83,77 @@ public class Cell : MonoBehaviour
         _itemContainer.UnLockCell();
 	}
 
-	public void SetData(List<ItemsInLayerCell> da, int typeCell, int moveType)
+	public void SetData(List<ItemsInLayerCell> da, int typeCell, int moveType, Vector2Int vec, float speed)
 	{
-		_moveType = (MoveType)moveType;
+        _speed = speed;
+        _posInit = vec;
+        _moveType = (MoveType)moveType;
         _cellType = (CellType)typeCell;
         _itemContainer.SetupItem(this, da);
 	}
 
-	public void CheckEndItem(Item item)
+
+    public void CheckEndItem(Item item)
 	{
 		_itemContainer.OnSucessMegerItem(item);
 
     }
 
-	public void InitData(Vector2Int pos, MoveType moveType, float speed, bool isLock)
+    private void Update()
+    {
+        if (IsMove)
+        {
+			if(_moveType == MoveType.Right)
+			{
+                transform.Translate(Vector3.right * Speed * Time.deltaTime);
+
+                if (transform.position.x > PLimit)
+                {
+                    transform.position = PointReset;
+                }
+				return;
+            }
+
+            if (_moveType == MoveType.Left)
+            {
+                transform.Translate(Vector3.left * Speed * Time.deltaTime);
+                if (transform.position.x < PLimit)
+                {
+                    transform.position = PointReset;
+                }
+				return;
+            }
+
+            if (_moveType == MoveType.Top)
+            {
+                transform.Translate(Vector3.up * Speed * Time.deltaTime);
+                if (transform.position.y > PLimit)
+                {
+                    transform.position = PointReset;
+                }
+                return;
+            }
+
+            if (_moveType == MoveType.Bot)
+            {
+                transform.Translate(Vector3.down * Speed * Time.deltaTime);
+                if (transform.position.y < PLimit)
+                {
+                    transform.position = PointReset;
+                }
+                return;
+            }
+        }
+    }
+
+    public void OnMove(float pLimit, Vector2 pointReset)
+    {
+		IsMove = true;
+        PLimit = pLimit;
+		PointReset = pointReset;
+    }
+
+    public void InitData(Vector2Int pos, MoveType moveType, float speed, bool isLock)
 	{
 	}
 
