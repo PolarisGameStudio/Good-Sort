@@ -264,6 +264,9 @@ public class ItemContainer : MonoBehaviour
 
         }
 
+        AnimPlayGame.Instance.OnPlayAnimMegerSucess(Vector3.zero, _cell.transform);
+		yield break;
+
         yield return new WaitForSeconds(0.2f);
 
 		if(isDesktroy)
@@ -281,7 +284,6 @@ public class ItemContainer : MonoBehaviour
 			if (currentLayer.IsMegerSucess())
 			{
                 LogicGame.Instance.CheckObjectLock();
-
                 currentIndex++;
                 currentLayer.RemoveAllItem();
                 StartCoroutine(OnRunAnimMegerSucess(currentLayer, currentIndex != listLayerItem.Count - 1));
