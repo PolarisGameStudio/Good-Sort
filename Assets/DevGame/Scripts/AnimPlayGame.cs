@@ -22,7 +22,7 @@ public class AnimPlayGame : Singleton<AnimPlayGame>
         paAnimSucess.transform.localPosition = posss;
         paAnimSucess.Play();
         paAnimSucess.transform.localScale = Vector3.one * 1;
-       // StartCoroutine(StartPlayAnim());
+        StartCoroutine(StartPlayAnim());
 
     }
 

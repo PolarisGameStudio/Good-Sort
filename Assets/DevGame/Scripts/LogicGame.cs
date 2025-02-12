@@ -28,7 +28,7 @@ public class LogicGame : Singleton<LogicGame>
     public Transform p2 = null;
     public Transform p3 = null;
     Vector2 sizeCamera = Vector2.zero;
-
+    List<List<Cell>> ListCellDrop = new();
 
     void Start()
     {
@@ -249,7 +249,8 @@ public class LogicGame : Singleton<LogicGame>
         var listMoveTop = listCell.Where(x => x.MoveType == MoveType.Top).Distinct().ToList();
         var listMoveBot = listCell.Where(x => x.MoveType == MoveType.Bot).Distinct().ToList();
 
-        if(listMoveRight.Count > 0)
+
+        if (listMoveRight.Count > 0)
         {
             var listMoveRightNew = listMoveRight.OrderBy(x=>x.transform.position.x).ToList();
             List<int> uniqueX = listMoveRightNew.Select(o => o.PosInit.y).Distinct().ToList();
@@ -384,7 +385,66 @@ public class LogicGame : Singleton<LogicGame>
                 }
             }
         }
+
+        if (listMoveDrop.Count > 0)
+        {
+            var listMoveDropNew = listMoveDrop.OrderByDescending(x => x.transform.position.y).ToList();
+            List<int> uniqueX = listMoveDropNew.Select(o => o.PosInit.x).Distinct().ToList();
+            foreach (var un in uniqueX)
+            {
+                List<Cell> cells = new();
+                foreach (var item in listMoveDropNew)
+                {
+                    if (item.PosInit.x == un)
+                    {
+                        cells.Add(item);
+                    }
+                }
+
+                if (cells.Count > 0)
+                {
+                    ListCellDrop.Add(cells);
+                }
+            }
+        }
     }
+
+    public void CheckRunAnimDrop(Cell cell)
+    {
+        foreach(var listC in ListCellDrop)
+        {
+            bool isRun = false;
+            foreach (var item in listC)
+            {
+                if(cell.Equals(item))
+                {
+                    isRun = true;
+                    listC.Remove(item);
+                    break;
+                }
+            }
+
+            if(listC.Count > 0 && isRun)
+            {
+                if(listC.Count > 1)
+                {
+                    var dis = listC[0].transform.localPosition.y - listC[1].transform.localPosition.y;
+                    dis = Math.Abs(dis);
+
+                    foreach(var item in listC)
+                    {
+                        if(cell.transform.position.y > item.transform.position.y)
+                        {
+                            continue;
+                        }
+                        item.transform.DOLocalMove(item.transform.localPosition - new Vector3(0, dis, 0), 0.1f).SetEase(Ease.InCubic);
+                    }
+
+                }
+                break;
+            }
+        }
+    }    
 
     private void Update()
     {

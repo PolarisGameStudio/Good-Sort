@@ -83,6 +83,11 @@ public class Cell : MonoBehaviour
         _itemContainer.UnLockCell();
 	}
 
+	public bool IsCheckCellBlank()
+	{
+		return _itemContainer.CheckLayerBank();
+    }
+
 	public void SetData(List<ItemsInLayerCell> da, int typeCell, int moveType, Vector2Int vec, float speed)
 	{
         _speed = speed;

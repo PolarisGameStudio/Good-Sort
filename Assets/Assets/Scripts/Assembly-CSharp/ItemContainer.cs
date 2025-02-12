@@ -159,6 +159,12 @@ public class ItemContainer : MonoBehaviour
     public void AddItemInLayerItem(Item item, int index)
 	{
         var cc = getCurrentLayer();
+
+		if(cc == null)
+		{
+			return;
+		}
+
         cc.AddItemInLayerItem(item, index);
     }
 
@@ -169,6 +175,33 @@ public class ItemContainer : MonoBehaviour
             _cell.RemoveDotTypeCellOneSlot();
         }
     }
+
+	public bool CheckLayerBank()
+	{
+		int count = 0;
+
+		foreach(var it in listLayerItem)
+		{
+			if(it == null)
+			{
+				count++;
+
+                continue;
+			}
+
+			if(!it.IsLayerAllPosBlank())
+			{
+				return false;
+			}
+		}
+
+		if(count == listLayerItem.Count)
+		{
+			return true;
+		}	
+
+		return true;
+	}
 
 
     public void OnSucessMegerItem(Item item)
@@ -220,7 +253,6 @@ public class ItemContainer : MonoBehaviour
 				if (objEndeMove != null)
 				{
                     item.itemContainerNew.AddItemInLayerItem(item, indexOfPointEndDrag);
-
                     var curentParent = objEndeMove.transform.parent;
                     objEndeMove.transform.parent = item.transform.parent;
 					var point = objEndeMove.transform.localPosition;
@@ -256,7 +288,6 @@ public class ItemContainer : MonoBehaviour
 
 	IEnumerator OnRunAnimMegerSucess(LayerItem trObj, bool isDesktroy)
 	{
-        
         for (int i = 0; i < trObj.transform.childCount; i++)
 		{
 			var child = trObj.transform.GetChild(i).GetComponent<Item>();
@@ -265,11 +296,15 @@ public class ItemContainer : MonoBehaviour
         }
 
         AnimPlayGame.Instance.OnPlayAnimMegerSucess(Vector3.zero, _cell.transform);
-		yield break;
 
         yield return new WaitForSeconds(0.2f);
 
-		if(isDesktroy)
+		if(_cell.MoveType == MoveType.Drop)
+		{
+            LogicGame.Instance.CheckRunAnimDrop(_cell);
+        }
+
+        if (isDesktroy)
 		{
             Destroy(trObj.gameObject);
         }
