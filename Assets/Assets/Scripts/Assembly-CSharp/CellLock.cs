@@ -34,11 +34,14 @@ public class CellLock : MonoBehaviour
         if (c_num == 0)
 		{
 			this.StartCoroutine(UnLock());
+			
 		}
     }
 
 	IEnumerator UnLock()
 	{
+        var obj = Instantiate(_fx, transform);
+		obj.transform.position = Vector3.zero;
 		yield return new WaitForSeconds(GetAnimationDuration());
 		Destroy(gameObject);
 

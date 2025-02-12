@@ -253,14 +253,16 @@ public class ItemContainer : MonoBehaviour
         }
 	}
 
-	IEnumerator OnRunAnimMegerSucess(Transform trObj, bool isDesktroy)
+	IEnumerator OnRunAnimMegerSucess(LayerItem trObj, bool isDesktroy)
 	{
-		for (int i = 0; i < trObj.childCount; i++)
+        
+        for (int i = 0; i < trObj.transform.childCount; i++)
 		{
-			var child = trObj.GetChild(i).GetComponent<Item>();
+			var child = trObj.transform.GetChild(i).GetComponent<Item>();
 			child.RunAnimScale(null);
 
         }
+
         yield return new WaitForSeconds(0.2f);
 
 		if(isDesktroy)
@@ -280,8 +282,9 @@ public class ItemContainer : MonoBehaviour
                 LogicGame.Instance.CheckObjectLock();
 
                 currentIndex++;
+                currentLayer.RemoveAllItem();
 
-				StartCoroutine(OnRunAnimMegerSucess(currentLayer.transform, currentIndex != listLayerItem.Count - 1));
+                StartCoroutine(OnRunAnimMegerSucess(currentLayer, currentIndex != listLayerItem.Count - 1));
               
             }
 
