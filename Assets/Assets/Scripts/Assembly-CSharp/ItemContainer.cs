@@ -219,16 +219,17 @@ public class ItemContainer : MonoBehaviour
 
 				if (objEndeMove != null)
 				{
-					var curentParent = objEndeMove.transform.parent;
+                    item.itemContainerNew.AddItemInLayerItem(item, indexOfPointEndDrag);
+
+                    var curentParent = objEndeMove.transform.parent;
                     objEndeMove.transform.parent = item.transform.parent;
 					var point = objEndeMove.transform.localPosition;
 					objEndeMove.transform.parent = curentParent;
-  
+
+                    item.OnRemoveDotCellTypeOneSlot();
+                    item.OnNextLayerItemCurrentContainer();
+                    item.OnUpdateItemContainer();
                     item.OnMoveWhenEndDrag(point, true, () => {
-                        item.itemContainerNew.AddItemInLayerItem(item, indexOfPointEndDrag);
-                        item.OnRemoveDotCellTypeOneSlot();
-                        item.OnNextLayerItemCurrentContainer();
-                        item.OnUpdateItemContainer();
                         CheckOnMegerSucess();
                     });
                 }
@@ -283,9 +284,7 @@ public class ItemContainer : MonoBehaviour
 
                 currentIndex++;
                 currentLayer.RemoveAllItem();
-
                 StartCoroutine(OnRunAnimMegerSucess(currentLayer, currentIndex != listLayerItem.Count - 1));
-              
             }
 
 			if(!currentLayer.IsLayerAllPosBlank())

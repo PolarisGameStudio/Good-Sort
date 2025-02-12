@@ -144,7 +144,7 @@ public class Item : MonoBehaviour
         _collider.enabled = true;
 		if(isSet)
 		{
-            transform.localPosition = PointNomal;
+			OnMoveWhenEndDrag(PointNomal, false, null, 0.05f);
             transform.localScale = CurrentScale - Vector3.one* yScale;
         }
 		
@@ -169,7 +169,7 @@ public class Item : MonoBehaviour
 		transform.localScale = CurrentScale + Vector3.one * yScale;
     }
 
-    public void OnMoveWhenEndDrag(Vector2 pointMove, bool isRunAnimScale, Action callback)
+    public void OnMoveWhenEndDrag(Vector2 pointMove, bool isRunAnimScale, Action callback, float delayTime = 0.0f)
     {
 		var currentPos = transform.localPosition;
 		var dis = Vector2.Distance(currentPos, pointMove);
@@ -191,7 +191,7 @@ public class Item : MonoBehaviour
                 callback?.Invoke();
             }
 
-        }).SetEase(Ease.OutBack);
+        }).SetEase(Ease.OutBack).SetDelay(delayTime);
     }
 	
 	public void RunAnimScale(Action callback)
