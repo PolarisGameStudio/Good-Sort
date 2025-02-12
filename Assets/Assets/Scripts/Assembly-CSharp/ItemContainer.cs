@@ -91,7 +91,7 @@ public class ItemContainer : MonoBehaviour
 				var item = objItem.GetComponent<Item>();
 				item.Setup(this, DataItem, index == 0, index1, index, _cell.CellType);
 
-				if(_cell.CellType == CellType.CellLayerCount)
+				if(_cell.CellType == CellType.CellLayerCount || _cell.CellType == CellType.CellSingle)
 				{
                     indexCellTyeOneSlot++;
                     layerItem.listItem[2] = item;
@@ -191,7 +191,7 @@ public class ItemContainer : MonoBehaviour
 
 				for(int i = 0; i < listIndex.Count; i++)
 				{
-					if (_cell.CellType == CellType.CellLayerCount)
+					if (_cell.CellType == CellType.CellLayerCount || _cell.CellType == CellType.CellSingle)
 					{
                         listObjectMove.Add(listPintDrag[0]);
                         listIndexPointDrag.Add(listIndex[i]);

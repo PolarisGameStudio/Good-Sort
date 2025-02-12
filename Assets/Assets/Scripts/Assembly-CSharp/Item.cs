@@ -118,6 +118,10 @@ public class Item : MonoBehaviour
 		{
             transform.localPosition = new Vector3(0, 0.155f, 0);
         }
+		else if(cellType == CellType.CellSingle)
+		{
+            transform.localPosition = new Vector3(0, 0, 0);
+        }
 		else
 		{
             if (index == 0)
@@ -187,7 +191,7 @@ public class Item : MonoBehaviour
 
 	public void BeginDrag()
 	{
-		CurrentPos = transform.position;
+		CurrentPos = transform.localPosition;
 		SetSortingOrder(_sprite, layerWhenSelecting);
         SetSortingOrder(_spriteShadow, layerWhenSelecting - 1);
     }
@@ -201,7 +205,7 @@ public class Item : MonoBehaviour
 	public void OnMoveFailed()
 	{
 		///
-		transform.position = CurrentPos;
+		transform.localPosition = CurrentPos;
 	}
 
 	public void CheckEndItem(Cell celNew)

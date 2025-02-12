@@ -215,7 +215,7 @@ public class LogicGame : Singleton<LogicGame>
 
             if(it.cellType == 1)
             {
-                XNew = XNew + 1.2f;
+                XNew = XNew + 1.205f;
             }
 
             obj.transform.position = new Vector2(XNew, YNew);
@@ -412,6 +412,8 @@ public class LogicGame : Singleton<LogicGame>
             yMax = Mathf.Max(yMax, it.transform.position.y);
         }
 
+
+
         float xtt = Mathf.Abs(XMin) / 2 + Mathf.Abs(XMax) / 2;
         float ytt = Math.Abs(yMin) / 2 + Mathf.Abs(yMax) / 2;
 
@@ -444,7 +446,7 @@ public class LogicGame : Singleton<LogicGame>
 
             XMax = -99999; XMin = 99999;
 
-            var newCell1 = listCell.Where(x => x.CellType == CellType.CellNormal || x.CellType == CellType.CellLayerCount && x.MoveType == MoveType.Idle).Distinct().OrderBy(x => x.transform.position.y).ToList();
+            var newCell1 = listCell.Where(x => (x.CellType == CellType.CellNormal || x.CellType == CellType.CellLayerCount) && x.MoveType == MoveType.Idle).Distinct().OrderBy(x => x.transform.position.y).ToList();
             if(newCell1.Count > 0)
             {
                 foreach (var it in newCell1)
@@ -453,6 +455,13 @@ public class LogicGame : Singleton<LogicGame>
                     XMax = Mathf.Max(XMax, it.transform.position.x);
                 }
             }
+
+            var cellN = listCell.Where(x => x.MoveType == MoveType.Idle && x.CellType == CellType.CellLayerCount).ToList();
+
+            if(cellN.Count > 0)
+            {
+                XMax += 1.4f;
+            }    
 
 
             float disYMaxMin = yMax - yMin;

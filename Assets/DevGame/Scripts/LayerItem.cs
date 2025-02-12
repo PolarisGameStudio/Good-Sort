@@ -82,7 +82,7 @@ public class LayerItem : MonoBehaviour
 
     public bool IsMegerSucess()
     {
-        if(cellType == CellType.CellLayerCount)
+        if(cellType == CellType.CellLayerCount || cellType == CellType.CellSingle)
         {
             return false;
         }
@@ -171,7 +171,7 @@ public class LayerItem : MonoBehaviour
     public void SetCellType(CellType ce)
     {
         cellType = ce;
-        if(cellType == CellType.CellLayerCount)
+        if(cellType == CellType.CellLayerCount || cellType == CellType.CellSingle)
         {
             listItem.RemoveAt(0);
             listItem.RemoveAt(0);
