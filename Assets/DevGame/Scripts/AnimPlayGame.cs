@@ -1,12 +1,14 @@
+using Coffee.UIExtensions;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.ShaderData;
 
 public class AnimPlayGame : Singleton<AnimPlayGame>
 {
-    public GameObject AnimSucess = null;
+    public GameObject AnimStarCombo = null;
+    public Transform ParentAnimStarCombo = null;
 
+    public GameObject AnimSucess = null;
     private ParticleSystem paAnimSucess = null;
 
     void Start()
@@ -32,4 +34,13 @@ public class AnimPlayGame : Singleton<AnimPlayGame>
         paAnimSucess.transform.position = Vector3.one * 1000;
         paAnimSucess.transform.parent = null;
     }
+
+    public void PlayAnimStarCombo(int star, Vector3 pos)
+    {
+        var anim = Instantiate(AnimStarCombo, ParentAnimStarCombo);
+        anim.transform.position = pos;
+        var uiPartical = anim.GetComponent<UIParticle>();
+        uiPartical.Play();
+        uiPartical.particles[0].Emit(star);
+    }    
 }
