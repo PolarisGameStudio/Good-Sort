@@ -336,6 +336,8 @@ public class ItemContainer : MonoBehaviour
         {
 			if (currentLayer.IsMegerSucess())
 			{
+
+				LogicGame.Instance.CheckComboGame(_cell);
                 LogicGame.Instance.CheckObjectLock();
                 currentIndex++;
                 currentLayer.RemoveAllItem();

@@ -642,4 +642,9 @@ public class LogicGame : Singleton<LogicGame>
         }
     }
 
+    public void CheckComboGame(Cell cell)
+    {
+        AnimPlayGame.Instance.PlayAnimStarCombo(UnityEngine.Random.Range(1, 10), cell.transform.position);
+    }
+
 }

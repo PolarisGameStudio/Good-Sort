@@ -7,6 +7,7 @@ public class AnimPlayGame : Singleton<AnimPlayGame>
 {
     public GameObject AnimStarCombo = null;
     public Transform ParentAnimStarCombo = null;
+    public UIParticleAttractor uIParticleAttractorStar = null;
 
     public GameObject AnimSucess = null;
     private ParticleSystem paAnimSucess = null;
@@ -40,7 +41,18 @@ public class AnimPlayGame : Singleton<AnimPlayGame>
         var anim = Instantiate(AnimStarCombo, ParentAnimStarCombo);
         anim.transform.position = pos;
         var uiPartical = anim.GetComponent<UIParticle>();
+        var partiCal = uiPartical.particles[0];
+        uIParticleAttractorStar.AddParticleSystem(partiCal);
         uiPartical.Play();
-        uiPartical.particles[0].Emit(star);
+        partiCal.Play();
+        partiCal.Emit(6);
+        var time = partiCal.main.duration;
+        uiPartical.StartCoroutine(DestroyObject(time, anim));
+    }    
+
+    IEnumerator DestroyObject(float time, GameObject obj)
+    {
+        yield return new WaitForSeconds(5);
+        Destroy(obj);
     }    
 }
