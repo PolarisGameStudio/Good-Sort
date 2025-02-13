@@ -2,15 +2,13 @@ using System;
 using Spine;
 using Spine.Unity;
 using UnityEngine;
-using UnityEngine.UI.Extensions;
+
 
 public class UIPanel_StallBuilding_Decoration_Item : MonoBehaviour
 {
 	public SkeletonGraphic skePreview;
 
 	public RectTransform targetHold;
-
-	public UISelectableExtension btnSelectExt;
 
 	[Header("Ref - Anim Addon")]
 	public SkeletonGraphic refSkePreviewAddon;

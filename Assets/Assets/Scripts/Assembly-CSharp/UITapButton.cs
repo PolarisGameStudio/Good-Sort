@@ -1,8 +1,8 @@
 using DG.Tweening;
 using UnityEngine.UI;
-using UnityEngine.UI.Extensions;
 
-public class UITapButton : UISelectableExtension
+
+public class UITapButton
 {
 	public bool IsPlaySoundPress;
 

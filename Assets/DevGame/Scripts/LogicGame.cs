@@ -1,3 +1,4 @@
+using Coffee.UIExtensions;
 using DG.Tweening;
 using GoodSortEditor;
 using Newtonsoft.Json;
@@ -29,6 +30,8 @@ public class LogicGame : Singleton<LogicGame>
     public Transform p3 = null;
     Vector2 sizeCamera = Vector2.zero;
     List<List<Cell>> ListCellDrop = new();
+
+    public UIParticle uiAnimStarCombo = null;
 
     void Start()
     {
@@ -428,13 +431,8 @@ public class LogicGame : Singleton<LogicGame>
                         dis = dis / 2;
                     }    
 
-                    foreach(var item in listC)
+                    foreach(var item in newList)
                     {
-                        if(cell.transform.position.y > item.transform.position.y)
-                        {
-                            continue;
-                        }
-
                         item.RunAnimCellDrop(() => {
                             item.transform.DOLocalMove(item.transform.localPosition - new Vector3(0, dis, 0), 0.1f).SetEase(Ease.InCubic);
                         });
@@ -592,27 +590,6 @@ public class LogicGame : Singleton<LogicGame>
         }
     }
 
-    CellInfo[,] Create2DArray(List<CellInfo> objects)
-    {
-        List<int> uniqueX = objects.Select(o => o.posX).Distinct().OrderBy(x => x).ToList();
-        List<int> uniqueY = objects.Select(o => o.posY).Distinct().OrderBy(y => y).ToList();
-
-        int rows = uniqueY.Count;
-        int cols = uniqueX.Count;
-
-        CellInfo[,] grid = new CellInfo[rows, cols];
-
-        
-        foreach (var obj in objects)
-        {
-            int xIndex = uniqueX.IndexOf(obj.posX);
-            int yIndex = uniqueY.IndexOf(obj.posY);
-            grid[yIndex, xIndex] = obj;
-        }
-
-        return grid;
-    }
-
     public void CheckObjectLock()
     {
         if(listCellLock.Count > 0)
@@ -645,6 +622,29 @@ public class LogicGame : Singleton<LogicGame>
     public void CheckComboGame(Cell cell)
     {
         AnimPlayGame.Instance.PlayAnimStarCombo(UnityEngine.Random.Range(1, 10), cell.transform.position);
+    }
+
+    public void PlayAnimCombo()
+    {
+        if(!IsUIParticlePlaying(uiAnimStarCombo))
+        {
+            uiAnimStarCombo.Play();
+        }
+
+    }
+
+    bool IsUIParticlePlaying(UIParticle uiParticle)
+    {
+        if (uiParticle == null) return false;
+
+        var particles = uiParticle.particles;
+
+        foreach (var ps in particles)
+        {
+            if (ps.isPlaying) return true;
+        }
+
+        return false;
     }
 
 }

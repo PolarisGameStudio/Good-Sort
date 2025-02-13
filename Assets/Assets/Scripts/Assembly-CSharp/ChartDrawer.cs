@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UI.Extensions;
+
 
 public class ChartDrawer : MonoBehaviour
 {
@@ -15,8 +15,6 @@ public class ChartDrawer : MonoBehaviour
 	public Button btnLoad;
 
 	public TMP_InputField inputField;
-
-	public UILineConnector lineRenderer;
 
 
 	private const string sheet_name = "Chart";

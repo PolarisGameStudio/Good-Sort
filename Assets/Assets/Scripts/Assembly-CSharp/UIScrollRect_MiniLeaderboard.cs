@@ -2,13 +2,11 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UI.Extensions;
+
 
 public class UIScrollRect_MiniLeaderboard : MonoBehaviour
 {
 	public int maxCount;
-
-	public UI_ScrollRectOcclusion scrollRectOcclusion;
 
 	public UIScrollRectSnapToChild scrollRectSnapToChild;
 
