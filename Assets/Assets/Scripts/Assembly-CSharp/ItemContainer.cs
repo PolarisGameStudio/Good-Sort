@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -252,6 +251,16 @@ public class ItemContainer : MonoBehaviour
 
 				if (objEndeMove != null)
 				{
+					Debug.Log("current_cell_current_" + item.itemContainer._cell.transform.name + "_" + item.itemContainer._cell.IsCheckCellBlank());
+					var cellCurrent = item.itemContainer._cell;
+
+
+                    if (cellCurrent.MoveType == MoveType.Drop && cellCurrent.IsCheckCellBlank() && !item.itemContainer.Equals(item.itemContainerNew))
+					{
+						StartCoroutine(PlayAnimCellTypeDropBlank(cellCurrent));
+                    }
+
+
                     item.itemContainerNew.AddItemInLayerItem(item, indexOfPointEndDrag);
                     var curentParent = objEndeMove.transform.parent;
                     objEndeMove.transform.parent = item.transform.parent;
@@ -278,7 +287,14 @@ public class ItemContainer : MonoBehaviour
         }
 	}
 
-	public void OnNextItemWhenMove()
+	IEnumerator PlayAnimCellTypeDropBlank(Cell cell)
+	{
+        LogicGame.Instance.CheckRunAnimDrop(cell);
+		yield return new WaitForSeconds(0.1f);
+		Destroy(cell.gameObject);
+    }
+
+    public void OnNextItemWhenMove()
 	{
 		if (listLayerItem[currentIndex].IsLayerAllPosBlank())
 		{
@@ -297,11 +313,13 @@ public class ItemContainer : MonoBehaviour
 
         AnimPlayGame.Instance.OnPlayAnimMegerSucess(Vector3.zero, _cell.transform);
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
 
 		if(_cell.MoveType == MoveType.Drop)
 		{
             LogicGame.Instance.CheckRunAnimDrop(_cell);
+			yield return new WaitForSeconds(0.1f);
+			Destroy(_cell.gameObject.gameObject);
         }
 
         if (isDesktroy)

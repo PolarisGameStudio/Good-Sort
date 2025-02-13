@@ -77,14 +77,6 @@ public class LogicGame : Singleton<LogicGame>
         _numCellHiden = level.itemHiden;
         var cell = level.cells;
 
-     
-        var distanceY = Vector2.Distance(PTop.position, PBot.position) - 0.75f;
-
-        int index = 0;
-
-
-        int indexX = -1;
-
         float XMin = 99999, yMin = 99999;
         float XMax = -99999, yMax = -99999;
 
@@ -103,11 +95,6 @@ public class LogicGame : Singleton<LogicGame>
         float xtt = Math.Abs(XMin) / 2 + Math.Abs(XMax) / 2;
         float ytt = Math.Abs(yMin) / 2 + Math.Abs(yMax) / 2;
 
-        var disX = xtt * 2;
-        var disY = ytt * 2;
-
-    
-        index = 0;
 
         bool IsLock = false;
 
@@ -122,6 +109,10 @@ public class LogicGame : Singleton<LogicGame>
             var ScCell = obj.GetComponent<Cell>();
             ScCell.SetData(it.itemsLayer, it.cellType, it.moveType, new Vector2Int(it.posX, it.posY), it.speed);
             objCellPoint.Add(ScCell);
+            if(ScCell.txtName != null)
+            {
+                ScCell.txtName.text = it.posX.ToString() + "," + it.posY.ToString();
+            }    
 
             if (it.cellType == 0 || it.cellType == 3)
             {
@@ -428,8 +419,14 @@ public class LogicGame : Singleton<LogicGame>
             {
                 if(listC.Count > 1)
                 {
+                    var newList = listC.Where(x=>x.transform.position.y >= cell.transform.position.y).ToList();
+
                     var dis = listC[0].transform.localPosition.y - listC[1].transform.localPosition.y;
                     dis = Math.Abs(dis);
+                    if(newList.Count == 1)
+                    {
+                        dis = dis / 2;
+                    }    
 
                     foreach(var item in listC)
                     {
@@ -437,7 +434,11 @@ public class LogicGame : Singleton<LogicGame>
                         {
                             continue;
                         }
-                        item.transform.DOLocalMove(item.transform.localPosition - new Vector3(0, dis, 0), 0.1f).SetEase(Ease.InCubic);
+
+                        item.RunAnimCellDrop(() => {
+                            item.transform.DOLocalMove(item.transform.localPosition - new Vector3(0, dis, 0), 0.1f).SetEase(Ease.InCubic);
+                        });
+
                     }
 
                 }

@@ -28,7 +28,7 @@ public class AnimPlayGame : Singleton<AnimPlayGame>
 
     IEnumerator StartPlayAnim()
     {
-        yield return new WaitForSeconds(paAnimSucess.totalTime);
+        yield return new WaitForSeconds(0.2f);
         paAnimSucess.transform.position = Vector3.one * 1000;
         paAnimSucess.transform.parent = null;
     }

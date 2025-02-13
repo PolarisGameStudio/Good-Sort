@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -35,6 +37,8 @@ public class Cell : MonoBehaviour
 	public float Speed => _speed;
 
 	public Vector2Int PosInit => _posInit;
+	List<Action> ListCallbackAnimDrop = new();
+	private bool isRunActionDrop = false;
 
 	public Vector2Int CurPos
 	{
@@ -49,6 +53,7 @@ public class Cell : MonoBehaviour
 
 	[HideInInspector]
 	public CellLock cellLock = null;
+	public TextMeshProUGUI txtName = null;
 
 	private void OnValidate()
 	{
@@ -104,8 +109,24 @@ public class Cell : MonoBehaviour
 
     }
 
+	IEnumerator RestRunAnim()
+	{
+		yield return new WaitForSeconds(0.1f);
+		isRunActionDrop = false;
+
+    }
+
     private void Update()
     {
+		if(ListCallbackAnimDrop.Count > 0 && !isRunActionDrop)
+		{
+			isRunActionDrop = true;
+			var current = ListCallbackAnimDrop[0];
+			ListCallbackAnimDrop.Remove(current);
+            current?.Invoke();
+            StartCoroutine(RestRunAnim());
+        }
+
         if (IsMove)
         {
 			if(_moveType == MoveType.Right)
@@ -150,6 +171,12 @@ public class Cell : MonoBehaviour
             }
         }
     }
+
+	public void RunAnimCellDrop(Action callback)
+	{
+        ListCallbackAnimDrop.Add(callback);
+    }
+
 
     public void OnMove(float pLimit, Vector2 pointReset)
     {

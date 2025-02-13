@@ -57,7 +57,7 @@ public class DragDropItem : MonoBehaviour
                         if (cell != null && !cell.IsLock)
                         {
                             isDragSucess = true;
-                            Debug.Log(cell.name);
+                            Debug.Log("current_cell_" + cell.name);
                             trObjDrag.CheckEndItem(cell);
                             break;
                         }

@@ -41,7 +41,7 @@ public class CellLock : MonoBehaviour
 	IEnumerator UnLock()
 	{
         var obj = Instantiate(_fx, transform);
-		obj.transform.position = Vector3.zero;
+		obj.transform.localPosition = Vector3.zero;
 		yield return new WaitForSeconds(GetAnimationDuration());
 		Destroy(gameObject);
 

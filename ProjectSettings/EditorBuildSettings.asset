@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_Games/Scenes/Menu.unity
     guid: d058826c04bcb2f4dbd02d929830d70c
   - enabled: 1
-    path: Assets/_Games/Scenes/BaseLevel.unity
+    path: Assets/DevGame/Scene/BaseLevel.unity
     guid: 87eb8e5eb411d594bbfb0c42d0e951e2
   - enabled: 1
     path: Assets/_Games/Scenes/Popup/InGame/UIPopup_Cell_Lock_Tut.unity
