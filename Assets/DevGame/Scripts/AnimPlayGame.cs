@@ -45,7 +45,7 @@ public class AnimPlayGame : Singleton<AnimPlayGame>
         uIParticleAttractorStar.AddParticleSystem(partiCal);
         uiPartical.Play();
         partiCal.Play();
-        partiCal.Emit(6);
+        partiCal.Emit(star - 1);
         var time = partiCal.main.duration;
         uiPartical.StartCoroutine(DestroyObject(time, anim));
     }    

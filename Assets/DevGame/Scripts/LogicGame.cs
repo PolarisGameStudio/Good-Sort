@@ -2,13 +2,15 @@ using Coffee.UIExtensions;
 using DG.Tweening;
 using GoodSortEditor;
 using Newtonsoft.Json;
+using Spine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class LogicGame : Singleton<LogicGame>
 {
@@ -35,6 +37,8 @@ public class LogicGame : Singleton<LogicGame>
 
     void Start()
     {
+        imgProgress.fillAmount = 0;
+        DisableTextCombo();
         sizeCamera = GetSizeCameraInWord();
         OnLoadLevel();
     }
@@ -47,6 +51,7 @@ public class LogicGame : Singleton<LogicGame>
         return new Vector2(width, height);
     }
 
+    #region Load Level
     public void OnNextLevel()
     {
         StartCoroutine(LoadData());
@@ -237,7 +242,7 @@ public class LogicGame : Singleton<LogicGame>
 
     void PlayMoveType(List<Cell> listCell)
     {
-        var listMoveDrop = listCell.Where(x=>x.MoveType == MoveType.Drop).Distinct().ToList();
+        var listMoveDrop = listCell.Where(x => x.MoveType == MoveType.Drop).Distinct().ToList();
         var listMoveRight = listCell.Where(x => x.MoveType == MoveType.Right).Distinct().ToList();
         var listMoveLeft = listCell.Where(x => x.MoveType == MoveType.Left).Distinct().ToList();
         var listMoveTop = listCell.Where(x => x.MoveType == MoveType.Top).Distinct().ToList();
@@ -246,9 +251,9 @@ public class LogicGame : Singleton<LogicGame>
 
         if (listMoveRight.Count > 0)
         {
-            var listMoveRightNew = listMoveRight.OrderBy(x=>x.transform.position.x).ToList();
+            var listMoveRightNew = listMoveRight.OrderBy(x => x.transform.position.x).ToList();
             List<int> uniqueX = listMoveRightNew.Select(o => o.PosInit.y).Distinct().ToList();
-            foreach(var un in uniqueX )
+            foreach (var un in uniqueX)
             {
                 List<Cell> cells = new();
                 foreach (var item in listMoveRightNew)
@@ -259,7 +264,7 @@ public class LogicGame : Singleton<LogicGame>
                     }
                 }
 
-                if(cells.Count > 0)
+                if (cells.Count > 0)
                 {
                     float pLimit = cells[cells.Count - 1].transform.position.x;
 
@@ -267,7 +272,7 @@ public class LogicGame : Singleton<LogicGame>
 
                     dis = Math.Abs(dis);
 
-                    pLimit += dis/2;
+                    pLimit += dis / 2;
 
                     var pointReset = cells[0].transform.position + new Vector3(-dis / 2, 0, 0);
                     foreach (var item in cells)
@@ -403,52 +408,6 @@ public class LogicGame : Singleton<LogicGame>
         }
     }
 
-    public void CheckRunAnimDrop(Cell cell)
-    {
-        foreach(var listC in ListCellDrop)
-        {
-            bool isRun = false;
-            foreach (var item in listC)
-            {
-                if(cell.Equals(item))
-                {
-                    isRun = true;
-                    listC.Remove(item);
-                    break;
-                }
-            }
-
-            if(listC.Count > 0 && isRun)
-            {
-                if(listC.Count > 1)
-                {
-                    var newList = listC.Where(x=>x.transform.position.y >= cell.transform.position.y).ToList();
-
-                    var dis = listC[0].transform.localPosition.y - listC[1].transform.localPosition.y;
-                    dis = Math.Abs(dis);
-                    if(newList.Count == 1)
-                    {
-                        dis = dis / 2;
-                    }    
-
-                    foreach(var item in newList)
-                    {
-                        item.RunAnimCellDrop(() => {
-                            item.transform.DOLocalMove(item.transform.localPosition - new Vector3(0, dis, 0), 0.1f).SetEase(Ease.InCubic);
-                        });
-
-                    }
-
-                }
-                break;
-            }
-        }
-    }    
-
-    private void Update()
-    {
-         
-    }
 
     void ResetPoint(List<Cell> listCell)
     {
@@ -608,6 +567,8 @@ public class LogicGame : Singleton<LogicGame>
         }
     }
 
+    #endregion
+
     void Shuffle<T>(List<T> list)
     {
         for (int i = list.Count - 1; i > 0; i--)
@@ -619,9 +580,109 @@ public class LogicGame : Singleton<LogicGame>
         }
     }
 
+    #region Combo
+
+    private int _currentStarAdd = 0;
+    private int _currentStar = 0;
+
+    private int _currentCombo = 0;
+    private int _currentIndexCombo = 0;
+
+    private int _currIndexCheckAddIndexCombo = 0;
+    private int _currCheckAddIndexCombo = 2;
+
+    private bool _isAddCombo = false;
+
+    private float _timeCombo = 25;
+    [SerializeField] private UIParticle animComboProgress = null;
+    [SerializeField] private TextMeshProUGUI textCombo = null;
+    [SerializeField] private Image imgProgress = null;
+    [SerializeField] private TextMeshProUGUI textStar = null;
+    private Coroutine _coroutineCountTimeProgress = null;
+
+    void DisableTextCombo()
+    {
+        textCombo.gameObject.SetActive(false);
+    }
+
+    IEnumerator CountTimeProgress()
+    {
+        float timeCurrentCombo = _timeCombo;
+        while (true)
+        {
+            timeCurrentCombo -= Time.deltaTime;
+            float pecent = timeCurrentCombo / _timeCombo;
+            if (pecent <= 0)
+            {
+                DisableTextCombo();
+                imgProgress.fillAmount = 0;
+                pecent = 0;
+                break;
+            }
+            imgProgress.fillAmount = pecent;
+            yield return null;
+        }
+    }
+
+    private int UpdateCombo()
+    {
+        _currentCombo++;
+        _currentIndexCombo++;
+
+        if(_currentCombo == 1 || _currentCombo == 2)
+        {
+            _currentStarAdd = 1;
+        }
+        else
+        {
+
+            if (_currentCombo % 2 != 0 || _currentCombo > 4)
+            {
+                _timeCombo--;
+            }
+
+            if (_currentIndexCombo > _currCheckAddIndexCombo)
+            {
+                _currentStarAdd++;
+                _currentIndexCombo = 0;
+
+                _currIndexCheckAddIndexCombo++;
+            }
+
+            if (_currIndexCheckAddIndexCombo == 2)
+            {
+                _currCheckAddIndexCombo++;
+                _currIndexCheckAddIndexCombo = 0;
+            }
+
+            _timeCombo = Math.Max(_timeCombo, 5);
+
+        }
+        _currentStar += _currentStarAdd;
+        Debug.Log("combo: " + _currentCombo +  "_currentStar___" + _currentStar);
+
+        textCombo.text = "Combo X" + _currentCombo.ToString();
+        textStar.text = _currentStar.ToString();
+
+        return _currentStarAdd;
+    }
+
     public void CheckComboGame(Cell cell)
     {
-        AnimPlayGame.Instance.PlayAnimStarCombo(UnityEngine.Random.Range(1, 10), cell.transform.position);
+        textCombo.gameObject.SetActive(true);
+        AnimPlayGame.Instance.PlayAnimStarCombo(UpdateCombo(), cell.transform.position);
+        if (IsUIParticlePlaying(animComboProgress))
+        {
+            animComboProgress.Stop();
+        }
+        animComboProgress.Play();
+
+        if(_coroutineCountTimeProgress != null)
+        {
+            StopCoroutine(_coroutineCountTimeProgress);
+            _coroutineCountTimeProgress = null;
+        }
+        _coroutineCountTimeProgress = StartCoroutine(CountTimeProgress());
     }
 
     public void PlayAnimCombo()
@@ -646,5 +707,54 @@ public class LogicGame : Singleton<LogicGame>
 
         return false;
     }
+    #endregion
+
+
+    #region Play Game
+
+    public void CheckRunAnimDrop(Cell cell)
+    {
+        foreach (var listC in ListCellDrop)
+        {
+            bool isRun = false;
+            foreach (var item in listC)
+            {
+                if (cell.Equals(item))
+                {
+                    isRun = true;
+                    listC.Remove(item);
+                    break;
+                }
+            }
+
+            if (listC.Count > 0 && isRun)
+            {
+                if (listC.Count > 1)
+                {
+                    var newList = listC.Where(x => x.transform.position.y >= cell.transform.position.y).ToList();
+
+                    var dis = listC[0].transform.localPosition.y - listC[1].transform.localPosition.y;
+                    dis = Math.Abs(dis);
+                    if (newList.Count == 1)
+                    {
+                        dis = dis / 2;
+                    }
+
+                    foreach (var item in newList)
+                    {
+                        item.RunAnimCellDrop(() => {
+                            item.transform.DOLocalMove(item.transform.localPosition - new Vector3(0, dis, 0), 0.1f).SetEase(Ease.InCubic);
+                        });
+
+                    }
+
+                }
+                break;
+            }
+        }
+    }
+
+
+    #endregion
 
 }
