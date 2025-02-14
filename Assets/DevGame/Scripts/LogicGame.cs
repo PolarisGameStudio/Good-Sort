@@ -1,14 +1,11 @@
 using Coffee.UIExtensions;
 using DG.Tweening;
-using GoodSortEditor;
-using Newtonsoft.Json;
 using Spine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +18,7 @@ public class LogicGame : Singleton<LogicGame>
     public Transform PBot;
 
     private List<Cell> listCellLock = new();
+    private List<Cell> listCellAllGame = new();
     int _currentLock = 0;
 
 
@@ -108,7 +106,6 @@ public class LogicGame : Singleton<LogicGame>
 
         List<Cell> listCells = new();
 
-        List<Cell> objCellPoint = new();
 
         foreach (var it in cell)
         {
@@ -116,7 +113,7 @@ public class LogicGame : Singleton<LogicGame>
             var obj = Instantiate(prefab.prefab.gameObject, p2);
             var ScCell = obj.GetComponent<Cell>();
             ScCell.SetData(it.itemsLayer, it.cellType, it.moveType, new Vector2Int(it.posX, it.posY), it.speed);
-            objCellPoint.Add(ScCell);
+            listCellAllGame.Add(ScCell);
             if(ScCell.txtName != null)
             {
                 ScCell.txtName.text = it.posX.ToString() + "," + it.posY.ToString();
@@ -235,9 +232,11 @@ public class LogicGame : Singleton<LogicGame>
                 listCellLock.Add(cellLock);
             }
         }
-        ResetPoint(objCellPoint);
+        ResetPoint(listCellAllGame);
 
-        PlayMoveType(objCellPoint);
+        PlayMoveType(listCellAllGame);
+
+        OnPlayAnimationReplay();
     }
 
     void PlayMoveType(List<Cell> listCell)
@@ -582,6 +581,7 @@ public class LogicGame : Singleton<LogicGame>
 
     #region Combo
 
+    [Header("ComboGame")]
     private int _currentStarAdd = 0;
     private int _currentStar = 0;
 
@@ -754,7 +754,65 @@ public class LogicGame : Singleton<LogicGame>
         }
     }
 
+    #endregion
+
+    #region SkillGame
+
+    #region Skill Replay
+
+    [Header("Skill Replay")]
+    [SerializeField] private PowerupReplace _powerupReplace = null;
+
+    public void PlayAnimationReplace(List<Item> cells)
+    {
+        _powerupReplace.Active(cells);
+    }
+
+    public void OnPlayAnimationReplay()
+    {
+        var newList = listCellAllGame.Where(x=>(x != null && !x.IsCheckCellBlank()));
+        List<LayerItem> listLayers = new();
+        foreach(var cel in listCellAllGame)
+        {
+            listLayers.Add(cel.GetCurrentLayer());
+        }
+
+        List<Item> listItem = new();
+        foreach(var it in listLayers)
+        {
+            listItem.AddRange(it.GetListItem());
+        }
+
+        var groupedPositions = listItem.GroupBy(pos => pos.ItemType).ToDictionary(group => group.Key, group => group.ToList());
+
+        var sortedDict = groupedPositions.OrderByDescending(pair => pair.Value.Count).ToDictionary(pair => pair.Key, pair => pair.Value);
+        List<Item> listItemSkillReplay = new();
+
+        foreach(var item in sortedDict)
+        {
+            listItemSkillReplay.AddRange(item.Value);
+
+            if(listItemSkillReplay.Count >= 9)
+            {
+                break;
+            }
+        }    
+        
+        while(listItemSkillReplay.Count > 9)
+        {
+            listItemSkillReplay.RemoveAt(0);
+        }
+
+        _powerupReplace.gameObject.SetActive(true);
+        PlayAnimationReplace(listItemSkillReplay);
+        
+    }
 
     #endregion
 
+    #region Skill Replay
+
+    #endregion
+
+    #endregion
 }

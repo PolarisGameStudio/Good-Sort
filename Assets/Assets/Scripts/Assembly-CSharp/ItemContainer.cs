@@ -118,7 +118,7 @@ public class ItemContainer : MonoBehaviour
         }
     }
 
-    LayerItem getCurrentLayer()
+    public LayerItem getCurrentLayer()
 	{
 		if(listLayerItem[currentIndex] != null)
 		{

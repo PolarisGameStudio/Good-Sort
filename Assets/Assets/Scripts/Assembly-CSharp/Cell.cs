@@ -102,6 +102,10 @@ public class Cell : MonoBehaviour
         _itemContainer.SetupItem(this, da);
 	}
 
+	public LayerItem GetCurrentLayer()
+	{
+		return _itemContainer.getCurrentLayer();
+    }
 
     public void CheckEndItem(Item item)
 	{

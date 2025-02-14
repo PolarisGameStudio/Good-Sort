@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LayerItem : MonoBehaviour
@@ -176,5 +177,11 @@ public class LayerItem : MonoBehaviour
             listItem.RemoveAt(0);
             listItem.RemoveAt(0);
         }
+    }
+
+    public List<Item> GetListItem()
+    {
+        var newListItem = listItem.Where(x => x != null).ToList();
+        return newListItem;
     }
 }
