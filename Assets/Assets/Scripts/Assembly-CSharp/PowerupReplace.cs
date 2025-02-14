@@ -27,7 +27,7 @@ public class PowerupReplace : MonoBehaviour
 	{
 		foreach(var cel in listCell)
 		{
-			var item = Instantiate(cel, null);
+			var item = Instantiate(_magicWard, null);
 			var wiza = item.GetComponent<MagicWard>();
             wiza.SetPos(transform.position, cel.transform.position);
 		}
