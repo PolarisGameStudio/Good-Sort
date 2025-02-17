@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,7 +16,6 @@ public class ItemContainer : MonoBehaviour
 
 	private List<ListItemType> _itemTypes;
 
-	private List<ListItem> _items = new();
 
 	private int _numLayerWhenInit;
 
@@ -25,7 +25,6 @@ public class ItemContainer : MonoBehaviour
 
 	public List<ListItemType> ItemTypes => _itemTypes;
 
-	public List<ListItem> Items => _items;
 
 	public int NumLayerWhenInit => _numLayerWhenInit;
 
@@ -100,15 +99,11 @@ public class ItemContainer : MonoBehaviour
                     layerItem.listItem[index1] = item;
                 }
 
-                // listPointItem.Add(objItem.transform.position, item);
-
                 index1++;
                 listItem.items.Add(item);
             }
 
 			layerItem.SetCellType(_cell.CellType);
-
-            _items.Add(listItem);
             index++;
         }
 
@@ -136,6 +131,85 @@ public class ItemContainer : MonoBehaviour
         }
 		return null;
     }
+	public LayerItem GetLayerByIndex(int index)
+	{
+		if(index >= listLayerItem.Count)
+		{
+			return null;
+		}
+
+		return listLayerItem[index];
+	}	
+
+	/// <summary>
+	/// </summary>
+	/// <param name="layerItem"></param>
+	/// <param name="index"></param>
+	/// <param name="listItem"></param>
+	public void CreateLayerItem(LayerItem layerItem, List<Item> listItem, int index, bool isNormal)
+	{
+		if(listItem.Count == 2)
+		{
+			int kk = 0;
+		}
+
+		if(layerItem == null)
+		{
+            var gameObj = new GameObject();
+            gameObj.transform.parent = transform;
+            gameObj.transform.localPosition = Vector3.zero;
+            layerItem = gameObj.AddComponent<LayerItem>();
+            layerItem.SetCellType(_cell.CellType);
+            listLayerItem.Add(layerItem);
+
+        }
+        layerItem.gameObject.name = "layer_" + index.ToString();
+		layerItem.SetDataNull();
+
+        int index1 = 0;
+
+        foreach (var it in listItem)
+		{
+			if(isNormal)
+			{
+				it.EnableItemNormal(false);
+            }
+			else
+			{
+				if(_cell.CellType != CellType.CellLayerCount)
+				{
+                    it.EnableItemShadow(false);
+                }
+            }
+			it.SetItemContainer(this);
+
+            it.transform.parent = layerItem.transform;
+
+            if (_cell.CellType == CellType.CellLayerCount || _cell.CellType == CellType.CellSingle)
+            {
+                layerItem.listItem[2] = it;
+                it.SetPointForItem(index1, _cell.CellType);
+            }
+            else
+            {
+                layerItem.listItem[index1] = it;
+                it.SetPointForItem(index1, _cell.CellType);
+                index1++;
+            }
+        }
+    }
+
+	public void CreateLayerItemSkillSwap(List<List<Item>> listsIten)
+	{
+		var LayerShadow = GetLayerByIndex(currentIndex + 1);
+		var LayerNormal = GetLayerByIndex(currentIndex);
+		CreateLayerItem(LayerNormal, listsIten[0], currentIndex, true);
+		if(listsIten.Count > 1)
+		{
+            CreateLayerItem(LayerShadow, listsIten[1], currentIndex + 1, false);
+        }
+    }
+
 
     public void OnLockCell()
 	{
@@ -450,6 +524,35 @@ public class ItemContainer : MonoBehaviour
 				break;
 			}
 		}
+
+		return list;
+	}
+
+	public List<Item> GetListItemForSkillSwap()
+	{
+		if(currentIndex >= listLayerItem.Count)
+		{
+			return null;
+		}
+
+		int indexCheck = CellType == CellType.CellLayerCount ? 1 : 2;
+		int index = 0;
+		List<Item> list = new List<Item>();
+
+        for (int i = currentIndex; i < listLayerItem.Count; i++)
+		{
+			if(index >= indexCheck)
+			{
+				break;
+			}
+			index++;
+			var items = listLayerItem[i].GetListItem();
+			if(items != null && items.Count > 0)
+			{
+				list.AddRange(items);
+				listLayerItem[i].SetDataNull();
+            }
+        }
 
 		return list;
 	}

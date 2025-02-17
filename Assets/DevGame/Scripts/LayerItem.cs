@@ -190,4 +190,12 @@ public class LayerItem : MonoBehaviour
         var newListItem = listItem.Where(x => x != null && x.ItemType == item).ToList();
         return newListItem;
     }
+
+    public void SetDataNull()
+    {
+        for(int i = 0; i < listItem.Count; i++)
+        {
+            listItem[i] = null;
+        }
+    }
 }

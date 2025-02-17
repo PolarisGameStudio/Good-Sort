@@ -52,7 +52,8 @@ public class LogicGame : Singleton<LogicGame>
     #region Load Level
     public void OnNextLevel()
     {
-        OnPlayAnimationReplay();
+        OnSkillSwap();
+       // OnPlayAnimationReplay();
         //StartCoroutine(LoadData());
     }    
 
@@ -891,6 +892,287 @@ public class LogicGame : Singleton<LogicGame>
         });
     }
 
+    #endregion
+
+    #region Skill Swap
+    public void OnSkillSwap()
+    {
+        var Cells = listCellAllGame.Where(x=>x != null && !x.IsLock).ToList();
+
+        var celsLayerCount = Cells.Where(x=>x.CellType == CellType.CellLayerCount).ToList();
+        var celsSingle = Cells.Where(x=>x.CellType == CellType.CellSingle).ToList();
+
+        List<Item> listItems = new();
+
+        foreach(var cel in Cells)
+        {
+            var item = cel.GetListItemForSkillSwap();
+            if(item.Count > 0)
+            {
+                listItems.AddRange(item);
+            }
+        }
+
+        listItems.Sort((a,b)=> a.ItemType - b.ItemType);
+
+        int num11 = listItems.Count;
+        var numItemww = 0;
+
+        //LayerCount
+        Dictionary<Cell, List<List<Item>>> dictDataCell = new();
+
+        foreach (var item in celsLayerCount)
+        {
+            List<List<Item>> listItemAdd = new();
+            List<Item> listIt = new();
+            var itemCell = listItems[0];
+            listItems.RemoveAt(0);
+            listIt.Add(itemCell);
+            dictDataCell.Add(item, listItemAdd);
+        }
+
+
+        foreach (var item in celsSingle)
+        {
+            List<List<Item>> listItemAdd = new();
+            if (listItems.Count == 0)
+            {
+                break;
+            }
+
+            List<Item> listItLayer1 = new();
+            var itemCell = listItems[0];
+            listItems.RemoveAt(0);
+            listItemAdd.Add(listItems);
+            if (listItems.Count == 0)
+            {
+                break;
+            }
+
+            List<Item> listItLayer2 = new();
+            var itemCell2 = listItems[0];
+            listItems.RemoveAt(0);
+            listItemAdd.Add(listItLayer2);
+            dictDataCell.Add(item, listItemAdd);
+        }
+
+        foreach (var it in Cells)
+        {
+            if(dictDataCell.ContainsKey(it))
+            {
+                continue;
+            }
+            if(listItems.Count == 0)
+            {
+                break;
+            }
+            List<List<Item>> listItemAdd = new();
+            var listItemNew = GetListItemByCount(2, listItems);
+            if(listItemNew.Count > 0)
+            {
+                listItemAdd.Add(listItemNew);
+                dictDataCell.Add(it, listItemAdd);
+            }
+        }
+   
+        if (listItems.Count > 0)
+        {
+            foreach (var it in dictDataCell)
+            {
+                if (it.Key.CellType == CellType.CellLayerCount || it.Key.CellType == CellType.CellSingle)
+                {
+                    continue;
+                }
+                if (listItems.Count == 0)
+                {
+                    break;
+                }
+                var listItemNew = GetListItemByCount(2, listItems);
+
+                if (listItemNew.Count > 0)
+                {
+                    it.Value.Add(listItemNew);
+                }
+            }
+        }
+
+        foreach (var it in dictDataCell)
+        {
+            foreach (var ic in it.Value)
+            {
+                numItemww += ic.Count;
+            }
+        }
+
+        if (listItems.Count > 0)
+        {
+            foreach (var it in dictDataCell)
+            {
+                if (it.Key.CellType == CellType.CellLayerCount || it.Key.CellType == CellType.CellSingle)
+                {
+                    continue;
+                }
+                if (listItems.Count == 0)
+                {
+                    break;
+                }
+                var listItemNew = GetListItemByCount(1, listItems);
+
+                if (listItemNew.Count > 0)
+                {
+                    it.Value[0].Add(listItemNew[0]);
+                }
+            }
+
+        }
+
+      
+
+        if (listItems.Count > 0)
+        {
+            foreach (var it in dictDataCell)
+            {
+                if (it.Key.CellType == CellType.CellLayerCount || it.Key.CellType == CellType.CellSingle)
+                {
+                    continue;
+                }
+                if (listItems.Count == 0)
+                {
+                    break;
+                }
+                var listItemNew = GetListItemByCount(1, listItems);
+
+                if (listItemNew.Count > 0)
+                {
+                    it.Value[1].Add(listItemNew[0]);
+                }
+            }
+        }
+
+        var newdict = dictDataCell.Where(it => it.Key.CellType != CellType.CellLayerCount && it.Key.CellType != CellType.CellSingle).ToList();
+
+
+        int index = 0;
+
+        foreach (var dic in newdict)
+        {
+            if (dic.Value[0].Count == 3)
+            {
+                index++;
+            }
+        }
+
+        var numCount = UnityEngine.Random.Range(3, 4);
+
+        if (newdict.Count - index <= numCount)
+        {
+            List<Item> listItemChange = new();
+            int countCheck = 3;
+
+            while (true)
+            {
+                foreach(var dic in newdict)
+                {
+                    if (dic.Value[0].Count == countCheck)
+                    {
+                        var it = dic.Value[0][0];
+                        dic.Value[0].Remove(it);
+                        listItemChange.Add(it);
+                        if(listItemChange.Count > numCount)
+                        {
+                            break;
+                        }
+                    }
+                }
+
+                if (listItemChange.Count > numCount)
+                {
+                    break;
+                }
+
+                countCheck = 2;
+            }
+
+            if (listItemChange.Count > 0)
+            {
+                foreach(var it in listItemChange)
+                {
+                    foreach (var dic in newdict)
+                    {
+                        if (dic.Value[1].Count < 3)
+                        {
+                            dic.Value[1].Add(it);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            var numItem = newdict.Count - index - numCount;
+            List<Item> listItemChange = new();
+            foreach (var it in newdict)
+            {
+                if (it.Value[1].Count > 1)
+                {
+                    var item = it.Value[1][0];
+                    it.Value[1].Remove(item);
+                    listItemChange.Add(item);
+                    if(listItemChange.Count == numItem)
+                    {
+                        break;
+                    }
+                }
+            }
+
+            foreach(var item in listItemChange)
+            {
+                foreach (var it in newdict)
+                {
+                    if (it.Value[0].Count < 3)
+                    {
+                        it.Value[0].Add(item);
+                        break;
+                    }
+                }
+            }   
+
+        }
+
+        numItemww = 0;
+
+        foreach(var it in newdict)
+        {
+            foreach(var ic in it.Value)
+            {
+                numItemww += ic.Count;
+            }
+        }
+
+        foreach(var it in newdict)
+        {
+            it.Key.CreateLayerItemSkillSwap(it.Value);
+        }
+
+        int cc = 0;
+
+    }
+
+    List<Item> GetListItemByCount(int count, List<Item> listLayer)
+    {
+        List<Item> listIem = new();
+        for(int i = 0; i < count; i++)
+        {
+            if(listLayer.Count > 0)
+            {
+                var it = listLayer[0];
+                listLayer.RemoveAt(0);
+                listIem.Add(it);
+            }
+        }
+        return listIem;
+    }
     #endregion
 
     #region Skill Replay

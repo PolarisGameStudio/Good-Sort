@@ -118,6 +118,16 @@ public class Cell : MonoBehaviour
         return _itemContainer.GetListItem(itemType, num, numLevelAdd);
     }
 
+    public List<Item> GetListItemForSkillSwap()
+	{
+		return _itemContainer.GetListItemForSkillSwap();
+	}
+
+    public void CreateLayerItemSkillSwap(List<List<Item>> listsIten)
+	{
+		_itemContainer.CreateLayerItemSkillSwap(listsIten);
+	}
+
     IEnumerator RestRunAnim()
 	{
 		yield return new WaitForSeconds(0.1f);

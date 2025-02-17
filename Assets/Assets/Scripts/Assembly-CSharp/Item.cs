@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using GoodSortEditor;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -70,6 +71,11 @@ public class Item : MonoBehaviour
         _spriteShadow.sprite = item.spriteHidden;
     }
 
+    public void SetItemContainer(ItemContainer itemContaine)
+    {
+        this.itemContainer = itemContaine;
+    }
+
     public void Setup(ItemContainer itemContainer, ItemAsset item, bool active, int index, int indexContanier, CellType cellType)
 	{
 		this.itemContainer = itemContainer;
@@ -85,34 +91,8 @@ public class Item : MonoBehaviour
             transform.localScale = Vector3.one * sx;
         }
 
-		if(cellType == CellType.CellLayerCount)
-		{
-            transform.localPosition = new Vector3(0, 0.155f, 0);
-        }
-		else if(cellType == CellType.CellSingle)
-		{
-            transform.localPosition = new Vector3(0, 0, 0);
-        }
-		else
-		{
-            if (index == 0)
-            {
-                transform.localPosition = new Vector3(-1, 0, 0);
-            }
+        SetPointForItem(index, cellType);
 
-            if (index == 1)
-            {
-                transform.localPosition = new Vector3(0, 0, 0);
-            }
-
-            if (index == 2)
-            {
-                transform.localPosition = new Vector3(1, 0, 0);
-            }
-        }
-
-        PointNomal = transform.localPosition;
-        PointShadow = transform.localPosition + new Vector3(0, yAdd, 0);
 		UpdateScaleCurrent(transform.localScale);
 
         if (indexContanier == 0)
@@ -133,6 +113,38 @@ public class Item : MonoBehaviour
         {
             gameObject.SetActive(true);
         }
+    }
+
+	public void SetPointForItem(int index, CellType cellType)
+	{
+        if (cellType == CellType.CellLayerCount)
+        {
+            transform.localPosition = new Vector3(0, 0.155f, 0);
+        }
+        else if (cellType == CellType.CellSingle)
+        {
+            transform.localPosition = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            if (index == 0)
+            {
+                transform.localPosition = new Vector3(-1, 0, 0);
+            }
+
+            if (index == 1)
+            {
+                transform.localPosition = new Vector3(0, 0, 0);
+            }
+
+            if (index == 2)
+            {
+                transform.localPosition = new Vector3(1, 0, 0);
+            }
+        }
+
+        PointNomal = transform.localPosition;
+        PointShadow = transform.localPosition + new Vector3(0, yAdd, 0);
     }
 
 	public void UpdateScaleCurrent(Vector3 scale)
