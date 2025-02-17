@@ -52,7 +52,8 @@ public class LogicGame : Singleton<LogicGame>
     #region Load Level
     public void OnNextLevel()
     {
-        StartCoroutine(LoadData());
+        OnPlayAnimationReplay();
+        //StartCoroutine(LoadData());
     }    
 
     IEnumerator LoadData()
@@ -235,8 +236,6 @@ public class LogicGame : Singleton<LogicGame>
         ResetPoint(listCellAllGame);
 
         PlayMoveType(listCellAllGame);
-
-        OnPlayAnimationReplay();
     }
 
     void PlayMoveType(List<Cell> listCell)
@@ -763,17 +762,20 @@ public class LogicGame : Singleton<LogicGame>
     [Header("Skill Replay")]
     [SerializeField] private PowerupReplace _powerupReplace = null;
 
-    public void PlayAnimationReplace(List<Item> cells)
+    public void PlayAnimationReplace(List<Item> cells, Action<ItemAsset, Vector3> callback)
     {
-        _powerupReplace.Active(cells);
+        _powerupReplace.Active(cells, callback);
     }
 
     public void OnPlayAnimationReplay()
     {
-        var newList = listCellAllGame.Where(x=>(x != null && !x.IsCheckCellBlank()));
         List<LayerItem> listLayers = new();
         foreach(var cel in listCellAllGame)
         {
+            if(cel.IsLock)
+            {
+                continue;
+            }
             listLayers.Add(cel.GetCurrentLayer());
         }
 
@@ -785,7 +787,7 @@ public class LogicGame : Singleton<LogicGame>
 
         var groupedPositions = listItem.GroupBy(pos => pos.ItemType).ToDictionary(group => group.Key, group => group.ToList());
 
-        var sortedDict = groupedPositions.OrderByDescending(pair => pair.Value.Count).ToDictionary(pair => pair.Key, pair => pair.Value);
+        var sortedDict = groupedPositions.OrderByDescending(pair => pair.Value.Count % 3 == 0).ToDictionary(pair => pair.Key, pair => pair.Value);
         List<Item> listItemSkillReplay = new();
 
         foreach(var item in sortedDict)
@@ -804,8 +806,89 @@ public class LogicGame : Singleton<LogicGame>
         }
 
         _powerupReplace.gameObject.SetActive(true);
-        PlayAnimationReplace(listItemSkillReplay);
-        
+
+        groupedPositions = listItemSkillReplay.GroupBy(pos => pos.ItemType).ToDictionary(group => group.Key, group => group.ToList());
+
+
+        Dictionary<ItemType, int> dictItem = new();
+
+
+        foreach (var it in groupedPositions)
+        {
+            if (it.Value.Count % 3 == 0)
+            {
+                continue;
+            }
+
+            var countAdd = 3 - it.Value.Count % 3;
+            dictItem.Add(it.Key, countAdd);
+        }
+
+        PlayAnimationReplace(listItemSkillReplay, (itemAsset, localScaleItem) => {
+            if(dictItem.Count == 0)
+            {
+                return;
+            }    
+
+            foreach (var it in dictItem)
+            {
+                var countAdd = it.Value;
+                var type = it.Key;
+
+                var ListItem = new List<Item>();
+
+                foreach(var cel in listCellAllGame)
+                {
+                    var listItems = cel.GetListItem(type, countAdd, 1);
+                    if(listItems.Count > 0)
+                    {
+                        ListItem.AddRange(listItems);
+                    }
+
+                    if(ListItem.Count >= countAdd)
+                    {
+                        break;
+                    }
+                }
+
+                if(ListItem.Count < countAdd)
+                {
+                    ListItem.Clear();
+                    foreach (var cel in listCellAllGame)
+                    {
+                        var listItems = cel.GetListItem(type, countAdd, 0);
+                        if (listItems.Count > 0)
+                        {
+                            ListItem.AddRange(listItems);
+                        }
+
+                        if (ListItem.Count >= countAdd)
+                        {
+                            break;
+                        }
+                    }
+                }
+
+                while(true)
+                {
+                    if(ListItem.Count > countAdd)
+                    {
+                        ListItem.RemoveAt(0);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                foreach(var item in ListItem)
+                {
+                    item.UpdateScaleCurrent(localScaleItem);
+                    item.SetNewItemAsset(itemAsset);
+                }
+               
+            }
+        });
     }
 
     #endregion

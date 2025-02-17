@@ -184,4 +184,10 @@ public class LayerItem : MonoBehaviour
         var newListItem = listItem.Where(x => x != null).ToList();
         return newListItem;
     }
+
+    public List<Item> GetListItemByType(ItemType item)
+    {
+        var newListItem = listItem.Where(x => x != null && x.ItemType == item).ToList();
+        return newListItem;
+    }
 }

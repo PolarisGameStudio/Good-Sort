@@ -113,7 +113,12 @@ public class Cell : MonoBehaviour
 
     }
 
-	IEnumerator RestRunAnim()
+    public List<Item> GetListItem(ItemType itemType, int num, int numLevelAdd)
+    {
+        return _itemContainer.GetListItem(itemType, num, numLevelAdd);
+    }
+
+    IEnumerator RestRunAnim()
 	{
 		yield return new WaitForSeconds(0.1f);
 		isRunActionDrop = false;
@@ -180,7 +185,6 @@ public class Cell : MonoBehaviour
 	{
         ListCallbackAnimDrop.Add(callback);
     }
-
 
     public void OnMove(float pLimit, Vector2 pointReset)
     {

@@ -202,6 +202,28 @@ public class ItemContainer : MonoBehaviour
 		return true;
 	}
 
+	public void OnCheckSucessItem()
+	{
+		var currentLayer = getCurrentLayer();
+        if (currentLayer == null)
+        {
+			return;
+        }
+        var items = getCurrentLayer().GetListItem();
+		if(items.Count < 3)
+		{
+			return;
+		}
+
+		StartCoroutine(StartCheckMeger());
+    }
+
+	private IEnumerator StartCheckMeger()
+	{
+		yield return new WaitForSeconds(0.5f);
+        CheckOnMegerSucess();
+    }
+
 
     public void OnSucessMegerItem(Item item)
 	{
@@ -349,13 +371,7 @@ public class ItemContainer : MonoBehaviour
 				return;
 			}
         }
-
-
-		if(transform.parent.name == "3,5")
-		{
-			int kk = 0;
-		}
-
+	
 		if(!isMeger)
 		{
             if (_cell.CellType == CellType.CellLayerCount)
@@ -404,5 +420,37 @@ public class ItemContainer : MonoBehaviour
 		}
 
 		return true;
+	}
+
+	public List<Item> GetListItem(ItemType itemType, int num, int numLevelAdd)
+	{
+		List<Item> list = new List<Item>();
+		for(int i = currentIndex + numLevelAdd; i < listLayerItem.Count; i++)
+		{
+			var items = listLayerItem[i].GetListItemByType(itemType);
+			if(items != null && items.Count > 0)
+			{
+				list.AddRange(items);
+			}
+			
+			if(list.Count >= num)
+			{
+				break;
+			}
+		}
+
+		while(true)
+		{
+			if(list.Count > num)
+			{
+				list.RemoveAt(0);
+			}
+			else
+			{
+				break;
+			}
+		}
+
+		return list;
 	}
 }

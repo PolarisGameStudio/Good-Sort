@@ -62,16 +62,20 @@ public class Item : MonoBehaviour
     float yScale = 0.025f;
 	float yAdd = 0.15f;
 
+	public void SetNewItemAsset(ItemAsset item)
+	{
+        gameObject.name = item.type.ToString();
+        _itemType = item.type;
+        _sprite.sprite = item.sprite;
+        _spriteShadow.sprite = item.spriteHidden;
+    }
 
     public void Setup(ItemContainer itemContainer, ItemAsset item, bool active, int index, int indexContanier, CellType cellType)
 	{
 		this.itemContainer = itemContainer;
 
-        gameObject.name = item.type.ToString();
-		_itemType = item.type;
-		_sprite.sprite = item.sprite;
-		_spriteShadow.sprite = item.spriteHidden;
-
+		SetNewItemAsset(item);
+      
         var sizeItem = _sprite.bounds.size;
 
         float sx = 0.95f / sizeItem.x;
@@ -109,8 +113,7 @@ public class Item : MonoBehaviour
 
         PointNomal = transform.localPosition;
         PointShadow = transform.localPosition + new Vector3(0, yAdd, 0);
-        CurrentScale = transform.localScale;
-
+		UpdateScaleCurrent(transform.localScale);
 
         if (indexContanier == 0)
 		{
@@ -132,7 +135,11 @@ public class Item : MonoBehaviour
         }
     }
 
-
+	public void UpdateScaleCurrent(Vector3 scale)
+	{
+		CurrentScale = scale;
+		transform.localScale = scale;
+    }
 
 	public void EnableItemNormal(bool isSet)
 	{
@@ -169,12 +176,11 @@ public class Item : MonoBehaviour
 		transform.localScale = CurrentScale + Vector3.one * yScale;
     }
 
-    public void OnMoveWhenEndDrag(Vector2 pointMove, bool isRunAnimScale, Action callback, float delayTime = 0.0f)
+    public void OnMoveWhenEndDrag(Vector2 pointMove, bool isRunAnimScale, Action callback, float delayTime = 0.0f, float timeMove = 0.0f)
     {
 		var currentPos = transform.localPosition;
 		var dis = Vector2.Distance(currentPos, pointMove);
-		var time = dis / 400;
-
+		var time = timeMove < 0.001f ? dis / 400 : timeMove;
 
         _collider.enabled = false;
 
@@ -206,6 +212,16 @@ public class Item : MonoBehaviour
             });
         });
     }	
+
+	public void SetMaxOrderLayerForSprite()
+	{
+        SetSortingOrder(_sprite, layerWhenSelecting);
+    }
+
+    public void ResetMaxOrderLayerForSprite()
+	{
+        SetSortingOrder(_sprite, layer);
+    }
 
     public void BeginDrag()
 	{
