@@ -54,11 +54,14 @@ public class LogicGame : Singleton<LogicGame>
     {
         OnSkillSwap();
        // OnPlayAnimationReplay();
-        //StartCoroutine(LoadData());
+       // StartCoroutine(LoadData());
     }    
 
     IEnumerator LoadData()
     {
+        ListCellDrop.Clear();
+        listCellLock.Clear();
+        listCellAllGame.Clear();
         p2.transform.position = Vector3.zero;
         p2.transform.localScale = Vector2.one;
         for (int i = 0; i < p2.childCount; i++)
@@ -931,6 +934,7 @@ public class LogicGame : Singleton<LogicGame>
             var itemCell = listItems[0];
             listItems.RemoveAt(0);
             listIt.Add(itemCell);
+            listItemAdd.Add(listIt);
             dictDataCell.Add(item, listItemAdd);
         }
 
@@ -1153,7 +1157,7 @@ public class LogicGame : Singleton<LogicGame>
 
         numItemww = 0;
 
-        foreach(var it in newdict)
+        foreach(var it in dictDataCell)
         {
             foreach(var ic in it.Value)
             {
@@ -1161,7 +1165,7 @@ public class LogicGame : Singleton<LogicGame>
             }
         }
 
-        foreach(var it in newdict)
+        foreach(var it in dictDataCell)
         {
             it.Key.CreateLayerItemSkillSwap(it.Value);
         }

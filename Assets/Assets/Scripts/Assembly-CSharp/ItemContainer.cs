@@ -187,7 +187,8 @@ public class ItemContainer : MonoBehaviour
 
         foreach (var it in listItem)
 		{
-			if(isNormal)
+            it.transform.parent = layerItem.transform;
+            if (isNormal)
 			{
 				it.EnableItemNormal(false);
             }
@@ -200,11 +201,9 @@ public class ItemContainer : MonoBehaviour
             }
 			it.SetItemContainer(this);
 
-            it.transform.parent = layerItem.transform;
-
             if (_cell.CellType == CellType.CellLayerCount || _cell.CellType == CellType.CellSingle)
             {
-                layerItem.listItem[2] = it;
+                layerItem.listItem[0] = it;
                 it.SetPointForItem(index1, _cell.CellType);
             }
             else
