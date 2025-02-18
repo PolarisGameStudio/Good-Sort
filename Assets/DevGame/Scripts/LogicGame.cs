@@ -899,6 +899,8 @@ public class LogicGame : Singleton<LogicGame>
     {
         var Cells = listCellAllGame.Where(x=>x != null && !x.IsLock).ToList();
 
+        Shuffle(Cells);
+
         var celsLayerCount = Cells.Where(x=>x.CellType == CellType.CellLayerCount).ToList();
         var celsSingle = Cells.Where(x=>x.CellType == CellType.CellSingle).ToList();
 
@@ -906,8 +908,9 @@ public class LogicGame : Singleton<LogicGame>
 
         foreach(var cel in Cells)
         {
+            cel.CheckSetItemForSkill();
             var item = cel.GetListItemForSkillSwap();
-            if(item.Count > 0)
+            if(item != null && item.Count > 0)
             {
                 listItems.AddRange(item);
             }
@@ -1099,6 +1102,10 @@ public class LogicGame : Singleton<LogicGame>
                 {
                     foreach (var dic in newdict)
                     {
+                        if (dic.Value.Count < 2)
+                        {
+                            break;
+                        }
                         if (dic.Value[1].Count < 3)
                         {
                             dic.Value[1].Add(it);
@@ -1114,6 +1121,10 @@ public class LogicGame : Singleton<LogicGame>
             List<Item> listItemChange = new();
             foreach (var it in newdict)
             {
+                if(it.Value.Count < 2)
+                {
+                    break;
+                }
                 if (it.Value[1].Count > 1)
                 {
                     var item = it.Value[1][0];

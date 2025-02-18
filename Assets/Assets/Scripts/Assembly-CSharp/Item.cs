@@ -69,6 +69,17 @@ public class Item : MonoBehaviour
         _itemType = item.type;
         _sprite.sprite = item.sprite;
         _spriteShadow.sprite = item.spriteHidden;
+
+        var sizeItem = _sprite.bounds.size;
+
+        float sx = 0.95f / sizeItem.x;
+
+        if (sx < 0.95f)
+        {
+            transform.localScale = Vector3.one * sx;
+        }
+
+        UpdateScaleCurrent(transform.localScale);
     }
 
     public void SetItemContainer(ItemContainer itemContaine)
@@ -81,19 +92,9 @@ public class Item : MonoBehaviour
 		this.itemContainer = itemContainer;
 
 		SetNewItemAsset(item);
-      
-        var sizeItem = _sprite.bounds.size;
-
-        float sx = 0.95f / sizeItem.x;
-
-        if (sx < 0.95f)
-		{
-            transform.localScale = Vector3.one * sx;
-        }
 
         SetPointForItem(index, cellType);
 
-		UpdateScaleCurrent(transform.localScale);
 
         if (indexContanier == 0)
 		{

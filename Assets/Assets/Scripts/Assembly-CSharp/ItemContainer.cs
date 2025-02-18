@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
@@ -115,7 +116,7 @@ public class ItemContainer : MonoBehaviour
 
     public LayerItem getCurrentLayer()
 	{
-		if(listLayerItem[currentIndex] != null)
+		if(currentIndex < listLayerItem.Count && listLayerItem[currentIndex] != null)
 		{
 			return listLayerItem[currentIndex];
 		}
@@ -138,6 +139,11 @@ public class ItemContainer : MonoBehaviour
 			return null;
 		}
 
+		if(listLayerItem[index] == null)
+		{
+			int kk = 0;
+		}
+
 		return listLayerItem[index];
 	}	
 
@@ -158,9 +164,20 @@ public class ItemContainer : MonoBehaviour
             var gameObj = new GameObject();
             gameObj.transform.parent = transform;
             gameObj.transform.localPosition = Vector3.zero;
+			gameObj.transform.localScale = Vector3.one;
             layerItem = gameObj.AddComponent<LayerItem>();
             layerItem.SetCellType(_cell.CellType);
-            listLayerItem.Add(layerItem);
+			if(index < listLayerItem.Count &&(listLayerItem[index] == null || listLayerItem[index].IsLayerAllPosBlank()))
+			{
+				listLayerItem[index] = layerItem;
+                Debug.Log("NameNull: " + transform.parent.name);
+            }
+            else
+			{
+                Debug.Log("NameNull1: " + transform.parent.name +"_index: " + index);
+                listLayerItem.Add(layerItem);
+            }
+
 
         }
         layerItem.gameObject.name = "layer_" + index.ToString();
@@ -469,6 +486,17 @@ public class ItemContainer : MonoBehaviour
             return;
         }
 
+		if(listLayerItem[currentIndex].IsLayerAllPosBlank())
+		{
+			currentIndex++;
+        }
+
+        if (currentIndex >= listLayerItem.Count)
+        {
+            currentIndex--;
+            return;
+        }
+
         listLayerItem[currentIndex].OnNextItemNormal();
         if (currentIndex + 1 >= listLayerItem.Count)
         {
@@ -483,7 +511,18 @@ public class ItemContainer : MonoBehaviour
 		OnNextLayerItem(true);
     }
 
-	public bool IsItemLayersBlank()
+    private void Update()
+    {
+        foreach(var it in listLayerItem)
+		{
+			if(it == null)
+			{
+				int cc = 0;
+			}
+		}
+    }
+
+    public bool IsItemLayersBlank()
 	{
 		foreach(var it in listLayerItem)
 		{
@@ -528,7 +567,43 @@ public class ItemContainer : MonoBehaviour
 		return list;
 	}
 
-	public List<Item> GetListItemForSkillSwap()
+	public void CheckSetItemForSkill()
+	{
+
+		List<LayerItem> listLayers = new();
+		List<int> listIndex = new();
+		int index = 0;
+		foreach(var it in listLayerItem)
+		{
+			if(it.IsLayerAllPosBlank())
+			{
+                listLayers.Add(it);
+            }
+        }
+
+
+		foreach(var c in listLayers)
+		{
+			if(listLayerItem.Count > 1)
+			{
+                listLayerItem.Remove(c);
+            }
+        }
+
+		List<LayerItem> listNewLayer = new();
+
+		foreach(var it in listLayerItem)
+		{
+			if(it != null)
+			{
+                listNewLayer.Add(it);
+            }
+		}
+		listLayerItem = listNewLayer;
+		currentIndex = 0;
+    }
+
+    public List<Item> GetListItemForSkillSwap()
 	{
 		if(currentIndex >= listLayerItem.Count)
 		{

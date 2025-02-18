@@ -123,6 +123,11 @@ public class Cell : MonoBehaviour
 		return _itemContainer.GetListItemForSkillSwap();
 	}
 
+	public void CheckSetItemForSkill()
+	{
+		_itemContainer.CheckSetItemForSkill();
+	}
+
     public void CreateLayerItemSkillSwap(List<List<Item>> listsIten)
 	{
 		_itemContainer.CreateLayerItemSkillSwap(listsIten);
