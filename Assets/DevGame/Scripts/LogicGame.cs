@@ -54,7 +54,7 @@ public class LogicGame : Singleton<LogicGame>
     {
         OnSkillSwap();
        // OnPlayAnimationReplay();
-       // StartCoroutine(LoadData());
+        //StartCoroutine(LoadData());
     }    
 
     IEnumerator LoadData()
@@ -947,20 +947,24 @@ public class LogicGame : Singleton<LogicGame>
                 break;
             }
 
-            List<Item> listItLayer1 = new();
-            var itemCell = listItems[0];
-            listItems.RemoveAt(0);
-            listItemAdd.Add(listItems);
-            if (listItems.Count == 0)
+            List<Item> listItLayer1 = GetListItemByCount(1, listItems);
+            List<Item> listItLayer2 = GetListItemByCount(1, listItems);
+
+            if(listItLayer1 != null && listItLayer1.Count > 0)
             {
-                break;
+                listItemAdd.Add(listItLayer1);
             }
 
-            List<Item> listItLayer2 = new();
-            var itemCell2 = listItems[0];
-            listItems.RemoveAt(0);
-            listItemAdd.Add(listItLayer2);
-            dictDataCell.Add(item, listItemAdd);
+            if (listItLayer2 != null && listItLayer2.Count > 0)
+            {
+                listItemAdd.Add(listItLayer2);
+            }
+
+            if(listItemAdd.Count > 0)
+            {
+                dictDataCell.Add(item, listItemAdd);
+            }
+
         }
 
         foreach (var it in Cells)

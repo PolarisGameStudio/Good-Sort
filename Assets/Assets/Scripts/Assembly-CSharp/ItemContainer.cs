@@ -177,8 +177,6 @@ public class ItemContainer : MonoBehaviour
                 Debug.Log("NameNull1: " + transform.parent.name +"_index: " + index);
                 listLayerItem.Add(layerItem);
             }
-
-
         }
         layerItem.gameObject.name = "layer_" + index.ToString();
 		layerItem.SetDataNull();
@@ -242,6 +240,10 @@ public class ItemContainer : MonoBehaviour
     public void RemoveIndexItemInLayerItem(Item item)
 	{
         var cc = getCurrentLayer();
+		if(cc == null)
+		{
+			int kk = 0;
+		}
         cc.RemoveItemInLayerItem(item);
     }
 
@@ -436,7 +438,7 @@ public class ItemContainer : MonoBehaviour
 
         if (isDesktroy)
 		{
-            Destroy(trObj.gameObject);
+			OnDestroyLayerItem(trObj);
         }
     }
 
@@ -472,7 +474,7 @@ public class ItemContainer : MonoBehaviour
                 }
                 else
                 {
-                    Destroy(currentLayer.gameObject);
+					OnDestroyLayerItem(currentLayer);
                 }
             }
 
@@ -505,7 +507,16 @@ public class ItemContainer : MonoBehaviour
         listLayerItem[currentIndex + 1].OnNextItemShadow();
     }
 
-	public void CheckOnMegerSucess()
+    private void OnDestroyLayerItem(LayerItem layer)
+    {
+        if(listLayerItem.Count <= 1)
+		{
+			return;
+		}
+        Destroy(layer.gameObject);
+    }
+
+    public void CheckOnMegerSucess()
 	{
 		OnNextLayerItem(true);
     }

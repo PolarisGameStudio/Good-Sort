@@ -4,6 +4,7 @@ using DG.Tweening;
 using GoodSortEditor;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Item : MonoBehaviour
 {
@@ -69,7 +70,7 @@ public class Item : MonoBehaviour
         _itemType = item.type;
         _sprite.sprite = item.sprite;
         _spriteShadow.sprite = item.spriteHidden;
-
+        transform.localScale = Vector3.one;
         var sizeItem = _sprite.bounds.size;
 
         float sx = 0.95f / sizeItem.x;
