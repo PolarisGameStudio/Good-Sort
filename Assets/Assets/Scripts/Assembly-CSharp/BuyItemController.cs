@@ -1,13 +1,10 @@
 using System;
 using System.Collections.Generic;
-using CodeStage.AntiCheat.ObscuredTypes;
 using UnityEngine;
 
 public class BuyItemController : Singleton<BuyItemController>
 {
-	public static ObscuredInt GOLD_TO_BUY_TIME_WHEN_TIME_OUT;
 
-	public static Dictionary<PowerupKind, ObscuredInt> DIC_GOLD_TO_BUY_POWER_UP_NEW;
 
 	public Transform fx;
 

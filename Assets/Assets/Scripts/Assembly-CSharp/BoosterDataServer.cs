@@ -8,8 +8,5 @@ public class BoosterDataServer
 	public int[] boosterFree;
 
 	public long[] timeInfis;
-
-	public void Update(BoosterData boosterData)
-	{
-	}
+	
 }

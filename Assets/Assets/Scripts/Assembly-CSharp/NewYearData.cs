@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 [Serializable]
 public class NewYearData
 {
-	public ObscuredInt wine;
 
 	public int index;
 

@@ -1,13 +1,10 @@
 using System;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 public class RemoveAdsController : NMSingleton<RemoveAdsController>
 {
-	public ObscuredInt GOLD_WHEN_PURCHASE;
 
 	private const string key = "remove_ads";
 
-	private ObscuredInt _state;
 
 	private bool _isShow;
 

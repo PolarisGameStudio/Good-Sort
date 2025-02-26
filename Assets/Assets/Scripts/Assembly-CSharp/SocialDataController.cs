@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using CodeStage.AntiCheat.ObscuredTypes;
 using UnityEngine;
 
 public class SocialDataController : NMSingleton<SocialDataController>
@@ -33,11 +32,6 @@ public class SocialDataController : NMSingleton<SocialDataController>
 
 	private void Save()
 	{
-	}
-
-	public ObscuredInt GetGoldLikeFanpage()
-	{
-		return default(ObscuredInt);
 	}
 
 	public ResourceValue GetResourceWhenLikeFanpage()

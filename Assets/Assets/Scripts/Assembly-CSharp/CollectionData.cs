@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 [Serializable]
 public class CollectionData
@@ -11,7 +10,6 @@ public class CollectionData
 
 	public List<CardSet> cardSets;
 
-	public ObscuredInt star;
 
 	public long timeEnd;
 

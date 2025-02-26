@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 public class StarCollaborationDataController : NMSingleton<StarCollaborationDataController>
 {
@@ -97,7 +96,6 @@ public class StarCollaborationDataController : NMSingleton<StarCollaborationData
 
 	public int NumRewardInLuckyWheel => 0;
 
-	public ObscuredInt NumMilkToSpin => default(ObscuredInt);
 
 	public int MilkReceiveFromLevel => 0;
 

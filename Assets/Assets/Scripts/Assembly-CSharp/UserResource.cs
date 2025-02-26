@@ -1,14 +1,10 @@
 using System;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 [Serializable]
 public class UserResource
 {
-	public ObscuredInt heart;
 
-	public ObscuredInt gold;
 
-	public ObscuredInt star;
 
 	public long lastUpdateHeart;
 

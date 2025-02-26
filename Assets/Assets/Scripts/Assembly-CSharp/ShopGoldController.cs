@@ -1,5 +1,4 @@
 using System;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 public class ShopGoldController : NMSingleton<ShopGoldController>
 {
@@ -7,7 +6,6 @@ public class ShopGoldController : NMSingleton<ShopGoldController>
 
 	public const int TIME_TO_WATCH_NEXT_ADS = 300;
 
-	public static readonly ObscuredInt GOLD_CLAIM_BY_ADS;
 
 	private ShopGold _shopGold;
 

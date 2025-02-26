@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 public class CollectionDataController : NMSingleton<CollectionDataController>
 {
@@ -63,7 +62,6 @@ public class CollectionDataController : NMSingleton<CollectionDataController>
 
 	public List<UserSimpleInfoWithTeam> GetFriends => null;
 
-	public ObscuredInt NumSendPerDay => default(ObscuredInt);
 
 	protected override void Init()
 	{

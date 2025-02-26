@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using CodeStage.AntiCheat.ObscuredTypes;
 using UnityEngine;
 
 public class UserResourceController : NMSingleton<UserResourceController>
@@ -28,7 +27,6 @@ public class UserResourceController : NMSingleton<UserResourceController>
 
 	private WaitForSeconds waitForSeconds;
 
-	public ObscuredInt GOLD_TO_BUY_HEART;
 
 	public static Action<int> onAddGold;
 

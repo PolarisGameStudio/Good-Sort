@@ -1,5 +1,4 @@
 using System;
-using Coffee.UIEffects;
 using Coffee.UIExtensions;
 using Spine.Unity;
 using TMPro;
@@ -86,8 +85,6 @@ public class UIPanel_ScoopSquad_Wheel : MonoBehaviour
 	public int minSpins;
 
 	public AnimationCurve curve;
-
-	public UIShiny fxShiny;
 
 	public UIParticle fxWheelPlay;
 

@@ -1,10 +1,8 @@
 using System;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 [Serializable]
 public class LuckyWheel
 {
-	public ObscuredInt numAdsRemain;
 
 	public long timeReset;
 

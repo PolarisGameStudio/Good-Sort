@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 public class BoosterDataController : NMSingleton<BoosterDataController>
 {
@@ -13,7 +12,6 @@ public class BoosterDataController : NMSingleton<BoosterDataController>
 
 	private const string key = "booster";
 
-	private BoosterData _boosterData;
 
 	public static Action<int> onUseBooster;
 
@@ -23,13 +21,10 @@ public class BoosterDataController : NMSingleton<BoosterDataController>
 
 	private BoosterKind? boosterTut;
 
-	public static readonly ObscuredInt GOLD_TO_BUY_BOOSTER;
 
 	public static Dictionary<BoosterKind, AdRewardType> DicBoosterAdsType;
 
 	public static readonly Dictionary<BoosterKind, string> DicBoosterNameToLog;
-
-	public BoosterData BoosterData => null;
 
 	private int numBoosterInit => 0;
 

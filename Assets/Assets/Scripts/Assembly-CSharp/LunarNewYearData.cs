@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 public class LunarNewYearData
 {
@@ -13,9 +12,7 @@ public class LunarNewYearData
 
 	public int ltv;
 
-	public ObscuredInt envelope;
 
-	public ObscuredInt totalEnvelope;
 
 	public List<int> rewardsCanClaim;
 

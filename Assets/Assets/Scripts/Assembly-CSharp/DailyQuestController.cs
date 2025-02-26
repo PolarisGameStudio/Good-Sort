@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 public class DailyQuestController : NMSingleton<DailyQuestController>
 {
@@ -20,7 +19,6 @@ public class DailyQuestController : NMSingleton<DailyQuestController>
 
 	public Action<List<ResourceValue>> onClaimQuest;
 
-	public static readonly ObscuredInt gold_in_chest;
 
 	private List<ResourceValue> c_dataReward;
 

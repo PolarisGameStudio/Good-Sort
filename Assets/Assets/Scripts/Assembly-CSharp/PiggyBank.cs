@@ -1,10 +1,8 @@
 using System;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 [Serializable]
 public class PiggyBank
 {
-	public ObscuredInt gold;
 
 	public long timeBuy;
 

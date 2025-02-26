@@ -1,5 +1,4 @@
 using System;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 [Serializable]
 public class EndlessData
@@ -8,7 +7,6 @@ public class EndlessData
 
 	public long timeEnd;
 
-	public ObscuredInt purchase;
 
 	public int index;
 

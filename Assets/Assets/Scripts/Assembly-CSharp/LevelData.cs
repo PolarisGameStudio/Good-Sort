@@ -1,8 +1,6 @@
-using CodeStage.AntiCheat.ObscuredTypes;
 
 public class LevelData
 {
-	public ObscuredInt level;
 
 	public int numPlay;
 

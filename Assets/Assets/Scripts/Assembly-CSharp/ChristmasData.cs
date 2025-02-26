@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 [Serializable]
 public class ChristmasData
@@ -65,9 +64,7 @@ public class ChristmasData
 
 	public int buyPack;
 
-	public ObscuredInt currentGiftHidden;
 
-	public ObscuredInt totalSink;
 
 	public int currentLevel;
 

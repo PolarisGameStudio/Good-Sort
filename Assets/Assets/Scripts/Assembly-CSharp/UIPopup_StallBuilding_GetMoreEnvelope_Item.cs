@@ -1,4 +1,3 @@
-using Coffee.UIEffects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,8 +17,6 @@ public class UIPopup_StallBuilding_GetMoreEnvelope_Item : MonoBehaviour
 	public RectTransform[] rectPurchaseds;
 
 	public TextMeshProUGUI txtLimit;
-
-	public UIShiny iconShiny;
 
 	private void Start()
 	{

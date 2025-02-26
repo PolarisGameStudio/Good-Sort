@@ -1,12 +1,10 @@
 using System;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 [Serializable]
 public class DailyQuest
 {
 	public int id;
 
-	public ObscuredInt progress;
 
 	public int state;
 

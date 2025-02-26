@@ -1,5 +1,4 @@
 using System;
-using CodeStage.AntiCheat.ObscuredTypes;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -32,11 +31,6 @@ namespace MagicExcel
 		public static implicit operator long(EncryptedLong value)
 		{
 			return 0L;
-		}
-
-		public static implicit operator ObscuredLong(EncryptedLong value)
-		{
-			return default(ObscuredLong);
 		}
 
 		public override string ToString()

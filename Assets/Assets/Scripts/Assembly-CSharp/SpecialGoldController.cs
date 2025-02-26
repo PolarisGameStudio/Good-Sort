@@ -1,5 +1,4 @@
 using System;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 public class SpecialGoldController : NMSingleton<SpecialGoldController>
 {
@@ -12,11 +11,6 @@ public class SpecialGoldController : NMSingleton<SpecialGoldController>
 	public Action onBuy;
 
 	public SpecialGold SpecialGold => null;
-
-	public ObscuredInt GetGoldWhenPurchase()
-	{
-		return default(ObscuredInt);
-	}
 
 	protected override void Init()
 	{

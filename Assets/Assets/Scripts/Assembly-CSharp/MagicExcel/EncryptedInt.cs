@@ -1,5 +1,4 @@
 using System;
-using CodeStage.AntiCheat.ObscuredTypes;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -34,10 +33,6 @@ namespace MagicExcel
 			return 0;
 		}
 
-		public static implicit operator ObscuredInt(EncryptedInt value)
-		{
-			return default(ObscuredInt);
-		}
 
 		public override string ToString()
 		{

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 [Serializable]
 public class HalloweenData
@@ -9,9 +8,7 @@ public class HalloweenData
 
 	public int buyPack;
 
-	public ObscuredInt shovel;
 
-	public ObscuredInt level;
 
 	public int shovelUsed;
 

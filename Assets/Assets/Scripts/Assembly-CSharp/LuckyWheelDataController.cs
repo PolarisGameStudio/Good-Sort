@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using CodeStage.AntiCheat.ObscuredTypes;
 
 public class LuckyWheelDataController : NMSingleton<LuckyWheelDataController>
 {
@@ -17,11 +16,6 @@ public class LuckyWheelDataController : NMSingleton<LuckyWheelDataController>
 	public Action<int, List<ResourceValue>> onSpin;
 
 	public LuckyWheel LuckyWheel => null;
-
-	private ObscuredInt GetNumAdsPerDay()
-	{
-		return default(ObscuredInt);
-	}
 
 	protected override void Init()
 	{
