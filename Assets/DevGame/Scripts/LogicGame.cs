@@ -29,7 +29,6 @@ public class LogicGame : Singleton<LogicGame>
     int _currentLock = 0;
     float _timePlayGame = 0;
 
-
     int _numCellLock = 0;
     int _numCellHiden = 0;
 
@@ -51,6 +50,7 @@ public class LogicGame : Singleton<LogicGame>
         DisableTextCombo();
         sizeCamera = GetSizeCameraInWord();
         OnLoadLevel();
+        BoosterInGameController.Instance.ActiveBooster(BoosterKind.X2_Star);
     }
 
     public static Vector2 GetSizeCameraInWord()
@@ -599,6 +599,7 @@ public class LogicGame : Singleton<LogicGame>
 
     private int _currIndexCheckAddIndexCombo = 0;
     private int _currCheckAddIndexCombo = 2;
+    private int _comboX2 = 1;
 
     private bool _isAddCombo = false;
 
@@ -649,7 +650,7 @@ public class LogicGame : Singleton<LogicGame>
 
         if(_currentCombo == 1 || _currentCombo == 2)
         {
-            _currentStarAdd = 1;
+            _currentStarAdd = _comboX2;
         }
         else
         {
@@ -661,7 +662,7 @@ public class LogicGame : Singleton<LogicGame>
 
             if (_currentIndexCombo > _currCheckAddIndexCombo)
             {
-                _currentStarAdd++;
+                _currentStarAdd += _comboX2;
                 _currentIndexCombo = 0;
 
                 _currIndexCheckAddIndexCombo++;
@@ -726,7 +727,6 @@ public class LogicGame : Singleton<LogicGame>
         return false;
     }
     #endregion
-
 
     #region Play Game
 
@@ -1064,6 +1064,26 @@ public class LogicGame : Singleton<LogicGame>
     }
 
     #endregion
+
+    #endregion
+
+    #region Bosster
+
+    public void OnBossterTimeBonus(Transform ob)
+    {
+        IsUseSkillGame = true;
+        ob.DOMove(UICountDown.Instance.transform.position, 1.0f).SetEase(Ease.InBack).OnComplete(() => {
+            IsUseSkillGame = false;
+            ob.gameObject.SetActive(false);
+            _timePlayGame += 60.0f;
+            UICountDown.Instance.IncreaseTime(60);
+        }).SetDelay(1.0f);
+    }
+
+    public void OnBossterX2Start()
+    {
+        _comboX2 = 2;
+    }    
 
     #endregion
 }

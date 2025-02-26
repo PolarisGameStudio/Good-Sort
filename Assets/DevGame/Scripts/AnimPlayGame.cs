@@ -83,6 +83,5 @@ public class AnimPlayGame : Singleton<AnimPlayGame>
         var sp = anim.GetComponent<SkeletonAnimation>();
         sp.Skeleton.SetSkin(daCombo.nameCombo);
         sp.StartCoroutine(DestroyObject(5, anim.gameObject));
-
     }
 }

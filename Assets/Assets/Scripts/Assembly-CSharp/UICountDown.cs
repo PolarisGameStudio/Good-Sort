@@ -25,7 +25,9 @@ public class UICountDown : Singleton<UICountDown>
 
 	public void IncreaseTime(int timeIncrease)
 	{
-	}
+		_fx.Play();
+
+    }
 
 	private void Update()
 	{
