@@ -123,14 +123,32 @@ public class Cell : MonoBehaviour
 		return _itemContainer.GetListItemForSkillSwap();
 	}
 
-	public void CheckSetItemForSkill()
+	public List<Item> GetListItemForSkillBreakItem()
+	{
+		return _itemContainer.GetListItemForSkillBreakItem();
+    }
+
+    public void OnCheckPlayAnimCellTypeDropBlank()
+    {
+        if (this.MoveType == MoveType.Drop && this.IsCheckCellBlank())
+        {
+            _itemContainer.StartCoroutine(_itemContainer.PlayAnimCellTypeDropBlank(this));
+        }
+    }
+
+    public void OnNextItemWhenUseSkillBreakItem()
+	{
+        _itemContainer.OnNextItemWhenMove();
+    }
+
+    public void CheckSetItemForSkill()
 	{
 		_itemContainer.CheckSetItemForSkill();
 	}
 
-    public void CreateLayerItemSkillSwap(List<List<Item>> listsIten)
+    public void CreateLayerItemSkillSwap(List<List<Item>> listsIten, ref List<DataItemSkillSwap> dataItems)
 	{
-		_itemContainer.CreateLayerItemSkillSwap(listsIten);
+		_itemContainer.CreateLayerItemSkillSwap(listsIten, ref dataItems);
 	}
 
     IEnumerator RestRunAnim()
@@ -151,7 +169,7 @@ public class Cell : MonoBehaviour
             StartCoroutine(RestRunAnim());
         }
 
-        if (IsMove)
+        if (IsMove && !LogicGame.Instance.IsUseSkillGame)
         {
 			if(_moveType == MoveType.Right)
 			{

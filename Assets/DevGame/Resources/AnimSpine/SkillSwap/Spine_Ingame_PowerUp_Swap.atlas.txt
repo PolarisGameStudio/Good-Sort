@@ -1,0 +1,86 @@
+Spine_Ingame_PowerUp_Swap.png
+	size: 832, 832
+Arrow_D_0
+	bounds: 511, 757, 114, 70
+Arrow_D_1
+	bounds: 511, 757, 114, 70
+Arrow_D_14
+	bounds: 511, 757, 114, 70
+Arrow_D_15
+	bounds: 511, 757, 114, 70
+Arrow_D_16
+	bounds: 511, 757, 114, 70
+Arrow_D_18
+	bounds: 511, 757, 114, 70
+Arrow_D_2
+	bounds: 511, 757, 114, 70
+Arrow_D_3
+	bounds: 511, 757, 114, 70
+Arrow_D_4
+	bounds: 511, 757, 114, 70
+Arrow_D_5
+	bounds: 511, 757, 114, 70
+Arrow_D_10
+	bounds: 627, 757, 114, 70
+Arrow_D_11
+	bounds: 743, 713, 114, 70
+	rotate: 90
+Arrow_D_12
+	bounds: 511, 685, 114, 70
+Arrow_D_13
+	bounds: 627, 685, 114, 70
+Arrow_D_6
+	bounds: 743, 597, 114, 70
+	rotate: 90
+Arrow_D_7
+	bounds: 511, 613, 114, 70
+Arrow_D_8
+	bounds: 627, 613, 114, 70
+Arrow_D_9
+	bounds: 511, 541, 114, 70
+Arrow_D_Glow
+	bounds: 2, 433, 507, 394
+	offsets: 0, 0, 507, 542
+Arrow_U_0
+	bounds: 627, 540, 113, 71
+Arrow_U_1
+	bounds: 627, 540, 113, 71
+Arrow_U_13
+	bounds: 627, 540, 113, 71
+Arrow_U_14
+	bounds: 627, 540, 113, 71
+Arrow_U_15
+	bounds: 627, 540, 113, 71
+Arrow_U_16
+	bounds: 627, 540, 113, 71
+Arrow_U_17
+	bounds: 627, 540, 113, 71
+Arrow_U_18
+	bounds: 627, 540, 113, 71
+Arrow_U_2
+	bounds: 627, 540, 113, 71
+Arrow_U_3
+	bounds: 627, 540, 113, 71
+Arrow_U_4
+	bounds: 627, 540, 113, 71
+Arrow_U_10
+	bounds: 511, 468, 113, 71
+Arrow_U_11
+	bounds: 742, 482, 113, 71
+	rotate: 90
+Arrow_U_12
+	bounds: 626, 467, 113, 71
+Arrow_U_5
+	bounds: 511, 395, 113, 71
+Arrow_U_6
+	bounds: 741, 367, 113, 71
+	rotate: 90
+Arrow_U_7
+	bounds: 626, 394, 113, 71
+Arrow_U_8
+	bounds: 511, 322, 113, 71
+Arrow_U_9
+	bounds: 626, 321, 113, 71
+Arrow_U_Glow
+	bounds: 2, 2, 507, 429
+	offsets: 0, 113, 507, 542

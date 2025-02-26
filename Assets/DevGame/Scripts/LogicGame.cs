@@ -9,6 +9,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+public struct DataItemSkillSwap
+{
+    public bool isNomal;
+    public Item item;
+    public Vector3 pointMove;
+}
 public class LogicGame : Singleton<LogicGame>
 {
     public GameObject objSelll;
@@ -20,6 +26,7 @@ public class LogicGame : Singleton<LogicGame>
     private List<Cell> listCellLock = new();
     private List<Cell> listCellAllGame = new();
     int _currentLock = 0;
+    float _timePlayGame = 0;
 
 
     int _numCellLock = 0;
@@ -28,10 +35,14 @@ public class LogicGame : Singleton<LogicGame>
     public Transform p1 = null;
     public Transform p2 = null;
     public Transform p3 = null;
-    Vector2 sizeCamera = Vector2.zero;
+    public static Vector2 sizeCamera = Vector2.zero;
     List<List<Cell>> ListCellDrop = new();
 
     public UIParticle uiAnimStarCombo = null;
+
+    [HideInInspector]
+    public bool IsUseSkillGame = false;
+    [SerializeField] TextMeshProUGUI textTimePlay;
 
     void Start()
     {
@@ -52,7 +63,9 @@ public class LogicGame : Singleton<LogicGame>
     #region Load Level
     public void OnNextLevel()
     {
-        OnSkillSwap();
+        OnSkillBreakItem();
+       // OnSkilFreeze();
+        //OnSkillSwap();
        // OnPlayAnimationReplay();
         //StartCoroutine(LoadData());
     }    
@@ -80,10 +93,12 @@ public class LogicGame : Singleton<LogicGame>
 
     public void OnLoadLevel()
     {
-
         var level = GenLevelController.Instance.GetDataLevel();
 
-        var time = level.timeToPlay;
+        _timePlayGame = level.timeToPlay;
+
+        textTimePlay.text = GetTimePlayGame();
+
         _numCellLock = level.numberCellLock;
         _numCellHiden = level.itemHiden;
         var cell = level.cells;
@@ -571,17 +586,6 @@ public class LogicGame : Singleton<LogicGame>
 
     #endregion
 
-    void Shuffle<T>(List<T> list)
-    {
-        for (int i = list.Count - 1; i > 0; i--)
-        {
-            int randomIndex = UnityEngine.Random.Range(0, i + 1);
-            T temp = list[i];
-            list[i] = list[randomIndex];
-            list[randomIndex] = temp;
-        }
-    }
-
     #region Combo
 
     [Header("ComboGame")]
@@ -613,12 +617,19 @@ public class LogicGame : Singleton<LogicGame>
         float timeCurrentCombo = _timeCombo;
         while (true)
         {
+            if(IsUseSkillFreeze)
+            {
+                yield return null;
+                continue;
+            }    
             timeCurrentCombo -= Time.deltaTime;
             float pecent = timeCurrentCombo / _timeCombo;
             if (pecent <= 0)
             {
                 DisableTextCombo();
                 imgProgress.fillAmount = 0;
+                _currentCombo = 0;
+                _currentIndexCombo = 0;
                 pecent = 0;
                 break;
             }
@@ -670,10 +681,10 @@ public class LogicGame : Singleton<LogicGame>
         return _currentStarAdd;
     }
 
-    public void CheckComboGame(Cell cell)
+    public void CheckComboGame(Vector3 point)
     {
         textCombo.gameObject.SetActive(true);
-        AnimPlayGame.Instance.PlayAnimStarCombo(UpdateCombo(), cell.transform.position);
+        AnimPlayGame.Instance.PlayAnimStarCombo(UpdateCombo(), point);
         if (IsUIParticlePlaying(animComboProgress))
         {
             animComboProgress.Stop();
@@ -714,6 +725,28 @@ public class LogicGame : Singleton<LogicGame>
 
 
     #region Play Game
+
+    string GetTimePlayGame()
+    {
+        TimeSpan time = TimeSpan.FromSeconds(_timePlayGame);
+        return string.Format("{0}:{1:D2}", time.Minutes, time.Seconds);
+    }    
+
+    private void Update()
+    {
+        if(IsUseSkillGame || IsUseSkillFreeze)
+        {
+            return;
+        }    
+
+        _timePlayGame -= Time.deltaTime;
+        if(_timePlayGame <= 0)
+        {
+            Debug.Log("game_over");
+            return;
+        }
+        textTimePlay.text = GetTimePlayGame();
+    }
 
     public void CheckRunAnimDrop(Cell cell)
     {
@@ -898,303 +931,133 @@ public class LogicGame : Singleton<LogicGame>
     #endregion
 
     #region Skill Swap
+
+    [Header("Skill Swap")]
+    [SerializeField] private PowerupSwap _powerupSwap = null;
+
     public void OnSkillSwap()
     {
-        var Cells = listCellAllGame.Where(x=>x != null && !x.IsLock).ToList();
+        IsUseSkillGame = true;
+        _powerupSwap.OnSkillSwap(listCellAllGame, p2.transform.position, () => {
+            IsUseSkillGame = false;
+        });
+    }
 
-        Shuffle(Cells);
+    #endregion
 
-        var celsLayerCount = Cells.Where(x=>x.CellType == CellType.CellLayerCount).ToList();
-        var celsSingle = Cells.Where(x=>x.CellType == CellType.CellSingle).ToList();
+    #region Skill Freeze
 
-        List<Item> listItems = new();
+    [Header("Skill Freeze")]
+    [SerializeField] private PowerupFreeze _powerupFreeze = null;
+    [SerializeField] private float _TimeSkillFreeze = 10;
+    Coroutine coroutineFreeze = null;
+    private bool IsUseSkillFreeze = false;
 
-        foreach(var cel in Cells)
+    public void OnSkilFreeze()
+    {
+        IsUseSkillFreeze = true;
+        _powerupFreeze.gameObject.SetActive(true);
+        coroutineFreeze = StartCoroutine(StartSkillGameFreeze());
+    }
+
+    IEnumerator StartSkillGameFreeze()
+    {
+        yield return new WaitForSeconds(_TimeSkillFreeze);
+        _powerupFreeze.gameObject.SetActive(false);
+        IsUseSkillFreeze = false;
+    }
+
+    #endregion
+
+    #region Skill Break Item
+    [Header("Skill Break Item")]
+    [SerializeField] private PowerupBreakItem _powerupBreakItem = null;
+    private bool IsUseSkillBreakItem = false;
+
+    public void OnSkillBreakItem()
+    {
+        IsUseSkillGame = true;
+
+        var cell = listCellAllGame.Where(x=>x!=null && !x.IsCheckCellBlank() && !x.IsLock && x.transform.position.y < PTop.transform.position.y && x.transform.position.y > PBot.transform.position.y).ToList();
+
+        List<Item> listItem = new();
+
+        foreach(var ce in cell)
         {
-            cel.CheckSetItemForSkill();
-            var item = cel.GetListItemForSkillSwap();
-            if(item != null && item.Count > 0)
-            {
-                listItems.AddRange(item);
-            }
-        }
-
-        listItems.Sort((a,b)=> a.ItemType - b.ItemType);
-
-        int num11 = listItems.Count;
-        var numItemww = 0;
-
-        //LayerCount
-        Dictionary<Cell, List<List<Item>>> dictDataCell = new();
-
-        foreach (var item in celsLayerCount)
-        {
-            List<List<Item>> listItemAdd = new();
-            List<Item> listIt = new();
-            var itemCell = listItems[0];
-            listItems.RemoveAt(0);
-            listIt.Add(itemCell);
-            listItemAdd.Add(listIt);
-            dictDataCell.Add(item, listItemAdd);
-        }
-
-
-        foreach (var item in celsSingle)
-        {
-            List<List<Item>> listItemAdd = new();
-            if (listItems.Count == 0)
-            {
-                break;
-            }
-
-            List<Item> listItLayer1 = GetListItemByCount(1, listItems);
-            List<Item> listItLayer2 = GetListItemByCount(1, listItems);
-
-            if(listItLayer1 != null && listItLayer1.Count > 0)
-            {
-                listItemAdd.Add(listItLayer1);
-            }
-
-            if (listItLayer2 != null && listItLayer2.Count > 0)
-            {
-                listItemAdd.Add(listItLayer2);
-            }
-
-            if(listItemAdd.Count > 0)
-            {
-                dictDataCell.Add(item, listItemAdd);
-            }
-
-        }
-
-        foreach (var it in Cells)
-        {
-            if(dictDataCell.ContainsKey(it))
+            var its = ce.GetListItemForSkillBreakItem();
+            if(its == null || its.Count == 0)
             {
                 continue;
             }
-            if(listItems.Count == 0)
-            {
-                break;
-            }
-            List<List<Item>> listItemAdd = new();
-            var listItemNew = GetListItemByCount(2, listItems);
-            if(listItemNew.Count > 0)
-            {
-                listItemAdd.Add(listItemNew);
-                dictDataCell.Add(it, listItemAdd);
-            }
-        }
-   
-        if (listItems.Count > 0)
+            listItem.AddRange(its);
+        }    
+
+        var  groupedPositions = listItem.GroupBy(pos => pos.ItemType).ToDictionary(group => group.Key, group => group.ToList());
+
+        if(groupedPositions == null || groupedPositions.Count == 0)
         {
-            foreach (var it in dictDataCell)
-            {
-                if (it.Key.CellType == CellType.CellLayerCount || it.Key.CellType == CellType.CellSingle)
-                {
-                    continue;
-                }
-                if (listItems.Count == 0)
-                {
-                    break;
-                }
-                var listItemNew = GetListItemByCount(2, listItems);
-
-                if (listItemNew.Count > 0)
-                {
-                    it.Value.Add(listItemNew);
-                }
-            }
+            return;
         }
 
-        foreach (var it in dictDataCell)
+        var gr1 = groupedPositions.Where(x=>x.Value.Count > 2).ToList();
+
+        foreach(var it in gr1)
         {
-            foreach (var ic in it.Value)
+            var pd = it.Value.Count % 3;
+            if(pd == 0)
             {
-                numItemww += ic.Count;
+                continue;
+            }
+
+            for(int i = 0; i < pd; i++)
+            {
+                it.Value.RemoveAt(0);
             }
         }
 
-        if (listItems.Count > 0)
+        List<Item> listItems = new();
+
+        foreach (var it in gr1)
         {
-            foreach (var it in dictDataCell)
-            {
-                if (it.Key.CellType == CellType.CellLayerCount || it.Key.CellType == CellType.CellSingle)
-                {
-                    continue;
-                }
-                if (listItems.Count == 0)
-                {
-                    break;
-                }
-                var listItemNew = GetListItemByCount(1, listItems);
-
-                if (listItemNew.Count > 0)
-                {
-                    it.Value[0].Add(listItemNew[0]);
-                }
-            }
-
+            listItems.AddRange(it.Value);
         }
 
-      
-
-        if (listItems.Count > 0)
+        if(listItems.Count == 0)
         {
-            foreach (var it in dictDataCell)
-            {
-                if (it.Key.CellType == CellType.CellLayerCount || it.Key.CellType == CellType.CellSingle)
-                {
-                    continue;
-                }
-                if (listItems.Count == 0)
-                {
-                    break;
-                }
-                var listItemNew = GetListItemByCount(1, listItems);
-
-                if (listItemNew.Count > 0)
-                {
-                    it.Value[1].Add(listItemNew[0]);
-                }
-            }
+            IsUseSkillGame = false;
+            return;
         }
 
-        var newdict = dictDataCell.Where(it => it.Key.CellType != CellType.CellLayerCount && it.Key.CellType != CellType.CellSingle).ToList();
+        var numCombo = listItems.Count / 3;
 
+        _powerupBreakItem.gameObject.SetActive(true);
 
-        int index = 0;
-
-        foreach (var dic in newdict)
-        {
-            if (dic.Value[0].Count == 3)
+        _powerupBreakItem.OnPlaySkillBreakItem(listItems, () => { 
+            foreach(var cel in cell)
             {
-                index++;
-            }
-        }
-
-        var numCount = UnityEngine.Random.Range(3, 4);
-
-        if (newdict.Count - index <= numCount)
-        {
-            List<Item> listItemChange = new();
-            int countCheck = 3;
-
-            while (true)
-            {
-                foreach(var dic in newdict)
-                {
-                    if (dic.Value[0].Count == countCheck)
-                    {
-                        var it = dic.Value[0][0];
-                        dic.Value[0].Remove(it);
-                        listItemChange.Add(it);
-                        if(listItemChange.Count > numCount)
-                        {
-                            break;
-                        }
-                    }
-                }
-
-                if (listItemChange.Count > numCount)
-                {
-                    break;
-                }
-
-                countCheck = 2;
+                cel.OnNextItemWhenUseSkillBreakItem();
             }
 
-            if (listItemChange.Count > 0)
+            var ces = listCellAllGame.Where(x=>x != null).ToList();
+            foreach(var ce in ces)
             {
-                foreach(var it in listItemChange)
-                {
-                    foreach (var dic in newdict)
-                    {
-                        if (dic.Value.Count < 2)
-                        {
-                            break;
-                        }
-                        if (dic.Value[1].Count < 3)
-                        {
-                            dic.Value[1].Add(it);
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        else
-        {
-            var numItem = newdict.Count - index - numCount;
-            List<Item> listItemChange = new();
-            foreach (var it in newdict)
-            {
-                if(it.Value.Count < 2)
-                {
-                    break;
-                }
-                if (it.Value[1].Count > 1)
-                {
-                    var item = it.Value[1][0];
-                    it.Value[1].Remove(item);
-                    listItemChange.Add(item);
-                    if(listItemChange.Count == numItem)
-                    {
-                        break;
-                    }
-                }
+                ce.OnCheckPlayAnimCellTypeDropBlank();
             }
 
-            foreach(var item in listItemChange)
-            {
-                foreach (var it in newdict)
-                {
-                    if (it.Value[0].Count < 3)
-                    {
-                        it.Value[0].Add(item);
-                        break;
-                    }
-                }
-            }   
+            CheckCombo(numCombo);
 
-        }
+            IsUseSkillGame = false;
+        });
+    }    
 
-        numItemww = 0;
-
-        foreach(var it in dictDataCell)
-        {
-            foreach(var ic in it.Value)
-            {
-                numItemww += ic.Count;
-            }
-        }
-
-        foreach(var it in dictDataCell)
-        {
-            it.Key.CreateLayerItemSkillSwap(it.Value);
-        }
-
-        int cc = 0;
-
-    }
-
-    List<Item> GetListItemByCount(int count, List<Item> listLayer)
+    private void CheckCombo(int countCombo)
     {
-        List<Item> listIem = new();
-        for(int i = 0; i < count; i++)
+        for(int i = 0; i < countCombo; i++)
         {
-            if(listLayer.Count > 0)
-            {
-                var it = listLayer[0];
-                listLayer.RemoveAt(0);
-                listIem.Add(it);
-            }
+			CheckComboGame(Vector3.zero);
+            CheckObjectLock();
         }
-        return listIem;
     }
-    #endregion
-
-    #region Skill Replay
 
     #endregion
 

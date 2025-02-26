@@ -11,7 +11,7 @@ public class PowerupFreeze : MonoBehaviour, IBooster
 
 	private const float h = 10.7f;
 
-	public static int GetTimeFreeze()
+    public static int GetTimeFreeze()
 	{
 		return 0;
 	}
@@ -22,9 +22,13 @@ public class PowerupFreeze : MonoBehaviour, IBooster
 
 	private void OnEnable()
 	{
-	}
+        var sx = LogicGame.sizeCamera.x / (w * 2);
+        var sy = LogicGame.sizeCamera.y / (h * 2);
+        fx.localScale = new Vector3(sx, sy, 1);
+        anim.AnimationState.SetAnimation(0, "animation", false);
+    }
 
-	private void OnDisable()
+    private void OnDisable()
 	{
 	}
 

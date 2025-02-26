@@ -62,7 +62,7 @@ public class Item : MonoBehaviour
     }
 
     float yScale = 0.025f;
-	float yAdd = 0.15f;
+	float yAdd = 0.1f;
 
 	public void SetNewItemAsset(ItemAsset item)
 	{
@@ -70,6 +70,11 @@ public class Item : MonoBehaviour
         _itemType = item.type;
         _sprite.sprite = item.sprite;
         _spriteShadow.sprite = item.spriteHidden;
+        CheckScale();
+    }
+
+    public void CheckScale()
+    {
         transform.localScale = Vector3.one;
         var sizeItem = _sprite.bounds.size;
 
@@ -81,7 +86,7 @@ public class Item : MonoBehaviour
         }
 
         UpdateScaleCurrent(transform.localScale);
-    }
+    }    
 
     public void SetItemContainer(ItemContainer itemContaine)
     {
@@ -116,6 +121,40 @@ public class Item : MonoBehaviour
             gameObject.SetActive(true);
         }
     }
+
+    public Vector3 GetPoinItem(int index, CellType cellType)
+    {
+        var point = Vector3.zero;
+        if (cellType == CellType.CellLayerCount)
+        {
+            point = new Vector3(0, 0.155f, 0);
+        }
+        else if (cellType == CellType.CellSingle)
+        {
+            point = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            if (index == 0)
+            {
+                point = new Vector3(-1, 0, 0);
+            }
+
+            if (index == 1)
+            {
+                point = new Vector3(0, 0, 0);
+            }
+
+            if (index == 2)
+            {
+                point = new Vector3(1, 0, 0);
+            }
+        }
+
+        PointNomal = point;
+        PointShadow = point + new Vector3(0, yAdd, 0);
+        return point;
+    }    
 
 	public void SetPointForItem(int index, CellType cellType)
 	{
@@ -168,7 +207,6 @@ public class Item : MonoBehaviour
 			OnMoveWhenEndDrag(PointNomal, false, null, 0.05f);
             transform.localScale = CurrentScale - Vector3.one* yScale;
         }
-		
     }
 
     public void EnableItemShadow(bool isSet)
@@ -186,8 +224,8 @@ public class Item : MonoBehaviour
         _spriteShadow.gameObject.SetActive(false);
         Color color = new Color(colorShadow, colorShadow, colorShadow, 1.0f);
         _sprite.color = color;
-		transform.localPosition = PointShadow;
-		transform.localScale = CurrentScale + Vector3.one * yScale;
+		transform.localPosition = PointShadow + new Vector3(0, yAdd, 0);
+        transform.localScale = CurrentScale + Vector3.one * yScale;
     }
 
     public void OnMoveWhenEndDrag(Vector2 pointMove, bool isRunAnimScale, Action callback, float delayTime = 0.0f, float timeMove = 0.0f)
@@ -302,4 +340,64 @@ public class Item : MonoBehaviour
 	{
         _collider.enabled = true;
     }
+
+    public void OnStartMoveSkillSwap(Vector3 pointMove, Action callback, float timeMove = 0.25f)
+    {
+        SetSortingOrder(_sprite, layerWhenSelecting);
+        SetSortingOrder(_spriteShadow, layerWhenSelecting - 1);
+        Vector3 vecCurrent = transform.position;
+        float x = 0.0f, y = 0.0f, add = 1.5f;
+        if(vecCurrent.x < pointMove.x)
+        {
+            x =- UnityEngine.Random.Range(0.0f, 1.0f) * add;
+        }
+
+        if (vecCurrent.x >= pointMove.x)
+        {
+            x = UnityEngine.Random.Range(0.0f, 1.0f) * add;
+        }
+
+        if (vecCurrent.y < pointMove.y)
+        {
+            y = -UnityEngine.Random.Range(0.0f, 1.0f) * add;
+        }
+
+        if (vecCurrent.y >= pointMove.y)
+        {
+            y = UnityEngine.Random.Range(0.0f, 1.0f) * add;
+        }
+        Vector3 pMoveAdd = new Vector3(x, y, 0);
+
+        transform.DOMove(transform.position + pMoveAdd, 0.1f).OnComplete(() => {
+
+            transform.DOMove(pointMove, timeMove).SetEase(Ease.InOutQuad).OnComplete(() =>
+            {
+                callback?.Invoke();
+            });
+
+        }).SetEase(Ease.InOutBack).SetDelay(UnityEngine.Random.Range(0.0f, 1.0f) * 0.25f);
+
+    }
+
+    public void OnEndMoveSkillSwap(Vector3 vecEnd, Action callback, bool isNomal)
+    {
+        EndDrag();
+        CheckScale();
+
+        if (isNomal)
+        {
+            EnableItemNormal(false);
+        }
+        else
+        {
+            if (itemContainer.Cell.CellType != CellType.CellLayerCount)
+            {
+                EnableItemShadow(false);
+            }
+        }
+        transform.DOLocalMove(vecEnd, 0.25f).OnComplete(() =>
+        {
+            callback?.Invoke();
+        }).SetEase(Ease.InOutBack);
+    }    
 }

@@ -44,7 +44,6 @@ public class ItemContainer : MonoBehaviour
 
 	public int currentIndex = 0;
 
-
 	public bool CanSelect()
 	{
 		return false;
@@ -57,239 +56,234 @@ public class ItemContainer : MonoBehaviour
 
 	public void SetupItem(Cell cell, List<ItemsInLayerCell> itemInfos)
 	{
-        _cellType = cell.CellType;
-        _cell = cell;
-        int index = 0;
+		_cellType = cell.CellType;
+		_cell = cell;
+		int index = 0;
 
 		int indexCellTyeOneSlot = 0;
 
-        foreach (var it in itemInfos)
-        {
+		foreach (var it in itemInfos)
+		{
 			var listItem = new ListItem();
 			int index1 = 0;
 
-            var gameObj = new GameObject();
+			var gameObj = new GameObject();
 			gameObj.transform.parent = transform;
-            gameObj.transform.localPosition = Vector3.zero;
+			gameObj.transform.localPosition = Vector3.zero;
 			gameObj.name = "layer_" + index.ToString();
 			var layerItem = gameObj.AddComponent<LayerItem>();
 
-            listLayerItem.Add(layerItem);
+			listLayerItem.Add(layerItem);
 
-            for (int i = 0; i < it.items.Count; i++)
-            {
-				if(it.items[i] == 0)
+			for (int i = 0; i < it.items.Count; i++)
+			{
+				if (it.items[i] == 0)
 				{
-                    listItem.items.Add(null);
-                    layerItem.listItem[index1] = null;
-                    index1++;
-                    continue;
+					listItem.items.Add(null);
+					layerItem.listItem[index1] = null;
+					index1++;
+					continue;
 				}
-                var DataItem = SOItemContainer.Instance.GetItemAsset(it.items[i]);
+				var DataItem = SOItemContainer.Instance.GetItemAsset(it.items[i]);
 				var objItem = Instantiate(_itemPrefab.gameObject, gameObj.transform);
 				var item = objItem.GetComponent<Item>();
 				item.Setup(this, DataItem, index == 0, index1, index, _cell.CellType);
 
-				if(_cell.CellType == CellType.CellLayerCount || _cell.CellType == CellType.CellSingle)
+				if (_cell.CellType == CellType.CellLayerCount || _cell.CellType == CellType.CellSingle)
 				{
-                    indexCellTyeOneSlot++;
-                    layerItem.listItem[2] = item;
-                }
+					indexCellTyeOneSlot++;
+					layerItem.listItem[2] = item;
+				}
 				else
 				{
-                    layerItem.listItem[index1] = item;
-                }
+					layerItem.listItem[index1] = item;
+				}
 
-                index1++;
-                listItem.items.Add(item);
-            }
+				index1++;
+				listItem.items.Add(item);
+			}
 
 			layerItem.SetCellType(_cell.CellType);
-            index++;
-        }
+			index++;
+		}
 
-        if (_cell.CellType == CellType.CellLayerCount)
+		if (_cell.CellType == CellType.CellLayerCount)
 		{
 			_cell.InitDotTypeCellOneSlot(indexCellTyeOneSlot);
-        }
-    }
+		}
+	}
 
-    public LayerItem getCurrentLayer()
+	public LayerItem getCurrentLayer()
 	{
-		if(currentIndex < listLayerItem.Count && listLayerItem[currentIndex] != null)
+		if (currentIndex < listLayerItem.Count && listLayerItem[currentIndex] != null)
 		{
 			return listLayerItem[currentIndex];
 		}
 		int index = 0;
-		foreach(var it in listLayerItem)
+		foreach (var it in listLayerItem)
 		{
-            if (it != null)
+			if (it != null)
 			{
-                currentIndex = index;
-                return it;
-            }
-            index++;
-        }
+				currentIndex = index;
+				return it;
+			}
+			index++;
+		}
 		return null;
-    }
+	}
 	public LayerItem GetLayerByIndex(int index)
 	{
-		if(index >= listLayerItem.Count)
+		if (index >= listLayerItem.Count)
 		{
 			return null;
 		}
 
-		if(listLayerItem[index] == null)
+		if (listLayerItem[index] == null)
 		{
 			int kk = 0;
 		}
 
 		return listLayerItem[index];
-	}	
+	}
 
 	/// <summary>
 	/// </summary>
 	/// <param name="layerItem"></param>
 	/// <param name="index"></param>
 	/// <param name="listItem"></param>
-	public void CreateLayerItem(LayerItem layerItem, List<Item> listItem, int index, bool isNormal)
+	public void CreateLayerItem(LayerItem layerItem, List<Item> listItem, int index, bool isNormal, ref List<DataItemSkillSwap> dataItems)
 	{
-		if(listItem.Count == 2)
+		if (listItem.Count == 2)
 		{
 			int kk = 0;
 		}
 
-		if(layerItem == null)
+		if (layerItem == null)
 		{
-            var gameObj = new GameObject();
-            gameObj.transform.parent = transform;
-            gameObj.transform.localPosition = Vector3.zero;
+			var gameObj = new GameObject();
+			gameObj.transform.parent = transform;
+			gameObj.transform.localPosition = Vector3.zero;
 			gameObj.transform.localScale = Vector3.one;
-            layerItem = gameObj.AddComponent<LayerItem>();
-            layerItem.SetCellType(_cell.CellType);
-			if(index < listLayerItem.Count &&(listLayerItem[index] == null || listLayerItem[index].IsLayerAllPosBlank()))
+			layerItem = gameObj.AddComponent<LayerItem>();
+			layerItem.SetCellType(_cell.CellType);
+			if (index < listLayerItem.Count && (listLayerItem[index] == null || listLayerItem[index].IsLayerAllPosBlank()))
 			{
 				listLayerItem[index] = layerItem;
-                Debug.Log("NameNull: " + transform.parent.name);
-            }
-            else
-			{
-                Debug.Log("NameNull1: " + transform.parent.name +"_index: " + index);
-                listLayerItem.Add(layerItem);
-            }
-        }
-        layerItem.gameObject.name = "layer_" + index.ToString();
-		layerItem.SetDataNull();
-
-        int index1 = 0;
-
-        foreach (var it in listItem)
-		{
-            it.transform.parent = layerItem.transform;
-            if (isNormal)
-			{
-				it.EnableItemNormal(false);
-            }
+				Debug.Log("NameNull: " + transform.parent.name);
+			}
 			else
 			{
-				if(_cell.CellType != CellType.CellLayerCount)
-				{
-                    it.EnableItemShadow(false);
-                }
-            }
+				Debug.Log("NameNull1: " + transform.parent.name + "_index: " + index);
+				listLayerItem.Add(layerItem);
+			}
+		}
+		layerItem.gameObject.name = "layer_" + index.ToString();
+		layerItem.SetDataNull();
+
+		int index1 = 0;
+
+		foreach (var it in listItem)
+		{
+			it.transform.parent = layerItem.transform;
+
 			it.SetItemContainer(this);
 
-            if (_cell.CellType == CellType.CellLayerCount || _cell.CellType == CellType.CellSingle)
-            {
-                layerItem.listItem[0] = it;
-                it.SetPointForItem(index1, _cell.CellType);
-            }
-            else
-            {
-                layerItem.listItem[index1] = it;
-                it.SetPointForItem(index1, _cell.CellType);
-                index1++;
-            }
-        }
-    }
+			DataItemSkillSwap da = new();
+			da.isNomal = isNormal;
+			da.item = it;
+			if (_cell.CellType == CellType.CellLayerCount || _cell.CellType == CellType.CellSingle)
+			{
+				layerItem.listItem[0] = it;
+				da.pointMove = it.GetPoinItem(index1, _cell.CellType);
+			}
+			else
+			{
+				layerItem.listItem[index1] = it;
+				da.pointMove = it.GetPoinItem(index1, _cell.CellType);
+			}
+			index1++;
+			it.EnableItemNormal(false);
+			dataItems.Add(da);
+		}
+	}
 
-	public void CreateLayerItemSkillSwap(List<List<Item>> listsIten)
+	public void CreateLayerItemSkillSwap(List<List<Item>> listsIten, ref List<DataItemSkillSwap> dataItems)
 	{
 		var LayerShadow = GetLayerByIndex(currentIndex + 1);
 		var LayerNormal = GetLayerByIndex(currentIndex);
-		CreateLayerItem(LayerNormal, listsIten[0], currentIndex, true);
-		if(listsIten.Count > 1)
+		CreateLayerItem(LayerNormal, listsIten[0], currentIndex, true, ref dataItems);
+		if (listsIten.Count > 1)
 		{
-            CreateLayerItem(LayerShadow, listsIten[1], currentIndex + 1, false);
-        }
-    }
+			CreateLayerItem(LayerShadow, listsIten[1], currentIndex + 1, false, ref dataItems);
+		}
+	}
 
 
-    public void OnLockCell()
+	public void OnLockCell()
 	{
 		var cc = getCurrentLayer();
-        cc.OnLockItem();
-    }
+		cc.OnLockItem();
+	}
 
-    public void UnLockCell()
+	public void UnLockCell()
 	{
-        var cc = getCurrentLayer();
-        cc.OnUnlockItem();
-    }
+		var cc = getCurrentLayer();
+		cc.OnUnlockItem();
+	}
 
-    public void RemoveIndexItemInLayerItem(Item item)
+	public void RemoveIndexItemInLayerItem(Item item)
 	{
-        var cc = getCurrentLayer();
-		if(cc == null)
+		var cc = getCurrentLayer();
+		if (cc == null)
 		{
 			int kk = 0;
 		}
-        cc.RemoveItemInLayerItem(item);
-    }
+		cc.RemoveItemInLayerItem(item);
+	}
 
-    public void AddItemInLayerItem(Item item, int index)
+	public void AddItemInLayerItem(Item item, int index)
 	{
-        var cc = getCurrentLayer();
+		var cc = getCurrentLayer();
 
-		if(cc == null)
+		if (cc == null)
 		{
 			return;
 		}
 
-        cc.AddItemInLayerItem(item, index);
-    }
+		cc.AddItemInLayerItem(item, index);
+	}
 
 	public void RemoveDotTypeCellOneSlot()
 	{
-		if(_cell.CellType == CellType.CellLayerCount)
+		if (_cell.CellType == CellType.CellLayerCount)
 		{
-            _cell.RemoveDotTypeCellOneSlot();
-        }
-    }
+			_cell.RemoveDotTypeCellOneSlot();
+		}
+	}
 
 	public bool CheckLayerBank()
 	{
 		int count = 0;
 
-		foreach(var it in listLayerItem)
+		foreach (var it in listLayerItem)
 		{
-			if(it == null)
+			if (it == null)
 			{
 				count++;
 
-                continue;
+				continue;
 			}
 
-			if(!it.IsLayerAllPosBlank())
+			if (!it.IsLayerAllPosBlank())
 			{
 				return false;
 			}
 		}
 
-		if(count == listLayerItem.Count)
+		if (count == listLayerItem.Count)
 		{
 			return true;
-		}	
+		}
 
 		return true;
 	}
@@ -297,70 +291,86 @@ public class ItemContainer : MonoBehaviour
 	public void OnCheckSucessItem()
 	{
 		var currentLayer = getCurrentLayer();
-        if (currentLayer == null)
-        {
+		if (currentLayer == null)
+		{
 			return;
-        }
-        var items = getCurrentLayer().GetListItem();
-		if(items.Count < 3)
+		}
+		var items = getCurrentLayer().GetListItem();
+		if (items.Count < 3)
 		{
 			return;
 		}
 
 		StartCoroutine(StartCheckMeger());
-    }
+	}
 
 	private IEnumerator StartCheckMeger()
 	{
 		yield return new WaitForSeconds(0.5f);
-        CheckOnMegerSucess();
-    }
+		CheckOnMegerSucess();
+	}
 
-
-    public void OnSucessMegerItem(Item item)
+	void OnCreateLayer()
 	{
-		if(currentIndex < listLayerItem.Count)
+		var gameObj = new GameObject();
+		gameObj.transform.parent = transform;
+		gameObj.transform.localPosition = Vector3.zero;
+		gameObj.transform.localScale = Vector3.one;
+		var layerItem = gameObj.AddComponent<LayerItem>();
+		layerItem.SetCellType(_cell.CellType);
+		listLayerItem.Add(layerItem);
+		currentIndex = 0;
+	}
+
+
+	public void OnSucessMegerItem(Item item)
+	{
+		if (listLayerItem.Count == 0)
+		{
+			OnCreateLayer();
+		}
+		if (currentIndex < listLayerItem.Count)
 		{
 			var currentLayer = listLayerItem[currentIndex];
 
-			if(currentLayer.IsCheckDropItem())
+			if (currentLayer.IsCheckDropItem())
 			{
 				item.itemContainer.RemoveIndexItemInLayerItem(item);
 
-                //move to object
-                var listIndex = currentLayer.GetListIndexPoint();
+				//move to object
+				var listIndex = currentLayer.GetListIndexPoint();
 				float min = 9999999;
 				Transform objEndeMove = null;
 
 				List<Transform> listObjectMove = new();
 				List<int> listIndexPointDrag = new();
 
-				for(int i = 0; i < listIndex.Count; i++)
+				for (int i = 0; i < listIndex.Count; i++)
 				{
 					if (_cell.CellType == CellType.CellLayerCount || _cell.CellType == CellType.CellSingle)
 					{
-                        listObjectMove.Add(listPintDrag[0]);
-                        listIndexPointDrag.Add(listIndex[i]);
-                    }
+						listObjectMove.Add(listPintDrag[0]);
+						listIndexPointDrag.Add(listIndex[i]);
+					}
 					else
 					{
-                        listObjectMove.Add(listPintDrag[listIndex[i]]);
-                        listIndexPointDrag.Add(listIndex[i]);
-                    }
-                }
+						listObjectMove.Add(listPintDrag[listIndex[i]]);
+						listIndexPointDrag.Add(listIndex[i]);
+					}
+				}
 
 				int indexOfPointEndDrag = 0;
 
-				for(int i = 0; i < listObjectMove.Count; i++)
+				for (int i = 0; i < listObjectMove.Count; i++)
 				{
 					var distance = Vector3.Distance(item.transform.position, listObjectMove[i].position);
 
-					if(distance < min)
+					if (distance < min)
 					{
 						objEndeMove = listObjectMove[i];
 						indexOfPointEndDrag = listIndexPointDrag[i];
-                        min = distance;
-                    }
+						min = distance;
+					}
 				}
 
 				if (objEndeMove != null)
@@ -369,174 +379,175 @@ public class ItemContainer : MonoBehaviour
 					var cellCurrent = item.itemContainer._cell;
 
 
-                    if (cellCurrent.MoveType == MoveType.Drop && cellCurrent.IsCheckCellBlank() && !item.itemContainer.Equals(item.itemContainerNew))
+					if (cellCurrent.MoveType == MoveType.Drop && cellCurrent.IsCheckCellBlank() && !item.itemContainer.Equals(item.itemContainerNew))
 					{
 						StartCoroutine(PlayAnimCellTypeDropBlank(cellCurrent));
-                    }
+					}
 
 
-                    item.itemContainerNew.AddItemInLayerItem(item, indexOfPointEndDrag);
-                    var curentParent = objEndeMove.transform.parent;
-                    objEndeMove.transform.parent = item.transform.parent;
+					item.itemContainerNew.AddItemInLayerItem(item, indexOfPointEndDrag);
+					var curentParent = objEndeMove.transform.parent;
+					objEndeMove.transform.parent = item.transform.parent;
 					var point = objEndeMove.transform.localPosition;
 					objEndeMove.transform.parent = curentParent;
 
-                    item.OnRemoveDotCellTypeOneSlot();
-                    item.OnNextLayerItemCurrentContainer();
-                    item.OnUpdateItemContainer();
-                    item.OnMoveWhenEndDrag(point, true, () => {
-                        CheckOnMegerSucess();
-                    });
-                }
+					item.OnRemoveDotCellTypeOneSlot();
+					item.OnNextLayerItemCurrentContainer();
+					item.OnUpdateItemContainer();
+					item.OnMoveWhenEndDrag(point, true, () => {
+						CheckOnMegerSucess();
+					});
+				}
 
-            }
+			}
 			else
 			{
 				item.OnMoveFailed();
-            }
+			}
 		}
 		else
 		{
-            item.OnMoveFailed();
-        }
+			item.OnMoveFailed();
+		}
 	}
 
-	IEnumerator PlayAnimCellTypeDropBlank(Cell cell)
+	public IEnumerator PlayAnimCellTypeDropBlank(Cell cell)
 	{
-        LogicGame.Instance.CheckRunAnimDrop(cell);
+		yield return new WaitForEndOfFrame();
+		LogicGame.Instance.CheckRunAnimDrop(cell);
 		yield return new WaitForSeconds(0.1f);
 		Destroy(cell.gameObject);
-    }
+	}
 
-    public void OnNextItemWhenMove()
+	public void OnNextItemWhenMove()
 	{
 		if (listLayerItem[currentIndex].IsLayerAllPosBlank())
 		{
-            OnNextLayerItem(false);
-        }
+			OnNextLayerItem(false);
+		}
 	}
 
 	IEnumerator OnRunAnimMegerSucess(LayerItem trObj, bool isDesktroy)
 	{
-        for (int i = 0; i < trObj.transform.childCount; i++)
+		for (int i = 0; i < trObj.transform.childCount; i++)
 		{
 			var child = trObj.transform.GetChild(i).GetComponent<Item>();
 			child.RunAnimScale(null);
 
-        }
+		}
 
-        AnimPlayGame.Instance.OnPlayAnimMegerSucess(Vector3.zero, _cell.transform);
+		AnimPlayGame.Instance.OnPlayAnimMegerSucess(Vector3.zero, _cell.transform);
 
-        yield return new WaitForSeconds(0.1f);
+		yield return new WaitForSeconds(0.1f);
 
-		if(_cell.MoveType == MoveType.Drop)
+		if (_cell.MoveType == MoveType.Drop)
 		{
-            LogicGame.Instance.CheckRunAnimDrop(_cell);
+			LogicGame.Instance.CheckRunAnimDrop(_cell);
 			yield return new WaitForSeconds(0.1f);
 			Destroy(_cell.gameObject.gameObject);
-        }
+		}
 
-        if (isDesktroy)
+		if (isDesktroy)
 		{
 			OnDestroyLayerItem(trObj);
-        }
-    }
+		}
+	}
 
-    public void OnNextLayerItem(bool isMeger)
+	public void OnNextLayerItem(bool isMeger)
 	{
-        var currentLayer = listLayerItem[currentIndex];
+		var currentLayer = listLayerItem[currentIndex];
 
-        if (isMeger)
-        {
+		if (isMeger)
+		{
 			if (currentLayer.IsMegerSucess())
 			{
 
-				LogicGame.Instance.CheckComboGame(_cell);
-                LogicGame.Instance.CheckObjectLock();
-                currentIndex++;
-                currentLayer.RemoveAllItem();
-                StartCoroutine(OnRunAnimMegerSucess(currentLayer, currentIndex != listLayerItem.Count - 1));
-            }
+				LogicGame.Instance.CheckComboGame(_cell.transform.position);
+				LogicGame.Instance.CheckObjectLock();
+				currentIndex++;
+				currentLayer.RemoveAllItem();
+				StartCoroutine(OnRunAnimMegerSucess(currentLayer, currentIndex != listLayerItem.Count - 1));
+			}
 
-			if(!currentLayer.IsLayerAllPosBlank())
+			if (!currentLayer.IsLayerAllPosBlank())
 			{
 				return;
 			}
-        }
-	
-		if(!isMeger)
+		}
+
+		if (!isMeger)
 		{
-            if (_cell.CellType == CellType.CellLayerCount)
-            {
-                if (currentIndex == listLayerItem.Count - 1)
-                {
-                    currentLayer.RemoveAllItem();
-                }
-                else
-                {
+			if (_cell.CellType == CellType.CellLayerCount)
+			{
+				if (currentIndex == listLayerItem.Count - 1)
+				{
+					currentLayer.RemoveAllItem();
+				}
+				else
+				{
 					OnDestroyLayerItem(currentLayer);
-                }
-            }
+				}
+			}
 
-            currentIndex++;
-        }
+			currentIndex++;
+		}
 
-        if (currentIndex >= listLayerItem.Count)
-        {
+		if (currentIndex >= listLayerItem.Count)
+		{
 			currentIndex--;
-            return;
-        }
+			return;
+		}
 
-		if(listLayerItem[currentIndex].IsLayerAllPosBlank())
+		if (listLayerItem[currentIndex].IsLayerAllPosBlank())
 		{
 			currentIndex++;
-        }
+		}
 
-        if (currentIndex >= listLayerItem.Count)
-        {
-            currentIndex--;
-            return;
-        }
+		if (currentIndex >= listLayerItem.Count)
+		{
+			currentIndex--;
+			return;
+		}
 
-        listLayerItem[currentIndex].OnNextItemNormal();
-        if (currentIndex + 1 >= listLayerItem.Count)
-        {
-            return;
-        }
-
-        listLayerItem[currentIndex + 1].OnNextItemShadow();
-    }
-
-    private void OnDestroyLayerItem(LayerItem layer)
-    {
-        if(listLayerItem.Count <= 1)
+		listLayerItem[currentIndex].OnNextItemNormal();
+		if (currentIndex + 1 >= listLayerItem.Count)
 		{
 			return;
 		}
-        Destroy(layer.gameObject);
-    }
 
-    public void CheckOnMegerSucess()
+		listLayerItem[currentIndex + 1].OnNextItemShadow();
+	}
+
+	private void OnDestroyLayerItem(LayerItem layer)
+	{
+		if (listLayerItem.Count <= 1)
+		{
+			return;
+		}
+		Destroy(layer.gameObject);
+	}
+
+	public void CheckOnMegerSucess()
 	{
 		OnNextLayerItem(true);
-    }
+	}
 
-    private void Update()
-    {
-        foreach(var it in listLayerItem)
+	private void Update()
+	{
+		foreach (var it in listLayerItem)
 		{
-			if(it == null)
+			if (it == null)
 			{
 				int cc = 0;
 			}
 		}
-    }
+	}
 
-    public bool IsItemLayersBlank()
+	public bool IsItemLayersBlank()
 	{
-		foreach(var it in listLayerItem)
+		foreach (var it in listLayerItem)
 		{
-			if(!it.IsLayerAllPosBlank())
+			if (!it.IsLayerAllPosBlank())
 			{
 				return false;
 			}
@@ -548,23 +559,23 @@ public class ItemContainer : MonoBehaviour
 	public List<Item> GetListItem(ItemType itemType, int num, int numLevelAdd)
 	{
 		List<Item> list = new List<Item>();
-		for(int i = currentIndex + numLevelAdd; i < listLayerItem.Count; i++)
+		for (int i = currentIndex + numLevelAdd; i < listLayerItem.Count; i++)
 		{
 			var items = listLayerItem[i].GetListItemByType(itemType);
-			if(items != null && items.Count > 0)
+			if (items != null && items.Count > 0)
 			{
 				list.AddRange(items);
 			}
-			
-			if(list.Count >= num)
+
+			if (list.Count >= num)
 			{
 				break;
 			}
 		}
 
-		while(true)
+		while (true)
 		{
-			if(list.Count > num)
+			if (list.Count > num)
 			{
 				list.RemoveAt(0);
 			}
@@ -583,39 +594,39 @@ public class ItemContainer : MonoBehaviour
 		List<LayerItem> listLayers = new();
 		List<int> listIndex = new();
 		int index = 0;
-		foreach(var it in listLayerItem)
+		foreach (var it in listLayerItem)
 		{
-			if(it.IsLayerAllPosBlank())
+			if (it.IsLayerAllPosBlank())
 			{
-                listLayers.Add(it);
-            }
-        }
+				listLayers.Add(it);
+			}
+		}
 
 
-		foreach(var c in listLayers)
+		foreach (var c in listLayers)
 		{
-			if(listLayerItem.Count > 1)
+			if (listLayerItem.Count > 1)
 			{
-                listLayerItem.Remove(c);
-            }
-        }
+				listLayerItem.Remove(c);
+			}
+		}
 
 		List<LayerItem> listNewLayer = new();
 
-		foreach(var it in listLayerItem)
+		foreach (var it in listLayerItem)
 		{
-			if(it != null)
+			if (it != null)
 			{
-                listNewLayer.Add(it);
-            }
+				listNewLayer.Add(it);
+			}
 		}
 		listLayerItem = listNewLayer;
 		currentIndex = 0;
-    }
+	}
 
-    public List<Item> GetListItemForSkillSwap()
+	public List<Item> GetListItemForSkillSwap()
 	{
-		if(currentIndex >= listLayerItem.Count)
+		if (currentIndex >= listLayerItem.Count)
 		{
 			return null;
 		}
@@ -624,21 +635,31 @@ public class ItemContainer : MonoBehaviour
 		int index = 0;
 		List<Item> list = new List<Item>();
 
-        for (int i = currentIndex; i < listLayerItem.Count; i++)
+		for (int i = currentIndex; i < listLayerItem.Count; i++)
 		{
-			if(index >= indexCheck)
+			if (index >= indexCheck)
 			{
 				break;
 			}
 			index++;
 			var items = listLayerItem[i].GetListItem();
-			if(items != null && items.Count > 0)
+			if (items != null && items.Count > 0)
 			{
 				list.AddRange(items);
 				listLayerItem[i].SetDataNull();
-            }
-        }
+			}
+		}
 
 		return list;
+	}
+
+	public List<Item> GetListItemForSkillBreakItem()
+	{
+		if(currentIndex >= listLayerItem.Count)
+		{
+			return null;
+		}	
+
+		return listLayerItem[currentIndex].GetListItem();
 	}
 }
