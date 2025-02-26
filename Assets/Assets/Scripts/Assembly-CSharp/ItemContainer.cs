@@ -436,9 +436,7 @@ public class ItemContainer : MonoBehaviour
 
 		}
 
-		AnimPlayGame.Instance.OnPlayAnimMegerSucess(Vector3.zero, _cell.transform);
-
-		yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.4f);
 
 		if (_cell.MoveType == MoveType.Drop)
 		{
@@ -466,7 +464,10 @@ public class ItemContainer : MonoBehaviour
 				LogicGame.Instance.CheckObjectLock();
 				currentIndex++;
 				currentLayer.RemoveAllItem();
-				StartCoroutine(OnRunAnimMegerSucess(currentLayer, currentIndex != listLayerItem.Count - 1));
+
+                AnimPlayGame.Instance.OnPlayAnimMegerSucess(Vector3.zero, _cell.transform);
+                AnimPlayGame.Instance.OnPlayAnimCombo(Vector3.zero, LogicGame.Instance.CurrentCombo, _cell.transform);
+                StartCoroutine(OnRunAnimMegerSucess(currentLayer, currentIndex != listLayerItem.Count - 1));
 			}
 
 			if (!currentLayer.IsLayerAllPosBlank())

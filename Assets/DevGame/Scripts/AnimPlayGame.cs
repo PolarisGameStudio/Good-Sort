@@ -1,16 +1,31 @@
 using Coffee.UIExtensions;
+using Spine.Unity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
+struct NameAndAudioComboGame
+{
+    public string nameAudio;
+    public string nameCombo;
+}
+
 public class AnimPlayGame : Singleton<AnimPlayGame>
 {
+    [Header("Star Game")]
     public GameObject AnimStarCombo = null;
     public Transform ParentAnimStarCombo = null;
     public UIParticleAttractor uIParticleAttractorStar = null;
 
+    [Header("Anim Meger Sucess")]
     public GameObject AnimSucess = null;
     private ParticleSystem paAnimSucess = null;
+
+    [Header("Anim Combo")]
+    [SerializeField] private GameObject SpineCombo = null;
+    [SerializeField] private List<NameAndAudioComboGame> NameAudioCombos = null;
 
     void Start()
     {
@@ -55,4 +70,19 @@ public class AnimPlayGame : Singleton<AnimPlayGame>
         yield return new WaitForSeconds(5);
         Destroy(obj);
     }    
+
+    public void OnPlayAnimCombo(Vector3 pointCombo, int numCombo, Transform parent)
+    {
+        if (numCombo >= NameAudioCombos.Count)
+        {
+            numCombo = NameAudioCombos.Count - 1;
+        }
+
+        var daCombo = NameAudioCombos[numCombo];
+        var anim = Instantiate(SpineCombo, parent);
+        var sp = anim.GetComponent<SkeletonAnimation>();
+        sp.Skeleton.SetSkin(daCombo.nameCombo);
+        sp.StartCoroutine(DestroyObject(5, anim.gameObject));
+
+    }
 }

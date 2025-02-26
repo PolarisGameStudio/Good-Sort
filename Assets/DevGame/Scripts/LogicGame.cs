@@ -1,5 +1,6 @@
 using Coffee.UIExtensions;
 using DG.Tweening;
+using GoodSortEditor;
 using Spine;
 using System;
 using System.Collections;
@@ -593,6 +594,7 @@ public class LogicGame : Singleton<LogicGame>
     private int _currentStar = 0;
 
     private int _currentCombo = 0;
+    public int CurrentCombo => _currentCombo;
     private int _currentIndexCombo = 0;
 
     private int _currIndexCheckAddIndexCombo = 0;
@@ -617,7 +619,7 @@ public class LogicGame : Singleton<LogicGame>
         float timeCurrentCombo = _timeCombo;
         while (true)
         {
-            if(IsUseSkillFreeze)
+            if(IsUseSkillFreeze || IsUseSkillGame)
             {
                 yield return null;
                 continue;
@@ -627,9 +629,11 @@ public class LogicGame : Singleton<LogicGame>
             if (pecent <= 0)
             {
                 DisableTextCombo();
+                _timeCombo = 25;
                 imgProgress.fillAmount = 0;
                 _currentCombo = 0;
                 _currentIndexCombo = 0;
+                _currCheckAddIndexCombo = 2;
                 pecent = 0;
                 break;
             }
@@ -972,7 +976,6 @@ public class LogicGame : Singleton<LogicGame>
     #region Skill Break Item
     [Header("Skill Break Item")]
     [SerializeField] private PowerupBreakItem _powerupBreakItem = null;
-    private bool IsUseSkillBreakItem = false;
 
     public void OnSkillBreakItem()
     {
@@ -1045,6 +1048,7 @@ public class LogicGame : Singleton<LogicGame>
             }
 
             CheckCombo(numCombo);
+            AnimPlayGame.Instance.OnPlayAnimCombo(Vector3.zero, numCombo, null);
 
             IsUseSkillGame = false;
         });
