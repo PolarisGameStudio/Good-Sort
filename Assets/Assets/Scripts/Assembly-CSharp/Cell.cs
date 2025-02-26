@@ -130,11 +130,18 @@ public class Cell : MonoBehaviour
 
     public void OnCheckPlayAnimCellTypeDropBlank()
     {
+		StartCoroutine(_OnCheckPlayAnimCellTypeDropBlank());
+    }
+
+	private IEnumerator _OnCheckPlayAnimCellTypeDropBlank()
+	{
+		yield return new WaitForEndOfFrame();
         if (this.MoveType == MoveType.Drop && this.IsCheckCellBlank())
         {
             _itemContainer.StartCoroutine(_itemContainer.PlayAnimCellTypeDropBlank(this));
         }
-    }
+    }	
+
 
     public void OnNextItemWhenUseSkillBreakItem()
 	{

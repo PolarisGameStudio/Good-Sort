@@ -18,6 +18,7 @@ public struct DataItemSkillSwap
 }
 public class LogicGame : Singleton<LogicGame>
 {
+    [Header("Game Play")]
     public GameObject objSelll;
     public GameObject PrefabCellLock;
 
@@ -40,9 +41,12 @@ public class LogicGame : Singleton<LogicGame>
 
     public UIParticle uiAnimStarCombo = null;
 
+    [SerializeField] WarningLowTimeToPlay _warningLowTimeToPlay = null;
+
     [HideInInspector]
     public bool IsUseSkillGame = false;
     [SerializeField] TextMeshProUGUI textTimePlay;
+    private bool isShowWarnning = false;
 
     void Start()
     {
@@ -50,7 +54,9 @@ public class LogicGame : Singleton<LogicGame>
         DisableTextCombo();
         sizeCamera = GetSizeCameraInWord();
         OnLoadLevel();
+        isShowWarnning = false;
         BoosterInGameController.Instance.ActiveBooster(BoosterKind.X2_Star);
+        _timePlayGame = 65;
     }
 
     public static Vector2 GetSizeCameraInWord()
@@ -744,12 +750,45 @@ public class LogicGame : Singleton<LogicGame>
         }    
 
         _timePlayGame -= Time.deltaTime;
+
+        if(_timePlayGame < 60.0f)
+        {
+            ShowWarning();
+        }
+        else
+        {
+            DisableWarning();
+        }
+
         if(_timePlayGame <= 0)
         {
             Debug.Log("game_over");
             return;
         }
         textTimePlay.text = GetTimePlayGame();
+    }
+
+
+    private void ShowWarning()
+    {
+        if(isShowWarnning)
+        {
+            return;
+        }
+        isShowWarnning = true;
+        UICountDown.Instance.OnActiveAnimWarning(true);
+        _warningLowTimeToPlay.SetActiveFx(true);
+    }    
+
+    public void DisableWarning()
+    {
+        if(!isShowWarnning)
+        {
+            return;
+        }
+        isShowWarnning = false;
+        UICountDown.Instance.OnActiveAnimWarning(false);
+        _warningLowTimeToPlay.SetActiveFx(false);
     }
 
     public void CheckRunAnimDrop(Cell cell)
@@ -1042,7 +1081,7 @@ public class LogicGame : Singleton<LogicGame>
             }
 
             var ces = listCellAllGame.Where(x=>x != null).ToList();
-            foreach(var ce in ces)
+            foreach(var ce in cell)
             {
                 ce.OnCheckPlayAnimCellTypeDropBlank();
             }

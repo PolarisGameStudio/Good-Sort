@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WarningLowTimeToPlay : MonoBehaviour
@@ -8,19 +9,13 @@ public class WarningLowTimeToPlay : MonoBehaviour
 	{
 	}
 
-	private void OnEnable()
-	{
-	}
+    public void SetActiveFx(bool isActive)
+    {
+        fx.gameObject.SetActive(isActive);
+    }
 
-	private void OnDisable()
-	{
-	}
+    private void OnEnable()
+    {
+    }
 
-	private void EndGame(EndGameState endGameState)
-	{
-	}
-
-	private void UpdateState(bool isOn)
-	{
-	}
 }

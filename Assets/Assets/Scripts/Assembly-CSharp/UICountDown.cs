@@ -29,6 +29,18 @@ public class UICountDown : Singleton<UICountDown>
 
     }
 
+	public void OnActiveAnimWarning(bool isActive)
+	{
+		if(isActive)
+		{
+            _fxwarning.Play();
+		}
+		else
+		{
+			_fxwarning.Stop();
+        }
+    }	
+
 	private void Update()
 	{
 	}
