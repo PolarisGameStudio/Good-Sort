@@ -19,9 +19,4 @@ public class BoosterIncreaseTime : MonoBehaviour
 		fx.transform.position = Vector3.zero;
 		LogicGame.Instance.OnBossterTimeBonus(fx.transform);
     }
-
-	private IEnumerator CoroutineActive(LevelController levelController)
-	{
-		return null;
-	}
 }

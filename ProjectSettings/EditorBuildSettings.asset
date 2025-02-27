@@ -5,91 +5,91 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/LoadingData.unity
     guid: 1ad636cf126bfd54b991e8af910ca922
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Menu.unity
     guid: d058826c04bcb2f4dbd02d929830d70c
   - enabled: 1
     path: Assets/DevGame/Scene/BaseLevel.unity
     guid: 87eb8e5eb411d594bbfb0c42d0e951e2
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/InGame/UIPopup_Cell_Lock_Tut.unity
     guid: 14db29d6fe75fa04083c75ac73374209
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/InGame/UIPopup_EndGame_OutOfSpace.unity
     guid: 32c1072490fba7244a70d322b21b70ac
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/InGame/UIPopup_EndGame_TimeUp.unity
     guid: f853c686230644b46be668e9984bfe8a
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/InGame/UIPopup_GameOver.unity
     guid: f79de4970fa0c5b42a0cca06d17ebd9f
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/InGame/UIPopup_Leaderboard.unity
     guid: c75abf4e130276146a086138dd31bcd2
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/InGame/UIPopup_Pause.unity
     guid: 37f7b546d7b3d3a49a3a908b123768d7
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/InGame/UIPopup_Pause_ExitLevel.unity
     guid: ab0ca1bb728ccac49b23fde5b5e697cc
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/InGame/UIPopup_PowerUp_GetMore.unity
     guid: f161301dd8d79bb478e48854c3a3cb31
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_ExclusiveReward.unity
     guid: 2deca6817a474fe449be7f5f126e62cc
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Digging.unity
     guid: eba18b5c540fd424bba6c721ca96fc88
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Digging_ChooseOnePack.unity
     guid: c7f21ec7bc391d34aae4413b5a63e6ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Digging_Notify.unity
     guid: d84f04b82810b314182a4bb0fe1e3a70
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/InGame/UIPopup_RateUs.unity
     guid: 34a793c00cbbf1248bed7cafe98cac28
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_LuckyWheel.unity
     guid: 8b3753915aa98224dbc8e292f402fce6
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_SpecialGold.unity
     guid: 352ac260a6182f641917faf125850c93
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIEndlessPack.unity
     guid: af0ee7d63495ef24eb86916533cf26ac
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_MasterPass_Ended.unity
     guid: ffbf267de11e0ef40b7d6d00c15c0aca
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIMasterPass.unity
     guid: 55546c59914f83a4ea44eb30ade2885f
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_Booster.unity
     guid: 8e940564ee76edc4b9308e3163e04718
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_CartRace.unity
     guid: dc0fcd4678984a8498c6c509cf116fc5
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_CartRace_Register.unity
     guid: 915a5a70e9a29214a986c463eed2eefb
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_DailyQuest.unity
     guid: a2d7b7534ca45e84fb8c9b348f61b20b
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_GoldenGift.unity
     guid: e6b0d5d3fc4cd034a9cc89d176b4c75c
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_HiddenTreasure.unity
     guid: d035e839ea299e94499ac4b1de7eb649
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_HiddenTreasure_Register.unity
     guid: 3e18c006065c0e448b6c927d295d7e7e
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Games/Scenes/Popup/OutGame/UIPopup_ListRewards.unity
     guid: ffd145be31050f24db79e669c86a023e
   - enabled: 1

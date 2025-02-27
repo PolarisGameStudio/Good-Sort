@@ -1,8 +1,0 @@
-Spine_UI_IconHeart.png
-	size: 604, 236
-Heart
-	bounds: 2, 3, 280, 228
-HeartBreak_L
-	bounds: 284, 2, 164, 229
-HeartBreak_R
-	bounds: 450, 3, 152, 228

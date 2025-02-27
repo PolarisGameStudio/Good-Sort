@@ -8,7 +8,7 @@
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
       },
-      "hash": "2ec1e28cde80fb611e9447a798fc53998d3201ec"
+      "hash": "7ea0a436d159e245605bcd2d8a287432e4a13c79"
     },
     "com.unity.2d.animation": {
       "version": "9.1.0",
@@ -114,13 +114,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.assetbundlebrowser": {
-      "version": "https://github.com/Unity-Technologies/AssetBundles-Browser.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "ad2a81ec3068eafd48753df1825a8dd7201ce60c"
-    },
     "com.unity.burst": {
       "version": "1.8.13",
       "depth": 3,
@@ -132,7 +125,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.6.0",
+      "version": "2.7.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -146,13 +139,6 @@
         "com.unity.burst": "1.6.6",
         "com.unity.test-framework": "1.1.31"
       },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.device-simulator.devices": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
@@ -235,42 +221,11 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.nuget.newtonsoft-json": {
-      "version": "3.2.1",
-      "depth": 2,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.profiling.core": {
       "version": "1.0.2",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.purchasing": {
-      "version": "4.12.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.services.core": "1.12.5",
-        "com.unity.modules.androidjni": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.unitywebrequest": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.services.core": {
-      "version": "1.12.5",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.androidjni": "1.0.0",
-        "com.unity.nuget.newtonsoft-json": "3.2.1",
-        "com.unity.modules.unitywebrequest": "1.0.0"
-      },
       "url": "https://packages.unity.com"
     },
     "com.unity.subsystemregistration": {

@@ -18,9 +18,5 @@ public class BoosterBreakItem : MonoBehaviour
 	{
 		LogicGame.Instance.OnSkillBreakItem();
 	}
-
-	private IEnumerator CoroutineActive(LevelController levelController)
-	{
-		return null;
-	}
+	
 }

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class BoosterInGameController : Singleton<BoosterInGameController>
 {
-	private Dictionary<BoosterKind, IBooster> _booster;
-
 	public static Action onActiveDone;
 
 	[SerializeField]
