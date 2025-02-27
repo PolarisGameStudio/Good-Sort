@@ -70,12 +70,13 @@ public class LogicGame : Singleton<LogicGame>
     #region Load Level
     public void OnNextLevel()
     {
-        OnSkillBreakItem();
-       // OnSkilFreeze();
+        //OnSkillBreakItem();
+        // OnSkilFreeze();
         //OnSkillSwap();
-       // OnPlayAnimationReplay();
-        //StartCoroutine(LoadData());
-    }    
+        // OnPlayAnimationReplay();
+        StartCoroutine(LoadData());
+        isGameOver = false;
+    }
 
     IEnumerator LoadData()
     {
@@ -740,10 +741,43 @@ public class LogicGame : Singleton<LogicGame>
     {
         TimeSpan time = TimeSpan.FromSeconds(_timePlayGame);
         return string.Format("{0}:{1:D2}", time.Minutes, time.Seconds);
+    }
+
+
+    private bool isGameOver = false;
+
+    private void GameOver()
+    {
+        isGameOver = true;
+        OnNextLevel();
     }    
 
     private void Update()
     {
+        if (isGameOver)
+        {
+            return;
+        }
+        if (listCellAllGame.Count > 0)
+        {
+            int count = listCellAllGame.Count;
+            int index = 0;
+            foreach (var item in listCellAllGame)
+            {
+                if(item == null || item.IsCheckCellBlank())
+                {
+                    index++;
+                }    
+            }
+
+            if(index == count)
+            {
+                GameOver();
+            }    
+        }    
+
+       
+
         if(IsUseSkillGame || IsUseSkillFreeze)
         {
             return;
