@@ -822,7 +822,8 @@ public class LogicGame : Singleton<LogicGame>
                     foreach (var item in newList)
                     {
                         item.RunAnimCellDrop(() => {
-                            item.transform.DOLocalMove(item.transform.localPosition - new Vector3(0, dis, 0), 0.1f).SetEase(Ease.InCubic);
+                            item.transform.DOLocalMove(item.transform.localPosition - new Vector3(0, dis, 0), 0.1f).SetEase(Ease.InCubic).OnComplete(() => { 
+                            });
                         });
 
                     }
@@ -850,7 +851,10 @@ public class LogicGame : Singleton<LogicGame>
     public void OnPlayAnimationReplay()
     {
         List<LayerItem> listLayers = new();
-        foreach(var cel in listCellAllGame)
+
+        var cell = listCellAllGame.Where(x => x != null && !x.IsCheckCellBlank() && !x.IsLock && x.transform.position.y < PTop.transform.position.y && x.transform.position.y > PBot.transform.position.y).ToList();
+
+        foreach (var cel in cell)
         {
             if(cel.IsLock)
             {
@@ -980,9 +984,13 @@ public class LogicGame : Singleton<LogicGame>
 
     public void OnSkillSwap()
     {
+        var cell = listCellAllGame.Where(x => x != null && !x.IsCheckCellBlank() && !x.IsLock && x.transform.position.y < PTop.transform.position.y && x.transform.position.y > PBot.transform.position.y).ToList();
+
+        _powerupSwap.gameObject.SetActive(true);
         IsUseSkillGame = true;
-        _powerupSwap.OnSkillSwap(listCellAllGame, p2.transform.position, () => {
+        _powerupSwap.OnSkillSwap(cell, p2.transform.position, () => {
             IsUseSkillGame = false;
+            _powerupSwap.gameObject.SetActive(false);
         });
     }
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIEndGame : MonoBehaviour
+public class UIEndGame : Singleton<UIEndGame>
 {
 	public static EndGameState s_EndGameState;
 

@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class ItemContainer : MonoBehaviour
 {
@@ -153,7 +154,7 @@ public class ItemContainer : MonoBehaviour
 	/// <param name="listItem"></param>
 	public void CreateLayerItem(LayerItem layerItem, List<Item> listItem, int index, bool isNormal, ref List<DataItemSkillSwap> dataItems)
 	{
-		if (listItem.Count == 2)
+        if (listItem.Count == 2)
 		{
 			int kk = 0;
 		}
@@ -414,9 +415,12 @@ public class ItemContainer : MonoBehaviour
 	public IEnumerator PlayAnimCellTypeDropBlank(Cell cell)
 	{
 		yield return new WaitForEndOfFrame();
-		LogicGame.Instance.CheckRunAnimDrop(cell);
-		yield return new WaitForSeconds(0.1f);
-		Destroy(cell.gameObject);
+        if (cell.MoveType == MoveType.Drop && cell.IsCheckCellBlank())
+		{
+            LogicGame.Instance.CheckRunAnimDrop(cell);
+            yield return new WaitForSeconds(0.1f);
+            Destroy(cell.gameObject);
+        }	
 	}
 
 	public void OnNextItemWhenMove()

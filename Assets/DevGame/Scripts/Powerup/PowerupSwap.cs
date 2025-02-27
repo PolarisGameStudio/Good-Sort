@@ -50,6 +50,8 @@ public class PowerupSwap : MonoBehaviour
             }
         }
 
+        listItems = listItems.Where(x=>x != null).ToList();
+
         listItems.Sort((a, b) => a.ItemType - b.ItemType);
 
         int num11 = listItems.Count;
@@ -329,6 +331,10 @@ public class PowerupSwap : MonoBehaviour
 
         foreach (var it in dataItemSkillSwaps)
         {
+            if(it.item == null)
+            {
+                continue;
+            }    
             it.item.OnStartMoveSkillSwap(pointMid, callbackMoveMid);
         }
     }
@@ -338,6 +344,10 @@ public class PowerupSwap : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
         foreach (var it in dataItemSkillSwaps)
         {
+            if(it.item == null)
+            {
+                continue;
+            }    
             it.item.OnEndMoveSkillSwap(it.pointMove, callback, it.isNomal);
         }
         _fxClone.gameObject.SetActive(false);

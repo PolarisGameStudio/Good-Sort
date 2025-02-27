@@ -18,9 +18,50 @@ public class UI_InGame_PowerUp : MonoBehaviour
 
 	private void Start()
 	{
-	}
 
-	private void OnPurchaseSusscess(string obj)
+		btnSelects[0].onClick.AddListener(() =>
+		{
+			if(LogicGame.Instance.IsUseSkillGame)
+			{
+				return;
+			}	
+
+			LogicGame.Instance.OnSkillBreakItem();
+
+        });
+
+        btnSelects[1].onClick.AddListener(() =>
+        {
+            if (LogicGame.Instance.IsUseSkillGame)
+            {
+                return;
+            }
+            LogicGame.Instance.OnPlayAnimationReplay();
+        });
+
+
+        btnSelects[2].onClick.AddListener(() =>
+        {
+            if (LogicGame.Instance.IsUseSkillGame)
+            {
+                return;
+            }
+            LogicGame.Instance.OnSkilFreeze();
+        });
+
+
+        btnSelects[3].onClick.AddListener(() =>
+        {
+            if (LogicGame.Instance.IsUseSkillGame)
+            {
+                return;
+            }
+            LogicGame.Instance.OnSkillSwap();
+        });
+
+    }
+
+    private void OnPurchaseSusscess(string obj)
 	{
 	}
 

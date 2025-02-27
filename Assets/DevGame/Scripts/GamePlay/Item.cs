@@ -58,6 +58,10 @@ public class Item : MonoBehaviour
 
 	private void SetSortingOrder(SpriteRenderer sp, int order)
 	{
+        if(this == null || sp == null)
+        {
+            int kk = 0;
+        }    
         sp.sortingOrder = order;
     }
 

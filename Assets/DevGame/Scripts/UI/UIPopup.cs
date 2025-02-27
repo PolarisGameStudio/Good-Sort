@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class UIPopup 
+public class UIPopup : MonoBehaviour
 {
 	public bool isFullScreen;
 
