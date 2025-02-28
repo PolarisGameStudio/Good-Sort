@@ -749,8 +749,15 @@ public class LogicGame : Singleton<LogicGame>
     private void GameOver()
     {
         isGameOver = true;
+        StartCoroutine(StartGameOver());
+    }
+
+    IEnumerator StartGameOver()
+    {
+        yield return new WaitForSeconds(3.0f);
         OnNextLevel();
-    }    
+    }
+
 
     private void Update()
     {
@@ -884,6 +891,7 @@ public class LogicGame : Singleton<LogicGame>
 
     public void OnPlayAnimationReplay()
     {
+        IsUseSkillGame = true;
         List<LayerItem> listLayers = new();
 
         var cell = listCellAllGame.Where(x => x != null && !x.IsCheckCellBlank() && !x.IsLock && x.transform.position.y < PTop.transform.position.y && x.transform.position.y > PBot.transform.position.y).ToList();
@@ -945,8 +953,9 @@ public class LogicGame : Singleton<LogicGame>
         PlayAnimationReplace(listItemSkillReplay, (itemAsset, localScaleItem) => {
             if(dictItem.Count == 0)
             {
+                IsUseSkillGame = false;
                 return;
-            }    
+            }
 
             foreach (var it in dictItem)
             {
@@ -1006,6 +1015,7 @@ public class LogicGame : Singleton<LogicGame>
                 }
                
             }
+            IsUseSkillGame = false;
         });
     }
 

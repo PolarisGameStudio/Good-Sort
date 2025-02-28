@@ -51,9 +51,10 @@ public class PowerupBreakItem : MonoBehaviour
 			item.transform.parent = null;
 			item.itemContainer.RemoveIndexItemInLayerItem(item);
             item.OnStartMoveSkillSwap(Vector3.zero, callback, 0.5f);
+            item.OnRemoveDotCellTypeOneSlot();
         }
 
-		StartCoroutine(StartAnim(callbackContinue));
+        StartCoroutine(StartAnim(callbackContinue));
         anim.AnimationState.SetAnimation(0, "animation", false);
     }
 

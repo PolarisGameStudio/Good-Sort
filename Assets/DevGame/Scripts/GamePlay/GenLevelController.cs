@@ -81,6 +81,9 @@ public class GenLevelController : Singleton<GenLevelController>
 	public LevelInfo GetDataLevel()
 	{
 		LevelId++;
+
+		PlayerPrefs.SetInt("level_", LevelId);
+
         //19
         return _levelData.listLevels[LevelId].sOLevels[0].level;
 	}
@@ -88,7 +91,9 @@ public class GenLevelController : Singleton<GenLevelController>
 
     private void Start()
     {
-		int index = 0;
+		LevelId = PlayerPrefs.GetInt("level_", 0);
+		LevelId += -1;
+        int index = 0;
 		List<int> listint = new();
 		foreach (var it1 in _levelData.listLevels)
 		{
