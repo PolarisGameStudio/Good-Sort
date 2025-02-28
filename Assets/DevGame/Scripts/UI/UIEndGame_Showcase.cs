@@ -57,6 +57,13 @@ public class UIEndGame_Showcase : MonoBehaviour
 
 	private void OnEnable()
 	{
+        txtLevel.text = $"<color=#FFD700>Level {GenLevelController.Instance.LevelId}</color>\nComplete!";
+		timeRemainingConvert.txtTime.text = LogicGame.Instance.TxtTimePlay;
+    }
+
+	private IEnumerator StartPlayAnimConverStar()
+	{
+		yield return new WaitForSeconds(0.25f);
 	}
 
 	private void UpdateUI()

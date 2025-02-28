@@ -29,6 +29,7 @@ public class LogicGame : Singleton<LogicGame>
     private List<Cell> listCellAllGame = new();
     int _currentLock = 0;
     float _timePlayGame = 0;
+    public string TxtTimePlay = "";
 
     int _numCellLock = 0;
     int _numCellHiden = 0;
@@ -56,7 +57,6 @@ public class LogicGame : Singleton<LogicGame>
         OnLoadLevel();
         isShowWarnning = false;
         BoosterInGameController.Instance.ActiveBooster(BoosterKind.X2_Star);
-        _timePlayGame = 65;
     }
 
     public static Vector2 GetSizeCameraInWord()
@@ -80,6 +80,7 @@ public class LogicGame : Singleton<LogicGame>
 
     IEnumerator LoadData()
     {
+        OnResetCombo();
         ListCellDrop.Clear();
         listCellLock.Clear();
         listCellAllGame.Clear();
@@ -636,18 +637,23 @@ public class LogicGame : Singleton<LogicGame>
             float pecent = timeCurrentCombo / _timeCombo;
             if (pecent <= 0)
             {
-                DisableTextCombo();
-                _timeCombo = 25;
-                imgProgress.fillAmount = 0;
-                _currentCombo = 0;
-                _currentIndexCombo = 0;
-                _currCheckAddIndexCombo = 2;
+                OnResetCombo();
                 pecent = 0;
                 break;
             }
             imgProgress.fillAmount = pecent;
             yield return null;
         }
+    }
+
+    void OnResetCombo()
+    {
+        DisableTextCombo();
+        _timeCombo = 25;
+        imgProgress.fillAmount = 0;
+        _currentCombo = 0;
+        _currentIndexCombo = 0;
+        _currCheckAddIndexCombo = 2;
     }
 
     private int UpdateCombo()
@@ -743,22 +749,6 @@ public class LogicGame : Singleton<LogicGame>
         return string.Format("{0}:{1:D2}", time.Minutes, time.Seconds);
     }
 
-
-    private bool isGameOver = false;
-
-    private void GameOver()
-    {
-        isGameOver = true;
-        StartCoroutine(StartGameOver());
-    }
-
-    IEnumerator StartGameOver()
-    {
-        yield return new WaitForSeconds(3.0f);
-        OnNextLevel();
-    }
-
-
     private void Update()
     {
         if (isGameOver)
@@ -779,11 +769,9 @@ public class LogicGame : Singleton<LogicGame>
 
             if(index == count)
             {
-                GameOver();
+                GameOver(true);
             }    
         }    
-
-       
 
         if(IsUseSkillGame || IsUseSkillFreeze)
         {
@@ -803,12 +791,15 @@ public class LogicGame : Singleton<LogicGame>
 
         if(_timePlayGame <= 0)
         {
+            GameOver(false);
             Debug.Log("game_over");
             return;
         }
-        textTimePlay.text = GetTimePlayGame();
-    }
 
+        TxtTimePlay = GetTimePlayGame();
+
+        textTimePlay.text = TxtTimePlay;
+    }
 
     private void ShowWarning()
     {
@@ -1174,7 +1165,31 @@ public class LogicGame : Singleton<LogicGame>
     public void OnBossterX2Start()
     {
         _comboX2 = 2;
-    }    
+    }
+
+    #endregion
+
+    #region End Game
+    [Header("End Game")]
+    private bool isGameOver = false;
+    private void GameOver(bool isWin)
+    {
+        isGameOver = true;
+
+        if(isGameOver)
+        {
+            StartCoroutine(StartGameOver());
+        }
+
+    }
+
+    IEnumerator StartGameOver()
+    {
+        UIEndGame.Instance.EndGame(EndGameState.Win);
+        yield return new WaitForSeconds(3.0f);
+      //  OnNextLevel();
+    }
+
 
     #endregion
 }

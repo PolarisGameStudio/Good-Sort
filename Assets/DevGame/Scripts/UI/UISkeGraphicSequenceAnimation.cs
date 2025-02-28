@@ -38,7 +38,12 @@ public class UISkeGraphicSequenceAnimation : MonoBehaviour
 
 	private void OnEnable()
 	{
-	}
+        ske.AnimationState.SetAnimation(0, start, false);
+		foreach(var it in sequences)
+		{
+            ske.AnimationState.AddAnimation(0, it.anim, it.loop, 0);
+        }
+    }
 
 	public void ChangeTimeScale(float max, float duration = 0.25f)
 	{

@@ -92,6 +92,7 @@ public class PowerupReplace : MonoBehaviour
         }
 
 		callback?.Invoke(itemAsset, localScale);
+        _fxWand.gameObject.SetActive(false);
         transform.gameObject.SetActive(false);
     }
 
