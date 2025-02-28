@@ -102,9 +102,19 @@ public class LogicGame : Singleton<LogicGame>
 
     public void OnLoadLevel()
     {
+        isGameOver = true;
         var level = GenLevelController.Instance.GetDataLevel();
 
-        _timePlayGame = level.timeToPlay;
+        if(GenLevelController.Instance.LevelId == 0)
+        {
+            _timePlayGame = 100000;
+            textTimePlay.gameObject.SetActive(false);
+        }
+        else
+        {
+            _timePlayGame = level.timeToPlay;
+        }
+
 
         textTimePlay.text = GetTimePlayGame();
 
@@ -264,6 +274,8 @@ public class LogicGame : Singleton<LogicGame>
         ResetPoint(listCellAllGame);
 
         PlayMoveType(listCellAllGame);
+
+        isGameOver = false;
     }
 
     void PlayMoveType(List<Cell> listCell)
