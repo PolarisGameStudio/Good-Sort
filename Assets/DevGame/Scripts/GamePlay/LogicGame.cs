@@ -689,7 +689,6 @@ public class LogicGame : Singleton<LogicGame>
             {
                 _currentStarAdd += _comboX2;
                 _currentIndexCombo = 0;
-
                 _currIndexCheckAddIndexCombo++;
             }
 
@@ -703,7 +702,7 @@ public class LogicGame : Singleton<LogicGame>
 
         }
         _currentStar += _currentStarAdd;
-        Debug.Log("combo: " + _currentCombo +  "_currentStar___" + _currentStar);
+        Debug.Log("combo: " + _currentCombo + " staradd__:" + _currentStarAdd +  "_currentStar___" + _currentStar);
 
         textCombo.text = "Combo X" + _currentCombo.ToString();
         textStar.text = _currentStar.ToString();

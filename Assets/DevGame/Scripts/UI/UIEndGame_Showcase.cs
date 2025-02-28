@@ -40,7 +40,7 @@ public class UIEndGame_Showcase : MonoBehaviour
             var p2 = points[2].transform.position;
             rectStar.DOMove(p1, timeMove);
 			yield return new WaitForSeconds(timeMove);
-            rectStar.DOMove(p2, timeMove);
+            rectStar.DOMove(p2, timeMove).SetEase(Ease.OutSine);
             yield return new WaitForSeconds(timeMove);
         }
     }

@@ -9,7 +9,7 @@ public class BoosterX2Star : MonoBehaviour
 {
 	public void Active()
 	{
-		LogicGame.Instance.OnBossterX2Start();
+		//LogicGame.Instance.OnBossterX2Start();
     }
 	
 }
