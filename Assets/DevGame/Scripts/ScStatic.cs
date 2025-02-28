@@ -18,11 +18,7 @@ public static class ScStatic
     public static string MUSIC_HOME = "Home";
     public static string MUSIC_GAME = "Game";
 
-    #region GamePlay
+    public static int currentStarGame = 0;
 
-    public static int LevelID = 0;
-    public static int TotalStar = 0;
-
-    #endregion
 
 }

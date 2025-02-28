@@ -47,6 +47,7 @@ public class LogicGame : Singleton<LogicGame>
     [HideInInspector]
     public bool IsUseSkillGame = false;
     [SerializeField] TextMeshProUGUI textTimePlay;
+    [SerializeField] TextMeshProUGUI textLevel;
     private bool isShowWarnning = false;
 
     void Start()
@@ -103,9 +104,10 @@ public class LogicGame : Singleton<LogicGame>
     public void OnLoadLevel()
     {
         isGameOver = true;
+        ScStatic.currentStarGame = 0;
         var level = GenLevelController.Instance.GetDataLevel();
-
-        if(GenLevelController.Instance.LevelId == 0)
+        textLevel.text = "Level " + (GenLevelController.Instance.LevelId + 1).ToString();
+        if (GenLevelController.Instance.LevelId == 0)
         {
             _timePlayGame = 100000;
             textTimePlay.gameObject.SetActive(false);
@@ -706,7 +708,7 @@ public class LogicGame : Singleton<LogicGame>
 
         textCombo.text = "Combo X" + _currentCombo.ToString();
         textStar.text = _currentStar.ToString();
-
+        ScStatic.currentStarGame = _currentStar;
         return _currentStarAdd;
     }
 
@@ -1191,7 +1193,6 @@ public class LogicGame : Singleton<LogicGame>
         {
             StartCoroutine(StartGameOver());
         }
-
     }
 
     IEnumerator StartGameOver()
@@ -1203,4 +1204,9 @@ public class LogicGame : Singleton<LogicGame>
 
 
     #endregion
+
+    private void OnDestroy()
+    {
+        HelperManager.Save();
+    }
 }

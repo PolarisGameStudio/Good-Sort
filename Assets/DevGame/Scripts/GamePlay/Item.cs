@@ -82,9 +82,9 @@ public class Item : MonoBehaviour
         transform.localScale = Vector3.one;
         var sizeItem = _sprite.bounds.size;
 
-        float sx = 0.95f / sizeItem.x;
+        float sx = 1.0f / sizeItem.x;
 
-        if (sx < 0.95f)
+        if (sx < 1.0f)
         {
             transform.localScale = Vector3.one * sx;
         }

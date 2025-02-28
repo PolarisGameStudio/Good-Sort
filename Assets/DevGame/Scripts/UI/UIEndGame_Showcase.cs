@@ -7,6 +7,7 @@ using Coffee.UIExtensions;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIEndGame_Showcase : MonoBehaviour
 {
@@ -59,15 +60,36 @@ public class UIEndGame_Showcase : MonoBehaviour
 	[Header("Time Convert Star")]
 	public TimeRemainingConvert timeRemainingConvert;
 
-	public static void ConfirmClickClaimGold()
+	[Header("Progress Level")]
+    public Slider progressLevel = null;
+	public TextMeshProUGUI txtMeshComplete = null;
+
+    public static void ConfirmClickClaimGold()
 	{
+
 	}
 
 	private void OnEnable()
 	{
-        txtLevel.text = $"<color=#FFD700>Level {GenLevelController.Instance.LevelId}</color>\nComplete!";
+		HelperManager.DataPlayer.NumWinLevel += 1;
+		txtMeshComplete.text = $"{HelperManager.DataPlayer.NumWinLevel}/5";
+        StartCoroutine(StartPlayAnimProgressComplete());
+        txtLevel.text = $"<color=#FFD700>Level {GenLevelController.Instance.LevelId + 1}</color>\nComplete!";
 		timeRemainingConvert.txtTime.text = LogicGame.Instance.TxtTimePlay;
-		StartCoroutine(StartPlayAnimConverStar());
+		timeRemainingConvert.txtStar.text = "5";
+        txtTotalStar.text = ScStatic.currentStarGame.ToString();
+        StartCoroutine(StartPlayAnimConverStar());
+    }
+
+	private IEnumerator StartPlayAnimProgressComplete()
+	{
+		yield return new WaitForEndOfFrame();
+		float Move = (float) HelperManager.DataPlayer.NumWinLevel / 5.0f;
+		progressLevel.DOValue(Move, 0.25f);
+        if (HelperManager.DataPlayer.NumWinLevel == 5)
+        {
+			HelperManager.DataPlayer.NumWinLevel = 0;
+        }
     }
 
 	private IEnumerator StartPlayAnimConverStar()
@@ -79,9 +101,11 @@ public class UIEndGame_Showcase : MonoBehaviour
 		timeRemainingConvert.fxClaim.Play();
 		yield return StartCoroutine(timeRemainingConvert.IEConvertTimeToStar(this));
 		timeRemainingConvert.rectStar.gameObject.SetActive(false);
+        txtTotalStar.text = (ScStatic.currentStarGame + 5).ToString();
+
     }
 
-	private void UpdateUI()
+    private void UpdateUI()
 	{
 	}
 }
