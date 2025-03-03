@@ -1197,6 +1197,8 @@ public class LogicGame : Singleton<LogicGame>
 
     IEnumerator StartGameOver()
     {
+        UIEndGame.Show();
+        yield return new WaitForEndOfFrame();
         UIEndGame.Instance.EndGame(EndGameState.Win);
         yield return new WaitForSeconds(3.0f);
       //  OnNextLevel();

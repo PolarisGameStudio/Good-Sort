@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIEndGame : Singleton<UIEndGame>
+public class UIEndGame : Dialog<UIEndGame>
 {
 	public static EndGameState s_EndGameState;
 
@@ -17,14 +17,6 @@ public class UIEndGame : Singleton<UIEndGame>
 	public Button btnTapClose;
 
 	public UIPopup uiPopupShowcase;
-
-	private void Awake()
-	{
-	}
-
-	private void OnDestroy()
-	{
-	}
 
 	public void EndGame(EndGameState endGameState)
 	{
@@ -48,4 +40,17 @@ public class UIEndGame : Singleton<UIEndGame>
     private void UpdateUI_Congratulation()
 	{
 	}
+    public static void Show()
+    {
+        Open();
+    }
+    public static void Hide()
+    {
+        Close();
+    }
+
+    public void onClose()
+    {
+        Hide();
+    }
 }

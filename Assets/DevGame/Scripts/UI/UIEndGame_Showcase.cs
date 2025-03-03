@@ -91,9 +91,10 @@ public class UIEndGame_Showcase : MonoBehaviour
         {
 			HelperManager.DataPlayer.NumWinLevel = 0;
         }
+        UIPopup_UnlockRewards.Show();
     }
 
-	private IEnumerator StartPlayAnimConverStar()
+    private IEnumerator StartPlayAnimConverStar()
 	{
 		yield return new WaitForSeconds(0.75f);
         timeRemainingConvert.rectTime.gameObject.SetActive(false);

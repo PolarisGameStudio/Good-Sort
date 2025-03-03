@@ -9,37 +9,22 @@ using Spine.Unity;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIPopup_UnlockRewards : MonoBehaviour
+public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 {
-
 	public DOTweenAnimation bgTween;
-
 	public RectTransform rectChest;
-
 	public Image iconChest;
-
 	public RectTransform skeletonChest;
-
 	public RectTransform rectStoreItem;
-
 	public UIPopup_ListRewards_Item[] items;
-
 	public UIChest_PatternPositionReward_Item pattern;
-
 	public UIParticle fxDisapearChest;
-
 	public UIParticle fxDisapearItemGold;
-
 	public UIParticle[] fxAppears;
-
 	public Button btnClaim;
-
 	public Button btnClaimX2;
-
 	private SkeletonGraphic c_SkeChest;
-
 	private float c_ScaleChestEnd;
-
 	private List<ResourceValue> c_dataReward;
 
 	private void OnEnable()
@@ -85,4 +70,18 @@ public class UIPopup_UnlockRewards : MonoBehaviour
 	private void DisableButton()
 	{
 	}
+
+    public static void Show()
+    {
+        Open();
+    }
+    public static void Hide()
+    {
+        Close();
+    }
+
+    public void onClose()
+    {
+        Hide();
+    }
 }
