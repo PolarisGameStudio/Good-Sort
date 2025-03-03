@@ -1,0 +1,4679 @@
+[
+  {
+    "type": 1,
+    "sprite": "AS_1",
+    "spriteHidden": "AS_1green",
+    "kind": 2,
+    "colors": [
+      0,
+      9
+    ]
+  },
+  {
+    "type": 2,
+    "sprite": "AS_2",
+    "spriteHidden": "AS_2green",
+    "kind": 3,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 3,
+    "sprite": "AS_3",
+    "spriteHidden": "AS_2green",
+    "kind": 3,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 4,
+    "sprite": "AS_4",
+    "spriteHidden": "AS_2green",
+    "kind": 3,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 5,
+    "sprite": "AS_5",
+    "spriteHidden": "AS_5green",
+    "kind": 4,
+    "colors": [
+      0,
+      2
+    ]
+  },
+  {
+    "type": 6,
+    "sprite": "AS_6",
+    "spriteHidden": "AS_6green",
+    "kind": 5,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 7,
+    "sprite": "AS_7",
+    "spriteHidden": "AS_7green",
+    "kind": 5,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 8,
+    "sprite": "AS_8",
+    "spriteHidden": "AS_8green",
+    "kind": 5,
+    "colors": [
+      1,
+      6
+    ]
+  },
+  {
+    "type": 9,
+    "sprite": "AS_9",
+    "spriteHidden": "AS_9green",
+    "kind": 5,
+    "colors": [
+      20
+    ]
+  },
+  {
+    "type": 10,
+    "sprite": "AS_10",
+    "spriteHidden": "AS_10green",
+    "kind": 5,
+    "colors": [
+      9,
+      0
+    ]
+  },
+  {
+    "type": 11,
+    "sprite": "AS_11",
+    "spriteHidden": "AS_11green",
+    "kind": 7,
+    "colors": [
+      8
+    ]
+  },
+  {
+    "type": 12,
+    "sprite": "AS_12",
+    "spriteHidden": "AS_11green",
+    "kind": 7,
+    "colors": [
+      3,
+      9
+    ]
+  },
+  {
+    "type": 13,
+    "sprite": "AS_13",
+    "spriteHidden": "AS_13green",
+    "kind": 6,
+    "colors": [
+      1,
+      4
+    ]
+  },
+  {
+    "type": 14,
+    "sprite": "AS_14",
+    "spriteHidden": "AS_13green",
+    "kind": 6,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 15,
+    "sprite": "AS_15",
+    "spriteHidden": "AS_15green",
+    "kind": 5,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 16,
+    "sprite": "AS_16",
+    "spriteHidden": "AS_16green",
+    "kind": 8,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 17,
+    "sprite": "AS_17",
+    "spriteHidden": "AS_18green",
+    "kind": 5,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 18,
+    "sprite": "AS_18",
+    "spriteHidden": "AS_18green",
+    "kind": 5,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 19,
+    "sprite": "AS_19",
+    "spriteHidden": "AS_19green",
+    "kind": 13,
+    "colors": [
+      22,
+      4
+    ]
+  },
+  {
+    "type": 20,
+    "sprite": "AS_20",
+    "spriteHidden": "AS_19green",
+    "kind": 13,
+    "colors": [
+      8
+    ]
+  },
+  {
+    "type": 21,
+    "sprite": "AS_21",
+    "spriteHidden": "AS_21green",
+    "kind": 13,
+    "colors": [
+      8,
+      3
+    ]
+  },
+  {
+    "type": 22,
+    "sprite": "AS_22",
+    "spriteHidden": "AS_22green",
+    "kind": 12,
+    "colors": [
+      0,
+      2
+    ]
+  },
+  {
+    "type": 23,
+    "sprite": "AS_23",
+    "spriteHidden": "AS_22green",
+    "kind": 12,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 24,
+    "sprite": "AS_24",
+    "spriteHidden": "AS_24green",
+    "kind": 1,
+    "colors": [
+      23
+    ]
+  },
+  {
+    "type": 25,
+    "sprite": "AS_25",
+    "spriteHidden": "AS_24green",
+    "kind": 1,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 26,
+    "sprite": "AS_26",
+    "spriteHidden": "AS_26green",
+    "kind": 13,
+    "colors": [
+      10,
+      6
+    ]
+  },
+  {
+    "type": 27,
+    "sprite": "AS_27",
+    "spriteHidden": "AS_26green",
+    "kind": 13,
+    "colors": [
+      4,
+      21
+    ]
+  },
+  {
+    "type": 28,
+    "sprite": "AS_28",
+    "spriteHidden": "AS_28green",
+    "kind": 14,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 29,
+    "sprite": "AS_29",
+    "spriteHidden": "AS_29green",
+    "kind": 6,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 30,
+    "sprite": "AS_30",
+    "spriteHidden": "AS_30green",
+    "kind": 6,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 31,
+    "sprite": "AS_31",
+    "spriteHidden": "AS_31green",
+    "kind": 14,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 32,
+    "sprite": "AS_32",
+    "spriteHidden": "AS_32green",
+    "kind": 14,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 33,
+    "sprite": "AS_33",
+    "spriteHidden": "AS_32green",
+    "kind": 14,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 34,
+    "sprite": "AS_34",
+    "spriteHidden": "AS_32green",
+    "kind": 14,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 35,
+    "sprite": "AS_35",
+    "spriteHidden": "AS_37green",
+    "kind": 6,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 36,
+    "sprite": "AS_36",
+    "spriteHidden": "AS_37green",
+    "kind": 6,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 37,
+    "sprite": "AS_37",
+    "spriteHidden": "AS_37green",
+    "kind": 6,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 38,
+    "sprite": "AS_38",
+    "spriteHidden": "AS_38green",
+    "kind": 5,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 39,
+    "sprite": "AS_39",
+    "spriteHidden": "AS_39green",
+    "kind": 5,
+    "colors": [
+      9,
+      0
+    ]
+  },
+  {
+    "type": 40,
+    "sprite": "AS_40",
+    "spriteHidden": "AS_39green",
+    "kind": 5,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 41,
+    "sprite": "AS_41",
+    "spriteHidden": "AS_41green",
+    "kind": 10,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 42,
+    "sprite": "AS_42",
+    "spriteHidden": "AS_41green",
+    "kind": 10,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 43,
+    "sprite": "AS_43",
+    "spriteHidden": "AS_41green",
+    "kind": 10,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 44,
+    "sprite": "AS_44",
+    "spriteHidden": "AS_41green",
+    "kind": 10,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 45,
+    "sprite": "AS_45",
+    "spriteHidden": "AS_45green",
+    "kind": 8,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 46,
+    "sprite": "AS_46",
+    "spriteHidden": "AS_45green",
+    "kind": 8,
+    "colors": [
+      18
+    ]
+  },
+  {
+    "type": 47,
+    "sprite": "AS_47",
+    "spriteHidden": "AS_45green",
+    "kind": 8,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 48,
+    "sprite": "AS_48",
+    "spriteHidden": "AS_48green",
+    "kind": 4,
+    "colors": [
+      23,
+      2
+    ]
+  },
+  {
+    "type": 49,
+    "sprite": "AS_49",
+    "spriteHidden": "AS_49green",
+    "kind": 7,
+    "colors": [
+      3,
+      8
+    ]
+  },
+  {
+    "type": 50,
+    "sprite": "AS_50",
+    "spriteHidden": "AS_49green",
+    "kind": 7,
+    "colors": [
+      0,
+      8
+    ]
+  },
+  {
+    "type": 51,
+    "sprite": "AS_51",
+    "spriteHidden": "AS_51green",
+    "kind": 4,
+    "colors": [
+      23,
+      2
+    ]
+  },
+  {
+    "type": 52,
+    "sprite": "AS_52",
+    "spriteHidden": "AS_52green",
+    "kind": 4,
+    "colors": [
+      0,
+      23
+    ]
+  },
+  {
+    "type": 53,
+    "sprite": "AS_53",
+    "spriteHidden": "AS_53green",
+    "kind": 5,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 54,
+    "sprite": "AS_54",
+    "spriteHidden": "AS_53green",
+    "kind": 5,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 55,
+    "sprite": "AS_55",
+    "spriteHidden": "AS_53green",
+    "kind": 5,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 56,
+    "sprite": "AS_56",
+    "spriteHidden": "AS_56green",
+    "kind": 5,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 57,
+    "sprite": "AS_57",
+    "spriteHidden": "AS_56green",
+    "kind": 5,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 58,
+    "sprite": "AS_58",
+    "spriteHidden": "AS_56green",
+    "kind": 5,
+    "colors": [
+      4,
+      0
+    ]
+  },
+  {
+    "type": 59,
+    "sprite": "AS_59",
+    "spriteHidden": "AS_60green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 60,
+    "sprite": "AS_60",
+    "spriteHidden": "AS_60green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 61,
+    "sprite": "AS_61",
+    "spriteHidden": "AS_61green",
+    "kind": 0,
+    "colors": [
+      3,
+      9
+    ]
+  },
+  {
+    "type": 62,
+    "sprite": "AS_62",
+    "spriteHidden": "AS_62green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 63,
+    "sprite": "AS_63",
+    "spriteHidden": "AS_63green",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 64,
+    "sprite": "AS_64",
+    "spriteHidden": "AS_63green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 65,
+    "sprite": "AS_65",
+    "spriteHidden": "AS_65green",
+    "kind": 0,
+    "colors": [
+      3,
+      22
+    ]
+  },
+  {
+    "type": 66,
+    "sprite": "AS_66",
+    "spriteHidden": "AS_65green",
+    "kind": 0,
+    "colors": [
+      2,
+      3
+    ]
+  },
+  {
+    "type": 67,
+    "sprite": "AS_67",
+    "spriteHidden": "AS_67green",
+    "kind": 0,
+    "colors": [
+      2,
+      3
+    ]
+  },
+  {
+    "type": 68,
+    "sprite": "AS_68",
+    "spriteHidden": "AS_68green",
+    "kind": 11,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 69,
+    "sprite": "AS_69",
+    "spriteHidden": "AS_69green",
+    "kind": 11,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 70,
+    "sprite": "AS_70",
+    "spriteHidden": "AS_70green",
+    "kind": 11,
+    "colors": [
+      8,
+      3
+    ]
+  },
+  {
+    "type": 71,
+    "sprite": "AS_71",
+    "spriteHidden": "AS_71green",
+    "kind": 6,
+    "colors": [
+      0,
+      8
+    ]
+  },
+  {
+    "type": 72,
+    "sprite": "AS_72",
+    "spriteHidden": "AS_72green",
+    "kind": 7,
+    "colors": [
+      3,
+      9
+    ]
+  },
+  {
+    "type": 73,
+    "sprite": "AS_73",
+    "spriteHidden": "AS_73green",
+    "kind": 2,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 74,
+    "sprite": "AS_74",
+    "spriteHidden": "AS_74green",
+    "kind": 4,
+    "colors": [
+      23
+    ]
+  },
+  {
+    "type": 75,
+    "sprite": "AS_75",
+    "spriteHidden": "AS_75green",
+    "kind": 15,
+    "colors": [
+      11,
+      8
+    ]
+  },
+  {
+    "type": 76,
+    "sprite": "AS_76",
+    "spriteHidden": "AS_75green",
+    "kind": 15,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 77,
+    "sprite": "AS_77",
+    "spriteHidden": "AS_77green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 78,
+    "sprite": "AS_78",
+    "spriteHidden": "AS_78green",
+    "kind": 0,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 79,
+    "sprite": "AS_79",
+    "spriteHidden": "AS_79green",
+    "kind": 11,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 80,
+    "sprite": "AS_80",
+    "spriteHidden": "AS_80green",
+    "kind": 0,
+    "colors": [
+      10,
+      9
+    ]
+  },
+  {
+    "type": 81,
+    "sprite": "AS_81",
+    "spriteHidden": "AS_81green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 82,
+    "sprite": "AS_82",
+    "spriteHidden": "AS_82green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 83,
+    "sprite": "AS_83",
+    "spriteHidden": "AS_83green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 84,
+    "sprite": "AS_84",
+    "spriteHidden": "AS_84green",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 85,
+    "sprite": "AS_85",
+    "spriteHidden": "AS_85green",
+    "kind": 16,
+    "colors": [
+      8
+    ]
+  },
+  {
+    "type": 86,
+    "sprite": "AS_86",
+    "spriteHidden": "AS_49green",
+    "kind": 7,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 87,
+    "sprite": "AS_87",
+    "spriteHidden": "AS_87green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 88,
+    "sprite": "AS_88",
+    "spriteHidden": "AS_88green",
+    "kind": 0,
+    "colors": [
+      11,
+      2
+    ]
+  },
+  {
+    "type": 89,
+    "sprite": "AS_89",
+    "spriteHidden": "AS_89green",
+    "kind": 0,
+    "colors": [
+      13,
+      2
+    ]
+  },
+  {
+    "type": 90,
+    "sprite": "AS_90",
+    "spriteHidden": "AS_88green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 91,
+    "sprite": "AS_91",
+    "spriteHidden": "AS_91green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 92,
+    "sprite": "AS_92",
+    "spriteHidden": "AS_91green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 93,
+    "sprite": "AS_93",
+    "spriteHidden": "AS_93green",
+    "kind": 0,
+    "colors": [
+      8
+    ]
+  },
+  {
+    "type": 94,
+    "sprite": "AS_94",
+    "spriteHidden": "AS_93green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 95,
+    "sprite": "AS_95",
+    "spriteHidden": "AS_93green",
+    "kind": 0,
+    "colors": [
+      10,
+      8
+    ]
+  },
+  {
+    "type": 96,
+    "sprite": "AS_96",
+    "spriteHidden": "AS_96green",
+    "kind": 0,
+    "colors": [
+      10,
+      9
+    ]
+  },
+  {
+    "type": 97,
+    "sprite": "AS_97",
+    "spriteHidden": "AS_96green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 98,
+    "sprite": "AS_98",
+    "spriteHidden": "AS_96green",
+    "kind": 0,
+    "colors": [
+      3,
+      9
+    ]
+  },
+  {
+    "type": 99,
+    "sprite": "AS_99",
+    "spriteHidden": "AS_99green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 100,
+    "sprite": "AS_100",
+    "spriteHidden": "AS_100green",
+    "kind": 0,
+    "colors": [
+      4,
+      8
+    ]
+  },
+  {
+    "type": 101,
+    "sprite": "AS_101",
+    "spriteHidden": "AS_100green",
+    "kind": 0,
+    "colors": [
+      11,
+      8
+    ]
+  },
+  {
+    "type": 102,
+    "sprite": "AS_102",
+    "spriteHidden": "AS_100green",
+    "kind": 0,
+    "colors": [
+      6,
+      8
+    ]
+  },
+  {
+    "type": 103,
+    "sprite": "AS_103",
+    "spriteHidden": "AS_103green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 104,
+    "sprite": "AS_104",
+    "spriteHidden": "AS_103green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 105,
+    "sprite": "AS_105",
+    "spriteHidden": "AS_103green",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 106,
+    "sprite": "AS_106",
+    "spriteHidden": "AS_106green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 107,
+    "sprite": "AS_107",
+    "spriteHidden": "AS_106green",
+    "kind": 0,
+    "colors": [
+      18
+    ]
+  },
+  {
+    "type": 108,
+    "sprite": "AS_108",
+    "spriteHidden": "AS_106green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 109,
+    "sprite": "AS_109",
+    "spriteHidden": "AS_109green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 110,
+    "sprite": "AS_110",
+    "spriteHidden": "AS_109green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 111,
+    "sprite": "AS_111",
+    "spriteHidden": "AS_109green",
+    "kind": 0,
+    "colors": [
+      10,
+      8
+    ]
+  },
+  {
+    "type": 112,
+    "sprite": "AS_112",
+    "spriteHidden": "AS_112green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 113,
+    "sprite": "AS_113",
+    "spriteHidden": "AS_113green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 114,
+    "sprite": "AS_114",
+    "spriteHidden": "AS_113green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 115,
+    "sprite": "AS_115",
+    "spriteHidden": "AS_115green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 116,
+    "sprite": "AS_116",
+    "spriteHidden": "AS_115green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 117,
+    "sprite": "AS_117",
+    "spriteHidden": "AS_115green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 118,
+    "sprite": "AS_118",
+    "spriteHidden": "AS_118green",
+    "kind": 0,
+    "colors": [
+      7,
+      8
+    ]
+  },
+  {
+    "type": 119,
+    "sprite": "AS_119",
+    "spriteHidden": "AS_118green",
+    "kind": 0,
+    "colors": [
+      7,
+      8
+    ]
+  },
+  {
+    "type": 120,
+    "sprite": "AS_120",
+    "spriteHidden": "AS_118green",
+    "kind": 0,
+    "colors": [
+      10,
+      8
+    ]
+  },
+  {
+    "type": 121,
+    "sprite": "AS_121",
+    "spriteHidden": "AS_121green",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 122,
+    "sprite": "AS_122",
+    "spriteHidden": "AS_121green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 123,
+    "sprite": "AS_123",
+    "spriteHidden": "AS_123green",
+    "kind": 0,
+    "colors": [
+      23
+    ]
+  },
+  {
+    "type": 124,
+    "sprite": "AS_124",
+    "spriteHidden": "AS_123green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 125,
+    "sprite": "AS_125",
+    "spriteHidden": "AS_125green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 126,
+    "sprite": "AS_126",
+    "spriteHidden": "AS_125green",
+    "kind": 0,
+    "colors": [
+      23
+    ]
+  },
+  {
+    "type": 127,
+    "sprite": "AS_127",
+    "spriteHidden": "AS_127green",
+    "kind": 0,
+    "colors": [
+      10,
+      8
+    ]
+  },
+  {
+    "type": 128,
+    "sprite": "AS_128",
+    "spriteHidden": "AS_127green",
+    "kind": 0,
+    "colors": [
+      3,
+      8
+    ]
+  },
+  {
+    "type": 129,
+    "sprite": "AS_129",
+    "spriteHidden": "AS_129green",
+    "kind": 0,
+    "colors": [
+      23
+    ]
+  },
+  {
+    "type": 130,
+    "sprite": "AS_130",
+    "spriteHidden": "AS_129green",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 131,
+    "sprite": "AS_131",
+    "spriteHidden": "AS_129green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 132,
+    "sprite": "AS_132",
+    "spriteHidden": "AS_132green",
+    "kind": 0,
+    "colors": [
+      23
+    ]
+  },
+  {
+    "type": 133,
+    "sprite": "AS_133",
+    "spriteHidden": "AS_132green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 134,
+    "sprite": "AS_134",
+    "spriteHidden": "AS_53green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 135,
+    "sprite": "AS_135",
+    "spriteHidden": "AS_53green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 136,
+    "sprite": "AS_136",
+    "spriteHidden": "AS_53green",
+    "kind": 0,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 137,
+    "sprite": "AS_137",
+    "spriteHidden": "AS_53green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 138,
+    "sprite": "AS_138",
+    "spriteHidden": "AS_49green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 139,
+    "sprite": "AS_139",
+    "spriteHidden": "AS_49green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 140,
+    "sprite": "AS_140",
+    "spriteHidden": "AS_49green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 141,
+    "sprite": "AS_141",
+    "spriteHidden": "AS_49green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 142,
+    "sprite": "AS_142",
+    "spriteHidden": "AS_45green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 143,
+    "sprite": "AS_143",
+    "spriteHidden": "AS_45green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 144,
+    "sprite": "AS_144",
+    "spriteHidden": "AS_45green",
+    "kind": 0,
+    "colors": [
+      8
+    ]
+  },
+  {
+    "type": 145,
+    "sprite": "AS_145",
+    "spriteHidden": "AS_45green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 146,
+    "sprite": "AS_146",
+    "spriteHidden": "AS_24green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 147,
+    "sprite": "AS_147",
+    "spriteHidden": "AS_24green",
+    "kind": 0,
+    "colors": [
+      10,
+      6
+    ]
+  },
+  {
+    "type": 148,
+    "sprite": "AS_148",
+    "spriteHidden": "AS_24green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 149,
+    "sprite": "AS_149",
+    "spriteHidden": "AS_22green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 150,
+    "sprite": "AS_150",
+    "spriteHidden": "AS_22green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 151,
+    "sprite": "AS_151",
+    "spriteHidden": "AS_22green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 152,
+    "sprite": "AS_152",
+    "spriteHidden": "AS_22green",
+    "kind": 0,
+    "colors": [
+      23
+    ]
+  },
+  {
+    "type": 153,
+    "sprite": "AS_153",
+    "spriteHidden": "AS_22green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 154,
+    "sprite": "AS_154",
+    "spriteHidden": "AS_53green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 155,
+    "sprite": "AS_155",
+    "spriteHidden": "AS_155green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 156,
+    "sprite": "AS_156",
+    "spriteHidden": "AS_155green",
+    "kind": 0,
+    "colors": [
+      8
+    ]
+  },
+  {
+    "type": 157,
+    "sprite": "AS_157",
+    "spriteHidden": "AS_155green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 158,
+    "sprite": "AS_158",
+    "spriteHidden": "AS_155green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 159,
+    "sprite": "AS_159",
+    "spriteHidden": "AS_155green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 160,
+    "sprite": "AS_160",
+    "spriteHidden": "AS_160green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 161,
+    "sprite": "AS_161",
+    "spriteHidden": "AS_160green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 162,
+    "sprite": "AS_162",
+    "spriteHidden": "AS_160green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 163,
+    "sprite": "AS_163",
+    "spriteHidden": "AS_160green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 164,
+    "sprite": "AS_164",
+    "spriteHidden": "AS_160green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 165,
+    "sprite": "AS_165",
+    "spriteHidden": "AS_165green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 166,
+    "sprite": "AS_166",
+    "spriteHidden": "AS_165green",
+    "kind": 0,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 167,
+    "sprite": "AS_167",
+    "spriteHidden": "AS_165green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 168,
+    "sprite": "AS_168",
+    "spriteHidden": "AS_165green",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 169,
+    "sprite": "AS_169",
+    "spriteHidden": "AS_165green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 170,
+    "sprite": "AS_170",
+    "spriteHidden": "AS_165green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 171,
+    "sprite": "AS_171",
+    "spriteHidden": "AS_171green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 172,
+    "sprite": "AS_172",
+    "spriteHidden": "AS_171green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 173,
+    "sprite": "AS_173",
+    "spriteHidden": "AS_171green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 174,
+    "sprite": "AS_174",
+    "spriteHidden": "AS_171green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 175,
+    "sprite": "AS_175",
+    "spriteHidden": "AS_175green",
+    "kind": 0,
+    "colors": [
+      8,
+      10
+    ]
+  },
+  {
+    "type": 176,
+    "sprite": "AS_176",
+    "spriteHidden": "AS_175green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 177,
+    "sprite": "AS_177",
+    "spriteHidden": "AS_175green",
+    "kind": 0,
+    "colors": [
+      10,
+      8
+    ]
+  },
+  {
+    "type": 178,
+    "sprite": "AS_178",
+    "spriteHidden": "AS_178green",
+    "kind": 0,
+    "colors": [
+      0,
+      8
+    ]
+  },
+  {
+    "type": 179,
+    "sprite": "AS_179",
+    "spriteHidden": "AS_178green",
+    "kind": 0,
+    "colors": [
+      3,
+      8
+    ]
+  },
+  {
+    "type": 180,
+    "sprite": "AS_180",
+    "spriteHidden": "AS_178green",
+    "kind": 0,
+    "colors": [
+      6,
+      8
+    ]
+  },
+  {
+    "type": 181,
+    "sprite": "AS_181",
+    "spriteHidden": "AS_181green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 182,
+    "sprite": "AS_182",
+    "spriteHidden": "AS_181green",
+    "kind": 0,
+    "colors": [
+      8
+    ]
+  },
+  {
+    "type": 183,
+    "sprite": "AS_183",
+    "spriteHidden": "AS_181green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 184,
+    "sprite": "AS_184",
+    "spriteHidden": "AS_181green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 185,
+    "sprite": "AS_185",
+    "spriteHidden": "AS_185green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 186,
+    "sprite": "AS_186",
+    "spriteHidden": "AS_185green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 187,
+    "sprite": "AS_187",
+    "spriteHidden": "AS_185green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 188,
+    "sprite": "AS_188",
+    "spriteHidden": "AS_185green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 189,
+    "sprite": "AS_189",
+    "spriteHidden": "AS_189green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 190,
+    "sprite": "AS_190",
+    "spriteHidden": "AS_189green",
+    "kind": 0,
+    "colors": [
+      19
+    ]
+  },
+  {
+    "type": 191,
+    "sprite": "AS_191",
+    "spriteHidden": "AS_189green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 192,
+    "sprite": "AS_192",
+    "spriteHidden": "AS_189green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 193,
+    "sprite": "AS_193",
+    "spriteHidden": "AS_193green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 194,
+    "sprite": "AS_194",
+    "spriteHidden": "AS_193green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 195,
+    "sprite": "AS_195",
+    "spriteHidden": "AS_193green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 196,
+    "sprite": "AS_196",
+    "spriteHidden": "AS_193green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 197,
+    "sprite": "AS_197",
+    "spriteHidden": "AS_197green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 198,
+    "sprite": "AS_198",
+    "spriteHidden": "AS_197green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 199,
+    "sprite": "AS_199",
+    "spriteHidden": "AS_197green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 200,
+    "sprite": "AS_200",
+    "spriteHidden": "AS_197green",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 201,
+    "sprite": "AS_201",
+    "spriteHidden": "AS_201green",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 202,
+    "sprite": "AS_202",
+    "spriteHidden": "AS_201green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 203,
+    "sprite": "AS_203",
+    "spriteHidden": "AS_201green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 204,
+    "sprite": "AS_204",
+    "spriteHidden": "AS_201green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 205,
+    "sprite": "AS_205",
+    "spriteHidden": "AS_201green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 206,
+    "sprite": "AS_206",
+    "spriteHidden": "AS_201green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 207,
+    "sprite": "AS_207",
+    "spriteHidden": "AS_201green",
+    "kind": 0,
+    "colors": [
+      21
+    ]
+  },
+  {
+    "type": 208,
+    "sprite": "AS_208",
+    "spriteHidden": "AS_208green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 209,
+    "sprite": "AS_209",
+    "spriteHidden": "AS_208green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 210,
+    "sprite": "AS_210",
+    "spriteHidden": "AS_208green",
+    "kind": 0,
+    "colors": [
+      1,
+      9
+    ]
+  },
+  {
+    "type": 211,
+    "sprite": "AS_211",
+    "spriteHidden": "AS_211green",
+    "kind": 0,
+    "colors": []
+  },
+  {
+    "type": 212,
+    "sprite": "AS_212",
+    "spriteHidden": "AS_211green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 213,
+    "sprite": "AS_213",
+    "spriteHidden": "AS_211green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 214,
+    "sprite": "AS_214",
+    "spriteHidden": "AS_211green",
+    "kind": 0,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 215,
+    "sprite": "AS_215",
+    "spriteHidden": "AS_215green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 216,
+    "sprite": "AS_216",
+    "spriteHidden": "AS_215green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 217,
+    "sprite": "AS_217",
+    "spriteHidden": "AS_215green",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 218,
+    "sprite": "AS_218",
+    "spriteHidden": "AS_218green",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 219,
+    "sprite": "AS_219",
+    "spriteHidden": "AS_219green",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 220,
+    "sprite": "AS_220",
+    "spriteHidden": "AS_220green",
+    "kind": 0,
+    "colors": [
+      8
+    ]
+  },
+  {
+    "type": 221,
+    "sprite": "AS_221",
+    "spriteHidden": "AS_221green",
+    "kind": 0,
+    "colors": [
+      21
+    ]
+  },
+  {
+    "type": 222,
+    "sprite": "AS_222",
+    "spriteHidden": "AS_222green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 223,
+    "sprite": "AS_223",
+    "spriteHidden": "AS_222green",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 224,
+    "sprite": "AS_224",
+    "spriteHidden": "AS_222green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 225,
+    "sprite": "AS_225",
+    "spriteHidden": "AS_225green",
+    "kind": 0,
+    "colors": [
+      21,
+      2
+    ]
+  },
+  {
+    "type": 226,
+    "sprite": "AS_226",
+    "spriteHidden": "AS_226green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 227,
+    "sprite": "AS_227",
+    "spriteHidden": "AS_227green",
+    "kind": 0,
+    "colors": [
+      4,
+      2
+    ]
+  },
+  {
+    "type": 228,
+    "sprite": "AS_228",
+    "spriteHidden": "AS_228green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 229,
+    "sprite": "AS_229",
+    "spriteHidden": "AS_229green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 230,
+    "sprite": "AS_230",
+    "spriteHidden": "AS_229green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 231,
+    "sprite": "AS_231",
+    "spriteHidden": "AS_229green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 232,
+    "sprite": "AS_232",
+    "spriteHidden": "AS_232green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 233,
+    "sprite": "AS_233",
+    "spriteHidden": "AS_232green",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 234,
+    "sprite": "AS_234",
+    "spriteHidden": "AS_178green",
+    "kind": 0,
+    "colors": [
+      7,
+      8
+    ]
+  },
+  {
+    "type": 235,
+    "sprite": "AS_235",
+    "spriteHidden": "AS_56green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 236,
+    "sprite": "AS_236",
+    "spriteHidden": "AS_56green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 237,
+    "sprite": "AS_237",
+    "spriteHidden": "AS_56green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 238,
+    "sprite": "AS_238",
+    "spriteHidden": "AS_56green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 239,
+    "sprite": "AS_239",
+    "spriteHidden": "AS_239",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 240,
+    "sprite": "AS_240",
+    "spriteHidden": "AS_239",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 241,
+    "sprite": "AS_241",
+    "spriteHidden": "AS_239",
+    "kind": 0,
+    "colors": [
+      19
+    ]
+  },
+  {
+    "type": 242,
+    "sprite": "AS_242",
+    "spriteHidden": "AS_239",
+    "kind": 0,
+    "colors": [
+      2,
+      8
+    ]
+  },
+  {
+    "type": 243,
+    "sprite": "AS_243",
+    "spriteHidden": "AS_29green",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 244,
+    "sprite": "AS_244",
+    "spriteHidden": "AS_29green",
+    "kind": 0,
+    "colors": [
+      19
+    ]
+  },
+  {
+    "type": 245,
+    "sprite": "AS_245",
+    "spriteHidden": "AS_29green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 246,
+    "sprite": "AS_246",
+    "spriteHidden": "AS_13green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 247,
+    "sprite": "AS_247",
+    "spriteHidden": "AS_13green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 248,
+    "sprite": "AS_248",
+    "spriteHidden": "AS_13green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 249,
+    "sprite": "AS_249",
+    "spriteHidden": "AS_13green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 250,
+    "sprite": "AS_250",
+    "spriteHidden": "AS_251",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 251,
+    "sprite": "AS_251",
+    "spriteHidden": "AS_251",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 252,
+    "sprite": "AS_252",
+    "spriteHidden": "AS_251",
+    "kind": 0,
+    "colors": [
+      21
+    ]
+  },
+  {
+    "type": 253,
+    "sprite": "AS_253",
+    "spriteHidden": "AS_251",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 254,
+    "sprite": "AS_254",
+    "spriteHidden": "AS_13green",
+    "kind": 0,
+    "colors": [
+      3,
+      2
+    ]
+  },
+  {
+    "type": 255,
+    "sprite": "AS_255",
+    "spriteHidden": "AS_255",
+    "kind": 0,
+    "colors": [
+      2,
+      0
+    ]
+  },
+  {
+    "type": 256,
+    "sprite": "AS_256",
+    "spriteHidden": "AS_255",
+    "kind": 0,
+    "colors": [
+      19
+    ]
+  },
+  {
+    "type": 257,
+    "sprite": "AS_257",
+    "spriteHidden": "AS_255",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 258,
+    "sprite": "AS_258",
+    "spriteHidden": "AS_258",
+    "kind": 0,
+    "colors": [
+      8
+    ]
+  },
+  {
+    "type": 259,
+    "sprite": "AS_259",
+    "spriteHidden": "AS_259",
+    "kind": 0,
+    "colors": [
+      8,
+      3
+    ]
+  },
+  {
+    "type": 260,
+    "sprite": "AS_260",
+    "spriteHidden": "AS_260",
+    "kind": 0,
+    "colors": [
+      3,
+      8
+    ]
+  },
+  {
+    "type": 261,
+    "sprite": "AS_261",
+    "spriteHidden": "AS_260",
+    "kind": 0,
+    "colors": [
+      4,
+      8
+    ]
+  },
+  {
+    "type": 262,
+    "sprite": "AS_262",
+    "spriteHidden": "AS_260",
+    "kind": 0,
+    "colors": [
+      0,
+      8
+    ]
+  },
+  {
+    "type": 263,
+    "sprite": "AS_263",
+    "spriteHidden": "AS_260",
+    "kind": 0,
+    "colors": [
+      6,
+      8
+    ]
+  },
+  {
+    "type": 264,
+    "sprite": "AS_264",
+    "spriteHidden": "AS_264",
+    "kind": 0,
+    "colors": [
+      21
+    ]
+  },
+  {
+    "type": 265,
+    "sprite": "AS_265",
+    "spriteHidden": "AS_264",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 266,
+    "sprite": "AS_266",
+    "spriteHidden": "AS_264",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 267,
+    "sprite": "AS_267",
+    "spriteHidden": "AS_264",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 268,
+    "sprite": "AS_268",
+    "spriteHidden": "AS_268",
+    "kind": 0,
+    "colors": [
+      2,
+      1
+    ]
+  },
+  {
+    "type": 269,
+    "sprite": "AS_269",
+    "spriteHidden": "AS_268",
+    "kind": 0,
+    "colors": [
+      0,
+      10
+    ]
+  },
+  {
+    "type": 270,
+    "sprite": "AS_270",
+    "spriteHidden": "AS_270",
+    "kind": 0,
+    "colors": [
+      4,
+      2
+    ]
+  },
+  {
+    "type": 271,
+    "sprite": "AS_271",
+    "spriteHidden": "AS_271",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 272,
+    "sprite": "AS_272",
+    "spriteHidden": "AS_271",
+    "kind": 0,
+    "colors": [
+      21
+    ]
+  },
+  {
+    "type": 273,
+    "sprite": "AS_273",
+    "spriteHidden": "AS_271",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 274,
+    "sprite": "AS_274",
+    "spriteHidden": "AS_274",
+    "kind": 0,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 275,
+    "sprite": "AS_275",
+    "spriteHidden": "AS_274",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 276,
+    "sprite": "AS_276",
+    "spriteHidden": "AS_274",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 277,
+    "sprite": "AS_277",
+    "spriteHidden": "AS_277",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 278,
+    "sprite": "AS_278",
+    "spriteHidden": "AS_277",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 279,
+    "sprite": "AS_279",
+    "spriteHidden": "AS_277",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 280,
+    "sprite": "AS_280",
+    "spriteHidden": "AS_277",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 281,
+    "sprite": "AS_281",
+    "spriteHidden": "AS_277",
+    "kind": 0,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 282,
+    "sprite": "AS_282",
+    "spriteHidden": "AS_282",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 283,
+    "sprite": "AS_283",
+    "spriteHidden": "AS_282",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 284,
+    "sprite": "AS_284",
+    "spriteHidden": "AS_282",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 285,
+    "sprite": "AS_285",
+    "spriteHidden": "AS_282",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 286,
+    "sprite": "AS_286",
+    "spriteHidden": "AS_286",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 287,
+    "sprite": "AS_287",
+    "spriteHidden": "AS_286",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 288,
+    "sprite": "AS_288",
+    "spriteHidden": "AS_286",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 289,
+    "sprite": "AS_289",
+    "spriteHidden": "AS_286",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 290,
+    "sprite": "AS_290",
+    "spriteHidden": "AS_286",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 291,
+    "sprite": "AS_291",
+    "spriteHidden": "AS_291",
+    "kind": 0,
+    "colors": [
+      0,
+      3
+    ]
+  },
+  {
+    "type": 292,
+    "sprite": "AS_292",
+    "spriteHidden": "AS_291",
+    "kind": 0,
+    "colors": [
+      0,
+      2
+    ]
+  },
+  {
+    "type": 293,
+    "sprite": "AS_293",
+    "spriteHidden": "AS_291",
+    "kind": 0,
+    "colors": [
+      6,
+      19
+    ]
+  },
+  {
+    "type": 294,
+    "sprite": "AS_294",
+    "spriteHidden": "AS_294",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 295,
+    "sprite": "AS_295",
+    "spriteHidden": "AS_294",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 296,
+    "sprite": "AS_296",
+    "spriteHidden": "AS_294",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 297,
+    "sprite": "AS_297",
+    "spriteHidden": "AS_294",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 298,
+    "sprite": "AS_298",
+    "spriteHidden": "AS_298",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 299,
+    "sprite": "AS_299",
+    "spriteHidden": "AS_298",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 300,
+    "sprite": "AS_300",
+    "spriteHidden": "AS_298",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 301,
+    "sprite": "AS_301",
+    "spriteHidden": "AS_298",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 302,
+    "sprite": "AS_302",
+    "spriteHidden": "AS_302",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 303,
+    "sprite": "AS_303",
+    "spriteHidden": "AS_303",
+    "kind": 0,
+    "colors": [
+      21,
+      2
+    ]
+  },
+  {
+    "type": 304,
+    "sprite": "AS_304",
+    "spriteHidden": "AS_303",
+    "kind": 0,
+    "colors": [
+      0,
+      2
+    ]
+  },
+  {
+    "type": 305,
+    "sprite": "AS_305",
+    "spriteHidden": "AS_305",
+    "kind": 0,
+    "colors": [
+      16
+    ]
+  },
+  {
+    "type": 306,
+    "sprite": "AS_306",
+    "spriteHidden": "AS_306",
+    "kind": 0,
+    "colors": [
+      4,
+      8
+    ]
+  },
+  {
+    "type": 307,
+    "sprite": "AS_307",
+    "spriteHidden": "AS_306",
+    "kind": 0,
+    "colors": [
+      6,
+      8
+    ]
+  },
+  {
+    "type": 308,
+    "sprite": "AS_308",
+    "spriteHidden": "AS_306",
+    "kind": 0,
+    "colors": [
+      0,
+      8
+    ]
+  },
+  {
+    "type": 309,
+    "sprite": "AS_309",
+    "spriteHidden": "AS_306",
+    "kind": 0,
+    "colors": [
+      3,
+      8
+    ]
+  },
+  {
+    "type": 310,
+    "sprite": "AS_310",
+    "spriteHidden": "AS_306",
+    "kind": 0,
+    "colors": [
+      3,
+      8
+    ]
+  },
+  {
+    "type": 311,
+    "sprite": "AS_311",
+    "spriteHidden": "AS_306",
+    "kind": 0,
+    "colors": [
+      1,
+      8
+    ]
+  },
+  {
+    "type": 312,
+    "sprite": "AS_312",
+    "spriteHidden": "AS_312",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 313,
+    "sprite": "AS_313",
+    "spriteHidden": "AS_313",
+    "kind": 0,
+    "colors": [
+      0,
+      19
+    ]
+  },
+  {
+    "type": 314,
+    "sprite": "AS_314",
+    "spriteHidden": "AS_313",
+    "kind": 0,
+    "colors": [
+      3,
+      19
+    ]
+  },
+  {
+    "type": 315,
+    "sprite": "AS_315",
+    "spriteHidden": "AS_313",
+    "kind": 0,
+    "colors": [
+      23,
+      19
+    ]
+  },
+  {
+    "type": 316,
+    "sprite": "AS_316",
+    "spriteHidden": "AS_313",
+    "kind": 0,
+    "colors": [
+      2,
+      19
+    ]
+  },
+  {
+    "type": 317,
+    "sprite": "AS_317",
+    "spriteHidden": "AS_313",
+    "kind": 0,
+    "colors": [
+      4,
+      19
+    ]
+  },
+  {
+    "type": 318,
+    "sprite": "AS_318",
+    "spriteHidden": "AS_313",
+    "kind": 0,
+    "colors": [
+      6,
+      19
+    ]
+  },
+  {
+    "type": 319,
+    "sprite": "AS_319",
+    "spriteHidden": "AS_319",
+    "kind": 0,
+    "colors": [
+      8,
+      19
+    ]
+  },
+  {
+    "type": 320,
+    "sprite": "AS_320",
+    "spriteHidden": "AS_319",
+    "kind": 0,
+    "colors": [
+      10,
+      19
+    ]
+  },
+  {
+    "type": 321,
+    "sprite": "AS_321",
+    "spriteHidden": "AS_319",
+    "kind": 0,
+    "colors": [
+      9,
+      3
+    ]
+  },
+  {
+    "type": 322,
+    "sprite": "AS_322",
+    "spriteHidden": "AS_319",
+    "kind": 0,
+    "colors": [
+      3,
+      19
+    ]
+  },
+  {
+    "type": 323,
+    "sprite": "AS_323",
+    "spriteHidden": "AS_323",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 324,
+    "sprite": "AS_324",
+    "spriteHidden": "AS_323",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 325,
+    "sprite": "AS_325",
+    "spriteHidden": "AS_323",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 326,
+    "sprite": "AS_326",
+    "spriteHidden": "AS_323",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 327,
+    "sprite": "AS_327",
+    "spriteHidden": "AS_323",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 328,
+    "sprite": "AS_328",
+    "spriteHidden": "AS_328",
+    "kind": 0,
+    "colors": [
+      21
+    ]
+  },
+  {
+    "type": 329,
+    "sprite": "AS_329",
+    "spriteHidden": "AS_328",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 330,
+    "sprite": "AS_330",
+    "spriteHidden": "AS_328",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 331,
+    "sprite": "AS_331",
+    "spriteHidden": "AS_328",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 332,
+    "sprite": "AS_332",
+    "spriteHidden": "AS_332",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 333,
+    "sprite": "AS_333",
+    "spriteHidden": "AS_332",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 334,
+    "sprite": "AS_334",
+    "spriteHidden": "AS_332",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 335,
+    "sprite": "AS_335",
+    "spriteHidden": "AS_332",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 336,
+    "sprite": "AS_336",
+    "spriteHidden": "AS_332",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 337,
+    "sprite": "AS_337",
+    "spriteHidden": "AS_337",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 338,
+    "sprite": "AS_338",
+    "spriteHidden": "AS_337",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 339,
+    "sprite": "AS_339",
+    "spriteHidden": "AS_337",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 340,
+    "sprite": "AS_340",
+    "spriteHidden": "AS_337",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 341,
+    "sprite": "AS_341",
+    "spriteHidden": "AS_341",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 342,
+    "sprite": "AS_342",
+    "spriteHidden": "AS_341",
+    "kind": 0,
+    "colors": [
+      19
+    ]
+  },
+  {
+    "type": 343,
+    "sprite": "AS_343",
+    "spriteHidden": "AS_341",
+    "kind": 0,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 344,
+    "sprite": "AS_344",
+    "spriteHidden": "AS_341",
+    "kind": 0,
+    "colors": [
+      21
+    ]
+  },
+  {
+    "type": 345,
+    "sprite": "AS_345",
+    "spriteHidden": "AS_345",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 346,
+    "sprite": "AS_346",
+    "spriteHidden": "AS_346",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 347,
+    "sprite": "AS_347",
+    "spriteHidden": "AS_346",
+    "kind": 0,
+    "colors": [
+      2,
+      8
+    ]
+  },
+  {
+    "type": 348,
+    "sprite": "AS_348",
+    "spriteHidden": "AS_346",
+    "kind": 0,
+    "colors": [
+      13,
+      8
+    ]
+  },
+  {
+    "type": 349,
+    "sprite": "AS_349",
+    "spriteHidden": "AS_349",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 350,
+    "sprite": "AS_350",
+    "spriteHidden": "AS_349",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 351,
+    "sprite": "AS_351",
+    "spriteHidden": "AS_351",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 352,
+    "sprite": "AS_352",
+    "spriteHidden": "AS_351",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 353,
+    "sprite": "AS_353",
+    "spriteHidden": "AS_353",
+    "kind": 0,
+    "colors": [
+      2,
+      21
+    ]
+  },
+  {
+    "type": 354,
+    "sprite": "AS_354",
+    "spriteHidden": "AS_353",
+    "kind": 0,
+    "colors": [
+      6,
+      10
+    ]
+  },
+  {
+    "type": 355,
+    "sprite": "AS_355",
+    "spriteHidden": "AS_353",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 356,
+    "sprite": "AS_356",
+    "spriteHidden": "AS_353",
+    "kind": 0,
+    "colors": [
+      3,
+      2
+    ]
+  },
+  {
+    "type": 357,
+    "sprite": "AS_357",
+    "spriteHidden": "AS_357",
+    "kind": 0,
+    "colors": [
+      9,
+      19
+    ]
+  },
+  {
+    "type": 358,
+    "sprite": "AS_358",
+    "spriteHidden": "AS_357",
+    "kind": 0,
+    "colors": [
+      6,
+      10
+    ]
+  },
+  {
+    "type": 359,
+    "sprite": "AS_359",
+    "spriteHidden": "AS_359",
+    "kind": 0,
+    "colors": [
+      8,
+      10
+    ]
+  },
+  {
+    "type": 360,
+    "sprite": "AS_360",
+    "spriteHidden": "AS_359",
+    "kind": 0,
+    "colors": [
+      18
+    ]
+  },
+  {
+    "type": 361,
+    "sprite": "AS_361",
+    "spriteHidden": "AS_361",
+    "kind": 0,
+    "colors": [
+      10,
+      8
+    ]
+  },
+  {
+    "type": 362,
+    "sprite": "AS_362",
+    "spriteHidden": "AS_361",
+    "kind": 0,
+    "colors": [
+      8,
+      13
+    ]
+  },
+  {
+    "type": 363,
+    "sprite": "AS_363",
+    "spriteHidden": "AS_363",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 364,
+    "sprite": "AS_364",
+    "spriteHidden": "AS_363",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 365,
+    "sprite": "AS_365",
+    "spriteHidden": "AS_363",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 366,
+    "sprite": "AS_366",
+    "spriteHidden": "AS_363",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 367,
+    "sprite": "AS_367",
+    "spriteHidden": "AS_367",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 368,
+    "sprite": "AS_368",
+    "spriteHidden": "AS_367",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 369,
+    "sprite": "AS_369",
+    "spriteHidden": "AS_369",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 370,
+    "sprite": "AS_370",
+    "spriteHidden": "AS_369",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 371,
+    "sprite": "AS_371",
+    "spriteHidden": "AS_369",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 372,
+    "sprite": "AS_372",
+    "spriteHidden": "AS_372",
+    "kind": 0,
+    "colors": [
+      23
+    ]
+  },
+  {
+    "type": 373,
+    "sprite": "AS_373",
+    "spriteHidden": "AS_373",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 374,
+    "sprite": "AS_374",
+    "spriteHidden": "AS_373",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 375,
+    "sprite": "AS_375",
+    "spriteHidden": "AS_375",
+    "kind": 0,
+    "colors": [
+      12
+    ]
+  },
+  {
+    "type": 376,
+    "sprite": "AS_376",
+    "spriteHidden": "AS_375",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 377,
+    "sprite": "AS_377",
+    "spriteHidden": "AS_375",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 378,
+    "sprite": "AS_378",
+    "spriteHidden": "AS_375",
+    "kind": 0,
+    "colors": [
+      16
+    ]
+  },
+  {
+    "type": 379,
+    "sprite": "AS_379",
+    "spriteHidden": "AS_379",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 380,
+    "sprite": "AS_380",
+    "spriteHidden": "AS_379",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 381,
+    "sprite": "AS_381",
+    "spriteHidden": "AS_381",
+    "kind": 0,
+    "colors": [
+      10,
+      7
+    ]
+  },
+  {
+    "type": 382,
+    "sprite": "AS_382",
+    "spriteHidden": "AS_381",
+    "kind": 0,
+    "colors": [
+      2,
+      7
+    ]
+  },
+  {
+    "type": 383,
+    "sprite": "AS_383",
+    "spriteHidden": "AS_381",
+    "kind": 0,
+    "colors": [
+      4,
+      7
+    ]
+  },
+  {
+    "type": 384,
+    "sprite": "AS_384",
+    "spriteHidden": "AS_381",
+    "kind": 0,
+    "colors": [
+      3,
+      7
+    ]
+  },
+  {
+    "type": 385,
+    "sprite": "AS_385",
+    "spriteHidden": "AS_385",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 386,
+    "sprite": "AS_386",
+    "spriteHidden": "AS_386",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 387,
+    "sprite": "AS_387",
+    "spriteHidden": "AS_387",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 388,
+    "sprite": "AS_388",
+    "spriteHidden": "AS_388",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 389,
+    "sprite": "AS_389",
+    "spriteHidden": "AS_389",
+    "kind": 0,
+    "colors": [
+      0,
+      2
+    ]
+  },
+  {
+    "type": 390,
+    "sprite": "AS_390",
+    "spriteHidden": "AS_390",
+    "kind": 0,
+    "colors": [
+      4,
+      19
+    ]
+  },
+  {
+    "type": 391,
+    "sprite": "AS_391",
+    "spriteHidden": "AS_390",
+    "kind": 0,
+    "colors": [
+      11,
+      19
+    ]
+  },
+  {
+    "type": 392,
+    "sprite": "AS_392",
+    "spriteHidden": "AS_390",
+    "kind": 0,
+    "colors": [
+      0,
+      19
+    ]
+  },
+  {
+    "type": 393,
+    "sprite": "AS_393",
+    "spriteHidden": "AS_390",
+    "kind": 0,
+    "colors": [
+      10,
+      19
+    ]
+  },
+  {
+    "type": 394,
+    "sprite": "AS_394",
+    "spriteHidden": "AS_394",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 395,
+    "sprite": "AS_395",
+    "spriteHidden": "AS_394",
+    "kind": 0,
+    "colors": [
+      7
+    ]
+  },
+  {
+    "type": 396,
+    "sprite": "AS_396",
+    "spriteHidden": "AS_394",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 397,
+    "sprite": "AS_397",
+    "spriteHidden": "AS_394",
+    "kind": 0,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 398,
+    "sprite": "AS_398",
+    "spriteHidden": "AS_398",
+    "kind": 0,
+    "colors": [
+      9,
+      7
+    ]
+  },
+  {
+    "type": 399,
+    "sprite": "AS_399",
+    "spriteHidden": "AS_399",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 400,
+    "sprite": "AS_400",
+    "spriteHidden": "AS_399",
+    "kind": 0,
+    "colors": [
+      7
+    ]
+  },
+  {
+    "type": 401,
+    "sprite": "AS_401",
+    "spriteHidden": "AS_399",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 402,
+    "sprite": "AS_402",
+    "spriteHidden": "AS_402",
+    "kind": 0,
+    "colors": [
+      4,
+      7
+    ]
+  },
+  {
+    "type": 403,
+    "sprite": "AS_403",
+    "spriteHidden": "AS_402",
+    "kind": 0,
+    "colors": [
+      0,
+      7
+    ]
+  },
+  {
+    "type": 404,
+    "sprite": "AS_404",
+    "spriteHidden": "AS_404",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 405,
+    "sprite": "AS_405",
+    "spriteHidden": "AS_404",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 406,
+    "sprite": "AS_406",
+    "spriteHidden": "AS_404",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 407,
+    "sprite": "AS_407",
+    "spriteHidden": "AS_404",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 408,
+    "sprite": "AS_408",
+    "spriteHidden": "AS_408",
+    "kind": 0,
+    "colors": [
+      0,
+      19
+    ]
+  },
+  {
+    "type": 409,
+    "sprite": "AS_409",
+    "spriteHidden": "AS_409",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 410,
+    "sprite": "AS_410",
+    "spriteHidden": "AS_409",
+    "kind": 0,
+    "colors": [
+      7,
+      8
+    ]
+  },
+  {
+    "type": 411,
+    "sprite": "AS_411",
+    "spriteHidden": "AS_409",
+    "kind": 0,
+    "colors": [
+      13,
+      7
+    ]
+  },
+  {
+    "type": 412,
+    "sprite": "AS_412",
+    "spriteHidden": "AS_412",
+    "kind": 0,
+    "colors": []
+  },
+  {
+    "type": 413,
+    "sprite": "AS_413",
+    "spriteHidden": "AS_413",
+    "kind": 0,
+    "colors": []
+  },
+  {
+    "type": 414,
+    "sprite": "AS_414",
+    "spriteHidden": "AS_413",
+    "kind": 0,
+    "colors": []
+  },
+  {
+    "type": 415,
+    "sprite": "AS_415",
+    "spriteHidden": "AS_413",
+    "kind": 0,
+    "colors": []
+  },
+  {
+    "type": 416,
+    "sprite": "AS_416",
+    "spriteHidden": "AS_416",
+    "kind": 0,
+    "colors": []
+  },
+  {
+    "type": 417,
+    "sprite": "AS_417",
+    "spriteHidden": "AS_416",
+    "kind": 0,
+    "colors": []
+  },
+  {
+    "type": 418,
+    "sprite": "AS_418",
+    "spriteHidden": "AS_416",
+    "kind": 0,
+    "colors": []
+  },
+  {
+    "type": 419,
+    "sprite": "AS_419",
+    "spriteHidden": "AS_Green_419",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 420,
+    "sprite": "AS_420",
+    "spriteHidden": "AS_Green_419",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 421,
+    "sprite": "AS_421",
+    "spriteHidden": "AS_Green_419",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 422,
+    "sprite": "AS_422",
+    "spriteHidden": "AS_Green_419",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 423,
+    "sprite": "AS_423",
+    "spriteHidden": "AS_Green_419",
+    "kind": 0,
+    "colors": [
+      20
+    ]
+  },
+  {
+    "type": 424,
+    "sprite": "AS_424",
+    "spriteHidden": "AS_Green_424",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 425,
+    "sprite": "AS_425",
+    "spriteHidden": "AS_Green_424",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 426,
+    "sprite": "AS_426",
+    "spriteHidden": "AS_Green_424",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 427,
+    "sprite": "AS_427",
+    "spriteHidden": "AS_Green_424",
+    "kind": 0,
+    "colors": [
+      16
+    ]
+  },
+  {
+    "type": 428,
+    "sprite": "AS_428",
+    "spriteHidden": "AS_Green_424",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 429,
+    "sprite": "AS_429",
+    "spriteHidden": "AS_Green_429",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 430,
+    "sprite": "AS_430",
+    "spriteHidden": "AS_Green_429",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 431,
+    "sprite": "AS_431",
+    "spriteHidden": "AS_Green_429",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 432,
+    "sprite": "AS_432",
+    "spriteHidden": "AS_Green_429",
+    "kind": 0,
+    "colors": [
+      2,
+      0
+    ]
+  },
+  {
+    "type": 433,
+    "sprite": "AS_433",
+    "spriteHidden": "AS_Green_429",
+    "kind": 0,
+    "colors": [
+      21
+    ]
+  },
+  {
+    "type": 434,
+    "sprite": "AS_434",
+    "spriteHidden": "AS_Green_434",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 435,
+    "sprite": "AS_435",
+    "spriteHidden": "AS_Green_434",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 436,
+    "sprite": "AS_436",
+    "spriteHidden": "AS_Green_434",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 437,
+    "sprite": "AS_437",
+    "spriteHidden": "AS_Green_434",
+    "kind": 0,
+    "colors": [
+      0,
+      23
+    ]
+  },
+  {
+    "type": 438,
+    "sprite": "AS_438",
+    "spriteHidden": "AS_Green_434",
+    "kind": 0,
+    "colors": [
+      13
+    ]
+  },
+  {
+    "type": 439,
+    "sprite": "AS_439",
+    "spriteHidden": "AS_Green_439",
+    "kind": 0,
+    "colors": [
+      22,
+      8
+    ]
+  },
+  {
+    "type": 440,
+    "sprite": "AS_440",
+    "spriteHidden": "AS_Green_439",
+    "kind": 0,
+    "colors": [
+      2,
+      8
+    ]
+  },
+  {
+    "type": 441,
+    "sprite": "AS_441",
+    "spriteHidden": "AS_Green_439",
+    "kind": 0,
+    "colors": [
+      13,
+      8
+    ]
+  },
+  {
+    "type": 442,
+    "sprite": "AS_442",
+    "spriteHidden": "AS_Green_439",
+    "kind": 0,
+    "colors": [
+      6,
+      8
+    ]
+  },
+  {
+    "type": 443,
+    "sprite": "AS_443",
+    "spriteHidden": "AS_Green_439",
+    "kind": 0,
+    "colors": [
+      10,
+      2
+    ]
+  },
+  {
+    "type": 444,
+    "sprite": "AS_444",
+    "spriteHidden": "AS_Green_444",
+    "kind": 0,
+    "colors": [
+      0,
+      2
+    ]
+  },
+  {
+    "type": 445,
+    "sprite": "AS_445",
+    "spriteHidden": "AS_Green_444",
+    "kind": 0,
+    "colors": [
+      10,
+      2
+    ]
+  },
+  {
+    "type": 446,
+    "sprite": "AS_446",
+    "spriteHidden": "AS_Green_444",
+    "kind": 0,
+    "colors": [
+      3,
+      8
+    ]
+  },
+  {
+    "type": 447,
+    "sprite": "AS_447",
+    "spriteHidden": "AS_Green_444",
+    "kind": 0,
+    "colors": [
+      4,
+      8
+    ]
+  },
+  {
+    "type": 448,
+    "sprite": "AS_448",
+    "spriteHidden": "AS_Green_444",
+    "kind": 0,
+    "colors": [
+      10,
+      8
+    ]
+  },
+  {
+    "type": 449,
+    "sprite": "AS_449",
+    "spriteHidden": "AS_Green_449",
+    "kind": 0,
+    "colors": [
+      0,
+      3
+    ]
+  },
+  {
+    "type": 450,
+    "sprite": "AS_450",
+    "spriteHidden": "AS_Green_449",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 451,
+    "sprite": "AS_451",
+    "spriteHidden": "AS_Green_449",
+    "kind": 0,
+    "colors": [
+      22,
+      8
+    ]
+  },
+  {
+    "type": 452,
+    "sprite": "AS_452",
+    "spriteHidden": "AS_Green_449",
+    "kind": 0,
+    "colors": [
+      10,
+      8
+    ]
+  },
+  {
+    "type": 453,
+    "sprite": "AS_453",
+    "spriteHidden": "AS_Green_449",
+    "kind": 0,
+    "colors": [
+      6,
+      8
+    ]
+  },
+  {
+    "type": 454,
+    "sprite": "AS_454",
+    "spriteHidden": "AS_Green_454",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 455,
+    "sprite": "AS_455",
+    "spriteHidden": "AS_Green_454",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 456,
+    "sprite": "AS_456",
+    "spriteHidden": "AS_Green_456",
+    "kind": 0,
+    "colors": [
+      8,
+      3
+    ]
+  },
+  {
+    "type": 457,
+    "sprite": "AS_457",
+    "spriteHidden": "AS_Green_456",
+    "kind": 0,
+    "colors": [
+      8,
+      10
+    ]
+  },
+  {
+    "type": 458,
+    "sprite": "AS_458",
+    "spriteHidden": "AS_Green_456",
+    "kind": 0,
+    "colors": [
+      9,
+      8
+    ]
+  },
+  {
+    "type": 459,
+    "sprite": "AS_459",
+    "spriteHidden": "AS_Green_459",
+    "kind": 0,
+    "colors": [
+      10,
+      9
+    ]
+  },
+  {
+    "type": 460,
+    "sprite": "AS_460",
+    "spriteHidden": "AS_Green_459",
+    "kind": 0,
+    "colors": [
+      22,
+      9
+    ]
+  },
+  {
+    "type": 461,
+    "sprite": "AS_461",
+    "spriteHidden": "AS_Green_459",
+    "kind": 0,
+    "colors": [
+      16
+    ]
+  },
+  {
+    "type": 462,
+    "sprite": "AS_462",
+    "spriteHidden": "AS_Green_459",
+    "kind": 0,
+    "colors": [
+      9,
+      8
+    ]
+  },
+  {
+    "type": 463,
+    "sprite": "AS_463",
+    "spriteHidden": "AS_Green_463",
+    "kind": 0,
+    "colors": [
+      13,
+      8
+    ]
+  },
+  {
+    "type": 464,
+    "sprite": "AS_464",
+    "spriteHidden": "AS_Green_463",
+    "kind": 0,
+    "colors": [
+      2,
+      9
+    ]
+  },
+  {
+    "type": 465,
+    "sprite": "AS_465",
+    "spriteHidden": "AS_Green_465",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 466,
+    "sprite": "AS_466",
+    "spriteHidden": "AS_Green_465",
+    "kind": 0,
+    "colors": [
+      16,
+      9
+    ]
+  },
+  {
+    "type": 467,
+    "sprite": "AS_467",
+    "spriteHidden": "AS_Green_465",
+    "kind": 0,
+    "colors": [
+      10,
+      9
+    ]
+  },
+  {
+    "type": 468,
+    "sprite": "AS_468",
+    "spriteHidden": "AS_Green_465",
+    "kind": 0,
+    "colors": [
+      10,
+      9
+    ]
+  },
+  {
+    "type": 469,
+    "sprite": "AS_469",
+    "spriteHidden": "AS_Green_469",
+    "kind": 0,
+    "colors": [
+      10,
+      9
+    ]
+  },
+  {
+    "type": 470,
+    "sprite": "AS_470",
+    "spriteHidden": "AS_Green_469",
+    "kind": 0,
+    "colors": [
+      13,
+      9
+    ]
+  },
+  {
+    "type": 471,
+    "sprite": "AS_471",
+    "spriteHidden": "AS_Green_469",
+    "kind": 0,
+    "colors": [
+      3,
+      9
+    ]
+  },
+  {
+    "type": 472,
+    "sprite": "AS_472",
+    "spriteHidden": "AS_Green_469",
+    "kind": 0,
+    "colors": [
+      2,
+      9
+    ]
+  },
+  {
+    "type": 473,
+    "sprite": "AS_473",
+    "spriteHidden": "AS_Green_469",
+    "kind": 0,
+    "colors": [
+      8,
+      9
+    ]
+  },
+  {
+    "type": 474,
+    "sprite": "AS_474",
+    "spriteHidden": "AS_Green_474",
+    "kind": 0,
+    "colors": [
+      13,
+      0
+    ]
+  },
+  {
+    "type": 475,
+    "sprite": "AS_475",
+    "spriteHidden": "AS_Green_474",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 476,
+    "sprite": "AS_476",
+    "spriteHidden": "AS_Green_474",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 477,
+    "sprite": "AS_477",
+    "spriteHidden": "AS_Green_474",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 478,
+    "sprite": "AS_478",
+    "spriteHidden": "AS_Green_474",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 479,
+    "sprite": "AS_479",
+    "spriteHidden": "AS_Green_474",
+    "kind": 0,
+    "colors": [
+      9
+    ]
+  },
+  {
+    "type": 480,
+    "sprite": "AS_480",
+    "spriteHidden": "AS_Green_480",
+    "kind": 0,
+    "colors": [
+      8
+    ]
+  },
+  {
+    "type": 481,
+    "sprite": "AS_481",
+    "spriteHidden": "AS_Green_480",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 482,
+    "sprite": "AS_482",
+    "spriteHidden": "AS_Green_480",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 483,
+    "sprite": "AS_483",
+    "spriteHidden": "AS_Green_480",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 484,
+    "sprite": "AS_484",
+    "spriteHidden": "AS_Green_480",
+    "kind": 0,
+    "colors": [
+      2
+    ]
+  },
+  {
+    "type": 485,
+    "sprite": "AS_485",
+    "spriteHidden": "AS_485green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 486,
+    "sprite": "AS_486",
+    "spriteHidden": "AS_486green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 487,
+    "sprite": "AS_487",
+    "spriteHidden": "AS_485green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 488,
+    "sprite": "AS_488",
+    "spriteHidden": "AS_486green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 489,
+    "sprite": "AS_489",
+    "spriteHidden": "AS_486green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 490,
+    "sprite": "AS_490",
+    "spriteHidden": "AS_490green",
+    "kind": 0,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 491,
+    "sprite": "AS_491",
+    "spriteHidden": "AS_490green",
+    "kind": 0,
+    "colors": [
+      11
+    ]
+  },
+  {
+    "type": 492,
+    "sprite": "AS_492",
+    "spriteHidden": "AS_490green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 493,
+    "sprite": "AS_493",
+    "spriteHidden": "AS_493green",
+    "kind": 0,
+    "colors": [
+      10
+    ]
+  },
+  {
+    "type": 494,
+    "sprite": "AS_494",
+    "spriteHidden": "AS_493green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 495,
+    "sprite": "AS_495",
+    "spriteHidden": "AS_493green",
+    "kind": 0,
+    "colors": [
+      22
+    ]
+  },
+  {
+    "type": 496,
+    "sprite": "AS_496",
+    "spriteHidden": "AS_496green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 497,
+    "sprite": "AS_497",
+    "spriteHidden": "AS_497Green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 498,
+    "sprite": "AS_498",
+    "spriteHidden": "AS_498green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 499,
+    "sprite": "AS_499",
+    "spriteHidden": "AS_499green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 500,
+    "sprite": "AS_500",
+    "spriteHidden": "AS_499green",
+    "kind": 0,
+    "colors": [
+      0
+    ]
+  },
+  {
+    "type": 501,
+    "sprite": "AS_501",
+    "spriteHidden": "AS_499green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 502,
+    "sprite": "AS_502",
+    "spriteHidden": "AS_496green",
+    "kind": 0,
+    "colors": [
+      3
+    ]
+  },
+  {
+    "type": 503,
+    "sprite": "AS_503",
+    "spriteHidden": "AS_496green",
+    "kind": 0,
+    "colors": [
+      1
+    ]
+  },
+  {
+    "type": 504,
+    "sprite": "AS_504",
+    "spriteHidden": "AS_496green",
+    "kind": 0,
+    "colors": [
+      6
+    ]
+  },
+  {
+    "type": 505,
+    "sprite": "AS_505",
+    "spriteHidden": "AS_498green",
+    "kind": 0,
+    "colors": [
+      4
+    ]
+  },
+  {
+    "type": 506,
+    "sprite": "2D_Ingame_GoldenGift_collect_item",
+    "spriteHidden": null,
+    "kind": 0,
+    "colors": []
+  }
+]
