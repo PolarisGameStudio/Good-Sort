@@ -33,7 +33,7 @@ public class PowerupSwap : MonoBehaviour
         StartCoroutine(StartAnim());
         var Cells = listCellAllGame.Where(x => x != null && !x.IsLock).ToList();
 
-        Shuffle(Cells);
+        HelperManager.Shuffle(Cells);
 
         var celsLayerCount = Cells.Where(x => x.CellType == CellType.CellLayerCount).ToList();
         var celsSingle = Cells.Where(x => x.CellType == CellType.CellSingle).ToList();
@@ -369,17 +369,7 @@ public class PowerupSwap : MonoBehaviour
         return listIem;
     }
 
-    void Shuffle<T>(List<T> list)
-    {
-        for (int i = list.Count - 1; i > 0; i--)
-        {
-            int randomIndex = UnityEngine.Random.Range(0, i + 1);
-            T temp = list[i];
-            list[i] = list[randomIndex];
-            list[randomIndex] = temp;
-        }
-    }
-
+   
     public IEnumerator StartAnim()
     {
         _anim.AnimationState.SetAnimation(0, "Start", false);

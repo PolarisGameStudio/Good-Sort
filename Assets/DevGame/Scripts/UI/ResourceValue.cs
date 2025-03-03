@@ -18,9 +18,13 @@ public class ResourceValue
 
 	public ResourceValue(int type, float value)
 	{
-	}
+        this.type = type;
+        this.value = value;
+    }
 
 	public ResourceValue(ResourceType type, float value)
 	{
-	}
+		this.type = (int)type;
+		this.value = value;
+    }
 }

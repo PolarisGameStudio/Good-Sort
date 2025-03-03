@@ -5,6 +5,8 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Coffee.UIExtensions;
 using DG.Tweening;
+using Spine;
+using Spine.Unity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -64,6 +66,9 @@ public class UIEndGame_Showcase : MonoBehaviour
     public Slider progressLevel = null;
 	public TextMeshProUGUI txtMeshComplete = null;
 
+	[Header("skeChes")]
+	public SkeletonGraphic skeChes = null;
+
     public static void ConfirmClickClaimGold()
 	{
 
@@ -89,9 +94,46 @@ public class UIEndGame_Showcase : MonoBehaviour
 		yield return new WaitForSeconds(0.25f);
         if (HelperManager.DataPlayer.NumWinLevel == 5)
         {
-			HelperManager.DataPlayer.NumWinLevel = 0;
+            HelperManager.DataPlayer.NumWinLevel = 0;
+            OnShowUnLockReward();
+            yield return new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
         }
+    }
+
+	private void OnShowUnLockReward()
+	{
         UIPopup_UnlockRewards.Show();
+
+        List<ResourceType> resourceTypes = new List<ResourceType>() {
+            ResourceType.Powerup_BreakItem,
+            ResourceType.Powerup_Replace,
+            ResourceType.Powerup_Freeze ,
+            ResourceType.Powerup_Swap,
+            ResourceType.Booster_X2_Star,
+            ResourceType.Booster_BreakItem,
+            ResourceType.Booster_Time,
+        };
+
+        int rand = UnityEngine.Random.Range(1, 3);
+
+        rand = 3;
+
+        HelperManager.Shuffle(resourceTypes);
+
+        List<ResourceType> listType = new();
+
+        for (int i = 0; i < rand; i++)
+        {
+            listType.Add(resourceTypes[0]);
+            resourceTypes.RemoveAt(0);
+        }
+        List<ResourceValue> listValue = new();
+        foreach (var ty in listType)
+        {
+            listValue.Add(new(ty, 2));
+        }
+        UIPopup_UnlockRewards.Instance.UpdateUI_SkeletonChest(skeChes, listValue, 0.01f, 0.425f);
     }
 
     private IEnumerator StartPlayAnimConverStar()

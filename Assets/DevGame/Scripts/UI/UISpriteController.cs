@@ -31,37 +31,9 @@ public class UISpriteController : Singleton<UISpriteController>
 
 	public Sprite sprNoTeamIcon;
 
-	public void SetImageResource(ResourceType type, Image image, float scale = 1f)
-	{
-	}
-
-	public void SetImageResource_Shop(ResourceType type, Image image, float scale = 1f)
-	{
-	}
-
 	public float GetScale(ResourceType type)
 	{
 		return 0f;
-	}
-
-	public void SetImageAvatar(int id, Image image)
-	{
-	}
-
-	public void SetMyImageAvatar(UserProfile userProfile, Image image)
-	{
-	}
-
-	public void SetMyFacebookAvatar(UserProfile userProfile, RawImage rawImage)
-	{
-	}
-
-	public void SetImageAvatar(UserProfile userProfile, Image image)
-	{
-	}
-
-	public void SetRawImageAvatar(UserProfile userProfile, RawImage rawImage)
-	{
 	}
 
 	public Sprite GetFrameAvatarProfile(bool isPremium)
@@ -71,17 +43,14 @@ public class UISpriteController : Singleton<UISpriteController>
 
 	public Sprite GetIconMasterPassChest(int index)
 	{
+		foreach(var item in resource_headline.icons)
+		{
+			if ((ResourceType)index == item.type)
+			{
+				return item.spr;
+			}
+		}
 		return null;
-	}
-
-	public Sprite GetGoldenGiftItem()
-	{
-		return null;
-	}
-
-	public int GetGoldenGiftId()
-	{
-		return 0;
 	}
 
 	public Sprite GetGoldenGiftItemForIngame()
