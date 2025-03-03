@@ -1,0 +1,298 @@
+Spine_UI_Headline.png
+	size: 1076, 1076
+	pma: true
+Balloon0
+	bounds: 967, 664, 103, 71
+	offsets: 1, 1, 105, 73
+Balloon1
+	bounds: 810, 550, 87, 56
+	offsets: 1, 1, 89, 58
+Balloon2
+	bounds: 901, 587, 88, 56
+	offsets: 1, 1, 90, 58
+	rotate: 90
+Balloon3
+	bounds: 276, 708, 104, 137
+	offsets: 1, 1, 106, 139
+Balloon4
+	bounds: 616, 608, 97, 68
+	offsets: 1, 1, 99, 70
+Flag1
+	bounds: 2, 562, 284, 272
+	rotate: 90
+Flag2
+	bounds: 2, 306, 254, 227
+	rotate: 90
+Flag3
+	bounds: 2, 50, 254, 227
+	rotate: 90
+Icon_Bronze
+	bounds: 959, 580, 82, 83
+	offsets: 1, 1, 84, 85
+	rotate: 90
+Icon_Bronze_0
+	bounds: 644, 504, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_1
+	bounds: 553, 451, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_10
+	bounds: 899, 496, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_11
+	bounds: 984, 496, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_12
+	bounds: 729, 466, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_13
+	bounds: 814, 466, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_14
+	bounds: 638, 420, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_15
+	bounds: 493, 367, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_16
+	bounds: 401, 319, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_17
+	bounds: 899, 412, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_2
+	bounds: 984, 412, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_3
+	bounds: 723, 382, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_4
+	bounds: 808, 382, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_5
+	bounds: 578, 336, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_6
+	bounds: 486, 283, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_7
+	bounds: 401, 235, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_8
+	bounds: 316, 193, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Bronze_9
+	bounds: 893, 328, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Gold
+	bounds: 276, 598, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_0
+	bounds: 361, 598, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_1
+	bounds: 382, 737, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_10
+	bounds: 231, 277, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_11
+	bounds: 231, 167, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_12
+	bounds: 231, 57, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_13
+	bounds: 316, 277, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_14
+	bounds: 383, 488, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_15
+	bounds: 383, 403, 108, 83
+	offsets: 1, 1, 110, 85
+Icon_Gold_16
+	bounds: 446, 627, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_17
+	bounds: 467, 737, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_18
+	bounds: 468, 517, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_19
+	bounds: 531, 627, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_2
+	bounds: 552, 737, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_3
+	bounds: 637, 763, 108, 83
+	offsets: 1, 1, 110, 85
+Icon_Gold_4
+	bounds: 747, 763, 108, 83
+	offsets: 1, 1, 110, 85
+Icon_Gold_5
+	bounds: 857, 762, 108, 83
+	offsets: 1, 1, 110, 85
+Icon_Gold_6
+	bounds: 967, 737, 108, 83
+	offsets: 1, 1, 110, 85
+	rotate: 90
+Icon_Gold_7
+	bounds: 637, 678, 108, 83
+	offsets: 1, 1, 110, 85
+Icon_Gold_8
+	bounds: 747, 678, 108, 83
+	offsets: 1, 1, 110, 85
+Icon_Gold_9
+	bounds: 857, 677, 108, 83
+	offsets: 1, 1, 110, 85
+Icon_Silver
+	bounds: 978, 328, 82, 83
+	offsets: 1, 1, 84, 85
+	rotate: 90
+Icon_Silver_0
+	bounds: 316, 108, 82, 83
+	offsets: 14, 1, 110, 85
+Icon_Silver_1
+	bounds: 316, 23, 82, 83
+	offsets: 14, 1, 110, 85
+Icon_Silver_10
+	bounds: 400, 108, 82, 83
+	offsets: 14, 1, 110, 85
+Icon_Silver_11
+	bounds: 400, 23, 82, 83
+	offsets: 14, 1, 110, 85
+Icon_Silver_12
+	bounds: 663, 298, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Silver_13
+	bounds: 571, 252, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Silver_14
+	bounds: 486, 199, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Silver_15
+	bounds: 748, 298, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Silver_16
+	bounds: 484, 114, 82, 83
+	offsets: 14, 1, 110, 85
+Icon_Silver_17
+	bounds: 484, 29, 82, 83
+	offsets: 14, 1, 110, 85
+Icon_Silver_18
+	bounds: 568, 114, 82, 83
+	offsets: 14, 1, 110, 85
+Icon_Silver_19
+	bounds: 568, 29, 82, 83
+	offsets: 14, 1, 110, 85
+Icon_Silver_2
+	bounds: 833, 244, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Silver_3
+	bounds: 918, 244, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Silver_4
+	bounds: 656, 214, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Silver_5
+	bounds: 741, 214, 82, 83
+	offsets: 14, 1, 110, 85
+	rotate: 90
+Icon_Silver_6
+	bounds: 652, 129, 82, 83
+	offsets: 14, 1, 110, 85
+Icon_Silver_7
+	bounds: 652, 44, 82, 83
+	offsets: 14, 1, 110, 85
+Icon_Silver_8
+	bounds: 736, 129, 82, 83
+	offsets: 14, 1, 110, 85
+Icon_Silver_9
+	bounds: 736, 44, 82, 83
+	offsets: 14, 1, 110, 85
+LightStar0
+	bounds: 1003, 264, 62, 63
+	offsets: 7, 8, 77, 77
+	rotate: 90
+LightStar1
+	bounds: 571, 199, 50, 51
+	offsets: 5, 6, 62, 62
+LightStar2
+	bounds: 693, 4, 37, 38
+	offsets: 3, 5, 47, 47
+New_Headline
+	bounds: 2, 848, 868, 225
+New_Headline_Left
+	bounds: 872, 847, 226, 165
+	rotate: 90
+Star0
+	bounds: 652, 2, 40, 39
+	offsets: 2, 1, 43, 41
+	rotate: 90
+Star0_Trail
+	bounds: 833, 331, 56, 49
+Star1
+	bounds: 1003, 201, 62, 61
+	offsets: 1, 1, 64, 63
+Star1_Trail
+	bounds: 810, 608, 67, 89
+	rotate: 90
+Star2
+	bounds: 732, 4, 38, 38
+	offsets: 2, 1, 41, 40
+Star2_Trail
+	bounds: 401, 193, 57, 40
+Star3
+	bounds: 826, 181, 62, 61
+	offsets: 1, 1, 65, 63
+Star3_Trail
+	bounds: 553, 535, 71, 89
+	rotate: 90
+Trumpet_Down
+	bounds: 715, 588, 93, 88
+	offsets: 5, 7, 100, 96
+Trumpet_Up
+	bounds: 231, 387, 173, 150
+	offsets: 1, 3, 176, 154
+	rotate: 90

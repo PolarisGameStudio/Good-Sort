@@ -86,6 +86,7 @@ public class UIEndGame_Showcase : MonoBehaviour
 		yield return new WaitForEndOfFrame();
 		float Move = (float) HelperManager.DataPlayer.NumWinLevel / 5.0f;
 		progressLevel.DOValue(Move, 0.25f);
+		yield return new WaitForSeconds(0.25f);
         if (HelperManager.DataPlayer.NumWinLevel == 5)
         {
 			HelperManager.DataPlayer.NumWinLevel = 0;
