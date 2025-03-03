@@ -91,7 +91,15 @@ public class GenLevelController : Singleton<GenLevelController>
 
     private void Start()
     {
-		LevelId = PlayerPrefs.GetInt("level_", 0);
+		List<string> Name = new List<string>();
+		foreach(var json in _levelData.listLevels)
+		{
+            var infoLevel = json.sOLevels[0];
+			var name = infoLevel.name;
+            Name.Add(name);
+        }
+
+        LevelId = PlayerPrefs.GetInt("level_", 0);
 		LevelId += -1;
         int index = 0;
 		List<int> listint = new();
