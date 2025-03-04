@@ -117,6 +117,7 @@ public class LogicGame : Singleton<LogicGame>
             _timePlayGame = level.timeToPlay;
         }
 
+        _timePlayGame = 5;
 
         textTimePlay.text = GetTimePlayGame();
 
@@ -1188,10 +1189,13 @@ public class LogicGame : Singleton<LogicGame>
     private void GameOver(bool isWin)
     {
         isGameOver = true;
-
-        if(isGameOver)
+        if(isWin)
         {
             StartCoroutine(StartGameOver());
+        }
+        else
+        {
+            UIPopup_EndGame_TimeUp.Show();
         }
     }
 
