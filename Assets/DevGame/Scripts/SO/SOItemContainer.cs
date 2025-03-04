@@ -18,14 +18,7 @@ public class DataSoItemItemAsset
 
 public class SOItemContainer : Singleton<SOItemContainer>
 {
-
 	List<DataSoItemItemAsset> dataSoItemItemAssets = new();
-
-    [SerializeField]
-	private SOItem _sOItem;
-
-	[SerializeField]
-	private SOItemSeasonal _sOItemSeasonal;
 
 	private Dictionary<ItemType, ItemAsset> _dicItem = new();
 

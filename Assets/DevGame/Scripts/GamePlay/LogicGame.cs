@@ -49,9 +49,9 @@ public class LogicGame : Singleton<LogicGame>
     [SerializeField] TextMeshProUGUI textTimePlay;
     [SerializeField] TextMeshProUGUI textLevel;
     private bool isShowWarnning = false;
-
     void Start()
     {
+        Application.targetFrameRate = 60;
         imgProgress.fillAmount = 0;
         DisableTextCombo();
         sizeCamera = GetSizeCameraInWord();
