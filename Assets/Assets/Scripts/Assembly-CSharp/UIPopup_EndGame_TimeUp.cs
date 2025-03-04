@@ -17,6 +17,9 @@ public class UIPopup_EndGame_TimeUp : Dialog<UIPopup_EndGame_TimeUp>
 
 	public Button btnExit;
 
+	public Button btnBuyCoin;
+	public Button btnWachAds;
+
 	public UIPopup popupKeepChallenging;
 
 	public Popup[] popups;
@@ -25,11 +28,25 @@ public class UIPopup_EndGame_TimeUp : Dialog<UIPopup_EndGame_TimeUp>
 
 	private void OnEnable()
 	{
-	}
+		btnBuyCoin.onClick.RemoveAllListeners();
+		btnWachAds.onClick.RemoveAllListeners();
+
+        btnBuyCoin.onClick.AddListener(() => {
+			NextStack();
+
+        });
+
+        btnWachAds.onClick.AddListener(() => {
+            NextStack();
+        });
+
+    }
 
 	public void NextStack()
 	{
-	}
+        LogicGame.Instance.OnBossterTimeUp();
+        onClose();
+    }
 
     public static void Show()
     {

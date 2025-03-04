@@ -57,7 +57,6 @@ public class LogicGame : Singleton<LogicGame>
         sizeCamera = GetSizeCameraInWord();
         OnLoadLevel();
         isShowWarnning = false;
-        BoosterInGameController.Instance.ActiveBooster(BoosterKind.X2_Star);
     }
 
     public static Vector2 GetSizeCameraInWord()
@@ -448,7 +447,6 @@ public class LogicGame : Singleton<LogicGame>
             }
         }
     }
-
 
     void ResetPoint(List<Cell> listCell)
     {
@@ -1188,6 +1186,7 @@ public class LogicGame : Singleton<LogicGame>
     private bool isGameOver = false;
     private void GameOver(bool isWin)
     {
+        _warningLowTimeToPlay.SetActiveFx(false);
         isGameOver = true;
         if(isWin)
         {
@@ -1208,6 +1207,11 @@ public class LogicGame : Singleton<LogicGame>
       //  OnNextLevel();
     }
 
+    public void OnBossterTimeUp()
+    {
+        isGameOver = false;
+        BoosterInGameController.Instance.ActiveBooster(BoosterKind.IncreaseTime);
+    }
 
     #endregion
 

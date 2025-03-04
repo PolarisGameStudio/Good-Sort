@@ -48736,6 +48736,8 @@ MonoBehaviour:
   NameParent: Canvas_Layer_100
   getmore: {fileID: 116455627031970594}
   btnExit: {fileID: 1778752577514964474}
+  btnBuyCoin: {fileID: 8616440982899973866}
+  btnWachAds: {fileID: 5653512788539205964}
   popupKeepChallenging: {fileID: 0}
   popups:
   - type: 0
