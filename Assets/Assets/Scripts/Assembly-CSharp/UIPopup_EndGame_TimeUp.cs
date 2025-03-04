@@ -36,6 +36,10 @@ public class UIPopup_EndGame_TimeUp : Dialog<UIPopup_EndGame_TimeUp>
 
         });
 
+        btnExit.onClick.AddListener(() => {
+            HelperManager.OnBackHomeScene();
+        });
+
         btnWachAds.onClick.AddListener(() => {
             NextStack();
         });

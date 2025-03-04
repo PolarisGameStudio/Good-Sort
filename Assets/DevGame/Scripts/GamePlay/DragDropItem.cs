@@ -59,6 +59,7 @@ public class DragDropItem : MonoBehaviour
                             isDragSucess = true;
                             Debug.Log("current_cell_" + cell.name);
                             trObjDrag.CheckEndItem(cell);
+                            LogicGame.Instance.UserClickScreen();
                             break;
                         }
                     }

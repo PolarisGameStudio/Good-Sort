@@ -73,9 +73,7 @@ public class GenLevelController : Singleton<GenLevelController>
 
 	public LevelInfo GetDataLevel()
 	{
-		LevelId++;
-
-		PlayerPrefs.SetInt("level_", LevelId);
+		LevelId = HelperManager.DataPlayer.LevelID;
 
         var txt = Resources.Load<TextAsset>("Json/da_level");
         var levels = JsonConvert.DeserializeObject<List<string>>(txt.text);

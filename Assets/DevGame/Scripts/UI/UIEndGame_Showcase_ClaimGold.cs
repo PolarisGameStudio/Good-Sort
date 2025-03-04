@@ -150,15 +150,18 @@ public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
 	private void OnWatchAdsComplete(int gold)
 	{
 		StopMachine();
+        UIPopup_Booster.Show();
     }
 
-	public void UpdateUI(int gold)
+    public void UpdateUI(int gold)
 	{
 	}
 
 	public void OnComPlete()
 	{
         StopMachine();
+
+        UIPopup_Booster.Show();
     }
 
     private void StopMachine()

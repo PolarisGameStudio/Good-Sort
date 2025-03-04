@@ -66,10 +66,15 @@ public static class HelperManager
         return canvasPoint;
     }
 
+    public static void OnPlayGame()
+    {
+        OnLoadScene(ScStatic.GAME_SCENE);
+    }
+
     public static void OnBackHomeScene()
     {
 
-        OnLoadScene(ScStatic.GAME_SCENE);
+        OnLoadScene(ScStatic.HOME_SCENE);
     }
 
     public static Vector2 GetSizeCameraInWord()
@@ -85,6 +90,43 @@ public static class HelperManager
     {
         await PreloadSceneAsync(scene, mode, callback);
        // UnityEngine.SceneManagement.SceneManager.LoadScene(scene, mode);
+    }
+
+    public static bool IsLoadGameSceneSucess = false;
+    public static AsyncOperation callbackLoadScene = null;
+
+    public static async UniTask OnLoadGameScene()
+    {
+        if(callbackLoadScene != null)
+        {
+            return;
+        }
+        IsLoadGameSceneSucess = false;
+        callbackLoadScene = null;
+
+        await UniTask.Yield();
+        await UniTask.Yield();
+        await UniTask.Yield();
+
+        OnLoadScene(ScStatic.GAME_SCENE, LoadSceneMode.Single, scene => {
+            callbackLoadScene = scene;
+            IsLoadGameSceneSucess = true;
+        });
+    }
+
+    public static async void ShowGameScene()
+    {
+        while (true)
+        {
+            if(IsLoadGameSceneSucess)
+            {
+                break;
+            }
+            await UniTask.Yield();
+        }
+
+        callbackLoadScene.allowSceneActivation = true;
+        callbackLoadScene = null;
     }
 
 
@@ -113,8 +155,6 @@ public static class HelperManager
             asyncOperation.allowSceneActivation = true;
         }
     }
-
-
 
     #endregion
 

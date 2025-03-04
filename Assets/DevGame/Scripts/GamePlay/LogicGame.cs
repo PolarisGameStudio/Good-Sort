@@ -49,6 +49,17 @@ public class LogicGame : Singleton<LogicGame>
     [SerializeField] TextMeshProUGUI textTimePlay;
     [SerializeField] TextMeshProUGUI textLevel;
     private bool isShowWarnning = false;
+
+    public bool IsStartGame = false;
+    private bool IsPlayBooster = true;
+    private bool isPauseGame
+    {
+        get
+        {
+            return IsUseSkillGame || !IsStartGame || IsPlayBooster || IsUseSkillFreeze;
+        }
+    }
+
     void Start()
     {
         Application.targetFrameRate = 60;
@@ -57,6 +68,12 @@ public class LogicGame : Singleton<LogicGame>
         sizeCamera = GetSizeCameraInWord();
         OnLoadLevel();
         isShowWarnning = false;
+        this.StartCoroutine(OnPlayBooster());
+    }
+
+    public void UserClickScreen()
+    {
+        IsStartGame = true;
     }
 
     public static Vector2 GetSizeCameraInWord()
@@ -115,8 +132,6 @@ public class LogicGame : Singleton<LogicGame>
         {
             _timePlayGame = level.timeToPlay;
         }
-
-        _timePlayGame = 5;
 
         textTimePlay.text = GetTimePlayGame();
 
@@ -641,7 +656,7 @@ public class LogicGame : Singleton<LogicGame>
         float timeCurrentCombo = _timeCombo;
         while (true)
         {
-            if(IsUseSkillFreeze || IsUseSkillGame)
+            if(isPauseGame)
             {
                 yield return null;
                 continue;
@@ -781,11 +796,16 @@ public class LogicGame : Singleton<LogicGame>
 
             if(index == count)
             {
-                GameOver(true);
+                StartCoroutine(GameOver(true));
             }    
-        }    
+        }
 
-        if(IsUseSkillGame || IsUseSkillFreeze)
+        if (isPauseGame)
+        {
+            return;
+        }
+
+        if (IsUseSkillGame || IsUseSkillFreeze)
         {
             return;
         }    
@@ -803,7 +823,7 @@ public class LogicGame : Singleton<LogicGame>
 
         if(_timePlayGame <= 0)
         {
-            GameOver(false);
+            StartCoroutine(GameOver(false));
             Debug.Log("game_over");
             return;
         }
@@ -1163,6 +1183,49 @@ public class LogicGame : Singleton<LogicGame>
 
     #region Bosster
 
+    private IEnumerator OnPlayBooster()
+    {
+        IsPlayBooster = true;
+        if (ScStatic.ListBoosterStart.Count > 0)
+        {
+            if (ScStatic.ListBoosterStart.Contains(BoosterKind.X2_Star))
+            {
+                BoosterInGameController.Instance.ActiveBooster(BoosterKind.X2_Star);
+            }
+
+            if (ScStatic.ListBoosterStart.Contains(BoosterKind.BreakItem))
+            {
+                BoosterInGameController.Instance.ActiveBooster(BoosterKind.BreakItem);
+
+                while (true)
+                {
+                    if (!IsUseSkillGame)
+                    {
+                        break;
+                    }
+                    yield return null;
+                }
+            }
+
+            if (ScStatic.ListBoosterStart.Contains(BoosterKind.IncreaseTime))
+            {
+                yield return new WaitForEndOfFrame();
+                BoosterInGameController.Instance.ActiveBooster(BoosterKind.IncreaseTime);
+                while (true)
+                {
+                    if (!IsUseSkillGame)
+                    {
+                        break;
+                    }
+                    yield return null;
+                }
+            }
+
+            ScStatic.ListBoosterStart.Clear();
+        }
+        IsPlayBooster = false;
+    }
+
     public void OnBossterTimeBonus(Transform ob)
     {
         IsUseSkillGame = true;
@@ -1184,12 +1247,19 @@ public class LogicGame : Singleton<LogicGame>
     #region End Game
     [Header("End Game")]
     private bool isGameOver = false;
-    private void GameOver(bool isWin)
+    private IEnumerator GameOver(bool isWin)
     {
-        _warningLowTimeToPlay.SetActiveFx(false);
         isGameOver = true;
+
+        while(IsUseSkillGame || IsPlayBooster)
+        {
+            yield return null;
+        }    
+
+        _warningLowTimeToPlay.SetActiveFx(false);
         if(isWin)
         {
+            HelperManager.DataPlayer.LevelID++;
             StartCoroutine(StartGameOver());
         }
         else
@@ -1202,8 +1272,8 @@ public class LogicGame : Singleton<LogicGame>
     {
         UIEndGame.Show();
         yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(1.0f);
         UIEndGame.Instance.EndGame(EndGameState.Win);
-        yield return new WaitForSeconds(3.0f);
       //  OnNextLevel();
     }
 
@@ -1212,6 +1282,19 @@ public class LogicGame : Singleton<LogicGame>
         isGameOver = false;
         BoosterInGameController.Instance.ActiveBooster(BoosterKind.IncreaseTime);
     }
+
+    #endregion
+
+    #region Show UI
+
+    public void OnSetting()
+    {
+        UI_Setting.Show();
+        IsPlayBooster = true;
+        UI_Setting.Instance.callbackShowSetting = () => {
+            IsPlayBooster = false;
+        };
+    }    
 
     #endregion
 
