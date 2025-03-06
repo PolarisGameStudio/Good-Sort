@@ -50,6 +50,8 @@ public class LogicGame : Singleton<LogicGame>
     [SerializeField] TextMeshProUGUI textLevel;
     private bool isShowWarnning = false;
 
+    public Dictionary<ItemType, float> ItemTypeScale = new();
+
     public bool IsStartGame = false;
     private bool IsPlayBooster = true;
     private bool isPauseGame
@@ -512,28 +514,28 @@ public class LogicGame : Singleton<LogicGame>
             {
                 
 
-                yMin = Mathf.Min(yMin, it.transform.position.y);
-                yMax = Mathf.Max(yMax, it.transform.position.y);
+                yMin = Mathf.Min(yMin, it.pYMin.transform.position.y);
+                yMax = Mathf.Max(yMax, it.pYMax.transform.position.y);
             }
 
             XMax = -99999; XMin = 99999;
 
-            var newCell1 = listCell.Where(x => (x.CellType == CellType.CellNormal || x.CellType == CellType.CellLayerCount) && x.MoveType == MoveType.Idle).Distinct().OrderBy(x => x.transform.position.y).ToList();
+            var newCell1 = listCell.Where(x => (x.CellType == CellType.CellNormal || x.CellType == CellType.CellLayerCount) && x.MoveType == MoveType.Idle || x.MoveType == MoveType.Bot || x.MoveType == MoveType.Top).Distinct().OrderBy(x => x.transform.position.y).ToList();
             if(newCell1.Count > 0)
             {
                 foreach (var it in newCell1)
                 {
-                    XMin = Mathf.Min(XMin, it.transform.position.x);
-                    XMax = Mathf.Max(XMax, it.transform.position.x);
+                    XMin = Mathf.Min(XMin, it.pXMin.transform.position.x);
+                    XMax = Mathf.Max(XMax, it.pXMax.transform.position.x);
                 }
             }
 
             var cellN = listCell.Where(x => x.MoveType == MoveType.Idle && x.CellType == CellType.CellLayerCount).ToList();
 
-            if(cellN.Count > 0)
+        /*    if(cellN.Count > 0)
             {
                 XMax += 1.4f;
-            }    
+            }    */
 
 
             float disYMaxMin = yMax - yMin;
@@ -550,12 +552,12 @@ public class LogicGame : Singleton<LogicGame>
                 it.transform.position = it.transform.position + new Vector3(poinXMid, ytt, 0);
             }
 
-            float distanceY = 4.5f;
+            float distanceY = 0.5f;
 
-            p2.transform.position = new Vector2(0, pyMid - 0.5f);
+         //   p2.transform.position = new Vector2(0, pyMid - 0.5f);
 
 
-            float distanceX = 3.6f;
+            float distanceX = 0.5f;
 
             float scale = 1;
 
@@ -585,7 +587,7 @@ public class LogicGame : Singleton<LogicGame>
             var pyMid = PTop.transform.position.y / 2 + PBot.transform.position.y / 2;
 
             XMax = -99999; XMin = 99999;
-            var newCell1 = listCell.Where(x => x.CellType == CellType.CellNormal || x.CellType == CellType.CellLayerCount && x.MoveType == MoveType.Idle).Distinct().OrderBy(x => x.transform.position.y).ToList();
+            var newCell1 = listCell.Where(x => x.CellType == CellType.CellNormal || x.CellType == CellType.CellLayerCount && x.MoveType == MoveType.Idle || x.MoveType == MoveType.Bot || x.MoveType == MoveType.Top).Distinct().OrderBy(x => x.transform.position.y).ToList();
             foreach (var it in listCell)
             {
                 XMin = Mathf.Min(XMin, it.transform.position.x);
@@ -776,28 +778,33 @@ public class LogicGame : Singleton<LogicGame>
         return string.Format("{0}:{1:D2}", time.Minutes, time.Seconds);
     }
 
-    private void Update()
+    public void CheckGameOver()
     {
-        if (isGameOver)
-        {
-            return;
-        }
         if (listCellAllGame.Count > 0)
         {
             int count = listCellAllGame.Count;
             int index = 0;
             foreach (var item in listCellAllGame)
             {
-                if(item == null || item.IsCheckCellBlank())
+                if (item == null || item.IsCheckCellBlank())
                 {
                     index++;
-                }    
+                }
             }
 
-            if(index == count)
+            if (index == count)
             {
                 StartCoroutine(GameOver(true));
-            }    
+            }
+        }
+
+    }
+
+    private void Update()
+    {
+        if (isGameOver)
+        {
+            return;
         }
 
         if (isPauseGame)
@@ -897,6 +904,24 @@ public class LogicGame : Singleton<LogicGame>
             }
         }
     }
+
+    public void AddScale(ItemType type, float scale)
+    {
+        if (ItemTypeScale.ContainsKey(type))
+        {
+            return;
+        }
+        ItemTypeScale.Add(type, scale);
+    }   
+    
+    public float GetScaleItem(ItemType type)
+    {
+        if (ItemTypeScale.ContainsKey(type))
+        {
+            return ItemTypeScale[type];
+        }
+        return 0;
+    }    
 
     #endregion
 
@@ -1039,6 +1064,7 @@ public class LogicGame : Singleton<LogicGame>
                
             }
             IsUseSkillGame = false;
+            CheckGameOver();
         });
     }
 
@@ -1058,6 +1084,7 @@ public class LogicGame : Singleton<LogicGame>
         _powerupSwap.OnSkillSwap(cell, p2.transform.position, () => {
             IsUseSkillGame = false;
             _powerupSwap.gameObject.SetActive(false);
+            CheckGameOver();
         });
     }
 
@@ -1165,6 +1192,7 @@ public class LogicGame : Singleton<LogicGame>
             AnimPlayGame.Instance.OnPlayAnimCombo(Vector3.zero, numCombo, null);
 
             IsUseSkillGame = false;
+            CheckGameOver();
         });
     }    
 
@@ -1233,6 +1261,7 @@ public class LogicGame : Singleton<LogicGame>
             IsUseSkillGame = false;
             ob.gameObject.SetActive(false);
             _timePlayGame += 60.0f;
+            textTimePlay.text = GetTimePlayGame();
             UICountDown.Instance.IncreaseTime(60);
         }).SetDelay(1.0f);
     }

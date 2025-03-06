@@ -22,6 +22,7 @@ public class UIPopup_Booster : Dialog<UIPopup_Booster>
     [SerializeField] Button btnPlayGame;
     [SerializeField] Button btnExit;
     [SerializeField] TextMeshProUGUI txtMesh;
+    public Action callbackClose;
 
     void Start()
     {
@@ -59,7 +60,7 @@ public class UIPopup_Booster : Dialog<UIPopup_Booster>
     }
     public static void Hide()
     {
-        Close();
+        Close(Instance.callbackClose);
     }
 
     public void onClose()

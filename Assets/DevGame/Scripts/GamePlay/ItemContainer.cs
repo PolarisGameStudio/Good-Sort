@@ -452,9 +452,11 @@ public class ItemContainer : MonoBehaviour
 		{
 			OnDestroyLayerItem(trObj);
 		}
-	}
 
-	public void OnNextLayerItem(bool isMeger)
+        LogicGame.Instance.CheckGameOver();
+    }
+
+    public void OnNextLayerItem(bool isMeger)
 	{
 		var currentLayer = listLayerItem[currentIndex];
 

@@ -50,6 +50,15 @@ public static class HelperManager
 
     public static Vector2 GetSizeOfCanvas(Canvas canvas)
     {
+        if(canvas == null)
+        {
+            if(ScStatic.SizeCanvas.x == 0)
+            {
+                return new Vector2(Screen.width, Screen.height);
+            }
+
+            return ScStatic.SizeCanvas;
+        }
         RectTransform canvasRect = canvas.GetComponent<RectTransform>();
         float width = canvasRect.rect.width;
         float height = canvasRect.rect.height;
@@ -73,8 +82,14 @@ public static class HelperManager
 
     public static void OnBackHomeScene()
     {
+        /*if (callbackLoadScene != null)
+        {
+            callbackLoadScene.allowSceneActivation = true;
+            callbackLoadScene.allowSceneActivation = false;
+            callbackLoadScene = null;
+        }*/
 
-        OnLoadScene(ScStatic.HOME_SCENE);
+        SceneManager.LoadScene(ScStatic.HOME_SCENE);
     }
 
     public static Vector2 GetSizeCameraInWord()
@@ -100,7 +115,8 @@ public static class HelperManager
         if(callbackLoadScene != null)
         {
             return;
-        }
+        }    
+        
         IsLoadGameSceneSucess = false;
         callbackLoadScene = null;
 

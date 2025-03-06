@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 
@@ -79,15 +80,27 @@ public class Item : MonoBehaviour
 
     public void CheckScale()
     {
-        transform.localScale = Vector3.one;
-        var sizeItem = _sprite.bounds.size;
+        var scale = LogicGame.Instance.GetScaleItem(ItemType);
 
-        float sx = 1.0f / sizeItem.x;
-
-        if (sx < 1.0f)
+        if(scale < 0.1f)
         {
-            transform.localScale = Vector3.one * sx;
+            var sizeItem = _sprite.bounds.size;
+
+            sizeItem.x = sizeItem.x / transform.localScale.x;
+            sizeItem.y = sizeItem.y / transform.localScale.x;
+
+
+            float sizeXMax = 1.1f;
+            float sizeYMax = 2f;
+
+            float sx = sizeXMax / sizeItem.x;
+            float sy = sizeYMax / sizeItem.y;
+            scale = Math.Min(sx, sy);
+            LogicGame.Instance.AddScale(ItemType, scale);
+
         }
+ 
+        transform.localScale = Vector3.one * scale;
 
         UpdateScaleCurrent(transform.localScale);
     }    
@@ -141,17 +154,17 @@ public class Item : MonoBehaviour
         {
             if (index == 0)
             {
-                point = new Vector3(-1, 0, 0);
+                point = ScStatic.PointItemLeft;
             }
 
             if (index == 1)
             {
-                point = new Vector3(0, 0, 0);
+                point = ScStatic.PointItemMid;
             }
 
             if (index == 2)
             {
-                point = new Vector3(1, 0, 0);
+                point = ScStatic.PointItemRight;
             }
         }
 
@@ -174,17 +187,17 @@ public class Item : MonoBehaviour
         {
             if (index == 0)
             {
-                transform.localPosition = new Vector3(-1, 0, 0);
+                transform.localPosition = ScStatic.PointItemLeft;
             }
 
             if (index == 1)
             {
-                transform.localPosition = new Vector3(0, 0, 0);
+                transform.localPosition = ScStatic.PointItemMid;
             }
 
             if (index == 2)
             {
-                transform.localPosition = new Vector3(1, 0, 0);
+                transform.localPosition = ScStatic.PointItemRight;
             }
         }
 
@@ -383,10 +396,18 @@ public class Item : MonoBehaviour
 
     }
 
+
+    IEnumerator SetScale()
+    {
+        transform.localScale = Vector3.one;
+        yield return new WaitForEndOfFrame();
+        CheckScale();
+    }
+
     public void OnEndMoveSkillSwap(Vector3 vecEnd, Action callback, bool isNomal)
     {
         EndDrag();
-        CheckScale();
+        StartCoroutine(SetScale());
 
         if (isNomal)
         {

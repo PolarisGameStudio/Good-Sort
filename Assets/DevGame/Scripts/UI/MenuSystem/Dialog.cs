@@ -51,7 +51,7 @@ public abstract class Dialog<T> : Dialog where T : Dialog<T>
         }
     }    
 
-    protected static void Close()
+    protected static void Close(Action callback = null)
     {
         if (Instance == null)
         {
@@ -63,6 +63,7 @@ public abstract class Dialog<T> : Dialog where T : Dialog<T>
 
         Instance.Hide(() =>
         {
+            callback?.Invoke();
             MenuManager.Instance.CloseDialog(Instance);
         });
     }

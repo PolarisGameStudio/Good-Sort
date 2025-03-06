@@ -55,6 +55,13 @@ public class Cell : MonoBehaviour
 	public CellLock cellLock = null;
 	public TextMeshProUGUI txtName = null;
 
+	public Transform pXMax = null;
+    public Transform pXMin = null;
+
+    public Transform pYMin = null;
+    public Transform pYMax = null;
+
+
 	private void OnValidate()
 	{
 	}

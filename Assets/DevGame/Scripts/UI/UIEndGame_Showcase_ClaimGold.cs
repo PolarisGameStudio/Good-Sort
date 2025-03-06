@@ -151,6 +151,10 @@ public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
 	{
 		StopMachine();
         UIPopup_Booster.Show();
+		UIPopup_Booster.Instance.callbackClose = () =>
+		{
+			HelperManager.OnBackHomeScene();
+		};
     }
 
     public void UpdateUI(int gold)
@@ -162,6 +166,10 @@ public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
         StopMachine();
 
         UIPopup_Booster.Show();
+        UIPopup_Booster.Instance.callbackClose = () =>
+        {
+            HelperManager.OnBackHomeScene();
+        };
     }
 
     private void StopMachine()
