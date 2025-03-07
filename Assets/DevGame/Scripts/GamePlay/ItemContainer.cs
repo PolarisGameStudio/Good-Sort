@@ -668,4 +668,14 @@ public class ItemContainer : MonoBehaviour
 
 		return listLayerItem[currentIndex].GetListItem();
 	}
+
+	public List<Item> GetAllItemOfCell()
+	{
+		List<Item> Items = new();
+		foreach(var it in listLayerItem)
+		{
+			Items.AddRange(it.GetListItem());
+        }
+		return Items;
+	}	
 }

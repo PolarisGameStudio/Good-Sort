@@ -56,6 +56,13 @@ public class Item : MonoBehaviour
     private Vector3 PointShadow = Vector3.zero;
     private Vector3 CurrentScale = Vector3.zero;
 
+    public string NameSprHide = "";
+    public ItemAsset _itemAsset;
+
+    public bool isNameSpriteAndAspriteShadow()
+    {
+        return _sprite.sprite.name == _spriteShadow.sprite.name;
+    }    
 
 	private void SetSortingOrder(SpriteRenderer sp, int order)
 	{
@@ -69,12 +76,17 @@ public class Item : MonoBehaviour
     float yScale = 0.025f;
 	float yAdd = 0.1f;
 
-	public void SetNewItemAsset(ItemAsset item)
+	public void SetNewItemAsset(ItemAsset item, bool isSetItemType = true)
 	{
+        _itemAsset = item;
         gameObject.name = item.type.ToString();
-        _itemType = item.type;
+        if(isSetItemType)
+        {
+            _itemType = item.type;
+        }
         _sprite.sprite = item.sprite;
         _spriteShadow.sprite = item.spriteHidden;
+        NameSprHide = item.spriteHidden.name;
         CheckScale();
     }
 
@@ -91,7 +103,7 @@ public class Item : MonoBehaviour
 
 
             float sizeXMax = 1.1f;
-            float sizeYMax = 2f;
+            float sizeYMax = 1.9f;
 
             float sx = sizeXMax / sizeItem.x;
             float sy = sizeYMax / sizeItem.y;
@@ -144,7 +156,7 @@ public class Item : MonoBehaviour
         var point = Vector3.zero;
         if (cellType == CellType.CellLayerCount)
         {
-            point = new Vector3(0, 0.155f, 0);
+            point = ScStatic.PointItemCell;
         }
         else if (cellType == CellType.CellSingle)
         {
@@ -177,7 +189,7 @@ public class Item : MonoBehaviour
 	{
         if (cellType == CellType.CellLayerCount)
         {
-            transform.localPosition = new Vector3(0, 0.155f, 0);
+            transform.localPosition = ScStatic.PointItemCell;
         }
         else if (cellType == CellType.CellSingle)
         {

@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Newtonsoft.Json;
+using static UnityEditor.Progress;
 
 
 public class GenLevelController : Singleton<GenLevelController>
@@ -43,6 +44,9 @@ public class GenLevelController : Singleton<GenLevelController>
 	[SerializeField]
 	private SOCell _soCells;
 
+/*	[SerializeField]
+	private SOItem _soCells11;*/
+
 	public Dictionary<int, ItemAssetSeasonal> DicItemSeasonal;
 
 	private LevelInfo _levelInfoInit;
@@ -73,12 +77,48 @@ public class GenLevelController : Singleton<GenLevelController>
 
 	public LevelInfo GetDataLevel()
 	{
-		LevelId = HelperManager.DataPlayer.LevelID;
+
+/*		List<DataSoItemItemAsset> dass = new();
+
+		foreach(var so in _soCells11.items)
+		{
+			DataSoItemItemAsset da = new();
+			da.type = so.type;
+			da.sprite = so.sprite.name;
+			if(so.spriteHidden != null)
+			{
+                da.spriteHidden = so.spriteHidden.name;
+            }
+            da.kind = so.kind;
+            da.colors = so.colors;
+			dass.Add(da);
+        }
+
+		var txx = JsonConvert.SerializeObject(dass);*/
+
+/*		foreach(var it in _soCells11.items)
+		{
+			if(it.spriteHidden != null)
+			{
+                var tx = it.spriteHidden.name;
+                var txtture = Resources.Load<Sprite>("Texture2D/ImageHide/" + tx);
+                if (txtture != null)
+                {
+                    it.spriteHidden = txtture;
+                }
+            }
+			
+		}
+
+		_soCells11.SaveToFile();*/
+
+        LevelId = HelperManager.DataPlayer.LevelID;
+		HelperManager.DataPlayer.LevelID++;
 
         var txt = Resources.Load<TextAsset>("Json/da_level");
         var levels = JsonConvert.DeserializeObject<List<string>>(txt.text);
-
-        var nameLevel = levels[LevelId];
+		//132
+        var nameLevel = levels[158];
         var Level1 = Resources.Load<SOLevel>("Data/Level/" + nameLevel);
 
         //19

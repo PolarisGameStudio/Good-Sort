@@ -135,6 +135,11 @@ public class Cell : MonoBehaviour
 		return _itemContainer.GetListItemForSkillBreakItem();
     }
 
+    public List<Item> GetAllItemOfCell()
+	{
+		return _itemContainer.GetAllItemOfCell();
+	}
+
     public void OnCheckPlayAnimCellTypeDropBlank()
     {
 		StartCoroutine(_OnCheckPlayAnimCellTypeDropBlank());

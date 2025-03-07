@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SOItem", menuName = "ScriptableObjects/SOItem", order = 1)]
@@ -22,4 +23,13 @@ public class SOItem : ScriptableObject
 	{
 		return null;
 	}
+
+    public void SaveToFile()
+    {
+#if UNITY_EDITOR
+        EditorUtility.SetDirty(this);
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+#endif
+    }
 }

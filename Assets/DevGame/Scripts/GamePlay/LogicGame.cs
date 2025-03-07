@@ -189,20 +189,12 @@ public class LogicGame : Singleton<LogicGame>
                 listCellLock.Add(ScCell);
             }
 
-            foreach (var ly in it.itemsLayer)
-            {
-                string cc1 = "(";
-                for (int i = 0; i < ly.items.Count; i++)
-                {
-                    cc1 += ly.items[i] + ",";
-                }
-                cc1 += "),";
-                Debug.Log(cc1);
-            }
-
 
             var disX1 = Math.Abs(it.posX - XMin);
             var disY2 = Math.Abs(it.posY - yMin);
+
+
+            float xAddd = 3.6f;
 
             if(it.cellType == 1)
             {
@@ -212,22 +204,6 @@ public class LogicGame : Singleton<LogicGame>
             float XNew = it.posX;
             float YNew = it.posY;
 
-            float Xaaa1 = 0;
-
-            if(it.cellType == 0)
-            {
-                Xaaa1 = 3.6f;
-            }
-
-            if (it.cellType == 1)
-            {
-                Xaaa1 = 1.4f;
-            }
-
-            if (it.cellType == 2)
-            {
-                Xaaa1 = 1.4f;
-            }
 
             if (disX1 != 0)
             {
@@ -236,11 +212,11 @@ public class LogicGame : Singleton<LogicGame>
                     float pd = disX1 / 6.0f;
                     if (XMin < it.posX)
                     {
-                        XNew = XMin - pd * 3.6f;
+                        XNew = XMin - pd * xAddd;
                     }
                     else
                     {
-                        XNew = XMin + pd * 3.6f;
+                        XNew = XMin + pd * xAddd;
                     }
 
                 }
@@ -269,9 +245,15 @@ public class LogicGame : Singleton<LogicGame>
 
             if(it.cellType == 1)
             {
-                XNew = XNew + 1.205f;
+                XNew = XNew + 1.05f;
             }
 
+            if(it.cellType == 3)
+            {
+                YNew += 0.3f;
+            }
+
+      
             obj.transform.position = new Vector2(XNew, YNew);
 
             obj.name = it.posX.ToString() + "," + it.posY.ToString();
@@ -290,11 +272,109 @@ public class LogicGame : Singleton<LogicGame>
                 listCellLock.Add(cellLock);
             }
         }
+        ResetPoint1();
         ResetPoint(listCellAllGame);
 
-        PlayMoveType(listCellAllGame);
+        XMin = 9999;
+        XMax = -9999;
 
+        foreach (var it in listCellAllGame)
+        {
+            XMin = Mathf.Min(XMin, it.pXMin.transform.position.x);
+            XMax = Mathf.Max(XMax, it.pXMax.transform.position.x);
+        }
+
+        float pointMid = XMax / 2 + XMin / 2;
+
+        foreach (var it in listCellAllGame)
+        {
+            it.transform.position += new Vector3(-pointMid, 0, 0);
+        }
+
+        PlayMoveType(listCellAllGame);
         isGameOver = false;
+        CheckItem();
+
+    }
+
+    void CheckItem()
+    {
+        List<Item> listItem = new();
+        foreach(var it in listCellAllGame)
+        {
+            listItem.AddRange(it.GetAllItemOfCell());
+        }
+
+        var itemHide = listItem.Where(x=>x.isNameSpriteAndAspriteShadow()).ToList();
+
+        List<ItemType> uniqueX = itemHide.Select(o => o.ItemType).Distinct().ToList();
+
+        List<List<Item>> listItems = new();
+        foreach (var item in uniqueX)
+        {
+            var lis1 = itemHide.Where(x=>x.ItemType == item).ToList();
+            listItems.Add(lis1);
+        }
+
+        foreach(var items in listItems)
+        {
+     
+           if(items.Count == 3)
+           {
+                var it0 = items[0];
+                var asseet = SOItemContainer.Instance.GetItemAsset(it0.NameSprHide);
+              //  items[1].SetNewItemAsset(asseet, false);
+              //  items[2].SetNewItemAsset(asseet, false);
+           }
+            else
+            {
+                int kk1 = 0;
+            }
+
+        }    
+
+        int kk = 0;
+
+
+    }
+
+    void ResetPoint1()
+    {
+        var listMoveDrop = listCellAllGame.Where(x => x.CellType == CellType.CellSingle).Distinct().ToList();
+        List<int> uniqueX = listMoveDrop.Select(o => o.PosInit.x).Distinct().ToList();
+
+
+        List<List<Cell>> listCellR = new();
+
+        var cels = listCellAllGame.OrderByDescending(x => x.transform.position.x).ToList();
+
+        foreach (var un in uniqueX)
+        {
+            var cel = cels.Where(x => x.PosInit.x == un).Distinct().ToList();
+            if (cel.Count > 0)
+            {
+                listCellR.Add(cel);
+            }
+        }
+
+        foreach (var ce in listCellR)
+        {
+            float minDiss = -9999;
+            var c1 = ce[0];
+            var ceNews = cels.Where(x => (x.transform.position.x - c1.transform.position.x) > 0.1f).Distinct().ToList();
+            float xadd = 0.28f;
+
+            foreach (var it in ceNews)
+            {
+                it.transform.position += new Vector3(xadd, 0, 0);
+            }
+
+
+            foreach (var it in ce)
+            {
+                it.transform.position += new Vector3(xadd, 0, 0);
+            }
+        }
     }
 
     void PlayMoveType(List<Cell> listCell)
@@ -532,12 +612,6 @@ public class LogicGame : Singleton<LogicGame>
 
             var cellN = listCell.Where(x => x.MoveType == MoveType.Idle && x.CellType == CellType.CellLayerCount).ToList();
 
-        /*    if(cellN.Count > 0)
-            {
-                XMax += 1.4f;
-            }    */
-
-
             float disYMaxMin = yMax - yMin;
             float disXMaxMin = XMax - XMin;
 
@@ -603,6 +677,7 @@ public class LogicGame : Singleton<LogicGame>
                 p2.transform.localScale = Vector2.one * sx;
             }
         }
+
     }
 
     public void CheckObjectLock()

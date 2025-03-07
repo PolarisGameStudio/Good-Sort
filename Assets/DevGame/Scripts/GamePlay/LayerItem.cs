@@ -106,6 +106,21 @@ public class LayerItem : MonoBehaviour
             }
         }
 
+       /* foreach(var item in listItem)
+        {
+            if(item.isNameSpriteAndAspriteShadow())
+            {
+                for (int i = 1; i < listItem.Count; i++)
+                {
+                    if (!listItem[i].NameSprHide.Equals(listItem[0].NameSprHide))
+                    {
+                        return false;
+                    }
+                }
+                break;
+            }    
+        }    
+       */
         return true;
     }
 
