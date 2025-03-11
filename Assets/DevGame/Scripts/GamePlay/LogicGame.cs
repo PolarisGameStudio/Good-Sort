@@ -1270,6 +1270,7 @@ public class LogicGame : Singleton<LogicGame>
             {
                 it.Value.RemoveAt(0);
             }
+           
         }
 
         List<Item> listItems = new();
@@ -1277,6 +1278,17 @@ public class LogicGame : Singleton<LogicGame>
         foreach (var it in gr1)
         {
             listItems.AddRange(it.Value);
+            if (!isBosster)
+            {
+                if(listItems.Count > 3)
+                {
+                    while(listItems.Count > 3)
+                    {
+                        listItems.RemoveAt(0);
+                    }    
+                }    
+                break;
+            }
         }
 
         if(listItems.Count == 0)
@@ -1479,7 +1491,7 @@ public class LogicGame : Singleton<LogicGame>
         ob.DOMove(UICountDown.Instance.transform.position, 1.0f).SetEase(Ease.InBack).OnComplete(() => {
             IsUseSkillGame = false;
             ob.gameObject.SetActive(false);
-            _timePlayGame += 60.0f;
+            _timePlayGame += 60.5f;
             textTimePlay.text = GetTimePlayGame();
             UICountDown.Instance.IncreaseTime(60);
         }).SetDelay(1.0f);
