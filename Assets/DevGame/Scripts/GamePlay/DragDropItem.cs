@@ -10,6 +10,10 @@ public class DragDropItem : MonoBehaviour
 
     void Update()
     {
+        if(LogicGame.Instance.IsPause)
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

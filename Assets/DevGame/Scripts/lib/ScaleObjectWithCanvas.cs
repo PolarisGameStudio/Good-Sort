@@ -17,10 +17,18 @@ public class ScaleObjectWithCanvas : MonoBehaviour
 
         if(isWidh)
         {
-            if(siseCanvas.x < Mathf.Abs(size.width) || isFlowWidh)
+            if(isFlowWidh)
             {
                 var scale = siseCanvas.x / (size.width + xAdd);
                 rectTr.localScale = new Vector3(scale, scale, scale);
+            }
+            else
+            {
+                var sx = siseCanvas.x / (size.width + xAdd);
+                var sy = siseCanvas.y / size.height;
+                var s = Mathf.Min(sx, sy);
+                rectTr.localScale = Vector3.one * s;
+
             }
         }
         else

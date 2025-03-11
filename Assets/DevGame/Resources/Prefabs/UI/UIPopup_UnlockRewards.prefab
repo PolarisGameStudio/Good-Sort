@@ -15672,6 +15672,7 @@ GameObject:
   - component: {fileID: 1359853415036675811}
   - component: {fileID: 2282523721705864574}
   - component: {fileID: 6456296811380265003}
+  - component: {fileID: 6232252587364078086}
   m_Layer: 5
   m_Name: btnClaimX2
   m_TagString: Untagged
@@ -15783,6 +15784,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6232252587364078086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2757002505365709059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2814717595002319177
 GameObject:
   m_ObjectHideFlags: 0
@@ -30350,7 +30363,7 @@ MonoBehaviour:
   isWidh: 1
   canvas: {fileID: 0}
   xAdd: 0
-  isFlowWidh: 1
+  isFlowWidh: 0
 --- !u!1 &5093446141897548425
 GameObject:
   m_ObjectHideFlags: 0

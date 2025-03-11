@@ -22,6 +22,7 @@ public static class ScStatic
 
     public static List<string> SFX_COMBOS = new List<string>()
     {
+        "SFX_Ingame_MatchGoods",
         "SFX_MatchCombo2_X2",
         "SFX_MatchCombo2_X3",
         "SFX_MatchCombo2_X4",
@@ -46,6 +47,14 @@ public static class ScStatic
     public static string SFX_Ingame_PowerUp_TimeBonus = "SFX_Ingame_PowerUp_TimeBonus";
     public static string SFX_Ingame_Booster_2xStar = "SFX_Ingame_Booster_2xStar";
     public static string SFX_Ingame_Booster_Hammer = "SFX_Ingame_Booster_Hammer";
+    public static string SFX_Ingame_Confetti = "SFX_Ingame_Confetti";
+    public static string SFX_Ingame_FoodFight_ConfettiWin = "SFX_Ingame_FoodFight_ConfettiWin";
+    public static string SFX_Ingame_FoodFight_RewardAppear = "SFX_Ingame_FoodFight_RewardAppear";
+    public static string SFX_Ingame_CellLock_Unlock = "SFX_Ingame_CellLock_Unlock";
+    public static string SFX_Ingame_FoodFight_ConfettiLose = "SFX_Ingame_FoodFight_ConfettiLose";
+    public static string SFX_Ingame_StartWave = "SFX_Ingame_StartWave";
+    public static string SFX_UI_Chest_Open = "SFX_UI_Chest_Open";
+    public static string SFX_UI_Button = "SFX_UI_Button";
 
     #endregion
 

@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 9087727833210900601}
   - component: {fileID: 1210597900663119610}
   - component: {fileID: 9078470312493760848}
+  - component: {fileID: 8566231383685008369}
   m_Layer: 5
   m_Name: btnPlay
   m_TagString: Untagged
@@ -196,6 +197,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8566231383685008369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114512866456098287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &121770233264156472
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,6 +861,7 @@ GameObject:
   - component: {fileID: 7424084570231866649}
   - component: {fileID: 4894035359804507171}
   - component: {fileID: 2331981834058337128}
+  - component: {fileID: 728819812554910556}
   m_Layer: 5
   m_Name: btnExit
   m_TagString: Untagged
@@ -956,6 +970,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &728819812554910556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027826097642325650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1035134889486472031
 GameObject:
   m_ObjectHideFlags: 0
@@ -3923,6 +3949,7 @@ GameObject:
   - component: {fileID: 7572216787051073362}
   - component: {fileID: 5379094569665743782}
   - component: {fileID: 3591536229195774900}
+  - component: {fileID: 4547702352869037634}
   m_Layer: 5
   m_Name: UIPopup_Booster_ButtonSelect (2)
   m_TagString: Untagged
@@ -4064,6 +4091,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4547702352869037634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2437728551316610955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2498500534833217883
 GameObject:
   m_ObjectHideFlags: 0
@@ -8211,6 +8250,7 @@ GameObject:
   - component: {fileID: 5774727081516019668}
   - component: {fileID: 7256288944938620504}
   - component: {fileID: 4624231888209373840}
+  - component: {fileID: 473880635874105055}
   m_Layer: 5
   m_Name: UIPopup_Booster_ButtonSelect (1)
   m_TagString: Untagged
@@ -8352,6 +8392,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &473880635874105055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5358593820629157669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5380095921645371450
 GameObject:
   m_ObjectHideFlags: 0
@@ -8477,6 +8529,7 @@ GameObject:
   - component: {fileID: 5199344738731766036}
   - component: {fileID: 1137892102401118264}
   - component: {fileID: 8336651349312883296}
+  - component: {fileID: 2236878467461442588}
   m_Layer: 5
   m_Name: UIPopup_Booster_ButtonSelect (0)
   m_TagString: Untagged
@@ -8618,6 +8671,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2236878467461442588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5782930625673676307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5881436049934100388
 GameObject:
   m_ObjectHideFlags: 0
@@ -9170,7 +9235,7 @@ MonoBehaviour:
   isWidh: 1
   canvas: {fileID: 0}
   xAdd: 0
-  isFlowWidh: 1
+  isFlowWidh: 0
 --- !u!1 &6609977480900190936
 GameObject:
   m_ObjectHideFlags: 0

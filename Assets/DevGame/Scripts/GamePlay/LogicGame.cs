@@ -63,6 +63,14 @@ public class LogicGame : Singleton<LogicGame>
         }
     }
 
+    public bool IsPause
+    {
+        get
+        {
+            return IsUseSkillGame || IsPlayBooster || IsUseSkillFreeze || isGameOver;
+        }
+    }
+
     void Start()
     {
 
@@ -693,6 +701,7 @@ public class LogicGame : Singleton<LogicGame>
             var currentLock = listCellLock[0];
             _currentLock++;
 
+            Audio.Play(ScStatic.SFX_Ingame_CellLock_Unlock);
             currentLock.OnUpdateNumLock(_currentLock);
 
             if (_currentLock == 4)
@@ -1487,6 +1496,7 @@ public class LogicGame : Singleton<LogicGame>
 
     public void OnBossterTimeBonus(Transform ob)
     {
+        Audio.Play(ScStatic.SFX_Ingame_PowerUp_TimeBonus);
         IsUseSkillGame = true;
         ob.DOMove(UICountDown.Instance.transform.position, 1.0f).SetEase(Ease.InBack).OnComplete(() => {
             IsUseSkillGame = false;
@@ -1520,10 +1530,12 @@ public class LogicGame : Singleton<LogicGame>
         if(isWin)
         {
             HelperManager.DataPlayer.LevelID++;
+            Audio.Play(ScStatic.SFX_Ingame_FoodFight_ConfettiWin);
             StartCoroutine(StartGameOver());
         }
         else
         {
+            Audio.Play(ScStatic.SFX_Ingame_FoodFight_ConfettiLose);
             UIPopup_EndGame_TimeUp.Show();
         }
     }
@@ -1533,6 +1545,7 @@ public class LogicGame : Singleton<LogicGame>
         UIEndGame.Show();
         yield return new WaitForEndOfFrame();
         yield return new WaitForSeconds(1.0f);
+        Audio.Play(ScStatic.SFX_Ingame_Confetti);
         UIEndGame.Instance.EndGame(EndGameState.Win);
       //  OnNextLevel();
     }
@@ -1540,7 +1553,6 @@ public class LogicGame : Singleton<LogicGame>
     public void OnBossterTimeUp()
     {
         isGameOver = false;
-        Audio.Play(ScStatic.SFX_Ingame_PowerUp_TimeBonus);
         BoosterInGameController.Instance.ActiveBooster(BoosterKind.IncreaseTime);
     }
 

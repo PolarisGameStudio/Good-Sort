@@ -33,6 +33,7 @@ public class UIPopup_Booster : Dialog<UIPopup_Booster>
         uIPopup_Booster_ButtonSelects[2].SetItemData(dataSpriteBossterKinds[2]);
 
         btnPlayGame.onClick.AddListener(() => {
+            onClose();
             HelperManager.ShowGameScene();
         });
 

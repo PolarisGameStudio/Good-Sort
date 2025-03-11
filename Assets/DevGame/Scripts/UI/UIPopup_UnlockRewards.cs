@@ -27,13 +27,17 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 	private float c_ScaleChestEnd;
 	private List<ResourceValue> c_dataReward;
 
-	private void OnEnable()
-	{
-        btnClaim.onClick.RemoveAllListeners();
-		btnClaim.onClick.AddListener(() => {
-			//viet con claim
-			onClose();
+    private void Start()
+    {
+        btnClaim.onClick.AddListener(() => {
+            //viet con claim
+            onClose();
         });
+    }
+
+    private void OnEnable()
+	{
+		
 
     }
 
@@ -87,6 +91,11 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 		p.DOMove(pBegin, 0.25f).OnComplete(() => { 
 
 		});
+
+		foreach(var it in c_dataReward)
+		{
+			it.AddResourceType();
+		}
     }
 
     public void UpdateUI(RectTransform targetSpawn, List<ResourceValue> dataReward)

@@ -480,6 +480,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 47016363670802136, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Softness.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1316119234099022075, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_Name
       value: Canvas_OutGame_Layer_100
@@ -495,6 +499,14 @@ PrefabInstance:
     - target: {fileID: 1539094578914222899, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551819198659173749, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571804952882470812, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1648363041714334112, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_Pivot.x
@@ -592,6 +604,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2541725049746137461, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931329222628560580, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3899038688507010951, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -700,6 +720,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6597978937966728802, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747493719695898227, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6969062964853295959, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
@@ -710,6 +738,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6969062964853295959, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122593196383777176, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Softness.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292604270124747088, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319978282201606366, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8527536876834186362, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
@@ -724,6 +764,10 @@ PrefabInstance:
       propertyPath: txtLevel
       value: 
       objectReference: {fileID: 1449049235}
+    - target: {fileID: 8840672794584151996, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9124842016070810549, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0

@@ -48,9 +48,13 @@ public class UIResource : MonoBehaviour
 
 	private void Start()
 	{
-	}
+		txtGold.text = HelperManager.DataPlayer.TotalCoin.ToString();
+        txtStar.text = HelperManager.DataPlayer.TotalStar.ToString();
 
-	private void OnEnable()
+
+    }
+
+    private void OnEnable()
 	{
 	}
 

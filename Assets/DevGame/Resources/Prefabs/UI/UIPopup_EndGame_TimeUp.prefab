@@ -7656,8 +7656,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtHearth: {fileID: 0}
-  txtGold: {fileID: 0}
-  txtStar: {fileID: 0}
+  txtGold: {fileID: 807601198507314036}
+  txtStar: {fileID: 4274592568073229889}
   btnGetMoreHearth: {fileID: 9038314423333316103}
   btnGetMoreGold: {fileID: 7003890048737180380}
   rectHearthInfinite: {fileID: 2916208881001512604}
@@ -28027,6 +28027,7 @@ GameObject:
   - component: {fileID: 3765904756574139957}
   - component: {fileID: 8616440982899973866}
   - component: {fileID: 2324879351040185552}
+  - component: {fileID: 2363006108072661307}
   m_Layer: 5
   m_Name: btnBuy
   m_TagString: Untagged
@@ -28163,6 +28164,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &2363006108072661307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4603102740878983324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4744255814654822099
 GameObject:
   m_ObjectHideFlags: 0
@@ -33230,6 +33243,7 @@ GameObject:
   - component: {fileID: 4626158293060114082}
   - component: {fileID: 4346269178245991630}
   - component: {fileID: 1778752577514964474}
+  - component: {fileID: 1640911686428791450}
   m_Layer: 5
   m_Name: btnExit
   m_TagString: Untagged
@@ -33338,6 +33352,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1640911686428791450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5030164025571330193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5262658669623037269
 GameObject:
   m_ObjectHideFlags: 0
@@ -33468,7 +33494,7 @@ MonoBehaviour:
   isWidh: 1
   canvas: {fileID: 0}
   xAdd: 0
-  isFlowWidh: 1
+  isFlowWidh: 0
 --- !u!1 &5513202087132012941
 GameObject:
   m_ObjectHideFlags: 0
@@ -33557,6 +33583,7 @@ GameObject:
   - component: {fileID: 1447120226908073452}
   - component: {fileID: 5653512788539205964}
   - component: {fileID: 6075774401845109999}
+  - component: {fileID: 1403066767203327559}
   m_Layer: 5
   m_Name: btnFree
   m_TagString: Untagged
@@ -33693,6 +33720,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1403066767203327559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530492367860919346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5652225473989248429
 GameObject:
   m_ObjectHideFlags: 0

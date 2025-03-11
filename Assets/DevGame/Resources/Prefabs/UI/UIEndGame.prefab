@@ -81341,6 +81341,7 @@ GameObject:
   - component: {fileID: 26812425148288831}
   - component: {fileID: 102471607993759017}
   - component: {fileID: 589122702486811639}
+  - component: {fileID: 8865990414257740604}
   m_Layer: 5
   m_Name: btnWatchAds
   m_TagString: Untagged
@@ -81451,6 +81452,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8865990414257740604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5763276711630000644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5805353944266526140
 GameObject:
   m_ObjectHideFlags: 0
@@ -103609,6 +103622,7 @@ GameObject:
   - component: {fileID: 2849966205520532916}
   - component: {fileID: 7619197026453203250}
   - component: {fileID: 351167776180021985}
+  - component: {fileID: 7687905216930129268}
   m_Layer: 5
   m_Name: btnClaim
   m_TagString: Untagged
@@ -103719,6 +103733,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7687905216930129268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511440059124621559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7629024236094204497
 GameObject:
   m_ObjectHideFlags: 0

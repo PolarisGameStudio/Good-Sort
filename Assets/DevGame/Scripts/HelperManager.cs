@@ -88,7 +88,7 @@ public static class HelperManager
             callbackLoadScene.allowSceneActivation = false;
             callbackLoadScene = null;
         }*/
-
+        callbackLoadScene = null;
         SceneManager.LoadScene(ScStatic.HOME_SCENE);
     }
 
@@ -183,6 +183,11 @@ public static class HelperManager
             list[i] = list[randomIndex];
             list[randomIndex] = temp;
         }
+    }
+
+    public static void OnAddStarGame(int starAdd)
+    {
+        DataPlayer.TotalStar += starAdd;
     }
 
 }

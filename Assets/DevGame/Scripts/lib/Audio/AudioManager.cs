@@ -173,6 +173,8 @@ namespace Gdz
             p_go_sound.transform.parent = base.gameObject.transform;
             if (fileNames == null)
             {
+                var objNew = Resources.Load<GameObject>("Prefabs/UI/DataAudioClip");
+                var ob = Instantiate(objNew, null);
                 LoadAudioFiles();
             }
             if (playList == null)

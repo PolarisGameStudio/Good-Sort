@@ -13,6 +13,10 @@ public class MainMenu : Singleton<MainMenu>
     [SerializeField] Button btnPlay;
     [SerializeField] Canvas canvas;
     [SerializeField] TextMeshProUGUI txtLevel = null;
+    [SerializeField] TextMeshProUGUI txtStar = null;
+    [SerializeField] TextMeshProUGUI txtCoint = null;
+    [SerializeField] RectMask2D rectMask = null;
+
 
     [SerializeField] CanvasGroup canvasGroupPop;
     bool isLoadSceneSucess = false;
@@ -31,7 +35,30 @@ public class MainMenu : Singleton<MainMenu>
         btnPlay.onClick.AddListener(() => {
             UIPopup_Booster.Show();
         });
-       
+
+        txtStar.text = HelperManager.DataPlayer.TotalStar.ToString();
+        txtCoint.text = HelperManager.DataPlayer.TotalCoin.ToString();
+
+    }
+
+    public IEnumerator OnRunRect(Action callback)
+    {
+        int index = 0;
+        while(index < 100000)
+        {
+            index += 200;
+            if(index > 30000)
+            {
+                txtStar.gameObject.SetActive(false);
+                txtCoint.gameObject.SetActive(false);
+                txtLevel.transform.parent.transform.parent.gameObject.SetActive(false);
+
+            }
+            rectMask.softness = new Vector2Int(index, index); 
+            yield return null;
+        }
+
+        callback?.Invoke();
     }
 
     private void OnDestroy()

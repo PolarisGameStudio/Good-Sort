@@ -18,7 +18,7 @@ public class ButtonClick : MonoBehaviour
 
     void onClickButton()
     {
-        //Audio.Play(ScStatic.SFX_BUTTONSOUND);
+        Audio.Play(ScStatic.SFX_UI_Button);
         var scaleBegin = transform.localScale;
         transform.DOScale(scaleBegin + Vector3.one * 0.1f, 0.05f).SetEase(Ease.InOutSine).OnComplete(() => {
             transform.DOScale(scaleBegin , 0.05f).SetEase(Ease.OutBack).OnComplete(() => {

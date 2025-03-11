@@ -103,8 +103,8 @@ public class UIEndGame_Showcase : MonoBehaviour
 
 	private void OnShowUnLockReward()
 	{
+        Audio.Play(ScStatic.SFX_UI_Chest_Open);
         UIPopup_UnlockRewards.Show();
-
         List<ResourceType> resourceTypes = new List<ResourceType>() {
             ResourceType.Powerup_BreakItem,
             ResourceType.Powerup_Replace,
@@ -143,10 +143,11 @@ public class UIEndGame_Showcase : MonoBehaviour
         timeRemainingConvert.rectStar.gameObject.SetActive(true);
 		timeRemainingConvert.fxClaim.gameObject.SetActive(true);
 		timeRemainingConvert.fxClaim.Play();
+        Audio.Play(ScStatic.SFX_Ingame_StartWave);
 		yield return StartCoroutine(timeRemainingConvert.IEConvertTimeToStar(this));
 		timeRemainingConvert.rectStar.gameObject.SetActive(false);
         txtTotalStar.text = (ScStatic.currentStarGame + 5).ToString();
-
+        HelperManager.OnAddStarGame(ScStatic.currentStarGame + 5);
     }
 
     private void UpdateUI()

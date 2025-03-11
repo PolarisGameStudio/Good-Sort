@@ -125,6 +125,7 @@ public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
 	private float c_bonusReward;
 
 	private Coroutine coroutineMachine;
+	float cointReciver = 0;
 
 	private void OnEnable()
 	{
@@ -138,8 +139,12 @@ public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
         btnWatchAds.onClick.AddListener(() => {
 			OnWatchAdsComplete(1);
         });
+
+		float cointAds = 20;
+
 		this.StartCoroutine(machine.IEStart(coint => {
-			txtStarWatchAds.text = (coint * 20).ToString();
+            cointReciver = coint * cointAds;
+            txtStarWatchAds.text = cointReciver.ToString();
         }));
     }
 
@@ -150,26 +155,31 @@ public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
 	private void OnWatchAdsComplete(int gold)
 	{
 		StopMachine();
-        UIPopup_Booster.Show();
-		UIPopup_Booster.Instance.callbackClose = () =>
-		{
-			HelperManager.OnBackHomeScene();
-		};
+
+		HelperManager.DataPlayer.TotalCoin += (int)cointReciver * 2;
+
+        StartCoroutine(OnLoadHomeScene());
     }
 
     public void UpdateUI(int gold)
 	{
 	}
 
-	public void OnComPlete()
+	IEnumerator OnLoadHomeScene()
+	{
+		yield return new WaitForSeconds(1.0f);
+        HelperManager.OnBackHomeScene();
+    }
+
+    public void OnComPlete()
 	{
         StopMachine();
-
-        UIPopup_Booster.Show();
+        HelperManager.DataPlayer.TotalCoin += (int)cointReciver;
+		StartCoroutine(OnLoadHomeScene());
+       /* UIPopup_Booster.Show();
         UIPopup_Booster.Instance.callbackClose = () =>
         {
-            HelperManager.OnBackHomeScene();
-        };
+        };*/
     }
 
     private void StopMachine()
