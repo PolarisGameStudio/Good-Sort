@@ -1228,7 +1228,7 @@ public class LogicGame : Singleton<LogicGame>
     [Header("Skill Break Item")]
     [SerializeField] private PowerupBreakItem _powerupBreakItem = null;
 
-    public void OnSkillBreakItem()
+    public void OnSkillBreakItem(bool isBosster)
     {
         UnityEngine.Debug.Log("Hammer_-1");
         IsUseSkillGame = true;
@@ -1289,15 +1289,15 @@ public class LogicGame : Singleton<LogicGame>
         var numCombo = listItems.Count / 3;
 
         _powerupBreakItem.gameObject.SetActive(true);
-        StartCoroutine(OnPlaySkillBreakItem(listItems, cell, numCombo));
+        StartCoroutine(OnPlaySkillBreakItem(listItems, cell, numCombo, isBosster));
     }
 
-    public IEnumerator OnPlaySkillBreakItem(List<Item> listItems, List<Cell> cell, int numCombo)
+    public IEnumerator OnPlaySkillBreakItem(List<Item> listItems, List<Cell> cell, int numCombo, bool isBosster)
     {
         float time = 0.03f;
         Audio.Play(ScStatic.SFX_Ingame_UsePowerUp);
         yield return new WaitForSeconds(time);
-        Audio.Play(ScStatic.SFX_Ingame_PowerUp_Hammer);
+        Audio.Play(isBosster ? ScStatic.SFX_Ingame_Booster_Hammer : ScStatic.SFX_Ingame_PowerUp_Hammer);
         _powerupBreakItem.gameObject.SetActive(true);
         yield return new WaitForEndOfFrame();
          _powerupBreakItem.OnPlaySkillBreakItem(listItems, () => {
@@ -1427,7 +1427,10 @@ public class LogicGame : Singleton<LogicGame>
         {
             if (ScStatic.ListBoosterStart.Contains(BoosterKind.X2_Star))
             {
+                yield return new WaitForEndOfFrame();
+                Audio.Play(ScStatic.SFX_Ingame_Booster_2xStar);
                 BoosterInGameController.Instance.ActiveBooster(BoosterKind.X2_Star);
+                yield return new WaitForSeconds(1.2f);
             }
 
             if (ScStatic.ListBoosterStart.Contains(BoosterKind.BreakItem))
@@ -1442,6 +1445,8 @@ public class LogicGame : Singleton<LogicGame>
                     }
                     yield return null;
                 }
+                yield return new WaitForEndOfFrame();
+                yield return new WaitForEndOfFrame();
             }
 
             if (ScStatic.ListBoosterStart.Contains(BoosterKind.IncreaseTime))
@@ -1461,6 +1466,11 @@ public class LogicGame : Singleton<LogicGame>
             ScStatic.ListBoosterStart.Clear();
         }
         IsPlayBooster = false;
+    }
+
+    private void OnBoosterX2Star()
+    {
+
     }
 
     public void OnBossterTimeBonus(Transform ob)

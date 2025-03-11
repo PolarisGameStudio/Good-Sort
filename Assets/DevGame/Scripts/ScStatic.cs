@@ -44,6 +44,8 @@ public static class ScStatic
     public static string SFX_Ingame_PowerUp_Swap = "SFX_Ingame_PowerUp_Swap";
     public static string SFX_Ingame_Warning = "SFX_Ingame_Warning";
     public static string SFX_Ingame_PowerUp_TimeBonus = "SFX_Ingame_PowerUp_TimeBonus";
+    public static string SFX_Ingame_Booster_2xStar = "SFX_Ingame_Booster_2xStar";
+    public static string SFX_Ingame_Booster_Hammer = "SFX_Ingame_Booster_Hammer";
 
     #endregion
 

@@ -26,7 +26,7 @@ public class UI_InGame_PowerUp : MonoBehaviour
 				return;
 			}	
 
-			LogicGame.Instance.OnSkillBreakItem();
+			LogicGame.Instance.OnSkillBreakItem(false);
 
         });
 

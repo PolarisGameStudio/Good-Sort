@@ -16,7 +16,15 @@ public class BoosterBreakItem : MonoBehaviour
 
 	public void Active()
 	{
-		LogicGame.Instance.OnSkillBreakItem();
-	}
-	
+		LogicGame.Instance.OnSkillBreakItem(true);
+        _bg.gameObject.SetActive(true);
+		StartCoroutine(ActiveBg());
+    }
+
+    IEnumerator ActiveBg()
+	{
+		yield return new WaitForSeconds(1.94f);
+        _bg.gameObject.SetActive(false);
+
+    }	
 }
