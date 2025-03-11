@@ -18,6 +18,35 @@ public static class ScStatic
     public static string MUSIC_HOME = "Home";
     public static string MUSIC_GAME = "Game";
 
+    #region SFX
+
+    public static List<string> SFX_COMBOS = new List<string>()
+    {
+        "SFX_MatchCombo2_X2",
+        "SFX_MatchCombo2_X3",
+        "SFX_MatchCombo2_X4",
+        "SFX_MatchCombo2_X5",
+        "SFX_MatchCombo2_X6",
+        "SFX_MatchCombo2_X7",
+        "SFX_MatchCombo2_X8",
+        "SFX_MatchCombo2_X9",
+        "SFX_MatchCombo2_X10",
+        "SFX_MatchCombo2_X11",
+    };
+
+    public static string SFX_LostCombo = "SFX_LostCombo";
+    public static string SFX_Ingame_PutDownGood = "SFX_Ingame_PutDownGood";
+    public static string SFX_Ingame_CellDrop = "SFX_Ingame_CellDrop";
+    public static string SFX_Ingame_PowerUp_TimeFreeze = "SFX_Ingame_PowerUp_TimeFreeze";
+    public static string SFX_Ingame_UsePowerUp = "SFX_Ingame_UsePowerUp";
+    public static string SFX_Ingame_PowerUp_Hammer = "SFX_Ingame_PowerUp_Hammer";
+    public static string SFX_Ingame_PowerUp_MagicWard = "SFX_Ingame_PowerUp_MagicWard";
+    public static string SFX_Ingame_PowerUp_Swap = "SFX_Ingame_PowerUp_Swap";
+    public static string SFX_Ingame_Warning = "SFX_Ingame_Warning";
+    public static string SFX_Ingame_PowerUp_TimeBonus = "SFX_Ingame_PowerUp_TimeBonus";
+
+    #endregion
+
     public static int currentStarGame = 0;
 
 

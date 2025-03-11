@@ -1,10 +1,12 @@
+using Coffee.UIExtensions;
+using DG.Tweening;
+
+using Spine;
+using Spine.Unity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using Spine.Unity;
 using UnityEngine;
 
 public class PowerupReplace : MonoBehaviour
@@ -26,20 +28,27 @@ public class PowerupReplace : MonoBehaviour
 
 	public void Active(List<Item> listCell, Action<ItemAsset, Vector3> callback)
 	{
-		StartCoroutine(PlayAnimation(listCell, callback));
+        Debug.Log("Replay_-2");
+        StartCoroutine(PlayAnimation(listCell, callback));
 	}
 
 
 	IEnumerator PlayAnimation(List<Item> listCell, Action<ItemAsset, Vector3> callback)
 	{
-		var itemAsset = SOItemContainer.Instance.GetItemAsset(listCell[0].ItemType);
+        Audio.Play(ScStatic.SFX_Ingame_UsePowerUp);
+        Debug.Log("Replay_-3");
+        var itemAsset = SOItemContainer.Instance.GetItemAsset(listCell[0].ItemType);
 		var localScale = listCell[0].transform.localScale;
 
         List<MagicWard> objWiza = new();
 		_spineWand.AnimationState.SetAnimation(0, "Start", false);
 		float time = 1.2f;
-		yield return new WaitForSeconds(time);
 
+		float time1 = 0.6f;
+        yield return new WaitForSeconds(time1);
+        Audio.Play(ScStatic.SFX_Ingame_PowerUp_MagicWard);
+        yield return new WaitForSeconds(time - time1);
+        _spineWand.AnimationState.SetAnimation(0, "Start_Idle", false);
         foreach (var cel in listCell)
         {
             var item = Instantiate(_magicWard, null);
@@ -49,8 +58,6 @@ public class PowerupReplace : MonoBehaviour
             objWiza.Add(item);
         }
 		yield return new WaitForEndOfFrame();
-
-        _spineWand.AnimationState.SetAnimation(0, "Start_Idle", false);
         time = 1.067f;
         _fxWand.gameObject.SetActive(true);
         yield return new WaitForSeconds(time);

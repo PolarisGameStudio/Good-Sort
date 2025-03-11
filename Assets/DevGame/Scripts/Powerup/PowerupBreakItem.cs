@@ -2,10 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Spine.Unity;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PowerupBreakItem : MonoBehaviour
 {
@@ -14,12 +12,10 @@ public class PowerupBreakItem : MonoBehaviour
 
 	public SkeletonAnimation anim;
 	[SerializeField] float TimeAnim = 0;
-	private bool isContinue = false;
 
 	public void OnPlaySkillBreakItem(List<Item> listItem, Action callbackEnd)
 	{
-		isContinue = false;
-
+        UnityEngine.Debug.Log("Hammer_-4");
         int Count = listItem.Count;
 		if(Count == 0)
 		{
@@ -31,10 +27,6 @@ public class PowerupBreakItem : MonoBehaviour
 
 		Action callback = () => {
 			index++;
-            if (index == Count)
-            {
-				isContinue = true;
-            }
         };
 
 		Action callbackContinue = () => {
@@ -53,18 +45,21 @@ public class PowerupBreakItem : MonoBehaviour
             item.OnStartMoveSkillSwap(Vector3.zero, callback, 0.5f);
             item.OnRemoveDotCellTypeOneSlot();
         }
-
+        UnityEngine.Debug.Log("Hammer_-5");
         StartCoroutine(StartAnim(callbackContinue));
         anim.AnimationState.SetAnimation(0, "animation", false);
     }
 
     IEnumerator StartAnim(Action callback)
 	{
+        UnityEngine.Debug.Log("Hammer_-6");
+
         yield return new WaitForSeconds(0.55f);
         fx.GetComponent<ParticleSystem>().Play();
 		yield return new WaitForSeconds(1f);
         callback?.Invoke();
         yield return new WaitForSeconds(0.35f);
 		gameObject.SetActive(false);
+        UnityEngine.Debug.Log("Hammer_-7");
     }
 }

@@ -1,4 +1,5 @@
 using Coffee.UIExtensions;
+using Cysharp.Threading.Tasks.Linq;
 using DG.Tweening;
 
 using Spine;
@@ -58,12 +59,13 @@ public class LogicGame : Singleton<LogicGame>
     {
         get
         {
-            return IsUseSkillGame || !IsStartGame || IsPlayBooster || IsUseSkillFreeze;
+            return IsUseSkillGame || !IsStartGame || IsPlayBooster || IsUseSkillFreeze || isGameOver;
         }
     }
 
     void Start()
     {
+
         Application.targetFrameRate = 60;
         imgProgress.fillAmount = 0;
         DisableTextCombo();
@@ -134,6 +136,8 @@ public class LogicGame : Singleton<LogicGame>
         {
             _timePlayGame = level.timeToPlay;
         }
+
+        _timePlayGame = 66;
 
         textTimePlay.text = GetTimePlayGame();
 
@@ -323,8 +327,9 @@ public class LogicGame : Singleton<LogicGame>
            {
                 var it0 = items[0];
                 var asseet = SOItemContainer.Instance.GetItemAsset(it0.NameSprHide);
-              //  items[1].SetNewItemAsset(asseet, false);
-              //  items[2].SetNewItemAsset(asseet, false);
+                items[1].SetNewItemAsset(asseet, true);
+                items[2].SetNewItemAsset(asseet, true);
+                it0.UpdateItemType(asseet.type);
            }
             else
             {
@@ -526,6 +531,7 @@ public class LogicGame : Singleton<LogicGame>
         {
             var listMoveDropNew = listMoveDrop.OrderByDescending(x => x.transform.position.y).ToList();
             List<int> uniqueX = listMoveDropNew.Select(o => o.PosInit.x).Distinct().ToList();
+            uniqueX.Sort((a, b)=>a-b);
             foreach (var un in uniqueX)
             {
                 List<Cell> cells = new();
@@ -742,6 +748,7 @@ public class LogicGame : Singleton<LogicGame>
             float pecent = timeCurrentCombo / _timeCombo;
             if (pecent <= 0)
             {
+                Audio.Play(ScStatic.SFX_LostCombo);
                 OnResetCombo();
                 pecent = 0;
                 break;
@@ -795,7 +802,7 @@ public class LogicGame : Singleton<LogicGame>
 
         }
         _currentStar += _currentStarAdd;
-        Debug.Log("combo: " + _currentCombo + " staradd__:" + _currentStarAdd +  "_currentStar___" + _currentStar);
+       // Debug.Log("combo: " + _currentCombo + " staradd__:" + _currentStarAdd +  "_currentStar___" + _currentStar);
 
         textCombo.text = "Combo X" + _currentCombo.ToString();
         textStar.text = _currentStar.ToString();
@@ -803,8 +810,14 @@ public class LogicGame : Singleton<LogicGame>
         return _currentStarAdd;
     }
 
-    public void CheckComboGame(Vector3 point)
+    public void CheckComboGame(Vector3 point, bool isPlaySound = true)
     {
+        if(isPlaySound)
+        {
+            var index = Math.Min(_currentCombo, ScStatic.SFX_COMBOS.Count - 1);
+            Audio.Play(ScStatic.SFX_COMBOS[index]);
+        }
+
         textCombo.gameObject.SetActive(true);
         AnimPlayGame.Instance.PlayAnimStarCombo(UpdateCombo(), point);
         if (IsUIParticlePlaying(animComboProgress))
@@ -921,6 +934,9 @@ public class LogicGame : Singleton<LogicGame>
         {
             return;
         }
+
+        Audio.Play(ScStatic.SFX_Ingame_Warning);
+
         isShowWarnning = true;
         UICountDown.Instance.OnActiveAnimWarning(true);
         _warningLowTimeToPlay.SetActiveFx(true);
@@ -968,6 +984,7 @@ public class LogicGame : Singleton<LogicGame>
                     foreach (var item in newList)
                     {
                         item.RunAnimCellDrop(() => {
+                            Audio.Play(ScStatic.SFX_Ingame_CellDrop);
                             item.transform.DOLocalMove(item.transform.localPosition - new Vector3(0, dis, 0), 0.1f).SetEase(Ease.InCubic).OnComplete(() => { 
                             });
                         });
@@ -1009,11 +1026,15 @@ public class LogicGame : Singleton<LogicGame>
 
     public void PlayAnimationReplace(List<Item> cells, Action<ItemAsset, Vector3> callback)
     {
+        Debug.Log("Replay_-2");
+
         _powerupReplace.Active(cells, callback);
     }
 
     public void OnPlayAnimationReplay()
     {
+        Debug.Log("Replay_-1");
+
         IsUseSkillGame = true;
         List<LayerItem> listLayers = new();
 
@@ -1076,10 +1097,11 @@ public class LogicGame : Singleton<LogicGame>
         PlayAnimationReplace(listItemSkillReplay, (itemAsset, localScaleItem) => {
             if(dictItem.Count == 0)
             {
+                Debug.Log("Replay_-4");
                 IsUseSkillGame = false;
                 return;
             }
-
+            Debug.Log("Replay_-4");
             foreach (var it in dictItem)
             {
                 var countAdd = it.Value;
@@ -1153,7 +1175,7 @@ public class LogicGame : Singleton<LogicGame>
     public void OnSkillSwap()
     {
         var cell = listCellAllGame.Where(x => x != null && !x.IsCheckCellBlank() && !x.IsLock && x.transform.position.y < PTop.transform.position.y && x.transform.position.y > PBot.transform.position.y).ToList();
-
+        StartCoroutine(PlayAudioSkillSwap());
         _powerupSwap.gameObject.SetActive(true);
         IsUseSkillGame = true;
         _powerupSwap.OnSkillSwap(cell, p2.transform.position, () => {
@@ -1161,6 +1183,14 @@ public class LogicGame : Singleton<LogicGame>
             _powerupSwap.gameObject.SetActive(false);
             CheckGameOver();
         });
+    }
+
+    private IEnumerator PlayAudioSkillSwap()
+    {
+        Audio.Play(ScStatic.SFX_Ingame_UsePowerUp);
+        float time = 0.4f;
+        yield return new WaitForSeconds(time);
+        Audio.Play(ScStatic.SFX_Ingame_PowerUp_Swap);
     }
 
     #endregion
@@ -1182,7 +1212,12 @@ public class LogicGame : Singleton<LogicGame>
 
     IEnumerator StartSkillGameFreeze()
     {
-        yield return new WaitForSeconds(_TimeSkillFreeze);
+        float time = 0.03f;
+        Audio.Play(ScStatic.SFX_Ingame_UsePowerUp);
+        yield return new WaitForSeconds(time);
+        Audio.Play(ScStatic.SFX_Ingame_PowerUp_TimeFreeze, 1, true);
+        yield return new WaitForSeconds(_TimeSkillFreeze - time);
+        Audio.Stop(ScStatic.SFX_Ingame_PowerUp_TimeFreeze);
         _powerupFreeze.gameObject.SetActive(false);
         IsUseSkillFreeze = false;
     }
@@ -1195,6 +1230,7 @@ public class LogicGame : Singleton<LogicGame>
 
     public void OnSkillBreakItem()
     {
+        UnityEngine.Debug.Log("Hammer_-1");
         IsUseSkillGame = true;
 
         var cell = listCellAllGame.Where(x=>x!=null && !x.IsCheckCellBlank() && !x.IsLock && x.transform.position.y < PTop.transform.position.y && x.transform.position.y > PBot.transform.position.y).ToList();
@@ -1215,6 +1251,8 @@ public class LogicGame : Singleton<LogicGame>
 
         if(groupedPositions == null || groupedPositions.Count == 0)
         {
+            IsUseSkillGame = false;
+            UnityEngine.Debug.Log("Hammer_-2");
             return;
         }
 
@@ -1244,38 +1282,134 @@ public class LogicGame : Singleton<LogicGame>
         if(listItems.Count == 0)
         {
             IsUseSkillGame = false;
+            UnityEngine.Debug.Log("Hammer_-3");
             return;
         }
 
         var numCombo = listItems.Count / 3;
 
         _powerupBreakItem.gameObject.SetActive(true);
+        StartCoroutine(OnPlaySkillBreakItem(listItems, cell, numCombo));
+    }
 
-        _powerupBreakItem.OnPlaySkillBreakItem(listItems, () => { 
-            foreach(var cel in cell)
+    public IEnumerator OnPlaySkillBreakItem(List<Item> listItems, List<Cell> cell, int numCombo)
+    {
+        float time = 0.03f;
+        Audio.Play(ScStatic.SFX_Ingame_UsePowerUp);
+        yield return new WaitForSeconds(time);
+        Audio.Play(ScStatic.SFX_Ingame_PowerUp_Hammer);
+        _powerupBreakItem.gameObject.SetActive(true);
+        yield return new WaitForEndOfFrame();
+         _powerupBreakItem.OnPlaySkillBreakItem(listItems, () => {
+               UnityEngine.Debug.Log("Hammer_-End");
+               foreach (var cel in cell)
+               {
+                   cel.OnNextItemWhenUseSkillBreakItem();
+               }
+
+               var ces = listCellAllGame.Where(x => x != null && x.MoveType == MoveType.Drop && x.IsCheckCellBlank()).ToList();
+
+             if(ces.Count > 0)
+             {
+                 PlayAnimCellTypeDropBlank(ces);
+             }
+
+
+             CheckCombo(numCombo);
+               AnimPlayGame.Instance.OnPlayAnimCombo(Vector3.zero, numCombo, null);
+
+               IsUseSkillGame = false;
+               CheckGameOver();
+           });
+    }
+
+
+    float distanceMoveDrop = 0;
+
+    public void PlayAnimCellTypeDropBlank(List<Cell> cells)
+    {
+        float distance = 0;
+
+        if(distanceMoveDrop < 0.01f)
+        {
+            foreach (var item in ListCellDrop)
             {
-                cel.OnNextItemWhenUseSkillBreakItem();
+                if (item.Count > 01)
+                {
+                    var newL = item.OrderBy(x => x.transform.position.y).ToList();
+                    var dis = newL[0].transform.localPosition.y - newL[1].transform.localPosition.y;
+                    distanceMoveDrop = Math.Abs(dis);
+                }
             }
+        }
 
-            var ces = listCellAllGame.Where(x=>x != null).ToList();
-            foreach(var ce in cell)
+        List<List<Cell>> listCell = new();
+        foreach (var lisc in ListCellDrop)
+        {
+            List<Cell> lcells = new();
+            foreach (var c in cells)
             {
-                ce.OnCheckPlayAnimCellTypeDropBlank();
+                foreach (var item in lisc)
+                {
+                    if (item.Equals(c))
+                    {
+                        lcells.Add(item);
+                        lisc.Remove(item);
+                        break;
+                    }
+                }
             }
+            if(lcells.Count > 0)
+            {
+                listCell.Add(lcells);
+            }
+        }
+        List<List<Cell>> listCellMove = new();
+        foreach (var lisc in listCell)
+        {
+            for (int i = 0; i < lisc.Count; i++)
+            {
+                foreach (var l in ListCellDrop)
+                {
 
-            CheckCombo(numCombo);
-            AnimPlayGame.Instance.OnPlayAnimCombo(Vector3.zero, numCombo, null);
+                    var lx = l.Where(x=>x.transform.localPosition.y > lisc[i].transform.localPosition.y && x.PosInit.x == lisc[i].PosInit.x).ToList();
+                    if(lx.Count > 0)
+                    {
+                        listCellMove.Add(lx);
+                        break;
+                    }
+                }
+            }
+        }
+        foreach (var lisc in listCellMove)
+        {
+            foreach(var item in lisc)
+            {
+                item.RunAnimCellDrop(() => {
+                    Audio.Play(ScStatic.SFX_Ingame_CellDrop);
+                    item.transform.DOLocalMove(item.transform.localPosition - new Vector3(0, distanceMoveDrop, 0), 0.1f).SetEase(Ease.InCubic).OnComplete(() => {
+                        
+                    });
+                });
+            }
+        }
+        this.StartCoroutine(RemoveCellDrop(cells));
+    }
 
-            IsUseSkillGame = false;
-            CheckGameOver();
-        });
-    }    
+    IEnumerator RemoveCellDrop(List<Cell> cells)
+    {
+        yield return new WaitForSeconds(0.1f);
+        foreach(var it in cells)
+        {
+            Destroy(it.gameObject);
+        }
+    }
 
     private void CheckCombo(int countCombo)
     {
         for(int i = 0; i < countCombo; i++)
         {
-			CheckComboGame(Vector3.zero);
+			CheckComboGame(Vector3.zero, false);
             CheckObjectLock();
         }
     }
@@ -1384,6 +1518,7 @@ public class LogicGame : Singleton<LogicGame>
     public void OnBossterTimeUp()
     {
         isGameOver = false;
+        Audio.Play(ScStatic.SFX_Ingame_PowerUp_TimeBonus);
         BoosterInGameController.Instance.ActiveBooster(BoosterKind.IncreaseTime);
     }
 

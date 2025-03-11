@@ -394,7 +394,8 @@ public class ItemContainer : MonoBehaviour
 					item.OnRemoveDotCellTypeOneSlot();
 					item.OnNextLayerItemCurrentContainer();
 					item.OnUpdateItemContainer();
-					item.OnMoveWhenEndDrag(point, true, () => {
+                    Audio.Play(ScStatic.SFX_Ingame_PutDownGood);
+                    item.OnMoveWhenEndDrag(point, true, () => {
 						CheckOnMegerSucess();
 					});
 				}
@@ -422,7 +423,9 @@ public class ItemContainer : MonoBehaviour
         }	
 	}
 
-	public void OnNextItemWhenMove()
+
+
+    public void OnNextItemWhenMove()
 	{
 		if (listLayerItem[currentIndex].IsLayerAllPosBlank())
 		{

@@ -69,6 +69,10 @@ public class DragDropItem : MonoBehaviour
                         trObjDrag.OnMoveFailed();
                     }
                 }
+                else
+                {
+                    trObjDrag.OnMoveFailed();
+                }
             }
 
             isDragging = false;

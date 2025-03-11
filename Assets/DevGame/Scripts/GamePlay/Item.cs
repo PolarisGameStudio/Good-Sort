@@ -76,7 +76,12 @@ public class Item : MonoBehaviour
     float yScale = 0.025f;
 	float yAdd = 0.1f;
 
-	public void SetNewItemAsset(ItemAsset item, bool isSetItemType = true)
+    public void UpdateItemType(ItemType it)
+    {
+        _itemType = it;
+    }
+
+    public void SetNewItemAsset(ItemAsset item, bool isSetItemType = true)
 	{
         _itemAsset = item;
         gameObject.name = item.type.ToString();
@@ -319,8 +324,9 @@ public class Item : MonoBehaviour
 
 	public void OnMoveFailed()
 	{
-		///
-		OnMoveWhenEndDrag(CurrentPos, false, null);
+        ///
+        Audio.Play(ScStatic.SFX_Ingame_PutDownGood);
+        OnMoveWhenEndDrag(CurrentPos, false, null);
 	}
 
 	public void CheckEndItem(Cell celNew)

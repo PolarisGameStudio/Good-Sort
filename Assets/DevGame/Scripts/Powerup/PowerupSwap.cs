@@ -29,6 +29,7 @@ public class PowerupSwap : MonoBehaviour
 
     public void OnSkillSwap(List<Cell> listCellAllGame, Vector3 pointMid, Action callbackSucess)
 	{
+        dataItemSkillSwaps.Clear();
         _anim.gameObject.SetActive(true);
         StartCoroutine(StartAnim());
         var Cells = listCellAllGame.Where(x => x != null && !x.IsLock).ToList();
@@ -344,10 +345,6 @@ public class PowerupSwap : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
         foreach (var it in dataItemSkillSwaps)
         {
-            if(it.item == null)
-            {
-                continue;
-            }    
             it.item.OnEndMoveSkillSwap(it.pointMove, callback, it.isNomal);
         }
         _fxClone.gameObject.SetActive(false);

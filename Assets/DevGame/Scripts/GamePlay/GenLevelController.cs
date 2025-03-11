@@ -6,7 +6,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Newtonsoft.Json;
-using static UnityEditor.Progress;
 
 
 public class GenLevelController : Singleton<GenLevelController>
@@ -118,7 +117,7 @@ public class GenLevelController : Singleton<GenLevelController>
         var txt = Resources.Load<TextAsset>("Json/da_level");
         var levels = JsonConvert.DeserializeObject<List<string>>(txt.text);
 		//132
-        var nameLevel = levels[158];
+        var nameLevel = levels[11];
         var Level1 = Resources.Load<SOLevel>("Data/Level/" + nameLevel);
 
         //19

@@ -39,7 +39,46 @@ public class SOItemContainer : Singleton<SOItemContainer>
 
 	}
 
-	public ItemAsset GetItemAsset(ItemType itemType)
+
+    ItemAsset GetSoItemItemAsset(DataSoItemItemAsset item)
+    {
+        ItemAsset da = new();
+        da.type = item.type;
+
+        if(item.sprite == item.spriteHidden)
+        {
+            da.sprite = Resources.Load<Sprite>("Texture2D/ImageHide/" + item.sprite);
+            if (da.sprite == null)
+            {
+                da.sprite = Resources.Load<Sprite>("Texture2D/" + item.sprite);
+            }
+        }
+        else
+        {
+            da.sprite = Resources.Load<Sprite>("Texture2D/" + item.sprite);
+        }
+
+        if (da.sprite == null)
+        {
+            da.sprite = Resources.Load<Sprite>("Texture2D/ImageHide/" + item.sprite);
+        }
+        da.spriteHidden = Resources.Load<Sprite>("Texture2D/ImageHide/" + item.spriteHidden);
+        if (da.spriteHidden == null)
+        {
+            da.spriteHidden = Resources.Load<Sprite>("Texture2D/" + item.spriteHidden);
+        }
+
+        if (da.spriteHidden == null || da.sprite == null)
+        {
+            int kk = 0;
+        }
+
+        da.kind = item.kind;
+        da.colors = item.colors;
+        return da;
+    }
+
+    public ItemAsset GetItemAsset(ItemType itemType)
 	{
         if (_dicItem.ContainsKey(itemType))
 		{
@@ -52,11 +91,7 @@ public class SOItemContainer : Singleton<SOItemContainer>
 		{
 			if(item.type == itemType)
 			{
-                da.type = item.type;
-				da.sprite = Resources.Load<Sprite>("Texture2D/" + item.sprite);
-				da.spriteHidden = Resources.Load<Sprite>("Texture2D/" + item.spriteHidden);
-				da.kind = item.kind;
-				da.colors = item.colors;
+                da = GetSoItemItemAsset(item);
                 break;
             }
 		}
@@ -77,16 +112,26 @@ public class SOItemContainer : Singleton<SOItemContainer>
                     return _dicItem[item.type];
                 }
 
-                ItemAsset da = new();
-                da.type = item.type;
-                da.sprite = Resources.Load<Sprite>("Texture2D/" + item.sprite);
-                da.spriteHidden = Resources.Load<Sprite>("Texture2D/" + item.spriteHidden);
-                da.kind = item.kind;
-                da.colors = item.colors;
+                ItemAsset da = GetSoItemItemAsset(item); ;
                 _dicItem.Add(item.type, da);
                 return da;
             }
         }
+
+        foreach (var item in dataSoItemItemAssets)
+        {
+            if (item.spriteHidden == nameItemHide)
+            {
+                if (_dicItem.ContainsKey(item.type))
+                {
+                    return _dicItem[item.type];
+                }
+                ItemAsset da = GetSoItemItemAsset(item); ;
+                _dicItem.Add(item.type, da);
+                return da;
+            }
+        }
+
         return null;
     }	
 
