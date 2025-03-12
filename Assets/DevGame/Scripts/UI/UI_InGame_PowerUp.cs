@@ -1,4 +1,7 @@
+using DG.Tweening;
+using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,50 +19,207 @@ public class UI_InGame_PowerUp : MonoBehaviour
 
 	public RectTransform[] rectIconFrees;
 
-	private void Start()
+    [SerializeField] SO_PowerItem sO_PowerItem;
+    public TextMeshProUGUI txtLock;
+    Vector3 pointBegin = Vector3.zero;
+    private Tween tween;
+    private Tween tween1;
+    private RectTransform rectToas = null;
+
+
+    private void Start()
 	{
 
-		btnSelects[0].onClick.AddListener(() =>
-		{
-			if(LogicGame.Instance.IsUseSkillGame)
-			{
-				return;
-			}	
+        rectToas = txtLock.transform.parent.GetComponent<RectTransform>();
+        pointBegin = rectToas.anchoredPosition;
+        UpdateUI_SlotPowerUp(PowerupKind.BreakItem);
+        UpdateUI_SlotPowerUp(PowerupKind.Swap);
+        UpdateUI_SlotPowerUp(PowerupKind.Replace);
+        UpdateUI_SlotPowerUp(PowerupKind.Freeze);
+        AddEventClick();
 
-			LogicGame.Instance.OnSkillBreakItem(false);
+    }
 
-        });
-
-        btnSelects[1].onClick.AddListener(() =>
+    private void AddEventClick()
+	{
+        btnSelects[(int)PowerupKind.BreakItem].onClick.AddListener(() =>
         {
             if (LogicGame.Instance.IsUseSkillGame)
             {
                 return;
             }
+            if (IsLockPower(PowerupKind.BreakItem))
+            {
+                return;
+            }
+            OnSucess(PowerupKind.BreakItem);
+            LogicGame.Instance.OnSkillBreakItem(false);
+        });
+
+        btnSelects[(int)PowerupKind.Replace].onClick.AddListener(() =>
+        {
+            if (LogicGame.Instance.IsUseSkillGame)
+            {
+                return;
+            }
+            if (IsLockPower(PowerupKind.Replace))
+            {
+                return;
+            }
+            OnSucess(PowerupKind.Replace);
             LogicGame.Instance.OnPlayAnimationReplay();
         });
 
-
-        btnSelects[2].onClick.AddListener(() =>
+        btnSelects[(int)PowerupKind.Freeze].onClick.AddListener(() =>
         {
             if (LogicGame.Instance.IsUseSkillGame)
             {
                 return;
             }
+
+            if (IsLockPower(PowerupKind.Freeze))
+            {
+                return;
+            }
+
+            OnSucess(PowerupKind.Freeze);
             LogicGame.Instance.OnSkilFreeze();
         });
 
-
-        btnSelects[3].onClick.AddListener(() =>
+        btnSelects[(int)PowerupKind.Swap].onClick.AddListener(() =>
         {
             if (LogicGame.Instance.IsUseSkillGame)
             {
                 return;
             }
+
+            if(IsLockPower(PowerupKind.Swap))
+            {
+                return;
+            }
+
+            OnSucess(PowerupKind.Swap);
             LogicGame.Instance.OnSkillSwap();
         });
 
     }
+
+    bool IsLockPower(PowerupKind kind)
+    {
+        var da = sO_PowerItem.GetDataPowerItem(kind);
+        if (da.LevelShow > HelperManager.DataPlayer.LevelID)
+        {
+            txtLock.text = $"Unlocked at Level {da.LevelShow}!";
+            RunActionUnLock();
+            return true;
+        }
+
+        return HelperManager.GetNumPower(kind) <= 0;
+    }
+
+    void RunActionUnLock()
+    {
+        if (tween1 != null || tween != null)
+        {
+            tween1.Kill();
+            tween.Kill();
+            tween = null;
+            tween1 = null;
+        }
+
+        rectToas.gameObject.SetActive(true);
+        rectToas.transform.localScale = Vector3.one * 0.75f;
+        var pointSet = pointBegin + new Vector3(0, -150, 0);
+        rectToas.anchoredPosition = pointSet;
+
+        float time = 0.25f;
+
+        tween = rectToas.transform.DOScale(1.0f, time).SetEase(Ease.InOutBack);
+        tween1 = rectToas.DOAnchorPos(pointBegin, time).SetEase(Ease.InOutQuad).OnComplete(() => {
+            StartCoroutine(DisableToas());
+        });
+    }
+
+    IEnumerator DisableToas()
+    {
+        yield return new WaitForSeconds(0.25f);
+        rectToas.gameObject.SetActive(false);
+    }
+
+    private void UpdateUI_SlotPowerUp(PowerupKind kind)
+    {
+        var numUse = HelperManager.GetNumPower(kind);
+        var daPowerItem = sO_PowerItem.GetDataPowerItem(kind);
+        bool isLock = daPowerItem.LevelShow > HelperManager.DataPlayer.LevelID;
+
+        var icon = icons[(int)kind];
+        var txt = txtNumbers[(int)kind];
+        var iconMore = rectIconMores[(int)kind];
+        var iconLock = rectIconLocks[(int)kind];
+        var iconFree = rectIconFrees[(int)kind];
+
+        icon.gameObject.SetActive(!isLock);
+        iconLock.gameObject.SetActive(isLock);
+        if (isLock)
+        {
+            return;
+        }
+        
+        if(numUse <= 0)
+        {
+            iconMore.gameObject.SetActive(true);
+            txt.transform.parent.gameObject.SetActive(false);
+            return;
+        }
+
+        txt.text = numUse.ToString();
+        txt.transform.parent.gameObject.SetActive(true);
+    }
+
+    public void OnSucess(PowerupKind kind)
+    {
+        switch (kind)
+        {
+            case PowerupKind.BreakItem:
+                {
+                    HelperManager.DataPlayer.PowerBreakItem--;
+                    if(HelperManager.DataPlayer.PowerBreakItem <= 0)
+                    {
+                        HelperManager.DataPlayer.PowerBreakItem = 0;
+                    }
+                    break;
+                }
+            case PowerupKind.Freeze:
+                {
+                    HelperManager.DataPlayer.PowerFreeze--;
+                    if (HelperManager.DataPlayer.PowerFreeze <= 0)
+                    {
+                        HelperManager.DataPlayer.PowerFreeze = 0;
+                    }
+                    break;
+                }
+            case PowerupKind.Replace:
+                {
+                    HelperManager.DataPlayer.PowerReplay--;
+                    if (HelperManager.DataPlayer.PowerReplay <= 0)
+                    {
+                        HelperManager.DataPlayer.PowerReplay = 0;
+                    }
+                    break;
+                }
+            case PowerupKind.Swap:
+                {
+                    HelperManager.DataPlayer.PowerSwap--;
+                    if (HelperManager.DataPlayer.PowerSwap <= 0)
+                    {
+                        HelperManager.DataPlayer.PowerSwap = 0;
+                    }
+                    break;
+                }
+        }
+        UpdateUI_SlotPowerUp(kind);
+    }
+
 
     private void OnPurchaseSusscess(string obj)
 	{
@@ -85,9 +245,6 @@ public class UI_InGame_PowerUp : MonoBehaviour
 	{
 	}
 
-	private void UpdateUI_SlotPowerUp(PowerupKind kind)
-	{
-	}
 
 	private int GetIndexPowerUp(PowerupKind kind)
 	{

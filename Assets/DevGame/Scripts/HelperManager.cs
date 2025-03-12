@@ -190,4 +190,29 @@ public static class HelperManager
         DataPlayer.TotalStar += starAdd;
     }
 
+    public static int GetNumPower(PowerupKind kind)
+    {
+        switch(kind)
+        {
+            case PowerupKind.BreakItem:
+                {
+                    return DataPlayer.PowerBreakItem;
+                }
+            case PowerupKind.Freeze:
+                {
+                    return DataPlayer.PowerFreeze;
+                }
+            case PowerupKind.Replace:
+                {
+                    return DataPlayer.PowerReplay;
+                }
+            case PowerupKind.Swap:
+                {
+                    return DataPlayer.PowerSwap;
+                }
+        }
+
+        return 0;
+    }
+
 }
