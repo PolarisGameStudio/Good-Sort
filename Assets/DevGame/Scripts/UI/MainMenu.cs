@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class MainMenu : Singleton<MainMenu>
 {
@@ -17,6 +18,7 @@ public class MainMenu : Singleton<MainMenu>
     [SerializeField] TextMeshProUGUI txtCoint = null;
     [SerializeField] RectMask2D rectMask = null;
 
+    [SerializeField] UIReciverItem uIReciverItem = null;
 
     [SerializeField] CanvasGroup canvasGroupPop;
     bool isLoadSceneSucess = false;
@@ -39,6 +41,8 @@ public class MainMenu : Singleton<MainMenu>
         txtStar.text = HelperManager.DataPlayer.TotalStar.ToString();
         txtCoint.text = HelperManager.DataPlayer.TotalCoin.ToString();
 
+        StartCoroutine(OnReciverItem());
+
     }
 
     public IEnumerator OnRunRect(Action callback)
@@ -59,6 +63,17 @@ public class MainMenu : Singleton<MainMenu>
         }
 
         callback?.Invoke();
+    }
+
+    public IEnumerator OnReciverItem()
+    {
+        yield return new WaitForSeconds(0.25f);
+
+        if (HelperManager.DataPlayer.currentStarGame > 0 || HelperManager.DataPlayer.currentCoin > 0)
+        {
+            uIReciverItem.gameObject.SetActive(true);
+            uIReciverItem.RunAnim();
+        }
     }
 
     private void OnDestroy()

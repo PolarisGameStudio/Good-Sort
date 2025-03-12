@@ -82,7 +82,7 @@ public class UIEndGame_Showcase : MonoBehaviour
         txtLevel.text = $"<color=#FFD700>Level {GenLevelController.Instance.LevelId + 1}</color>\nComplete!";
 		timeRemainingConvert.txtTime.text = LogicGame.Instance.TxtTimePlay;
 		timeRemainingConvert.txtStar.text = "5";
-        txtTotalStar.text = ScStatic.currentStarGame.ToString();
+        txtTotalStar.text = HelperManager.DataPlayer.currentStarGame.ToString();
         StartCoroutine(StartPlayAnimConverStar());
     }
 
@@ -146,8 +146,8 @@ public class UIEndGame_Showcase : MonoBehaviour
         Audio.Play(ScStatic.SFX_Ingame_StartWave);
 		yield return StartCoroutine(timeRemainingConvert.IEConvertTimeToStar(this));
 		timeRemainingConvert.rectStar.gameObject.SetActive(false);
-        txtTotalStar.text = (ScStatic.currentStarGame + 5).ToString();
-        HelperManager.OnAddStarGame(ScStatic.currentStarGame + 5);
+        txtTotalStar.text = (HelperManager.DataPlayer.currentStarGame + 5).ToString();
+        HelperManager.DataPlayer.currentStarGame += 5;
     }
 
     private void UpdateUI()

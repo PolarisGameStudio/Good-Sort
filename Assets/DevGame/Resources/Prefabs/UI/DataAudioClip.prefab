@@ -76,4 +76,7 @@ MonoBehaviour:
   - SFX_Ingame_MatchGoods
   - SFX_UI_Chest_Open
   - SFX_UI_Button
+  - SFX_UI_ResourceAppear
+  - SFX_UI_RecivedGold
+  - SFX_UI_RecivedStar
   DatasBG: []

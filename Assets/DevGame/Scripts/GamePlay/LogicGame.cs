@@ -132,7 +132,6 @@ public class LogicGame : Singleton<LogicGame>
     public void OnLoadLevel()
     {
         isGameOver = true;
-        ScStatic.currentStarGame = 0;
         var level = GenLevelController.Instance.GetDataLevel();
         textLevel.text = "Level " + (GenLevelController.Instance.LevelId + 1).ToString();
         if (GenLevelController.Instance.LevelId == 0)
@@ -815,7 +814,7 @@ public class LogicGame : Singleton<LogicGame>
 
         textCombo.text = "Combo X" + _currentCombo.ToString();
         textStar.text = _currentStar.ToString();
-        ScStatic.currentStarGame = _currentStar;
+        HelperManager.DataPlayer.currentStarGame = _currentStar;
         return _currentStarAdd;
     }
 

@@ -55,11 +55,11 @@ public static class ScStatic
     public static string SFX_Ingame_StartWave = "SFX_Ingame_StartWave";
     public static string SFX_UI_Chest_Open = "SFX_UI_Chest_Open";
     public static string SFX_UI_Button = "SFX_UI_Button";
+    public static string SFX_UI_ResourceAppear = "SFX_UI_ResourceAppear";
+    public static string SFX_UI_RecivedGold = "SFX_UI_RecivedGold";
+    public static string SFX_UI_RecivedStar = "SFX_UI_RecivedStar";
 
     #endregion
-
-    public static int currentStarGame = 0;
-
 
     public static Vector2 SizeCanvas = Vector2.zero;
     public static List<BoosterKind> ListBoosterStart = new();

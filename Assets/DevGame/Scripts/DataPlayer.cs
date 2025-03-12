@@ -12,9 +12,14 @@ public class DataPlayer
 
     #region GamePlay
     public int LevelID = 0;
-    public int TotalStar = 0;
     public int NumWinLevel = 0;
+
+    public int TotalStar = 0;
+    public int currentStarGame = 0;
+
     public int TotalCoin = 0;
+    public int currentCoin = 0;
+
     #endregion
 
     public int BoosterKindBreakItem = 1;

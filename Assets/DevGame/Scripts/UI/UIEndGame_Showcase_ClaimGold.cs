@@ -156,7 +156,7 @@ public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
 	{
 		StopMachine();
 
-		HelperManager.DataPlayer.TotalCoin += (int)cointReciver * 2;
+		HelperManager.DataPlayer.currentCoin += (int)cointReciver * 2;
 
         StartCoroutine(OnLoadHomeScene());
     }
@@ -174,8 +174,9 @@ public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
     public void OnComPlete()
 	{
         StopMachine();
-        HelperManager.DataPlayer.TotalCoin += (int)cointReciver;
-		StartCoroutine(OnLoadHomeScene());
+        HelperManager.DataPlayer.currentCoin += (int)cointReciver;
+
+        StartCoroutine(OnLoadHomeScene());
        /* UIPopup_Booster.Show();
         UIPopup_Booster.Instance.callbackClose = () =>
         {
