@@ -73,7 +73,6 @@ public class LogicGame : Singleton<LogicGame>
 
     void Start()
     {
-
         Application.targetFrameRate = 60;
         imgProgress.fillAmount = 0;
         DisableTextCombo();

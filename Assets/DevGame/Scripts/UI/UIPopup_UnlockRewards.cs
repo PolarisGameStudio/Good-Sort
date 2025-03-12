@@ -53,7 +53,7 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 	{
 	}
 
-	public void UpdateUI_SkeletonChest(SkeletonGraphic skeChest, List<ResourceValue> dataReward, float scaleChestStart, float scaleChestEnd = 1f, float timeMove = 0.25f)
+	public void UpdateUI_SkeletonChest(SkeletonGraphic skeChest, List<ResourceValue> dataReward, float scaleChestStart, float scaleChestEnd = 1f, float timeMove = 0.25f, Action complete = null)
 	{
         c_dataReward = dataReward;
         skeChest.gameObject.SetActive(true);
@@ -62,11 +62,11 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
         skeChest.transform.DOScale(Vector3.one * scaleChestEnd, timeMove).SetEase(Ease.InOutBack);
         skeChest.GetComponent<RectTransform>().DOLocalMove(Vector3.zero, timeMove).OnComplete(() => {
             skeChest.AnimationState.SetAnimation(0, "Open", false);
-			StartCoroutine(IEOpenChest(dataReward, skeChest.transform.position));
+			StartCoroutine(IEOpenChest(dataReward, skeChest.transform.position, complete));
         });
     }
 
-    private IEnumerator IEOpenChest(List<ResourceValue> dataReward, Vector3 pointChes)
+    private IEnumerator IEOpenChest(List<ResourceValue> dataReward, Vector3 pointChes, Action complete)
     {
         yield return new WaitForSeconds(1.25f);
 		var p = pattern.GetPattern(dataReward.Count);
@@ -88,9 +88,10 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
         }
 
         p.DOScale(Vector3.one, 0.25f).SetEase(Ease.InOutBack);
-		p.DOMove(pBegin, 0.25f).OnComplete(() => { 
+		p.DOMove(pBegin, 0.25f).OnComplete(() => {
+			complete?.Invoke();
 
-		});
+        }).SetEase(Ease.InOutSine);
 
 		foreach(var it in c_dataReward)
 		{

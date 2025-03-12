@@ -64067,6 +64067,7 @@ MonoBehaviour:
   progressLevel: {fileID: 1894839883480947739}
   txtMeshComplete: {fileID: 4953576423057068650}
   skeChes: {fileID: 5868099041415883954}
+  soReciverItem: {fileID: 11400000, guid: 02cd970850893ab4dbc9c01d2b7357be, type: 2}
 --- !u!225 &3378480888288511855
 CanvasGroup:
   m_ObjectHideFlags: 0

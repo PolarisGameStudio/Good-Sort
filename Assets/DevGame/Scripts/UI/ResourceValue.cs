@@ -1,9 +1,11 @@
 using System;
+using UnityEngine;
 
 [Serializable]
 public class ResourceValue
 {
-	public int type;
+	public ResourceType reType;
+    [HideInInspector] public int type;
 
 	public float value;
 
@@ -58,6 +60,12 @@ public class ResourceValue
                     break;
 				}
 
+            case ResourceType.Gold:
+                {
+                    HelperManager.DataPlayer.currentCoin += (int)value;
+                    break;
+                }
+
         }
 	}
 
@@ -75,6 +83,7 @@ public class ResourceValue
 	public ResourceValue(ResourceType type, float value)
 	{
 		this.type = (int)type;
+		this.reType = type;
 		this.value = value;
     }
 }

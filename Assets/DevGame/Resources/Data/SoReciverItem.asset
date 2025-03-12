@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294bfb040cfa144b875fecc9eddc776, type: 3}
+  m_Name: SoReciverItem
+  m_EditorClassIdentifier: 
+  dataSoReciverItems:
+  - reciverItems: []
+    reciverItems1:
+    - reType: 1
+      type: 0
+      value: 100
+    - reType: 5
+      type: 0
+      value: 1
+    - reType: 1
+      type: 1
+      value: 100
+    - reType: 5
+      type: 5
+      value: 1
+    starLimit: 500
+  - reciverItems: []
+    reciverItems1:
+    - reType: 1
+      type: 1
+      value: 150
+    - reType: 3
+      type: 3
+      value: 1
+    starLimit: 1000
+  - reciverItems: []
+    reciverItems1:
+    - reType: 1
+      type: 1
+      value: 200
+    - reType: 6
+      type: 6
+      value: 1
+    starLimit: 1500
+  - reciverItems: []
+    reciverItems1:
+    - reType: 1
+      type: 1
+      value: 250
+    - reType: 4
+      type: 4
+      value: 1
+    starLimit: 2000
+  - reciverItems: []
+    reciverItems1:
+    - reType: 1
+      type: 1
+      value: 300
+    - reType: 5
+      type: 5
+      value: 1
+    - reType: 6
+      type: 6
+      value: 1
+    starLimit: 2500
+  - reciverItems: []
+    reciverItems1:
+    - reType: 1
+      type: 1
+      value: 350
+    - reType: 3
+      type: 3
+      value: 1
+    - reType: 6
+      type: 6
+      value: 1
+    starLimit: 3000
+  - reciverItems: []
+    reciverItems1:
+    - reType: 1
+      type: 1
+      value: 400
+    - reType: 5
+      type: 5
+      value: 1
+    starLimit: 3500
+  - reciverItems: []
+    reciverItems1:
+    - reType: 1
+      type: 1
+      value: 450
+    - reType: 3
+      type: 3
+      value: 1
+    starLimit: 4000
+  - reciverItems: []
+    reciverItems1:
+    - reType: 1
+      type: 1
+      value: 500
+    - reType: 6
+      type: 6
+      value: 1
+    starLimit: 4500
+  - reciverItems: []
+    reciverItems1:
+    - reType: 1
+      type: 1
+      value: 500
+    - reType: 4
+      type: 4
+      value: 1
+    starLimit: 5000

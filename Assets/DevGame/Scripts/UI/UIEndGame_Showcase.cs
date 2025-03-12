@@ -69,6 +69,9 @@ public class UIEndGame_Showcase : MonoBehaviour
 	[Header("skeChes")]
 	public SkeletonGraphic skeChes = null;
 
+    [Header("SoReciverItem")]
+    public SoReciverItem soReciverItem;
+
     public static void ConfirmClickClaimGold()
 	{
 
@@ -95,13 +98,31 @@ public class UIEndGame_Showcase : MonoBehaviour
         if (HelperManager.DataPlayer.NumWinLevel >= 5)
         {
             HelperManager.DataPlayer.NumWinLevel = 0;
-            OnShowUnLockReward();
+            OnShowUnLockReward(() =>
+            {
+                ShowRewardStar();
+            });
             yield return new WaitForEndOfFrame();
             yield return new WaitForEndOfFrame();
         }
+        else
+        {
+            ShowRewardStar();
+        }
+
     }
 
-	private void OnShowUnLockReward()
+    private void ShowRewardStar()
+    {
+        var da = soReciverItem.GetDataSoReciverItemByStarAdd(HelperManager.DataPlayer.currentStarGame);
+        if(da.starLimit == -1)
+        {
+            return;
+        }
+        UIPopup_UnlockRewards.Instance.UpdateUI_SkeletonChest(skeChes, da.reciverItems1, 0.01f, 0.425f, 0.25f, null);
+    }
+
+    private void OnShowUnLockReward(Action callback)
 	{
         Audio.Play(ScStatic.SFX_UI_Chest_Open);
         UIPopup_UnlockRewards.Show();
@@ -113,11 +134,10 @@ public class UIEndGame_Showcase : MonoBehaviour
             ResourceType.Booster_X2_Star,
             ResourceType.Booster_BreakItem,
             ResourceType.Booster_Time,
+            ResourceType.Gold,
         };
 
         int rand = UnityEngine.Random.Range(1, 3);
-
-        rand = 3;
 
         HelperManager.Shuffle(resourceTypes);
 
@@ -131,9 +151,13 @@ public class UIEndGame_Showcase : MonoBehaviour
         List<ResourceValue> listValue = new();
         foreach (var ty in listType)
         {
-            listValue.Add(new(ty, 2));
+            int valueAdd = 1;
+
+
+
+            listValue.Add(new(ty, 1));
         }
-        UIPopup_UnlockRewards.Instance.UpdateUI_SkeletonChest(skeChes, listValue, 0.01f, 0.425f);
+        UIPopup_UnlockRewards.Instance.UpdateUI_SkeletonChest(skeChes, listValue, 0.01f, 0.425f, 0.25f, callback);
     }
 
     private IEnumerator StartPlayAnimConverStar()
