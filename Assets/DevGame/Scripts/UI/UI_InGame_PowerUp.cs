@@ -107,7 +107,7 @@ public class UI_InGame_PowerUp : MonoBehaviour
     bool IsLockPower(PowerupKind kind)
     {
         var da = sO_PowerItem.GetDataPowerItem(kind);
-        if (da.LevelShow > HelperManager.DataPlayer.LevelID)
+        if (da.LevelShow > HelperManager.DataPlayer.LevelID + 1)
         {
             txtLock.text = $"Unlocked at Level {da.LevelShow}!";
             RunActionUnLock();
@@ -150,7 +150,7 @@ public class UI_InGame_PowerUp : MonoBehaviour
     {
         var numUse = HelperManager.GetNumPower(kind);
         var daPowerItem = sO_PowerItem.GetDataPowerItem(kind);
-        bool isLock = daPowerItem.LevelShow > HelperManager.DataPlayer.LevelID;
+        bool isLock = daPowerItem.LevelShow > HelperManager.DataPlayer.LevelID + 1;
 
         var icon = icons[(int)kind];
         var txt = txtNumbers[(int)kind];
