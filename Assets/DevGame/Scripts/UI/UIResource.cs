@@ -54,7 +54,7 @@ public class UIResource : MonoBehaviour
 
     }
 
-    private void OnEnable()
+	private void OnEnable()
 	{
 	}
 

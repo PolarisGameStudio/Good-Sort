@@ -261,7 +261,13 @@ public class ItemContainer : MonoBehaviour
 		}
 	}
 
-	public bool CheckLayerBank()
+	public bool IsLayerFullSlot()
+	{
+		return listLayerItem[currentIndex].IsLayerFullSlot();
+	}	
+
+
+    public bool CheckLayerBank()
 	{
 		int count = 0;
 
@@ -536,12 +542,28 @@ public class ItemContainer : MonoBehaviour
 		Destroy(layer.gameObject);
 	}
 
+	Coroutine checkGameOver = null;
+
 	public void CheckOnMegerSucess()
 	{
 		OnNextLayerItem(true);
+		if(checkGameOver != null)
+		{
+			StopCoroutine(checkGameOver);
+            checkGameOver = null;
+
+        }
+        checkGameOver = StartCoroutine(CheckEnGameFullSlot());
 	}
 
-	private void Update()
+	IEnumerator CheckEnGameFullSlot()
+	{
+		yield return new WaitForSeconds(1.0f);
+		LogicGame.Instance.CheckEnGameFullSlot();
+    }
+
+
+    private void Update()
 	{
 		foreach (var it in listLayerItem)
 		{

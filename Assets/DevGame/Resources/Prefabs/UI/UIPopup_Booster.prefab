@@ -4009,6 +4009,7 @@ MonoBehaviour:
   rectSelected: {fileID: 3879561641720342680}
   rectFree: {fileID: 6125215387165432559}
   refPopupGetMore: {fileID: 0}
+  c_kind: 0
 --- !u!222 &7572216787051073362
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8310,6 +8311,7 @@ MonoBehaviour:
   rectSelected: {fileID: 2095073090344828585}
   rectFree: {fileID: 7488829994926286554}
   refPopupGetMore: {fileID: 0}
+  c_kind: 0
 --- !u!222 &5774727081516019668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8589,6 +8591,7 @@ MonoBehaviour:
   rectSelected: {fileID: 4385068003280764233}
   rectFree: {fileID: 8690012014198049867}
   refPopupGetMore: {fileID: 0}
+  c_kind: 0
 --- !u!222 &5199344738731766036
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10841,6 +10844,8 @@ MonoBehaviour:
   btnPlayGame: {fileID: 9078470312493760848}
   btnExit: {fileID: 2331981834058337128}
   txtMesh: {fileID: 4039639731526448894}
+  sO_Booster: {fileID: 11400000, guid: 672c15719b39bc4459347aa6c530210b, type: 2}
+  isGameScene: 0
 --- !u!1 &8827732686045917978
 GameObject:
   m_ObjectHideFlags: 0

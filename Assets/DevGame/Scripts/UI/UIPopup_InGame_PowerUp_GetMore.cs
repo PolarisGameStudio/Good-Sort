@@ -1,8 +1,10 @@
+using Spine;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIPopup_InGame_PowerUp_GetMore : MonoBehaviour
+public class UIPopup_InGame_PowerUp_GetMore : Dialog<UIPopup_InGame_PowerUp_GetMore>
 {
 	public Image icon;
 
@@ -14,33 +16,113 @@ public class UIPopup_InGame_PowerUp_GetMore : MonoBehaviour
 
 	public Button btnWatchAd;
 
-	public Transform btnBuyByGoldContainer;
+    public Button btnExit;
 
-	public Transform btnWatchAdContainer;
+    Action<bool> currentCallbackk;
+    Action<bool> callbackStart;
 
-	public TextMeshProUGUI txtFreeAds;
+    public TextMeshProUGUI txtTitle;
+    public TextMeshProUGUI txtAdd;
 
-	private Vector3 _posBtnBuyByGold;
 
-	private Vector3 _posBtnWatch;
+    private void Start()
+    {
+        btnBuy.onClick.AddListener(() =>
+        {
+            currentCallbackk?.Invoke(true);
+            onClose();
+        });
+        btnWatchAd.onClick.AddListener(() =>
+        {
+            currentCallbackk?.Invoke(true);
+            onClose();
+        });
+        btnExit.onClick.AddListener(() =>
+        {
+            OnCallbackFail();
+            onClose();
+        });
+    }
 
-	private void Awake()
+    private void OnCallbackFail()
+    {
+        currentCallbackk?.Invoke(false);
+    }    
+
+    public void UpdateUI(DataPowerItem power, Action<bool> Callback, Action<bool> _callbackStar)
 	{
-	}
+        callbackStart = _callbackStar;
+        callbackStart?.Invoke(true);
+        currentCallbackk = Callback;
+        ResourceType re = ResourceType.Powerup_BreakItem;
+        if (power.kind == PowerupKind.BreakItem)
+        {
+            re = ResourceType.Powerup_BreakItem;
+        }
 
-	private void Active(bool both)
-	{
-	}
+        if (power.kind == PowerupKind.Replace)
+        {
+            re = ResourceType.Powerup_Replace;
+        }
 
-	private void OnEnable()
-	{
-	}
+        if (power.kind == PowerupKind.Freeze)
+        {
+            re = ResourceType.Powerup_Freeze;
+        }
 
-	private void OnDisable()
-	{
-	}
+        if (power.kind == PowerupKind.Swap)
+        {
+            re = ResourceType.Powerup_Swap;
+        }
 
-	public void UpdateUI(PowerupKind kind)
-	{
-	}
+        icon.sprite = UISpriteController.Instance.GetSpriteResource(re);
+        icon.SetNativeSize();
+        txtDes.text = power.textDes;
+        txtPrice.text = power.price.ToString();
+        txtTitle.text = "Booster";
+        txtAdd.gameObject.SetActive(true);
+
+    }
+
+    public void UpdateUiBooster(DataBoosterItem power, Action<bool> Callback)
+    {
+        currentCallbackk = Callback;
+        ResourceType re = ResourceType.Powerup_BreakItem;
+
+        if (power.kind == BoosterKind.BreakItem)
+        {
+            re = ResourceType.Booster_BreakItem;
+        }
+
+        if (power.kind == BoosterKind.IncreaseTime)
+        {
+            re = ResourceType.Booster_Time;
+        }
+
+        if (power.kind == BoosterKind.X2_Star)
+        {
+            re = ResourceType.Booster_X2_Star;
+        }
+
+        icon.sprite = UISpriteController.Instance.GetSpriteResource(re);
+        icon.SetNativeSize();
+        txtDes.text = power.textDes;
+        txtPrice.text = power.price.ToString();
+
+    }
+
+    public static void Show()
+    {
+        Open();
+    }
+    public static void Hide()
+    {
+        Close();
+    }
+
+    public void onClose()
+    {
+        callbackStart?.Invoke(false);
+        Hide();
+    }
 }

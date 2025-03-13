@@ -22,6 +22,9 @@ public class UIReciverItem : MonoBehaviour
 {
     public List<DataReciverItem> dataReciverItems;
     [SerializeField] TextMeshProUGUI txtStar;
+
+    [SerializeField] TextMeshProUGUI txtgold;
+
     int _Index = 0;
     [SerializeField] Ease ease; 
 
@@ -60,7 +63,7 @@ public class UIReciverItem : MonoBehaviour
             {
                 if(HelperManager.DataPlayer.currentStarGame > 0)
                 {
-                    txtStar.text = HelperManager.DataPlayer.currentStarGame.ToString();
+                    txtStar.text = HelperManager.DataPlayer.TotalStar.ToString();
                     if (item.objStar)
                     {
                         item.objStar.gameObject.SetActive(true);
@@ -68,6 +71,7 @@ public class UIReciverItem : MonoBehaviour
                             item.objStar.gameObject.SetActive(false);
                             HelperManager.OnAddStarGame(HelperManager.DataPlayer.currentStarGame);
                             HelperManager.DataPlayer.currentStarGame = 0;
+                            txtStar.text = HelperManager.DataPlayer.TotalStar.ToString();
                         });
                     }
                 }
@@ -127,6 +131,8 @@ public class UIReciverItem : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         gameObject.SetActive(false);
+        HelperManager.DataPlayer.TotalCoin += HelperManager.DataPlayer.currentCoin;
+        txtgold.text = HelperManager.DataPlayer.TotalCoin.ToString();
         HelperManager.DataPlayer.currentStarGame = 0;
         HelperManager.DataPlayer.currentCoin = 0;
     }

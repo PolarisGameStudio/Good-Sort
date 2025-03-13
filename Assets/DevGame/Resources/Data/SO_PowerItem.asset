@@ -16,12 +16,16 @@ MonoBehaviour:
   - kind: 0
     price: 200
     LevelShow: 2
+    textDes: Break a pair of items
   - kind: 1
     price: 300
     LevelShow: 3
+    textDes: Freeze time
   - kind: 2
     price: 400
     LevelShow: 4
+    textDes: Reverse the positions of all items.
   - kind: 3
     price: 500
     LevelShow: 5
+    textDes: Change 9 random items into the same type

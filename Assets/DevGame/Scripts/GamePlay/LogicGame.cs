@@ -59,7 +59,7 @@ public class LogicGame : Singleton<LogicGame>
     {
         get
         {
-            return IsUseSkillGame || !IsStartGame || IsPlayBooster || IsUseSkillFreeze || isGameOver;
+            return IsUseSkillGame || !IsStartGame || IsPlayBooster || isGameOver || IsStarPower;
         }
     }
 
@@ -67,9 +67,11 @@ public class LogicGame : Singleton<LogicGame>
     {
         get
         {
-            return IsUseSkillGame || IsPlayBooster || IsUseSkillFreeze || isGameOver;
+            return IsUseSkillGame || IsPlayBooster || isGameOver || IsStarPower;
         }
     }
+
+    public bool IsStarPower = false;
 
     void Start()
     {
@@ -126,6 +128,7 @@ public class LogicGame : Singleton<LogicGame>
         yield return new WaitForEndOfFrame();
 
         OnLoadLevel();
+        yield return new WaitForSeconds(1.5f);
     }
 
     public void OnLoadLevel()
@@ -142,8 +145,6 @@ public class LogicGame : Singleton<LogicGame>
         {
             _timePlayGame = level.timeToPlay;
         }
-
-        _timePlayGame = 66;
 
         textTimePlay.text = GetTimePlayGame();
 
@@ -813,10 +814,8 @@ public class LogicGame : Singleton<LogicGame>
 
         textCombo.text = "Combo X" + _currentCombo.ToString();
         textStar.text = _currentStar.ToString();
-        HelperManager.DataPlayer.currentStarGame = _currentStar;
         return _currentStarAdd;
     }
-
     public void CheckComboGame(Vector3 point, bool isPlaySound = true)
     {
         if(isPlaySound)
@@ -889,11 +888,34 @@ public class LogicGame : Singleton<LogicGame>
 
             if (index == count)
             {
-                StartCoroutine(GameOver(true));
+                StartCoroutine(GameOver(true, 0));
             }
         }
 
     }
+
+    public void CheckEnGameFullSlot()
+    {
+        var cell = listCellAllGame.Where(x=>x!=null).ToList();
+
+        if (cell.Count > 0)
+        {
+            int count = cell.Count;
+            int index = 0;
+            foreach (var item in cell)
+            {
+                if (item.IsLayerFullSlot())
+                {
+                    index++;
+                }
+            }
+
+            if (index == count)
+            {
+                StartCoroutine(GameOver(false, 1));
+            }
+        }
+    }    
 
     private void Update()
     {
@@ -925,7 +947,7 @@ public class LogicGame : Singleton<LogicGame>
 
         if(_timePlayGame <= 0)
         {
-            StartCoroutine(GameOver(false));
+            StartCoroutine(GameOver(false, 0));
             Debug.Log("game_over");
             return;
         }
@@ -1179,8 +1201,9 @@ public class LogicGame : Singleton<LogicGame>
     [Header("Skill Swap")]
     [SerializeField] private PowerupSwap _powerupSwap = null;
 
-    public void OnSkillSwap()
+    public void OnSkillSwap(bool isOver = false)
     {
+        isGameOver = false;
         var cell = listCellAllGame.Where(x => x != null && !x.IsCheckCellBlank() && !x.IsLock && x.transform.position.y < PTop.transform.position.y && x.transform.position.y > PBot.transform.position.y).ToList();
         StartCoroutine(PlayAudioSkillSwap());
         _powerupSwap.gameObject.SetActive(true);
@@ -1189,7 +1212,7 @@ public class LogicGame : Singleton<LogicGame>
             IsUseSkillGame = false;
             _powerupSwap.gameObject.SetActive(false);
             CheckGameOver();
-        });
+        }, isOver);
     }
 
     private IEnumerator PlayAudioSkillSwap()
@@ -1515,7 +1538,7 @@ public class LogicGame : Singleton<LogicGame>
     #region End Game
     [Header("End Game")]
     private bool isGameOver = false;
-    private IEnumerator GameOver(bool isWin)
+    private IEnumerator GameOver(bool isWin, int type)
     {
         isGameOver = true;
 
@@ -1527,14 +1550,23 @@ public class LogicGame : Singleton<LogicGame>
         _warningLowTimeToPlay.SetActiveFx(false);
         if(isWin)
         {
+            HelperManager.DataPlayer.currentStarGame = _currentStar;
             HelperManager.DataPlayer.LevelID++;
             Audio.Play(ScStatic.SFX_Ingame_FoodFight_ConfettiWin);
             StartCoroutine(StartGameOver());
         }
         else
         {
+            HelperManager.DataPlayer.currentStarGame = 0;
             Audio.Play(ScStatic.SFX_Ingame_FoodFight_ConfettiLose);
-            UIPopup_EndGame_TimeUp.Show();
+            if(type == 0)
+            {
+                UIPopup_EndGame_TimeUp.Show();
+            }
+            else
+            {
+                UIPopup_InGame_GameOver.Show();
+            }
         }
     }
 

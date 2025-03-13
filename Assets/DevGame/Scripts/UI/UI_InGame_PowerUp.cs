@@ -1,7 +1,7 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,18 +42,30 @@ public class UI_InGame_PowerUp : MonoBehaviour
 
     private void AddEventClick()
 	{
+        Action<bool> callbackStart = isEnd => {
+            LogicGame.Instance.IsStarPower = isEnd;
+        };
+
         btnSelects[(int)PowerupKind.BreakItem].onClick.AddListener(() =>
         {
             if (LogicGame.Instance.IsUseSkillGame)
             {
                 return;
             }
+            Action<bool> callback = isSucess => {
+                if (isSucess)
+                {
+                    OnSucess(PowerupKind.BreakItem);
+                    LogicGame.Instance.OnSkillBreakItem(false);
+                }
+            };
             if (IsLockPower(PowerupKind.BreakItem))
             {
+                UIPopup_InGame_PowerUp_GetMore.Show();
+                UIPopup_InGame_PowerUp_GetMore.Instance.UpdateUI(sO_PowerItem.GetDataPowerItem(PowerupKind.BreakItem), callback, callbackStart);
                 return;
             }
-            OnSucess(PowerupKind.BreakItem);
-            LogicGame.Instance.OnSkillBreakItem(false);
+            callback?.Invoke(true);
         });
 
         btnSelects[(int)PowerupKind.Replace].onClick.AddListener(() =>
@@ -62,12 +74,22 @@ public class UI_InGame_PowerUp : MonoBehaviour
             {
                 return;
             }
+
+            Action<bool> callback = isSucess => {
+                if (isSucess)
+                {
+                    OnSucess(PowerupKind.Replace);
+                    LogicGame.Instance.OnPlayAnimationReplay();
+                }
+            };
+
             if (IsLockPower(PowerupKind.Replace))
             {
+                UIPopup_InGame_PowerUp_GetMore.Show();
+                UIPopup_InGame_PowerUp_GetMore.Instance.UpdateUI(sO_PowerItem.GetDataPowerItem(PowerupKind.Replace), callback, callbackStart);
                 return;
             }
-            OnSucess(PowerupKind.Replace);
-            LogicGame.Instance.OnPlayAnimationReplay();
+            callback?.Invoke(true);
         });
 
         btnSelects[(int)PowerupKind.Freeze].onClick.AddListener(() =>
@@ -77,13 +99,22 @@ public class UI_InGame_PowerUp : MonoBehaviour
                 return;
             }
 
+            Action<bool> callback = isSucess => {
+                if (isSucess)
+                {
+                    OnSucess(PowerupKind.Freeze);
+                    LogicGame.Instance.OnSkilFreeze();
+                }
+            };
+
             if (IsLockPower(PowerupKind.Freeze))
             {
+                UIPopup_InGame_PowerUp_GetMore.Show();
+                UIPopup_InGame_PowerUp_GetMore.Instance.UpdateUI(sO_PowerItem.GetDataPowerItem(PowerupKind.Freeze), callback, callbackStart);
                 return;
             }
+            callback?.Invoke(true);
 
-            OnSucess(PowerupKind.Freeze);
-            LogicGame.Instance.OnSkilFreeze();
         });
 
         btnSelects[(int)PowerupKind.Swap].onClick.AddListener(() =>
@@ -93,13 +124,21 @@ public class UI_InGame_PowerUp : MonoBehaviour
                 return;
             }
 
+            Action<bool> callback = isSucess => { 
+                if(isSucess)
+                {
+                    OnSucess(PowerupKind.Swap);
+                    LogicGame.Instance.OnSkillSwap();
+                }    
+            };
+
             if(IsLockPower(PowerupKind.Swap))
             {
+                UIPopup_InGame_PowerUp_GetMore.Show();
+                UIPopup_InGame_PowerUp_GetMore.Instance.UpdateUI(sO_PowerItem.GetDataPowerItem(PowerupKind.Swap), callback, callbackStart);
                 return;
             }
-
-            OnSucess(PowerupKind.Swap);
-            LogicGame.Instance.OnSkillSwap();
+            callback?.Invoke(true);
         });
 
     }

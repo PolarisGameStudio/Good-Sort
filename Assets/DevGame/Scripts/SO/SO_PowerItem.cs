@@ -9,6 +9,7 @@ public struct DataPowerItem
     public PowerupKind kind;
     public int price;
     public int LevelShow;
+    public string textDes;
 }
 
 [CreateAssetMenu(fileName = "SO_PowerItem", menuName = "ScriptableObjects/SO_PowerItem", order = 2)]

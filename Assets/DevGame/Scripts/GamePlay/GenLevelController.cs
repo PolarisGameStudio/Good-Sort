@@ -112,12 +112,11 @@ public class GenLevelController : Singleton<GenLevelController>
 		_soCells11.SaveToFile();*/
 
         LevelId = HelperManager.DataPlayer.LevelID;
-		//HelperManager.DataPlayer.LevelID++;
 
         var txt = Resources.Load<TextAsset>("Json/da_level");
         var levels = JsonConvert.DeserializeObject<List<string>>(txt.text);
 		//132
-        var nameLevel = levels[0];
+        var nameLevel = levels[LevelId];
         var Level1 = Resources.Load<SOLevel>("Data/Level/" + nameLevel);
 
         //19

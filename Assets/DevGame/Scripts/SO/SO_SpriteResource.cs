@@ -15,6 +15,13 @@ public class SO_SpriteResource : ScriptableObject
 
 	public Sprite GetIcon(ResourceType type)
 	{
+		foreach(var it in icons)
+		{
+			if(it.type == type)
+			{
+				return it.spr;
+			}
+		}
 		return null;
 	}
 }

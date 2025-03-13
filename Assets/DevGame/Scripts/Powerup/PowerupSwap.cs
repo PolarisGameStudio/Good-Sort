@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Spine;
 using Spine.Unity;
 using UnityEngine;
@@ -27,7 +25,7 @@ public class PowerupSwap : MonoBehaviour
 
     Action callbackMoveEnd = null;
 
-    public void OnSkillSwap(List<Cell> listCellAllGame, Vector3 pointMid, Action callbackSucess)
+    public void OnSkillSwap(List<Cell> listCellAllGame, Vector3 pointMid, Action callbackSucess, bool isGameOver)
 	{
         dataItemSkillSwaps.Clear();
         _anim.gameObject.SetActive(true);
@@ -54,6 +52,55 @@ public class PowerupSwap : MonoBehaviour
         listItems = listItems.Where(x=>x != null).ToList();
 
         listItems.Sort((a, b) => a.ItemType - b.ItemType);
+
+        if(isGameOver)
+        {
+            var groupedPositions = listItems.GroupBy(pos => pos.ItemType).ToDictionary(group => group.Key, group => group.ToList());
+
+            if (groupedPositions != null && groupedPositions.Count > 0)
+            {
+                var gr1 = groupedPositions.Where(x => x.Value.Count > 2).ToList();
+
+                List<Item> itemRemove = new();
+
+                foreach (var it in gr1)
+                {
+                    var pd = it.Value.Count % 3;
+                    if (pd == 0)
+                    {
+                        continue;
+                    }
+
+                    for (int i = 0; i < pd; i++)
+                    {
+                        it.Value.RemoveAt(0);
+                    }
+
+                }
+
+                foreach (var it in gr1)
+                {
+                    itemRemove.AddRange(it.Value);
+                    if (itemRemove.Count >= 3)
+                    {
+                        while (itemRemove.Count > 3)
+                        {
+                            itemRemove.RemoveAt(0);
+                        }
+                        break;
+                    }    
+                }
+
+                foreach (var item in itemRemove)
+                {
+                    item.transform.parent = null;
+                    item.itemContainer.RemoveIndexItemInLayerItem(item);
+                    listItems.Remove(item);
+                    Destroy(item.gameObject);
+;                }
+            }
+        }
+
 
         int num11 = listItems.Count;
         var numItemww = 0;

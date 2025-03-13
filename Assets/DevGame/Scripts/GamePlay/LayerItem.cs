@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -73,6 +74,30 @@ public class LayerItem : MonoBehaviour
         for (int i = 0; i < listItem.Count; i++)
         {
             if (listItem[i] != null)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }    
+
+    public bool IsLayerFullSlot()
+    {
+        if (cellType == CellType.CellLayerCount || cellType == CellType.CellSingle)
+        {
+            for (int i = 0; i < listItem.Count; i++)
+            {
+                if (listItem[i] != null)
+                {
+                    return true;
+                }
+            }
+        }
+
+        for (int i = 0; i < listItem.Count; i++)
+        {
+            if (listItem[i] == null)
             {
                 return false;
             }

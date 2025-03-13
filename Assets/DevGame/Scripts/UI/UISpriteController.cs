@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UISpriteController : Singleton<UISpriteController>
+public class UISpriteController : MonoBehaviour
 {
-	public SO_SpriteResource resource;
+	public static UISpriteController Instance;
+
+    public SO_SpriteResource resource;
 
 	public SO_SpriteResource resource_shop;
 
@@ -31,7 +33,19 @@ public class UISpriteController : Singleton<UISpriteController>
 
 	public Sprite sprNoTeamIcon;
 
-	public float GetScale(ResourceType type)
+    private void Awake()
+    {
+		if(Instance != null)
+		{
+			Destroy(this.gameObject);
+			return;
+		}
+
+		Instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    public float GetScale(ResourceType type)
 	{
 		return 0f;
 	}
@@ -63,7 +77,9 @@ public class UISpriteController : Singleton<UISpriteController>
 		return null;
 	}
 
-	protected override void OnDestroy()
+	public Sprite GetSpriteResource(ResourceType kind)
 	{
-	}
+		return resource.GetIcon(kind);
+    }
+	
 }

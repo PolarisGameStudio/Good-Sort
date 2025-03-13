@@ -99,6 +99,10 @@ public class Cell : MonoBehaviour
 	{
 		return _itemContainer.CheckLayerBank();
     }
+	public bool IsLayerFullSlot()
+	{
+		return _itemContainer.IsLayerFullSlot();
+    }
 
 	public void SetData(List<ItemsInLayerCell> da, int typeCell, int moveType, Vector2Int vec, float speed)
 	{

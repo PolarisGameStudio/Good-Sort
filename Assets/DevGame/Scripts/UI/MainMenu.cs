@@ -1,12 +1,9 @@
 using Cysharp.Threading.Tasks;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class MainMenu : Singleton<MainMenu>
 {
@@ -48,7 +45,7 @@ public class MainMenu : Singleton<MainMenu>
     public IEnumerator OnRunRect(Action callback)
     {
         int index = 0;
-        while(index < 100000)
+  /*      while(index < 100000)
         {
             index += 200;
             if(index > 30000)
@@ -60,7 +57,9 @@ public class MainMenu : Singleton<MainMenu>
             }
             rectMask.softness = new Vector2Int(index, index); 
             yield return null;
-        }
+        }*/
+        
+        yield return new WaitForEndOfFrame();
 
         callback?.Invoke();
     }

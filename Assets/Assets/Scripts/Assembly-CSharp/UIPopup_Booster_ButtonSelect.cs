@@ -29,7 +29,9 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
 
 	public UIPopup refPopupGetMore;
 
-	private BoosterKind c_kind;
+    private DataBoosterItem daBooster;
+
+    public BoosterKind c_kind;
 
 	bool isEnable = false;
 
@@ -40,6 +42,21 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
     private void Start()
     {
 		btnSelect.onClick.AddListener(() => {
+            if(numBosster <= 0)
+            {
+                UIPopup_InGame_PowerUp_GetMore.Show();
+                UIPopup_InGame_PowerUp_GetMore.Instance.UpdateUiBooster(daBooster, isSuc => {
+                    isEnable = false;
+                    OnAdd();
+                    numBosster++;
+                    rectGetMore.gameObject.SetActive(false);
+                    rectAmount.gameObject.SetActive(true);
+                    txtAmount.text = numBosster.ToString();
+
+                });
+                return;
+            }    
+
 			isEnable = !isEnable;
             rectSelected.gameObject.SetActive(isEnable);
 
@@ -56,9 +73,50 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
         });
     }
 
-    public void SetItemData(DataSpriteBossterKind da)
+	public void OnAdd()
 	{
-		bool isLock = false;
+        if(isFree)
+        {
+            return;
+        }    
+        switch (c_kind)
+        {
+            case BoosterKind.BreakItem:
+                {
+                    HelperManager.DataPlayer.BoosterKindBreakItem += !isEnable ? 1 : -1;
+                    if(HelperManager.DataPlayer.BoosterKindBreakItem <= 0)
+                    {
+                        HelperManager.DataPlayer.BoosterKindBreakItem = 0;
+                    }    
+                    break;
+                }
+
+            case BoosterKind.IncreaseTime:
+                {
+                    HelperManager.DataPlayer.BoosterKindIncreaseTime += !isEnable ? 1 : -1;
+                    if (HelperManager.DataPlayer.BoosterKindIncreaseTime <= 0)
+                    {
+                        HelperManager.DataPlayer.BoosterKindIncreaseTime = 0;
+                    }
+                    break;
+                }
+
+            case BoosterKind.X2_Star:
+                {
+                    HelperManager.DataPlayer.BoosterKindX2_Star += !isEnable ? 1 : -1;
+                    if (HelperManager.DataPlayer.BoosterKindX2_Star <= 0)
+                    {
+                        HelperManager.DataPlayer.BoosterKindX2_Star = 0;
+                    }
+                    break;
+                }
+        }
+    }
+    bool isLock = false;
+
+    public void SetItemData( DataSpriteBossterKind da, DataBoosterItem daPowerItem)
+	{
+        daBooster = daPowerItem;
         c_kind = da.Kind;
         switch (c_kind)
 		{
@@ -82,7 +140,7 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
         }
 		icon.sprite = da.sprEnable;
 		icon.SetNativeSize();
-        isLock = numBosster <= 0;
+        isLock = daPowerItem.LevelShow > HelperManager.DataPlayer.LevelID + 1; ;
 
         if (isLock)
 		{
@@ -95,10 +153,11 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
 			rectSelected.gameObject.SetActive(false);
 			rectFree.gameObject.SetActive(false);
 			icon.sprite = da.sprDisable;
+            icon.gameObject.SetActive(false);
             return;
 		}
 
-        isFree = true;
+        isFree = PlayerPrefs.GetInt(da.Kind.ToString(), 0) == 0;
 
 		if(isFree)
 		{
@@ -115,11 +174,11 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
 		else
 		{
 			callbackBegin = () => {
+                rectGetMore.gameObject.SetActive(numBosster <= 0);
                 rectAmount.gameObject.SetActive(true);
                 rectFree.gameObject.SetActive(false);
                 rectLock.gameObject.SetActive(false);
                 rectTimerInfinite.gameObject.SetActive(false);
-                rectGetMore.gameObject.SetActive(false);
                 rectSelected.gameObject.SetActive(false);
             };
         }
