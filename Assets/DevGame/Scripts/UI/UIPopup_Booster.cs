@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,8 +23,15 @@ public class UIPopup_Booster : Dialog<UIPopup_Booster>
     [SerializeField] Button btnPlayGame;
     [SerializeField] Button btnExit;
     [SerializeField] TextMeshProUGUI txtMesh;
+    [SerializeField] TextMeshProUGUI txtLock;
 
     [SerializeField] SO_Booster sO_Booster;
+
+    Vector3 pointBegin = Vector3.zero;
+    private Tween tween;
+    private Tween tween1;
+    private RectTransform rectToas = null;
+
 
 
     public Action callbackClose;
@@ -31,6 +39,7 @@ public class UIPopup_Booster : Dialog<UIPopup_Booster>
 
     void Start()
     {
+        rectToas = txtLock.transform.parent.GetComponent<RectTransform>();
         txtMesh.text = "Level " + (HelperManager.DataPlayer.LevelID + 1).ToString();
         ScStatic.ListBoosterStart.Clear();
         uIPopup_Booster_ButtonSelects[0].SetItemData(dataSpriteBossterKinds[0], sO_Booster.GetDataPowerItem(dataSpriteBossterKinds[0].Kind));
@@ -67,7 +76,37 @@ public class UIPopup_Booster : Dialog<UIPopup_Booster>
 
         HelperManager.OnLoadGameScene();
     }
- 
+
+    public void RunActionUnLock(string text)
+    {
+        txtLock.text = text;
+
+        if (tween1 != null || tween != null)
+        {
+            tween1.Kill();
+            tween.Kill();
+            tween = null;
+            tween1 = null;
+        }
+
+        rectToas.gameObject.SetActive(true);
+        rectToas.transform.localScale = Vector3.one * 0.75f;
+        var pointSet = pointBegin + new Vector3(0, -150, 0);
+        rectToas.anchoredPosition = pointSet;
+
+        float time = 0.25f;
+
+        tween = rectToas.transform.DOScale(1.0f, time).SetEase(Ease.InOutBack);
+        tween1 = rectToas.DOAnchorPos(pointBegin, time).SetEase(Ease.InOutQuad).OnComplete(() => {
+            StartCoroutine(DisableToas());
+        });
+    }
+    IEnumerator DisableToas()
+    {
+        yield return new WaitForSeconds(0.25f);
+        rectToas.gameObject.SetActive(false);
+    }
+
 
     public void onUpdateBooser(BoosterKind bos, bool isAdd)
     {

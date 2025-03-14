@@ -33,7 +33,8 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
 
     public BoosterKind c_kind;
 
-	bool isEnable = false;
+
+    bool isEnable = false;
 
 	Action callbackBegin = null;
     int numBosster = 0;
@@ -42,6 +43,12 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
     private void Start()
     {
 		btnSelect.onClick.AddListener(() => {
+
+            if(IsLockPower())
+            {
+                return;
+            }
+
             if(numBosster <= 0)
             {
                 UIPopup_InGame_PowerUp_GetMore.Show();
@@ -71,6 +78,17 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
 
             UIPopup_Booster.Instance.onUpdateBooser(c_kind, isEnable);
         });
+    }
+
+    bool IsLockPower()
+    {
+        if (daBooster.LevelShow > HelperManager.DataPlayer.LevelID + 1)
+        {
+            UIPopup_Booster.Instance.RunActionUnLock($"Unlocked at Level {daBooster.LevelShow}!");
+            return true;
+        }
+
+        return false;
     }
 
 	public void OnAdd()
@@ -144,7 +162,7 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
 
         if (isLock)
 		{
-            btnSelect.enabled = false;
+            //btnSelect.enabled = false;
             rectLock.gameObject.SetActive(true);
             icon.transform.localScale = Vector3.one * 0.75f;
             rectAmount.gameObject.SetActive(false);
