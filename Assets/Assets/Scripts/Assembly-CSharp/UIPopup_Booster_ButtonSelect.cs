@@ -15,8 +15,6 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
 
 	public TextMeshProUGUI txtAmount;
 
-	public RectTransform rectTimerInfinite;
-
 	public UITimerCountdownTMP timerInfinite;
 
 	public RectTransform rectGetMore;
@@ -166,11 +164,10 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
             rectLock.gameObject.SetActive(true);
             icon.transform.localScale = Vector3.one * 0.75f;
             rectAmount.gameObject.SetActive(false);
-			rectTimerInfinite.gameObject.SetActive(false);
+			//rectTimerInfinite.gameObject.SetActive(false);
 			rectGetMore.gameObject.SetActive(false);
 			rectSelected.gameObject.SetActive(false);
 			rectFree.gameObject.SetActive(false);
-			icon.sprite = da.sprDisable;
             icon.gameObject.SetActive(false);
             return;
 		}
@@ -184,7 +181,7 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
 
                 rectLock.gameObject.SetActive(false);
                 rectAmount.gameObject.SetActive(false);
-                rectTimerInfinite.gameObject.SetActive(false);
+               // rectTimerInfinite.gameObject.SetActive(false);
                 rectGetMore.gameObject.SetActive(false);
                 rectSelected.gameObject.SetActive(false);
 			};
@@ -196,7 +193,7 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
                 rectAmount.gameObject.SetActive(true);
                 rectFree.gameObject.SetActive(false);
                 rectLock.gameObject.SetActive(false);
-                rectTimerInfinite.gameObject.SetActive(false);
+                //rectTimerInfinite.gameObject.SetActive(false);
                 rectSelected.gameObject.SetActive(false);
             };
         }

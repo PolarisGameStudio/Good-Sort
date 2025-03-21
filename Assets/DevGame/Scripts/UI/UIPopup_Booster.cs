@@ -12,7 +12,6 @@ public struct DataSpriteBossterKind
 {
     public BoosterKind Kind;
     public Sprite sprEnable;
-    public Sprite sprDisable;
 }
 
 public class UIPopup_Booster : Dialog<UIPopup_Booster>

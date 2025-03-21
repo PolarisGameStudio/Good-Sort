@@ -59,10 +59,8 @@ public class UI_InGame_PowerUp : MonoBehaviour
                     LogicGame.Instance.OnSkillBreakItem(false);
                 }
             };
-            if (IsLockPower(PowerupKind.BreakItem))
+            if (IsLockPower(PowerupKind.BreakItem, callback, callbackStart))
             {
-                UIPopup_InGame_PowerUp_GetMore.Show();
-                UIPopup_InGame_PowerUp_GetMore.Instance.UpdateUI(sO_PowerItem.GetDataPowerItem(PowerupKind.BreakItem), callback, callbackStart);
                 return;
             }
             callback?.Invoke(true);
@@ -83,10 +81,8 @@ public class UI_InGame_PowerUp : MonoBehaviour
                 }
             };
 
-            if (IsLockPower(PowerupKind.Replace))
+            if (IsLockPower(PowerupKind.Replace, callback, callbackStart))
             {
-                UIPopup_InGame_PowerUp_GetMore.Show();
-                UIPopup_InGame_PowerUp_GetMore.Instance.UpdateUI(sO_PowerItem.GetDataPowerItem(PowerupKind.Replace), callback, callbackStart);
                 return;
             }
             callback?.Invoke(true);
@@ -107,10 +103,8 @@ public class UI_InGame_PowerUp : MonoBehaviour
                 }
             };
 
-            if (IsLockPower(PowerupKind.Freeze))
+            if (IsLockPower(PowerupKind.Freeze, callback, callbackStart))
             {
-                UIPopup_InGame_PowerUp_GetMore.Show();
-                UIPopup_InGame_PowerUp_GetMore.Instance.UpdateUI(sO_PowerItem.GetDataPowerItem(PowerupKind.Freeze), callback, callbackStart);
                 return;
             }
             callback?.Invoke(true);
@@ -132,10 +126,8 @@ public class UI_InGame_PowerUp : MonoBehaviour
                 }    
             };
 
-            if(IsLockPower(PowerupKind.Swap))
+            if(IsLockPower(PowerupKind.Swap, callback, callbackStart))
             {
-                UIPopup_InGame_PowerUp_GetMore.Show();
-                UIPopup_InGame_PowerUp_GetMore.Instance.UpdateUI(sO_PowerItem.GetDataPowerItem(PowerupKind.Swap), callback, callbackStart);
                 return;
             }
             callback?.Invoke(true);
@@ -143,7 +135,7 @@ public class UI_InGame_PowerUp : MonoBehaviour
 
     }
 
-    bool IsLockPower(PowerupKind kind)
+    bool IsLockPower(PowerupKind kind, Action<bool> callback, Action<bool> callbackStart)
     {
         var da = sO_PowerItem.GetDataPowerItem(kind);
         if (da.LevelShow > HelperManager.DataPlayer.LevelID + 1)
@@ -153,7 +145,14 @@ public class UI_InGame_PowerUp : MonoBehaviour
             return true;
         }
 
-        return HelperManager.GetNumPower(kind) <= 0;
+        if(HelperManager.GetNumPower(kind) <= 0)
+        {
+            UIPopup_InGame_PowerUp_GetMore.Show();
+            UIPopup_InGame_PowerUp_GetMore.Instance.UpdateUI(sO_PowerItem.GetDataPowerItem(kind), callback, callbackStart);
+            return true;
+        }    
+
+        return false;
     }
 
     void RunActionUnLock()
