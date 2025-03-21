@@ -17843,8 +17843,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3818926362479650555}
   - component: {fileID: 1948237866009127469}
-  - component: {fileID: 2102371911523779581}
-  - component: {fileID: 809708769034079133}
   - component: {fileID: 1886471947811397509}
   m_Layer: 5
   m_Name: UIText_Headline 401f71 (TMP)
@@ -17880,72 +17878,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3608648488679843486}
   m_CullTransparentMesh: 1
---- !u!114 &2102371911523779581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3608648488679843486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393896b4ab0cea4bba9fe61ec05527ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 0}
-  dependOnRectBound: 0
-  vertexCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 30
-      tangentMode: 0
-      weightedMode: 3
-      inWeight: 0
-      outWeight: 0.01
-    - serializedVersion: 3
-      time: 0.5
-      value: 0.25
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -30
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 3
-      inWeight: 0.01
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  yCurveScaling: 40
---- !u!114 &809708769034079133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3608648488679843486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b25bee73d0f5b777b2558945d4aec85c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textMeshProUGUI: {fileID: 0}
-  material: {fileID: 2100000, guid: 41d15e0c9e7b82a458bfe3d49d42a917, type: 2}
-  term: time_empty_title
-  paramTerms: []
-  preFix: 
-  surFix: 
 --- !u!114 &1886471947811397509
 MonoBehaviour:
   m_ObjectHideFlags: 0
