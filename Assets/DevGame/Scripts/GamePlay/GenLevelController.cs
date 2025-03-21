@@ -116,7 +116,7 @@ public class GenLevelController : Singleton<GenLevelController>
         var txt = Resources.Load<TextAsset>("Json/da_level");
         var levels = JsonConvert.DeserializeObject<List<string>>(txt.text);
 		//132
-        var nameLevel = levels[LevelId];
+        var nameLevel = levels[0];
         var Level1 = Resources.Load<SOLevel>("Data/Level/" + nameLevel);
 
         //19
