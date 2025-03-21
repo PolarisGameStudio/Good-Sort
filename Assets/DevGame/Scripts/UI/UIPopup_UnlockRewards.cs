@@ -62,14 +62,17 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
         skeChest.transform.DOScale(Vector3.one * scaleChestEnd, timeMove).SetEase(Ease.InOutBack);
         skeChest.GetComponent<RectTransform>().DOLocalMove(Vector3.zero, timeMove).OnComplete(() => {
             skeChest.AnimationState.SetAnimation(0, "Open", false);
-			StartCoroutine(IEOpenChest(dataReward, skeChest.transform.position, complete));
+			skeChest.AnimationState.AddAnimation(0, "Idle_After", true, 0);
+
+            StartCoroutine(IEOpenChest(dataReward, skeChest, complete));
         });
     }
 
-    private IEnumerator IEOpenChest(List<ResourceValue> dataReward, Vector3 pointChes, Action complete)
+    private IEnumerator IEOpenChest(List<ResourceValue> dataReward, SkeletonGraphic skeChest, Action complete)
     {
-        yield return new WaitForSeconds(1.25f);
-		var p = pattern.GetPattern(dataReward.Count);
+        yield return new WaitForSeconds(1.75f);
+		var pointChes = skeChest.transform.position;
+        var p = pattern.GetPattern(dataReward.Count);
 		var pBegin = p.transform.position;
 		p.localScale = Vector3.one * 0.25f;
 		p.transform.position = pointChes;
@@ -82,7 +85,12 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 			var txtValue = item.GetChild(1);
 			var txtMesh = txtValue.GetComponent<TextMeshProUGUI>();
 			txtMesh.text = dataReward[i].value.ToString();
-			var img = icon.GetComponent<Image>();
+
+			txtMesh.fontSize += 20;
+
+            txtMesh.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, 29);
+
+            var img = icon.GetComponent<Image>();
 			img.sprite = UISpriteController.Instance.GetIconMasterPassChest(dataReward[i].type);
 			img.SetNativeSize();
         }

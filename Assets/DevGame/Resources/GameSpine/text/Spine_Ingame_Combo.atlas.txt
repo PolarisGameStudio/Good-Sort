@@ -1,0 +1,20 @@
+Spine_Ingame_Combo.png
+size:1192,332
+filter:Linear,Linear
+pma:true
+Amazing!
+bounds:2,2,448,122
+Beautiful!
+bounds:2,126,475,101
+Good job!
+bounds:479,106,440,121
+Nice!
+bounds:921,128,234,99
+Perfect!
+bounds:452,6,373,98
+So cool!
+bounds:827,3,361,101
+Unbelievable!
+bounds:2,229,626,100
+Well done!
+bounds:630,229,462,100

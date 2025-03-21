@@ -1,0 +1,14 @@
+Spine_Ingame_PowerUp_Swap.png
+size:696,316
+filter:Linear,Linear
+pma:true
+Arrow_D_0
+bounds:515,2,149,143
+Arrow_D_Glow
+bounds:307,107,206,207
+offsets:100,81,507,542
+Arrow_U_0
+bounds:515,147,179,167
+Arrow_U_Glow
+bounds:2,4,303,310
+offsets:148,217,507,542

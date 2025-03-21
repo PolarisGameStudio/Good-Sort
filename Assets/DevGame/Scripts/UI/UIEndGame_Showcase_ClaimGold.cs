@@ -1,16 +1,9 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using DG.Tweening;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.GraphicsBuffer;
 
 public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
 {
@@ -144,6 +137,7 @@ public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
 
 		this.StartCoroutine(machine.IEStart(coint => {
             cointReciver = coint * cointAds;
+			txtWatchAds.text = $"Complete X {(int)coint}";
             txtStarWatchAds.text = cointReciver.ToString();
         }));
     }

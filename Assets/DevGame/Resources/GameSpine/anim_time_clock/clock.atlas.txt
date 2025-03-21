@@ -1,0 +1,17 @@
+clock.png
+size:308,232
+filter:Linear,Linear
+pma:true
+clock
+bounds:2,2,226,243
+rotate:90
+h
+bounds:247,61,41,47
+offsets:1,1,43,49
+s
+bounds:247,158,70,57
+offsets:1,1,72,59
+rotate:90
+set
+bounds:247,110,43,46
+offsets:1,1,45,48

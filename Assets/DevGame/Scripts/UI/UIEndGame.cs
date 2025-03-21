@@ -8,8 +8,6 @@ public class UIEndGame : Dialog<UIEndGame>
 
 	public RectTransform rectPreCongratulation;
 
-	public RectTransform rectCongratulation;
-
 	public RectTransform rectShowCase;
 
     public UISkeGraphicSequenceAnimation[] uiSkes;
@@ -29,11 +27,11 @@ public class UIEndGame : Dialog<UIEndGame>
 	IEnumerator GameWin()
 	{
         rectPreCongratulation.gameObject.SetActive(true);
-		yield return new WaitForSeconds(1.0f);
-        rectPreCongratulation.gameObject.SetActive(false);
-        rectCongratulation.gameObject.SetActive(true);
+	//	yield return new WaitForSeconds(1.0f);
+       /* rectPreCongratulation.gameObject.SetActive(false);
+        rectCongratulation.gameObject.SetActive(true);*/
         yield return new WaitForSeconds(1.5f);
-        rectCongratulation.gameObject.SetActive(false);
+        //rectCongratulation.gameObject.SetActive(false);
         rectShowCase.gameObject.SetActive(true);
     }
 

@@ -1576,7 +1576,7 @@ public class LogicGame : Singleton<LogicGame>
         UIEndGame.Show();
         yield return new WaitForEndOfFrame();
         yield return new WaitForSeconds(1.0f);
-        Audio.Play(ScStatic.SFX_Ingame_Confetti);
+      //  Audio.Play(ScStatic.SFX_Ingame_Confetti);
         UIEndGame.Instance.EndGame(EndGameState.Win);
       //  OnNextLevel();
     }

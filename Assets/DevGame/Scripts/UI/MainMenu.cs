@@ -29,6 +29,7 @@ public class MainMenu : Singleton<MainMenu>
         btnSetting.onClick.AddListener(() =>
         {
             UI_Setting.Show();
+            UI_Setting.Instance.DisableSetting();
         });
 
         btnPlay.onClick.AddListener(() => {

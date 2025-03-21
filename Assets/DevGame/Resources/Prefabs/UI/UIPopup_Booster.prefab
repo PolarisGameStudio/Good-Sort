@@ -10145,7 +10145,7 @@ MonoBehaviour:
   - {fileID: 6371535020329752318}
   dataSpriteBossterKinds:
   - Kind: 0
-    sprEnable: {fileID: 21300000, guid: cecbe5d846566db47942e92f94dfdf3d, type: 3}
+    sprEnable: {fileID: 21300000, guid: 71338138cd2fd2d42a8c8636f7fa2246, type: 3}
   - Kind: 1
     sprEnable: {fileID: 21300000, guid: 817a44388933b0049b3e5158a487f1b5, type: 3}
   - Kind: 2

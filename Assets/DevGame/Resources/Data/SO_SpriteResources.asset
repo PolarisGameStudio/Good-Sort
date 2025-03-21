@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df909364971c9fc216bdd07e2cd774b9, type: 3}
   m_Name: SO_SpriteResources
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   icons:
   - type: 0
     spr: {fileID: 21300000, guid: b4ef19c491e1ec94681b64b047ae7b88, type: 2}
@@ -20,27 +20,27 @@ MonoBehaviour:
   - type: 2
     spr: {fileID: 21300000, guid: 7f6c41b5d3726c741bbf2b6d1a1a8401, type: 2}
   - type: 3
-    spr: {fileID: 21300000, guid: 8494e47a12b244d4399401f5d603abce, type: 2}
+    spr: {fileID: 21300000, guid: c59b0368368cc6b41b3cd53aa70ca767, type: 3}
   - type: 4
-    spr: {fileID: 21300000, guid: 5efb16cdcbdcc814d82bd38f34a75ca3, type: 2}
+    spr: {fileID: 21300000, guid: c6077ad2db727c440956476c3f08e6ed, type: 3}
   - type: 5
-    spr: {fileID: 21300000, guid: 4f22716bbe9a48642a4e720602be352c, type: 2}
+    spr: {fileID: 21300000, guid: 7cb5bfee4d676e249bbe5111e5797ee6, type: 3}
   - type: 6
-    spr: {fileID: 21300000, guid: e8c1446f8bdffe94f9fd7b5a1a7e5e09, type: 2}
+    spr: {fileID: 21300000, guid: 5bd36923ce399af418913ea0f7df3df3, type: 3}
   - type: 7
-    spr: {fileID: 21300000, guid: f047f53e5c6a67145b0bcfc5ef1e88ce, type: 2}
+    spr: {fileID: 21300000, guid: 7886842172f550d4794be9de053f882b, type: 3}
   - type: 8
-    spr: {fileID: 21300000, guid: 6c583d4bb12fc2c43bcfd2f65d08d74c, type: 2}
+    spr: {fileID: 21300000, guid: a247a7c308aad6a458f47ba50bf4b5bf, type: 3}
   - type: 9
-    spr: {fileID: 21300000, guid: c23a851781f7baa4ba20395ffc7675c4, type: 2}
+    spr: {fileID: 21300000, guid: ade9e34f7064a3346844c3f5ff957920, type: 3}
   - type: 10
     spr: {fileID: 21300000, guid: 1038486034b443b408853e321dea8146, type: 2}
   - type: 11
-    spr: {fileID: 21300000, guid: f047f53e5c6a67145b0bcfc5ef1e88ce, type: 2}
+    spr: {fileID: 21300000, guid: 7886842172f550d4794be9de053f882b, type: 3}
   - type: 12
-    spr: {fileID: 21300000, guid: 6c583d4bb12fc2c43bcfd2f65d08d74c, type: 2}
+    spr: {fileID: 21300000, guid: a247a7c308aad6a458f47ba50bf4b5bf, type: 3}
   - type: 13
-    spr: {fileID: 21300000, guid: c23a851781f7baa4ba20395ffc7675c4, type: 2}
+    spr: {fileID: 21300000, guid: ade9e34f7064a3346844c3f5ff957920, type: 3}
   - type: 14
     spr: {fileID: 21300000, guid: e1fe0e84d3a5e534796f4520300c1dfa, type: 2}
   - type: 21

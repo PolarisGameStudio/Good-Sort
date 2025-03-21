@@ -10,6 +10,8 @@ public class BgGameCanvas : MonoBehaviour
 
     [SerializeField] bool IsUseMaxSize = true;
 
+    [SerializeField] bool IsNewScale = false;
+
     void Start()
     {
         var sizeCanvas = HelperManager.GetSizeOfCanvas(_canvas);
@@ -20,12 +22,22 @@ public class BgGameCanvas : MonoBehaviour
 
         var scaleX = sizeCanvas.x / sizeBg.width;
         var scaleY = sizeCanvas.y / sizeBg.height;
-
-        var scale = IsUseMaxSize ? Mathf.Max(scaleX, scaleY) : Mathf.Min(scaleX, scaleY);
-
-        if(!IsUseMaxSize && (scaleX < 1.0f || scaleY < 1.0f) || IsUseMaxSize)
+        if (IsNewScale)
         {
-            rectTransfrom.localScale = new Vector3(scale, scale, scale);
+            if(sizeCanvas.x > sizeBg.size.x || sizeCanvas.y > sizeBg.size.y)
+            {
+                var scale = Mathf.Max(scaleX, scaleY);
+                rectTransfrom.localScale = new Vector3(scale, scale, scale);
+            }
+        }
+        else
+        {
+            var scale = IsUseMaxSize ? Mathf.Max(scaleX, scaleY) : Mathf.Min(scaleX, scaleY);
+
+            if (!IsUseMaxSize && (scaleX < 1.0f || scaleY < 1.0f) || IsUseMaxSize)
+            {
+                rectTransfrom.localScale = new Vector3(scale, scale, scale);
+            }
         }
     }
 

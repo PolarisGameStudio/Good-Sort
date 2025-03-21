@@ -614,6 +614,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1812375730 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 472234838971437761, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+  m_PrefabInstance: {fileID: 1983309313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1813532190
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_OutGame_Layer_100
       objectReference: {fileID: 0}
+    - target: {fileID: 1376446460242460944, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: txtToitalStar
+      value: 
+      objectReference: {fileID: 1812375730}
     - target: {fileID: 1539094578914222899, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 0

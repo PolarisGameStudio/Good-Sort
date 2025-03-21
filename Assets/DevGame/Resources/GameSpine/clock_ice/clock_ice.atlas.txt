@@ -1,0 +1,23 @@
+clock_ice.png
+size:1280,372
+filter:Linear,Linear
+pma:true
+Layer 1
+bounds:1121,14,132,58
+offsets:0,8,138,75
+che_ice
+bounds:840,74,435,295
+clock
+bounds:439,3,366,399
+rotate:90
+h
+bounds:840,3,69,148
+rotate:90
+ice_back
+bounds:2,37,435,332
+s
+bounds:990,3,129,69
+offsets:0,0,129,70
+snow
+bounds:2,2,33,33
+offsets:1,1,35,35

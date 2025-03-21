@@ -1,0 +1,16 @@
+Spine_Booster_X2Star.png
+size:812,376
+filter:Linear,Linear
+pma:true
+Star
+bounds:2,2,371,370
+offsets:15,0,390,371
+rotate:90
+StarGlow_0
+bounds:374,59,314,298
+offsets:20,22,354,340
+rotate:90
+Text
+bounds:674,189,184,134
+offsets:5,3,209,137
+rotate:90

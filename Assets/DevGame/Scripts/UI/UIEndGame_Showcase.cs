@@ -95,7 +95,7 @@ public class UIEndGame_Showcase : MonoBehaviour
 		float Move = (float) HelperManager.DataPlayer.NumWinLevel / 5.0f;
 		progressLevel.DOValue(Move, 0.25f);
 		yield return new WaitForSeconds(0.25f);
-        if (HelperManager.DataPlayer.NumWinLevel >= 5)
+        if (true)
         {
             HelperManager.DataPlayer.NumWinLevel = 0;
             OnShowUnLockReward(() =>

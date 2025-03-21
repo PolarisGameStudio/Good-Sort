@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class UI_Setting : Dialog<UI_Setting>
@@ -12,7 +13,11 @@ public class UI_Setting : Dialog<UI_Setting>
 
 	public Button btnMusic;
 
-	public Sprite[] sprSounds;
+    public Button btnHome;
+
+    public Sprite[] sprBtns;
+
+    public Sprite[] sprSounds;
 
 	public Sprite[] sprHaptics;
 
@@ -20,11 +25,20 @@ public class UI_Setting : Dialog<UI_Setting>
 
     public Button btnClose;
 
-	public Action callbackShowSetting = null;
+    public GameObject objDisable;
+    public RectTransform objReset;
+    public TextMeshProUGUI txtSetting = null;
+
+
+    public Action callbackShowSetting = null;
 
     private Image imgSound = null;
     private Image imgMusic = null;
     private Image imgVirabtion = null;
+
+    private Image imgBGSound = null;
+    private Image imgBGMusic = null;
+    private Image imgBGVirabtion = null;
 
 
     private void Start()
@@ -32,6 +46,10 @@ public class UI_Setting : Dialog<UI_Setting>
         imgSound = btnSound.GetComponent<Image>();
         imgMusic = btnMusic.GetComponent<Image>();
         imgVirabtion = btnHaptic.GetComponent<Image>();
+
+        imgBGSound = btnSound.transform.parent.GetComponent<Image>();
+        imgBGMusic = btnMusic.transform.parent.GetComponent<Image>();
+        imgBGVirabtion = btnHaptic.transform.parent.GetComponent<Image>();
 
 
         UpdateUI_Setting();
@@ -63,6 +81,19 @@ public class UI_Setting : Dialog<UI_Setting>
             btnClose.enabled = false;
             onClose();
         });
+
+        btnHome.onClick.AddListener(() => {
+
+            HelperManager.OnBackHomeScene();
+
+        });
+    }
+
+    public void DisableSetting()
+    {
+        txtSetting.text = "Setting";
+        objReset.anchoredPosition = Vector3.zero;
+        objDisable.gameObject.SetActive(false);
     }
 
 	private void OnEnable()
@@ -79,6 +110,10 @@ public class UI_Setting : Dialog<UI_Setting>
         imgSound.sprite = HelperManager.DataPlayer.isPlaySound ? sprSounds[0] : sprSounds[1];
         imgMusic.sprite = HelperManager.DataPlayer.isPlayMusic ? sprMusics[0] : sprMusics[1];
         imgVirabtion.sprite = HelperManager.DataPlayer.isVbration ? sprHaptics[0] : sprHaptics[1];
+
+        imgBGSound.sprite = HelperManager.DataPlayer.isPlaySound ? sprBtns[0] : sprBtns[1];
+        imgBGMusic.sprite = HelperManager.DataPlayer.isPlayMusic ? sprBtns[0] : sprBtns[1];
+        imgBGVirabtion.sprite = HelperManager.DataPlayer.isVbration ? sprBtns[0] : sprBtns[1];
     }
     public static void Show()
     {
