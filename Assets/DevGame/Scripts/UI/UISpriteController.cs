@@ -77,6 +77,7 @@ public class UISpriteController : MonoBehaviour
 		return null;
 	}
 
+
 	public Sprite GetSpriteResource(ResourceType kind)
 	{
 		return resource.GetIcon(kind);

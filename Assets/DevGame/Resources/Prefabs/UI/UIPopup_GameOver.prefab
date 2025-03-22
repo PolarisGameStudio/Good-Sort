@@ -12891,7 +12891,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7829142531427299440}
   - component: {fileID: 6168141252296479805}
-  - component: {fileID: 3635022184479188132}
   - component: {fileID: 8112273305107093188}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -12927,24 +12926,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6582853015569556173}
   m_CullTransparentMesh: 1
---- !u!114 &3635022184479188132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6582853015569556173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b25bee73d0f5b777b2558945d4aec85c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textMeshProUGUI: {fileID: 0}
-  material: {fileID: 2100000, guid: f1e7c7b4824af3948ae301bc75f79465, type: 2}
-  term: 
-  paramTerms: []
-  preFix: 
-  surFix: 
 --- !u!114 &8112273305107093188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13008,7 +12989,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
