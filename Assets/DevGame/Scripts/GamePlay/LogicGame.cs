@@ -322,6 +322,7 @@ public class LogicGame : Singleton<LogicGame>
 
     void CheckItem()
     {
+        return;
         List<Item> listItem = new();
         foreach(var it in listCellAllGame)
         {
@@ -339,6 +340,8 @@ public class LogicGame : Singleton<LogicGame>
             listItems.Add(lis1);
         }
 
+
+
         foreach(var items in listItems)
         {
      
@@ -350,16 +353,7 @@ public class LogicGame : Singleton<LogicGame>
                 items[2].SetNewItemAsset(asseet, true);
                 it0.UpdateItemType(asseet.type);
            }
-            else
-            {
-                int kk1 = 0;
-            }
-
         }    
-
-        int kk = 0;
-
-
     }
 
     void ResetPoint1()

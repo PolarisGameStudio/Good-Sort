@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -22,7 +23,7 @@ public class SOItemContainer : Singleton<SOItemContainer>
 
 	private Dictionary<ItemType, ItemAsset> _dicItem = new();
 
-
+    private Dictionary<int, string> _dictNameSpr = new();
 
 	protected override void Awake()
 	{
@@ -37,7 +38,11 @@ public class SOItemContainer : Singleton<SOItemContainer>
             }
         }
 
-	}
+        for(int i = 1; i <= 100; i++)
+        {
+            _dictNameSpr.Add(i, "AS_" + i.ToString());
+        }    
+    }
 
 
     ItemAsset GetSoItemItemAsset(DataSoItemItemAsset item)
@@ -45,32 +50,46 @@ public class SOItemContainer : Singleton<SOItemContainer>
         ItemAsset da = new();
         da.type = item.type;
 
-        if(item.sprite == item.spriteHidden)
-        {
-            da.sprite = Resources.Load<Sprite>("Texture2D/ImageHide/" + item.sprite);
-            if (da.sprite == null)
-            {
-                da.sprite = Resources.Load<Sprite>("Texture2D/" + item.sprite);
-            }
-        }
-        else
-        {
-            da.sprite = Resources.Load<Sprite>("Texture2D/" + item.sprite);
-        }
 
-        if (da.sprite == null)
-        {
-            da.sprite = Resources.Load<Sprite>("Texture2D/ImageHide/" + item.sprite);
-        }
-        da.spriteHidden = Resources.Load<Sprite>("Texture2D/ImageHide/" + item.spriteHidden);
+
+        /*  if(item.sprite == item.spriteHidden)
+          {
+              da.sprite = Resources.Load<Sprite>("Texture2D/ImageHide/" + item.sprite);
+              if (da.sprite == null)
+              {
+                  da.sprite = Resources.Load<Sprite>("Texture2D/" + item.sprite);
+              }
+          }
+          else
+          {
+              da.sprite = Resources.Load<Sprite>("Texture2D/" + item.sprite);
+          }
+
+          if (da.sprite == null)
+          {
+              da.sprite = Resources.Load<Sprite>("Texture2D/ImageHide/" + item.sprite);
+          }
+          da.spriteHidden = Resources.Load<Sprite>("Texture2D/ImageHide/" + item.spriteHidden);
+          if (da.spriteHidden == null)
+          {
+              da.spriteHidden = Resources.Load<Sprite>("Texture2D/" + item.spriteHidden);
+          }*/
+
+
+        int minKey = _dictNameSpr.Keys.Min();
+        var sprite = _dictNameSpr[minKey];
+        _dictNameSpr.Remove(minKey);
+
+        da.spriteHidden = Resources.Load<Sprite>("Texture2D/newImage/" + sprite);
+
         if (da.spriteHidden == null)
         {
             da.spriteHidden = Resources.Load<Sprite>("Texture2D/" + item.spriteHidden);
+            da.sprite = Resources.Load<Sprite>("Texture2D/" + item.sprite);
         }
-
-        if (da.spriteHidden == null || da.sprite == null)
+        else
         {
-            int kk = 0;
+            da.sprite = Resources.Load<Sprite>("Texture2D/newImage/" + sprite);
         }
 
         da.kind = item.kind;
