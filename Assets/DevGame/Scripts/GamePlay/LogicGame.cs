@@ -177,6 +177,9 @@ public class LogicGame : Singleton<LogicGame>
         List<Cell> listCells = new();
 
 
+        int posintXMax = -9999;
+        int posintXMin = 9999;
+
         foreach (var it in cell)
         {
             var prefab = GenLevelController.Instance.GetPrefabCell(it.cellType);
@@ -215,6 +218,9 @@ public class LogicGame : Singleton<LogicGame>
 
             float XNew = it.posX;
             float YNew = it.posY;
+
+            posintXMax = Math.Max((int)XNew, posintXMax);
+            posintXMin = Math.Min((int)XNew, posintXMin);
 
 
             if (disX1 != 0)
@@ -306,6 +312,11 @@ public class LogicGame : Singleton<LogicGame>
         PlayMoveType(listCellAllGame);
         isGameOver = false;
         CheckItem();
+
+        foreach(var cel in listCellAllGame)
+        {
+            cel.OnUpdateSprite(posintXMax, posintXMin);
+        }
 
     }
 

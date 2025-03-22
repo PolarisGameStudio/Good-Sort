@@ -17,4 +17,22 @@ public class CellSprite : MonoBehaviour
 	private void Start()
 	{
 	}
+
+    public void OnEnableSpr(int index)
+    {
+        if(index == 0)
+		{
+            _left.gameObject.SetActive(true);
+        }
+
+        if (index == 1)
+        {
+            _mid.gameObject.SetActive(true);
+        }
+
+        if (index == 2)
+        {
+            _right.gameObject.SetActive(true);
+        }
+    }
 }

@@ -21,8 +21,6 @@ public class Cell : MonoBehaviour
 
 	private Vector2Int _posInit;
 
-	private Vector2Int _curPos;
-
 	public bool IsLock => _isLock;
 
 	public CellType CellType => _cellType;
@@ -61,8 +59,35 @@ public class Cell : MonoBehaviour
     public Transform pYMin = null;
     public Transform pYMax = null;
 
+	private CellSprite _cellSprite;
 
-	private void OnValidate()
+	public void OnUpdateSprite(int XMax, int XMin)
+	{
+		if (_cellSprite == null)
+			return;
+
+		if(PosInit.x == XMin)
+		{
+			_cellSprite.OnEnableSpr(2);
+
+            return;
+		}
+
+        if (PosInit.x == XMax)
+        {
+            _cellSprite.OnEnableSpr(0);
+            return;
+        }
+        _cellSprite.OnEnableSpr(1);
+    }
+
+
+    private void Awake ()
+    {
+		_cellSprite = gameObject.GetComponent<CellSprite>();
+    }
+
+    private void OnValidate()
 	{
 	}
 
