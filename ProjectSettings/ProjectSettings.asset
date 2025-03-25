@@ -753,24 +753,24 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 0
   webGLPowerPreference: 0
   scriptingDefineSymbols:
-    Android: DOTWEEN;UNITY_VISUAL_SCRIPTING
-    EmbeddedLinux: DOTWEEN;UNITY_VISUAL_SCRIPTING
-    GameCoreScarlett: DOTWEEN
-    GameCoreXboxOne: DOTWEEN
-    LinuxHeadlessSimulation: DOTWEEN;UNITY_VISUAL_SCRIPTING
-    Nintendo Switch: DOTWEEN;UNITY_VISUAL_SCRIPTING
-    PS4: DOTWEEN;UNITY_VISUAL_SCRIPTING
-    PS5: DOTWEEN
-    QNX: DOTWEEN;UNITY_VISUAL_SCRIPTING
+    Android: UNITY_VISUAL_SCRIPTING
+    EmbeddedLinux: UNITY_VISUAL_SCRIPTING
+    GameCoreScarlett: 
+    GameCoreXboxOne: 
+    LinuxHeadlessSimulation: UNITY_VISUAL_SCRIPTING
+    Nintendo Switch: UNITY_VISUAL_SCRIPTING
+    PS4: UNITY_VISUAL_SCRIPTING
+    PS5: 
+    QNX: UNITY_VISUAL_SCRIPTING
     Server: UNITY_VISUAL_SCRIPTING
-    Stadia: DOTWEEN
-    Standalone: DOTWEEN;UNITY_VISUAL_SCRIPTING
-    VisionOS: DOTWEEN;UNITY_VISUAL_SCRIPTING
-    WebGL: DOTWEEN;UNITY_VISUAL_SCRIPTING
-    Windows Store Apps: DOTWEEN;UNITY_VISUAL_SCRIPTING
-    XboxOne: DOTWEEN;UNITY_VISUAL_SCRIPTING
-    iPhone: DOTWEEN;UNITY_VISUAL_SCRIPTING
-    tvOS: DOTWEEN;UNITY_VISUAL_SCRIPTING
+    Stadia: 
+    Standalone: UNITY_VISUAL_SCRIPTING
+    VisionOS: UNITY_VISUAL_SCRIPTING
+    WebGL: UNITY_VISUAL_SCRIPTING
+    Windows Store Apps: UNITY_VISUAL_SCRIPTING
+    XboxOne: UNITY_VISUAL_SCRIPTING
+    iPhone: UNITY_VISUAL_SCRIPTING
+    tvOS: UNITY_VISUAL_SCRIPTING
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

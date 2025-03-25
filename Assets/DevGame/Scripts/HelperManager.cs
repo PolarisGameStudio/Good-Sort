@@ -90,6 +90,14 @@ public static class HelperManager
             callbackLoadScene.allowSceneActivation = false;
             callbackLoadScene = null;
         }*/
+
+        if (DataPlayer.LevelID < 2)
+        {
+            OnLoadGameScene();
+            ShowGameScene();
+            return;
+        }
+
         callbackLoadScene = null;
         SceneManager.LoadScene(ScStatic.HOME_SCENE);
     }
