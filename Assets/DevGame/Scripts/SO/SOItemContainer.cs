@@ -44,6 +44,16 @@ public class SOItemContainer : Singleton<SOItemContainer>
         }    
     }
 
+    public void OnAdd()
+    {
+        _dictNameSpr.Clear();
+        for (int i = 1; i <= 100; i++)
+        {
+            _dictNameSpr.Add(i, "AS_" + i.ToString());
+        }
+
+    }
+
 
     ItemAsset GetSoItemItemAsset(DataSoItemItemAsset item)
     {
