@@ -698,6 +698,18 @@ PrefabInstance:
       propertyPath: m_Softness.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 908256363893697856, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 908256363893697856, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 908256363893697856, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1226345789604268827, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
