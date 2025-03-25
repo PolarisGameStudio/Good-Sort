@@ -13,10 +13,10 @@ public class BoosterIncreaseTime : MonoBehaviour
 
 	private const int time_increase = 60;
 
-	public void Active()
+	public void Active(float time)
 	{
 		var fx = Instantiate(_fx, null);
 		fx.transform.position = Vector3.zero;
-		LogicGame.Instance.OnBossterTimeBonus(fx.transform);
+		LogicGame.Instance.OnBossterTimeBonus(fx.transform, time);
     }
 }

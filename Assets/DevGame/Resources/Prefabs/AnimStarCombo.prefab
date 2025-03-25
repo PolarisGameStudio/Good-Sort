@@ -69,7 +69,7 @@ MonoBehaviour:
   m_IsTrail: 0
   m_IgnoreCanvasScaler: 0
   m_AbsoluteMode: 0
-  m_Scale3D: {x: 7.5, y: 7.5, z: 7.5}
+  m_Scale3D: {x: 13, y: 13, z: 13}
   m_AnimatableProperties: []
   m_Particles:
   - {fileID: 4793150415005753129}
@@ -81,6 +81,7 @@ MonoBehaviour:
   m_AutoScalingMode: 2
   m_UseCustomView: 0
   m_CustomViewSize: 10
+  m_TimeScaleMultiplier: 1
 --- !u!1 &8059794426699099982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,7 +1591,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 342a9b76789724c4889c106dc9582988, type: 3}
+    - sprite: {fileID: 21300000, guid: b4926f77592954443b19e0f835eecb10, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:

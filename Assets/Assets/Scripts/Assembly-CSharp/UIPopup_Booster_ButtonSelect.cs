@@ -15,7 +15,9 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
 
 	public TextMeshProUGUI txtAmount;
 
-	public UITimerCountdownTMP timerInfinite;
+    public TextMeshProUGUI txtLockLevel;
+
+    public UITimerCountdownTMP timerInfinite;
 
 	public RectTransform rectGetMore;
 
@@ -51,13 +53,15 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
             {
                 UIPopup_InGame_PowerUp_GetMore.Show();
                 UIPopup_InGame_PowerUp_GetMore.Instance.UpdateUiBooster(daBooster, isSuc => {
-                    isEnable = false;
-                    OnAdd();
-                    numBosster++;
-                    rectGetMore.gameObject.SetActive(false);
-                    rectAmount.gameObject.SetActive(true);
-                    txtAmount.text = numBosster.ToString();
-
+                    if(isSuc)
+                    {
+                        isEnable = false;
+                        OnAdd();
+                        numBosster++;
+                        rectGetMore.gameObject.SetActive(false);
+                        rectAmount.gameObject.SetActive(true);
+                        txtAmount.text = numBosster.ToString();
+                    }
                 });
                 return;
             }    
@@ -160,6 +164,7 @@ public class UIPopup_Booster_ButtonSelect : MonoBehaviour
 
         if (isLock)
 		{
+            txtLockLevel.text = "Level " + daPowerItem.LevelShow.ToString();
             //btnSelect.enabled = false;
             rectLock.gameObject.SetActive(true);
             icon.transform.localScale = Vector3.one * 0.75f;

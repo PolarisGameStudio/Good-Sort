@@ -1,5 +1,7 @@
+using DG.Tweening;
 using Spine;
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,11 +26,18 @@ public class UIPopup_InGame_PowerUp_GetMore : Dialog<UIPopup_InGame_PowerUp_GetM
     public TextMeshProUGUI txtTitle;
     public TextMeshProUGUI txtAdd;
 
+    public ShowToas showToas;
+
+    int price = 0;
 
     private void Start()
     {
         btnBuy.onClick.AddListener(() =>
         {
+            if(!OnPrice())
+            {
+                return;
+            }
             currentCallbackk?.Invoke(true);
             onClose();
         });
@@ -74,7 +83,8 @@ public class UIPopup_InGame_PowerUp_GetMore : Dialog<UIPopup_InGame_PowerUp_GetM
         {
             re = ResourceType.Powerup_Swap;
         }
-
+        price = power.price;
+        txtPrice.text = price.ToString();
         icon.sprite = UISpriteController.Instance.GetSpriteResource(re);
         icon.SetNativeSize();
         txtDes.text = power.textDes;
@@ -82,6 +92,17 @@ public class UIPopup_InGame_PowerUp_GetMore : Dialog<UIPopup_InGame_PowerUp_GetM
         txtTitle.text = "Booster";
         txtAdd.gameObject.SetActive(true);
 
+    }
+
+    public bool OnPrice()
+    {
+        if(HelperManager.DataPlayer.TotalCoin < price)
+        {
+            showToas.RunActionToas();
+            return false;
+        }
+        HelperManager.OnAddTotalCoin(-price);
+        return true;
     }
 
     public void UpdateUiBooster(DataBoosterItem power, Action<bool> Callback)
@@ -104,6 +125,8 @@ public class UIPopup_InGame_PowerUp_GetMore : Dialog<UIPopup_InGame_PowerUp_GetM
             re = ResourceType.Booster_X2_Star;
         }
 
+        price = power.price;
+        txtPrice.text = price.ToString();
         icon.sprite = UISpriteController.Instance.GetSpriteResource(re);
         icon.SetNativeSize();
         txtDes.text = power.textDes;

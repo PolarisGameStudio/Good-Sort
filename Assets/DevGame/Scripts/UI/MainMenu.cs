@@ -1,3 +1,4 @@
+using Coffee.UIExtensions;
 using Cysharp.Threading.Tasks;
 using System;
 using System.Collections;
@@ -17,13 +18,25 @@ public class MainMenu : Singleton<MainMenu>
 
     [SerializeField] UIReciverItem uIReciverItem = null;
 
+    [SerializeField] GameObject _fxBlingNormal = null;
+    [SerializeField] GameObject _fxBlingHard = null;
+
     [SerializeField] CanvasGroup canvasGroupPop;
     bool isLoadSceneSucess = false;
     bool isLoading = false;
     AsyncOperation callbackScene = null;
-
     void Start()
     {
+
+        if ((HelperManager.DataPlayer.LevelID) % 5 == 0 && HelperManager.DataPlayer.LevelID > 3)
+        {
+            _fxBlingHard.gameObject.SetActive(true);
+        }
+        else
+        {
+            _fxBlingNormal.gameObject.SetActive(true);
+        }
+
         txtLevel.text = $"Level {HelperManager.DataPlayer.LevelID + 1}";
         ScStatic.SizeCanvas = HelperManager.GetSizeOfCanvas(canvas);
         btnSetting.onClick.AddListener(() =>

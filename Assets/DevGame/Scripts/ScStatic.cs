@@ -58,6 +58,7 @@ public static class ScStatic
     public static string SFX_UI_ResourceAppear = "SFX_UI_ResourceAppear";
     public static string SFX_UI_RecivedGold = "SFX_UI_RecivedGold";
     public static string SFX_UI_RecivedStar = "SFX_UI_RecivedStar";
+    public static string SFX_WARING = "SFX_WARING";
 
     #endregion
 

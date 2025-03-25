@@ -55,11 +55,13 @@ public class LogicGame : Singleton<LogicGame>
 
     public bool IsStartGame = false;
     private bool IsPlayBooster = true;
+    private bool IsLevelHard = false;
+
     private bool isPauseGame
     {
         get
         {
-            return IsUseSkillGame || !IsStartGame || IsPlayBooster || isGameOver || IsStarPower;
+            return IsUseSkillGame || !IsStartGame || IsPlayBooster || isGameOver || IsStarPower || IsLevelHard;
         }
     }
 
@@ -180,6 +182,13 @@ public class LogicGame : Singleton<LogicGame>
             _timePlayGame = level.timeToPlay;
         }
 
+        _timePlayGame = 10.0f;
+
+        if ((GenLevelController.Instance.LevelId) % 5 == 0)
+        {
+            IsLevelHard = true;
+            OnPlayWarningGame();
+        }
 
         textTimePlay.text = GetTimePlayGame();
 
@@ -202,14 +211,9 @@ public class LogicGame : Singleton<LogicGame>
             }    
         }
 
-        float xtt = Math.Abs(XMin) / 2 + Math.Abs(XMax) / 2;
-        float ytt = Math.Abs(yMin) / 2 + Math.Abs(yMax) / 2;
-
-
         bool IsLock = false;
 
         List<Cell> listCells = new();
-
 
         int posintXMax = -9999;
         int posintXMin = 9999;
@@ -749,6 +753,25 @@ public class LogicGame : Singleton<LogicGame>
         }
     }
 
+    #region Level Hard
+
+    [Header("Spine_warning")]
+    [SerializeField] GameObject objSpineWarning = null;
+    private void OnPlayWarningGame()
+    {
+        Audio.Play(ScStatic.SFX_WARING);
+        objSpineWarning.SetActive(true);
+        StartCoroutine(PlayAnimWarning());
+    }
+
+    private IEnumerator PlayAnimWarning()
+    {
+        yield return new WaitForSeconds(2.0f);
+        IsLevelHard = false;
+        objSpineWarning.SetActive(false);
+    }
+    #endregion
+
     #endregion
 
     #region Combo
@@ -959,18 +982,23 @@ public class LogicGame : Singleton<LogicGame>
     {
         if (isGameOver)
         {
+            UICountDown.Instance.OnPauseAnimationClock();
             return;
         }
 
         if (isPauseGame)
         {
+            UICountDown.Instance.OnPauseAnimationClock();
             return;
         }
 
         if (IsUseSkillGame || IsUseSkillFreeze)
         {
+            UICountDown.Instance.OnPauseAnimationClock();
             return;
-        }    
+        }
+
+        UICountDown.Instance.PlayAnimationClock();
 
         _timePlayGame -= Time.deltaTime;
 
@@ -1536,7 +1564,7 @@ public class LogicGame : Singleton<LogicGame>
             if (ScStatic.ListBoosterStart.Contains(BoosterKind.IncreaseTime))
             {
                 yield return new WaitForEndOfFrame();
-                BoosterInGameController.Instance.ActiveBooster(BoosterKind.IncreaseTime);
+                BoosterInGameController.Instance.ActiveBooster(BoosterKind.IncreaseTime, 60.5f);
                 while (true)
                 {
                     if (!IsUseSkillGame)
@@ -1557,7 +1585,7 @@ public class LogicGame : Singleton<LogicGame>
 
     }
 
-    public void OnBossterTimeBonus(Transform ob)
+    public void OnBossterTimeBonus(Transform ob, float time)
     {
         Audio.Play(ScStatic.SFX_Ingame_PowerUp_TimeBonus);
         IsUseSkillGame = true;
@@ -1565,7 +1593,7 @@ public class LogicGame : Singleton<LogicGame>
             Vibration.Vibrate(100);
             IsUseSkillGame = false;
             ob.gameObject.SetActive(false);
-            _timePlayGame += 60.5f;
+            _timePlayGame += time;
             textTimePlay.text = GetTimePlayGame();
             UICountDown.Instance.IncreaseTime(60);
         }).SetDelay(1.0f);
@@ -1626,7 +1654,7 @@ public class LogicGame : Singleton<LogicGame>
     public void OnBossterTimeUp()
     {
         isGameOver = false;
-        BoosterInGameController.Instance.ActiveBooster(BoosterKind.IncreaseTime);
+        BoosterInGameController.Instance.ActiveBooster(BoosterKind.IncreaseTime, 30.5f);
     }
 
     #endregion
@@ -1648,4 +1676,5 @@ public class LogicGame : Singleton<LogicGame>
     {
         HelperManager.Save();
     }
+
 }

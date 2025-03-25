@@ -690,6 +690,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3011471372714895, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 47016363670802136, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_Softness.x
       value: 0
@@ -721,6 +725,10 @@ PrefabInstance:
     - target: {fileID: 1316119234099022075, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_Name
       value: Canvas_OutGame_Layer_100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493628305516752074, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1539094578914222899, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_LocalScale.x
@@ -821,6 +829,10 @@ PrefabInstance:
     - target: {fileID: 1648363041714334112, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170068248205593868, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2329732883832351626, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -946,6 +958,30 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4653043673876538797, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016482924977000903, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242456723237172103, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5416040494906385132, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5416040494906385132, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5416040494906385132, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5536870438599587309, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -960,6 +996,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5536870438599587309, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580677685499234239, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646200312667958069, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5662135424522311118, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
@@ -1003,6 +1047,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7319978282201606366, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585420568202174286, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684872924028279415, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}

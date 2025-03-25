@@ -3,6 +3,8 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -213,6 +215,25 @@ public static class HelperManager
         }
 
         return 0;
+    }
+
+    public static void OnAddTotalCoin(int coin)
+    {
+        DataPlayer.TotalCoin += coin;
+        if (DataPlayer.TotalCoin <= 0)
+        {
+            DataPlayer.TotalCoin = 0;
+        }
+
+        var kk = GameObject.FindObjectsOfType<UIResource>().ToList();
+
+        if (kk.Count > 0)
+        {
+            foreach(var it in kk)
+            {
+                it.UpdateUi();
+            }
+        }
     }
 
 }

@@ -46,6 +46,7 @@ public class SOItemContainer : Singleton<SOItemContainer>
 
     public void OnAdd()
     {
+        _dicItem.Clear();
         _dictNameSpr.Clear();
         for (int i = 1; i <= 100; i++)
         {

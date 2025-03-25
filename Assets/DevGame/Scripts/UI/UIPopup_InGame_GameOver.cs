@@ -14,12 +14,18 @@ public class UIPopup_InGame_GameOver : Dialog<UIPopup_InGame_GameOver>
 	public Button btnWatchAds;
 
 	public Button btnExit;
+    public ShowToas showToas;
+    int price = 400;
 
 
     private void Start()
     {
         btnPlay.onClick.AddListener(() =>
         {
+            if (!OnPrice())
+            {
+                return;
+            }
             onClose();
             LogicGame.Instance.OnSkillSwap(true);
         });
@@ -38,6 +44,16 @@ public class UIPopup_InGame_GameOver : Dialog<UIPopup_InGame_GameOver>
         });
     }
 
+    public bool OnPrice()
+    {
+        if (HelperManager.DataPlayer.TotalCoin < price)
+        {
+            showToas.RunActionToas();
+            return false;
+        }
+        HelperManager.OnAddTotalCoin(-price);
+        return true;
+    }
 
     public static void Show()
     {

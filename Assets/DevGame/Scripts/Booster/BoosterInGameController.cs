@@ -19,11 +19,11 @@ public class BoosterInGameController : Singleton<BoosterInGameController>
 	{
 	}
 
-	public void ActiveBooster(BoosterKind booster)
+	public void ActiveBooster(BoosterKind booster, float time = 0)
 	{
 		if(booster == BoosterKind.IncreaseTime)
 		{
-			_boosterIncreaseTime.Active();
+			_boosterIncreaseTime.Active(time);
         }
 
 		if(booster == BoosterKind.BreakItem)

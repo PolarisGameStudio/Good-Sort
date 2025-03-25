@@ -23,8 +23,11 @@ public class UIPopup_EndGame_TimeUp : Dialog<UIPopup_EndGame_TimeUp>
 	public UIPopup popupKeepChallenging;
 
 	public Popup[] popups;
+    public ShowToas showToas;
 
-	private List<FeatureType> c_ListFeatureActive;
+    int price = 300;
+
+    private List<FeatureType> c_ListFeatureActive;
 
 	private void OnEnable()
 	{
@@ -32,8 +35,11 @@ public class UIPopup_EndGame_TimeUp : Dialog<UIPopup_EndGame_TimeUp>
 		btnWachAds.onClick.RemoveAllListeners();
 
         btnBuyCoin.onClick.AddListener(() => {
-			NextStack();
-
+            if (!OnPrice())
+            {
+                return;
+            }
+            NextStack();
         });
 
         btnExit.onClick.AddListener(() => {
@@ -46,7 +52,17 @@ public class UIPopup_EndGame_TimeUp : Dialog<UIPopup_EndGame_TimeUp>
 
     }
 
-	public void NextStack()
+    public bool OnPrice()
+    {
+        if (HelperManager.DataPlayer.TotalCoin < price)
+        {
+            showToas.RunActionToas();
+            return false;
+        }
+        HelperManager.OnAddTotalCoin(-price);
+        return true;
+    }
+    public void NextStack()
 	{
         LogicGame.Instance.OnBossterTimeUp();
         onClose();

@@ -15,7 +15,9 @@ public class UI_InGame_PowerUp : MonoBehaviour
 
 	public TextMeshProUGUI[] txtNumbers;
 
-	public RectTransform[] rectIconMores;
+    public TextMeshProUGUI[] txtLevelLock;
+
+    public RectTransform[] rectIconMores;
 
 	public RectTransform[] rectIconLocks;
 
@@ -206,6 +208,8 @@ public class UI_InGame_PowerUp : MonoBehaviour
         iconLock.gameObject.SetActive(isLock);
         if (isLock)
         {
+            var txtLock = txtLevelLock[(int)kind];
+            txtLock.text = "Level " + daPowerItem.LevelShow;
             return;
         }
         
@@ -225,7 +229,7 @@ public class UI_InGame_PowerUp : MonoBehaviour
         txt.transform.parent.gameObject.SetActive(true);
     }
 
-    public void OnSucess(PowerupKind kind, bool isAdd = false)
+    public void OnSucess(PowerupKind kind, bool isAdd = false, int price = 1)
     {
         switch (kind)
         {
