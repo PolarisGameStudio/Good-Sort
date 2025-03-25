@@ -377,7 +377,7 @@ public class LogicGame : Singleton<LogicGame>
            if(items.Count == 3)
            {
                 var it0 = items[0];
-                var asseet = SOItemContainer.Instance.GetItemAsset(it0.NameSprHide);
+                var asseet = SOItemContainer.Instance.GetItemAsset(it0._itemAsset.daIt.spriteHidden);
                 items[1].SetNewItemAsset(asseet, true);
                 items[2].SetNewItemAsset(asseet, true);
                 items[0].SetNewItemAsset(asseet, true);
