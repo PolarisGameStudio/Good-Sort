@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class UI_InGame_PowerUp : MonoBehaviour
 {
+    public static UI_InGame_PowerUp instance;
+
 	public Button[] btnSelects;
 
 	public Image[] icons;
@@ -26,6 +28,10 @@ public class UI_InGame_PowerUp : MonoBehaviour
     private Tween tween1;
     private RectTransform rectToas = null;
 
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
 	{
@@ -209,19 +215,24 @@ public class UI_InGame_PowerUp : MonoBehaviour
             txt.transform.parent.gameObject.SetActive(false);
             return;
         }
+        else
+        {
+            iconMore.gameObject.SetActive(false);
+            txt.transform.parent.gameObject.SetActive(true);
+        }
 
         txt.text = numUse.ToString();
         txt.transform.parent.gameObject.SetActive(true);
     }
 
-    public void OnSucess(PowerupKind kind)
+    public void OnSucess(PowerupKind kind, bool isAdd = false)
     {
         switch (kind)
         {
             case PowerupKind.BreakItem:
                 {
-                    HelperManager.DataPlayer.PowerBreakItem--;
-                    if(HelperManager.DataPlayer.PowerBreakItem <= 0)
+                    HelperManager.DataPlayer.PowerBreakItem = HelperManager.DataPlayer.PowerBreakItem + (isAdd ? 1 : -1);
+                    if (HelperManager.DataPlayer.PowerBreakItem <= 0)
                     {
                         HelperManager.DataPlayer.PowerBreakItem = 0;
                     }
@@ -229,7 +240,7 @@ public class UI_InGame_PowerUp : MonoBehaviour
                 }
             case PowerupKind.Freeze:
                 {
-                    HelperManager.DataPlayer.PowerFreeze--;
+                    HelperManager.DataPlayer.PowerFreeze = HelperManager.DataPlayer.PowerFreeze + (isAdd ? 1 : -1);
                     if (HelperManager.DataPlayer.PowerFreeze <= 0)
                     {
                         HelperManager.DataPlayer.PowerFreeze = 0;
@@ -238,7 +249,7 @@ public class UI_InGame_PowerUp : MonoBehaviour
                 }
             case PowerupKind.Replace:
                 {
-                    HelperManager.DataPlayer.PowerReplay--;
+                    HelperManager.DataPlayer.PowerReplay = HelperManager.DataPlayer.PowerReplay + (isAdd ? 1 : -1);
                     if (HelperManager.DataPlayer.PowerReplay <= 0)
                     {
                         HelperManager.DataPlayer.PowerReplay = 0;
@@ -247,7 +258,7 @@ public class UI_InGame_PowerUp : MonoBehaviour
                 }
             case PowerupKind.Swap:
                 {
-                    HelperManager.DataPlayer.PowerSwap--;
+                    HelperManager.DataPlayer.PowerSwap = HelperManager.DataPlayer.PowerSwap + (isAdd ? 1 : -1);
                     if (HelperManager.DataPlayer.PowerSwap <= 0)
                     {
                         HelperManager.DataPlayer.PowerSwap = 0;

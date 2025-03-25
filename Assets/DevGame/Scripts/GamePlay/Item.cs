@@ -61,7 +61,7 @@ public class Item : MonoBehaviour
 
     public bool isNameSpriteAndAspriteShadow()
     {
-        return _sprite.sprite.name == _spriteShadow.sprite.name;
+        return _itemAsset.daIt.sprite == _itemAsset.daIt.spriteHidden;
     }    
 
 	private void SetSortingOrder(SpriteRenderer sp, int order)
@@ -222,7 +222,14 @@ public class Item : MonoBehaviour
         PointShadow = transform.localPosition + new Vector3(0, yAdd, 0);
     }
 
-	public void UpdateScaleCurrent(Vector3 scale)
+    private void Awake()
+    {
+        PointNomal = transform.localPosition;
+        PointShadow = transform.localPosition + new Vector3(0, yAdd, 0);
+        CurrentScale = transform.localScale;
+    }
+
+    public void UpdateScaleCurrent(Vector3 scale)
 	{
 		CurrentScale = scale;
 		transform.localScale = scale;
@@ -324,10 +331,13 @@ public class Item : MonoBehaviour
 
 	public void OnMoveFailed()
 	{
-        ///
         Audio.Play(ScStatic.SFX_Ingame_PutDownGood);
         OnMoveWhenEndDrag(CurrentPos, false, null);
-	}
+        if (LogicGame.Instance.IsUseTutorial)
+        {
+            TutorialGame.instance.OnContinueAnnim();
+        }
+    }
 
 	public void CheckEndItem(Cell celNew)
 	{

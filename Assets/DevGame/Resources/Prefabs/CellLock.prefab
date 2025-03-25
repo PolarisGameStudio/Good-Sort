@@ -132,9 +132,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 6550726062595354605}
+  - {fileID: 8989400966239809244}
   - {fileID: 224962643122686561}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectText: {fileID: 224962643122686561}
   textMesh: {fileID: 273822977488407862}
-  ske: {fileID: 6502546648746491363}
+  ske: {fileID: 6362143581373078456}
   box: {fileID: 61709610976236850}
   _fx: {fileID: 198555102863755300, guid: 31c230746f7a95246acc1a73f2cd2045, type: 3}
 --- !u!61 &61709610976236850
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &3068378960045443611
+--- !u!1 &2372146606644197230
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -417,10 +417,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6550726062595354605}
-  - component: {fileID: 1146142379331564510}
-  - component: {fileID: 8806191260902204455}
-  - component: {fileID: 6502546648746491363}
+  - component: {fileID: 8989400966239809244}
+  - component: {fileID: 8405921113415338698}
+  - component: {fileID: 3246400481089725306}
+  - component: {fileID: 6362143581373078456}
   m_Layer: 0
   m_Name: Spine GameObject (Spine_Ingame_CellLock2)
   m_TagString: Untagged
@@ -428,36 +428,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6550726062595354605
+--- !u!4 &8989400966239809244
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3068378960045443611}
+  m_GameObject: {fileID: 2372146606644197230}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.094258, y: 1.094258, z: 1.094258}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4332454274672833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1146142379331564510
+--- !u!33 &8405921113415338698
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3068378960045443611}
+  m_GameObject: {fileID: 2372146606644197230}
   m_Mesh: {fileID: 0}
---- !u!23 &8806191260902204455
+--- !u!23 &3246400481089725306
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3068378960045443611}
+  m_GameObject: {fileID: 2372146606644197230}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -471,7 +471,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8492ca8371300874c89bc790dcdc7184, type: 2}
+  - {fileID: 2100000, guid: 075cfa49013338040b07ff7f4bcb3bda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -493,20 +493,20 @@ MeshRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1300
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6502546648746491363
+--- !u!114 &6362143581373078456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3068378960045443611}
+  m_GameObject: {fileID: 2372146606644197230}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: b108f14543261ca4e82c24d88a5e222f, type: 2}
-  initialSkinName: Normal
+  skeletonDataAsset: {fileID: 11400000, guid: 35a02645aca126845a837e6876b2a992, type: 2}
+  initialSkinName: ABTest
   fixPrefabOverrideViaMeshFilter: 2
   initialFlipX: 0
   initialFlipY: 0
@@ -522,16 +522,17 @@ MonoBehaviour:
   fixDrawOrder: 0
   addNormals: 0
   calculateTangents: 0
-  maskInteraction: 2
+  maskInteraction: 0
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: bb012ffb25f0e1942b9fccb68c03510a, type: 2}
+    materialsMaskDisabled: []
     materialsInsideMask: []
-    materialsOutsideMask:
-    - {fileID: 2100000, guid: 8492ca8371300874c89bc790dcdc7184, type: 2}
+    materialsOutsideMask: []
   disableRenderingOnOverride: 1
+  physicsPositionInheritanceFactor: {x: 1, y: 1}
+  physicsRotationInheritanceFactor: 1
+  physicsMovementRelativeTo: {fileID: 0}
   updateTiming: 1
-  unscaledTime: 1
+  unscaledTime: 0
   _animationName: Step1_Idle
-  loop: 0
+  loop: 1
   timeScale: 1

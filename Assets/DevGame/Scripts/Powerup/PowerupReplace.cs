@@ -46,6 +46,7 @@ public class PowerupReplace : MonoBehaviour
 
 		float time1 = 0.6f;
         yield return new WaitForSeconds(time1);
+        Vibration.Vibrate(100);
         Audio.Play(ScStatic.SFX_Ingame_PowerUp_MagicWard);
         yield return new WaitForSeconds(time - time1);
         _spineWand.AnimationState.SetAnimation(0, "Start_Idle", false);

@@ -4408,6 +4408,7 @@ GameObject:
   - component: {fileID: 8342690643981714602}
   - component: {fileID: 1817063381932336342}
   - component: {fileID: 1552668299953675056}
+  - component: {fileID: 1250760128944225846}
   m_Layer: 5
   m_Name: btnWatchAds
   m_TagString: Untagged
@@ -4520,6 +4521,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1250760128944225846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909115713656115864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3105172997041008824
 GameObject:
   m_ObjectHideFlags: 0

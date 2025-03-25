@@ -71,6 +71,8 @@ public class LogicGame : Singleton<LogicGame>
         }
     }
 
+    public bool IsUseTutorial = false;
+
     public bool IsStarPower = false;
 
     void Start()
@@ -97,6 +99,19 @@ public class LogicGame : Singleton<LogicGame>
         var width = (float)Screen.width / (float)Screen.height * height;
         return new Vector2(width, height);
     }
+
+    public Cell GetCellByName(string name)
+    {
+        foreach(var cel in listCellAllGame)
+        {
+            if (cel.name ==name)
+            {
+                return cel;
+            }
+        }
+
+        return null;
+    }    
 
     #region Load Level
     public void OnNextLevel()
@@ -132,20 +147,37 @@ public class LogicGame : Singleton<LogicGame>
         yield return new WaitForSeconds(1.5f);
     }
 
+    public void AddCellToListCell(Cell cel)
+    {
+        if(listCellAllGame.Contains(cel))
+        {
+            return;
+        }
+
+        listCellAllGame.Add(cel);
+    }
+
     public void OnLoadLevel()
     {
         isGameOver = true;
         var level = GenLevelController.Instance.GetDataLevel();
-        textLevel.text = "Level " + (GenLevelController.Instance.LevelId + 1).ToString();
+        textLevel.text = "LV " + (GenLevelController.Instance.LevelId + 1).ToString();
         if (GenLevelController.Instance.LevelId == 0)
         {
             _timePlayGame = 100000;
             textTimePlay.gameObject.SetActive(false);
+            IsUseTutorial = true;
+            var obj = Resources.Load<GameObject>("Prefabs/TutorialGame");
+            var ob = Instantiate(obj);
+            ob.transform.position = Vector3.zero;
+            isGameOver = false;
+            return;
         }
         else
         {
             _timePlayGame = level.timeToPlay;
         }
+
 
         textTimePlay.text = GetTimePlayGame();
 
@@ -322,7 +354,6 @@ public class LogicGame : Singleton<LogicGame>
 
     void CheckItem()
     {
-        return;
         List<Item> listItem = new();
         foreach(var it in listCellAllGame)
         {
@@ -340,8 +371,6 @@ public class LogicGame : Singleton<LogicGame>
             listItems.Add(lis1);
         }
 
-
-
         foreach(var items in listItems)
         {
      
@@ -351,7 +380,7 @@ public class LogicGame : Singleton<LogicGame>
                 var asseet = SOItemContainer.Instance.GetItemAsset(it0.NameSprHide);
                 items[1].SetNewItemAsset(asseet, true);
                 items[2].SetNewItemAsset(asseet, true);
-                it0.UpdateItemType(asseet.type);
+                items[0].SetNewItemAsset(asseet, true);
            }
         }    
     }
@@ -762,6 +791,7 @@ public class LogicGame : Singleton<LogicGame>
             float pecent = timeCurrentCombo / _timeCombo;
             if (pecent <= 0)
             {
+                Vibration.Vibrate(50);
                 Audio.Play(ScStatic.SFX_LostCombo);
                 OnResetCombo();
                 pecent = 0;
@@ -1134,6 +1164,7 @@ public class LogicGame : Singleton<LogicGame>
             {
                 Debug.Log("Replay_-4");
                 IsUseSkillGame = false;
+                UI_InGame_PowerUp.instance.OnSucess(PowerupKind.Replace, true);
                 return;
             }
             Debug.Log("Replay_-4");
@@ -1289,6 +1320,7 @@ public class LogicGame : Singleton<LogicGame>
         {
             IsUseSkillGame = false;
             UnityEngine.Debug.Log("Hammer_-2");
+            UI_InGame_PowerUp.instance.OnSucess(PowerupKind.BreakItem, true);
             return;
         }
 
@@ -1331,6 +1363,7 @@ public class LogicGame : Singleton<LogicGame>
         {
             IsUseSkillGame = false;
             UnityEngine.Debug.Log("Hammer_-3");
+            UI_InGame_PowerUp.instance.OnSucess(PowerupKind.BreakItem, true);
             return;
         }
 
@@ -1349,7 +1382,8 @@ public class LogicGame : Singleton<LogicGame>
         _powerupBreakItem.gameObject.SetActive(true);
         yield return new WaitForEndOfFrame();
          _powerupBreakItem.OnPlaySkillBreakItem(listItems, () => {
-               UnityEngine.Debug.Log("Hammer_-End");
+             Vibration.Vibrate(100);
+             UnityEngine.Debug.Log("Hammer_-End");
                foreach (var cel in cell)
                {
                    cel.OnNextItemWhenUseSkillBreakItem();
@@ -1526,6 +1560,7 @@ public class LogicGame : Singleton<LogicGame>
         Audio.Play(ScStatic.SFX_Ingame_PowerUp_TimeBonus);
         IsUseSkillGame = true;
         ob.DOMove(UICountDown.Instance.transform.position, 1.0f).SetEase(Ease.InBack).OnComplete(() => {
+            Vibration.Vibrate(100);
             IsUseSkillGame = false;
             ob.gameObject.SetActive(false);
             _timePlayGame += 60.5f;

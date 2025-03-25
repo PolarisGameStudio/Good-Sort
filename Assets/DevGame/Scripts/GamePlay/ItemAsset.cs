@@ -15,7 +15,9 @@ public class ItemAsset
 
 	public ItemColor[] colors;
 
-	public bool ContainColor(List<ItemColor> filterColors)
+	public DataSoItemItemAsset daIt;
+
+    public bool ContainColor(List<ItemColor> filterColors)
 	{
 		return false;
 	}

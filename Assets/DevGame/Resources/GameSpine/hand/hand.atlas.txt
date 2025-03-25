@@ -1,0 +1,10 @@
+hand.png
+size:576,312
+filter:Linear,Linear
+pma:true
+finger
+bounds:2,2,359,306
+offsets:0,0,359,307
+tap
+bounds:363,98,210,210
+offsets:1,1,212,212

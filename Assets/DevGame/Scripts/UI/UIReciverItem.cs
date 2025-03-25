@@ -25,6 +25,8 @@ public class UIReciverItem : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI txtToitalStar;
 
+    [SerializeField] TextMeshProUGUI txtStarAdd;
+
     [SerializeField] TextMeshProUGUI txtgold;
 
     int _Index = 0;
@@ -33,7 +35,6 @@ public class UIReciverItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     public void RunAnim()
@@ -135,6 +136,7 @@ public class UIReciverItem : MonoBehaviour
         gameObject.SetActive(false);
         HelperManager.DataPlayer.TotalCoin += HelperManager.DataPlayer.currentCoin;
         txtgold.text = HelperManager.DataPlayer.TotalCoin.ToString();
+        txtToitalStar.text = HelperManager.DataPlayer.TotalStar.ToString();
         HelperManager.DataPlayer.currentStarGame = 0;
         HelperManager.DataPlayer.currentCoin = 0;
     }

@@ -115,7 +115,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 0.2502296, g: 0.25, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.27994502, b: 0.2588235, a: 0.72156864}
+      maxColor: {r: 1, g: 0.7781666, b: 0.2588235, a: 0.72156864}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4794,7 +4794,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.36026382, b: 0.33333337, a: 1}
+      maxColor: {r: 1, g: 0.6816349, b: 0.33333337, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -11708,7 +11708,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 0.2502296, g: 0.25, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.253573, b: 0.1372549, a: 1}
+      maxColor: {r: 1, g: 0.67277986, b: 0.1372549, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -13946,7 +13946,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4302844661602356}
-  - {fileID: 8846481169259633665}
+  - {fileID: 2249753881756714655}
   - {fileID: 4632445914879409}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
@@ -14065,7 +14065,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 0.2502296, g: 0.25, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.44504604, b: 0.39215684, a: 1}
+      maxColor: {r: 1, g: 0.7896252, b: 0.39215684, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -16378,8 +16378,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0.12061543, b: 0, a: 1}
-      maxColor: {r: 1, g: 0.60779864, b: 0.5137255, a: 1}
+      minColor: {r: 1, g: 0.60784316, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.8235294, b: 0.53333336, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -18692,8 +18692,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0.5467658, b: 0.53333336, a: 1}
-      maxColor: {r: 1, g: 0.12657721, b: 0, a: 1}
+      minColor: {r: 1, g: 0.8245012, b: 0.53333336, a: 1}
+      maxColor: {r: 1, g: 0.60640585, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -20892,7 +20892,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!1 &7721112030120358486
+--- !u!1 &4776061860473873003
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20900,10 +20900,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8846481169259633665}
-  - component: {fileID: 7579032573403393417}
-  - component: {fileID: 313914489052408846}
-  - component: {fileID: 1290559664309138492}
+  - component: {fileID: 2249753881756714655}
+  - component: {fileID: 2830388658063352964}
+  - component: {fileID: 6202194901002888581}
+  - component: {fileID: 5017965868532589675}
   m_Layer: 0
   m_Name: Icon
   m_TagString: Untagged
@@ -20911,36 +20911,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8846481169259633665
+--- !u!4 &2249753881756714655
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7721112030120358486}
+  m_GameObject: {fileID: 4776061860473873003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4300063047948782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7579032573403393417
+--- !u!33 &2830388658063352964
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7721112030120358486}
+  m_GameObject: {fileID: 4776061860473873003}
   m_Mesh: {fileID: 0}
---- !u!23 &313914489052408846
+--- !u!23 &6202194901002888581
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7721112030120358486}
+  m_GameObject: {fileID: 4776061860473873003}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -20954,7 +20954,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5e33d79509731dd4aabdf638e5d4947d, type: 2}
+  - {fileID: 2100000, guid: b5f0c024f68a1dc46a473e3841eb2911, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20976,19 +20976,19 @@ MeshRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 32767
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1290559664309138492
+--- !u!114 &5017965868532589675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7721112030120358486}
+  m_GameObject: {fileID: 4776061860473873003}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 1d254079a7f7a124abd2c7155d95583d, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 8d4aab98163ce3b4495bda2422cff1ef, type: 2}
   initialSkinName: 
   fixPrefabOverrideViaMeshFilter: 2
   initialFlipX: 0
@@ -21011,8 +21011,11 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
+  physicsPositionInheritanceFactor: {x: 1, y: 1}
+  physicsRotationInheritanceFactor: 1
+  physicsMovementRelativeTo: {fileID: 0}
   updateTiming: 1
   unscaledTime: 0
   _animationName: animation
-  loop: 0
+  loop: 1
   timeScale: 1

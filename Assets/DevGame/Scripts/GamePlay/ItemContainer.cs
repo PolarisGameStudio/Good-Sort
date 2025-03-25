@@ -29,7 +29,17 @@ public class ItemContainer : MonoBehaviour
 
 	public int NumLayerWhenInit => _numLayerWhenInit;
 
-	public Cell Cell => _cell;
+	public Cell Cell
+	{
+		set
+		{
+            _cell = value;
+        }
+		get
+		{
+			return _cell;
+		}
+	}
 
 	private CellType _cellType;
 	public CellType CellType => _cellType;
@@ -462,6 +472,12 @@ public class ItemContainer : MonoBehaviour
 			OnDestroyLayerItem(trObj);
 		}
 
+
+        if (LogicGame.Instance.IsUseTutorial)
+        {
+            TutorialGame.instance.OnNextItem();
+        }
+
         LogicGame.Instance.CheckGameOver();
     }
 
@@ -481,6 +497,7 @@ public class ItemContainer : MonoBehaviour
 
                 AnimPlayGame.Instance.OnPlayAnimMegerSucess(Vector3.zero, _cell.transform);
                 AnimPlayGame.Instance.OnPlayAnimCombo(Vector3.zero, LogicGame.Instance.CurrentCombo, _cell.transform);
+				Vibration.Vibrate(80);
                 StartCoroutine(OnRunAnimMegerSucess(currentLayer, currentIndex != listLayerItem.Count - 1));
 			}
 

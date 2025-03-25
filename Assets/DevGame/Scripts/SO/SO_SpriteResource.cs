@@ -22,6 +22,9 @@ public class SO_SpriteResource : ScriptableObject
 				return it.spr;
 			}
 		}
+
+		int kk = 0;
+
 		return null;
 	}
 }

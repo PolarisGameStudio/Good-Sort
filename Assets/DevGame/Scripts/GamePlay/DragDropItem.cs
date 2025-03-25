@@ -31,6 +31,13 @@ public class DragDropItem : MonoBehaviour
                         break;
                     }
                 }
+                if(trObjDrag != null)
+                {
+                    if(LogicGame.Instance.IsUseTutorial)
+                    {
+                        TutorialGame.instance.OnPauseAnim();
+                    }
+                }
             }
 
             isDragging = true;

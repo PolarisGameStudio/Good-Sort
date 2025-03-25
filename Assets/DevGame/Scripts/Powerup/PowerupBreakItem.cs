@@ -56,7 +56,7 @@ public class PowerupBreakItem : MonoBehaviour
 
         yield return new WaitForSeconds(0.55f);
         fx.GetComponent<ParticleSystem>().Play();
-		yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f);
         callback?.Invoke();
         yield return new WaitForSeconds(0.35f);
 		gameObject.SetActive(false);

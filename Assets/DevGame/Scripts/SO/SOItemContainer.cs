@@ -49,6 +49,7 @@ public class SOItemContainer : Singleton<SOItemContainer>
     {
         ItemAsset da = new();
         da.type = item.type;
+        da.daIt = item;
 
 
 

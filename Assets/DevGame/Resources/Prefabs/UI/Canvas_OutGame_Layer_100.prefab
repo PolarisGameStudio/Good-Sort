@@ -5133,7 +5133,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  skeletonDataAsset: {fileID: 11400000, guid: 07e168ce21c4e75449fe7095b68e96b6, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: cd54d7035fa901e43a48647d0f89174b, type: 2}
   additiveMaterial: {fileID: 2100000, guid: 2e8245019faeb8c43b75f9ca3ac8ee34, type: 2}
   multiplyMaterial: {fileID: 2100000, guid: e74a1f8978a7da348a721508d0d58834, type: 2}
   screenMaterial: {fileID: 2100000, guid: bab24c479f34eec45be6ea8595891569, type: 2}
@@ -5141,7 +5141,7 @@ MonoBehaviour:
   initialSkinName: default
   initialFlipX: 0
   initialFlipY: 0
-  startingAnimation: Flip
+  startingAnimation: animation
   startingLoop: 1
   timeScale: 1
   freeze: 0
@@ -5657,6 +5657,7 @@ GameObject:
   - component: {fileID: 5087903418520492114}
   - component: {fileID: 7438751502769455209}
   - component: {fileID: 5048601978825131544}
+  - component: {fileID: 6851144216390017786}
   m_Layer: 5
   m_Name: '[BtnPlay] (Layout_Group)'
   m_TagString: Untagged
@@ -5794,6 +5795,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &6851144216390017786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571804952882470812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1608401959982290236
 GameObject:
   m_ObjectHideFlags: 0
@@ -16166,7 +16179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  skeletonDataAsset: {fileID: 11400000, guid: 07e168ce21c4e75449fe7095b68e96b6, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: cd54d7035fa901e43a48647d0f89174b, type: 2}
   additiveMaterial: {fileID: 2100000, guid: 2e8245019faeb8c43b75f9ca3ac8ee34, type: 2}
   multiplyMaterial: {fileID: 2100000, guid: e74a1f8978a7da348a721508d0d58834, type: 2}
   screenMaterial: {fileID: 2100000, guid: bab24c479f34eec45be6ea8595891569, type: 2}
@@ -16174,7 +16187,7 @@ MonoBehaviour:
   initialSkinName: default
   initialFlipX: 0
   initialFlipY: 0
-  startingAnimation: Flip
+  startingAnimation: animation
   startingLoop: 1
   timeScale: 1
   freeze: 0
@@ -19650,7 +19663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  skeletonDataAsset: {fileID: 11400000, guid: 07e168ce21c4e75449fe7095b68e96b6, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: cd54d7035fa901e43a48647d0f89174b, type: 2}
   additiveMaterial: {fileID: 2100000, guid: 2e8245019faeb8c43b75f9ca3ac8ee34, type: 2}
   multiplyMaterial: {fileID: 2100000, guid: e74a1f8978a7da348a721508d0d58834, type: 2}
   screenMaterial: {fileID: 2100000, guid: bab24c479f34eec45be6ea8595891569, type: 2}
@@ -19658,7 +19671,7 @@ MonoBehaviour:
   initialSkinName: default
   initialFlipX: 0
   initialFlipY: 0
-  startingAnimation: Flip
+  startingAnimation: animation
   startingLoop: 1
   timeScale: 1
   freeze: 0
@@ -22183,7 +22196,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  skeletonDataAsset: {fileID: 11400000, guid: 07e168ce21c4e75449fe7095b68e96b6, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: cd54d7035fa901e43a48647d0f89174b, type: 2}
   additiveMaterial: {fileID: 2100000, guid: 2e8245019faeb8c43b75f9ca3ac8ee34, type: 2}
   multiplyMaterial: {fileID: 2100000, guid: e74a1f8978a7da348a721508d0d58834, type: 2}
   screenMaterial: {fileID: 2100000, guid: bab24c479f34eec45be6ea8595891569, type: 2}
@@ -22191,7 +22204,7 @@ MonoBehaviour:
   initialSkinName: default
   initialFlipX: 0
   initialFlipY: 0
-  startingAnimation: Flip
+  startingAnimation: animation
   startingLoop: 1
   timeScale: 1
   freeze: 0
@@ -29577,6 +29590,7 @@ MonoBehaviour:
     objStar: {fileID: 0}
   txtStar: {fileID: 1018349936487785456}
   txtToitalStar: {fileID: 4143875321856889200}
+  txtStarAdd: {fileID: 1018349936487785456}
   txtgold: {fileID: 713058503387466821}
   ease: 28
 --- !u!1 &7407186636136878441
@@ -29719,7 +29733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  skeletonDataAsset: {fileID: 11400000, guid: 07e168ce21c4e75449fe7095b68e96b6, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: cd54d7035fa901e43a48647d0f89174b, type: 2}
   additiveMaterial: {fileID: 2100000, guid: 2e8245019faeb8c43b75f9ca3ac8ee34, type: 2}
   multiplyMaterial: {fileID: 2100000, guid: e74a1f8978a7da348a721508d0d58834, type: 2}
   screenMaterial: {fileID: 2100000, guid: bab24c479f34eec45be6ea8595891569, type: 2}
@@ -29727,7 +29741,7 @@ MonoBehaviour:
   initialSkinName: default
   initialFlipX: 0
   initialFlipY: 0
-  startingAnimation: Flip
+  startingAnimation: animation
   startingLoop: 1
   timeScale: 1
   freeze: 0
@@ -30097,7 +30111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  skeletonDataAsset: {fileID: 11400000, guid: 07e168ce21c4e75449fe7095b68e96b6, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: cd54d7035fa901e43a48647d0f89174b, type: 2}
   additiveMaterial: {fileID: 2100000, guid: 2e8245019faeb8c43b75f9ca3ac8ee34, type: 2}
   multiplyMaterial: {fileID: 2100000, guid: e74a1f8978a7da348a721508d0d58834, type: 2}
   screenMaterial: {fileID: 2100000, guid: bab24c479f34eec45be6ea8595891569, type: 2}
@@ -30105,7 +30119,7 @@ MonoBehaviour:
   initialSkinName: default
   initialFlipX: 0
   initialFlipY: 0
-  startingAnimation: Flip
+  startingAnimation: animation
   startingLoop: 1
   timeScale: 1
   freeze: 0
@@ -35468,7 +35482,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  skeletonDataAsset: {fileID: 11400000, guid: 07e168ce21c4e75449fe7095b68e96b6, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: cd54d7035fa901e43a48647d0f89174b, type: 2}
   additiveMaterial: {fileID: 2100000, guid: 2e8245019faeb8c43b75f9ca3ac8ee34, type: 2}
   multiplyMaterial: {fileID: 2100000, guid: e74a1f8978a7da348a721508d0d58834, type: 2}
   screenMaterial: {fileID: 2100000, guid: bab24c479f34eec45be6ea8595891569, type: 2}
@@ -35476,7 +35490,7 @@ MonoBehaviour:
   initialSkinName: default
   initialFlipX: 0
   initialFlipY: 0
-  startingAnimation: Flip
+  startingAnimation: animation
   startingLoop: 1
   timeScale: 1
   freeze: 0

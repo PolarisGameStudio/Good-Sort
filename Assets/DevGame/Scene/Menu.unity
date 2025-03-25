@@ -722,10 +722,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_OutGame_Layer_100
       objectReference: {fileID: 0}
-    - target: {fileID: 1376446460242460944, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
-      propertyPath: txtToitalStar
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1539094578914222899, guid: 33fe78f7fa8f4b543a77228c7324d0c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 0

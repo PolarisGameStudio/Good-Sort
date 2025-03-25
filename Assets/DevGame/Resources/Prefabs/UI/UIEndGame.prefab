@@ -64770,7 +64770,6 @@ MonoBehaviour:
   ObjAnim: {fileID: 0}
   NameParent: Canvas_Layer_100
   rectPreCongratulation: {fileID: 8121500036865908918}
-  rectCongratulation: {fileID: 0}
   rectShowCase: {fileID: 2385788070120325348}
   uiSkes:
   - {fileID: 0}

@@ -388,8 +388,8 @@ public class PowerupSwap : MonoBehaviour
     }
     private IEnumerator ContinueAnimMoveSwap(List<DataItemSkillSwap> dataItemSkillSwaps, Action callback)
     {
-
         yield return new WaitForSeconds(0.15f);
+        Vibration.Vibrate(100);
         foreach (var it in dataItemSkillSwaps)
         {
             it.item.OnEndMoveSkillSwap(it.pointMove, callback, it.isNomal);
@@ -430,7 +430,9 @@ public class PowerupSwap : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         _anim.AnimationState.SetAnimation(0, "Start_Idle", false);
         yield return new WaitForSeconds(0.667f);
-        if(_fxBurtClone == null)
+
+
+        if (_fxBurtClone == null)
         {
             _fxBurtClone = Instantiate(_fxBurt, transform);
         }
