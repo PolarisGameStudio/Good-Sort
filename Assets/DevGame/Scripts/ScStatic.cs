@@ -48,7 +48,6 @@ public static class ScStatic
     public static string SFX_Ingame_Booster_2xStar = "SFX_Ingame_Booster_2xStar";
     public static string SFX_Ingame_Booster_Hammer = "SFX_Ingame_Booster_Hammer";
     public static string SFX_Ingame_Confetti = "SFX_Ingame_Confetti";
-    public static string SFX_Ingame_FoodFight_ConfettiWin = "SFX_Ingame_FoodFight_ConfettiWin";
     public static string SFX_Ingame_FoodFight_RewardAppear = "SFX_Ingame_FoodFight_RewardAppear";
     public static string SFX_Ingame_CellLock_Unlock = "SFX_Ingame_CellLock_Unlock";
     public static string SFX_Ingame_FoodFight_ConfettiLose = "SFX_Ingame_FoodFight_ConfettiLose";
@@ -59,6 +58,9 @@ public static class ScStatic
     public static string SFX_UI_RecivedGold = "SFX_UI_RecivedGold";
     public static string SFX_UI_RecivedStar = "SFX_UI_RecivedStar";
     public static string SFX_WARING = "SFX_WARING";
+    public static string SFX_Ingame_Win = "SFX_Ingame_Win";
+    public static string SFX_In_game_Fire_word = "SFX_In_game_Fire_word";
+    public static string SFX_Button_StartGame = "SFX_Button_StartGame";
 
     #endregion
 

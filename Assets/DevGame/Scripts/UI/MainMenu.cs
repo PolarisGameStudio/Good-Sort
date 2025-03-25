@@ -46,6 +46,7 @@ public class MainMenu : Singleton<MainMenu>
         });
 
         btnPlay.onClick.AddListener(() => {
+            Audio.Play(ScStatic.SFX_Button_StartGame);
             UIPopup_Booster.Show();
         });
 

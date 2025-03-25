@@ -52,21 +52,46 @@ public class TutorialGame : MonoBehaviour
         OnTutorialByIndex(0);
     }
 
+    bool isPause = false;
+
+    private void Update()
+    {
+        if(isPause && indexCureent < ItemcelHand.Count)
+        {
+            tweenCurrent.Kill();
+            var objMove = ItemcelHand[indexCureent];
+            objMove.gameObject.SetActive(false);
+            objMove.transform.position = pointBegin;
+        }
+        else
+        {
+            if(indexCureent < ItemcelHand.Count)
+            {
+                var objMove = ItemcelHand[indexCureent];
+                objMove.gameObject.SetActive(true);
+            }    
+        }
+    }
+
     public void OnPauseAnim()
     {
-        tweenCurrent.Kill();
-        var objMove = ItemcelHand[indexCureent];
-        objMove.gameObject.SetActive(false);
-        objMove.transform.position = pointBegin;
+        isPause = true;
     }
 
     public void OnContinueAnnim()
     {
+        isPause = false;
         OnTutorialByIndex(indexCureent);
     }
 
     public void OnNextItem()
     {
+        if(indexCureent + 1 >= ItemcelHand.Count)
+        {
+            return;
+        }    
+        isPause = false;
+        cells[indexCureent].GetComponent<BoxCollider2D>().enabled = false;
         OnTutorialByIndex(indexCureent + 1);
     }
 

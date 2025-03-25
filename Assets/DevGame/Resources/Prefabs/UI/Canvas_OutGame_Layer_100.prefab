@@ -8275,7 +8275,6 @@ GameObject:
   - component: {fileID: 5087903418520492114}
   - component: {fileID: 7438751502769455209}
   - component: {fileID: 5048601978825131544}
-  - component: {fileID: 6851144216390017786}
   m_Layer: 5
   m_Name: '[BtnPlay] (Layout_Group)'
   m_TagString: Untagged
@@ -8413,18 +8412,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &6851144216390017786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571804952882470812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 034d25cfbffc682488d35e09bbbbdcf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1608401959982290236
 GameObject:
   m_ObjectHideFlags: 0

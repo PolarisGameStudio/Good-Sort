@@ -70,6 +70,7 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 
     private IEnumerator IEOpenChest(List<ResourceValue> dataReward, SkeletonGraphic skeChest, Action complete)
     {
+		Audio.Play(ScStatic.SFX_In_game_Fire_word);
         yield return new WaitForSeconds(1.75f);
 		var pointChes = skeChest.transform.position;
         var p = pattern.GetPattern(dataReward.Count);

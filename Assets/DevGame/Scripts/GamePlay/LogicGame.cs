@@ -1623,7 +1623,9 @@ public class LogicGame : Singleton<LogicGame>
         {
             HelperManager.DataPlayer.currentStarGame = _currentStar;
             HelperManager.DataPlayer.LevelID++;
-            Audio.Play(ScStatic.SFX_Ingame_FoodFight_ConfettiWin);
+         //   Audio.Play(ScStatic.SFX_Ingame_FoodFight_ConfettiWin);
+            Audio.Play(ScStatic.SFX_In_game_Fire_word);
+            Audio.Play(ScStatic.SFX_Ingame_Win);
             StartCoroutine(StartGameOver());
         }
         else

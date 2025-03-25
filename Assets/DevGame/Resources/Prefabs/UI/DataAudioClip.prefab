@@ -68,7 +68,6 @@ MonoBehaviour:
   - SFX_Ingame_Booster_2xStar
   - SFX_Ingame_Booster_Hammer
   - SFX_Ingame_Confetti
-  - SFX_Ingame_FoodFight_ConfettiWin
   - SFX_Ingame_FoodFight_RewardAppear
   - SFX_Ingame_CellLock_Unlock
   - SFX_Ingame_FoodFight_ConfettiLose
@@ -80,4 +79,7 @@ MonoBehaviour:
   - SFX_UI_RecivedGold
   - SFX_UI_RecivedStar
   - SFX_WARING
+  - SFX_Ingame_Win
+  - SFX_In_game_Fire_word
+  - SFX_Button_StartGame
   DatasBG: []
