@@ -120,6 +120,7 @@ public class LogicGame : Singleton<LogicGame>
         // OnSkilFreeze();
         //OnSkillSwap();
         // OnPlayAnimationReplay();
+        HelperManager.DataPlayer.LevelID++;
         StartCoroutine(LoadData());
         isGameOver = false;
     }
