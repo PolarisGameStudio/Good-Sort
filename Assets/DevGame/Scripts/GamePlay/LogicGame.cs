@@ -182,6 +182,11 @@ public class LogicGame : Singleton<LogicGame>
             _timePlayGame = level.timeToPlay;
         }
 
+        if(_timePlayGame == 0)
+        {
+            _timePlayGame = 330;
+        }    
+
        // _timePlayGame = 10.0f;
 
         if ((GenLevelController.Instance.LevelId) % 5 == 0)
@@ -1652,6 +1657,7 @@ public class LogicGame : Singleton<LogicGame>
         if(isWin)
         {
             HelperManager.DataPlayer.currentStarGame = _currentStar;
+
             HelperManager.DataPlayer.LevelID++;
          //   Audio.Play(ScStatic.SFX_Ingame_FoodFight_ConfettiWin);
             Audio.Play(ScStatic.SFX_In_game_Fire_word);

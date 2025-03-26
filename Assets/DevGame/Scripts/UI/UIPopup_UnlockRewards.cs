@@ -27,9 +27,12 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 	private float c_ScaleChestEnd;
 	private List<ResourceValue> c_dataReward;
 
+	Action callbackClaim = null;
+
     private void Start()
     {
         btnClaim.onClick.AddListener(() => {
+			callbackClaim?.Invoke();
             //viet con claim
             onClose();
         });
@@ -55,16 +58,19 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 
 	public void UpdateUI_SkeletonChest(SkeletonGraphic skeChest, List<ResourceValue> dataReward, float scaleChestStart, float scaleChestEnd = 1f, float timeMove = 0.25f, Action complete = null)
 	{
-        c_dataReward = dataReward;
-        skeChest.gameObject.SetActive(true);
-        skeChest.transform.parent = rectChest;
-        skeChest.transform.localScale = Vector3.one * scaleChestStart;
-        skeChest.transform.DOScale(Vector3.one * scaleChestEnd, timeMove).SetEase(Ease.InOutBack);
-        skeChest.GetComponent<RectTransform>().DOLocalMove(Vector3.zero, timeMove).OnComplete(() => {
-            skeChest.AnimationState.SetAnimation(0, "Open", false);
-			skeChest.AnimationState.AddAnimation(0, "Idle_After", true, 0);
+		var sk = Instantiate(skeChest, skeChest.transform.parent);
+        sk.transform.position = skeChest.transform.position;
 
-            StartCoroutine(IEOpenChest(dataReward, skeChest, complete));
+        c_dataReward = dataReward;
+        sk.gameObject.SetActive(true);
+        sk.transform.parent = rectChest;
+        sk.transform.localScale = Vector3.one * scaleChestStart;
+        sk.transform.DOScale(Vector3.one * scaleChestEnd, timeMove).SetEase(Ease.InOutBack);
+        sk.GetComponent<RectTransform>().DOLocalMove(Vector3.zero, timeMove).OnComplete(() => {
+            sk.AnimationState.SetAnimation(0, "Open", false);
+            sk.AnimationState.AddAnimation(0, "Idle_After", true, 0);
+			callbackClaim = complete;
+            StartCoroutine(IEOpenChest(dataReward, sk, complete));
         });
     }
 
@@ -98,7 +104,7 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 
         p.DOScale(Vector3.one, 0.25f).SetEase(Ease.InOutBack);
 		p.DOMove(pBegin, 0.25f).OnComplete(() => {
-			complete?.Invoke();
+			//complete?.Invoke();
 
         }).SetEase(Ease.InOutSine);
 

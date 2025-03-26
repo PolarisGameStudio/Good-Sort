@@ -119,6 +119,20 @@ public class GenLevelController : Singleton<GenLevelController>
         var nameLevel = levels[LevelId];
         var Level1 = Resources.Load<SOLevel>("Data/Level/" + nameLevel);
 
+
+		for(int i = 0; i < levels.Count; i++)
+		{
+            var Level22 = Resources.Load<SOLevel>("Data/Level/" + levels[i]);
+			var kk = Level22.level;
+
+			if(kk.timeToPlay == 0)
+			{
+				Debug.Log("Level_hard_" + i.ToString() + "_name_" + levels[i]);
+			}	
+
+        }
+
+
         //19
         return Level1.level;
 	}

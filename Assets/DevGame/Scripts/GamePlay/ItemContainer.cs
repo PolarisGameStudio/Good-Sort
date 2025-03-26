@@ -457,7 +457,10 @@ public class ItemContainer : MonoBehaviour
 			child.RunAnimScale(null);
 
 		}
-
+        if (LogicGame.Instance.IsUseTutorial)
+        {
+            TutorialGame.instance.OnNextItem();
+        }
         yield return new WaitForSeconds(0.4f);
 
 		if (_cell.MoveType == MoveType.Drop)
@@ -471,12 +474,6 @@ public class ItemContainer : MonoBehaviour
 		{
 			OnDestroyLayerItem(trObj);
 		}
-
-
-        if (LogicGame.Instance.IsUseTutorial)
-        {
-            TutorialGame.instance.OnNextItem();
-        }
 
         LogicGame.Instance.CheckGameOver();
     }
