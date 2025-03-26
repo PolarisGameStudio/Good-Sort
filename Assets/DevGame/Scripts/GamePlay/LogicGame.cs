@@ -182,7 +182,7 @@ public class LogicGame : Singleton<LogicGame>
             _timePlayGame = level.timeToPlay;
         }
 
-        _timePlayGame = 10.0f;
+       // _timePlayGame = 10.0f;
 
         if ((GenLevelController.Instance.LevelId) % 5 == 0)
         {
@@ -696,6 +696,8 @@ public class LogicGame : Singleton<LogicGame>
                 scale = Math.Min(sx, sy);
                 p2.transform.localScale = Vector2.one * scale;
             }
+
+           
         }
         else
         {
@@ -730,7 +732,43 @@ public class LogicGame : Singleton<LogicGame>
                 var sx = (sizeCamera.x - distanceX) / dis;
                 p2.transform.localScale = Vector2.one * sx;
             }
+
+
+            var cellDrop = listCell.Where(x => x.MoveType == MoveType.Drop && x.CellType == CellType.CellNormal).ToList();
+            if (cellDrop.Count > 0)
+            {
+               var cel = cellDrop[0];
+                StartCoroutine(ResetScale(cel.transform, disPTopBot));
+
+            }
+
         }
+
+    }
+
+    IEnumerator ResetScale(Transform tr, float disPTopBot)
+    {
+        yield return new WaitForEndOfFrame();
+
+       /* var pointBegin = tr.transform.position;
+        yield return new WaitForEndOfFrame();
+        var inkk = disPTopBot / (2.4f * p2.transform.localScale.x);
+
+        float fn = inkk - (int)inkk;
+
+        float kk = Mathf.Ceil(inkk);
+
+        if (fn < 0.5f)
+        {
+            kk = (int)inkk;
+        }
+
+        var newScele = disPTopBot / (2.4f * kk);
+        p2.transform.localScale = Vector3.one * newScele;
+        yield return new WaitForEndOfFrame();
+        var pointBegin1 = tr.transform.position;
+        var distance = pointBegin.y - pointBegin1.y;
+        p2.transform.position += new Vector3(0, fn < 0.5f ? Mathf.Abs(distance) : - Mathf.Abs(distance), 0);*/
 
     }
 
