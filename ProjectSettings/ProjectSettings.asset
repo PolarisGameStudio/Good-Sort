@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: MKJ Studio
-  productName: Goods Sorting
+  productName: 'Good Sorting: Triple Match 3D'
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.94117653, g: 0.6117647, b: 0.121568635, a: 1}
