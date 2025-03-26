@@ -737,39 +737,31 @@ public class LogicGame : Singleton<LogicGame>
             var cellDrop = listCell.Where(x => x.MoveType == MoveType.Drop && x.CellType == CellType.CellNormal).ToList();
             if (cellDrop.Count > 0)
             {
-               var cel = cellDrop[0];
-                StartCoroutine(ResetScale(cel.transform, disPTopBot));
+                var cel = newCell[0];
+                var gameObject = new GameObject();
+                gameObject.transform.parent = cel.transform;
+                gameObject.transform.localPosition = new Vector3(0, -1.4f, 0);
+                StartCoroutine(ResetScale(gameObject.transform));
 
             }
-
         }
 
     }
 
-    IEnumerator ResetScale(Transform tr, float disPTopBot)
+    IEnumerator ResetScale(Transform tr)
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(0.001f);
+        float disPTopBot = PTop.transform.position.y - tr.transform.position.y;
+        disPTopBot = Mathf.Abs(disPTopBot);
 
-       /* var pointBegin = tr.transform.position;
-        yield return new WaitForEndOfFrame();
         var inkk = disPTopBot / (2.4f * p2.transform.localScale.x);
 
-        float fn = inkk - (int)inkk;
-
+        var s1 = disPTopBot;
         float kk = Mathf.Ceil(inkk);
 
-        if (fn < 0.5f)
-        {
-            kk = (int)inkk;
-        }
-
-        var newScele = disPTopBot / (2.4f * kk);
-        p2.transform.localScale = Vector3.one * newScele;
-        yield return new WaitForEndOfFrame();
-        var pointBegin1 = tr.transform.position;
-        var distance = pointBegin.y - pointBegin1.y;
-        p2.transform.position += new Vector3(0, fn < 0.5f ? Mathf.Abs(distance) : - Mathf.Abs(distance), 0);*/
-
+        var s2 = (2.4f * (int)inkk * p2.transform.localScale.x);
+        var dis = s2 - s1;
+        p2.transform.position += new Vector3(0, -dis - 0.15f, 0);
     }
 
     public void CheckObjectLock()
