@@ -25,8 +25,21 @@ public class SOItemContainer : Singleton<SOItemContainer>
 
     private Dictionary<int, string> _dictNameSpr = new();
 
-	protected override void Awake()
+    public static SOItemContainer instance;
+
+    protected override void Awake()
 	{
+        if(instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+
+
+        instance = this;
+
+        DontDestroyOnLoad(this.gameObject);
+
         var txt = Resources.Load<TextAsset>("Json/da_SoItemItemAsset");
         dataSoItemItemAssets = JsonConvert.DeserializeObject<List<DataSoItemItemAsset>>(txt.text);
 
@@ -53,6 +66,11 @@ public class SOItemContainer : Singleton<SOItemContainer>
             _dictNameSpr.Add(i, "AS_" + i.ToString());
         }
 
+    }
+
+    public void OnAdd1()
+    {
+        _dicItem.Clear();
     }
 
 
@@ -87,6 +105,10 @@ public class SOItemContainer : Singleton<SOItemContainer>
               da.spriteHidden = Resources.Load<Sprite>("Texture2D/" + item.spriteHidden);
           }*/
 
+        if (_dictNameSpr.Count == 0)
+        {
+            OnAdd();
+        }    
 
         int minKey = _dictNameSpr.Keys.Min();
         var sprite = _dictNameSpr[minKey];
