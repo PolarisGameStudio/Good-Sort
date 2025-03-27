@@ -1,8 +1,0 @@
-Spine_UI_Resource_Gold.png
-	size: 104, 144
-Front
-	bounds: 2, 39, 100, 103
-Side
-	bounds: 2, 2, 35, 98
-	offsets: 1, 0, 36, 98
-	rotate: 90

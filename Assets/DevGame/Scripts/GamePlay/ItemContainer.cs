@@ -411,6 +411,12 @@ public class ItemContainer : MonoBehaviour
 					item.OnNextLayerItemCurrentContainer();
 					item.OnUpdateItemContainer();
                     Audio.Play(ScStatic.SFX_Ingame_PutDownGood);
+
+                    if (currentLayer.IsMegerSucess())
+                    {
+						Cell.GetComponent<BoxCollider2D>().enabled = false;
+                    }	
+
                     item.OnMoveWhenEndDrag(point, true, () => {
 						CheckOnMegerSucess();
 					});
@@ -462,8 +468,8 @@ public class ItemContainer : MonoBehaviour
             TutorialGame.instance.OnNextItem();
         }
         yield return new WaitForSeconds(0.4f);
-
-		if (_cell.MoveType == MoveType.Drop)
+        Cell.GetComponent<BoxCollider2D>().enabled = true;
+        if (_cell.MoveType == MoveType.Drop)
 		{
 			LogicGame.Instance.CheckRunAnimDrop(_cell);
 			yield return new WaitForSeconds(0.1f);

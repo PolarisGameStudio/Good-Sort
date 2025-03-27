@@ -23,10 +23,10 @@ public class LayerItem : MonoBehaviour
         return false;
     }
 
+
     public List<int> GetListIndexPoint()
     {
         List<int> listPoint = new();
-
         for (int i = 0; i < listItem.Count; i++)
         {
             if (listItem[i] == null)
@@ -148,6 +148,17 @@ public class LayerItem : MonoBehaviour
        */
         return true;
     }
+
+    public void SetScaleForItem()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            var gameObject = transform.GetChild(i).gameObject;
+            gameObject.SetActive(false);
+        }
+
+    }
+
 
     public void RemoveAllItem()
     {

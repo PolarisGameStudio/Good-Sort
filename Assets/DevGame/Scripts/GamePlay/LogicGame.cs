@@ -77,6 +77,8 @@ public class LogicGame : Singleton<LogicGame>
 
     public bool IsStarPower = false;
 
+    public float ScaleP2 = 1.0f;
+
     void Start()
     {
         textStar.text = "0";
@@ -353,6 +355,8 @@ public class LogicGame : Singleton<LogicGame>
         }
 
         PlayMoveType(listCellAllGame);
+        ScaleP2 = p2.transform.localScale.x;
+
         isGameOver = false;
         CheckItem();
 
@@ -393,8 +397,16 @@ public class LogicGame : Singleton<LogicGame>
                 items[2].SetNewItemAsset(asseet, true);
                 items[0].SetNewItemAsset(asseet, true);
            }
-        }    
+        }
+
+        ScaleP2 = p2.transform.localScale.x;
+
+        foreach(var item in listItem)
+        {
+            item.CheckScale();
+        }
     }
+
 
     void ResetPoint1()
     {
@@ -624,8 +636,6 @@ public class LogicGame : Singleton<LogicGame>
             yMin = Mathf.Min(yMin, it.transform.position.y);
             yMax = Mathf.Max(yMax, it.transform.position.y);
         }
-
-
 
         float xtt = Mathf.Abs(XMin) / 2 + Mathf.Abs(XMax) / 2;
         float ytt = Math.Abs(yMin) / 2 + Mathf.Abs(yMax) / 2;

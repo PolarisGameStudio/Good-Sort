@@ -81,7 +81,7 @@ public class Item : MonoBehaviour
         _itemType = it;
     }
 
-    public void SetNewItemAsset(ItemAsset item, bool isSetItemType = true)
+    public void SetNewItemAsset(ItemAsset item, bool isSetItemType = true, bool isCheckScale = true)
 	{
         _itemAsset = item;
         gameObject.name = item.type.ToString();
@@ -92,12 +92,21 @@ public class Item : MonoBehaviour
         _sprite.sprite = item.sprite;
         _spriteShadow.sprite = item.spriteHidden;
         NameSprHide = item.spriteHidden.name;
-        CheckScale();
+        if(isCheckScale)
+        {
+            CheckScale();
+        }
     }
 
     public void CheckScale()
     {
         var scale = LogicGame.Instance.GetScaleItem(ItemType);
+
+
+        if(ItemType == ItemType.AS_304)
+        {
+            int kk = 0;
+        }    
 
         if(scale < 0.1f)
         {
@@ -107,12 +116,13 @@ public class Item : MonoBehaviour
             sizeItem.y = sizeItem.y / transform.localScale.x;
 
 
-            float sizeXMax = 1.1f;
-            float sizeYMax = 1.9f;
+            float sizeXMax = 1.1f * LogicGame.Instance.ScaleP2 ;
+            float sizeYMax = 1.9f * LogicGame.Instance.ScaleP2;
 
             float sx = sizeXMax / sizeItem.x;
             float sy = sizeYMax / sizeItem.y;
             scale = Math.Min(sx, sy);
+            //scale = Math.Min(scale, 1.0f);
             LogicGame.Instance.AddScale(ItemType, scale);
 
         }
@@ -131,7 +141,7 @@ public class Item : MonoBehaviour
 	{
 		this.itemContainer = itemContainer;
 
-		SetNewItemAsset(item);
+		SetNewItemAsset(item, true, false);
 
         SetPointForItem(index, cellType);
 
