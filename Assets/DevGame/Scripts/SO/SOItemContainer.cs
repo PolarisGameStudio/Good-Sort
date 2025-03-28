@@ -41,7 +41,9 @@ public class SOItemContainer : Singleton<SOItemContainer>
         for(int i = 1; i <= 100; i++)
         {
             _dictNameSpr.Add(i, "AS_" + i.ToString());
-        }    
+        }
+
+       // _dictNameSpr = _dictNameSpr.OrderBy(x=>x.Key).ToDictionary(x => x.Key, x => x.Value);
     }
 
     public void OnAdd()
@@ -52,6 +54,7 @@ public class SOItemContainer : Singleton<SOItemContainer>
         {
             _dictNameSpr.Add(i, "AS_" + i.ToString());
         }
+        //_dictNameSpr = _dictNameSpr.OrderBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);
 
     }
 
@@ -87,10 +90,32 @@ public class SOItemContainer : Singleton<SOItemContainer>
               da.spriteHidden = Resources.Load<Sprite>("Texture2D/" + item.spriteHidden);
           }*/
 
+        List<int> listKeys = new();
+        Dictionary<int, string> dc_copy = new();
 
-        int minKey = _dictNameSpr.Keys.Min();
-        var sprite = _dictNameSpr[minKey];
-        _dictNameSpr.Remove(minKey);
+        for (int i = 0; i < 5; i++)
+        {
+            if (_dictNameSpr.Count > 0)
+            {
+                int minKey = _dictNameSpr.Keys.Min();
+                dc_copy.Add(minKey, _dictNameSpr[minKey]);
+                listKeys.Add(minKey);
+                _dictNameSpr.Remove(minKey);
+            }
+        }
+
+        var minkey = UnityEngine.Random.Range(0, listKeys.Count);
+        var key = listKeys[minkey];
+        var sprite = dc_copy[key];
+        dc_copy.Remove(key);
+
+        if (dc_copy.Count > 0)
+        {
+            foreach(var it in dc_copy)
+            {
+                _dictNameSpr.Add(it.Key, it.Value);
+            }    
+        }    
 
         da.spriteHidden = Resources.Load<Sprite>("Texture2D/newImage/" + sprite);
 

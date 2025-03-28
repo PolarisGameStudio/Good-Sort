@@ -124,6 +124,7 @@ public class LogicGame : Singleton<LogicGame>
         // OnSkilFreeze();
         //OnSkillSwap();
         // OnPlayAnimationReplay();
+        ItemTypeScale.Clear();
         SOItemContainer.Instance.OnAdd();
         HelperManager.DataPlayer.LevelID++;
         StartCoroutine(LoadData());
@@ -365,6 +366,49 @@ public class LogicGame : Singleton<LogicGame>
             cel.OnUpdateSprite(posintXMax, posintXMin);
         }
 
+        var listCellNormal = listCellAllGame.Where(x=>x.MoveType == MoveType.Idle && x.CellType == CellType.CellNormal && !x.IsLock).ToList();
+        ShufferPosition(listCellNormal);
+    }
+
+    void ShufferPosition(List<Cell> listCell)
+    {
+        var listItemContaner = listCell.Select(x => x.ItemContainer).ToList();
+        HelperManager.Shuffle(listItemContaner);
+        foreach (var item in listCell)
+        {
+            var con = listItemContaner[0];
+            listItemContaner.RemoveAt(0);
+            con.transform.parent = item.transform;
+            con.transform.localPosition = ScStatic.PointItemContaner;
+            item.SetItemcontainer(con);
+        }
+    }    
+
+    void ShufferCell(List<Cell> cells)
+    {
+        if(cells.Count <= 0)
+        {
+            return;
+        }    
+
+        List<CellType> types = cells.Select(o => o.CellType).Distinct().ToList();
+        foreach (var ty in types)
+        {
+            List<Cell> cellChange = new();
+            foreach (var it in cells)
+            {
+                if (it.CellType == ty)
+                {
+                    cellChange.Add(it);
+                    break;
+                }
+            }
+
+            if(cellChange.Count > 0)
+            {
+                ShufferPosition(cellChange);
+            }
+        }
     }
 
     void CheckItem()
@@ -406,7 +450,6 @@ public class LogicGame : Singleton<LogicGame>
             item.CheckScale();
         }
     }
-
 
     void ResetPoint1()
     {
@@ -454,6 +497,12 @@ public class LogicGame : Singleton<LogicGame>
         var listMoveLeft = listCell.Where(x => x.MoveType == MoveType.Left).Distinct().ToList();
         var listMoveTop = listCell.Where(x => x.MoveType == MoveType.Top).Distinct().ToList();
         var listMoveBot = listCell.Where(x => x.MoveType == MoveType.Bot).Distinct().ToList();
+
+
+        ShufferCell(listMoveRight);
+        ShufferCell(listMoveLeft);
+        ShufferCell(listMoveTop);
+        ShufferCell(listMoveBot);
 
 
         if (listMoveRight.Count > 0)
@@ -850,9 +899,12 @@ public class LogicGame : Singleton<LogicGame>
     IEnumerator CountTimeProgress()
     {
         float timeCurrentCombo = _timeCombo;
+
+        imgProgress.fillAmount = 1;
+
         while (true)
         {
-            if(isPauseGame)
+            if(isPauseGame || IsUseSkillFreeze)
             {
                 yield return null;
                 continue;
@@ -1239,7 +1291,6 @@ public class LogicGame : Singleton<LogicGame>
             {
                 Debug.Log("Replay_-4");
                 IsUseSkillGame = false;
-                UI_InGame_PowerUp.instance.OnSucess(PowerupKind.Replace, true);
                 return;
             }
             Debug.Log("Replay_-4");

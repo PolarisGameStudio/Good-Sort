@@ -74,7 +74,8 @@ public class ItemContainer : MonoBehaviour
 
 		foreach (var it in itemInfos)
 		{
-			var listItem = new ListItem();
+			it.ShuffeItem();
+            var listItem = new ListItem();
 			int index1 = 0;
 
 			var gameObj = new GameObject();

@@ -61,6 +61,12 @@ public class Cell : MonoBehaviour
 
 	private CellSprite _cellSprite;
 
+	public void SetItemcontainer(ItemContainer it)
+	{
+		_itemContainer = it;
+		it.Cell = this;
+	}
+
 	public void OnUpdateSprite(int XMax, int XMin)
 	{
 		if (_cellSprite == null)

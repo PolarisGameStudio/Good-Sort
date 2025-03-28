@@ -20,4 +20,21 @@ public class ItemsInLayerCell
 	{
 		return 0;
 	}
+
+	public void ShuffeItem()
+	{
+		List<int> list = new List<int>();
+		foreach(var it in items)
+		{
+			if(it != 0)
+			{
+                list.Add(it);
+            }
+		}
+
+		if(list.Count == 2)
+		{
+			HelperManager.Shuffle(items);
+		}
+	}
 }

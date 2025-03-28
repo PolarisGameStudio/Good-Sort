@@ -71,5 +71,6 @@ public static class ScStatic
     public static Vector3 PointItemMid = new Vector3(0, 0, 0);
     public static Vector3 PointItemRight = new Vector3(1.09f, 0, 0);
     public static Vector3 PointItemCell = new Vector3(0, 0.155f, 0);
+    public static Vector3 PointItemContaner = new Vector3(0, -1f, 0);
 
 }
