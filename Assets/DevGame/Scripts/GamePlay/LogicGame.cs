@@ -90,7 +90,7 @@ public class LogicGame : Singleton<LogicGame>
         isShowWarnning = false;
         this.StartCoroutine(OnPlayBooster());
     }
-
+ 
     public void UserClickScreen()
     {
         IsStartGame = true;

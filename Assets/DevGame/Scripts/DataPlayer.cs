@@ -16,6 +16,7 @@ public class DataPlayer
 
     public int TotalStar = 0;
     public int currentStarGame = 0;
+    public int IndexStarLimit = 0;
 
     public int TotalCoin = 0;
     public int currentCoin = 0;

@@ -28,6 +28,7 @@ public class UIReciverItem : MonoBehaviour
     [SerializeField] TextMeshProUGUI txtStarAdd;
 
     [SerializeField] TextMeshProUGUI txtgold;
+    [SerializeField] ReciverStar reciverStar;
 
     int _Index = 0;
     [SerializeField] Ease ease; 
@@ -75,6 +76,7 @@ public class UIReciverItem : MonoBehaviour
                             HelperManager.OnAddStarGame(HelperManager.DataPlayer.currentStarGame);
                             HelperManager.DataPlayer.currentStarGame = 0;
                             txtToitalStar.text = HelperManager.DataPlayer.TotalStar.ToString();
+                            reciverStar.OnUpdateUi(true);
                         });
                     }
                 }

@@ -13,62 +13,39 @@ MonoBehaviour:
   m_Name: SoReciverItem
   m_EditorClassIdentifier: 
   dataSoReciverItems:
-  - reciverItems: []
-    reciverItems1:
-    - reType: 1
-      type: 0
-      value: 100
-    - reType: 5
-      type: 0
-      value: 1
+  - reciverItems1:
     - reType: 1
       type: 1
-      value: 100
-    - reType: 5
-      type: 5
-      value: 1
-    starLimit: 500
-  - reciverItems: []
-    reciverItems1:
-    - reType: 1
-      type: 1
-      value: 150
-    - reType: 3
-      type: 3
-      value: 1
-    starLimit: 1000
-  - reciverItems: []
-    reciverItems1:
-    - reType: 1
-      type: 1
-      value: 200
-    - reType: 6
-      type: 6
-      value: 1
-    starLimit: 1500
-  - reciverItems: []
-    reciverItems1:
-    - reType: 1
-      type: 1
-      value: 250
+      value: 500
     - reType: 4
       type: 4
       value: 1
-    starLimit: 2000
-  - reciverItems: []
-    reciverItems1:
+    starLimit: 5000
+  - reciverItems1:
     - reType: 1
       type: 1
-      value: 300
-    - reType: 5
-      type: 5
-      value: 1
+      value: 500
     - reType: 6
       type: 6
       value: 1
-    starLimit: 2500
-  - reciverItems: []
-    reciverItems1:
+    starLimit: 4500
+  - reciverItems1:
+    - reType: 1
+      type: 1
+      value: 450
+    - reType: 3
+      type: 3
+      value: 1
+    starLimit: 4000
+  - reciverItems1:
+    - reType: 1
+      type: 1
+      value: 400
+    - reType: 5
+      type: 5
+      value: 1
+    starLimit: 3500
+  - reciverItems1:
     - reType: 1
       type: 1
       value: 350
@@ -79,39 +56,46 @@ MonoBehaviour:
       type: 6
       value: 1
     starLimit: 3000
-  - reciverItems: []
-    reciverItems1:
+  - reciverItems1:
     - reType: 1
       type: 1
-      value: 400
+      value: 300
     - reType: 5
       type: 5
       value: 1
-    starLimit: 3500
-  - reciverItems: []
-    reciverItems1:
-    - reType: 1
-      type: 1
-      value: 450
-    - reType: 3
-      type: 3
-      value: 1
-    starLimit: 4000
-  - reciverItems: []
-    reciverItems1:
-    - reType: 1
-      type: 1
-      value: 500
     - reType: 6
       type: 6
       value: 1
-    starLimit: 4500
-  - reciverItems: []
-    reciverItems1:
+    starLimit: 2500
+  - reciverItems1:
     - reType: 1
       type: 1
-      value: 500
+      value: 250
     - reType: 4
       type: 4
       value: 1
-    starLimit: 5000
+    starLimit: 2000
+  - reciverItems1:
+    - reType: 1
+      type: 1
+      value: 200
+    - reType: 6
+      type: 6
+      value: 1
+    starLimit: 1500
+  - reciverItems1:
+    - reType: 1
+      type: 1
+      value: 150
+    - reType: 3
+      type: 3
+      value: 1
+    starLimit: 1000
+  - reciverItems1:
+    - reType: 1
+      type: 0
+      value: 100
+    - reType: 5
+      type: 0
+      value: 1
+    starLimit: 500

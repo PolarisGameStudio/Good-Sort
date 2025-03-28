@@ -25,5 +25,6 @@ public enum ResourceType
 	EventPVP_Permit = 22,
 	GiftHidden_Christmas = 23,
 	New_Year_Wine = 24,
-	Envelope = 25
+	Envelope = 25,
+	Star_box = 26
 }

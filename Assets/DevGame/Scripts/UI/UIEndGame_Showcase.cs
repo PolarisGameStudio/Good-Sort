@@ -1,11 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Coffee.UIExtensions;
 using DG.Tweening;
-using Spine;
 using Spine.Unity;
 using TMPro;
 using UnityEngine;
@@ -69,8 +66,7 @@ public class UIEndGame_Showcase : MonoBehaviour
 	[Header("skeChes")]
 	public SkeletonGraphic skeChes = null;
 
-    [Header("SoReciverItem")]
-    public SoReciverItem soReciverItem;
+
 
     public static void ConfirmClickClaimGold()
 	{
@@ -100,35 +96,11 @@ public class UIEndGame_Showcase : MonoBehaviour
             HelperManager.DataPlayer.NumWinLevel = 0;
             OnShowUnLockReward(() =>
             {
-                UIPopup_UnlockRewards.Hide();
-                StartCoroutine(ShowRe());
+               
             });
             yield return new WaitForEndOfFrame();
             yield return new WaitForEndOfFrame();
         }
-        else
-        {
-            ShowRewardStar();
-        }
-
-    }
-
-    IEnumerator ShowRe()
-    {
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
-        ShowRewardStar();
-    }
-
-    private void ShowRewardStar()
-    {
-        var da = soReciverItem.GetDataSoReciverItemByStarAdd(HelperManager.DataPlayer.currentStarGame);
-        if(da.starLimit == -1)
-        {
-            return;
-        }
-        UIPopup_UnlockRewards.Show();
-        UIPopup_UnlockRewards.Instance.UpdateUI_SkeletonChest(skeChes, da.reciverItems1, 0.01f, 0.425f, 0.25f, null);
     }
 
     private void OnShowUnLockReward(Action callback)

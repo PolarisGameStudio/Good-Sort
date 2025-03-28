@@ -69,6 +69,10 @@ public class ResourceValue
         }
 	}
 
+	public void SetType()
+	{
+		this.type = (int)reType;
+	}
 
     public ResourceValue()
 	{

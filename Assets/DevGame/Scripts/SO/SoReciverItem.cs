@@ -40,4 +40,26 @@ public class SoReciverItem : ScriptableObject
         da.starLimit = -1;
         return da;
     }
+
+    public void SetRetype()
+    {
+        foreach (var it in dataSoReciverItems)
+        {
+            foreach(var r in it.reciverItems1)
+            {
+                r.SetType();
+            }    
+        }
+    }    
+
+    public int GetStarLimit(int index)
+    {
+        if(index >= dataSoReciverItems.Count)
+        {
+            index = dataSoReciverItems.Count - 1;
+        }   
+
+        dataSoReciverItems = dataSoReciverItems.OrderBy(x => x.starLimit).ToList();
+        return dataSoReciverItems[index].starLimit;
+    }
 }

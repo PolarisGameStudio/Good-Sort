@@ -90,6 +90,11 @@ public class MainMenu : Singleton<MainMenu>
         }
     }
 
+    public void RunAnim()
+    {
+        StartCoroutine(OnReciverItem());
+    }    
+
     private void OnDestroy()
     {
         HelperManager.Save();
