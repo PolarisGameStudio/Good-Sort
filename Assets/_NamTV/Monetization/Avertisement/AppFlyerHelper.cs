@@ -1,0 +1,78 @@
+using AppsFlyerSDK;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AppFlyerHelper : PersistentSingleton<AppFlyerHelper>, IAppsFlyerConversionData
+{
+    // These fields are set from the editor so do not modify!
+    //******************************//
+    public string devKey;
+    public string appID;
+    public string UWPAppID;
+    public string macOSAppID;
+    public bool isDebug;
+    public bool getConversionData;
+    //******************************//
+    public bool useOrganic = true;
+    bool callbackSuccess = false;
+
+    void Start()
+    {
+        callbackSuccess = false;
+        // These fields are set from the editor so do not modify!
+        //******************************//
+        AppsFlyer.setIsDebug(isDebug);
+#if UNITY_WSA_10_0 && !UNITY_EDITOR
+        AppsFlyer.initSDK(devKey, UWPAppID, getConversionData ? this : null);
+#elif UNITY_STANDALONE_OSX && !UNITY_EDITOR
+    AppsFlyer.initSDK(devKey, macOSAppID, getConversionData ? this : null);
+#else
+        AppsFlyer.initSDK(devKey, appID, getConversionData ? this : null);
+#endif
+        //******************************/
+
+        AppsFlyer.startSDK();
+    }
+
+    // Mark AppsFlyer CallBacks
+    public void onConversionDataSuccess(string conversionData)
+    {
+        AppsFlyer.AFLog("OnConversionDataReceived", conversionData);
+        Dictionary<string, object> conversionDataDictionary = AppsFlyer.CallbackStringToDictionary(conversionData);
+        // add deferred deeplink logic here
+        if (conversionDataDictionary != null && conversionDataDictionary.ContainsKey("af_status"))
+        {
+            string afStatus = conversionDataDictionary["af_status"].ToString();
+            if (string.Equals(afStatus, "Organic"))
+            {
+                useOrganic = true; 
+            }
+            else
+            {
+                useOrganic = false;
+            }
+            if (!callbackSuccess)
+                FirebaseLogHandle.LogAppflyerTracker(afStatus);
+        }
+        callbackSuccess = true;
+    }
+
+    public void onConversionDataFail(string error)
+    {
+        AppsFlyer.AFLog("didReceiveConversionDataWithError", error);
+    }
+
+    public void onAppOpenAttribution(string attributionData)
+    {
+        AppsFlyer.AFLog("onAppOpenAttribution", attributionData);
+        Dictionary<string, object> attributionDataDictionary = AppsFlyer.CallbackStringToDictionary(attributionData);
+        // add direct deeplink logic here
+    }
+
+    public void onAppOpenAttributionFailure(string error)
+    {
+        AppsFlyer.AFLog("onAppOpenAttributionFailure", error);
+    }
+
+}

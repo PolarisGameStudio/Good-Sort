@@ -1,5 +1,21 @@
 {
   "dependencies": {
+    "appsflyer-unity-adrevenue-generic-connector": {
+      "version": "https://github.com/AppsFlyerSDK/appsflyer-unity-adrevenue-generic-connector.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "appsflyer-unity-plugin": "6.9.4"
+      },
+      "hash": "3481f8be30055ab55d982e233d0bdb6e5add67ec"
+    },
+    "appsflyer-unity-plugin": {
+      "version": "https://github.com/AppsFlyerSDK/appsflyer-unity-plugin.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "2546c1fb46a4cecc632fb0fbb25fb5cc5368f901"
+    },
     "com.coffee.ui-particle": {
       "version": "https://github.com/mob-sakai/ParticleEffectForUGUI.git",
       "depth": 0,
@@ -9,6 +25,50 @@
         "com.unity.modules.particlesystem": "1.0.0"
       },
       "hash": "7ea0a436d159e245605bcd2d8a287432e4a13c79"
+    },
+    "com.google.android.appbundle": {
+      "version": "file:com.google.android.appbundle-1.9.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
+    },
+    "com.google.external-dependency-manager": {
+      "version": "file:com.google.external-dependency-manager-1.2.185.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
+    },
+    "com.google.firebase.analytics": {
+      "version": "file:com.google.firebase.analytics-12.7.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.google.firebase.app": "12.7.0"
+      }
+    },
+    "com.google.firebase.app": {
+      "version": "file:com.google.firebase.app-12.7.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.google.external-dependency-manager": "1.2.185"
+      }
+    },
+    "com.google.firebase.crashlytics": {
+      "version": "file:com.google.firebase.crashlytics-12.7.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.google.firebase.app": "12.7.0"
+      }
+    },
+    "com.google.firebase.remote-config": {
+      "version": "file:com.google.firebase.remote-config-12.7.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.google.firebase.app": "12.7.0"
+      }
     },
     "com.unity.2d.animation": {
       "version": "9.1.0",

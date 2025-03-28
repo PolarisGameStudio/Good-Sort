@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9736df45c3256df4d86d6ae1f659c268, type: 3}
+  m_Name: Ads Settings
+  m_EditorClassIdentifier: 
+  adMobContainer:
+    inter_splash_keyID:
+      key_android:
+      - ca-app-pub-5839511744003864/2852343321
+      key_ios: []
+    adaptiveMrecOpen: 0
+    mrec_open_pos: 5
+    mrec_open_offset: {x: 0, y: 50}
+    mrec_open_keyID:
+      key_android:
+      - ca-app-pub-5839511744003864/1754573987
+      - ca-app-pub-5839511744003864/6448497465
+      - ca-app-pub-5839511744003864/1132591602
+      key_ios: []
+    openad_splash_keyID:
+      key_android:
+      - ca-app-pub-5839511744003864/5485729572
+      key_ios: []
+    preloadAdOpen: 0
+    openad_keyID:
+      key_android:
+      - ca-app-pub-5839511744003864/4624575058
+      key_ios: []
+    preloadInter: 0
+    inter_keyID:
+      key_android:
+      - ca-app-pub-5839511744003864/8370618068
+      key_ios: []
+    preloadReward: 0
+    reward_keyID:
+      key_android:
+      - ca-app-pub-5839511744003864/7057536394
+      key_ios: []
+    adaptiveBanner: 1
+    small_banner_pos: 1
+    small_banner_keyID:
+      key_android:
+      - ca-app-pub-5839511744003864/5273788262
+      - ca-app-pub-5839511744003864/5345138128
+      - ca-app-pub-5839511744003864/6594608799
+      key_ios: []
+    useMrectDefault: 0
+    preloadMrectDefault: 0
+    adaptiveMrectDefault: 0
+    admob_baner_pos: 5
+    mrec_default_offset: {x: 0, y: 50}
+    mrec_default_keyID:
+      key_android:
+      - ca-app-pub-5839511744003864/2917558985
+      - ca-app-pub-5839511744003864/5398615618
+      - ca-app-pub-5839511744003864/5454455938
+      key_ios: []
+    mrect_extras:
+    - type: 0
+      adsKeyID:
+        key_android:
+        - ca-app-pub-5839511744003864/9284383138
+        - ca-app-pub-5839511744003864/6658219795
+        - ca-app-pub-5839511744003864/4934074589
+        key_ios: []
+    - type: 1
+      adsKeyID:
+        key_android:
+        - ca-app-pub-5839511744003864/8307177533
+        - ca-app-pub-5839511744003864/6371247512
+        - ca-app-pub-5839511744003864/5058165846
+        key_ios: []
+    native_keyID:
+    - type: 0
+      forceUse: 1
+      adsKeyID:
+        key_android:
+        - ca-app-pub-5839511744003864/3311493386
+        key_ios: []
+    - type: 1
+      forceUse: 1
+      adsKeyID:
+        key_android:
+        - ca-app-pub-5839511744003864/6554973512
+        key_ios: []
+    - type: 2
+      forceUse: 1
+      adsKeyID:
+        key_android:
+        - ca-app-pub-5839511744003864/2329584207
+        key_ios: []
+    - type: 3
+      forceUse: 1
+      adsKeyID:
+        key_android:
+        - ca-app-pub-5839511744003864/4431373055
+        key_ios: []
+    - type: 4
+      forceUse: 1
+      adsKeyID:
+        key_android:
+        - ca-app-pub-5839511744003864/6268829210
+        key_ios: []
+  useTeaBrake: 1
+  timeWaitInter: 10
+  timeWaitReward: 10
+  useInterSplash: 0
+  useOpenAdSplash: 1
+  useMrectSplash: 0
+  useNativeSplash: 1
+  useNativeInter: 1
+  useOpenAdsInter: 0
+  SystemLogs: 0
+  isDebug: 0

@@ -143,7 +143,7 @@ PlayerSettings:
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0.0
   preloadedAssets:
-  - {fileID: 11400000, guid: de30cf3cbdb4cc3469fee1954face24e, type: 2}
+  - {fileID: 11400000, guid: 573fb6845b859834ba9f6ca3e743cd6b, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -256,11 +256,11 @@ PlayerSettings:
   templateDefaultScene: 
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
-  useCustomMainGradleTemplate: 0
+  useCustomMainGradleTemplate: 1
   useCustomLauncherGradleManifest: 0
   useCustomBaseGradleTemplate: 0
-  useCustomGradlePropertiesTemplate: 0
-  useCustomGradleSettingsTemplate: 0
+  useCustomGradlePropertiesTemplate: 1
+  useCustomGradleSettingsTemplate: 1
   useCustomProguardFile: 0
   AndroidTargetArchitectures: 3
   AndroidTargetDevices: 0
@@ -760,7 +760,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 0
   webGLPowerPreference: 0
   scriptingDefineSymbols:
-    Android: UNITY_VISUAL_SCRIPTING
+    Android: UNITY_VISUAL_SCRIPTING;USE_ADMOB;USE_FIREBASE;USE_ADMOB_NATIVE;USE_APPSFLYER;USE_APPSFLYER_CONNECTOR
     EmbeddedLinux: UNITY_VISUAL_SCRIPTING
     GameCoreScarlett: 
     GameCoreXboxOne: 
