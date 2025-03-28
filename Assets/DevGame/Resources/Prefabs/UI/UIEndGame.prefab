@@ -44824,7 +44824,6 @@ MonoBehaviour:
   progressLevel: {fileID: 1894839883480947739}
   txtMeshComplete: {fileID: 4953576423057068650}
   skeChes: {fileID: 7497423668007392234}
-  soReciverItem: {fileID: 11400000, guid: 02cd970850893ab4dbc9c01d2b7357be, type: 2}
 --- !u!225 &3378480888288511855
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -64731,7 +64730,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5087889390187701489
 RectTransform:
   m_ObjectHideFlags: 0
@@ -69772,7 +69771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8121500036865908918
 RectTransform:
   m_ObjectHideFlags: 0

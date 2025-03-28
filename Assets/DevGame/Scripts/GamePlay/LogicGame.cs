@@ -88,7 +88,6 @@ public class LogicGame : Singleton<LogicGame>
         sizeCamera = GetSizeCameraInWord();
         OnLoadLevel();
         isShowWarnning = false;
-        this.StartCoroutine(OnPlayBooster());
     }
  
     public void UserClickScreen()
@@ -188,14 +187,20 @@ public class LogicGame : Singleton<LogicGame>
         if(_timePlayGame == 0)
         {
             _timePlayGame = 330;
-        }    
+        }
 
-       // _timePlayGame = 10.0f;
+        // _timePlayGame = 10.0f;
+
+        bool isPlayBooster = false;
 
         if ((GenLevelController.Instance.LevelId) % 5 == 0)
         {
             IsLevelHard = true;
             OnPlayWarningGame();
+        }
+        else
+        {
+            isPlayBooster = true;
         }
 
         textTimePlay.text = GetTimePlayGame();
@@ -368,6 +373,10 @@ public class LogicGame : Singleton<LogicGame>
 
         var listCellNormal = listCellAllGame.Where(x=>x.MoveType == MoveType.Idle && x.CellType == CellType.CellNormal && !x.IsLock).ToList();
         ShufferPosition(listCellNormal);
+        if(isPlayBooster)
+        {
+            this.StartCoroutine(OnPlayBooster());
+        }
     }
 
     void ShufferPosition(List<Cell> listCell)
@@ -863,6 +872,7 @@ public class LogicGame : Singleton<LogicGame>
         yield return new WaitForSeconds(2.0f);
         IsLevelHard = false;
         objSpineWarning.SetActive(false);
+        this.StartCoroutine(OnPlayBooster());
     }
     #endregion
 
