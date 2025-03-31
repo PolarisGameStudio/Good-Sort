@@ -9,11 +9,13 @@ using static UnityEngine.Timeline.AnimationPlayableAsset;
 
 public class SplashHandle : MonoBehaviour
 {
-
     [SerializeField] string loadSceneName;
     [SerializeField] List<SplashPopupBase> splashPopupBases = new List<SplashPopupBase>();
     [SerializeField] CanvasGroup emptyCanvas;
     [SerializeField] float timeWaitEmpty = 3f;
+
+    AsyncOperation asyncOperation = null;
+
     private void Start()
     {
         bool useSplash = false;
@@ -32,6 +34,17 @@ public class SplashHandle : MonoBehaviour
         else
         {
             emptyCanvas.alpha = 0;
+        }
+
+        if (HelperManager.DataPlayer.LevelID >= 2)
+        {
+            HelperManager.OnLoadScene(ScStatic.HOME_SCENE, LoadSceneMode.Single, asy => {
+                asyncOperation = asy;
+            });
+        }
+        else
+        {
+            HelperManager.OnLoadGameScene();
         }
     }
     IEnumerator DelayHide()
@@ -62,6 +75,37 @@ public class SplashHandle : MonoBehaviour
             GameFlowHandle.Instance.LoadSingleScene("DemoCore");
         }
         else*/
-            GameFlowHandle.Instance.LoadSingleScene(loadSceneName);
+         //   GameFlowHandle.Instance.LoadSingleScene(loadSceneName);
+
+        OnLoadScen();
     }
+
+
+    private void OnLoadScen()
+    {
+        if (HelperManager.DataPlayer.LevelID < 2)
+        {
+            HelperManager.ShowGameScene();
+        }
+        else
+        {
+            //HelperManager.OnBackHomeScene();
+            StartCoroutine(OnShowHOmeScene());
+        }
+    }
+
+    private IEnumerator OnShowHOmeScene()
+    {
+        while (true)
+        {
+            if (asyncOperation != null)
+            {
+                asyncOperation.allowSceneActivation = true;
+                break;
+            }
+
+            yield return null;
+        }
+    }
+
 }

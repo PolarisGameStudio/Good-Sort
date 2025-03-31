@@ -54,12 +54,14 @@ public class SoReciverItem : ScriptableObject
 
     public int GetStarLimit(int index)
     {
+        var add = 0;
         if(index >= dataSoReciverItems.Count)
         {
             index = dataSoReciverItems.Count - 1;
+            add = 1000;
         }   
 
         dataSoReciverItems = dataSoReciverItems.OrderBy(x => x.starLimit).ToList();
-        return dataSoReciverItems[index].starLimit;
+        return dataSoReciverItems[index].starLimit + add;
     }
 }

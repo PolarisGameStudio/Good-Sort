@@ -28,6 +28,8 @@ public class UIPopup_InGame_PowerUp_GetMore : Dialog<UIPopup_InGame_PowerUp_GetM
 
     public ShowToas showToas;
 
+    string _resourceType;
+
     int price = 0;
 
     private void Start()
@@ -43,8 +45,15 @@ public class UIPopup_InGame_PowerUp_GetMore : Dialog<UIPopup_InGame_PowerUp_GetM
         });
         btnWatchAd.onClick.AddListener(() =>
         {
-            currentCallbackk?.Invoke(true);
-            onClose();
+            AdsManager.Instance.ShowRewardBasedVideo((success) =>
+            {
+                if (success)
+                {
+                    btnWatchAd.enabled = false;
+                    currentCallbackk?.Invoke(true);
+                    onClose();
+                }
+            }, "OnGetMore" + _resourceType);
         });
         btnExit.onClick.AddListener(() =>
         {
@@ -60,6 +69,7 @@ public class UIPopup_InGame_PowerUp_GetMore : Dialog<UIPopup_InGame_PowerUp_GetM
 
     public void UpdateUI(DataPowerItem power, Action<bool> Callback, Action<bool> _callbackStar)
 	{
+        _resourceType = power.kind.ToString();
         callbackStart = _callbackStar;
         callbackStart?.Invoke(true);
         currentCallbackk = Callback;
@@ -107,6 +117,7 @@ public class UIPopup_InGame_PowerUp_GetMore : Dialog<UIPopup_InGame_PowerUp_GetM
 
     public void UpdateUiBooster(DataBoosterItem power, Action<bool> Callback)
     {
+        _resourceType = power.kind.ToString();
         currentCallbackk = Callback;
         ResourceType re = ResourceType.Powerup_BreakItem;
 

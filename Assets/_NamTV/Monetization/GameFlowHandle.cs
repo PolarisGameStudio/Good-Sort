@@ -60,7 +60,13 @@ public class GameFlowHandle : PersistentSingleton<GameFlowHandle>
     }
     public IEnumerator _InitComplete()
     {
-        string nextScene = _canUseSplashPopup ? ScStatic.SPLASH_SCENE : ScStatic.HOME_SCENE;
+        string nextScene = ScStatic.SPLASH_SCENE;
+
+        if(!_canUseSplashPopup)
+        {
+            nextScene = HelperManager.DataPlayer.LevelID >= 2 ? ScStatic.HOME_SCENE : ScStatic.GAME_SCENE;
+        }
+
         AdsLoading.SetUpdate("Everything OK!...", 0.9f, 1f, true);
         yield return new WaitForSeconds(1);
         if (AdsManager.Instance.IsInterSplashReady())

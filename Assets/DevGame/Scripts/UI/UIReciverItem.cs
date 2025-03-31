@@ -77,11 +77,13 @@ public class UIReciverItem : MonoBehaviour
                             HelperManager.DataPlayer.currentStarGame = 0;
                             txtToitalStar.text = HelperManager.DataPlayer.TotalStar.ToString();
                             reciverStar.OnUpdateUi(true);
+                            item.objStar.GetComponent<RectTransform>().localPosition = Vector2.zero;
                         });
                     }
                 }
                 else
                 {
+                    item.objStar.gameObject.SetActive(false);
                     continue;
                 }
                 
@@ -122,6 +124,7 @@ public class UIReciverItem : MonoBehaviour
 
 
                         item.fx.Play();
+                        obMove.GetComponent<RectTransform>().localPosition = Vector2.zero;
                         obMove.gameObject.SetActive(false);
                     }).SetDelay(UnityEngine.Random.Range(0.1f, 0.2f));
                 }).SetDelay(0.15f * index).OnStart(() => {

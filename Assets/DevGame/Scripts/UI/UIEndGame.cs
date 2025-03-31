@@ -32,10 +32,23 @@ public class UIEndGame : Dialog<UIEndGame>
 	IEnumerator GameWin()
 	{
         rectPreCongratulation.gameObject.SetActive(true);
-	//	yield return new WaitForSeconds(1.0f);
-       /* rectPreCongratulation.gameObject.SetActive(false);
-        rectCongratulation.gameObject.SetActive(true);*/
+        //	yield return new WaitForSeconds(1.0f);
+        /* rectPreCongratulation.gameObject.SetActive(false);
+         rectCongratulation.gameObject.SetActive(true);*/
         yield return new WaitForSeconds(1.5f);
+        bool isShowSucess = true;
+        if (HelperManager.DataPlayer.LevelID > 1)
+        {
+            isShowSucess = false;
+            AdsManager.Instance.ShowInterstitial((isShowAds) =>
+            {
+                isShowSucess = true;
+            }, "End_Game");
+        }
+        while (!isShowSucess)
+        {
+            yield return null;
+        }    
         //rectCongratulation.gameObject.SetActive(false);
         rectShowCase.gameObject.SetActive(true);
     }

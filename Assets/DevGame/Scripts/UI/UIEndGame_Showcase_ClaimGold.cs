@@ -130,7 +130,15 @@ public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
 
         btnWatchAds.onClick.RemoveAllListeners();
         btnWatchAds.onClick.AddListener(() => {
-			OnWatchAdsComplete(1);
+            StopMachine();
+            AdsManager.Instance.ShowRewardBasedVideo((success) =>
+            {
+                if (success)
+                {
+					OnWatchAdsComplete(1);
+                }
+            }, "OnX2Coin");
+
         });
 
 		float cointAds = 20;
@@ -148,10 +156,7 @@ public class UIEndGame_Showcase_ClaimGold : MonoBehaviour
 
 	private void OnWatchAdsComplete(int gold)
 	{
-		StopMachine();
-
 		HelperManager.DataPlayer.currentCoin += (int)cointReciver * 2;
-
         StartCoroutine(OnLoadHomeScene());
     }
 

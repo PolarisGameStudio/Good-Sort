@@ -47,7 +47,16 @@ public class UIPopup_EndGame_TimeUp : Dialog<UIPopup_EndGame_TimeUp>
         });
 
         btnWachAds.onClick.AddListener(() => {
-            NextStack();
+
+            AdsManager.Instance.ShowRewardBasedVideo((success) =>
+            {
+                if (success)
+                {
+                    NextStack();
+
+                }
+            }, "OnGameOver_bosster_time");
+
         });
 
     }

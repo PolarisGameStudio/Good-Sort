@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Newtonsoft.Json;
+using System.Linq;
 
 
 public class GenLevelController : Singleton<GenLevelController>
@@ -118,20 +119,42 @@ public class GenLevelController : Singleton<GenLevelController>
 		//132
         var nameLevel = levels[LevelId];
         var Level1 = Resources.Load<SOLevel>("Data/Level/" + nameLevel);
+        Dictionary<int, int> levellll = new();
 
-
-		for(int i = 0; i < levels.Count; i++)
+        for (int i = 0; i < levels.Count; i++)
 		{
             var Level22 = Resources.Load<SOLevel>("Data/Level/" + levels[i]);
 			var kk = Level22.level;
-
-			if(kk.timeToPlay == 0)
+            if (kk.timeToPlay == 0)
 			{
 				Debug.Log("Level_hard_" + i.ToString() + "_name_" + levels[i]);
-			}	
+			}
+			List<int> daLevel = new();
 
+			var cel = kk.cells;
+
+			foreach(var ce in kk.cells)
+			{
+				var itLayer = ce.itemsLayer;
+				foreach(var layer in itLayer)
+				{
+					foreach(var item in layer.items)
+					{
+						if(!daLevel.Contains(item))
+						{
+							daLevel.Add(item);
+						}
+					}
+				}
+			}
+
+			levellll.Add(i, daLevel.Count);
         }
+        levellll = levellll.OrderBy(x=>x.Value).ToDictionary(x=>x.Key, y =>y.Value);
 
+        var text = JsonConvert.SerializeObject(levellll);
+
+		Debug.Log(text);
 
         //19
         return Level1.level;

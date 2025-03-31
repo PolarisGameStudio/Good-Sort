@@ -26,6 +26,9 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 	private SkeletonGraphic c_SkeChest;
 	private float c_ScaleChestEnd;
 	private List<ResourceValue> c_dataReward;
+	public GameObject objFxX2 = null;
+
+	Dictionary<TextMeshProUGUI, float> dataTextValue = new();
 
 	Action callbackClaim = null;
 
@@ -36,6 +39,49 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
             //viet con claim
             onClose();
         });
+
+        btnClaimX2.onClick.AddListener(() => {
+
+            AdsManager.Instance.ShowRewardBasedVideo((success) =>
+            {
+                if (success)
+                {
+                    foreach(var da in dataTextValue)
+                    {
+                        da.Key.text = (da.Value * 2).ToString();
+                    }
+
+                    AddReward();
+                    StartCoroutine(OnCloseX2());
+                    //viet con claim
+                }
+                else
+                {
+                    callbackClaim?.Invoke();
+                    onClose();
+                }
+            }, "OnX2Reward");
+
+        });
+
+        StartCoroutine(StartEnableBtnClaim());
+    }
+
+    IEnumerator StartEnableBtnClaim()
+    {
+        yield return new WaitForSeconds(4f);
+        btnClaim.gameObject.SetActive(true); ;
+    }
+
+    private IEnumerator OnCloseX2()
+    {
+        yield return new WaitForEndOfFrame();
+        Vibration.Vibrate(50);
+        Audio.Play(ScStatic.SFX_In_game_Fire_word, 1.0f, false, true);
+        objFxX2.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        callbackClaim?.Invoke();
+        onClose();
     }
 
     private void OnEnable()
@@ -76,7 +122,8 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 
     private IEnumerator IEOpenChest(List<ResourceValue> dataReward, SkeletonGraphic skeChest, Action complete)
     {
-		Audio.Play(ScStatic.SFX_In_game_Fire_word);
+        dataTextValue.Clear();
+        Audio.Play(ScStatic.SFX_In_game_Fire_word);
         yield return new WaitForSeconds(1.75f);
 		var pointChes = skeChest.transform.position;
         var p = pattern.GetPattern(dataReward.Count);
@@ -92,8 +139,9 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 			var txtValue = item.GetChild(1);
 			var txtMesh = txtValue.GetComponent<TextMeshProUGUI>();
 			txtMesh.text = dataReward[i].value.ToString();
+            dataTextValue.Add(txtMesh, dataReward[i].value);
 
-			txtMesh.fontSize += 20;
+            txtMesh.fontSize += 20;
 
             txtMesh.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, 29);
 
@@ -108,11 +156,16 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 
         }).SetEase(Ease.InOutSine);
 
-		foreach(var it in c_dataReward)
-		{
-			it.AddResourceType();
-		}
+		AddReward();
     }
+
+	private void AddReward()
+	{
+        foreach (var it in c_dataReward)
+        {
+            it.AddResourceType();
+        }
+    }	
 
     public void UpdateUI(RectTransform targetSpawn, List<ResourceValue> dataReward)
 	{
@@ -122,8 +175,6 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 	public void UpdateUI_Claim(Action onClaim, Action onClaimX2)
 	{
 	}
-
-
 
 	private void CloseUI()
 	{
@@ -141,7 +192,6 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
     {
         Close();
     }
-
     public void onClose()
     {
         Hide();

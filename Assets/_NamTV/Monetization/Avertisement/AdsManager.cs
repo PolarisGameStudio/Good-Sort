@@ -23,7 +23,7 @@ public class AdsManager : MonoBehaviour
     public bool UseMrecBanner => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.UseMrecBanner : false;
     public bool UseInter => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.UseInter : false;
     public bool UseReward => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.UseReward : false;
-    public bool UseOpenAds => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.UseOpenAds : false;
+    public bool UseOpenAds => FirebaseHandle.Instance ? HelperManager.DataPlayer.LevelID > 1 ?  FirebaseHandle.Instance.RemoteData.UseOpenAds : false : false;
     public bool UseSmallBanner => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.UseSmallBanner : false;
     public bool UseNative => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.UseNative : false;
 

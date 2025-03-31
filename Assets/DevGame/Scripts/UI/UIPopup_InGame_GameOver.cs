@@ -1,4 +1,5 @@
 using System;
+using System.Security.AccessControl;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,8 +33,15 @@ public class UIPopup_InGame_GameOver : Dialog<UIPopup_InGame_GameOver>
 
         btnWatchAds.onClick.AddListener(() =>
         {
-            onClose();
-            LogicGame.Instance.OnSkillSwap(true);
+            AdsManager.Instance.ShowRewardBasedVideo((success) =>
+            {
+                if (success)
+                {
+                    onClose();
+                    LogicGame.Instance.OnSkillSwap(true);
+                }
+            }, "OnGameOver_Skill_Replay");
+
         });
 
         btnExit.onClick.AddListener(() =>

@@ -15,6 +15,8 @@ public class UI_Setting : Dialog<UI_Setting>
 
     public Button btnHome;
 
+    public Button btnPause;
+
     public Sprite[] sprBtns;
 
     public Sprite[] sprSounds;
@@ -42,7 +44,7 @@ public class UI_Setting : Dialog<UI_Setting>
 
 
     private void Start()
-	{
+    {
         imgSound = btnSound.GetComponent<Image>();
         imgMusic = btnMusic.GetComponent<Image>();
         imgVirabtion = btnHaptic.GetComponent<Image>();
@@ -83,10 +85,20 @@ public class UI_Setting : Dialog<UI_Setting>
         });
 
         btnHome.onClick.AddListener(() => {
-
             HelperManager.OnBackHomeScene();
-
         });
+
+        btnPause.onClick.AddListener(() => { 
+            AdsManager.Instance.ShowInterstitial((isShowAds) =>
+            {
+                HelperManager.ShowGameScene();
+            }, "Restart_Game");
+        });
+    }
+
+    public void OnLoadScene()
+    {
+       // HelperManager.OnLoadGameScene();
     }
 
     public void DisableSetting()

@@ -1774,6 +1774,7 @@ public class LogicGame : Singleton<LogicGame>
     public void OnSetting()
     {
         UI_Setting.Show();
+        UI_Setting.Instance.OnLoadScene();
         IsPlayBooster = true;
         UI_Setting.Instance.callbackShowSetting = () => {
             IsPlayBooster = false;

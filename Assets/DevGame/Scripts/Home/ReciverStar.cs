@@ -15,6 +15,7 @@ public class ReciverStar : MonoBehaviour
     public TextMeshProUGUI txtMeshComplete = null;
 
     public Button btnClaim = null;
+    public GameObject objHand = null;
 
     void Start()
     {
@@ -43,11 +44,13 @@ public class ReciverStar : MonoBehaviour
             {
                 ShowRewardStar();
             });
+            objHand.gameObject.SetActive(true);
 
         }
         else
         {
             btnClaim.enabled = false;
+            objHand.gameObject.SetActive(false);
         }
     }    
 
