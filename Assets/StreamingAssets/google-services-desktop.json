@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "979459409543",
+    "project_id": "trg15---goods-puzzles",
+    "storage_bucket": "trg15---goods-puzzles.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979459409543:android:7bf64a98dcae6865d39a22",
+        "android_client_info": {
+          "package_name": "com.mkj.trg15.goods.puzzle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_iSFe86HhI-F523KrUhMXXVd8M9BiEmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

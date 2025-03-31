@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id">
-  <string name="gcm_defaultSenderId" translatable="false">630450982236</string>
-  <string name="google_storage_bucket" translatable="false">trg11-phone-case-diy.firebasestorage.app</string>
-  <string name="project_id" translatable="false">trg11-phone-case-diy</string>
-  <string name="google_api_key" translatable="false">AIzaSyC4uSw2JIsq9Mnbcy2UQKha86wH15ZpJ2g</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC4uSw2JIsq9Mnbcy2UQKha86wH15ZpJ2g</string>
-  <string name="google_app_id" translatable="false">1:630450982236:android:2521766c7e3db55c334599</string>
+  <string name="gcm_defaultSenderId" translatable="false">979459409543</string>
+  <string name="google_storage_bucket" translatable="false">trg15---goods-puzzles.firebasestorage.app</string>
+  <string name="project_id" translatable="false">trg15---goods-puzzles</string>
+  <string name="google_api_key" translatable="false">AIzaSyC_iSFe86HhI-F523KrUhMXXVd8M9BiEmk</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC_iSFe86HhI-F523KrUhMXXVd8M9BiEmk</string>
+  <string name="google_app_id" translatable="false">1:979459409543:android:7bf64a98dcae6865d39a22</string>
 </resources>

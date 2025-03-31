@@ -177,6 +177,7 @@ public class LogicGame : Singleton<LogicGame>
             var ob = Instantiate(obj);
             ob.transform.position = Vector3.zero;
             isGameOver = false;
+            IsPlayBooster = false;
             return;
         }
         else

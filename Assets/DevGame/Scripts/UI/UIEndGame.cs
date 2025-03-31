@@ -16,7 +16,12 @@ public class UIEndGame : Dialog<UIEndGame>
 
 	public UIPopup uiPopupShowcase;
 
-	public void EndGame(EndGameState endGameState)
+    protected override void Awake()
+    {
+        base.Awake();
+    }
+
+    public void EndGame(EndGameState endGameState)
 	{
 		if(endGameState == EndGameState.Win)
 		{

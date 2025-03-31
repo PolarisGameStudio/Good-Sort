@@ -170,17 +170,52 @@ public static class Helpers
 /// This transforms the static instance into a basic singleton. This will destroy any new
 /// versions created, leaving the original instance intact
 /// </summary>
-public abstract class Singleton<T> : StaticInstance<T> where T : MonoBehaviour
+public class Singleton<T> : MonoBehaviour where T : Component
 {
-    protected override void Awake()
+    private static T instance;
+
+    public static bool IsInstanceInvalid()
     {
-        if (Instance != null) Destroy(gameObject);
-        base.Awake();
+        return instance != null;
     }
-    public void SetActive(bool isActive)
+    // IsInstanceInvalid()
+
+    //void Awake() {
+    //    singleton = gameObject.GetComponent<T>();
+    //    DontDestroyOnLoad(this);
+    //} // Awake ()
+
+    public static T Instance
     {
-        if (Instance)
-            Instance.gameObject.SetActive(isActive);
+        get
+        {
+            if (instance != null)
+                return instance;
+
+            instance = FindObjectOfType<T>();
+
+            if (instance != null)
+                return instance;
+#if UNITY_EDITOR
+            //Debug.LogError($"Not found Object for type {typeof(T).Name}");
+#endif
+            return instance;
+        }
+
+
+    } // Instance
+
+    public static T TryGetInstance()
+    {
+        return null;
+    }
+
+    protected virtual void Awake()
+    {
+    }
+
+    protected virtual void OnDestroy()
+    {
     }
 }
 
