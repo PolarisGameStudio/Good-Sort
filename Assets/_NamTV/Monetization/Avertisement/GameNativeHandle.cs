@@ -192,15 +192,20 @@ public class GameNativeHandle : MonoBehaviour
             };
         }
     }
+
+    private bool isWaitingCallab = false;
+
     public void _DelayShowCollab()
     {
-        if (!isInitiated) return;
+        if (!isInitiated || isWaitingCallab) return;
+        isWaitingCallab = true;
         UnityMainThreadDispatcher.Enqueue(DeLayShowNativeCollab());
     }
     IEnumerator DeLayShowNativeCollab()
     {
         yield return new WaitForSeconds(1.618f);
         ExcuteShowNativeCollab();
+        isWaitingCallab = false;
     }
     void ExcuteShowNativeCollab()
     {

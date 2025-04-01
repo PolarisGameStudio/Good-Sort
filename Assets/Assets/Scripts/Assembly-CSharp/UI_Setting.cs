@@ -88,6 +88,8 @@ public class UI_Setting : Dialog<UI_Setting>
             HelperManager.OnBackHomeScene();
         });
 
+        btnHome.gameObject.SetActive(HelperManager.DataPlayer.LevelID > 1);
+
         btnPause.onClick.AddListener(() => { 
             AdsManager.Instance.ShowInterstitial((isShowAds) =>
             {
@@ -98,7 +100,7 @@ public class UI_Setting : Dialog<UI_Setting>
 
     public void OnLoadScene()
     {
-       // HelperManager.OnLoadGameScene();
+        HelperManager.OnLoadGameScene();
     }
 
     public void DisableSetting()

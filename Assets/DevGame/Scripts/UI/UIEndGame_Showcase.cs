@@ -91,7 +91,7 @@ public class UIEndGame_Showcase : MonoBehaviour
 		float Move = (float) HelperManager.DataPlayer.NumWinLevel / 5.0f;
 		progressLevel.DOValue(Move, 0.25f);
 		yield return new WaitForSeconds(0.25f);
-       // if (HelperManager.DataPlayer.NumWinLevel >= 5)
+        if (HelperManager.DataPlayer.NumWinLevel >= 5)
         {
             HelperManager.DataPlayer.NumWinLevel = 0;
             OnShowUnLockReward(() =>
@@ -133,10 +133,11 @@ public class UIEndGame_Showcase : MonoBehaviour
         foreach (var ty in listType)
         {
             int valueAdd = 1;
-
-
-
-            listValue.Add(new(ty, 1));
+            if(ty == ResourceType.Gold)
+            {
+                valueAdd = UnityEngine.Random.Range(50, 150);
+            }
+            listValue.Add(new(ty, valueAdd));
         }
         UIPopup_UnlockRewards.Instance.UpdateUI_SkeletonChest(skeChes, listValue, 0.01f, 0.425f, 0.25f, callback);
     }

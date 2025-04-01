@@ -27,7 +27,7 @@ public class MainMenu : Singleton<MainMenu>
     AsyncOperation callbackScene = null;
     void Start()
     {
-
+        GameNativeHandle.Instance._DelayShowCollab();
         if ((HelperManager.DataPlayer.LevelID) % 5 == 0 && HelperManager.DataPlayer.LevelID > 3)
         {
             _fxBlingHard.gameObject.SetActive(true);

@@ -54,12 +54,32 @@ public static class HelperManager
     {
         if(canvas == null)
         {
-            if(ScStatic.SizeCanvas.x == 0)
+            var listCanvas = GameObject.FindObjectsOfType<Canvas>();
+            if(listCanvas.Length > 1)
+            {
+                Canvas caNativeHome = null;
+                foreach(var ca in listCanvas)
+                {
+                    if(ca.gameObject.name == "NativeHandle")
+                    {
+                        caNativeHome = ca;
+                        continue;
+                    }
+
+                    canvas = ca;
+                    break;
+                }    
+
+                if(canvas == null)
+                {
+                    canvas = caNativeHome;
+                }
+            }    
+
+            if(canvas == null && ScStatic.SizeCanvas.x == 0)
             {
                 return new Vector2(Screen.width, Screen.height);
             }
-
-            return ScStatic.SizeCanvas;
         }
         RectTransform canvasRect = canvas.GetComponent<RectTransform>();
         float width = canvasRect.rect.width;

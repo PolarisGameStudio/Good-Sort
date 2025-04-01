@@ -125,7 +125,7 @@ public class GenLevelController : Singleton<GenLevelController>
 		{
             var Level22 = Resources.Load<SOLevel>("Data/Level/" + levels[i]);
 			var kk = Level22.level;
-            if (kk.timeToPlay == 0)
+            if (kk.timeToPlay == 60)
 			{
 				Debug.Log("Level_hard_" + i.ToString() + "_name_" + levels[i]);
 			}

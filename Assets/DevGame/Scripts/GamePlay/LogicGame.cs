@@ -185,7 +185,7 @@ public class LogicGame : Singleton<LogicGame>
             _timePlayGame = level.timeToPlay;
         }
 
-        if(_timePlayGame == 0)
+        if (_timePlayGame == 0)
         {
             _timePlayGame = 330;
         }
@@ -378,6 +378,7 @@ public class LogicGame : Singleton<LogicGame>
         {
             this.StartCoroutine(OnPlayBooster());
         }
+       // GameNativeHandle.Instance._DelayShowCollab();
     }
 
     void ShufferPosition(List<Cell> listCell)

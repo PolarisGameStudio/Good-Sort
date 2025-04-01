@@ -120,4 +120,4 @@ MonoBehaviour:
   useNativeInter: 1
   useOpenAdsInter: 0
   SystemLogs: 0
-  isDebug: 0
+  isDebug: 1

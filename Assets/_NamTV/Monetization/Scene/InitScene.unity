@@ -674,6 +674,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 271808521502575918, guid: 35c9edc79564e7442a8bb8331f238fb6, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1354597782352499773, guid: 35c9edc79564e7442a8bb8331f238fb6, type: 3}
       propertyPath: autoKill
       value: 0
@@ -848,7 +852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7663851362038250994, guid: 35c9edc79564e7442a8bb8331f238fb6, type: 3}
       propertyPath: forceFullAds
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7663851362038250994, guid: 35c9edc79564e7442a8bb8331f238fb6, type: 3}
       propertyPath: timeWaitInterOpen
