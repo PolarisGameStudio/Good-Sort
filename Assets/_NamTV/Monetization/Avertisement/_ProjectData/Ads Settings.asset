@@ -113,8 +113,8 @@ MonoBehaviour:
   useTeaBrake: 1
   timeWaitInter: 10
   timeWaitReward: 10
-  useInterSplash: 0
-  useOpenAdSplash: 1
+  useInterSplash: 1
+  useOpenAdSplash: 0
   useMrectSplash: 0
   useNativeSplash: 1
   useNativeInter: 1

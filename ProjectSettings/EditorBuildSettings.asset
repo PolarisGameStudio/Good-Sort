@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/DevGame/Scene/InitScene.unity
-    guid: 35c3ed5fed810a142accdacde9c303e2
+    path: Assets/_NamTV/Monetization/Scene/InitScene.unity
+    guid: e3ab621aa2042a54093d68eff5c774d3
   - enabled: 1
     path: Assets/_NamTV/Monetization/Scene/SplashScene.unity
     guid: d31138689a8a2eb469b9f946955bb921
