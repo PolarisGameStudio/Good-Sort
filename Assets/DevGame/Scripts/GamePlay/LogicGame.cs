@@ -79,6 +79,8 @@ public class LogicGame : Singleton<LogicGame>
 
     public float ScaleP2 = 1.0f;
 
+    public List<GameObject> listObjDisable = null;
+
     void Start()
     {
         textStar.text = "0";
@@ -178,6 +180,15 @@ public class LogicGame : Singleton<LogicGame>
             ob.transform.position = Vector3.zero;
             isGameOver = false;
             IsPlayBooster = false;
+
+            if(listObjDisable.Count > 0)
+            {
+                foreach(var it in listObjDisable)
+                {
+                    it.gameObject.SetActive(false);
+                }
+            }
+
             return;
         }
         else
@@ -1091,23 +1102,23 @@ public class LogicGame : Singleton<LogicGame>
     {
         if (isGameOver)
         {
-            UICountDown.Instance.OnPauseAnimationClock();
+            UICountDown.Instance?.OnPauseAnimationClock();
             return;
         }
 
         if (isPauseGame)
         {
-            UICountDown.Instance.OnPauseAnimationClock();
+            UICountDown.Instance?.OnPauseAnimationClock();
             return;
         }
 
         if (IsUseSkillGame || IsUseSkillFreeze)
         {
-            UICountDown.Instance.OnPauseAnimationClock();
+            UICountDown.Instance?.OnPauseAnimationClock();
             return;
         }
 
-        UICountDown.Instance.PlayAnimationClock();
+        UICountDown.Instance?.PlayAnimationClock();
 
         _timePlayGame -= Time.deltaTime;
 

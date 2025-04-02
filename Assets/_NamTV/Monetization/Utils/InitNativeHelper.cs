@@ -6,6 +6,6 @@ public class InitNativeHelper : PersistentSingleton<InitNativeHelper>
 {
     private void Start()
     {
-        GameNativeHandle.Instance._InitOnHome();
+        GameNativeHandle.Instance?._InitOnHome();
     }
 }
