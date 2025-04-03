@@ -32,4 +32,6 @@ public class DataPlayer
     public int PowerSwap = 1;
     public int PowerReplay = 1;
 
+    public int IndexSpriteItemHome = 0;
+
 }

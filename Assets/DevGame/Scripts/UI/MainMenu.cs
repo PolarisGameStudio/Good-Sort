@@ -27,7 +27,7 @@ public class MainMenu : Singleton<MainMenu>
     AsyncOperation callbackScene = null;
     void Start()
     {
-        GameNativeHandle.Instance._DelayShowCollab();
+        GameNativeHandle.Instance?._DelayShowCollab();
         if ((HelperManager.DataPlayer.LevelID) % 5 == 0 && HelperManager.DataPlayer.LevelID > 3)
         {
             _fxBlingHard.gameObject.SetActive(true);
@@ -55,6 +55,26 @@ public class MainMenu : Singleton<MainMenu>
 
         StartCoroutine(OnReciverItem());
 
+        //
+        StartCoroutine(OnShowUnlockItem());
+    }
+
+    private IEnumerator OnShowUnlockItem()
+    {
+        yield return new WaitForSeconds(2f);
+
+        var use = ScDataUnlockItemGame.instance.GetDataUseItem();
+        if(HelperManager.DataPlayer.LevelID > 4)
+        {
+            var key = "key_show_unlock_" + use.LevelMin + "_" +use.LevelMax;
+            if(PlayerPrefs.GetInt(key, 0) == 0)
+            {
+                PlayerPrefs.SetInt(key, 0);
+                //////
+                ///
+                //show
+            }
+        }
     }
 
     public IEnumerator OnRunRect(Action callback)

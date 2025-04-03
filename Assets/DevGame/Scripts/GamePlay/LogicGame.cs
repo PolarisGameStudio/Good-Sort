@@ -1487,25 +1487,32 @@ public class LogicGame : Singleton<LogicGame>
             {
                 it.Value.RemoveAt(0);
             }
-           
         }
 
+
         List<Item> listItems = new();
+
+        int index = 0;
+        int numItem = 2;
 
         foreach (var it in gr1)
         {
             listItems.AddRange(it.Value);
-            if (!isBosster)
+            index++;
+            if (index > numItem - 1)
             {
-                if(listItems.Count > 3)
+                if (!isBosster)
                 {
-                    while(listItems.Count > 3)
+                    if (listItems.Count > 3 * numItem)
                     {
-                        listItems.RemoveAt(0);
-                    }    
-                }    
-                break;
-            }
+                        while (listItems.Count > 3 * numItem)
+                        {
+                            listItems.RemoveAt(0);
+                        }
+                    }
+                    break;
+                }
+            }    
         }
 
         if(listItems.Count == 0)

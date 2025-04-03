@@ -54,6 +54,11 @@ public static class HelperManager
     {
         if(canvas == null)
         {
+            if(ScStatic.SizeCanvas.x > 0.1f)
+            {
+                return ScStatic.SizeCanvas;
+            }    
+
             var listCanvas = GameObject.FindObjectsOfType<Canvas>();
             if(listCanvas.Length > 1)
             {
@@ -84,6 +89,9 @@ public static class HelperManager
         RectTransform canvasRect = canvas.GetComponent<RectTransform>();
         float width = canvasRect.rect.width;
         float height = canvasRect.rect.height;
+
+        ScStatic.SizeCanvas = new Vector2(width, height);
+
         return new Vector2(width, height);
     }
 

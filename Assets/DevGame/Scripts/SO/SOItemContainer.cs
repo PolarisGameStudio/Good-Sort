@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -17,6 +18,20 @@ public class DataSoItemItemAsset
     public ItemColor[] colors;
 }
 
+[Serializable]
+public class DataUseItem
+{
+    public int LevelMin = 0;
+    public int LevelMax = 0;
+
+    public int ItemMin = 0;
+    public int ItemMax = 0;
+
+    public List<int> NameItemRemove = null;
+
+    public Sprite sprCategory;
+}
+
 public class SOItemContainer : Singleton<SOItemContainer>
 {
 	List<DataSoItemItemAsset> dataSoItemItemAssets = new();
@@ -24,6 +39,8 @@ public class SOItemContainer : Singleton<SOItemContainer>
 	private Dictionary<ItemType, ItemAsset> _dicItem = new();
 
     private Dictionary<int, string> _dictNameSpr = new();
+
+    private Dictionary<int, string> _dictNameSprItemUse = new();
 
 	protected override void Awake()
 	{
@@ -38,13 +55,96 @@ public class SOItemContainer : Singleton<SOItemContainer>
             }
         }
 
-        for(int i = 1; i <= 100; i++)
-        {
-            _dictNameSpr.Add(i, "AS_" + i.ToString());
-        }
-
+        AddDictName();
        // _dictNameSpr = _dictNameSpr.OrderBy(x=>x.Key).ToDictionary(x => x.Key, x => x.Value);
     }
+
+    private void AddDictName()
+    {
+        _dictNameSpr.Clear();
+
+        if(ScDataUnlockItemGame.instance != null)
+        {
+            int index = 0;
+
+            for (int i = 0; i < ScDataUnlockItemGame.instance.dataUseItems.Count; i++)
+            {
+                var da = ScDataUnlockItemGame.instance.dataUseItems[i];
+                if (HelperManager.DataPlayer.LevelID >= da.LevelMin && HelperManager.DataPlayer.LevelID <= da.LevelMax)
+                {
+                    for (int it = da.ItemMin; it <= da.ItemMax; it++)
+                    {
+                        if (da.NameItemRemove.Contains(it))
+                        {
+                            continue;
+                        }
+                        _dictNameSpr.Add(it, "AS_" + it.ToString());
+                    }
+                    index = i;
+                    break;
+                }
+            }
+
+            if (_dictNameSpr.Count > 0)
+            {
+                for (int i = 0; i < index; i++)
+                {
+                    foreach (var it in ScDataUnlockItemGame.instance.dataUseItems[i].NameItemRemove)
+                    {
+                        _dictNameSprItemUse.Add(it, "AS_" + it.ToString());
+                    }
+                }
+
+                return;
+            }
+
+            var daUse = ScDataUnlockItemGame.instance.GetDataUseItem();
+
+            List<int> list1 = new();
+            for (int i = 1; i <= 100; i++)
+            {
+                list1.Add(i);
+            }
+
+            HelperManager.Shuffle(list1);
+
+            foreach (var it in list1)
+            {
+                bool isBreak = false;
+                foreach(var iti in daUse.NameItemRemove)
+                {
+                    if(it == iti)
+                    {
+                        isBreak = true;
+                        continue;
+                    }
+                }
+
+                if(isBreak)
+                {
+                    continue;
+                }
+
+                _dictNameSpr.Add(it, "AS_" + it.ToString());
+            }
+
+        }    
+
+        List<int> list = new();
+        for (int i = 1; i <= 100; i++)
+        {
+            list.Add(i);
+        }
+
+        HelperManager.Shuffle(list);
+
+        foreach (var it in list)
+        {
+            _dictNameSpr.Add(it, "AS_" + it.ToString());
+        }
+
+    }
+
 
     public void OnAdd()
     {
@@ -90,32 +190,20 @@ public class SOItemContainer : Singleton<SOItemContainer>
               da.spriteHidden = Resources.Load<Sprite>("Texture2D/" + item.spriteHidden);
           }*/
 
-        List<int> listKeys = new();
-        Dictionary<int, string> dc_copy = new();
+        string sprite = "";
 
-        for (int i = 0; i < 5; i++)
+        if(_dictNameSprItemUse.Count > 0 && UnityEngine.Random.Range(1, 100) % 3 == 0)
         {
-            if (_dictNameSpr.Count > 0)
-            {
-                int minKey = _dictNameSpr.Keys.Min();
-                dc_copy.Add(minKey, _dictNameSpr[minKey]);
-                listKeys.Add(minKey);
-                _dictNameSpr.Remove(minKey);
-            }
+            int key = _dictNameSprItemUse.Keys.PickRandom();
+            sprite = _dictNameSprItemUse[key];
+            _dictNameSprItemUse.Remove(key);
         }
-
-        var minkey = UnityEngine.Random.Range(0, listKeys.Count);
-        var key = listKeys[minkey];
-        var sprite = dc_copy[key];
-        dc_copy.Remove(key);
-
-        if (dc_copy.Count > 0)
+        else
         {
-            foreach(var it in dc_copy)
-            {
-                _dictNameSpr.Add(it.Key, it.Value);
-            }    
-        }    
+            int minKey = _dictNameSpr.Keys.PickRandom();
+            sprite = _dictNameSpr[minKey];
+            _dictNameSpr.Remove(minKey);
+        }
 
         da.spriteHidden = Resources.Load<Sprite>("Texture2D/newImage/" + sprite);
 

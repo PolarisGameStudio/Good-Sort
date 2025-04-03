@@ -16,7 +16,7 @@ MonoBehaviour:
   - kind: 0
     price: 200
     LevelShow: 2
-    textDes: Break a pair of items
+    textDes: Break two pairs of items
   - kind: 1
     price: 300
     LevelShow: 3
