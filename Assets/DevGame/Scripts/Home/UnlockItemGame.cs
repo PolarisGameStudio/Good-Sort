@@ -35,7 +35,7 @@ public class UnlockItemGame : MonoBehaviour
 
     void Start()
     {
-        List<int> listDa = new();
+/*        List<int> listDa = new();
 
         for (int i = 1; i <= 100; i++)
         {
@@ -64,9 +64,9 @@ public class UnlockItemGame : MonoBehaviour
             dataUnlocks.Add(da);
         }
 
-        var text = JsonConvert.SerializeObject(dataUnlocks);
+        var text = JsonConvert.SerializeObject(dataUnlocks);*/
 
-        DataUseItem daUse = null;
+        /*DataUseItem daUse = null;
         for (int i = 0; i < ScDataUnlockItemGame.instance.dataUseItems.Count; i++)
         {
             var da = ScDataUnlockItemGame.instance.dataUseItems[i];
@@ -79,14 +79,7 @@ public class UnlockItemGame : MonoBehaviour
 
         if(daUse != null)
         {
-            imgCategory.sprite = daUse.sprCategory;
-            imgCategory.SetNativeSize();
-            for (int i = 0; i < listImageItems.Count; i++)
-            {
-                var spr = Resources.Load<Sprite>("Texture2D/newImage/AS_" + daUse.NameItemRemove[i].ToString());
-                listImageItems[i].sprite = spr;
-                listImageItems[i].SetNativeSize();
-            }
+            UpdateUi(daUse);
             return;
         }
 
@@ -97,7 +90,17 @@ public class UnlockItemGame : MonoBehaviour
             return;
         }
 
-        imgCategory.sprite = ScDataUnlockItemGame.instance.GetSpriteCategory();
+        UpdateUi(daUse);*/
+    }
+
+    public void UpdateUi(DataUseItem daUse)
+    {
+        if(daUse.sprCategory == null)
+        {
+            daUse.sprCategory = ScDataUnlockItemGame.instance.GetSpriteCategory();
+        }
+
+        imgCategory.sprite = daUse.sprCategory;
         imgCategory.SetNativeSize();
         for (int i = 0; i < listImageItems.Count; i++)
         {
@@ -105,10 +108,6 @@ public class UnlockItemGame : MonoBehaviour
             listImageItems[i].sprite = spr;
             listImageItems[i].SetNativeSize();
         }
-    }
-
-
-
-
+    }    
 
 }

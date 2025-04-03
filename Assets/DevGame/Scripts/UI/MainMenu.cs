@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Spine.Unity;
 using System;
 using System.Collections;
@@ -26,6 +27,14 @@ public class MainMenu : Singleton<MainMenu>
     bool isLoadSceneSucess = false;
     bool isLoading = false;
     AsyncOperation callbackScene = null;
+
+    [SerializeField] Slider loadingSlider = null;
+    [SerializeField] TextMeshProUGUI txtLvMin = null;
+    [SerializeField] TextMeshProUGUI txtLvMax = null;
+    [SerializeField] RectTransform rectAmount = null;
+    [SerializeField] UnlockItemGame unlockItemGame = null;
+
+
     void Start()
     {
         GameNativeHandle.Instance?._DelayShowCollab();
@@ -53,14 +62,15 @@ public class MainMenu : Singleton<MainMenu>
 
         txtStar.text = HelperManager.DataPlayer.TotalStar.ToString();
         txtCoint.text = HelperManager.DataPlayer.TotalCoin.ToString();
-
         //
-        OnShowUnlockItem();
+        StartCoroutine(OnShowUnlockItem());
     }
 
-    private void OnShowUnlockItem()
+    private IEnumerator OnShowUnlockItem()
     {
-        if (HelperManager.DataPlayer.LevelID > 4)
+        int currentId = HelperManager.DataPlayer.LevelID;
+
+        if (currentId > 4)
         {
             var use = ScDataUnlockItemGame.instance.GetDataUseItemByLevel();
 
@@ -69,6 +79,7 @@ public class MainMenu : Singleton<MainMenu>
                 var key = "key_show_unlock_" + use.LevelMin + "_" + use.LevelMax;
                 if (PlayerPrefs.GetInt(key, 0) == 0)
                 {
+                    UpdateItem(use, currentId);
                     PlayerPrefs.SetInt(key, 1);
                     List<Sprite> sprites = new();
                     foreach (var it in use.NameItemRemove)
@@ -76,15 +87,17 @@ public class MainMenu : Singleton<MainMenu>
                         var spr = Resources.Load<Sprite>("Texture2D/newImage/AS_" + it.ToString());
                         sprites.Add(spr);
                     }
+
+                    yield return new WaitForSeconds(0.25f);
                     UIPopup_UnlockRewards.Show();
                     UIPopup_UnlockRewards.Instance.UpdateUISprite();
                     UIPopup_UnlockRewards.Instance.UpdateUI_SkeletonChest_Sprite(skeChes, sprites, 0.01f, 0.425f, 0.25f, () =>
                     {
                         StartCoroutine(OnReciverItem());
                     });
-                    return;
+                    yield break;
                 }
-            }    
+            }
 
             StartCoroutine(OnReciverItem());
         }
@@ -94,30 +107,24 @@ public class MainMenu : Singleton<MainMenu>
         }
     }
 
+    private void Update()
+    {
+        rectAmount.anchoredPosition = new Vector3(305 * loadingSlider.value, 0, 0);
+    }
+
     public IEnumerator OnRunRect(Action callback)
     {
         int index = 0;
-  /*      while(index < 100000)
-        {
-            index += 200;
-            if(index > 30000)
-            {
-                txtStar.gameObject.SetActive(false);
-                txtCoint.gameObject.SetActive(false);
-                txtLevel.transform.parent.transform.parent.gameObject.SetActive(false);
-
-            }
-            rectMask.softness = new Vector2Int(index, index); 
-            yield return null;
-        }*/
-        
         yield return new WaitForEndOfFrame();
-
         callback?.Invoke();
     }
 
     public IEnumerator OnReciverItem()
     {
+        int currentId = HelperManager.DataPlayer.LevelID;
+        var use = ScDataUnlockItemGame.instance.GetDataUseItem();
+        UpdateItem(use, currentId);
+
         yield return new WaitForSeconds(0.25f);
 
         if (HelperManager.DataPlayer.currentStarGame > 0 || HelperManager.DataPlayer.currentCoin > 0)
@@ -125,6 +132,15 @@ public class MainMenu : Singleton<MainMenu>
             uIReciverItem.gameObject.SetActive(true);
             uIReciverItem.RunAnim();
         }
+    }
+
+    void UpdateItem(DataUseItem use, int currentId)
+    {
+        unlockItemGame.UpdateUi(use);
+        txtLvMin.text = (use.LevelMin + 1).ToString();
+        txtLvMax.text = (use.LevelMax + 1).ToString();
+        float rec = (float)(currentId - use.LevelMin) / (float)(use.LevelMax - use.LevelMin + 1);
+        loadingSlider.DOValue(rec, 0.25f).SetEase(Ease.Linear);
     }
 
     public void RunAnim()

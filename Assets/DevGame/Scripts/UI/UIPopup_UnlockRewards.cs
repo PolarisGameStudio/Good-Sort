@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Coffee.UIExtensions;
+using Cysharp.Threading.Tasks.Linq;
 using DG.Tweening;
 using Spine.Unity;
 using TMPro;
@@ -34,7 +35,7 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 
 	Action callbackClaim = null;
 
-    Coroutine coroutine;
+    bool isReturn = false;
 
     private void Start()
     {
@@ -74,12 +75,16 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 
         });
 
-        coroutine = StartCoroutine(StartEnableBtnClaim());
+        StartCoroutine(StartEnableBtnClaim());
     }
 
     IEnumerator StartEnableBtnClaim()
     {
         yield return new WaitForSeconds(4f);
+        if(isReturn)
+        {
+            yield break;
+        }
         btnClaim.gameObject.SetActive(true); ;
     }
 
@@ -225,8 +230,7 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 
     public void UpdateUISprite()
 	{
-        StopCoroutine(coroutine);
-        coroutine = null;
+        isReturn = true;
 
         btnClaim.gameObject.SetActive(false);
         btnClaimX2.gameObject.SetActive(false);

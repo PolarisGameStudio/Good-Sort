@@ -28,7 +28,8 @@ public class ScDataUnlockItemGame : MonoBehaviour
 
     public Sprite GetSpriteCategory()
     {
-        return listSpr[HelperManager.DataPlayer.LevelID % listSpr.Count];
+        int id = (HelperManager.DataPlayer.LevelID + 1) / 5;
+        return listSpr[id % listSpr.Count];
     }
   
     public DataUseItem GetDataUseItem()
