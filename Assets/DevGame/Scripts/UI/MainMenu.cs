@@ -16,11 +16,10 @@ public class MainMenu : Singleton<MainMenu>
     [SerializeField] TextMeshProUGUI txtStar = null;
     [SerializeField] TextMeshProUGUI txtCoint = null;
     [SerializeField] RectMask2D rectMask = null;
+    [SerializeField] GameObject _fxBlingHard = null;
 
     [SerializeField] UIReciverItem uIReciverItem = null;
 
-    [SerializeField] GameObject _fxBlingNormal = null;
-    [SerializeField] GameObject _fxBlingHard = null;
     public SkeletonGraphic skeChes = null;
 
     [SerializeField] CanvasGroup canvasGroupPop;
@@ -28,6 +27,9 @@ public class MainMenu : Singleton<MainMenu>
     bool isLoading = false;
     AsyncOperation callbackScene = null;
 
+    [SerializeField] RectTransform recBtnPlay = null;
+ 
+    [Header("New Items")]
     [SerializeField] Slider loadingSlider = null;
     [SerializeField] TextMeshProUGUI txtLvMin = null;
     [SerializeField] TextMeshProUGUI txtLvMax = null;
@@ -38,13 +40,10 @@ public class MainMenu : Singleton<MainMenu>
     void Start()
     {
         GameNativeHandle.Instance?._DelayShowCollab();
+
         if ((HelperManager.DataPlayer.LevelID) % 5 == 0 && HelperManager.DataPlayer.LevelID > 3)
         {
             _fxBlingHard.gameObject.SetActive(true);
-        }
-        else
-        {
-            _fxBlingNormal.gameObject.SetActive(true);
         }
 
         txtLevel.text = $"Level {HelperManager.DataPlayer.LevelID + 1}";
@@ -64,6 +63,7 @@ public class MainMenu : Singleton<MainMenu>
         txtCoint.text = HelperManager.DataPlayer.TotalCoin.ToString();
         //
         StartCoroutine(OnShowUnlockItem());
+        StartCoroutine(OnRunAnimButtonPlay());
     }
 
     private IEnumerator OnShowUnlockItem()
@@ -151,5 +151,24 @@ public class MainMenu : Singleton<MainMenu>
     private void OnDestroy()
     {
         HelperManager.Save();
+    }
+
+    IEnumerator OnRunAnimButtonPlay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        var recTransform = recBtnPlay;
+
+        Sequence buttonSequence = DOTween.Sequence();
+
+        var scale = recTransform.localScale.x;
+
+        buttonSequence.Append(recTransform.DOScale(scale + 0.1f, 0.5f).SetEase(Ease.InOutSine))
+                      .Append(recTransform.DOScale(scale, 0.5f).SetEase(Ease.InOutSine))
+                      .Append(recTransform.DOScale(scale + 0.05f, 0.5f).SetEase(Ease.InOutSine))
+                      .Append(recTransform.DOScale(scale, 0.5f).SetEase(Ease.InOutSine))
+                      .SetUpdate(true)
+                      .SetLoops(-1, LoopType.Restart);
+
+        buttonSequence.Play();
     }
 }

@@ -19,78 +19,9 @@ public class UnlockItemGame : MonoBehaviour
     [SerializeField] Image imgCategory;
     [SerializeField] List<Image> listImageItems = new();
 
-    List<int> check(List<int> listDa)
-    {
-        if (listDa.Count <= 0)
-        {
-            for (int i = 0; i < 100; i++)
-            {
-                listDa.Add(i);
-            }
-        }
-
-        HelperManager.Shuffle(listDa);
-        return listDa;
-    }
-
     void Start()
     {
-/*        List<int> listDa = new();
 
-        for (int i = 1; i <= 100; i++)
-        {
-            listDa.Add(i);
-        }
-
-        List<DataUnlockItem> dataUnlocks = new();
-
-        int levelBegin = 10;
-
-        while (levelBegin < 2100)
-        {
-            DataUnlockItem da = new();
-            da.LevelMin = levelBegin;
-            da.levelMax = levelBegin + 4;
-            levelBegin += 5;
-
-            for (int i = 0; i < 3; i++)
-            {
-                listDa = check(listDa);
-                var ind = listDa[0];
-                listDa.RemoveAt(0);
-                da.NameItemRemove.Add(ind);
-            }
-
-            dataUnlocks.Add(da);
-        }
-
-        var text = JsonConvert.SerializeObject(dataUnlocks);*/
-
-        /*DataUseItem daUse = null;
-        for (int i = 0; i < ScDataUnlockItemGame.instance.dataUseItems.Count; i++)
-        {
-            var da = ScDataUnlockItemGame.instance.dataUseItems[i];
-            if (HelperManager.DataPlayer.LevelID >= da.LevelMin && HelperManager.DataPlayer.LevelID <= da.LevelMax)
-            { 
-                daUse = da;
-                break;
-            }
-        }
-
-        if(daUse != null)
-        {
-            UpdateUi(daUse);
-            return;
-        }
-
-        daUse = ScDataUnlockItemGame.instance.GetDataUseItem();
-
-        if(daUse == null)
-        {
-            return;
-        }
-
-        UpdateUi(daUse);*/
     }
 
     public void UpdateUi(DataUseItem daUse)
