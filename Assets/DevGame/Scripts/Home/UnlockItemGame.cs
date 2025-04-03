@@ -51,7 +51,7 @@ public class UnlockItemGame : MonoBehaviour
             DataUnlockItem da = new();
             da.LevelMin = levelBegin;
             da.levelMax = levelBegin + 4;
-            levelBegin++;
+            levelBegin += 5;
 
             for (int i = 0; i < 3; i++)
             {

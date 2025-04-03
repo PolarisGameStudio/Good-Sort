@@ -3,7 +3,7 @@ using UnityEngine;
 public class UIChest_PatternPositionReward_Item : MonoBehaviour
 {
 	public RectTransform[] patterns;
-    public RectTransform[] patternsItems;
+    public RectTransform Items;
 
     public RectTransform GetPattern(int numberReward)
 	{
@@ -16,13 +16,9 @@ public class UIChest_PatternPositionReward_Item : MonoBehaviour
 	}
 
 
-    public RectTransform GetPatternItems(int numberReward)
+    public RectTransform GetPatternItems()
     {
-        if (numberReward - 1 >= patternsItems.Length)
-        {
-            return null;
-        }
-        return patternsItems[numberReward - 1];
+		return Items;
 
     }
 

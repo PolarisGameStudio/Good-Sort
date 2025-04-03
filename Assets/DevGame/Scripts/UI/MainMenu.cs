@@ -1,7 +1,7 @@
-using Coffee.UIExtensions;
-using Cysharp.Threading.Tasks;
+using Spine.Unity;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +20,7 @@ public class MainMenu : Singleton<MainMenu>
 
     [SerializeField] GameObject _fxBlingNormal = null;
     [SerializeField] GameObject _fxBlingHard = null;
+    public SkeletonGraphic skeChes = null;
 
     [SerializeField] CanvasGroup canvasGroupPop;
     bool isLoadSceneSucess = false;
@@ -53,27 +54,43 @@ public class MainMenu : Singleton<MainMenu>
         txtStar.text = HelperManager.DataPlayer.TotalStar.ToString();
         txtCoint.text = HelperManager.DataPlayer.TotalCoin.ToString();
 
-        StartCoroutine(OnReciverItem());
-
         //
-        StartCoroutine(OnShowUnlockItem());
+        OnShowUnlockItem();
     }
 
-    private IEnumerator OnShowUnlockItem()
+    private void OnShowUnlockItem()
     {
-        yield return new WaitForSeconds(2f);
-
-        var use = ScDataUnlockItemGame.instance.GetDataUseItem();
-        if(HelperManager.DataPlayer.LevelID > 4)
+        if (HelperManager.DataPlayer.LevelID > 4)
         {
-            var key = "key_show_unlock_" + use.LevelMin + "_" +use.LevelMax;
-            if(PlayerPrefs.GetInt(key, 0) == 0)
+            var use = ScDataUnlockItemGame.instance.GetDataUseItemByLevel();
+
+            if(use != null)
             {
-                PlayerPrefs.SetInt(key, 0);
-                //////
-                ///
-                //show
-            }
+                var key = "key_show_unlock_" + use.LevelMin + "_" + use.LevelMax;
+                if (PlayerPrefs.GetInt(key, 0) == 0)
+                {
+                    PlayerPrefs.SetInt(key, 1);
+                    List<Sprite> sprites = new();
+                    foreach (var it in use.NameItemRemove)
+                    {
+                        var spr = Resources.Load<Sprite>("Texture2D/newImage/AS_" + it.ToString());
+                        sprites.Add(spr);
+                    }
+                    UIPopup_UnlockRewards.Show();
+                    UIPopup_UnlockRewards.Instance.UpdateUISprite();
+                    UIPopup_UnlockRewards.Instance.UpdateUI_SkeletonChest_Sprite(skeChes, sprites, 0.01f, 0.425f, 0.25f, () =>
+                    {
+                        StartCoroutine(OnReciverItem());
+                    });
+                    return;
+                }
+            }    
+
+            StartCoroutine(OnReciverItem());
+        }
+        else
+        {
+            StartCoroutine(OnReciverItem());
         }
     }
 
