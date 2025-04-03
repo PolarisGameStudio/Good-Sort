@@ -64,7 +64,7 @@ public class GameFlowHandle : PersistentSingleton<GameFlowHandle>
 
         if(!_canUseSplashPopup)
         {
-            nextScene = HelperManager.DataPlayer.LevelID >= 2 ? ScStatic.HOME_SCENE : ScStatic.GAME_SCENE;
+            nextScene = HelperManager.DataPlayer.LevelID >= 1 ? ScStatic.HOME_SCENE : ScStatic.GAME_SCENE;
         }
 
         AdsLoading.SetUpdate("Everything OK!...", 0.9f, 1f, true);
