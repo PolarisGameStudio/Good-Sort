@@ -74,7 +74,7 @@ public class AdsLoading : MonoBehaviour
 
     public static void SetUpdate(string message, float process, float durationTime, bool showLoadingImage)
     {
-        Debug.Log("Message");
+        Debug.Log("Message_Loading_" + message);
         if (instance)
         {
             instance.content.SetActive(true);

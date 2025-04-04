@@ -159,8 +159,6 @@ public static class HelperManager
         callbackLoadScene = null;
 
         await UniTask.Yield();
-        await UniTask.Yield();
-        await UniTask.Yield();
 
         OnLoadScene(ScStatic.GAME_SCENE, LoadSceneMode.Single, scene => {
             callbackLoadScene = scene;

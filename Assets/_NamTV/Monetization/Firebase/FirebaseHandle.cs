@@ -124,6 +124,14 @@ public class FirebaseHandle : PersistentSingleton<FirebaseHandle>
         RemoteData.UseSmallBanner = FirebaseRemoteConfig.DefaultInstance.GetValue("UseSmallBanner").BooleanValue;
         RemoteData.UseMrecBanner = FirebaseRemoteConfig.DefaultInstance.GetValue("UseMrecBanner").BooleanValue;
         RemoteData.UseNative = FirebaseRemoteConfig.DefaultInstance.GetValue("UseNative").BooleanValue;
+
+        RemoteData.NumShowAdsInterLevel = (int)FirebaseRemoteConfig.DefaultInstance.GetValue("Inter_level_x").LongValue;
+        RemoteData.TimeDelayShowAdInter = (int)FirebaseRemoteConfig.DefaultInstance.GetValue("Ads_interval").LongValue;
+        RemoteData.IsUseAdsInterSplash = FirebaseRemoteConfig.DefaultInstance.GetValue("Ads_loading").BooleanValue;
+        RemoteData.NumShowAdsCollapseInGameLevel = (int)FirebaseRemoteConfig.DefaultInstance.GetValue("Collap_level_x").LongValue;
+        RemoteData.TimeReloadCollapse = (int)FirebaseRemoteConfig.DefaultInstance.GetValue("Reload_collap").LongValue;
+        RemoteData.IsDisplaySplashScene = FirebaseRemoteConfig.DefaultInstance.GetValue("Display_splash").BooleanValue;
+
         if (logDebug)
         {
             Debug.Log("[Firebase] Load remote config success!");

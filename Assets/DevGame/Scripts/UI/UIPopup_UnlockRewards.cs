@@ -30,6 +30,7 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
 	private float c_ScaleChestEnd;
 	private List<ResourceValue> c_dataReward;
 	public GameObject objFxX2 = null;
+    public TextMeshProUGUI txtTitle = null;
 
 	Dictionary<TextMeshProUGUI, float> dataTextValue = new();
 
@@ -231,7 +232,7 @@ public class UIPopup_UnlockRewards : Dialog<UIPopup_UnlockRewards>
     public void UpdateUISprite()
 	{
         isReturn = true;
-
+        txtTitle.text = "Unlock new category";
         btnClaim.gameObject.SetActive(false);
         btnClaimX2.gameObject.SetActive(false);
         btnCLose.gameObject.SetActive(true);

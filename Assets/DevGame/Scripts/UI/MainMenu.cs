@@ -39,6 +39,8 @@ public class MainMenu : Singleton<MainMenu>
 
     void Start()
     {
+        Audio.PlayBackgroundMusic(ScStatic.MUSIC_HOME);
+
         GameNativeHandle.Instance?._DelayShowCollab();
 
         if ((HelperManager.DataPlayer.LevelID) % 5 == 0 && HelperManager.DataPlayer.LevelID > 3)

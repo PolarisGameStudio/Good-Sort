@@ -18,14 +18,24 @@ public class AdsManager : MonoBehaviour
         };
     private static Dictionary<AdvertisingModules, AdvertisingHandler> advertisingActiveModules = new Dictionary<AdvertisingModules, AdvertisingHandler>();
     public bool isForcedAdEnabled = true;
-    public float InterstitialShowingDelay = 15f;
+
     //Remote Config
     public bool UseMrecBanner => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.UseMrecBanner : false;
     public bool UseInter => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.UseInter : false;
     public bool UseReward => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.UseReward : false;
-    public bool UseOpenAds => FirebaseHandle.Instance ? HelperManager.DataPlayer.LevelID > 1 ?  FirebaseHandle.Instance.RemoteData.UseOpenAds : false : false;
+    public bool UseOpenAds => FirebaseHandle.Instance ?  FirebaseHandle.Instance.RemoteData.UseOpenAds : false;
     public bool UseSmallBanner => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.UseSmallBanner : false;
     public bool UseNative => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.UseNative : false;
+
+    public int NumShowAdsInterLevel => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.NumShowAdsInterLevel : 2;
+    public int TimeDelayShowAdInter => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.TimeDelayShowAdInter : 25;
+
+    public bool IsUseAdsInterSplash => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.IsUseAdsInterSplash : true;
+
+    public int NumShowAdsCollapseInGameLevel => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.NumShowAdsCollapseInGameLevel : 2;
+    public int TimeReloadCollapse => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.TimeReloadCollapse : 30;
+    public bool IsDisplaySplashScene => FirebaseHandle.Instance ? FirebaseHandle.Instance.RemoteData.IsDisplaySplashScene : true;
+
 
     public int stepLoadSplash = 0;
     private static AdvertisingHandler.RewardedVideoCallback rewardedVideoCallback;
@@ -403,7 +413,7 @@ public class AdsManager : MonoBehaviour
     }
     public void ResetInterstitialDelayTime()
     {
-        lastInterstitialTime = TimeUtils.GetCurrentUnixTimestamp() + InterstitialShowingDelay;
+        lastInterstitialTime = TimeUtils.GetCurrentUnixTimestamp() + TimeDelayShowAdInter;
     }
     private double lastInterstitialTime;
     public IsAdsReadyCallback ExtraInterstitialReadyConditions;

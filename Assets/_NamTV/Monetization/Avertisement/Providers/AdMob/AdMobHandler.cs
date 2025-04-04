@@ -72,7 +72,7 @@ public class AdMobHandler : AdvertisingHandler
             {
                 AdsManager.Instance.stepLoadSplash++;
             }
-            if (AdsManager.Instance.UseInter && adsSettings.useInterSplash)
+            if (AdsManager.Instance.UseInter && adsSettings.useInterSplash && AdsManager.Instance.IsUseAdsInterSplash)
             {
                 FirebaseLogHandle.OnAdsCall("inter_splash", "init_game");
                 RequestInterSplash();

@@ -1283,6 +1283,7 @@ MonoBehaviour:
   btnClaimX2: {fileID: 6456296811380265003}
   btnCLose: {fileID: 4222296800161835405}
   objFxX2: {fileID: 3157380576703769095}
+  txtTitle: {fileID: 2916170318456323500}
 --- !u!1 &852721822818945235
 GameObject:
   m_ObjectHideFlags: 0

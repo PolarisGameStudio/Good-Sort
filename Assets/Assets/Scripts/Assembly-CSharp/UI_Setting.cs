@@ -1,3 +1,4 @@
+using Firebase.Analytics;
 using System;
 using TMPro;
 using UnityEngine;
@@ -93,6 +94,17 @@ public class UI_Setting : Dialog<UI_Setting>
         btnPause.onClick.AddListener(() => { 
             AdsManager.Instance.ShowInterstitial((isShowAds) =>
             {
+               /* var key_replay_level = "replay_" + HelperManager.DataPlayer.LevelID + 1;
+                var value = PlayerPrefs.GetInt(key_replay_level, 0);
+                Parameter[] lst = new Parameter[]
+                  {
+                        new Parameter("Level_id_restart", HelperManager.DataPlayer.LevelID + 1),
+                        new Parameter("Level_id_numreplay", value)
+                  };
+
+                FirebaseLogHandle.LogEvent("Level_replay", lst);*/
+
+
                 HelperManager.ShowGameScene();
             }, "Restart_Game");
         });

@@ -82,4 +82,6 @@ MonoBehaviour:
   - SFX_Ingame_Win
   - SFX_In_game_Fire_word
   - SFX_Button_StartGame
-  DatasBG: []
+  DatasBG:
+  - BG_Music_Home
+  - BG_Music_Game

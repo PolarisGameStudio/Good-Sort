@@ -134,6 +134,7 @@ public class GameNativeHandle : MonoBehaviour
             nativeCollab._OnNativeClose += () =>
             {
                 _DequeueNative(NativePriority.Collab);
+                TimeShowAdsNativeInGame.instance.ResetInterstitialDelayTime();
             };
             
         }
@@ -143,6 +144,16 @@ public class GameNativeHandle : MonoBehaviour
     {
         _InitNativeInter();
     }
+
+    private void ResetInterstitialDelayTime()
+    {
+        if(TimeShowAdsNativeInGame.instance != null)
+        {
+            TimeShowAdsNativeInGame.instance.ResetInterstitialDelayTime();
+            return;
+        }
+    }
+
     public void _InitOnHome() 
     {
         if(UseNativeBanner)

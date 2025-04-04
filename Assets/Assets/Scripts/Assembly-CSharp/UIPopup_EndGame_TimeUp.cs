@@ -1,3 +1,4 @@
+using Firebase.Analytics;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,6 +40,21 @@ public class UIPopup_EndGame_TimeUp : Dialog<UIPopup_EndGame_TimeUp>
             {
                 return;
             }
+
+            var key_replay_level = "replay_" + HelperManager.DataPlayer.LevelID + 1;
+            var value = PlayerPrefs.GetInt(key_replay_level, 0);
+
+            if (value != 0)
+            {
+               /* Parameter[] lst = new Parameter[]
+                  {
+                        new Parameter("Level_id_coin_timeout", HelperManager.DataPlayer.LevelID + 1),
+                        new Parameter("Level_id_numreplay", value)
+                  };
+
+                FirebaseLogHandle.LogEvent("Level_replay", lst);*/
+            }
+
             NextStack();
         });
 
@@ -52,8 +68,20 @@ public class UIPopup_EndGame_TimeUp : Dialog<UIPopup_EndGame_TimeUp>
             {
                 if (success)
                 {
-                    NextStack();
+                    var key_replay_level = "replay_" + HelperManager.DataPlayer.LevelID + 1;
+                    var value = PlayerPrefs.GetInt(key_replay_level, 0);
 
+                    if (value != 0)
+                    {
+                       /* Parameter[] lst = new Parameter[]
+                          {
+                        new Parameter("Level_id_rw_timeout", HelperManager.DataPlayer.LevelID + 1),
+                        new Parameter("Level_id_numreplay", value)
+                          };
+                        FirebaseLogHandle.LogEvent("Level_replay", lst);*/
+                    }
+
+                    NextStack();
                 }
             }, "OnGameOver_bosster_time");
 

@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Firebase.Analytics;
 using Spine;
 using System;
 using System.Collections;
@@ -41,6 +42,11 @@ public class UIPopup_InGame_PowerUp_GetMore : Dialog<UIPopup_InGame_PowerUp_GetM
                 return;
             }
             currentCallbackk?.Invoke(true);
+            /*Parameter[] lst = new Parameter[]
+            {
+                new Parameter(_resourceType + "_1st", HelperManager.DataPlayer.LevelID + 1),
+            };
+            FirebaseLogHandle.LogEvent("Booster", lst);*/
             onClose();
         });
         btnWatchAd.onClick.AddListener(() =>

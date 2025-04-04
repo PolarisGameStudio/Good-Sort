@@ -1,7 +1,7 @@
 using Coffee.UIExtensions;
 using Cysharp.Threading.Tasks.Linq;
 using DG.Tweening;
-
+using Firebase.Analytics;
 using Spine;
 using System;
 using System.Collections;
@@ -57,6 +57,8 @@ public class LogicGame : Singleton<LogicGame>
     private bool IsPlayBooster = true;
     private bool IsLevelHard = false;
 
+    [SerializeField] GameObject objPrefabInitNativeHelper = null;
+
     private bool isPauseGame
     {
         get
@@ -83,6 +85,7 @@ public class LogicGame : Singleton<LogicGame>
 
     void Start()
     {
+        Audio.PlayBackgroundMusic(ScStatic.MUSIC_GAME);
         textStar.text = "0";
         Application.targetFrameRate = 60;
         imgProgress.fillAmount = 0;
@@ -90,6 +93,10 @@ public class LogicGame : Singleton<LogicGame>
         sizeCamera = GetSizeCameraInWord();
         OnLoadLevel();
         isShowWarnning = false;
+        if (HelperManager.DataPlayer.LevelID >= AdsManager.Instance.NumShowAdsCollapseInGameLevel && TimeShowAdsNativeInGame.instance.CheckInterstitialTime())
+        {
+            GameNativeHandle.Instance._DelayShowCollab();
+        }
     }
  
     public void UserClickScreen()
@@ -153,6 +160,9 @@ public class LogicGame : Singleton<LogicGame>
 
         OnLoadLevel();
         yield return new WaitForSeconds(1.5f);
+
+   
+
     }
 
     public void AddCellToListCell(Cell cel)
@@ -167,6 +177,23 @@ public class LogicGame : Singleton<LogicGame>
 
     public void OnLoadLevel()
     {
+        var key_replay_level = "replay_" + HelperManager.DataPlayer.LevelID + 1;
+
+        var value = PlayerPrefs.GetInt(key_replay_level, 0);
+
+        if (value != 0)
+        {
+
+        }
+/*        PlayerPrefs.SetInt(key_replay_level, value + 1);
+
+        Parameter[] lst = new Parameter[]
+        {
+            new Parameter("level_id", HelperManager.DataPlayer.LevelID + 1)
+        };
+
+        FirebaseLogHandle.LogEvent("Level_start", lst);*/
+
         isGameOver = true;
         var level = GenLevelController.Instance.GetDataLevel();
         textLevel.text = "LV " + (GenLevelController.Instance.LevelId + 1).ToString();
@@ -1658,6 +1685,20 @@ public class LogicGame : Singleton<LogicGame>
 
     #region Bosster
 
+    private void PushEventFirstBooster(BoosterKind bos)
+    {
+        string key = "key_booster_" + bos.ToString();
+        if(PlayerPrefs.GetInt(key, 0) == 0)
+        {
+          /*  FirebaseLogHandle.LogEvent("First_use" + bos.ToString());
+            Parameter[] lst = new Parameter[]
+            {
+                new Parameter(bos.ToString() + "_1st", HelperManager.DataPlayer.LevelID + 1),
+            };
+            FirebaseLogHandle.LogEvent("Booster", lst);*/
+        }
+    }
+
     private IEnumerator OnPlayBooster()
     {
         IsPlayBooster = true;
@@ -1665,6 +1706,7 @@ public class LogicGame : Singleton<LogicGame>
         {
             if (ScStatic.ListBoosterStart.Contains(BoosterKind.X2_Star))
             {
+                PushEventFirstBooster(BoosterKind.X2_Star);
                 yield return new WaitForEndOfFrame();
                 Audio.Play(ScStatic.SFX_Ingame_Booster_2xStar);
                 BoosterInGameController.Instance.ActiveBooster(BoosterKind.X2_Star);
@@ -1674,7 +1716,7 @@ public class LogicGame : Singleton<LogicGame>
             if (ScStatic.ListBoosterStart.Contains(BoosterKind.BreakItem))
             {
                 BoosterInGameController.Instance.ActiveBooster(BoosterKind.BreakItem);
-
+                PushEventFirstBooster(BoosterKind.BreakItem);
                 while (true)
                 {
                     if (!IsUseSkillGame)
@@ -1689,6 +1731,7 @@ public class LogicGame : Singleton<LogicGame>
 
             if (ScStatic.ListBoosterStart.Contains(BoosterKind.IncreaseTime))
             {
+                PushEventFirstBooster(BoosterKind.IncreaseTime);
                 yield return new WaitForEndOfFrame();
                 BoosterInGameController.Instance.ActiveBooster(BoosterKind.IncreaseTime, 60.5f);
                 while (true)
@@ -1747,11 +1790,14 @@ public class LogicGame : Singleton<LogicGame>
         _warningLowTimeToPlay.SetActiveFx(false);
         if(isWin)
         {
-            HelperManager.DataPlayer.currentStarGame = _currentStar;
-
+            /*HelperManager.DataPlayer.currentStarGame = _currentStar;
+            Parameter[] lst = new Parameter[]
+             {
+                 new Parameter("Level_id_spaceout", HelperManager.DataPlayer.LevelID + 1),
+             };
+            FirebaseLogHandle.LogEvent("Level_win", lst);*/
             HelperManager.DataPlayer.LevelID++;
          //   Audio.Play(ScStatic.SFX_Ingame_FoodFight_ConfettiWin);
-            Audio.Play(ScStatic.SFX_In_game_Fire_word);
             Audio.Play(ScStatic.SFX_Ingame_Win);
             StartCoroutine(StartGameOver());
         }
@@ -1761,10 +1807,21 @@ public class LogicGame : Singleton<LogicGame>
             Audio.Play(ScStatic.SFX_Ingame_FoodFight_ConfettiLose);
             if(type == 0)
             {
+                /*Parameter[] lst = new Parameter[]
+                 {
+                    new Parameter("Level_id_timeout", HelperManager.DataPlayer.LevelID + 1),
+                 };
+                FirebaseLogHandle.LogEvent("Level_fail", lst);*/
+
                 UIPopup_EndGame_TimeUp.Show();
             }
             else
             {
+               /* Parameter[] lst = new Parameter[]
+                 {
+                    new Parameter("Level_id_spaceout", HelperManager.DataPlayer.LevelID + 1),
+                 };
+                FirebaseLogHandle.LogEvent("Level_fail", lst);*/
                 UIPopup_InGame_GameOver.Show();
             }
         }

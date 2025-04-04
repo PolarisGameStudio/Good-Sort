@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Firebase.Analytics;
 using System;
 using System.Collections;
 using TMPro;
@@ -231,6 +232,17 @@ public class UI_InGame_PowerUp : MonoBehaviour
 
     public void OnSucess(PowerupKind kind, bool isAdd = false, int price = 1)
     {
+        var keyFirst = "key_first_" + kind.ToString();
+        if(PlayerPrefs.GetInt(keyFirst, 0) == 0)
+        {
+            /*Parameter[] lst = new Parameter[]
+                 {
+                        new Parameter(kind.ToString() + "_1st", HelperManager.DataPlayer.LevelID + 1),
+                 };
+            FirebaseLogHandle.LogEvent("Booster", lst);*/
+            PlayerPrefs.SetInt(keyFirst, 1);
+        }
+
         switch (kind)
         {
             case PowerupKind.BreakItem:

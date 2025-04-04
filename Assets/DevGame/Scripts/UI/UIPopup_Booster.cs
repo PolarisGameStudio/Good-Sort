@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Firebase.Analytics;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -59,6 +60,20 @@ public class UIPopup_Booster : Dialog<UIPopup_Booster>
                         }
                     }
                 }
+            }
+
+
+            var key_replay_level = "replay_" + HelperManager.DataPlayer.LevelID + 1;
+            var value = PlayerPrefs.GetInt(key_replay_level, 0);
+
+            if (value != 0)
+            {
+               /* Parameter[] lst = new Parameter[]
+                  {
+                        new Parameter("Level_id_nottool", HelperManager.DataPlayer.LevelID + 1),
+                        new Parameter("Level_id_numreplay", value+ 1)
+                  };
+                FirebaseLogHandle.LogEvent("Level_replay", lst);*/
             }
 
             onClose();

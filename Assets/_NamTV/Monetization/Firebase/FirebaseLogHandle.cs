@@ -102,62 +102,6 @@ public class FirebaseLogHandle : MonoBehaviour
     #endregion
 
     #region LogEventGame
-    public static void LogAllDay(int dayNumber,string stage, string step, string modeName, int currentStep, int stepCount)
-    {
-        if(!isInitiated) return;
-#if USE_FIREBASE
-        if (dayNumber < 4)
-        {
-            var param = new Parameter[]
-                {
-                    new Parameter( "Step", string.Format("step_{0}/{1}",currentStep,stepCount)),
-                };
-            SendLog(string.Format("day_{0}_stage_{1}_mode{2}", dayNumber, stage, modeName), param);
-
-            var param2 = new Parameter[]
-                {
-                    new Parameter( "Mode", modeName),
-                };
-            SendLog(string.Format("day_{0}_stage_{1}", dayNumber, stage), param2);
-            if (logDebug)
-            {
-                Debug.Log("[FirebaseLog]" + "day: " + dayNumber + " stage: " + stage + " mode: " + modeName + " currentStep: " + currentStep + " stepCount: " + stepCount);
-            }
-        }
-#endif
-    }
-
-    public static void LogDayStart(int dayNumber)
-    {
-        if (!isInitiated) return;
-#if USE_FIREBASE
-        var param = new Parameter[]
-                {
-                    new Parameter( "DayNumber", dayNumber),
-                };
-        SendLog(string.Format("day_all_start"), param);
-        if (logDebug)
-        {
-            Debug.Log("[FirebaseLog]" + "day_all_start : DayNumber: " + dayNumber);
-        }
-#endif
-    }
-
-    public static void LogDayFinish(int dayNumber)
-    {
-        if (!isInitiated) return;
-#if USE_FIREBASE
-        var param = new Parameter[]
-            {
-                    new Parameter( "DayNumber", dayNumber),
-            };
-        SendLog(string.Format("day_all_finish"), param);
-        if (logDebug)
-        {
-            Debug.Log("[FirebaseLog]" + "day_all_finish : DayNumber: " + dayNumber);
-        }
-#endif
-    }
     #endregion
     private static void SendLog(string logName, Parameter[] param = null)
     {

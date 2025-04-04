@@ -1,3 +1,4 @@
+using Firebase.Analytics;
 using System;
 using System.Security.AccessControl;
 using TMPro;
@@ -27,6 +28,20 @@ public class UIPopup_InGame_GameOver : Dialog<UIPopup_InGame_GameOver>
             {
                 return;
             }
+
+            var key_replay_level = "replay_" + HelperManager.DataPlayer.LevelID + 1;
+            var value = PlayerPrefs.GetInt(key_replay_level, 0);
+
+            if (value != 0)
+            {
+                /*Parameter[] lst = new Parameter[]
+                  {
+                        new Parameter("Level_id_coin_spaceout", HelperManager.DataPlayer.LevelID + 1),
+                        new Parameter("Level_id_numreplay", value)
+                  };
+                FirebaseLogHandle.LogEvent("Level_replay", lst);*/
+            }
+
             onClose();
             LogicGame.Instance.OnSkillSwap(true);
         });
@@ -37,6 +52,20 @@ public class UIPopup_InGame_GameOver : Dialog<UIPopup_InGame_GameOver>
             {
                 if (success)
                 {
+
+                    var key_replay_level = "replay_" + HelperManager.DataPlayer.LevelID + 1;
+                    var value = PlayerPrefs.GetInt(key_replay_level, 0);
+
+                    if (value != 0)
+                    {
+                       /* Parameter[] lst = new Parameter[]
+                          {
+                        new Parameter("Level_id_rw_spaceout", HelperManager.DataPlayer.LevelID + 1),
+                        new Parameter("Level_id_numreplay", value)
+                          };
+                        FirebaseLogHandle.LogEvent("Level_replay", lst);*/
+                    }
+
                     onClose();
                     LogicGame.Instance.OnSkillSwap(true);
                 }
